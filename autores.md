@@ -10,3 +10,6 @@ Github: http://github.com/carlosrojaso
 
 # David Silva @dvidsilva
 Github: http://github.com/dvidsilva
+
+# Nicolas Molina @nicobytes
+Github: https://github.com/NicolasMolinaMonroy
