@@ -52,8 +52,6 @@ $ionic build
 
 y realizar el procedimiento para enviar a cada tienda (Google Play Store, App Store).
 
-Bueno espero esta información sea de utilidad en tu proyecto.
-
-*Keep coding* :)
+Bueno espero esta información sea de utilidad en tu proyecto y Sigan programando :)
 
 @Carlosrojas_o

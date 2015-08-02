@@ -8,8 +8,5 @@ permalink: /autores/
 # Carlos Rojas @carlosrojas_o
 Github: http://github.com/carlosrojaso
 
-# David Silva @dvidsilva
-Github: http://github.com/dvidsilva
-
 # Nicolas Molina @nicobytes
 https://github.com/nicobytes
