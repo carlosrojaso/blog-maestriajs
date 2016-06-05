@@ -2,7 +2,8 @@
 layout: post
 title: "Hola!"
 date: 2015-05-25
-categories:
+categories: Aleatorio
+comments: true
 ---
 Cuando escuche acerca de @ionicframework por primera vez, hace 1 año se veia como una gran idea, ver todo lo que querian lograr era excitante y utíl a la vez. Ahora 1 año despues, ver todo lo que el equipo de Ionic ha logrado es aún mas increible. Creo que como muchas personas, yo comence con Phonegap en este mundo de las Apps Híbridas, en ese momento era un novato en el mundo de Javascript he hice muchas cosas de las cuales no me siento orgulloso :p Pero cuando comence a testear Ionic me di cuenta que era un camino claro, lleno de buenas cosas que podian lograr que mis apps fueran de calidad.
 

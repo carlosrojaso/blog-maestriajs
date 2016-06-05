@@ -111,3 +111,5 @@ permalink: /libro/
 #### 2.8.8 Importar y Exportar.
 
 #### 2.8.9 Inyección de Dependencias.
+
+### 2.9 Anatomia de una App en Ionic 2.0

@@ -2,7 +2,8 @@
 layout: post
 title: "Ionic Market"
 date: 2015-08-24
-categories:
+categories: Market
+comments: true
 ---
 Hola a todos!!!
 

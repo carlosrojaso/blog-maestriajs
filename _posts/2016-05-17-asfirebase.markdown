@@ -3,6 +3,7 @@ layout: post
 title: "asFirebase Starter"
 date: 2016-05-21
 categories: Starter
+comments: true
 ---
 [![Firebase](http://img.youtube.com/vi/O17OWyx08Cg/0.jpg)](http://www.youtube.com/watch?v=O17OWyx08Cg "Firebase")
 
