@@ -6,7 +6,7 @@ categories: Ionic2
 comments: true
 ---
 
-![Alt text](/images/ionic2.png?raw=true "Carlos Rojas")
+![Alt text](http://i.imgur.com/XGUkDC6.png "Carlos Rojas")
 
 Hola a todos!!!
 
