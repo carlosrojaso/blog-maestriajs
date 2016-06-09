@@ -15,12 +15,28 @@
     border-radius: 0px;
     font-family: $font-title-family;
   }
-  .tag{
-    background-color: #eee;
-    padding: 3px;
+}
+.title-article{
+  /*background: $brand-color-secondary;*/
+  h1{
+    font-size: 40px;
+    line-height: 40px;
+    font-family: $font-title-family;
+    color: $title-color;
+    font-weight: bold;
   }
 }
-
+.tag{
+  background-color: #eee;
+  padding: 3px;
+}
+.article-detail{
+  p,
+  a,
+  li{
+    font-size: 18px;
+  }
+}
 
 @import
 "articles-small",

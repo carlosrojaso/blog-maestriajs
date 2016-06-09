@@ -7,9 +7,7 @@ url: "http://ion-book.com" # the base hostname & protocol for your site
 twitter_username: carlosrojas_o
 github_username: carlosrojaso
 
-# Build settings
-markdown: kramdown
-markdown_ext:  markdown,mkdown,mkdn,mkd,md
+markdown: markdown
 
 redcarpet:
   extensions: ["tables", "autolink", "strikethrough", "space_after_headers", "fenced_code_blocks"]
