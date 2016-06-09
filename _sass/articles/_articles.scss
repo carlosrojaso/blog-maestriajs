@@ -1,0 +1,44 @@
+.article-home{
+  h1{
+    a{
+      font-family: $font-title-family;
+      color: $title-color;
+      font-weight: bold;
+    }
+  }
+  p.summary{
+    font-size: 18px;
+  }
+  a.btn.btn-primary{
+    background-color: $brand-color;
+    border-color: $brand-color;
+    border-radius: 0px;
+    font-family: $font-title-family;
+  }
+}
+.title-article{
+  /*background: $brand-color-secondary;*/
+  h1{
+    font-size: 40px;
+    line-height: 40px;
+    font-family: $font-title-family;
+    color: $title-color;
+    font-weight: bold;
+  }
+}
+.tag{
+  background-color: #eee;
+  padding: 3px;
+}
+.article-detail{
+  p,
+  a,
+  li{
+    font-size: 18px;
+  }
+}
+
+@import
+"articles-small",
+"articles-medium",
+"articles-large";

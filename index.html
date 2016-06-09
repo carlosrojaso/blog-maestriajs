@@ -1,0 +1,33 @@
+---
+layout: default
+---
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-md-9">
+      <section>
+        {% for post in site.posts %}
+          <article class="article-home">
+            <h1>
+              <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+            </h1>
+            <div class="info">
+              <p>
+                {% for tag in post.tags %}
+                  <span class="tag">{{ tag }}</span>
+                {% endfor %}
+                - {{ post.date | date: '%B %d, %Y' }}
+              </p>
+            </div>
+            <p class="summary">
+              {{ post.content | strip_html | truncate: 200  }}
+            </p>
+            <a class="btn btn-primary" href="{{ post.url | prepend: site.baseurl }}">Leer más...</a>
+        </article>
+        {% endfor %}
+      </section>
+    </div>
+    
+    {% include right.html %}
+    
+  </div>
+</div>

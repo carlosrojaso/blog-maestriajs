@@ -1,0 +1,21 @@
+---
+layout: post
+title: "Ionic 100"
+date: 2015-08-01
+categories: Ionic1
+comments: true
+---
+Hola a todos!!!
+
+Hace un rato vengo desarrollando un curso en videos para aprender Ionic de una manera practica.
+
+|         |            |   |
+| --- |---| ---|
+| [<img src="http://img.youtube.com/vi/fMr8wQ3-mbQ/hqdefault.jpg" />](http://j.mp/1M5qtpP) | [<img src="http://img.youtube.com/vi/Vob4E8UnOOY/hqdefault.jpg" />](http://j.mp/1M5qx94) | [<img src="http://img.youtube.com/vi/1-AEpU9ob7U/hqdefault.jpg" />](http://j.mp/1M5quKs) |
+| [<img src="http://img.youtube.com/vi/f5V8DybA3kI/hqdefault.jpg" />](http://j.mp/1M5qz0t) | [<img src="http://img.youtube.com/vi/Gv7R3qGm65o/hqdefault.jpg" />](http://j.mp/1M5qzh1) | [<img src="http://img.youtube.com/vi/vXM7TjdYmEo/hqdefault.jpg" />](http://j.mp/1M5qCta) |
+| [<img src="http://img.youtube.com/vi/emnfRlaOkbE/hqdefault.jpg" />](http://j.mp/1M5qCJO) | [<img src="http://img.youtube.com/vi/SMsnXfzVSVo/hqdefault.jpg" />](http://j.mp/1M5qD0p) | [<img src="http://img.youtube.com/vi/gPy2m54gQJ4/hqdefault.jpg" />](http://j.mp/1M5qE4v) |
+
+
+Espero sea de utilidad y Sigan Programando :)
+
+@Carlosrojas_o

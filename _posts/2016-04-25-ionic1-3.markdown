@@ -1,0 +1,38 @@
+---
+layout: post
+title: "Ionic 1.3.x"
+date: 2016-04-26
+categories: Ionic1
+comments: true
+---
+Hace unos dias se libero una version ligera de Ionic 1.3.x, primero que todo recordemos que Ionic 1.x.x es Angular 1.x.x es por esto
+que nuestras aplicaciones legadas se podran ver beneficiadas por esta nueva actualización llena de errores solucionadas 
+
+#### Bug Fixes
+
+* **button-bar:** borders back. ([24b5b860](https://github.com/driftyco/ionic/commit/24b5b860), closes [#4917](https://github.com/driftyco/ionic/issues/4917))
+* **exposeWhenAside:** resize handler is trigger when screen dimensions change ([b5968ca8](https://github.com/driftyco/ionic/commit/b5968ca8))
+* **item:** fix padding for items ([56bb89e1](https://github.com/driftyco/ionic/commit/56bb89e1), closes [#5534](https://github.com/driftyco/ionic/issues/5534))
+* **karma:**
+  * adding checks to prevent null pointers in clean-up phase ([964a7d5f](https://github.com/driftyco/ionic/commit/964a7d5f))
+  * updated tests for 1.5, removed unnecessary 'clean-up' tests since angular-mocks  ([e5d9d14b](https://github.com/driftyco/ionic/commit/e5d9d14b))
+* **modal:** Don't show click-block-div unnecessarily on remove() ([b0c89ef7](https://github.com/driftyco/ionic/commit/b0c89ef7))
+* **navigation:**
+  * preventing swipe-to-go-back when side-menu is open on the right ([9c614d31](https://github.com/driftyco/ionic/commit/9c614d31))
+  * swipe-to-go-back on a per-view basis in iOS issue #4574 ([c375b6e9](https://github.com/driftyco/ionic/commit/c375b6e9))
+* **nullRef:** nullify reference to the destroyed slider (prevent it from calling update()) ([7e9d52c2](https://github.com/driftyco/ionic/commit/7e9d52c2))
+* **scroll:** remove overflow scroll hidden for iOS ([aec6598d](https://github.com/driftyco/ionic/commit/aec6598d))
+* **slides:** resolves data-update issue on duplicate slides #5739 ([db8304d2](https://github.com/driftyco/ionic/commit/db8304d2))
+* **tabs:**
+  * tabs are now styled directly via dom manipulations ([fbae1aba](https://github.com/driftyco/ionic/commit/fbae1aba))
+  * tabs-color-active works with tabs-striped ([237d79b7](https://github.com/driftyco/ionic/commit/237d79b7))
+  * prevent flicker when changing tabs on android ([a7620d21](https://github.com/driftyco/ionic/commit/a7620d21))
+
+Otra de las cosas mas emocionantes es la actualización de la versión de Angular a la 1.5. Esto es realmente interesante, porque
+abre la puerta para empezar a utilizar Componentes y de esta manera estar mejor preparada para la actualización a Ionic 2.x.x
+
+Por ahora solo esta disponible a través de la descarga [aqui](http://code.ionicframework.com/1.3.0/ionic-v1.3.0.zip)
+
+Espero sea de utilidad y Sigan Programando :)
+
+@Carlosrojas_o

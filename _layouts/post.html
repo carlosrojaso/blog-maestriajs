@@ -1,0 +1,40 @@
+---
+layout: default
+---
+<div class="title-article">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+         <h1>{% if page.wrap_title %}{{ page.wrap_title }}{% else %}{{ page.title }}{% endif %}</h1>
+         <div class="info">
+            <p>
+              {% for tag in page.tags %}
+                <span class="tag">{{ tag }}</span>
+              {% endfor %}
+              - {{ page.date | date: '%B %d, %Y' }}
+            </p>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container article-detail">
+  <div class="row">
+    <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
+
+      <article class="post-content">
+        {{ content }}
+      </article>
+  
+      {% if page.comments %}{% include disqus.html %}{% endif %}
+   
+      <div align="center">
+        <a href="#">
+        <i class="fa fa-arrow-circle-up fa-2x"></i>
+        </a>
+      </div>
+
+    </div>
+    
+  </div>
+</div>

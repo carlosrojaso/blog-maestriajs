@@ -1,0 +1,54 @@
+.navbar{
+  min-height: 10vh;
+  padding-top: 10px;
+  margin-bottom: 0px;
+  border-radius: 0px;
+  .navbar-brand{
+    padding: 0px;
+  }
+  #ion-logo{
+    padding: 0.3em 0.5em;
+    margin: 0px 20px 5px 20px;
+    display: inline-block;
+    font-family: $font-title-family;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+  
+  &.navbar-default {
+    background-color: $brand-color;
+    border-color: transparent;
+    color: white;
+    font-size: 16px;
+    text-align: center;
+    .navbar-collapse{
+      border: 0px;
+      box-shadow: 0px 0px 0px;
+    }
+    .navbar-toggle{
+      border-color: white;
+      .icon-bar{
+        background-color: white;
+      }
+      &:hover,
+      &:focus{
+        background-color: $brand-color;
+      }
+    }
+  }
+  .navbar-nav > li > a{
+    color: white;
+    text-transform: capitalize;
+    font-family: $font-title-family;
+  } 
+  .navbar-nav > li > a:hover, 
+  .navbar-nav > li > a:focus {
+    color: white;
+  }
+}
+
+@import
+"nav-bar-small",
+"nav-bar-medium",
+"nav-bar-large";

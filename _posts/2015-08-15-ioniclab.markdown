@@ -1,0 +1,18 @@
+---
+layout: post
+title: "Ionic Lab"
+date: 2015-08-15
+categories: Lab
+comments: true
+---
+Hola a todos!!!
+
+Hace unas semanas el equipo de Ionic libero una herramienta para OSX llamada Ionic Lab.
+
+En este video les comparto un poco de que se trata.
+
+[<img src="http://img.youtube.com/vi/1OLlTxcryXY/hqdefault.jpg" />](http://j.mp/1EfPGeW)
+
+Espero sea de utilidad y Sigan Programando :)
+
+@Carlosrojas_o

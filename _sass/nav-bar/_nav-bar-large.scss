@@ -1,0 +1,16 @@
+/* Large and up */
+@media screen and (min-width: 64em) {
+  .navbar{
+    min-height: 15vh;
+    #ion-logo{
+      line-height: 4vh;
+      height: 10vh;
+      border: 10px solid #FFF;
+      font-size: 35px;
+      margin-top: 1vh;
+    }
+    .navbar-nav > li > a{
+      line-height: 8vh;
+    }
+  }
+}

@@ -1,0 +1,34 @@
+<nav class="navbar navbar-default"> 
+    <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav-bar" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="{{ "/"  | prepend: site.baseurl }}">
+        <span id="ion-logo">{{ site.title }}</span>
+      </a>
+    </div>
+    <!-- Menu -->
+    <div class="navbar-collapse collapse navbar-right" id="nav-bar">
+      <ul class="nav navbar-nav">
+        {% for page in site.pages %}
+          {% if page.title %}
+          <li>
+            <a  href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
+          </li>
+          {% endif %}
+        {% endfor %}
+        <li>
+          <a href="http://bootcampwithus.usefedora.com/" target="_blank">Cursos</a>
+        </li>
+        <li>
+          <a href="http://j.mp/1Us5Y5B" target="_blank">Comprar</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
