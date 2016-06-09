@@ -3,10 +3,11 @@ layout: post
 title: "Comenzando con Ionic 2.0"
 date: 2016-06-05
 categories: Ionic2
+tags: ionic2
 comments: true
 ---
 
-![Alt text](http://i.imgur.com/XGUkDC6.png "Carlos Rojas")
+![Alt text](http://i.imgur.com/ZYv3zLt.png "Ionic 2")
 
 Hola a todos!!!
 

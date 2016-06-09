@@ -3,9 +3,11 @@ layout: post
 title: "asFirebase Starter"
 date: 2016-05-21
 categories: Starter
+tags: ionic1 starter
 comments: true
 ---
-[![Firebase](http://img.youtube.com/vi/O17OWyx08Cg/0.jpg)](http://www.youtube.com/watch?v=O17OWyx08Cg "Firebase")
+
+<a href="http://www.youtube.com/watch?v=O17OWyx08Cg"><img class="img-responsive" src="http://img.youtube.com/vi/O17OWyx08Cg/0.jpg" alt="Firebase"/></a>
 
 Hace unos dias se libero una nueva versión de Firebase llena de nuevas cosas interesantes, es por eso que decidimos
 actualizar nuestro starter [Firebase Auth Starter](http://market.ionic.io/starters/firebaseauthstarter) y de esta manera prepararnos para lo que se viene.

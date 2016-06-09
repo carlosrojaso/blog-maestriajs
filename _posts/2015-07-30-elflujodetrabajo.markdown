@@ -3,13 +3,14 @@ layout: post
 title: "El Flujo de Trabajo!"
 date: 2015-07-30  
 categories: Productividad
+tags: productividad workflow
 comments: true
 ---
 Recordemos que Ionic es una colección de librerías y frameworks que nos ayudaran a avanzar rápidamente por nuestro proyecto. A continuación te mostramos un Flujo de Trabajo el cual te puede servir como guía en el desarrollo de tu App Movíl.
 
 Siempre que nos enfrentamos a un Proyecto de desarrollo móvil podemos identificar 5 etapas principales.
 
-<img src="/images/procesocompleto.png" />
+<img class="img-responsive" src="http://i.imgur.com/JtabKqV.png" alt="Form">
 
 **Ideación:** En esta etapa es donde tratamos de visualizar el alcance que va a tener nuestro producto.  Normalmente, se utilizan herramientas como Lluvias de ideas,  Historias de Usuarios, etc.
 
@@ -23,7 +24,7 @@ Siempre que nos enfrentamos a un Proyecto de desarrollo móvil podemos identific
 
 El proceso explicado anteriormente es un flujo genérico el cual es muy común observar en equipos de trabajo (Gerentes de Productos, Desarrolladores, Diseñadores Graficos, etc) en estos días, pero como comentamos nos vamos a enfocar en la etapa de prototipado. Basicamente, Ionic nos ofrece una serie de herramientas que podremos utilizar aunque si observamos la siguiente imagen podremos generalizar un poco.
 
-<img src="/images/workflow.png" />
+<img class="img-responsive" src="http://i.imgur.com/oFYnSmD.png" alt="Form">
 
 Como podemos observar en una primera etapa realizamos la instalación con
 

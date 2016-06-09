@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Forms con IonicV2"
-date: 2016-06-11
+date: 2016-06-09
 tags: ionic2 angular2 forms
 categories: Ionic2
 comments: true

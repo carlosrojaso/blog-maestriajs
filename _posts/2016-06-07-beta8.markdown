@@ -4,6 +4,7 @@ title: "Ionic2 release beta8"
 date: 2016-06-07
 tags: ionicV2 news
 categories: Ionic2
+tags: ionic2
 comments: true
 ---
 

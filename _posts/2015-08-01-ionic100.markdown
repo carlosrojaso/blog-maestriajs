@@ -3,6 +3,7 @@ layout: post
 title: "Ionic 100"
 date: 2015-08-01
 categories: Ionic1
+tags: ionic1
 comments: true
 ---
 Hola a todos!!!
