@@ -5,7 +5,7 @@ date: 2016-06-09
 tags: ionic2 angular2 forms
 categories: Ionic2
 comments: true
-repo: ""
+repo: "http://ion-book.github.io/myForm/"
 ---
 
 > La forma más común de capturar información de los usuarios son los **Formularios** y depende de una buena UI/UX, ganar o perder un usuario en nuestra aplicación. 

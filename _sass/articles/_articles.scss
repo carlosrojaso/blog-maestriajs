@@ -37,7 +37,12 @@
     font-size: 18px;
   }
 }
-
+.link-repo{
+  background-color: $brand-color;
+  border-color: $brand-color;
+  border-radius: 0px;
+  font-family: $font-title-family;
+}
 @import
 "articles-small",
 "articles-medium",
