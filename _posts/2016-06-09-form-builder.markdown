@@ -9,15 +9,15 @@ repo: "http://ion-book.github.io/myForm/"
 author: nicobytes
 ---
 
-> La forma más común de capturar información de los usuarios son los **Formularios** y depende de una buena UI/UX, ganar o perder un usuario en nuestra aplicación. 
+> La forma más común de capturar información de los usuarios son los **Formularios** y depende de una buena UI/UX ganar o perder un usuario en nuestra aplicación. 
 
 Por eso es de vital importancia hacer un buen manejo de ellos, tener las validaciones adecuadas y por esto Angular2 nos ofrece **FormBuilder**, una clase que nos provee una completa herramienta para controlar y validar formularios de forma muy eficiente y sencilla.
 
-Como ionic2 usa Angular2, podremos usas esta clase co los componentes de UI de ionic2.
+Como **ionic2** usa **Angular2**, podremos usar esta clase con los componentes de UI de ionic2.
 
 <img class="img-responsive" src="http://i.imgur.com/PWBxv0C.png" alt="Form">
 
-Examinemos el codigo
+Examinemos el siguiente código:
 
 {% highlight javascript linenos %}
 import {Component} from '@angular/core';
@@ -59,7 +59,7 @@ export class MyFormPage {
 
 {% endhighlight %}
 
-Presta atención a de la *linea 23 a la 35*, aqui es donde ocurre la magia, haciendo uso de nuestra variable `this.formBuilder` podremos crear un controlador para cada uno de nuestros formularios, aqui podremos enviar validaciones sencillas o tan complejas como queramos. 
+Presta atención a de la *linea 23 a la 35*, aqui es donde ocurre la magia, haciendo uso de nuestra variable `this.formBuilder` podremos crear un controlador para cada uno de nuestros campos en el formulario, aquí podremos enviar validaciones tan sencillas o complejas como queramos. 
 
 El **Form** es algo largo pero sencillo:
 
