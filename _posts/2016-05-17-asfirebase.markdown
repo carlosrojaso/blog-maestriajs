@@ -5,6 +5,7 @@ date: 2016-05-21
 categories: Starter
 tags: ionic1 starter
 comments: true
+author: carlosrojas
 ---
 
 <a href="http://www.youtube.com/watch?v=O17OWyx08Cg"><img class="img-responsive" src="http://img.youtube.com/vi/O17OWyx08Cg/0.jpg" alt="Firebase"/></a>

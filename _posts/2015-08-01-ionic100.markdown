@@ -5,6 +5,7 @@ date: 2015-08-01
 categories: Ionic1
 tags: ionic1
 comments: true
+author: carlosrojas
 ---
 Hola a todos!!!
 

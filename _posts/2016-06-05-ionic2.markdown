@@ -5,6 +5,7 @@ date: 2016-06-05
 categories: Ionic2
 tags: ionic2
 comments: true
+author: carlosrojas
 ---
 
 ![Alt text](http://i.imgur.com/ZYv3zLt.png "Ionic 2")

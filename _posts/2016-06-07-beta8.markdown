@@ -6,6 +6,7 @@ tags: ionicV2 news
 categories: Ionic2
 tags: ionic2
 comments: true
+author: nicobytes
 ---
 
 ## Hola a todos!

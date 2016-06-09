@@ -5,6 +5,7 @@ date: 2015-08-24
 categories: Market
 tags: market
 comments: true
+author: carlosrojas
 ---
 Hola a todos!!!
 

@@ -5,6 +5,7 @@ date: 2015-08-15
 categories: Lab
 tags: ionic1 tools
 comments: true
+author: carlosrojas
 ---
 Hola a todos!!!
 

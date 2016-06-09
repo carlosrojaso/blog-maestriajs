@@ -5,6 +5,7 @@ date: 2015-07-30
 categories: Productividad
 tags: productividad workflow
 comments: true
+author: carlosrojas
 ---
 Recordemos que Ionic es una colección de librerías y frameworks que nos ayudaran a avanzar rápidamente por nuestro proyecto. A continuación te mostramos un Flujo de Trabajo el cual te puede servir como guía en el desarrollo de tu App Movíl.
 
