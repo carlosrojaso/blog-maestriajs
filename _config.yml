@@ -15,13 +15,7 @@ redcarpet:
 authors:
   nicobytes:
     name: Nicolas Molina
-    image: 60fd5218fff6927c0ed376cce01c5460
-    web: http://www.richtaur.com/
-    twitter: nicobytes
-    github: nicobytes
+    website: "http://www.nicobytes.com/"
   carlosrojas:
     name: Carlos Rojas
-    image: 76dbcc74021b8039f14c7b583978b56d
-    web: http://nicobytes.com
-    twitter: carlosrojas_o
-    github: carlosrojas_o
+    website: "http://www.carlosrojasblog.com/"

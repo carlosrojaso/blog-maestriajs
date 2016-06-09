@@ -3,7 +3,7 @@ layout: page
 title: Autores
 permalink: /autores/
 ---
-*ion-book* es escrito y revisado por varias personas.
+## **ion-book** es escrito y revisado por varias personas.
 
 ![Alt text](/images/carlosphoto.png?raw=true "Carlos Rojas")
 

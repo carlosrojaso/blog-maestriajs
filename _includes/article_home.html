@@ -9,7 +9,7 @@
         <span class="tag">{{ tag }}</span>
       {% endfor %}
       - {{ post.date | date: '%B %d, %Y' }}
-      por <strong>{{ author.name }}</strong>
+      por <a href="{{ author.website }}" target="_blank"><strong>{{ author.name }}</strong></a>
     </p>
   </div>
   <p class="summary">

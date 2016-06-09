@@ -14,15 +14,17 @@ layout: default
                 <span class="tag">{{ tag }}</span>
               {% endfor %}
               - {{ page.date | date: '%B %d, %Y' }}
-              por <strong>{{ author.name }}</strong>
+              por <a href="{{ author.website }}" target="_blank"><strong>{{ author.name }}</strong></a>
             </p>
           </div>
       </div>
+      {% if page.repo %}
       <div class="col-xs-12 col-md-2">
         <a href="{{ page.repo }}" class="btn btn-primary btn-lg btn-block link-repo" target="_blank">
           <i class="fa fa-github" aria-hidden="true"></i> Ver demo
         </a>
       </div>
+      {% endif %}
     </div>
   </div>
 </div>
