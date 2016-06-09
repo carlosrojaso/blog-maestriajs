@@ -1,0 +1,11 @@
+/* Small only */
+@media screen and (max-width: 39.9375em) {
+  .navbar{
+    min-height: 10vh;
+    #ion-logo{
+      line-height: 3.5vh;
+      height: 7vh;
+      border: 6px solid #FFF;
+    }
+  }
+}

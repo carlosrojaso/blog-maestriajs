@@ -1,4 +1,5 @@
 <nav class="navbar navbar-default navbar-fixed-top"> 
+    <div class="container">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav-bar" aria-expanded="false">
@@ -8,7 +9,7 @@
         <span class="icon-bar"></span>
       </button>
       <a class="navbar-brand" href="{{ "/"  | prepend: site.baseurl }}">
-        <img src="/images/full-logo.png" class="img-responsive logo" alt="logo">
+        <span id="ion-logo">{{ site.title }}</span>
       </a>
     </div>
     <!-- Menu -->
