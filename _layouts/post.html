@@ -36,10 +36,12 @@ layout: default
         {{ content }}
       </article>
       
+      {% if page.repo %}
       <a href="{{ page.repo }}" class="btn btn-primary btn-lg link-repo" target="_blank">
         <i class="fa fa-github" aria-hidden="true"></i> Ver demo
       </a>
-      <hr/>
+      {% endif %}
+       <hr/>
   
       {% if page.comments %}{% include disqus.html %}{% endif %}
    
