@@ -11,7 +11,7 @@ author: carlosrojas
 
 Hola a todos!!! 
 
-El dia de hoy tenemos un nuevo video realizado por @nicobytes explicando paso a paso las cualidades de Ionic 2.0
+El dia de hoy tenemos un nuevo video realizado por [@nicobytes](http://www.nicobytes.com) explicando paso a paso las cualidades de Ionic 2.0
 
 <a href="https://www.youtube.com/watch?v=kWZcdgLbWQI" target="_blank"><img src="http://img.youtube.com/vi/kWZcdgLbWQI/hqdefault.jpg" class="img-responsive" alt="image angular2"/></a>
 
