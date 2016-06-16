@@ -2,7 +2,7 @@
 layout: post
 title: "¿Qué es ionic generator?"
 tags: ionic2 cli
-date: 2016-06-17
+date: 2016-06-20
 categories: ionic2
 comments: true
 author: nicobytes
