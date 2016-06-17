@@ -19,3 +19,9 @@ authors:
   carlosrojas:
     name: Carlos Rojas
     website: "http://www.carlosrojasblog.com/"
+
+# Gems
+gems: [jekyll-paginate]
+paginate: 5
+paginate_path: "/blog/page:num/"
+
