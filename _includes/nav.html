@@ -22,12 +22,11 @@
           </li>
           {% endif %}
         {% endfor %}
-        <li>
-          <a href="http://bootcampwithus.usefedora.com/" target="_blank">Cursos</a>
-        </li>
-        <li>
-          <a href="http://j.mp/1Us5Y5B" target="_blank">Comprar</a>
-        </li>
+        {% for link in site.nav_links %}
+          <li>
+            <a  href="{{ link.url | prepend: site.baseurl }}" target="_blank">{{ link.title }}</a>
+          </li>
+        {% endfor %}
       </ul>
     </div>
   </div>

@@ -20,8 +20,10 @@ authors:
     name: Carlos Rojas
     website: "http://www.carlosrojasblog.com/"
 
-# Gems
-gems: [jekyll-paginate]
-paginate: 5
-paginate_path: "/blog/page:num/"
-
+nav_links: 
+  - url: "http://goo.gl/forms/ZCEc0cr3jydgK2wv1"
+    title: "Slack"
+  - url: "http://bootcampwithus.usefedora.com/"
+    title: "Cursos"
+  - url: "http://j.mp/1Us5Y5B"
+    title: "Comprar"
