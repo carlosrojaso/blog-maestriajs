@@ -5,7 +5,7 @@ layout: default
   <div class="row">
     <div class="col-xs-12 col-md-9">
       <section>
-        {% for post in site.posts limit:5 %}
+        {% for post in site.posts %}
           {% include article_home.html %}
         {% endfor %}
       </section>
