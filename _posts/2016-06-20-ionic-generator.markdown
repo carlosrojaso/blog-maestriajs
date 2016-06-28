@@ -198,4 +198,4 @@ Para saber sobre ionic suscribete a nuestro Newsletter y mantente atento.
 Espero sea de utilidad y sigan Programando :)
 
 
-[@nicobytes](http://www.nicobytes.com)
+[@nicobytes](http://www.nicobytes.com){:target="_blank"}
