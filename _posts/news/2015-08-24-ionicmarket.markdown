@@ -6,6 +6,7 @@ categories: news
 tags: market
 comments: true
 author: carlosrojas
+cover: "http://img.youtube.com/vi/URobJP0uPa8/hqdefault.jpg"
 ---
 Hola a todos!!!
 

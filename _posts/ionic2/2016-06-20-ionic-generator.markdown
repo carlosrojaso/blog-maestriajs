@@ -6,6 +6,7 @@ date: 2016-06-20
 categories: ionic2
 comments: true
 author: nicobytes
+cover: "http://i.imgur.com/rhTAWtE.jpg"
 ---
 
 > **Ionic generator** es una función del CLI de **ionic2** para crear automáticamente piezas clave de nuestra aplicación, lo cual nos ahorra mucho tiempo y aumenta nuestra rapidez para desarrollar un proyecto.

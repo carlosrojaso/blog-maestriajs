@@ -6,6 +6,7 @@ categories: ionic
 tags: ionic1
 comments: true
 author: carlosrojas
+cover: "http://img.youtube.com/vi/fMr8wQ3-mbQ/hqdefault.jpg"
 ---
 Hola a todos!!!
 

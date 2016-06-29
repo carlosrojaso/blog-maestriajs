@@ -6,6 +6,7 @@ tags: ionicV2 news
 categories: ionic2
 comments: true
 author: nicobytes
+cover: "http://i.imgur.com/PWBxv0C.png"
 ---
 
 ## Hola a todos!

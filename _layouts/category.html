@@ -4,11 +4,15 @@ layout: default
 <div class="container">
   <div class="row">
     <div class="col-xs-12 col-md-9">
-      <section>
+      <div class="row">
         {% for post in site.categories[page.category] %}
-          {% include article_home.html %}
+          {% if post.cover %}
+          <div class="col-xs-12 col-md-6">
+            {% include article_home.html trucate="90" %}
+          </div>
+          {% endif %}
         {% endfor %}
-      </section>
+      </div>
     </div>
     {% include right.html %}
   </div>

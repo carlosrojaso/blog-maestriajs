@@ -4,14 +4,24 @@ layout: default
 <div class="container">
   <div class="row">
     <div class="col-xs-12 col-md-9">
-      <section>
-        {% for category in site.categories %}
-          {{ category.name }}
+      <div class="row">
+        <div class="col-xs-12">
+          <section class="cover">
+            {% assign post = site.posts.first %}
+            {% assign content = post.content %}
+            {% include article_home.html trucate="200" %}
+          </section>
+        </div>
+      </div>
+      <div class="row">
+        {% for post in site.posts offset:1 %}
+          {% if post.cover %}
+          <div class="col-xs-12 col-md-6">
+            {% include article_home.html trucate="90" %}
+          </div>
+          {% endif %}
         {% endfor %}
-        {% for post in site.posts %}
-          {% include article_home.html %}
-        {% endfor %}
-      </section>
+      </div>
     </div>
     {% include right.html %}
   </div>

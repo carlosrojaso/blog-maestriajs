@@ -6,6 +6,7 @@ categories: ionic
 tags: ionic1
 comments: true
 author: carlosrojas
+cover: "http://img.youtube.com/vi/O17OWyx08Cg/0.jpg"
 ---
 Hace unos dias se libero una version ligera de Ionic 1.3.x, primero que todo recordemos que Ionic 1.x.x es Angular 1.x.x es por esto
 que nuestras aplicaciones legadas se podran ver beneficiadas por esta nueva actualización llena de errores solucionadas 

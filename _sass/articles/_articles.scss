@@ -1,9 +1,42 @@
+.cover{
+  .article-home{
+    height: auto;
+    .cover-crop{
+      height: 200px;
+    }
+    h1{
+      font-size: 36px;
+      margin-top: 10px;
+      height: auto;
+      overflow: visible;
+    }
+  }
+}
 .article-home{
+  margin: 20px 0px;
+  .more{
+    text-align: right;
+  }
+  .tags{
+    margin-bottom: 10px;
+  }
   h1{
+    margin-bottom: 0px; 
     a{
       font-family: $font-title-family;
       color: $title-color;
       font-weight: bold;
+    }
+  }
+  .cover-crop{
+    overflow: hidden;
+    position: relative;
+    display: block;
+    img{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
     }
   }
   p.summary{
@@ -29,6 +62,7 @@
 .tag{
   background-color: #eee;
   padding: 3px;
+  display: inline-block;
 }
 .article-detail{
   p,

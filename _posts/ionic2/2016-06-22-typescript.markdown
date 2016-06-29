@@ -6,6 +6,7 @@ date: 2016-06-22
 categories: ionic2
 comments: true
 author: carlosrojas
+cover: "http://i.imgur.com/yFY9ETL.png"
 ---
 
 <img src="http://i.imgur.com/yFY9ETL.png" class="img-responsive" alt="image angular2"/>

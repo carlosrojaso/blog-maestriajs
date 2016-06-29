@@ -6,6 +6,7 @@ categories: ionic
 tags: ionic1 starter
 comments: true
 author: carlosrojas
+cover: "http://img.youtube.com/vi/O17OWyx08Cg/0.jpg"
 ---
 
 <a href="http://www.youtube.com/watch?v=O17OWyx08Cg"><img class="img-responsive" src="http://img.youtube.com/vi/O17OWyx08Cg/0.jpg" alt="Firebase"/></a>

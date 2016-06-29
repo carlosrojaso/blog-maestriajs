@@ -6,6 +6,7 @@ date: 2016-06-28
 categories: plugins
 comments: true
 author: nicobytes
+cover: "http://i.imgur.com/Ed37R8S.jpg"
 ---
 
 > Al desarrollar aplicaciones para Android basadas en un **Webview** nos enfrentamos al problema de la fragmentación en dispositivos, es decir hay muchas versiones de Android viejas en el mercado, con **[Crosswalk Project](https://crosswalk-project.org/){:target="_blank"}** no solo solucionamos el problema de la fragmentación sino que aumentamos el performance de la aplicación.
