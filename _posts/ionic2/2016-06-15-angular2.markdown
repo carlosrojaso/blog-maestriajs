@@ -3,7 +3,7 @@ layout: post
 title: "Comenzando con Angular 2"
 tags: angular2
 date: 2016-06-15
-categories: Angular2
+categories: ionic2
 comments: true
 author: carlosrojas
 ---

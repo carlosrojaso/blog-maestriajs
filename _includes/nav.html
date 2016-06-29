@@ -1,33 +1,34 @@
 <nav class="navbar navbar-default"> 
     <div class="container">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav-bar" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="{{ "/"  | prepend: site.baseurl }}">
-        <span id="ion-logo">{{ site.title }}</span>
-      </a>
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav-bar" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="{{ "/"  | prepend: site.baseurl }}">
+            <img src="/images/ion-book-wh.png"Carlos Rojas")" alt="">
+          </a>
+      </div>
     </div>
     <!-- Menu -->
-    <div class="navbar-collapse collapse navbar-right" id="nav-bar">
-      <ul class="nav navbar-nav">
-        {% for page in site.pages %}
-          {% if page.title %}
-          <li>
-            <a  href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
-          </li>
-          {% endif %}
-        {% endfor %}
-        {% for link in site.nav_links %}
-          <li>
-            <a  href="{{ link.url | prepend: site.baseurl }}" target="_blank">{{ link.title }}</a>
-          </li>
-        {% endfor %}
-      </ul>
+    <div class="navbar-collapse collapse" id="nav-bar">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12">
+            <ul class="nav navbar-nav">
+              {% for page in site.pages %}
+                {% if page.layout == "category" %}
+                <li>
+                  <a  href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
+                </li>
+                {% endif %}
+              {% endfor %}
+            </ul>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
 </nav>

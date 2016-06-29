@@ -5,10 +5,7 @@ layout: default
   <div class="row">
     <div class="col-xs-12 col-md-9">
       <section>
-        {% for category in site.categories %}
-          {{ category.name }}
-        {% endfor %}
-        {% for post in site.posts %}
+        {% for post in site.categories[page.category] %}
           {% include article_home.html %}
         {% endfor %}
       </section>

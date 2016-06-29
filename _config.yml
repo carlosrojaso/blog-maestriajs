@@ -9,6 +9,8 @@ bookurl: "http://j.mp/1Us5Y5B"
 markdown: kramdown
 markdown_ext:  markdown,mkdown,mkdn,mkd,md
 
+#permalink: /:categories/:title
+
 redcarpet:
   extensions: ["tables", "autolink", "strikethrough", "space_after_headers", "fenced_code_blocks"]
   

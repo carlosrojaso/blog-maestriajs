@@ -1,21 +1,22 @@
 .navbar{
   min-height: 10vh;
-  padding-top: 10px;
+  padding: 10px 0px;
   margin-bottom: 0px;
   border-radius: 0px;
-  .navbar-brand{
-    padding: 0px;
+  .container{
+    .navbar-brand{
+      padding: 0px;
+      margin-left: 0px;
+      img{
+        height: 100%;
+      }
+    }
   }
-  #ion-logo{
-    padding: 0.3em 0.5em;
-    margin: 0px 20px 5px 20px;
-    display: inline-block;
-    font-family: $font-title-family;
-    color: white;
-    text-transform: uppercase;
-    font-weight: bold;
+  .navbar-collapse{
+    .col-xs-12{
+      padding: 0px;
+    }
   }
-  
   &.navbar-default {
     background-color: $brand-color;
     border-color: transparent;

@@ -2,7 +2,7 @@
 layout: post
 title: "Ionic Market"
 date: 2015-08-24
-categories: Market
+categories: news
 tags: market
 comments: true
 author: carlosrojas
