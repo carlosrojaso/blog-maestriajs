@@ -1,6 +1,6 @@
 ---
 layout: category
-title: news
+title: Noticias
 category: news
 permalink: /news/
 ---

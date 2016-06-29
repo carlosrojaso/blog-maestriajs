@@ -13,16 +13,27 @@
           </a>
       </div>
     </div>
+    <div class="container hidden-xs">
+      <div class="row">
+          <div class="col-xs-12">
+            <h1>Todo sobre IONIC en español</h1>
+            <h4>Tips, noticias, tutoriales, buenas practicas</h4>
+          </div>
+      </div>
+    </div>
     <!-- Menu -->
     <div class="navbar-collapse collapse" id="nav-bar">
       <div class="container">
         <div class="row">
           <div class="col-xs-12">
             <ul class="nav navbar-nav">
-              {% for page in site.pages %}
-                {% if page.layout == "category" %}
+              <li>
+                <a {% if page.layout == "default" %}class="active"{% endif %} href="{{ "/"  | prepend: site.baseurl }}">Todo {{  }}</a>
+              </li>
+              {% for item_page in site.pages %}
+                {% if item_page.layout == "category" %}
                 <li>
-                  <a  href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
+                  <a {% if page.title == item_page.title %}class="active"{% endif %} href="{{ item_page.url | prepend: site.baseurl }}">{{ item_page.title }}</a>
                 </li>
                 {% endif %}
               {% endfor %}
