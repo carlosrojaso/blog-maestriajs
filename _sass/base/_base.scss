@@ -4,8 +4,10 @@ body {
 }
 .box{
   background-color: $box-background-color;
-  box-shadow: 0px 1px 1px rgba(0,0,0,.5);
-  padding: 0px 6px;
+  color: white;
+  padding:10px 15px;
+  text-align: center;
+  border-radius: 3px;
   h2{
     font-family: $font-title-family;
     font-size: 16px;
@@ -14,7 +16,16 @@ body {
   }
   p{
     margin: 5px 0px;
+    font-size: 16px;
+    text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.5);
   }
+  img{
+    width: 50%;
+    margin: 0 auto;
+  }
+}
+.title{
+  font-weight: bold;
 }
 @import
 "base-small",
