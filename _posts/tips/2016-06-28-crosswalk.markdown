@@ -1,9 +1,9 @@
 ---
 layout: post
 title: "Aumenta el performance con Crosswalk"
-tags: plugins news  
+tags: plugins tips  
 date: 2016-06-28
-categories: news
+categories: tips
 comments: true
 author: nicobytes
 cover: "http://i.imgur.com/Ed37R8S.jpg"
