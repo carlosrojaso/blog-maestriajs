@@ -20,12 +20,28 @@ redcarpet:
 authors:
   nicobytes:
     name: Nicolas Molina
-    website: "http://www.nicobytes.com/"
+    url: "/nicobytes"
     avatar: "http://i.imgur.com/x1o2zyi.jpg"
+    website: "http://nicobytes.com"
+    bio: "Soy desarrollador web especializado en el área de FrontEnd & HybripApps, enfocado en aprendizaje de JS y al desarrollo de apps con Angular2 y Ionic2. Mis pasiones son el desarrollo de productos, compartir con las comunidades de desarrollo y viajar por todo el mundo."
+    social_links:
+      - link: "https://twitter.com/nicobytes"
+        icon: "fa-twitter"
+      - link: "https://github.com/nicobytes"
+        icon: "fa-github"
+      - link: "https://co.linkedin.com/in/nicobytes"
+        icon: "fa-linkedin"
+      - link: "https://www.facebook.com/nicolas.molina.127"
+        icon: "fa-facebook"
   carlosrojas:
     name: Carlos Rojas
-    website: "http://www.carlosrojasblog.com/"
+    url: "/carlosrojas"
     avatar: "http://i.imgur.com/ecNB0is.png"
+    website: "http://www.carlosrojasblog.com/"
+    bio: "Soy un creativo, organizado, autodidacta emprendedor y líder. Disfruto de enseñar a las personas a programar."
+    social_links:
+      - link: "https://twitter.com/carlosrojas_o"
+        icon: "fa-twitter"
 
 social_links: 
   - url: "http://goo.gl/forms/ZCEc0cr3jydgK2wv1"

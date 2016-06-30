@@ -1,0 +1,41 @@
+---
+layout: default
+---
+{% assign author = site.authors[page.author] %}
+<div class="container">
+    <div class="col-xs-12 col-md-9">
+      <div class="row">
+        <div class="col-xs-8 col-sm-3">
+          <img src="{{ author.avatar }}" class="img-responsive img-author" alt="photo">
+        </div>
+        <div class="col-xs-12 col-sm-9">
+          <h2 class="title">{{ author.name }}</h2>
+          <p>{{ author.bio }}</p>
+          <strong>Website:</strong> <a href="{{ author.website }}" target="_blank"> {{ author.website }}</a>
+          <p>
+          {% for social in author.social_links %}
+            <a href="{{ social.link }}" target="_blank" class="btn btn-default">
+              <i class="fa {{ social.icon }}" aria-hidden="true"></i>
+            </a>
+          {% endfor %}
+          </p>
+        </div>
+      </div>
+       <div class="row">
+        <div class="col-xs-12">
+          <h3 class="title">Artículos:</h3>
+        </div>
+      </div>
+      <div class="row">
+        {% for post in site.posts %}
+          {% if post.author == page.author %}
+          <div class="col-xs-12 col-sm-6">
+            {% include article_home.html trucate="90" %}
+          </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+    {% include right.html %}
+  </div>
+</div>

@@ -15,11 +15,9 @@ layout: default
       </div>
       <div class="row">
         {% for post in site.categories[page.category] %}
-          {% if post.cover %}
           <div class="col-xs-12 col-sm-6">
             {% include article_home.html trucate="90" %}
           </div>
-          {% endif %}
         {% endfor %}
       </div>
     </div>
