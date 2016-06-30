@@ -12,7 +12,7 @@ courses-url: "http://bootcampwithus.usefedora.com/"
 markdown: kramdown
 markdown_ext:  markdown,mkdown,mkdn,mkd,md
 
-#permalink: /:categories/:title
+permalink: /:categories/:title
 
 redcarpet:
   extensions: ["tables", "autolink", "strikethrough", "space_after_headers", "fenced_code_blocks"]
