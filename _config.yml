@@ -3,7 +3,7 @@ title: ion-book
 description: "Blog sobre Ionic Framework en Español"
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://ion-book.com" # the base hostname & protocol for your site
-book-url: "http://j.mp/1Us5Y5B"
+book-url: "/"
 book-img: "http://i.imgur.com/cfKvAxi.jpg"
 
 courses-url: "http://bootcampwithus.usefedora.com/"
