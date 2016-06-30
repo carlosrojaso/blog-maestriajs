@@ -44,6 +44,13 @@ authors:
         icon: "fa-twitter"
 
 social_links: 
+  - url: "https://twitter.com/ion_book"
+    title: "Twiiter"
+    icon: "fa-twitter"
+  - url: "https://www.facebook.com/ionbook/"
+    title: "Facebook"
+    icon: "fa-facebook"
   - url: "http://goo.gl/forms/ZCEc0cr3jydgK2wv1"
     title: "Slack"
     icon: "fa-slack"
+  
