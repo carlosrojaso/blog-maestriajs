@@ -2,55 +2,42 @@
 layout: default
 ---
 {% assign author = site.authors[page.author] %}
+<div class="container">
+  <div class="col-xs-12 col-md-10">
+     <h1 class="title-article">{{ page.title }}</h1>
+     <div class="tags">
+      {% for tag in page.tags %}
+        <span class="tag">{{ tag }}</span>
+      {% endfor %} - 
+      {{ page.date | date: '%B %d, %Y' }} por 
+      <a href="{{ author.url }}"><strong>{{ author.name }}</strong></a> 
+    </div>
+  </div>
+  {% if page.repo %}
+  <div class="col-xs-12 col-md-2 button-demo">
+    <a href="{{ page.repo }}" class="btn btn-primary btn-lg btn-block link-repo" target="_blank">
+      <i class="fa fa-github" aria-hidden="true"></i> Ver demo
+    </a>
+  </div>
+  {% endif %}
+</div>
 <div class="container article-detail">
   <div class="row">
-    <div class="col-xs-12 col-md-2 author">
-      <div class="row">
-        <div class="col-xs-2 col-sm-1 col-md-12 avatar">
-          <img src="{{ author.avatar }}" class="img-responsive" alt="photo">
-        </div>
-        <div class="col-xs-10 col-sm-11 col-md-12">
-          <p>Por <a href="{{ author.url }}"><strong>{{ author.name }}</strong></a> 
-        - {{ page.date | date: '%B %d, %Y' }}</p>
-        </div>
-      </div>
-    </div>
-    <div class="col-xs-12 col-md-10">
-      <div class="row">
-        <div class="col-xs-12 col-sm-9 col-md-10">
-            <h1 class="title-article">{{ page.title }}</h1>
-            <div class="tags">
-              {% for tag in page.tags %}
-                <span class="tag">{{ tag }}</span>
-              {% endfor %}
-            </div>
-        </div>
-        {% if page.repo %}
-        <div class="col-xs-12 col-sm-3 col-md-2 button-demo">
-          <a href="{{ page.repo }}" class="btn btn-primary btn-lg btn-block link-repo" target="_blank">
-            <i class="fa fa-github" aria-hidden="true"></i> Ver demo
-          </a>
-        </div>
-        {% endif %}
-      </div>
-      <div class="row">
-        <div class="col-xs-12 col-md-10">
-          <article>
-            {{ content }}
-          </article>
-          {% if page.repo %}
-          <a href="{{ page.repo }}" class="btn btn-primary btn-lg link-repo" target="_blank">
-            <i class="fa fa-github" aria-hidden="true"></i> Ver demo
-          </a>
-          {% endif %}
-          <hr/>
-          {% if page.comments %}{% include disqus.html %}{% endif %}
-          <div align="center">
-            <a href="#">
-            <i class="fa fa-arrow-circle-up fa-2x"></i>
-            </a>
-          </div>
-        </div>
+    <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
+      <article>
+        {{ content }}
+      </article>
+      {% if page.repo %}
+      <a href="{{ page.repo }}" class="btn btn-primary btn-lg link-repo" target="_blank">
+        <i class="fa fa-github" aria-hidden="true"></i> Ver demo
+      </a>
+      {% endif %}
+      <hr/>
+      {% if page.comments %}{% include disqus.html %}{% endif %}
+      <div align="center">
+        <a href="#">
+        <i class="fa fa-arrow-circle-up fa-2x"></i>
+        </a>
       </div>
     </div>
   </div>
