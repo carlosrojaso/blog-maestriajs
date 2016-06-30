@@ -3,7 +3,7 @@ layout: post
 title: "Forms con IonicV2"
 date: 2016-06-09
 tags: ionic2 angular2 forms
-categories: ionic2
+categories: demos
 comments: true
 repo: "http://ion-book.github.io/myForm/"
 author: nicobytes

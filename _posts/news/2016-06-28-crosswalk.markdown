@@ -3,7 +3,7 @@ layout: post
 title: "Aumenta el performance con Crosswalk"
 tags: plugins news  
 date: 2016-06-28
-categories: plugins
+categories: news
 comments: true
 author: nicobytes
 cover: "http://i.imgur.com/Ed37R8S.jpg"
