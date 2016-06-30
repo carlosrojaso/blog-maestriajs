@@ -3,7 +3,10 @@ title: ion-book
 description: "Blog sobre Ionic Framework en Español"
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://ion-book.com" # the base hostname & protocol for your site
-bookurl: "http://j.mp/1Us5Y5B"
+book-url: "http://j.mp/1Us5Y5B"
+book-img: "http://i.imgur.com/cfKvAxi.jpg"
+
+courses-url: "http://bootcampwithus.usefedora.com/"
 
 # Build settings
 markdown: kramdown
@@ -22,10 +25,7 @@ authors:
     name: Carlos Rojas
     website: "http://www.carlosrojasblog.com/"
 
-nav_links: 
+social_links: 
   - url: "http://goo.gl/forms/ZCEc0cr3jydgK2wv1"
     title: "Slack"
-  - url: "http://bootcampwithus.usefedora.com/"
-    title: "Cursos"
-  - url: "http://j.mp/1Us5Y5B"
-    title: "Comprar"
+    icon: "fa-slack"

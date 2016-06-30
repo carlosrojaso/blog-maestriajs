@@ -27,6 +27,40 @@ body {
 .title{
   font-weight: bold;
 }
+#footer{
+  background-color: $footer-background-color;
+  color: white;
+  padding: 20px 0px;
+  margin-top: 10px;
+  .logo{
+    width: 90%;
+    max-width: 300px;
+  }
+  .book-img{
+    width: 150px;
+  }
+  h1{
+    font-weight: bold;
+  }
+  p{
+    font-size: 20px;
+    text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.5);
+  }
+  a.btn-success{
+    margin-bottom: 10px;
+  }
+  .nav-pills a{
+    color: white;
+    text-decoration: underline;
+    font-size: 16px;
+    padding: 2px 0px;
+  }
+  .nav-pills a:hover{
+    background-color: transparent;
+    color: white;
+    text-decoration: none;
+  }
+}
 @import
 "base-small",
 "base-medium",

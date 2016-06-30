@@ -2,11 +2,12 @@
   <section class="box">
     <div class="row">
       <div class="col-xs-12">
-        <a href="http://j.mp/1Us5Y5B" target="_blank">
-          <img src="http://i.imgur.com/cfKvAxi.jpg" alt="">
+        <a href="{{ site.book-url }}" target="_blank">
+          <img src="{{ site.book-img }}" alt="logo" class="hidden-sm">
+          <img src="images/ion-book-wh.png" alt="logo" class="visible-sm">
         </a>
-        <p>Aprende ionic1 & ionic2 y construye increibles aplicaciones mobiles aprendes. </p>
-        <a href="http://j.mp/1Us5Y5B" target="_blank" class="btn btn-success btn-lg btn-block">
+        <p>Aprende ionic1 & ionic2 y construye increibles aplicaciones mientras aprendes. </p>
+        <a href="{{ site.book-url }}" target="_blank" class="btn btn-success btn-lg btn-block">
           Comprar
         </a>
       </div>
@@ -15,7 +16,9 @@
 </div>
 <div class="col-xs-12 col-md-3">
   <h4 class="title">Siguenos en:</h4>
-  <a href="http://goo.gl/forms/ZCEc0cr3jydgK2wv1" target="_blank" class="btn btn-default">
-    <i class="fa fa-slack" aria-hidden="true"></i>
-  </a>
+  {% for social in site.social_links %}
+    <a href="{{ social.url }}" target="_blank" class="btn btn-default">
+      <i class="fa {{ social.icon }}" aria-hidden="true"></i>
+    </a>
+  {% endfor %}
 </div>
