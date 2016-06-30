@@ -1,39 +1,39 @@
 <div class="col-xs-12 col-md-3">
-  <section class="box">
-    <div class="row">
-      <div class="col-xs-12">
-        <a href="{{ site.book-url }}" target="_blank">
-          <img src="{{ site.book-img }}" alt="logo" class="hidden-sm">
-          <img src="/images/ion-book-wh.png" alt="logo" class="visible-sm">
-        </a>
-        <p>Aprende ionic1 & ionic2 y construye increibles aplicaciones mientras aprendes. </p>
-        <a href="{{ site.book-url }}" target="_blank" class="btn btn-success btn-lg btn-block">
-          Comprar
-        </a>
-      </div>
+  <div class="row">
+    <div class="col-xs-12 col-sm-6 col-md-12">
+       <section class="box">
+          <a href="{{ site.book-url }}" target="_blank">
+            <img src="{{ site.book-img }}" alt="logo" class="hidden-sm">
+            <img src="/images/ion-book-wh.png" alt="logo" class="visible-sm">
+          </a>
+          <p>Aprende ionic1 & ionic2 y construye increibles aplicaciones mientras aprendes. </p>
+          <a href="{{ site.book-url }}" target="_blank" class="btn btn-success btn-lg btn-block">
+            Comprar
+          </a>
+        </section>
     </div>
-  </section>
-  <section class="box">
-    <div class="row">
-      <div class="col-xs-12">
-        <a href="{{ site.courses-url }}" target="_blank">
-          <img src="/images/ion-book-wh.png" alt="logo">
-        </a>
-        <p>Aprende con cursos más específicos con videos online. </p>
-        <a href="{{ site.courses-url }}" target="_blank" class="btn btn-success btn-lg btn-block">
-          Ver cursos
-        </a>
-      </div>
+    <div class="col-xs-12 col-sm-6 col-md-12">
+       <section class="box">
+         <a href="{{ site.courses-url }}" target="_blank">
+            <img src="/images/ion-book-wh.png" alt="logo">
+          </a>
+          <p>Aprende con cursos más específicos con videos online. </p>
+          <a href="{{ site.courses-url }}" target="_blank" class="btn btn-success btn-lg btn-block">
+            Ver cursos
+          </a>
+        </section>
     </div>
-  </section>
-  
-  <h4 class="title">Siguenos en:</h4>
-  <p>
-  {% for social in site.social_links %}
-    <a href="{{ social.url }}" target="_blank" class="btn btn-default">
-      <i class="fa {{ social.icon }}" aria-hidden="true"></i>
-    </a>
-  {% endfor %}
-  </p>
-  
+  </div>
+ <div class="row">
+   <div class="col-xs-12">
+     <h4 class="title">Siguenos en:</h4>
+      <p>
+      {% for social in site.social_links %}
+        <a href="{{ social.url }}" target="_blank" class="btn btn-default">
+          <i class="fa {{ social.icon }}" aria-hidden="true"></i>
+        </a>
+      {% endfor %}
+      </p>
+   </div>
+ </div>
 </div>
