@@ -19,7 +19,3 @@ Hace unas semanas el equipo de Ionic libero una tienda Tienda para que todos los
 En este video les comparto un poco de que se trata.
 
 [<img src="http://img.youtube.com/vi/URobJP0uPa8/hqdefault.jpg" />](http://j.mp/1EfRHHR)
-
-Espero sea de utilidad y Sigan Programando :)
-
-@Carlosrojas_o

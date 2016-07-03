@@ -99,9 +99,3 @@ Por esto varios fabricantes pueden hacer su propio hardware y luego incluir Andr
 Por eso Crosswalk soluciona este problema y muchas empresas confían en el:
 
 <img src="http://i.imgur.com/YGjGovL.png" class="img-responsive" alt="crosswalk"/>
-
-¿Quieres saber más? suscribete a nuestro Newsletter o unete a nuestro canal en [Slack](http://goo.gl/forms/ZCEc0cr3jydgK2wv1){:target="_blank"} y mantente atento.
-Espero sea de utilidad y sigan Programando :)
-
-
-[@nicobytes](http://www.nicobytes.com){:target="_blank"}

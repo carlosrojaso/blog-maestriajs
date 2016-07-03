@@ -18,7 +18,3 @@ que ellos dan para resolver los retos más comunes que enfrentamos los desarroll
 
 Sin más preambulo, el gran avance es que ya tienen listo el soporte para Ionic 2!!! y realizaran un despliegue a producción pronto, entonces,
 alisten sus proyectos por que ha llegado la hora de Ionic 2!!!
-
-Espero sea de utilidad y Sigan Programando :)
-
-@Carlosrojas_o

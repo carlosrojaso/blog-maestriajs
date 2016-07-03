@@ -67,7 +67,3 @@ Escribirme   [@carlosrojas_o](https://twitter.com/carlosrojas_o)
 [Facebook Page](https://www.facebook.com/asfirebase/)
 
 [Ionic Videos ](http://j.mp/1KIgYsI)
-
-Espero sea de utilidad y Sigan Programando :)
-
-@Carlosrojas_o

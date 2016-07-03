@@ -194,9 +194,3 @@ Por último tendremos toda nuestra aplicación de esta manera:
 <img src="http://i.imgur.com/rhTAWtE.jpg" class="img-responsive" alt="ionic generator"/>
  
 Nuestro proyecto quedará de una forma más ordenada y con un mayor control, todo esto lo podemos hacer manualmente pero sin duda con **ionic generator** podemos ahorrar tiempo valioso en la creación de cada uno de estos.
-
-Para saber sobre ionic suscribete a nuestro Newsletter y mantente atento.
-Espero sea de utilidad y sigan Programando :)
-
-
-[@nicobytes](http://www.nicobytes.com){:target="_blank"}

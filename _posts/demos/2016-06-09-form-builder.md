@@ -119,10 +119,3 @@ El **Form** es algo largo pero sencillo:
 </form> 
 
 {% endhighlight %}
-
-Con **FormBuilder** podras tener total control de tus formularios, más adelante explicaremos hacer validaciones mas complejas por eso suscribete a nuestro Newsletter y mantente atento.
-
-Espero sea de utilidad y sigan Programando :)
-
-
-[@nicobytes](http://www.nicobytes.com)

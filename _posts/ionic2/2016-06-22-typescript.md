@@ -34,8 +34,3 @@ Como sabes los navegadores y por consecuencia el webview de los dispositivos sol
 `
 tsc archivo.ts
 `
-
-
-Bueno esto es todo por ahora. Espero sea de utilidad y Sigan Programando :) 
-
-@Carlosrojas_o

@@ -26,12 +26,27 @@ layout: default
     <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
       <article>
         {{ content }}
+        {% if page.repo %}
+        <p>
+          <a href="{{ page.repo }}" class="btn btn-primary btn-lg link-repo" target="_blank">
+            <i class="fa fa-github" aria-hidden="true"></i> Ver demo
+          </a>
+        </p>
+        {% endif %}
       </article>
-      {% if page.repo %}
-      <a href="{{ page.repo }}" class="btn btn-primary btn-lg link-repo" target="_blank">
-        <i class="fa fa-github" aria-hidden="true"></i> Ver demo
-      </a>
-      {% endif %}
+      <article>
+        <p>¿Quieres saber más? suscribete a nuestro Newsletter o únete a nuestro canal en <a href="http://goo.gl/forms/ZCEc0cr3jydgK2wv1">Slack</a> y mantente atento.
+        Espero sea de utilidad y sigan Programando :)</p>
+        <p>Por: <a href="{{ author.url }}"><strong>{{ author.name }}</strong></a></p>
+        <h4 class="title">Siguenos en:</h4>
+        <p>
+        {% for social in site.social_links %}
+          <a href="{{ social.url }}" target="_blank" class="btn btn-default">
+            <i class="fa {{ social.icon }}" aria-hidden="true"></i>
+          </a>
+        {% endfor %}
+        </p>
+      </article>
       <hr/>
       {% if page.comments %}{% include disqus.html %}{% endif %}
       <div align="center">
