@@ -2,7 +2,7 @@
 layout: post
 title: "¿Qué es Ionic Native?"
 tags: ionic2  
-date: 2016-07-03
+date: 2016-07-05
 categories: ionic2
 comments: true
 author: nicobytes
