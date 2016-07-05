@@ -47,217 +47,217 @@ Aqui estan los plugins que ya están listos para ser usados con **ionic native**
 <ul>
   
 <li class="capitalize ">
-  <a href="http://ionicframework.com/docs/v2/native/3dtouch">3DTouch</a>
+  <a href="http://ionicframework.com/docs/v2/native/3dtouch" target="_blank">3DTouch</a>
 </li>
 <li class="capitalize ">
-  <a href="http://ionicframework.com/docs/v2/native/action-sheet">Action Sheet</a>
+  <a href="http://ionicframework.com/docs/v2/native/action-sheet" target="_blank">Action Sheet</a>
 </li>
 <li class="capitalize ">
-  <a href="http://ionicframework.com/docs/v2/native/admob">AdMob</a>
+  <a href="http://ionicframework.com/docs/v2/native/admob" target="_blank">AdMob</a>
 </li>
 <li class="capitalize ">
-  <a href="http://ionicframework.com/docs/v2/native/app-availability">App Availability</a>
+  <a href="http://ionicframework.com/docs/v2/native/app-availability" target="_blank">App Availability</a>
 </li>
 <li class="capitalize ">
-  <a href="http://ionicframework.com/docs/v2/native/app-rate">App Rate</a>
+  <a href="http://ionicframework.com/docs/v2/native/app-rate" target="_blank">App Rate</a>
 </li>
 <li class="capitalize ">
-  <a href="http://ionicframework.com/docs/v2/native/app-version">App Version</a>
+  <a href="http://ionicframework.com/docs/v2/native/app-version" target="_blank">App Version</a>
 </li>
 <li class="capitalize ">
-  <a href="http://ionicframework.com/docs/v2/native/background-mode">Background Mode</a>
+  <a href="http://ionicframework.com/docs/v2/native/background-mode" target="_blank">Background Mode</a>
 </li>
 <li class="capitalize ">
-  <a href="http://ionicframework.com/docs/v2/native/backgroundgeolocation">BackgroundGeolocation</a>
+  <a href="http://ionicframework.com/docs/v2/native/backgroundgeolocation" target="_blank">BackgroundGeolocation</a>
 </li>
 <li class="capitalize ">
-  <a href="http://ionicframework.com/docs/v2/native/badge">Badge</a>
+  <a href="http://ionicframework.com/docs/v2/native/badge" target="_blank">Badge</a>
 </li>
 <li class="capitalize ">
-  <a href="http://ionicframework.com/docs/v2/native/barcode-scanner">Barcode Scanner</a>
+  <a href="http://ionicframework.com/docs/v2/native/barcode-scanner" target="_blank">Barcode Scanner</a>
 </li>
 <li class="capitalize ">
-  <a href="http://ionicframework.com/docs/v2/native/base64-to gallery">Base64 To Gallery</a>
+  <a href="http://ionicframework.com/docs/v2/native/base64-to gallery" target="_blank">Base64 To Gallery</a>
 </li>
 <li class="capitalize ">
-  <a href="http://ionicframework.com/docs/v2/native/battery-status">Battery Status</a>
+  <a href="http://ionicframework.com/docs/v2/native/battery-status" target="_blank">Battery Status</a>
 </li>
 <li class="capitalize ">
-  <a href="http://ionicframework.com/docs/v2/native/ble">BLE</a>
+  <a href="http://ionicframework.com/docs/v2/native/ble" target="_blank">BLE</a>
 </li>
 <li class="capitalize ">
-  <a href="http://ionicframework.com/docs/v2/native/bluetooth-serial">Bluetooth Serial</a>
+  <a href="http://ionicframework.com/docs/v2/native/bluetooth-serial" target="_blank">Bluetooth Serial</a>
 </li>
 <li class="capitalize ">
-  <a href="http://ionicframework.com/docs/v2/native/brightness">Brightness</a>
+  <a href="http://ionicframework.com/docs/v2/native/brightness" target="_blank">Brightness</a>
 </li>
 <li class="capitalize ">
-  <a href="http://ionicframework.com/docs/v2/native/calendar">Calendar</a>
+  <a href="http://ionicframework.com/docs/v2/native/calendar" target="_blank">Calendar</a>
 </li>
 <li class="capitalize ">
-  <a href="http://ionicframework.com/docs/v2/native/camera">Camera</a>
+  <a href="http://ionicframework.com/docs/v2/native/camera" target="_blank">Camera</a>
 </li>
 <li class="capitalize ">
-  <a href="http://ionicframework.com/docs/v2/native/cardio">CardIO</a>
+  <a href="http://ionicframework.com/docs/v2/native/cardio" target="_blank">CardIO</a>
 </li>
 <li class="capitalize ">
-  <a href="http://ionicframework.com/docs/v2/native/clipboard">Clipboard</a>
+  <a href="http://ionicframework.com/docs/v2/native/clipboard" target="_blank">Clipboard</a>
 </li>
 <li class="capitalize ">
-  <a href="http://ionicframework.com/docs/v2/native/connection">Connection</a>
+  <a href="http://ionicframework.com/docs/v2/native/connection" target="_blank">Connection</a>
 </li>
 <li class="capitalize ">
-  <a href="http://ionicframework.com/docs/v2/native/contact">Contact</a>
+  <a href="http://ionicframework.com/docs/v2/native/contact" target="_blank">Contact</a>
 </li>
 <li class="capitalize ">
-  <a href="http://ionicframework.com/docs/v2/native/contactaddress">ContactAddress</a>
+  <a href="http://ionicframework.com/docs/v2/native/contactaddress" target="_blank">ContactAddress</a>
 </li>
 <li class="capitalize ">
-  <a href="http://ionicframework.com/docs/v2/native/contactfield">ContactField</a>
+  <a href="http://ionicframework.com/docs/v2/native/contactfield" target="_blank">ContactField</a>
 </li>
 <li class="capitalize ">
-  <a href="http://ionicframework.com/docs/v2/native/contactfindoptions">ContactFindOptions</a>
+  <a href="http://ionicframework.com/docs/v2/native/contactfindoptions" target="_blank">ContactFindOptions</a>
 </li>
 <li class="capitalize ">
-  <a href="http://ionicframework.com/docs/v2/native/contactname">ContactName</a>
+  <a href="http://ionicframework.com/docs/v2/native/contactname" target="_blank">ContactName</a>
 </li>
 <li class="capitalize ">
-  <a href="http://ionicframework.com/docs/v2/native/contactorganization">ContactOrganization</a>
+  <a href="http://ionicframework.com/docs/v2/native/contactorganization" target="_blank">ContactOrganization</a>
 </li>
 <li class="capitalize ">
-  <a href="http://ionicframework.com/docs/v2/native/contacts">Contacts</a>
+  <a href="http://ionicframework.com/docs/v2/native/contacts" target="_blank">Contacts</a>
 </li>
 <li class="capitalize ">
-  <a href="http://ionicframework.com/docs/v2/native/date-picker">Date Picker</a>
+  <a href="http://ionicframework.com/docs/v2/native/date-picker" target="_blank">Date Picker</a>
 </li>
 <li class="capitalize ">
-  <a href="http://ionicframework.com/docs/v2/native/db-meter">DB Meter</a>
+  <a href="http://ionicframework.com/docs/v2/native/db-meter" target="_blank">DB Meter</a>
 </li>
 <li class="capitalize ">
-  <a href="http://ionicframework.com/docs/v2/native/device">Device</a>
+  <a href="http://ionicframework.com/docs/v2/native/device" target="_blank">Device</a>
 </li>
 <li class="capitalize ">
-  <a href="http://ionicframework.com/docs/v2/native/device-motion">Device Motion</a>
+  <a href="http://ionicframework.com/docs/v2/native/device-motion" target="_blank">Device Motion</a>
 </li>
 <li class="capitalize ">
-  <a href="http://ionicframework.com/docs/v2/native/device-orientation">Device Orientation</a>
+  <a href="http://ionicframework.com/docs/v2/native/device-orientation" target="_blank">Device Orientation</a>
 </li>
 <li class="capitalize ">
-  <a href="http://ionicframework.com/docs/v2/native/deviceaccounts">DeviceAccounts</a>
+  <a href="http://ionicframework.com/docs/v2/native/deviceaccounts" target="_blank">DeviceAccounts</a>
 </li>
 <li class="capitalize ">
-  <a href="http://ionicframework.com/docs/v2/native/diagnostic">Diagnostic</a>
+  <a href="http://ionicframework.com/docs/v2/native/diagnostic" target="_blank">Diagnostic</a>
 </li>
 <li class="capitalize ">
-  <a href="http://ionicframework.com/docs/v2/native/dialogs">Dialogs</a>
+  <a href="http://ionicframework.com/docs/v2/native/dialogs" target="_blank">Dialogs</a>
 </li>
 <li class="capitalize ">
-  <a href="http://ionicframework.com/docs/v2/native/email-composer">Email Composer</a>
+  <a href="http://ionicframework.com/docs/v2/native/email-composer" target="_blank">Email Composer</a>
 </li>
 <li class="capitalize ">
-  <a href="http://ionicframework.com/docs/v2/native/facebook">Facebook</a>
+  <a href="http://ionicframework.com/docs/v2/native/facebook" target="_blank">Facebook</a>
 </li>
 <li class="capitalize ">
-  <a href="http://ionicframework.com/docs/v2/native/file">File</a>
+  <a href="http://ionicframework.com/docs/v2/native/file" target="_blank">File</a>
 </li>
 <li class="capitalize ">
-  <a href="http://ionicframework.com/docs/v2/native/flashlight">Flashlight</a>
+  <a href="http://ionicframework.com/docs/v2/native/flashlight" target="_blank">Flashlight</a>
 </li>
 <li class="capitalize ">
-  <a href="http://ionicframework.com/docs/v2/native/geolocation">Geolocation</a>
+  <a href="http://ionicframework.com/docs/v2/native/geolocation" target="_blank">Geolocation</a>
 </li>
 <li class="capitalize ">
-  <a href="http://ionicframework.com/docs/v2/native/globalization">Globalization</a>
+  <a href="http://ionicframework.com/docs/v2/native/globalization" target="_blank">Globalization</a>
 </li>
 <li class="capitalize ">
-  <a href="http://ionicframework.com/docs/v2/native/google-analytics">Google Analytics</a>
+  <a href="http://ionicframework.com/docs/v2/native/google-analytics" target="_blank">Google Analytics</a>
 </li>
 <li class="capitalize ">
-  <a href="http://ionicframework.com/docs/v2/native/google-maps">Google Maps</a>
+  <a href="http://ionicframework.com/docs/v2/native/google-maps" target="_blank">Google Maps</a>
 </li>
 <li class="capitalize ">
-  <a href="http://ionicframework.com/docs/v2/native/google-plus">Google Plus</a>
+  <a href="http://ionicframework.com/docs/v2/native/google-plus" target="_blank">Google Plus</a>
 </li>
 <li class="capitalize ">
-  <a href="http://ionicframework.com/docs/v2/native/hotspot">Hotspot</a>
+  <a href="http://ionicframework.com/docs/v2/native/hotspot" target="_blank">Hotspot</a>
 </li>
 <li class="capitalize ">
-  <a href="http://ionicframework.com/docs/v2/native/httpd">Httpd</a>
+  <a href="http://ionicframework.com/docs/v2/native/httpd" target="_blank">Httpd</a>
 </li>
 <li class="capitalize ">
-  <a href="http://ionicframework.com/docs/v2/native/image-picker">Image Picker</a>
+  <a href="http://ionicframework.com/docs/v2/native/image-picker" target="_blank">Image Picker</a>
 </li>
 <li class="capitalize ">
-  <a href="http://ionicframework.com/docs/v2/native/inappbrowser">InAppBrowser</a>
+  <a href="http://ionicframework.com/docs/v2/native/inappbrowser" target="_blank">InAppBrowser</a>
 </li>
 <li class="capitalize ">
-  <a href="http://ionicframework.com/docs/v2/native/insomnia">Insomnia</a>
+  <a href="http://ionicframework.com/docs/v2/native/insomnia" target="_blank">Insomnia</a>
 </li>
 <li class="capitalize ">
-  <a href="http://ionicframework.com/docs/v2/native/ionic-deeplinks">Ionic Deeplinks</a>
+  <a href="http://ionicframework.com/docs/v2/native/ionic-deeplinks" target="_blank">Ionic Deeplinks</a>
 </li>
 <li class="capitalize ">
-  <a href="http://ionicframework.com/docs/v2/native/keyboard">Keyboard</a>
+  <a href="http://ionicframework.com/docs/v2/native/keyboard" target="_blank">Keyboard</a>
 </li>
 <li class="capitalize ">
-  <a href="http://ionicframework.com/docs/v2/native/launch-navigator">Launch Navigator</a>
+  <a href="http://ionicframework.com/docs/v2/native/launch-navigator" target="_blank">Launch Navigator</a>
 </li>
 <li class="capitalize ">
-  <a href="http://ionicframework.com/docs/v2/native/local-notifications">Local Notifications</a>
+  <a href="http://ionicframework.com/docs/v2/native/local-notifications" target="_blank">Local Notifications</a>
 </li>
 <li class="capitalize ">
-  <a href="http://ionicframework.com/docs/v2/native/mediaerror">MediaError</a>
+  <a href="http://ionicframework.com/docs/v2/native/mediaerror" target="_blank">MediaError</a>
 </li>
 <li class="capitalize ">
-  <a href="http://ionicframework.com/docs/v2/native/mediaplugin">MediaPlugin</a>
+  <a href="http://ionicframework.com/docs/v2/native/mediaplugin" target="_blank">MediaPlugin</a>
 </li>
 <li class="capitalize ">
-  <a href="http://ionicframework.com/docs/v2/native/network">Network</a>
+  <a href="http://ionicframework.com/docs/v2/native/network" target="_blank">Network</a>
 </li>
 <li class="capitalize ">
-  <a href="http://ionicframework.com/docs/v2/native/printer">Printer</a>
+  <a href="http://ionicframework.com/docs/v2/native/printer" target="_blank">Printer</a>
 </li>
 <li class="capitalize ">
-  <a href="http://ionicframework.com/docs/v2/native/push">Push</a>
+  <a href="http://ionicframework.com/docs/v2/native/push" target="_blank">Push</a>
 </li>
 <li class="capitalize ">
-  <a href="http://ionicframework.com/docs/v2/native/safariviewcontroller">SafariViewController</a>
+  <a href="http://ionicframework.com/docs/v2/native/safariviewcontroller" target="_blank">SafariViewController</a>
 </li>
 <li class="capitalize ">
-  <a href="http://ionicframework.com/docs/v2/native/screenshot">Screenshot</a>
+  <a href="http://ionicframework.com/docs/v2/native/screenshot" target="_blank">Screenshot</a>
 </li>
 <li class="capitalize ">
-  <a href="http://ionicframework.com/docs/v2/native/sms">SMS</a>
+  <a href="http://ionicframework.com/docs/v2/native/sms" target="_blank">SMS</a>
 </li>
 <li class="capitalize ">
-  <a href="http://ionicframework.com/docs/v2/native/social-sharing">Social Sharing</a>
+  <a href="http://ionicframework.com/docs/v2/native/social-sharing" target="_blank">Social Sharing</a>
 </li>
 <li class="capitalize ">
-  <a href="http://ionicframework.com/docs/v2/native/spinner-dialog">Spinner Dialog</a>
+  <a href="http://ionicframework.com/docs/v2/native/spinner-dialog" target="_blank">Spinner Dialog</a>
 </li>
 <li class="capitalize ">
-  <a href="http://ionicframework.com/docs/v2/native/splashscreen">Splashscreen</a>
+  <a href="http://ionicframework.com/docs/v2/native/splashscreen" target="_blank">Splashscreen</a>
 </li>
 <li class="capitalize ">
-  <a href="http://ionicframework.com/docs/v2/native/sqlite">SQLite</a>
+  <a href="http://ionicframework.com/docs/v2/native/sqlite" target="_blank">SQLite</a>
 </li>
 <li class="capitalize ">
-  <a href="http://ionicframework.com/docs/v2/native/status-bar">Status Bar</a>
+  <a href="http://ionicframework.com/docs/v2/native/status-bar" target="_blank">Status Bar</a>
 </li>
 <li class="capitalize ">
-  <a href="http://ionicframework.com/docs/v2/native/toast">Toast</a>
+  <a href="http://ionicframework.com/docs/v2/native/toast" target="_blank">Toast</a>
 </li>
 <li class="capitalize ">
-  <a href="http://ionicframework.com/docs/v2/native/touchid">TouchID</a>
+  <a href="http://ionicframework.com/docs/v2/native/touchid" target="_blank">TouchID</a>
 </li>
 <li class="capitalize ">
-  <a href="http://ionicframework.com/docs/v2/native/transfer">Transfer</a>
+  <a href="http://ionicframework.com/docs/v2/native/transfer" target="_blank">Transfer</a>
 </li>
 <li class="capitalize ">
-  <a href="http://ionicframework.com/docs/v2/native/vibration">Vibration</a>
+  <a href="http://ionicframework.com/docs/v2/native/vibration" target="_blank">Vibration</a>
 </li>
 <li class="capitalize ">
-  <a href="http://ionicframework.com/docs/v2/native/webintent">WebIntent</a>
+  <a href="http://ionicframework.com/docs/v2/native/webintent" target="_blank">WebIntent</a>
 </li>
 
 </ul>
