@@ -41,7 +41,7 @@ watch.unsubscribe();
 En la *línea 3* manejamos un `Promise` en donde solo recibimos los datos pero en *línea 7* donde usamos `watchPosition` para estar pidiendo la geolocalización cada X tiempo usamos un `Observable` en el cual podemos usar `subscribe` y `unsubscribe`.
 ## Runtime Diagnostics
 
-A diferencia de la versión 1 donde usamos ngCordova, **ionic native** nos permite saber al implementar un plugin nos falta instalar el plugin o saber cual es problema realmente, aunque debemos probarlo directamente en un dispositivo o emulador y en el emulador de la web no funcionará correctamente.
+A diferencia de la versión 1 donde usamos ngCordova, **ionic native** nos permite saber si al usar un plugin nos falta instalar el plugin o saber cual es problema realmente, aunque debemos probarlo directamente en un dispositivo o emulador y en el emulador de la web no funcionará correctamente.
 
 Aqui estan los plugins que ya están listos para ser usados con **ionic native**:
 <ul>
