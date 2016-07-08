@@ -30,3 +30,5 @@ MiObservable.subscribe((resultado) => {
 
 entonces, ahora cuando veas en el codigo de Ionic 2 este metodo ya sabes para que se esta utilizando :)
 
+Si quieres entender un poco más a fondo la programacion reactiva puedes ver [aquí](https://gist.github.com/staltz/868e7e9bc2a7b8c1f754)
+
