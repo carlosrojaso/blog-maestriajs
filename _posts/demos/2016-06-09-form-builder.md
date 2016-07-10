@@ -5,7 +5,7 @@ date: 2016-06-09
 tags: ionic2 angular2 forms
 categories: demos
 comments: true
-repo: "http://ion-book.github.io/myForm/"
+repo: "http://ion-book.github.io/demo101/"
 author: nicobytes
 cover: "http://i.imgur.com/PWBxv0C.png"
 ---
