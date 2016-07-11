@@ -110,7 +110,7 @@ Veamos ahora nuestro template `home.html`:
 
 {% endhighlight %}
 
-En la *línea 10* tendremos el botón que ejecutará nuestra función `getPicture` del controlador y en la *línea 11* mostraremos la imagen, usamos la directiva `ngIf` para que muestre la imagen solo si ya tomamos la fotografía.
+En la *línea 10* tendremos el botón que ejecutará la función `getPicture` del controlador y en la *línea 11* mostraremos la imagen, usamos la directiva `ngIf` para que muestre la imagen solo si ya tomamos la fotografía.
 
 # Paso 3: Compilando
 
