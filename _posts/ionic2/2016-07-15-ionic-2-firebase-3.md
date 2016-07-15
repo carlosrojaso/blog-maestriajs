@@ -29,8 +29,9 @@ $ionic start myapp --ts --v2
 
 ## 3. Modificar app.ts con información de firebase.
 
-En esta info debes colocar la info de inicialización. en una variable
+En esta info debes colocar los parametros de inicialización en una variable.
 
+{% highlight javascript linenos %}
 var config = {
     apiKey: "aasdasdadmasdjasxxxx",
     authDomain: "yourapp.firebaseapp.com",
@@ -38,24 +39,24 @@ var config = {
     storageBucket: "yourapp.appspot.com",
   };
   firebase.initializeApp(config);
-
+{% endhighlight %}
 
 ## 4. Instalar dependencia de Firebase en tu proyecto.
 
-`
+```
 $ npm install firebase --save 
-`
+```
 
 ## 5. Instalar dependencia de Firebase en tu proyecto.
 
-`
+```
 $ typings install --save firebase
-`
+```
 
 ## 6. Importar en los archivos donde vayas a utilizar la Firebase.
 
-`
+```
 import * as firebase from 'firebase';
-`
+```
 
 Con estos pasos basicos estaras listo para poder empezar a utilizar Firebase. No dudes en escribir en los comentarios si tienes preguntas :)
