@@ -83,7 +83,7 @@ import {Component} from '@angular/core';
 import {Platform, ionicBootstrap} from 'ionic-angular';
 import {StatusBar} from 'ionic-native';
 import {HomePage} from './pages/home/home';
-import {FIREBASE_PROVIDERS, defaultFirebase} from 'angularfire2';
+import {FIREBASE_PROVIDERS, defaultFirebase, AngularFire} from 'angularfire2';
 
 @Component({
   template: '<ion-nav [root]="rootPage"></ion-nav>'
@@ -91,8 +91,10 @@ import {FIREBASE_PROVIDERS, defaultFirebase} from 'angularfire2';
 export class MyApp {
   rootPage: any = HomePage;
 
-  constructor(platform: Platform) {
+  constructor(platform: Platform, af: AngularFire) {
     platform.ready().then(() => {
+      // Okay, so the platform is ready and our plugins are available.
+      // Here you can do any higher level native things you might need.
       StatusBar.styleDefault();
     });
   }
@@ -107,7 +109,6 @@ ionicBootstrap(MyApp, [
     storageBucket: "demo104-60efc.appspot.com",
   }),
 ]);
-
 {% endhighlight %}
 
 En *la línea 5* debemos importar a `FIREBASE_PROVIDERS` y `defaultFirebase`, ahora modificaremos el método de `ionicBootstrap`, en *la línea 21* definimos los proveedores de Firebase como globales y desde *la línea 22 hasta la línea 27* enviamos las variables de configuración.
