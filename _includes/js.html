@@ -1,23 +1,16 @@
+<!-- Libs -->
 <script src='{{ "/bower_components/jquery/dist/jquery.min.js" | prepend: site.baseurl }}'></script>
 <script src='{{ "/bower_components/bootstrap/dist/js/bootstrap.min.js" | prepend: site.baseurl }}'></script>
-
-<script type="text/javascript">var switchTo5x=true;</script>
-<script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
-<script type="text/javascript" src="http://s.sharethis.com/loader.js"></script>
+<!-- Analitycs -->
 <script>
 (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
 m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
 ga('create', 'UA-5126579-41', 'auto');
 ga('send', 'pageview');
 </script>
-<script type="text/javascript">stLight.options({publisher: "e54bac27-2ea6-4037-8575-fac40983aed7", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script>
-<script>
-var options={ "publisher": "e54bac27-2ea6-4037-8575-fac40983aed7", "position": "left", "ad": { "visible": false, "openDelay": 5, "closeDelay": 0}, "chicklets": { "items": ["facebook", "twitter"]}};
-var st_hover_widget = new sharethis.widgets.hoverbuttons(options);
-</script>
+<!-- Form -->
 <script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/signup-forms/popup/embed.js" data-dojo-config="usePlainJson: true, isDebug: false"></script>
 <script type="text/javascript">require(["mojo/signup-forms/Loader"], function(L) { L.start({"baseUrl":"mc.us13.list-manage.com","uuid":"e940b700cbe988699b03ab77c","lid":"e8641062ff"}) })</script>
 <!--
