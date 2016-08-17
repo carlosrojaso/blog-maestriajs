@@ -71,7 +71,7 @@ Para saber de qué trata este último release de **Ionic 2 Beta 11** puedes ver 
         </a>
       </div>
       <h1>
-        <a href="http://www.ion-book.com/demos/form-builder" target="_blank">Usando la cámara con Ionic 2</a>
+        <a href="http://www.ion-book.com/demos/form-builder" target="_blank">Forms con IonicV2</a>
       </h1>
       <div class="more">
         <a class="btn btn-primary" href="http://www.ion-book.com/demos/form-builder" target="_blank">Leer más...</a>
