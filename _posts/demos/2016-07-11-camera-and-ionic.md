@@ -14,6 +14,12 @@ cover: "http://i.imgur.com/9Uq2Naw.jpg"
 
 <img class="img-responsive" src="http://i.imgur.com/9Uq2Naw.jpg" alt="camera-and-ionic">
 
+# Actualización (17/08/2016)
+<hr/>
+Hemos actualizado este demo con el último release de [Ionic 2 Beta 11](http://www.ion-book.com/news/ionic-2-beta-11){:target="_blank"}, que tiene la más reciente actulización con [ionic native](http://www.ion-book.com/news/ionic-native-news){:target="_blank"} . Aquí está como se puede hacer la actualización [Steps to Upgrade](https://github.com/driftyco/ionic/blob/master/CHANGELOG.md#steps-to-upgrade-to-beta-11){:target="_blank"}.
+
+<hr/>
+
 # Paso 1: Iniciando el proyecto
 
 Lo primero que haremos será iniciar un nuevo proyecto con ionic, si no lo recuerdas puedes ver esto con mas detalle en la [Introduccion a Ionic 2](http://www.ion-book.com/ionic2/ionic2){:target="_blank"}.
