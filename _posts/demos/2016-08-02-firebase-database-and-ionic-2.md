@@ -14,25 +14,17 @@ cover: "http://i.cubeupload.com/T62oZF.jpg"
 
 <img class="img-responsive" src="http://i.cubeupload.com/T62oZF.jpg" alt="firebase-database-and-ionic-2">
 
-<div class="col-xs-12 button-demo">
-  <a href="{{ page.repo }}" class="btn btn-primary btn-lg link-repo" target="_blank">
-    <i class="fa fa-github" aria-hidden="true"></i> Ver demo online
-  </a>
-</div>
-<br/>
-<br/>
+# Actualización (17/08/2016)
+<hr/>
+Hemos actualizado este demo con el último release de [Ionic 2 Beta 11](http://www.ion-book.com/news/ionic-2-beta-11){:target="_blank"}, que tiene la más reciente actulización. Aquí está cómo se puede hacer la actualización [Steps to Upgrade](https://github.com/driftyco/ionic/blob/master/CHANGELOG.md#steps-to-upgrade-to-beta-11){:target="_blank"}.
+
+<hr/>
 
 # Paso 1: Creación del proyecto en Firebase.
 
 Debes ir a la nueva consola de firebase [aquí](https://console.firebase.google.com){:target="_blank"}  y crear un proyecto nuevo:
 
 <img class="img-responsive" src="http://i.cubeupload.com/9FkUqS.png" alt="folders">
-
-# Actualización (17/08/2016)
-<hr/>
-Hemos actualizado este demo con el último release de [Ionic 2 Beta 11](http://www.ion-book.com/news/ionic-2-beta-11){:target="_blank"}, que tiene la más reciente actulización. Aquí está cómo se puede hacer la actualización [Steps to Upgrade](https://github.com/driftyco/ionic/blob/master/CHANGELOG.md#steps-to-upgrade-to-beta-11){:target="_blank"}.
-
-<hr/>
 
 # Paso 2: Copiar las variables de configuración.
 
