@@ -9,13 +9,13 @@ author: nicobytes
 cover: "http://i.cubeupload.com/EL4YUX.jpg"
 ---
 
-> Hace poco tuvimos una actualización con el actual release [**Ionic 2 beta 11**](http://www.ion-book.com/news/ionic-2-beta-11){:target="_blank"} y esto ha generado muchos cambios. Por eso hemos actualizado todos nuestros demos con este último release.
+> Hace poco tuvimos una actualización con el actual release [**Ionic 2 beta 11**](http://www.ion-book.com/news/ionic-2-beta-11){:target="_blank"} y esto ha generado muchos cambios. Por eso hemos actualizado todos nuestros [**demos**](http://www.ion-book.com/demos/){:target="_blank"} con este último release.
 
 <img class="img-responsive" src="http://i.cubeupload.com/EL4YUX.jpg" alt="upgrade">
 
 # Demos actualizados
 
-Para saber de qué trata este último release de **Ionic 2 Beta 11** puedes ver el detalle [**aquí**](http://www.ion-book.com/news/ionic-2-beta-11){:target="_blank"}. En **ion-book** hemos creado la sección de demos donde explicamos con código algunas integraciónes con un **repositorio enlazado**, así que ahora hemos actualizado todos nuestros demos con este último release:
+Para saber de qué trata este último release de **Ionic 2 Beta 11** puedes ver el detalle [**aquí**](http://www.ion-book.com/news/ionic-2-beta-11){:target="_blank"}. En **ion-book** hemos creado la sección de [**demos**](http://www.ion-book.com/demos/){:target="_blank"} donde explicamos con código algunas integraciónes con un **repositorio enlazado**, así que ahora hemos actualizado todos nuestros demos con este último release:
 
 <div class="row">
   <div class="col-xs-12 col-sm-6">
