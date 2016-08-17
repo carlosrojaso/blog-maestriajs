@@ -28,6 +28,12 @@ Debes ir a la nueva consola de firebase [aquí](https://console.firebase.google.
 
 <img class="img-responsive" src="http://i.cubeupload.com/9FkUqS.png" alt="folders">
 
+# Actualización (17/08/2016)
+<hr/>
+Hemos actualizado este demo con el último release de [Ionic 2 Beta 11](http://www.ion-book.com/news/ionic-2-beta-11){:target="_blank"}, que tiene la más reciente actulización. Aquí está cómo se puede hacer la actualización [Steps to Upgrade](https://github.com/driftyco/ionic/blob/master/CHANGELOG.md#steps-to-upgrade-to-beta-11){:target="_blank"}.
+
+<hr/>
+
 # Paso 2: Copiar las variables de configuración.
 
 Ahora debemos ir a la sección de **Auth** y copiar las variables de configuración que nos provee firebase, oprime el botón **WEB SETUP**:
