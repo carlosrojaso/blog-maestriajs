@@ -24,7 +24,7 @@ que colocare a grandes rasgos el procedimiento.
 ## 2. Crear tu proyecto en Ionic 2.
 
 `
-$ionic start myapp --ts --v2
+$ionic start myapp --v2
 `
 
 ## 3. Modificar app.ts con información de firebase.

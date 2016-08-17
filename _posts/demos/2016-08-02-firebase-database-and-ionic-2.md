@@ -14,13 +14,11 @@ cover: "http://i.cubeupload.com/T62oZF.jpg"
 
 <img class="img-responsive" src="http://i.cubeupload.com/T62oZF.jpg" alt="firebase-database-and-ionic-2">
 
-<div class="col-xs-12 button-demo">
-  <a href="{{ page.repo }}" class="btn btn-primary btn-lg link-repo" target="_blank">
-    <i class="fa fa-github" aria-hidden="true"></i> Ver demo online
-  </a>
-</div>
-<br/>
-<br/>
+# Actualización (17/08/2016)
+<hr/>
+Hemos actualizado este demo con el último release de [Ionic 2 Beta 11](http://www.ion-book.com/news/ionic-2-beta-11){:target="_blank"}, que tiene la más reciente actulización. Aquí está cómo se puede hacer la actualización [Steps to Upgrade](https://github.com/driftyco/ionic/blob/master/CHANGELOG.md#steps-to-upgrade-to-beta-11){:target="_blank"}.
+
+<hr/>
 
 # Paso 1: Creación del proyecto en Firebase.
 
@@ -46,7 +44,7 @@ Lo primero que haremos será iniciar un nuevo proyecto con ionic, si no lo recue
 Vamos a nuestra terminal y ejecutamos:
 
 ```
-ionic start demo104 blank --v2 --ts
+ionic start demo104 blank --v2
 ```
 
 Ahora entramos a la carpeta del proyecto desde nuestra terminal con:
@@ -119,7 +117,7 @@ Ahora haremos uso del archivo `pages/home/home.ts` para mostrar las tareas, modi
 
 {% highlight javascript linenos %}
 import {Component} from '@angular/core';
-import {NavController, Alert} from 'ionic-angular';
+import {NavController, AlertController} from 'ionic-angular';
 import {FirebaseListObservable, FirebaseDatabase} from 'angularfire2';
 
 @Component({
@@ -131,13 +129,14 @@ export class HomePage {
 
   constructor(
     private navCtrl: NavController,
+    private alertCtrl: AlertController,
     private database: FirebaseDatabase
   ) {
     this.tasks = this.database.list('/tasks')
   }
 
   createTask(){
-    let newTaskModal = Alert.create({
+    let newTaskModal = this.alertCtrl.create({
       title: 'New Task',
       message: "Enter a title for your new task",
       inputs: [
@@ -164,7 +163,7 @@ export class HomePage {
         }
       ]
     });
-    this.navCtrl.present( newTaskModal );
+    newTaskModal.present( newTaskModal );
   }
 
   updateTask( task ){
@@ -180,6 +179,7 @@ export class HomePage {
     this.tasks.remove( task );
   }
 }
+
 
 {% endhighlight %}
 
@@ -212,10 +212,10 @@ Ahora solo nos queda trabajar en el template `pages/home/home.html` que modifica
 
 <ion-content>
   <ion-list>
-    <ion-item-sliding *ngFor="let task of tasks | async">
+    <ion-item-sliding *ngFor='let task of tasks | async'>
       <ion-item>
         <ion-label>{{ task.title }}</ion-label>
-        <ion-checkbox (click)="updateTask( task )" [(ngModel)]="task.done"></ion-checkbox>
+        <ion-checkbox (click)="updateTask( task )" [(ngModel)]="task.done" ngDefaultControl></ion-checkbox>
       </ion-item>
        <ion-item-options>
         <button danger (click)="removeTask( task )">
