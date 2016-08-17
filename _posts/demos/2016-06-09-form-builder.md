@@ -14,6 +14,14 @@ cover: "http://i.imgur.com/PWBxv0C.png"
 
 Por eso es de vital importancia hacer un buen manejo de ellos, tener las validaciones adecuadas y por esto Angular2 nos ofrece **FormBuilder**, una clase que nos provee una completa herramienta para controlar y validar formularios de forma muy eficiente y sencilla.
 
+# Actualización (17/08/2016)
+<hr/>
+Hemos actualizado este demo con el último release de [Ionic 2 Beta 11](http://www.ion-book.com/news/ionic-2-beta-11){:target="_blank"}, por consecuencia existen un par de cambios al manejo de formularios segun la version de Angular 2 RC4. Aquí está se como puede hacer la actualización  [Steps to Upgrade](https://github.com/driftyco/ionic/blob/master/CHANGELOG.md#steps-to-upgrade-to-beta-11){:target="_blank"}.
+
+Tambien puede ver el detalle los cambios que se an hecho al manejo de form en  [Angular2 Forms Changes]( https://docs.google.com/document/u/1/d/1RIezQqE4aEhBRmArIAS1mRIZtWFf6JxN_7B4meyWK0Y/pub){:target="_blank"}
+
+<hr/>
+
 Como **ionic2** usa **Angular2**, podremos usar esta clase con los componentes de UI de ionic2.
 
 <img class="img-responsive" src="http://i.imgur.com/PWBxv0C.png" alt="Form">
@@ -23,14 +31,14 @@ Examinemos el siguiente código:
 {% highlight javascript linenos %}
 import {Component} from '@angular/core';
 import {NavController} from 'ionic-angular';
-import {FormBuilder, ControlGroup, Validators} from '@angular/common';
+import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 
 @Component({
   templateUrl: 'build/pages/my-form/my-form.html',
 })
 export class MyFormPage {
 
-  myForm: ControlGroup;
+  myForm: FormGroup;
   
   constructor(
     private nav: NavController,
@@ -58,6 +66,7 @@ export class MyFormPage {
   }
 }
 
+
 {% endhighlight %}
 
 Presta atención a de la *linea 23 a la 35*, aqui es donde ocurre la magia, haciendo uso de nuestra variable `this.formBuilder` podremos crear un controlador para cada uno de nuestros campos en el formulario, aquí podremos enviar validaciones tan sencillas o complejas como queramos. 
@@ -66,41 +75,41 @@ El **Form** es algo largo pero sencillo:
 
 {% highlight html linenos %}
 
-<form [ngFormModel]="myForm" (ngSubmit)="saveData()">
-  <ion-list>
+<form [formGroup]="myForm" (ngSubmit)="saveData()">
+    <ion-list>
     <ion-item>
       <ion-icon name="person" item-left></ion-icon>
       <ion-label stacked>Nombres:</ion-label>
-      <ion-input ngControl="name" type="text" placeholder="Nombre"></ion-input>
+      <ion-input formControlName="name" type="text" placeholder="Nombre"></ion-input>
     </ion-item>
     <ion-item>
       <ion-icon name="person" item-left></ion-icon>
       <ion-label stacked>Apellidos:</ion-label>
-      <ion-input ngControl="lastName" type="text" placeholder="Apellidos"></ion-input>
+      <ion-input formControlName="lastName" type="text" placeholder="Apellidos"></ion-input>
     </ion-item>
     <ion-item>
       <ion-icon name="mail" item-left></ion-icon>
       <ion-label stacked>Correo electronico:</ion-label>
-      <ion-input ngControl="email" type="email" placeholder="Email"></ion-input>
+      <ion-input formControlName="email" type="email" placeholder="Email"></ion-input>
     </ion-item>
     <ion-item>
       <ion-icon name="calendar" item-left></ion-icon>
       <ion-label stacked>Fecha de nacimiento:</ion-label>
-      <ion-datetime ngControl="dateBirth" displayFormat="MM-DD-YYYY" placeholder="MM-DD-YYY"></ion-datetime>
+      <ion-datetime formControlName="dateBirth" displayFormat="MM-DD-YYYY" placeholder="MM-DD-YYY"></ion-datetime>
     </ion-item>
-    <div ngControlGroup="passwordRetry">
+    <div formGroupName="passwordRetry">
       <ion-item>
         <ion-icon name="eye" item-left></ion-icon>
         <ion-label stacked>Contraseña:</ion-label>
-        <ion-input ngControl="password" type="password" placeholder="Contraseña"></ion-input>
+        <ion-input formControlName="password" type="password" placeholder="Contraseña"></ion-input>
       </ion-item>
       <ion-item>
         <ion-icon name="eye" item-left></ion-icon>
         <ion-label stacked>Confirmar contraseña:</ion-label>
-        <ion-input ngControl="passwordConfirmation" type="password" placeholder="Confirmar contraseña"></ion-input>
+        <ion-input formControlName="passwordConfirmation" type="password" placeholder="Confirmar contraseña"></ion-input>
       </ion-item>
     </div>
-    <ion-row radio-group ngControl="gender">
+    <ion-row radio-group formControlName="gender">
       <ion-item>
         <ion-icon name="woman" item-left></ion-icon>
         <ion-label>Mujer</ion-label>
