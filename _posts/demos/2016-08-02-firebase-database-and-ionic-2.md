@@ -46,7 +46,7 @@ Lo primero que haremos será iniciar un nuevo proyecto con ionic, si no lo recue
 Vamos a nuestra terminal y ejecutamos:
 
 ```
-ionic start demo104 blank --v2 --ts
+ionic start demo104 blank --v2
 ```
 
 Ahora entramos a la carpeta del proyecto desde nuestra terminal con:
@@ -119,7 +119,7 @@ Ahora haremos uso del archivo `pages/home/home.ts` para mostrar las tareas, modi
 
 {% highlight javascript linenos %}
 import {Component} from '@angular/core';
-import {NavController, Alert} from 'ionic-angular';
+import {NavController, AlertController} from 'ionic-angular';
 import {FirebaseListObservable, FirebaseDatabase} from 'angularfire2';
 
 @Component({
@@ -131,13 +131,14 @@ export class HomePage {
 
   constructor(
     private navCtrl: NavController,
+    private alertCtrl: AlertController,
     private database: FirebaseDatabase
   ) {
     this.tasks = this.database.list('/tasks')
   }
 
   createTask(){
-    let newTaskModal = Alert.create({
+    let newTaskModal = this.alertCtrl.create({
       title: 'New Task',
       message: "Enter a title for your new task",
       inputs: [
@@ -164,7 +165,7 @@ export class HomePage {
         }
       ]
     });
-    this.navCtrl.present( newTaskModal );
+    newTaskModal.present( newTaskModal );
   }
 
   updateTask( task ){
@@ -180,6 +181,7 @@ export class HomePage {
     this.tasks.remove( task );
   }
 }
+
 
 {% endhighlight %}
 
@@ -212,10 +214,10 @@ Ahora solo nos queda trabajar en el template `pages/home/home.html` que modifica
 
 <ion-content>
   <ion-list>
-    <ion-item-sliding *ngFor="let task of tasks | async">
+    <ion-item-sliding *ngFor='let task of tasks | async'>
       <ion-item>
         <ion-label>{{ task.title }}</ion-label>
-        <ion-checkbox (click)="updateTask( task )" [(ngModel)]="task.done"></ion-checkbox>
+        <ion-checkbox (click)="updateTask( task )" [(ngModel)]="task.done" ngDefaultControl></ion-checkbox>
       </ion-item>
        <ion-item-options>
         <button danger (click)="removeTask( task )">

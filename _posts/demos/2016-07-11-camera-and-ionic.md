@@ -16,7 +16,7 @@ cover: "http://i.imgur.com/9Uq2Naw.jpg"
 
 # Actualización (17/08/2016)
 <hr/>
-Hemos actualizado este demo con el último release de [Ionic 2 Beta 11](http://www.ion-book.com/news/ionic-2-beta-11){:target="_blank"}, que tiene la más reciente actulización con [ionic native](http://www.ion-book.com/news/ionic-native-news){:target="_blank"} . Aquí está como se puede hacer la actualización [Steps to Upgrade](https://github.com/driftyco/ionic/blob/master/CHANGELOG.md#steps-to-upgrade-to-beta-11){:target="_blank"}.
+Hemos actualizado este demo con el último release de [Ionic 2 Beta 11](http://www.ion-book.com/news/ionic-2-beta-11){:target="_blank"}, que tiene la más reciente actulización con [ionic native](http://www.ion-book.com/news/ionic-native-news){:target="_blank"}. Aquí está cómo se puede hacer la actualización [Steps to Upgrade](https://github.com/driftyco/ionic/blob/master/CHANGELOG.md#steps-to-upgrade-to-beta-11){:target="_blank"}.
 
 <hr/>
 
