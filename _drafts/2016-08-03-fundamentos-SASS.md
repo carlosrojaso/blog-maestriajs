@@ -17,15 +17,22 @@ En este post vamos a hablar sobre los Fundamentos de SASS, para que de esta mane
 
 ## Que es SASS?
 
-
+SaSS es una forma de escribir hojas de estilos (CSS) con algunas mejoras que permiten tener una mejor estructura y hacerlo mas escalable.
 
 ## Por que usar SASS?
 
+Ahorrar tiempo a mediano plazo y proyectos mas escalables.
+
 ## Como usar SASS?
+
+Ionic por defecto maneja el uso de SASS desde tu proyecto, entonces, no debes preocuparte :)
 
 ## Fundamentos
 
 ### Variables
+
+Las variables permiten asignar valor a cualquier serie de propiedades y de esta manera hacer cambios rapidos sobre la apariencia solamente modificando
+estas. Un ejemplo:
 
 <pre>
 <code>
