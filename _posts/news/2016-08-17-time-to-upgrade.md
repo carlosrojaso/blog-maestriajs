@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Demos actualizados"
+title: "Hora de actualizar"
 date: 2016-08-17
 categories: news
 tags: news ionic2
