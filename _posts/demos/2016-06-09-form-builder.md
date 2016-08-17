@@ -18,7 +18,7 @@ Por eso es de vital importancia hacer un buen manejo de ellos, tener las validac
 <hr/>
 Hemos actualizado este demo con el último release de [Ionic 2 Beta 11](http://www.ion-book.com/news/ionic-2-beta-11){:target="_blank"}, por consecuencia existen un par de cambios al manejo de formularios segun la version de Angular 2 RC4. Aquí está como se puede hacer la actualización [Steps to Upgrade](https://github.com/driftyco/ionic/blob/master/CHANGELOG.md#steps-to-upgrade-to-beta-11){:target="_blank"}.
 
-Tambien puede ver el detalle los cambios que se an hecho al manejo de form en  [Angular2 Forms Changes]( https://docs.google.com/document/u/1/d/1RIezQqE4aEhBRmArIAS1mRIZtWFf6JxN_7B4meyWK0Y/pub){:target="_blank"}
+También puede ver el detalle de los cambios que se an hecho en forms => [Angular2 Forms Changes]( https://docs.google.com/document/u/1/d/1RIezQqE4aEhBRmArIAS1mRIZtWFf6JxN_7B4meyWK0Y/pub){:target="_blank"}
 
 <hr/>
 

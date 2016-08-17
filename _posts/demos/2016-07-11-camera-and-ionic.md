@@ -26,7 +26,7 @@ Lo primero que haremos será iniciar un nuevo proyecto con ionic, si no lo recue
 Vamos a nuestra terminal y ejecutamos:
 
 ```
-ionic start demo102 blank --v2 --ts
+ionic start demo102 blank --v2
 ```
 
 Ahora entramos a la carpeta del proyecto desde nuestra terminal con:
