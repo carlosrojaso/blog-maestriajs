@@ -48,6 +48,24 @@ layout: default
               <a href="{{site.authors['nicobytes'].url}}" class="btn btn-primary">Ver artículos</a>
             </div>
           </div>
+          <div class="row">
+            <div class="col-xs-8 col-sm-3">
+              <img src="{{ site.authors['daniel_lsanchez'].avatar }}" class="img-responsive img-author" alt="photo">
+            </div>
+            <div class="col-xs-12 col-sm-9">
+              <h2 class="title">{{ site.authors['daniel_lsanchez'].name }}</h2>
+              <p>{{ site.authors['daniel_lsanchez'].bio }}</p>
+              <strong>Website:</strong> <a href="{{ site.authors['daniel_lsanchez'].website }}" target="_blank"> {{ site.authors['daniel_lsanchez'].website }}</a>
+              <p>
+              {% for social in site.authors['daniel_lsanchez'].social_links %}
+                <a href="{{ social.link }}" target="_blank" class="btn btn-default">
+                  <i class="fa {{ social.icon }}" aria-hidden="true"></i>
+                </a>
+              {% endfor %}
+              </p>
+              <a href="{{site.authors['daniel_lsanchez'].url}}" class="btn btn-primary">Ver artículos</a>
+            </div>
+          </div>
         </div>
         
       </div>

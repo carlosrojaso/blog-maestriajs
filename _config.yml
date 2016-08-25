@@ -43,6 +43,18 @@ authors:
     social_links:
       - link: "https://twitter.com/carlosrojas_o"
         icon: "fa-twitter"
+  daniel_lsanchez:
+    name: "Daniel Londoño Sanchez"
+    url: "/daniel_lsanchez"
+    avatar: "http://i.cubeupload.com/lIAZlV.png"
+    bio: "Soy desarrollador de software enfocado en especializarme en desarrollo web y móvil, me gusta ayudar a las personas y dar el conocimiento que adquiero sin nada a cambio. Me apasiono por construir productos innovadores y que ayuden a la sociedad, me gustan las motos y salir a viajar en ellas."
+    social_links:
+      - link: "https://twitter.com/daniel_lsanchez"
+        icon: "fa-twitter"
+      - link: "https://www.linkedin.com/in/daniel-londo%C3%B1o-61296b84"
+        icon: "fa-linkedin"
+      - link: "https://www.facebook.com/daniel.l.sanchez.501"
+        icon: "fa-facebook"
 
 social_links: 
   - url: "https://twitter.com/ion_book"
