@@ -6,12 +6,12 @@ tags: ionic2 Facebook
 categories: ionic2
 comments: true
 author: daniel_lsanchez
-cover: "http://i.cubeupload.com/1tGc19.png"
+cover: "http://i.cubeupload.com/itTXFO.png"
 ---
 
 > **Facebook** es una de las métodos más comunes y usados para registrar y capturar nuevos usuarios, así que en este artículo veremos como hacer el proceso de registrar nuestros usuarios usando **facebook + ionic 2**.
 
-<img class="img-responsive" src="http://i.cubeupload.com/1tGc19.png" alt="facebbok">
+<img class="img-responsive" src="http://i.cubeupload.com/itTXFO.png" alt="facebbok">
 
 Para comenzar debemos de tener instalado todo el entorno de desarrollo de ionic [(inicio en ionic 2)](http://ionicframework.com/docs/v2/getting-started/installation/){:target="_blank"}. Una vez lista nuestra máquina podemos comenzar.
 
