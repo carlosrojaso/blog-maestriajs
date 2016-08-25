@@ -7,7 +7,6 @@ categories: ionic2
 comments: true
 author: carlosrojas
 cover: "http://i.imgur.com/zo6SD90.jpg"
-url: "http://www.ion-book.com/ionic2/observables-angular2"
 ---
 
 Los Observables son una de las grandes decisiones que creo hace que Angular 2 sea una de las herramientas mas poderosas para realizar clientes web y moviles en la actualidad.

@@ -7,7 +7,6 @@ categories: ionic2
 comments: true
 author: daniel_lsanchez
 cover: "http://i.cubeupload.com/1tGc19.png"
-url: "http://www.ion-book.com/ionic2/facebook-and-ionic-2"
 ---
 
 > **Facebook** es una de las métodos más comunes y usados para registrar y capturar nuevos usuarios, así que en este artículo veremos como hacer el proceso de registrar nuestros usuarios usando **facebook + ionic 2**.

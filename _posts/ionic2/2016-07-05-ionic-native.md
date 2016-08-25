@@ -7,7 +7,6 @@ categories: ionic2
 comments: true
 author: nicobytes
 cover: "http://i.imgur.com/FSAJb3n.png"
-url: "http://www.ion-book.com/ionic2/ionic-native"
 ---
 
 > **Ionic-native** es todo un conjunto de envolturas en ES5/ES6/Typescript para cualquiera de los plugins de **Cordova/Phonegap**, la cual hace que cuando queremos agregar cualquier función nativa a nuestra aplicación sea muy fácil.

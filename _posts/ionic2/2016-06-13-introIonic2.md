@@ -7,7 +7,6 @@ categories: ionic2
 comments: true
 author: carlosrojas
 cover: "http://img.youtube.com/vi/kWZcdgLbWQI/hqdefault.jpg"
-url: "http://www.ion-book.com/ionic2/introIonic2"
 ---
 
 Hola a todos!!! 

@@ -7,7 +7,6 @@ tags: market
 comments: true
 author: carlosrojas
 cover: "http://img.youtube.com/vi/URobJP0uPa8/hqdefault.jpg"
-url: "http://www.ion-book.com/news/ionicmarket"
 ---
 Hola a todos!!!
 

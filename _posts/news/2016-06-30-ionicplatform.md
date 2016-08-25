@@ -7,7 +7,6 @@ tags: news
 comments: true
 author: carlosrojas
 cover: "http://i.imgur.com/iRCx2TE.jpg"
-url: "http://www.ion-book.com/news/ionicplatform"
 ---
 
 <img class="img-responsive" src="http://i.imgur.com/iRCx2TE.jpg" alt="ionic">
