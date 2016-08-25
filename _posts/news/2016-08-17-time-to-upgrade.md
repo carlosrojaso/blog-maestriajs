@@ -7,6 +7,7 @@ tags: news ionic2
 comments: true
 author: nicobytes
 cover: "http://i.cubeupload.com/EL4YUX.jpg"
+url: "http://www.ion-book.com/news/time-to-upgrade"
 ---
 
 > Hace poco tuvimos una actualización con el actual release [**Ionic 2 beta 11**](http://www.ion-book.com/news/ionic-2-beta-11){:target="_blank"} y esto ha generado muchos cambios. Por eso hemos actualizado todos nuestros [**demos**](http://www.ion-book.com/demos/){:target="_blank"} con este último release.

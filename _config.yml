@@ -5,6 +5,7 @@ baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://ion-book.com" # the base hostname & protocol for your site
 book-url: "/"
 book-img: "http://i.imgur.com/cfKvAxi.jpg"
+cover: "http://i.imgur.com/cfKvAxi.jpg"
 timezone: "America/Bogota"
 
 courses-url: "http://bootcampwithus.usefedora.com/"

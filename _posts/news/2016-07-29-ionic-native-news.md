@@ -7,6 +7,7 @@ tags: news ionic2
 comments: true
 author: carlosrojas
 cover: "http://blog.ionic.io/wp-content/uploads/2016/06/ionic-native-header.jpg"
+url: "http://www.ion-book.com/news/ionic-native-news"
 ---
 
 Ya hemos hablado sobre [Ionic Native](http://www.ion-book.com/ionic2/ionic-native) en este blog.

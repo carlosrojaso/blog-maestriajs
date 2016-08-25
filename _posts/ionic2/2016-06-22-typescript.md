@@ -7,6 +7,7 @@ categories: ionic2
 comments: true
 author: carlosrojas
 cover: "http://i.imgur.com/yFY9ETL.png"
+url: "http://www.ion-book.com/ionic2/typescript"
 ---
 
 <img src="http://i.imgur.com/yFY9ETL.png" class="img-responsive" alt="image angular2"/>

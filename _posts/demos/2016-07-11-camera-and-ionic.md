@@ -8,6 +8,7 @@ comments: true
 repo: "https://github.com/ion-book/demo102"
 author: nicobytes
 cover: "http://i.imgur.com/9Uq2Naw.jpg"
+url: "http://www.ion-book.com/demos/camera-and-ionic"
 ---
 
 > En los últimos artículos hemos visto una [introducción a Ionic 2](http://www.ion-book.com/ionic2/introIonic2){:target="_blank"} y como crear un [hola mundo](http://www.ion-book.com/ionic2/ionic2){:target="_blank"} con Ionic 2, ahora vamos hacer uso de [ionic native](http://www.ion-book.com/ionic2/ionic-native){:target="_blank"} para usar la cámara del dispositivo y tomar una fotografía.

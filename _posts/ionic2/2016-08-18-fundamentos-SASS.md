@@ -7,6 +7,7 @@ categories: ionic2
 comments: true
 author: carlosrojas
 cover: "http://sass-lang.com/assets/img/styleguide/color-1c4aab2b.png"
+url: "http://www.ion-book.com/ionic2/fundamentos-SASS"
 ---
 
 <img class="img-responsive" src="http://sass-lang.com/assets/img/styleguide/color-1c4aab2b.png" alt="sass logo">
