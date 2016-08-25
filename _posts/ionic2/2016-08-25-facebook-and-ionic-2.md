@@ -181,6 +181,12 @@ Esto nos generará el apk y este lo podremos instalar en nuestro dispositivo o e
 
 # Resultado:
 
-<img class="img-responsive" src="http://i.cubeupload.com/psktlb.jpeg" alt="5">
-<img class="img-responsive" src="http://i.cubeupload.com/m8LA1M.jpeg" alt="5">
+<div class="row">
+  <div class="col-xs-12 col-sm-6">
+    <img class="img-responsive" src="http://i.cubeupload.com/psktlb.jpeg" alt="5">
+  </div>
+  <div class="col-xs-12 col-sm-6">
+    <img class="img-responsive" src="http://i.cubeupload.com/m8LA1M.jpeg" alt="5">
+  </div>
+</div>
 <img class="img-responsive" src="http://i.cubeupload.com/TrKouV.png" alt="5">
