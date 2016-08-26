@@ -22,7 +22,7 @@ Hemos actualizado este demo con el último release de [Ionic 2 Beta 11](http://w
 
 # Paso 1: Creación del proyecto en Firebase.
 
-Debes ir a la nueva consola de firebase [aquí](https://console.firebase.google.com){:target="_blank"}  y crear un proyecto nuevo:
+Debes ir a la nueva consola de firebase [aquí](https://console.firebase.google.com){:target="_blank"} y crear un proyecto nuevo:
 
 <img class="img-responsive" src="http://i.cubeupload.com/9FkUqS.png" alt="folders">
 
