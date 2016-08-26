@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Google Maps JS + Ionic 2"
-date: 2016-08-26
+date: 2016-08-29
 tags: ionic2 maps
 categories: demos
 comments: true
