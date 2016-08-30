@@ -91,7 +91,7 @@ export class HomePage {
   ionViewLoaded(){
     let mapEle = document.getElementById('map');
     let map = new google.maps.Map(mapEle, {
-      center: {lat: -34.397, lng: 150.644},
+      center: {lat: 4.5981, lng: -74.0758},
       zoom: 16
     });
 
