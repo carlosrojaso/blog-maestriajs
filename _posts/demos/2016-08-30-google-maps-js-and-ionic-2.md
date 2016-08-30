@@ -7,12 +7,12 @@ categories: demos
 comments: true
 repo: "https://ion-book.github.io/demo105/"
 author: nicobytes
-cover: "http://i.cubeupload.com/0wqxZt.png"
+cover: "http://i.cubeupload.com/gxxOpn.png"
 ---
 
 > La interacción con mapas en aplicaciones móviles es muy común y en este artículo explicaremos cómo integrar **Google Maps** usando el SDk de JS con **Ionic 2**.
 
-<img class="img-responsive" src="http://i.cubeupload.com/0wqxZt.png" alt="firebase-database-and-ionic-2">
+<img class="img-responsive" src="http://i.cubeupload.com/gxxOpn.png" alt="firebase-database-and-ionic-2">
 
 Hay dos maneras de implementar google maps en nuestras aplicaciones, una es manejando el **SDK de JS** y la otra manera es integrar el **SDK nativo** al proyecto, en este artículo veremos cómo hacerlo con el SDK de js y en futuros artículos hablaremos de cómo implementar el SDK nativo.
 
