@@ -54,7 +54,7 @@ typings install github:DefinitelyTyped/DefinitelyTyped/googlemaps/google.maps.d.
 
 # Paso 3: Incluir el SDk
 
-Ahora iremos al archivo `index.html` que se encuentra la carpeta `www` y y luego de llamar a `app.bundle.js` incluimos el SDK y ademas tienes que agregar el **API KEY** que te ofrece google para usar el SDK, lo puedes generar desde está [URL](https://developers.google.com/maps/documentation/javascript/get-api-key?hl=es){:target="_blank"}.
+Ahora iremos al archivo `index.html` que se encuentra la carpeta `www` y luego de llamar a `app.bundle.js` incluimos el SDK, ademas tienes que agregar el **API KEY** que te ofrece google para usar el SDK, lo puedes generar desde está [URL](https://developers.google.com/maps/documentation/javascript/get-api-key?hl=es){:target="_blank"}.
 
 {% highlight javascript linenos %}
 <!--cordova.js required for cordova apps -->
@@ -72,7 +72,7 @@ Ahora iremos al archivo `index.html` que se encuentra la carpeta `www` y y luego
 
 # Paso 4: Crear mapa.
 
-Ahora en el archivo `home.ts` crearemos la variable `map` (*línea 9*) donde guardaremos la instancia del mapa creado y con el uso del el metodo `ionViewLoaded` detectaremos cuando la vista ya este completamente cargada y usamos el SDK de google para crear el mapa.
+Ahora en el archivo `home.ts` crearemos la variable `map` (*línea 9*) donde guardaremos la instancia del mapa creado y con el uso de el metodo `ionViewLoaded` detectaremos cuando la vista ya este completamente cargada y usamos el SDK de google para crear el mapa.
 
 {% highlight javascript linenos %}
 import { Component } from '@angular/core';
