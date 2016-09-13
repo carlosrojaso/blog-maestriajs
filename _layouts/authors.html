@@ -27,7 +27,7 @@ layout: default
                 </a>
               {% endfor %}
               </p>
-              <a href="{{site.authors['carlosrojas'].url}}" class="btn btn-primary">Ver artículos</a>
+              <a href="{{site.authors['carlosrojas'].url}}" class="btn btn-primary">Ver artículos (18)</a>
             </div>
           </div>
           <div class="row">
@@ -45,7 +45,7 @@ layout: default
                 </a>
               {% endfor %}
               </p>
-              <a href="{{site.authors['nicobytes'].url}}" class="btn btn-primary">Ver artículos</a>
+              <a href="{{site.authors['nicobytes'].url}}" class="btn btn-primary">Ver artículos (15)</a>
             </div>
           </div>
           <div class="row">
@@ -63,7 +63,43 @@ layout: default
                 </a>
               {% endfor %}
               </p>
-              <a href="{{site.authors['daniel_lsanchez'].url}}" class="btn btn-primary">Ver artículos</a>
+              <a href="{{site.authors['daniel_lsanchez'].url}}" class="btn btn-primary">Ver artículos (1)</a>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-8 col-sm-3">
+              <img src="{{ site.authors['unjavascripter'].avatar }}" class="img-responsive img-author" alt="photo">
+            </div>
+            <div class="col-xs-12 col-sm-9">
+              <h2 class="title">{{ site.authors['unjavascripter'].name }}</h2>
+              <p>{{ site.authors['unjavascripter'].bio }}</p>
+              <strong>Website:</strong> <a href="{{ site.authors['unjavascripter'].website }}" target="_blank"> {{ site.authors['the_luchillo'].website }}</a>
+              <p>
+              {% for social in site.authors['unjavascripter'].social_links %}
+                <a href="{{ social.link }}" target="_blank" class="btn btn-default">
+                  <i class="fa {{ social.icon }}" aria-hidden="true"></i>
+                </a>
+              {% endfor %}
+              </p>
+              <a href="{{site.authors['unjavascripter'].url}}" class="btn btn-primary">Ver artículos</a>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-8 col-sm-3">
+              <img src="{{ site.authors['the_luchillo'].avatar }}" class="img-responsive img-author" alt="photo">
+            </div>
+            <div class="col-xs-12 col-sm-9">
+              <h2 class="title">{{ site.authors['the_luchillo'].name }}</h2>
+              <p>{{ site.authors['the_luchillo'].bio }}</p>
+              <strong>Website:</strong> <a href="{{ site.authors['the_luchillo'].website }}" target="_blank"> {{ site.authors['the_luchillo'].website }}</a>
+              <p>
+              {% for social in site.authors['the_luchillo'].social_links %}
+                <a href="{{ social.link }}" target="_blank" class="btn btn-default">
+                  <i class="fa {{ social.icon }}" aria-hidden="true"></i>
+                </a>
+              {% endfor %}
+              </p>
+              <a href="{{site.authors['the_luchillo'].url}}" class="btn btn-primary">Ver artículos</a>
             </div>
           </div>
         </div>
