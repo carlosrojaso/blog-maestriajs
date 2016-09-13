@@ -87,4 +87,18 @@ social_links:
   - url: "http://goo.gl/forms/ZCEc0cr3jydgK2wv1"
     title: "Slack"
     icon: "fa-slack"
+
+publications:
+  - url: "https://twitter.com/ion_book"
+    title: "Test"
+    cover: "http://www.kleer.la/img/ebooks/retrospectivas.jpg"
+    summaty: "El modelo de gestión tradicional está siendo reemplazado por formas más participativas, más colaborativas y más humanas de hacer empresa."
+  - url: "https://twitter.com/ion_book"
+    title: "Test"
+    cover: "http://www.kleer.la/img/ebooks/retrospectivas.jpg"
+    summaty: "El modelo de gestión tradicional está siendo reemplazado por formas más participativas, más colaborativas y más humanas de hacer empresa."
+  - url: "https://twitter.com/ion_book"
+    title: "Test"
+    cover: "http://www.kleer.la/img/ebooks/retrospectivas.jpg"
+    summaty: "El modelo de gestión tradicional está siendo reemplazado por formas más participativas, más colaborativas y más humanas de hacer empresa."
   
