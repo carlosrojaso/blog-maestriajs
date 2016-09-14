@@ -28,7 +28,7 @@
           <div class="col-xs-12">
             <ul class="nav navbar-nav">
               <li>
-                <a {% if page.layout == "default" %}class="active"{% endif %} href="{{ "/"  | prepend: site.baseurl }}">Todo {{  }}</a>
+                <a {% if page.layout == "default" %}class="active"{% endif %} href="{{ "/"  | prepend: site.baseurl }}">Todo</a>
               </li>
               {% for item_page in site.pages %}
                 {% if item_page.layout == "category" %}
@@ -37,6 +37,9 @@
                 </li>
                 {% endif %}
               {% endfor %}
+              <li>
+                <a {% if page.layout == "default" %}class="active"{% endif %} href="{{ "/publications"  | prepend: site.baseurl }}">Publicaciones</a>
+              </li>
             </ul>
           </div>
         </div>
