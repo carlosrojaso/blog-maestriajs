@@ -38,7 +38,7 @@
                 {% endif %}
               {% endfor %}
               <li>
-                <a {% if page.layout == "default" %}class="active"{% endif %} href="{{ "/publications"  | prepend: site.baseurl }}">Publicaciones</a>
+                <a {% if page.title == "Publicaciones" %}class="active"{% endif %} href="{{ "/publications"  | prepend: site.baseurl }}">Publicaciones</a>
               </li>
             </ul>
           </div>
