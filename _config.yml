@@ -89,16 +89,7 @@ social_links:
     icon: "fa-slack"
 
 publications:
-  - url: "https://twitter.com/ion_book"
-    title: "Test"
-    cover: "http://www.kleer.la/img/ebooks/retrospectivas.jpg"
-    summaty: "El modelo de gestión tradicional está siendo reemplazado por formas más participativas, más colaborativas y más humanas de hacer empresa."
-  - url: "https://twitter.com/ion_book"
-    title: "Test"
-    cover: "http://www.kleer.la/img/ebooks/retrospectivas.jpg"
-    summaty: "El modelo de gestión tradicional está siendo reemplazado por formas más participativas, más colaborativas y más humanas de hacer empresa."
-  - url: "https://twitter.com/ion_book"
-    title: "Test"
-    cover: "http://www.kleer.la/img/ebooks/retrospectivas.jpg"
-    summaty: "El modelo de gestión tradicional está siendo reemplazado por formas más participativas, más colaborativas y más humanas de hacer empresa."
-  
+  - url: "http://www.paywithapost.de/pay?id=b1b5bde8-da59-4bc4-b6f9-1b62231c2884"
+    title: "Contruye un App de Fotos"
+    cover: "http://i.cubeupload.com/xvlIA6.png"
+    summaty: "Deseas realizar un App de Fotos con Ionic 1, este es tu punto de partida."
