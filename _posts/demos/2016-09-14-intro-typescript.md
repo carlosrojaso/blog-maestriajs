@@ -3,7 +3,7 @@ layout: post
 title: "¿Introducción a TypeScript?"
 tags: typescript  
 date: 2016-09-14
-categories: ionic2
+categories: demos
 comments: true
 author: unjavascripter
 repo: "https://github.com/UnJavaScripter/typescript-basics"
