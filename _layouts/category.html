@@ -12,9 +12,11 @@ layout: default
       </div>
       <div class="row">
         {% for post in site.categories[page.category] %}
+          {% unless post.draft %}
           <div class="col-xs-12 col-sm-6">
             {% include article_home.html trucate="90" %}
           </div>
+          {% endunless %}
         {% endfor %}
       </div>
     </div>

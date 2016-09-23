@@ -10,6 +10,9 @@ timezone: "America/Bogota"
 
 courses-url: "http://bootcampwithus.usefedora.com/"
 
+sass:
+    style: compressed
+
 # Build settings
 markdown: kramdown
 markdown_ext:  markdown,mkdown,mkdn,mkd,md
