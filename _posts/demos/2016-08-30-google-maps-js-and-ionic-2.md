@@ -8,6 +8,7 @@ comments: true
 repo: "https://ion-book.github.io/demo105/"
 author: nicobytes
 cover: "http://i.cubeupload.com/gxxOpn.png"
+remember: true
 ---
 
 > La interacción con mapas en aplicaciones móviles es muy común y en este artículo explicaremos cómo integrar **Google Maps** usando el SDk de JS con **Ionic 2**.

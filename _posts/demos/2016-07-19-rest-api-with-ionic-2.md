@@ -8,6 +8,7 @@ comments: true
 repo: "https://github.com/ion-book/demo103"
 author: nicobytes
 cover: "http://i.imgur.com/tDpJiCR.jpg"
+remember: true
 ---
 
 > Una parte fundamental de cualquier aplicación es conectarse con servicio externos, en este caso vamos a conectarnos con una **REST API**. Vamos a crear una aplicación que se contecte con [http://randomuser.me/](http://randomuser.me/){:target="_blank"} un API con información de usuarios aleatorios.

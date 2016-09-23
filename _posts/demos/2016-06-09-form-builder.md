@@ -8,6 +8,7 @@ comments: true
 repo: "http://ion-book.github.io/demo101/"
 author: nicobytes
 cover: "http://i.imgur.com/PWBxv0C.png"
+remember: true
 ---
 
 > La forma más común de capturar información de los usuarios son los **Formularios** y depende de una buena UI/UX ganar o perder un usuario en nuestra aplicación. 

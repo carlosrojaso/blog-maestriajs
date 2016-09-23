@@ -3,13 +3,14 @@ layout: post
 title: "¿Introducción a TypeScript?"
 tags: typescript  
 date: 2016-09-14
-categories: ionic2
+categories: demos
 comments: true
 author: unjavascripter
-cover: "http://i.imgur.com/yFY9ETL.png"
+repo: "https://github.com/UnJavaScripter/typescript-basics"
+cover: "http://i.cubeupload.com/hm2KzP.jpg"
 ---
 
-<img src="http://i.imgur.com/yFY9ETL.png" class="img-responsive" alt="image angular2"/>
+<img src="http://i.cubeupload.com/hm2KzP.jpg" class="img-responsive" alt="image angular2"/>
 
 El post original lo puedes ver en: [http://j.mp/2cHynLV](http://j.mp/2cHynLV)
 
@@ -28,13 +29,17 @@ Básicamente funciona así:
 
 Existen varios plugins para TypeSctipt, en este ejemplo lo usaremos directamente desde node:
 
-<pre>$ npm install -g typescript</pre>
+```
+$ npm install -g typescript
+```
 
 Ejecutando el compilador de TypeScript
 
 Tras instalar TypeScript tendremos disponible en nuestra terminal el programa tsc, TypeScript Compiler, con el comando:
 
-<pre>$ tsc nombreDelArchivo.ts --watch</pre>
+```
+$ tsc nombreDelArchivo.ts --watch
+```
 
 Le decimos a TypeScript Compiler que compile nombreDelArchivo.ts a nombreDelArchivo.js. Así mismo con el parámetro --watch le decimos que esté atento a cualquier cambio y realice la compilación en cada caso.
 
@@ -44,51 +49,51 @@ Empecemos por lo más Type de TypeScript, Strong Typing o “tipado fuerte” (o
 
 Si tenemos la siguiente función en JavaScript de toda la vida:
 
-<pre>
+{% highlight javascript linenos %}
 let alertar = (mensaje) => {
   alert(mensaje);
 }
-</pre>
+{% endhighlight %}
 
 TypeScript nos permite definir tipos estrictos:
 
 Podemos llamar a la función alertar y pasar cualquier valor como mensaje. Sin embargo, tiene más sentido que la función reciba únicamente cadenas de texto (strings):
-<pre>
+{% highlight javascript linenos %}
 let alertar = (mensaje: string) => {
   alert(mensaje);
 }
-</pre>
+{% endhighlight %}
 
 Y eso es todo. Como te podrás imaginar si se quieren otros tipos de datos como números o valores booleanos tan solo hay que reemplazarlo sobre el string que usamos:
 
-<pre>
+{% highlight javascript linenos %}
 let alertar = (mensaje: number) => {
   alert(mensaje);
 }
-</pre>
+{% endhighlight %}
 
-o
+ó
 
-<pre>
+{% highlight javascript linenos %}
 let alertar = (mensaje: boolean) => {
   alert(mensaje);
 }
-</pre>
+{% endhighlight %}
 
 Incluso podemos definir valores con union types para hacer que estos reciban más de un solo tipo de dato:
 
-<pre>
+{% highlight javascript linenos %}
 let alertar = (mensaje: string | number) => {
   alert(mensaje);
 }
-</pre>
+{% endhighlight %}
 
 Podemos ser incluso más flexibles y definir valores con el tipo any;
-<pre>
+{% highlight javascript linenos %}
 let alertar = (mensaje: any) => {
   alert(mensaje);
 }
-</pre>
+{% endhighlight %}
 
 De esta forma volvemos al ejemplo inicial con JavaScript de toda la vida en donde nuestra función recibe cualquier tipo de dato.
 
@@ -97,49 +102,49 @@ De esta forma volvemos al ejemplo inicial con JavaScript de toda la vida en dond
 Una interfaz nos permite modelar la forma de un objeto:
 
 
-<pre>
+{% highlight javascript linenos %}
 interface Zapato {
   marca: string,
   numero: number,
   deprotivo: boolean
 }
-</pre>
+{% endhighlight %}
 
 
 Ahora podemos definir un objeto y especificar que debe tener la forma de Zapato, es decir, extender la interfaz.
 
 Usando el ejemplo anterior con la función alertar limitamos el tipo del mensaje para validar que concuerde con la estructura que se define en la interfaz Zapato:
 
-<pre>
+{% highlight javascript linenos %}
 interface Zapato {
   marca: string,
   numero: number,
   deprotivo: boolean
 }
-</pre>
+{% endhighlight %}
 
-<pre>
+{% highlight javascript linenos %}
 let alertar = (mensaje: Zapato) => {
   alert(mensaje);
 }
-</pre>
+{% endhighlight %}
 
-<pre>
+{% highlight javascript linenos %}
 alertar({marca: 'Patito', numero: 42, deprotivo: true});
-</pre>
+{% endhighlight %}
 
 Si pasaramos un argumento de más o nos faltara uno, TypeScript nos lo hará saber con un error.
 
 Podemos tener propiedades opcionales dentro de una interfaz:
 
-<pre>
+{% highlight javascript linenos %}
 interface ITelefono {
   marca: string,
   precio: number,
   nfc: boolean,
   ranurasParaSIMCard?: number
 }
-</pre>
+{% endhighlight %}
 
 Aquí podemos pasar un número en la propiedad ranurasParaSIMCard o no pasar un valor en absoluto. Algo a notar también es que en este ejemplo definí la interfaz como I NombreDeLaInterfaz, esta nomenclatura suele encontrarse en Internet y es eso, sólo una forma de escribir los nombres de las interfaces.
 
@@ -151,7 +156,7 @@ Una interfaz nos permite modelar la forma de un objeto:
 
 Ahora sí llegamos al ejemplo que tanto esperabas (🙄): código que integra lo que hemos visto hasta ahora. Este ejemplo usa el concepto de clases, si no lo tienes muy claro puedes visitar la documentación de Mozilla para este tema.
 
-<pre>
+{% highlight javascript linenos %}
 interface IPokemon {
     nombre: string,
     sonido: string,
@@ -191,7 +196,7 @@ pikachu.hacerHablar();
 let snorlax = new Pokemon({ nombre: "Snorlax", sonido: "Snoooor-laax", dormido: true });
 
 snorlax.hacerHablar();
-</pre>
+{% endhighlight %}
 
 1.Definimos una interfaz con una propiedad opcional
 
@@ -218,6 +223,3 @@ snorlax.hacerHablar();
 5.Una instancia de la clase
 
 6.La invocación del método destinado a ejecutar una acción
-
-Repo: https://github.com/UnJavaScripter/typescript-basics
-
