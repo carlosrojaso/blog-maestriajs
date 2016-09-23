@@ -7,7 +7,7 @@ categories: ionic2
 comments: true
 author: daniel_lsanchez
 cover: "http://i.cubeupload.com/itTXFO.png"
-draf: true
+draft: true
 ---
 
 > **Facebook** es una de las métodos más comunes y usados para registrar y capturar nuevos usuarios, así que en este artículo veremos como hacer el proceso de registrar nuestros usuarios usando **facebook + ionic 2**.

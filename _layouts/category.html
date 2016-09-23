@@ -11,7 +11,8 @@ layout: default
         </div>
       </div>
       <div class="row">
-        {% for post in site.categories[page.category] %}
+        {% assign posts = site.categories[page.category] | where:"draft", "false" %}
+        {% for post in posts %}
           {% unless post.draft %}
           <div class="col-xs-12 col-sm-6">
             {% include article_home.html trucate="90" %}

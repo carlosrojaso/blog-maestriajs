@@ -5,17 +5,19 @@ layout: default
   <div class="row">
     <div class="col-xs-12 col-md-9">
       <div class="row">
-        {% for post in site.posts %}
-          {% unless post.draft %}
-          <!--<div class="col-xs-12">
+        {% assign posts = site.posts | where:"draft", "false" %}
+        {% for post in posts %}
+          {% if forloop.first %}
+          <div class="col-xs-12">
             <section class="cover">
               {% include article_home.html trucate="200" %}
             </section>
-          </div>-->
+          </div>
+          {% else %}
           <div class="col-xs-12 col-sm-6">
             {% include article_home.html trucate="85" %}
           </div>
-          {% endunless %}
+          {% endif %}
         {% endfor %}
       </div>
     </div>
