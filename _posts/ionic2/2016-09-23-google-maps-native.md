@@ -1,17 +1,17 @@
 ---
 layout: post
-title: "Google Maps Nativo con ionic 2"
+title: "Google Maps Nativo con Ionic 2"
 date: 2016-09-23
 tags: ionic2 maps
 categories: ionic2
 comments: true
 author: daniel_lsanchez
-cover: "http://i.cubeupload.com/G3pB3y.jpg"
+cover: "http://i.cubeupload.com/vzI3hJ.jpg"
 ---
 
 > Hola a todos, en esta ocasión les traemos un pequeño ejemplo de cómo poder implementar **Google Maps Nativo** en tu proyecto de **Ionic 2**, es algo muy sencillo y de seguro que con estas bases podrás dar inicio a una gran idea.
 
-<img class="img-responsive" src="http://i.cubeupload.com/G3pB3y.jpg" alt="google maps">
+<img class="img-responsive" src="http://i.cubeupload.com/vzI3hJ.jpg" alt="google maps">
 
 Para integrar Google Maps en tu aplicación es necesario que te registres en la cuenta de Google para desarrolladores y generes el API KEY de la aplicación ya sea para android o ios, esta te permitirá trabajar con Google Maps. Aquí dejo el link para ingresar a generar la key [**Link**](https://developers.google.com/maps/?hl=es-419.){:target="_blank"}
 
