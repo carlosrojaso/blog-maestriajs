@@ -59,10 +59,8 @@ Ya sabiendo cuales son los plugins a instalar, procedemos a agregarlos a nuestra
 Geolocalización:
 
 ```
-ionic plugin add cordova-plugin-geolocalization
+ionic plugin add cordova-plugin-geolocation
 ```
-
-<img class="img-responsive" src="http://i.cubeupload.com/IDhcA0.jpg" alt="step 8">
 
 Google Maps:
 
