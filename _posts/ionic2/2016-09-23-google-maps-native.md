@@ -1,192 +1,185 @@
 ---
 layout: post
-title: "Google Maps Native"
+title: "Google Maps Nativo con Ionic 2"
 date: 2016-09-23
-tags: ionic2 Google maps
+tags: ionic2 maps
 categories: ionic2
 comments: true
 author: daniel_lsanchez
-cover: "http://i.cubeupload.com/itTXFO.png"
-draft: true
+cover: "http://i.cubeupload.com/vzI3hJ.jpg"
 ---
 
-> **Facebook** es una de las métodos más comunes y usados para registrar y capturar nuevos usuarios, así que en este artículo veremos como hacer el proceso de registrar nuestros usuarios usando **facebook + ionic 2**.
+> Hola a todos, en esta ocasión les traemos un pequeño ejemplo de cómo poder implementar **Google Maps Nativo** en tu proyecto de **Ionic 2**, es algo muy sencillo y de seguro que con estas bases podrás dar inicio a una gran idea.
 
-<img class="img-responsive" src="http://i.cubeupload.com/itTXFO.png" alt="facebbok">
+<img class="img-responsive" src="http://i.cubeupload.com/vzI3hJ.jpg" alt="google maps">
 
-Para comenzar debemos de tener instalado todo el entorno de desarrollo de ionic [(inicio en ionic 2)](http://ionicframework.com/docs/v2/getting-started/installation/){:target="_blank"}. Una vez lista nuestra máquina podemos comenzar.
+Para integrar Google Maps en tu aplicación es necesario que te registres en la cuenta de Google para desarrolladores y generes el API KEY de la aplicación ya sea para android o ios, esta te permitirá trabajar con Google Maps. Aquí dejo el link para ingresar a generar la key [**Link**](https://developers.google.com/maps/?hl=es-419.){:target="_blank"}
 
-Primero que todo crearemos un proyecto en blanco y lo llamaremos **loginFacebook** en Ionic 2. Nos ubicamos en la ruta donde queremos almacenar nuestro proyecto y digitamos el siguiente comando en nuestra consola.
+<img class="img-responsive" src="http://i.cubeupload.com/kX4StC.jpg" alt="step 1">
 
-```
-sudo ionic start loginFacebook blank --v2 
-```
+Una vez nos encontramos en la plataforma de google, es necesario que selecciones la tecnología con la cual se integrará Google Maps, para este ejemplo lo trabajaremos para la plataforma Android.
 
-El sistema comenzará a crear el proyecto ionic.
+Al seleccionar la plataforma nos aparecerá una serie de textos los cuales nos explican sobre Google Maps (esto lo puedes leer para que te enteres de todo lo que google tiene para nosotros trabajar con mapas), en este paso vamos a dar click en la parte superior de la ventana sobre costado derecho en el botón **“Obtener una clave”**.
 
-<img class="img-responsive" src="http://i.cubeupload.com/bdYw8F.png" alt="1">
+<img class="img-responsive" src="http://i.cubeupload.com/ftWfcm.jpg" alt="step 2">
+<img class="img-responsive" src="http://i.cubeupload.com/Wpn8Ga.jpg" alt="step 3">
 
-al terminar de crear la aplicación nos situaremos en el proyecto, digitando el comando en la consola:
+En la ventana que se nos abre, nos dirigimos a seleccionar la opción **“Crear proyecto”** y continuar.
 
-```
-cd loginFacebook
-```
+<img class="img-responsive" src="http://i.cubeupload.com/48GboH.jpg" alt="step 4">
 
-<img class="img-responsive" src="http://i.cubeupload.com/JzP8wX.png" alt="2">
+Continuamos digitando el nombre de nuestra aplicación para con este reconocer la clave generada por Google Maps. Yo he nombrado la app con el nombre **“MapasNativo”** y este será el nombre de nuestra aplicación.
 
-estando en la carpeta **loginFacebook** podemos digitar el comando en la consola `ls` y visualizamos todos los archivos y carpetas que se crean al crear el proyecto ionic 2.
+<img class="img-responsive" src="http://i.cubeupload.com/5iOdPK.jpg" alt="step 5">
 
-<img class="img-responsive" src="http://i.cubeupload.com/Dq3YTE.png" alt="3">
+Apenas tengas lista la información, puedes pulsar el botón de **“Crear”** para que google te genere el id de tu producto.
 
-Ahora agregaremos las plataformas en las que deseamos trabajar nuestra aplicación, nosotros agregaremos la plataforma de **android** para este ejemplo digitando el siguiente comando en la consola:
+<img class="img-responsive" src="http://i.cubeupload.com/QucGs7.jpg" alt="step 6">
 
-```
-sudo ionic platform add android
-```
+Copia esta clave API ya que con esta realizaremos la integración con Google Maps.
 
-<img class="img-responsive" src="http://i.cubeupload.com/Uks9mY.png" alt="4">
-
-El siguiente paso es ingresar a la plataforma de [Facebook para desarrolladores](https://developers.facebook.com/){:target="_blank"}, para ello debes de tener una cuenta de Facebook. Al ingresar a la plataforma nos dirigiremos en el costado superior derecho y hacemos click en el botón **Mis aplicaciones**.
-
-<img class="img-responsive" src="http://i.cubeupload.com/4380nd.png" alt="5">
-
-el siguiente paso es crear un identificador de la aplicación en la plataforma de Facebook, para ello damos click en **+ Agregar una nueva aplicación** y digitamos los datos que nos piden en el modal que se abre y terminamos haciendo click en **Crear identificador de la aplicación**.
-
-<img class="img-responsive" src="http://i.cubeupload.com/OQ9Doz.png" alt="5">
-
-*Nota: En este caso coloque en nombre para mostrar solo login ya que Facebook restringe cualquier nombre para la aplicación que contenga las palabras FB, face, book, isnt. Entre otras.*
-
-Perfecto ahora ya tenemos un identificador para la aplicación.
-
-<img class="img-responsive" src="http://i.cubeupload.com/whGjKa.png" alt="6">
-
-El siguiente paso es dar click sobre **+ Agregar productos** que se encuentra en el menú del costado izquierdo, al hacer click el sistema muestra una ventana con todos los productos que nos provee Facebook para trabajar. En el caso de nosotros daremos click sobre el botón **Empezar** del producto **Inicio de sesión con facebook**.
-
-<img class="img-responsive" src="http://i.cubeupload.com/1Pbi2h.png" alt="7">
-
-este nos llevara a una ventana donde nos darán una pequeña introducción para trabajar con el login de Facebook, en esta podremos continuar  haciendo click en el link  *ajustes de la plataforma (plartform setting)* para continuar con la configuración requerida. En esta página nos situamos en la parte inferior y damos click en el botón **+ Agregar plataforma**.
-
-<img class="img-responsive" src="http://i.cubeupload.com/Yba9lu.png" alt="8">
-
-En esta parte seleccionaremos la plataforma con la que trabajaremos para el login de Facebook, en este caso es la plataforma de android.
-
-<img class="img-responsive" src="http://i.cubeupload.com/0MvZhF.png" alt="9">
-
-esto nos llevará a la configuración de la plataforma, daremos click en el botón **Inicio rápido**.
-
-Se nos abrirá una ventana donde nos mostrará un pequeño tutorial para realizar los ajustes en la plataforma  y para configurar la clave hash de nuestra aplicación.
-
-<img class="img-responsive" src="http://i.cubeupload.com/FkXohv.png" alt="9">
-
-Realmente lo que nos interesa en este caso para nuestra aplicación es lo que se encuentra en la parte inferior de la página, ponemos el nombre del paquete de nuestra app, la clase a la que hace referencia el plugin de Facebook y una clave hash.
-
-<img class="img-responsive" src="http://i.cubeupload.com/f6VyGu.png" alt="10">
-
-al dar click en el botón **Next** nos mostrará un modal pidiéndonos que verifiquemos el nombre de paquete de google play, en este caso daremos clic en **usar este nombre de paquete (use this package name)**.
-
-<img class="img-responsive" src="http://i.cubeupload.com/FkU5rb.png" alt="11">
-
-Ya para finalizar crearemos la clave hash de nuestra aplicación, podemos dar clic en los link para visualizar un ejemplo del comando a ejecutar en nuestra consola para obtener dicha clave.
-
-<img class="img-responsive" src="http://i.cubeupload.com/XdnNa4.png" alt="5">
-
-ahora digitamos el comando indicado para nuestra máquina, en este caso usare el comando para mac, lo copiare y pegare en consola.
-
-<img class="img-responsive" src="http://i.cubeupload.com/3CDTUO.png" alt="5">
-
-La clave hash que nos genera la copiamos en el campo requerido y finalizamos con el proceso en Facebook.
-
-<img class="img-responsive" src="http://i.cubeupload.com/iNGhNj.png" alt="5">
-
-ahora volvemos a nuestra consola e instalaremos el plugin de Facebook [cordova-plugin-facebook4](https://github.com/jeduan/cordova-plugin-facebook4){:target="_blank"}, digitamos en la consola el siguiente comando.
+El siguiente paso es crear nuestra aplicación Ionic, en este caso usare la plantilla blank que trae ionic.
 
 ```
-sudo ionic plugin add cordova-plugin-facebook4 --variable APP_ID=" 284452415266660" --variable APP_NAME="Login"
+ionic start MapasNativo blank --v2
 ```
 
-**APP_ID**: número de id que se genero cuando creamos el app en Facebook.
+<img class="img-responsive" src="http://i.cubeupload.com/asIPEb.jpg" alt="step 7">
 
-**APP_NAME**: Nombre de la aplicación de Facebook.
+Una vez se crea el proyecto, nos dirigimos a la carpeta que ionic crea con su estructura para comenzar a integrar Google Maps en nuestra aplicación.
 
-<img class="img-responsive" src="http://i.cubeupload.com/kPriUI.png" alt="5">
+```
+cd MapasNativo
+```
 
-con esto ya estamos listos para ir al código y realizar una prueba. Abrimos nuestro editor de código preferido, en mi caso Visual Code, y nos abrimos el proyecto ionic 2 que creamos.
+Para integrar Google Maps Nativo de ionic 2, necesitaremos hacer uso de 2 plugins: Geolocalización y Google Maps.
 
-<img class="img-responsive" src="http://i.cubeupload.com/SH8ozP.png" alt="5">
+Ya sabiendo cuales son los plugins a instalar, procedemos a agregarlos a nuestra aplicación.
 
-nos dirigimos al directorio `app/pages/home` en este nos centraremos para nuestro trabajo.
+Geolocalización:
 
-En el archivo `home.html` agregaremos un botón el cual ejecutará al hacer click la función **loginFacebook** y mostraremos los datos que nos recupera al validar la información de registro.
+```
+ionic plugin add cordova-plugin-geolocation
+```
+
+Google Maps:
+
+```
+ionic plugin add cordova-plugin-googlemaps --variable API_KEY_FOR_ANDROID=”Ingresa el api key que generaste para android” --variable API_KEY_FOR_IOS=”Ingresa el api key que generaste para ios”
+```
+
+<img class="img-responsive" src="http://i.cubeupload.com/NamKFU.jpg" alt="step 9">
+
+Ahora ya tenemos lo necesario para integrar mapas en nuestra aplicación, vamos a realizar la importación de las librerías referentes a los plugin que instalamos. Para esto nos dirigimos a la carpeta del proyecto creado por ionic “app/page” y abrimos el archivo “home.ts” e importamos las librerías.
+
+{% highlight ts linenos %}
+import { Geolocation, GoogleMapsEvent, GoogleMapsLatLng, GoogleMap } from 'ionic-native';
+{% endhighlight %}
+
+Las librerias Geolocation y GoogleMaps hacen parte de [**Ionic Native**](http://www.ion-book.com/ionic2/ionic-native){:target="_blank"}:
+
+<img class="img-responsive" src="http://i.cubeupload.com/4kBzpX.jpg" alt="step 10">
+
+Para este ejemplo vamos a declarar dos métodos en nuestro archivo `home.ts` estos se llamarán:
+
+`obtenerPosicion()`: Este método nos devolverá la posición actual del dispositivo en coordenadas de latitud y longitud. Para esto debe de estar activo el servicio de GPS del dispositivo. En este método usaremos la librería Geolocation ya que esta tiene una función que nos recupera la posición actual del dispositivo. Estas coordenadas son pasadas al método `loadMap(coordenadas)`.
+
+{% highlight ts linenos %}
+obtenerPosicion():any{
+  Geolocation.getCurrentPosition().then(res => {
+    console.log(res.coords);
+    let coordenada = [{
+      'longitude' : res.coords.longitude,
+      'latitude' : res.coords.latitude
+    }];
+    console.log(coordenada);
+    this.loadMap(coordenada);
+  });
+}
+{% endhighlight %}
+
+`loadMap(coordenadas:any)`: Este método recibe como parámetro las coordenadas expresadas en latitud y longitud (estas coordenadas son tomadas del método `obtenerPosicion()`) y posiciona el mapa en la posición actual del dispositivo.
+
+{% highlight ts linenos %}
+loadMap(coordenada:any[]){
+  console.log(coordenada);
+  let longitud = coordenada[0]['longitude'];
+  let latitude = coordenada[0]['latitude'];
+  // let location: crea un objeto con las coordenadas latitude y longitud y es pasada a las // opciones de google maps.
+
+  let location = new GoogleMapsLatLng(latitude,longitud);
+  this.map = new GoogleMap('map', {
+      'backgroundColor': 'white',
+      'controls': {
+      'compass': true,
+      'myLocationButton': true,
+      'indoorPicker': true,
+      'zoom': true,
+    },
+    'gestures': {
+      'scroll': true,
+      'tilt': true,
+      'rotate': true,
+      'zoom': true
+    },
+    'camera': {
+      'latLng': location,
+      'tilt': 30,
+      'zoom': 15,
+      'bearing': 50
+    }
+  });
+  this.map.on(GoogleMapsEvent.MAP_READY).subscribe(() => {
+  console.log('Map is ready!');
+});
+
+{% endhighlight %}
+
+<img class="img-responsive" src="http://i.cubeupload.com/6alr1n.jpg" alt="step 11">
+<img class="img-responsive" src="http://i.cubeupload.com/6c3Ff6.jpg" alt="step 12">
+
+Ahora vamos a abrir el archivo `home.html` y vamos a incluir un div con un `id=”map”`.
 
 {% highlight html linenos %}
 <ion-header>
   <ion-navbar>
-    <ion-title>
-      Login Facebook
-    </ion-title>
+    <ion-title>Ionic Blank</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  Prueba registro con facebook.
-  <button block(click)="loginFacebook()">Login con facebook</button>
+  <div id="map"></div>
 </ion-content>
-
 {% endhighlight %}
 
-En el archivo `home.ts` incluiremos el código necesario para realizar la comunicación con Facebook. Debemos de importar la librería Facebook esta nos permitirá la comunicación con Facebook.
+Ahora vamos a nuestro archivo `home.scss` e incluiremos el siguiente código.
 
-{% highlight javascript linenos %}
-import {Component} from '@angular/core';
-import {NavController} from 'ionic-angular';
-import {Facebook} from 'ionic-native';
-
-@Component({
-  templateUrl: 'build/pages/home/home.html'
-})
-export class HomePage {
-  constructor(public navCtrl: NavController) {
-
-  }
-
-  loginFacebook(){
-    Facebook.login(['public_profile', 'email'])
-    .then(rta => {
-      console.log(rta.status)
-      if(rta.status == 'conneced'){
-        Facebook.api('/me?fields=id,name,email,first_name,last_name,gender,['public_profile','email']')
-        .then(rta=>{
-          console.log(rta);
-        })
-        .catch(error =>{
-          console.error( error );
-        });
-      };
-    })
-    .catch(error =>{
-      console.error( error );
-    });
+{% highlight scss linenos %}
+.home-page{
+  #map{
+    height: 100%;
   }
 }
 {% endhighlight %}
 
-Con esto ya está todo listo para compilar nuestro proyecto y realizar la prueba. 
-Para compilar nuestro proyecto android digitamos el comando en la consola:
+Ya con esto debería de quedar todo listo. Ahora vamos a compilar nuestro proyecto y realizaremos una prueba.
 
 ```
-sudo ionic build android
+ionic build android
 ```
 
-Esto nos generará el apk y este lo podremos instalar en nuestro dispositivo o en un emulador para realizar la prueba.
+NOTA: Recuerda activar el acceso a mapas de la aplicación por la configuración del celular en aplicaciones.
 
-# Resultado:
+# Resultados de la aplicación: 
 
 <div class="row">
-  <div class="col-xs-12 col-sm-6">
-    <img class="img-responsive" src="http://i.cubeupload.com/psktlb.jpeg" alt="5">
+  <div class="col-xs-12 col-sm-4">
+    <img class="img-responsive" src="http://i.cubeupload.com/lQvKh1.jpg" alt="app 2">
   </div>
-  <div class="col-xs-12 col-sm-6">
-    <img class="img-responsive" src="http://i.cubeupload.com/m8LA1M.jpeg" alt="5">
+  <div class="col-xs-12 col-sm-4">
+    <img class="img-responsive" src="http://i.cubeupload.com/lhHr7n.jpg" alt="app 1">
+  </div>
+  <div class="col-xs-12 col-sm-4">
+    <img class="img-responsive" src="http://i.cubeupload.com/HZbINA.jpg" alt="app 3">
   </div>
 </div>
-<img class="img-responsive" src="http://i.cubeupload.com/TrKouV.png" alt="5">
