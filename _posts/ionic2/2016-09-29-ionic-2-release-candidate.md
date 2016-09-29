@@ -30,7 +30,7 @@ Este es un gran cambio pero mejora el performance de nuestras aplicaciones y vez
 
 Lo primero es que es ya este release está usando el release final de angular 2 y varios de los cambios que veremos ahora en ionic 2 es a favor del uso de @NgModule que permite declarara todas las dependencias en un solo lugar y no tener que hacerlo varias veces dentro de la aplicación.
 
-Ahora todos las dependencias internas se declaran en el archivo src/app/app.module.ts en el array de declarations, aquí declaramos todas las pages, providers, componentes y pipes. Y no tenemos que incluir en las páginas los arrays providers, directives o pipes, cada que que queramos usarlos.
+Ahora todos las dependencias internas se declaran en el archivo `src/app/app.module.ts` en el array de `declarations`, aquí declaramos todas las pages, providers, componentes y pipes. Y no tenemos que incluir en las páginas los arrays providers, directives o pipes, cada que que queramos usarlos.
 
 # Proceso de construcción.
 
