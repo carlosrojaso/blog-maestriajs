@@ -10,27 +10,27 @@ cover: "http://blog.ionic.io/wp-content/uploads/2016/09/ionicrc0-1024x304.png"
 draft: true
 ---
 
-> Ayer tuvimos una gran noticia y es el anuncio de **Ionic 2 release candidate** ya está aquí y hay cambios muy fuertes en la estructura del proyecto, pero trae grandes beneficios que serán de los que hablaremos hoy!
+> Ayer tuvimos una gran noticia, **Ionic 2 release candidate** ya está aquí y hay cambios muy fuertes en la estructura del proyecto, pero trae grandes beneficios que serán de los que hablaremos hoy!
 
 <img class="img-responsive" src="http://blog.ionic.io/wp-content/uploads/2016/09/ionicrc0-1024x304.png" alt="google maps">
 
 # Estructura de la App.
 
-Ahora que angular ya está finalizado, ya tenemos una guia de como debería ser la estructuración de aplicación de la forma más óptima, además algo muy bueno es que al momento de compilar la aplicación es que no lleva lo archivos de desarrollo dentro de la aplicación, solo lleva los archivos dentro del la carpeta `www` y ingora la carpeta src donde está todo nuestro código.
+Ahora que angular ya está finalizado, ya hay una guia de como debería ser la estructura de aplicación de la forma más óptima, además algo muy bueno es que al momento de compilar la aplicación no lleva lo archivos de desarrollo dentro de la aplicación, solo lleva los archivos dentro del la carpeta `www` y ingora la carpeta `src` donde está todo nuestro código.
 
 <img class="img-responsive" src="http://i.cubeupload.com/ZBUnv9.png" alt="app">
 
 # Ahead of Time Compiling
 
-Este es un gran cambio pero mejora el performance de nuestras aplicaciones y vez de compilar los templates en el  navegador y en tiempo de ejecución, ahora los templates pueden ser pre. compilados y esto mejora el tiempo de arranque en la aplicación. el código compilado que crea se crea por AOT es código que funciona mucho más rápido y altamente optimizado. [**AOT**](https://en.wikipedia.org/wiki/Ahead-of-time_compilation){:target="_blank"}
+Este es un gran cambio pero mejora el performance de nuestras aplicaciones y en vez de compilar los templates en tiempo de ejecución, ahora los templates pueden ser pre-compilados y esto mejora el tiempo de arranque en la aplicación. El código compilado que crea se crea por AOT es código que funciona mucho más rápido y está altamente optimizado. Descubre más sobre [**Ahead of Time Compiling (AOT)**](https://en.wikipedia.org/wiki/Ahead-of-time_compilation){:target="_blank"}
 
 <img src="http://blog.ionic.io/wp-content/uploads/2016/09/beta11-vs-beta12.gif" class="img-responsive" alt="aot">
 
 # Angular 2 Final (NgModule)
 
-Lo primero es que es ya este release está usando el release final de angular 2 y varios de los cambios que veremos ahora en ionic 2 es a favor del uso de @NgModule que permite declarara todas las dependencias en un solo lugar y no tener que hacerlo varias veces dentro de la aplicación.
+En este release está usando el release final de angular 2 y varios de los cambios que veremos ahora en ionic 2 es a favor del uso de **@NgModule** que permite declarar todas las dependencias en un solo lugar y no tener que hacerlo varias veces dentro de la aplicación.
 
-Ahora todos las dependencias internas se declaran en el archivo `src/app/app.module.ts` en el array de `declarations`, aquí declaramos todas las pages, providers, componentes y pipes. Y no tenemos que incluir en las páginas los arrays providers, directives o pipes, cada que que queramos usarlos.
+Ahora todos las dependencias internas se declaran en el archivo `src/app/app.module.ts` en el array de `declarations`, aquí declaramos todas las pages, providers, componentes y pipes. Y no tenemos que incluir en las páginas los arrays de providers, directives o pipes, cada que que queramos usarlos.
 
 # Proceso de construcción.
 
