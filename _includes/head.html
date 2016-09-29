@@ -9,25 +9,28 @@
   <link rel="stylesheet" href='{{ "/bower_components/bootstrap/dist/css/bootstrap.min.css" | prepend: site.baseurl }}'>
   <link rel="stylesheet" href='{{ "/css/main.css" | prepend: site.baseurl }}'>
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
-  <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" />
+  <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ " /feed.xml
+    " | prepend: site.baseurl | prepend: site.url }}" />
 
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
   <link href='//fonts.googleapis.com/css?family=PT+Sans:400,700' rel='stylesheet' type='text/css'>
   <link href='//fonts.googleapis.com/css?family=Open+Sans:300,700' rel='stylesheet' type='text/css'>
-  
+
   <!-- Metas facebook -->
-  <meta property="og:url"                content="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}" />
-  <meta property="og:type"               content="article" />
-  <meta property="og:title"              content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}" />
-  <meta property="og:description"        content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}" />
-  <meta property="og:image"              content="{% if page.cover %}{{ page.cover }}{% else %}{{ site.cover }}{% endif %}" />
-  <meta property="og:site_name"          content="ion-book" />
+  <meta property="og:url" content="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}" />
+  <meta property="og:description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}"
+  />
+  <meta property="og:image" content="{% if page.cover %}{{ page.cover }}{% else %}{{ site.cover }}{% endif %}" />
+  <meta property="og:site_name" content="ion-book" />
   <!-- Metas twitter -->
-  <meta name="twitter:card"              content="summary" />
-  <meta name="twitter:site"              content="@ion_book" />
-  <meta name="twitter:title"             content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}" />
-  <meta name="twitter:description"       content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}" />
-  <meta name="twitter:image"             content="{% if page.cover %}{{ page.cover }}{% else %}{{ site.cover }}{% endif %}g" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@ion_book" />
+  <meta name="twitter:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}" />
+  <meta name="twitter:description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}"
+  />
+  <meta name="twitter:image" content="{% if page.cover %}{{ page.cover }}{% else %}{{ site.cover }}{% endif %}g" />
 
   <script src="https://use.fontawesome.com/0fb10d4bd2.js"></script>
   <!-- social share-->
