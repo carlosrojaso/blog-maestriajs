@@ -48,6 +48,6 @@ Ahora ya no usan gulp como apoyo para correr tareas, han creado sus scripts prop
 * Move away from `gulp` ([ionic-gulp-tasks](https://github.com/driftyco/ionic-gulp-tasks)) to `npm scripts` ([ionic-app-scripts](https://github.com/driftyco/ionic-app-scripts))
 * Use [Rollup](http://rollupjs.org) for bundling instead of `browserify` or `webpack`
 
-## Pasos para actulizar [aquí](#steps-to-upgrade-to-rc0){:target="_blank"}
+## Pasos para actulizar [aquí](https://github.com/driftyco/ionic/blob/master/CHANGELOG.md#steps-to-upgrade-to-rc0){:target="_blank"}
 
 **Nota:** *Hay muchas cosas que cambian pero con este release candidate el equipo de ionic nos promete que ya no habrá más cambios tan robustos al fin de acabo ya es la versión casi lista para producción, así que acogeremos estos cambios pronto y actualizaremos nuestros [demos](http://www.ion-book.com/demos/){:target="_blank"} en las próximas semanas.*
