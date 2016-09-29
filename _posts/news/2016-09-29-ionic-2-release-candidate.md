@@ -7,7 +7,6 @@ categories: news
 comments: true
 author: nicobytes
 cover: "http://blog.ionic.io/wp-content/uploads/2016/09/ionicrc0-1024x304.png"
-draft: true
 ---
 
 > Ayer tuvimos una gran noticia, **Ionic 2 release candidate** ya está aquí y hay cambios muy fuertes en la estructura del proyecto, pero trae grandes beneficios que serán de los que hablaremos hoy!
