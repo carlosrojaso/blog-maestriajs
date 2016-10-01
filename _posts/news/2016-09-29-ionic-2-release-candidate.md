@@ -15,7 +15,7 @@ cover: "http://blog.ionic.io/wp-content/uploads/2016/09/ionicrc0-1024x304.png"
 
 # Estructura de la App.
 
-Ahora que angular ya está finalizado, ya hay una guia de como debería ser la estructura de aplicación de la forma más óptima, además algo muy bueno es que al momento de compilar la aplicación no lleva lo archivos de desarrollo dentro de la aplicación, solo lleva los archivos dentro del la carpeta `www` y ingora la carpeta `src` donde está todo nuestro código.
+Ahora que angular ya está finalizado, ya hay una guia de como debería ser la estructura de aplicación de la forma más óptima, además algo muy bueno es que al momento de compilar la aplicación no lleva lo archivos de desarrollo dentro de la aplicación, solo lleva los archivos dentro del la carpeta `www` y ignora la carpeta `src` donde está todo nuestro código.
 
 <img class="img-responsive" src="http://i.cubeupload.com/ZBUnv9.png" alt="app">
 
@@ -48,6 +48,6 @@ Ahora ya no usan gulp como apoyo para correr tareas, han creado sus scripts prop
 * Move away from `gulp` ([ionic-gulp-tasks](https://github.com/driftyco/ionic-gulp-tasks)) to `npm scripts` ([ionic-app-scripts](https://github.com/driftyco/ionic-app-scripts))
 * Use [Rollup](http://rollupjs.org) for bundling instead of `browserify` or `webpack`
 
-## Pasos para actulizar [aquí](https://github.com/driftyco/ionic/blob/master/CHANGELOG.md#steps-to-upgrade-to-rc0){:target="_blank"}
+## Pasos para actualizar [aquí](https://github.com/driftyco/ionic/blob/master/CHANGELOG.md#steps-to-upgrade-to-rc0){:target="_blank"}
 
 **Nota:** *Hay muchas cosas que cambian pero con este release candidate el equipo de ionic nos promete que ya no habrá más cambios tan robustos al fin de acabo ya es la versión casi lista para producción, así que acogeremos estos cambios pronto y actualizaremos nuestros [demos](http://www.ion-book.com/demos/){:target="_blank"} en las próximas semanas.*
