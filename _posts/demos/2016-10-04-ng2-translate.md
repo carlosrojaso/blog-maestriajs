@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "App con múltiples idiomas en 6 pasos."
-date: 2016-10-04
+date: 2016-10-02
 tags: ionic2 translate
 categories: demos
 comments: true
