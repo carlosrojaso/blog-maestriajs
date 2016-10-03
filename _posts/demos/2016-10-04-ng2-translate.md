@@ -1,20 +1,20 @@
 ---
 layout: post
-title: "App con múltiples idiomas en 5 pasos."
-date: 2016-09-27
+title: "App con múltiples idiomas en 6 pasos."
+date: 2016-10-04
 tags: ionic2 translate
 categories: demos
 comments: true
 repo: "https://ion-book.github.io/demo106/"
 author: nicobytes
-cover: "http://i.cubeupload.com/gxxOpn.png"
+cover: "https://s17.postimg.org/tneheudov/translate.jpg"
 remember: true
 draft: true
 ---
 
-> Varias aplicaciones tienen usos en diferentes países, por lo cual las aplicaciones deben adaptar sus contenidos a varios idiomas y con [**ng2-translate**](https://github.com/ocombe/ng2-translate){:target="_blank"} podremos hacer esto con ionic.
+> Varias aplicaciones tienen usos en diferentes países, por lo cual las aplicaciones deben adaptar sus contenidos a varios idiomas y con [**ng2-translate**](https://github.com/ocombe/ng2-translate){:target="_blank"} podremos hacer esto con ionic. Este demo esta con la versión de [**Ionic RC0**](http://www.ion-book.com/news/ionic-2-release-candidate){:target="_blank"}
 
-<img class="img-responsive" src="http://i.cubeupload.com/gxxOpn.png" alt="firebase-database-and-ionic-2">
+<img class="img-responsive" src="https://s17.postimg.org/tneheudov/translate.jpg" alt="firebase-database-and-ionic-2">
 
 # Paso 1: Iniciando el proyecto
 
@@ -36,63 +36,95 @@ Como iniciamos nuestro proyecto con el template **blank** tendremos una estructu
 # Paso 2: Instalar ng2-translate
 
 ```
-npm install ng2-translate@2.2.2 --save --save-exact
+npm install ng2-translate --save
 ```
 
 # Paso 3: Configuración
 
-Ahora debemos importar y agregar a nuestro archivo `app.ts` así:
+Ahora debemos importar y agregar a nuestro archivo `app.module.ts` así:
+
+{% highlight ts linenos %}
+import { BrowserModule } from "@angular/platform-browser";
+import { NgModule } from '@angular/core';
+import { IonicApp, IonicModule } from 'ionic-angular';
+import { MyApp } from './app.component';
+import { HttpModule, Http } from '@angular/http';
+import { TranslateModule, TranslateLoader, TranslateStaticLoader } from 'ng2-translate/ng2-translate';
+
+import { HomePage } from '../pages/home/home';
+
+@NgModule({
+  declarations: [
+    MyApp,
+    HomePage
+  ],
+  imports: [
+    BrowserModule,
+    HttpModule,
+    TranslateModule.forRoot({ 
+      provide: TranslateLoader,
+      useFactory: (http: Http) => new TranslateStaticLoader(http, '/assets/i18n', '.json'),
+      deps: [Http]
+    }),
+    IonicModule.forRoot(MyApp)
+  ],
+  bootstrap: [IonicApp],
+  entryComponents: [
+    MyApp,
+    HomePage
+  ],
+  providers: []
+})
+export class AppModule {}
+{% endhighlight %}
+
+- En la *línea 6* importamos las dependencias que necesitamos de **ng2-translate**
+- En la *línea 15* definimos las importaciones necesarias.
+
+**Nota:** En la *línea 20* enviamos la dirección `assets/i18n` esta carpeta debe estar ubicada  en `src`.
+
+# Paso 4: Definir idioma por defecto
+
+Ahora debemos definir en `app.component.ts`, el idioma con el cual la aplicación inicia por defecto. 
 
 {% highlight ts linenos %}
 import { Component } from '@angular/core';
-import { Platform, ionicBootstrap } from 'ionic-angular';
+import { Platform } from 'ionic-angular';
 import { StatusBar } from 'ionic-native';
-import { Http } from '@angular/http';
-import { TranslateService, TranslateLoader, TranslateStaticLoader } from 'ng2-translate/ng2-translate';
-import { HomePage } from './pages/home/home';
+import { TranslateService } from 'ng2-translate/ng2-translate'
+
+import { HomePage } from '../pages/home/home';
 
 @Component({
   template: '<ion-nav [root]="rootPage"></ion-nav>'
 })
 export class MyApp {
 
-  public rootPage: any;
+  rootPage: any;
 
   constructor(
     private platform: Platform,
-    private translate: TranslateService
+    private translateService: TranslateService
   ) {
     this.rootPage = HomePage;
-
-    this.translate.setDefaultLang('es');
-    this.translate.use('es');
+    //Language
+    this.translateService.setDefaultLang('en');
+    this.translateService.use('en');
 
     platform.ready().then(() => {
       StatusBar.styleDefault();
     });
   }
 }
-
-ionicBootstrap(MyApp, [
-  { 
-    provide: TranslateLoader,
-    useFactory: (http: Http) => new TranslateStaticLoader(http, 'assets/i18n', '.json'),
-    deps: [Http]
-  },
-  TranslateService
-]);
 {% endhighlight %}
 
-- En la *línea 5* importamos las dependencias que necesitamos de **ng2-translate**
-- En la *línea 17* inyectamos a `TranslateService` como dependencia de de la clase
-- En la *línea 21 y 22* definimos el idioma con el cual la app inicia por defecto.
-- Finalmente desde la *línea 30 a la 37* agregar los módulos de ng2-translate a `ionicBootstrap`.
+- En la *línea 4* importamos a `TranslateService`
+- En la *línea 17* inyectamos el servcio a nuestra clase.
+- En la *línea 21 y 22* definimos el idioma que seleccionaremos por defecto.
 
-**Nota:** En la *línea 33* enviamos la dirección `assets/i18n` esta carpeta debe estar ubicada  en `www`.
+# Paso 5: Crear archivos de idiomas
 
-# Paso 4: Crear archivos de idiomas
-
-Ahora dentro de la carpeta  `assets/i18n`  es donde estarán todos los archivos de los idiomas en formato:
+Ahora dentro de la carpeta  `src/assets/i18n` es donde estarán todos los archivos de los idiomas en formato:
 
 `en.json`:
 {% highlight json %}
@@ -121,7 +153,7 @@ Ahora dentro de la carpeta  `assets/i18n`  es donde estarán todos los archivos 
 }
 {% endhighlight %}
 
-# Paso 5: Implementar pipe
+# Paso 6: Implementar pipe
 
 Ahora solo nos queda implementar el pipe que provee **ng2-translate** para usarlo en nuestros templates:
 
@@ -135,16 +167,16 @@ Ahora solo nos queda implementar el pipe que provee **ng2-translate** para usarl
 {% endraw %}
 {% endhighlight %}
 
-Y para hacer el cambio dinámicamente haremos uso de ion-select para escoger el idioma, esto la haremos en el archivo `home.ts`, asi:  
+Y para hacer el cambio dinámicamente haremos uso de ion-select para escoger el idioma, esto la haremos en el archivo `src/pages/home.ts`, asi:  
 
 {% highlight ts linenos %}
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
-import { TranslatePipe, TranslateService } from 'ng2-translate/ng2-translate';
+import { TranslateService } from 'ng2-translate/ng2-translate'
 
 @Component({
-  templateUrl: 'build/pages/home/home.html',
-  pipes: [ TranslatePipe ]
+  selector: 'page-home',
+  templateUrl: 'home.html'
 })
 export class HomePage {
 
@@ -152,7 +184,7 @@ export class HomePage {
 
   constructor(
     private navCtrl: NavController,
-    private translate: TranslateService
+    private translateService: TranslateService
   ) {
     this.idioms = [
       {
@@ -170,10 +202,11 @@ export class HomePage {
     ];
   }
 
-  choose(lang){
-    this.translate.use(lang);
+  choose(lang) {
+    this.translateService.use(lang);
   }
 }
+
 {% endhighlight %}
 
 Y nuestro template `home.html`: 
@@ -181,12 +214,12 @@ Y nuestro template `home.html`:
 {% highlight html linenos %}
 {% raw %}
 <ion-header>
-  <ion-navbar primary>
+  <ion-navbar color="primary">
     <ion-title>Home</ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content class="home">
+<ion-content>
   <ion-list>
     <ion-item>
       <ion-label>Escoge el  idioma</ion-label>
