@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "App con múltiples idiomas en 6 pasos."
-date: 2016-10-02
+date: 2016-10-04
 tags: ionic2 translate
 categories: demos
 comments: true
@@ -9,7 +9,6 @@ repo: "https://ion-book.github.io/demo106/"
 author: nicobytes
 cover: "https://s17.postimg.org/tneheudov/translate.jpg"
 remember: true
-draft: true
 ---
 
 > Varias aplicaciones tienen usos en diferentes países, por lo cual las aplicaciones deben adaptar sus contenidos a varios idiomas y con [**ng2-translate**](https://github.com/ocombe/ng2-translate){:target="_blank"} podremos hacer esto con ionic. Este demo esta con la versión de [**Ionic RC0**](http://www.ion-book.com/news/ionic-2-release-candidate){:target="_blank"}
