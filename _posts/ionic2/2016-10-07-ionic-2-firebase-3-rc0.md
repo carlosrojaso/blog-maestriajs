@@ -7,7 +7,7 @@ categories: ionic2
 comments: true
 author: javebratt
 cover: "http://i.imgur.com/5mTwi1e.jpg"
-draft: true
+draft: false
 ---
 
 <img src="http://i.imgur.com/5mTwi1e.jpg" class="img-responsive" />
