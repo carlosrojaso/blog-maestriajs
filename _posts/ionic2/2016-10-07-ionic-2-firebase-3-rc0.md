@@ -122,9 +122,9 @@ Especialmente Firebase y AngularFire 2 (hey, eso es de lo que se trata el post :
 
 Abre tu terminal ( Deberias ya estar en el directorio de tu proyecto ) e instala los paquetes en este ordén:
 
-<pre>
+<code>
 npm install firebase angularfire2 --save
-</pre>
+</code>
 
 **Nota en RC0:** Usualmente el ecosistema de Types es fuerte y todo lo que tu necesitas es hacer <pre>npm install @types/package_name</pre>
 para tener este trabajando, pero Firebase no ha actualizado su definición de type para 3.x y ellos aún estan utilizando 2.4.x esa es para consolas antiguas.
