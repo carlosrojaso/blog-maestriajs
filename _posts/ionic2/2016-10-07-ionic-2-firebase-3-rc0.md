@@ -12,6 +12,8 @@ draft: true
 
 <img src="http://i.imgur.com/5mTwi1e.jpg" class="img-responsive" />
 
+Post en (Ingles)[https://javebratt.com/ionic2rc0-firebase-js-sdk/]
+
 ## Esta tu entorno de desarrollo actualizado?
 
 Antes de escribir cualquier codigo, vamos a tomarnos unos minutos para instalar todo lo que necesitas para ser capaz de 
@@ -531,4 +533,4 @@ Solo debes ir a tu consola, click en tu app (O crea una nueva) y ahi va a darte 
 Ya lo tienes trabajando? Estas teniendo algun problema? Dejame Saberlo.
 
 Hey, yo escribi un libro llamado "Build your first Firebase powered Ionic2 app using AngularFire2" este te llevara por todo el 
-proceso para crear una App con Ionic 2 y AngularFire 2. Esta en ingles te dejo el boton [aqui](https://gumroad.com/javebratt).
+proceso para crear una App con Ionic 2 y AngularFire 2. Esta en ingles te dejo el boton [aqui](https://gumroad.com/a/981415027).
