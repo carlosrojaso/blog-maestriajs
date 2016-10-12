@@ -2,7 +2,7 @@
 layout: post
 title: "Conectando Ionic 2 con Firebase 3"
 tags: ionic2, firebase3
-date: 2016-10-07
+date: 2016-10-12
 categories: ionic2
 comments: true
 author: javebratt
@@ -137,3 +137,398 @@ En su ultima actualización, Ionic 2 dejo de lado Webpack para empezar a trabaja
 proxima generación de Javascript module Bundle
 
 y yo tengo que decir, Nosotros migramos una app a producción y esta trabajando realmente bién, el tiempo de arranque fue reducido considerablemente.
+
+Necesitamos cambiar el archivo de configuración Rollup de Ionic, para agregar algunas cosas y tener Firebase trabajando.
+
+En lugar de cambiar el script, vamos a crear nuestro propio archivo y decirle a Ionic que lo use, esto puede sonar complicado pero creeme no lo es.
+
+A proposito, tu podrias solo editar el archivo original, pero en cada actualización de Ionic hara que el archivo rollup se restablezca y tendras que hacerlo de nuevo.
+
+## Crear los nuevos archivos.
+
+Lo primero que deberas hacer es ir a la raiz de tu archivo y crear un archivo llamado **scripts**.
+
+Dentro de la carpeta voy a necesitar crear un archivo llamado **rollup.config.js**
+
+Ahora debes ir a **node_modules/@ionic/app-scripts/config/rollup.config.js** este deberia verse un poco como esto:
+
+````json
+
+var nodeResolve = require('rollup-plugin-node-resolve');
+var commonjs = require('rollup-plugin-commonjs');
+var globals = require('rollup-plugin-node-globals');
+var builtins = require('rollup-plugin-node-builtins');
+var json = require('rollup-plugin-json');
+
+
+// https://github.com/rollup/rollup/wiki/JavaScript-API
+
+var rollupConfig = {
+  /**
+   * entry: The bundle's starting point. This file will
+   * be included, along with the minimum necessary code
+   * from its dependencies
+   */
+  entry: 'src/app/main.dev.ts',
+
+  /**
+   * sourceMap: If true, a separate sourcemap file will
+   * be created.
+   */
+  sourceMap: true,
+
+  /**
+   * format: The format of the generated bundle
+   */
+  format: 'iife',
+
+  /**
+   * dest: the output filename for the bundle in the buildDir
+   */
+  dest: 'main.js',
+
+  /**
+   * plugins: Array of plugin objects, or a single plugin object.
+   * See https://github.com/rollup/rollup/wiki/Plugins for more info.
+   */
+  plugins: [
+    builtins(),
+    commonjs(),
+    nodeResolve({
+      module: true,
+      jsnext: true,
+      main: true,
+      browser: true,
+      extensions: ['.js']
+    }),
+    globals(),
+    json()
+  ]
+
+};
+
+
+if (process.env.IONIC_ENV == 'prod') {
+  // production mode
+  rollupConfig.entry = '{{TMP}}/app/main.prod.ts';
+  rollupConfig.sourceMap = false;
+}
+
+
+module.exports = rollupConfig;
+
+````
+
+Ahora tu debes copiar el contenido entero de ese archivo y pegar este en el nuevo archivo que tu acabas de crear en  **scripts/rollup.config.js**
+
+## Dile a Ionic que lo use.
+
+Ahora nosotros necesitamos decirle a Ionic que use nuestra nueva configuración rollup en lugar de la que viene por defecto.
+
+Para eso tu tendras que ir a **package.json** y tu tendras que crear una nueva entrada en el nodo principal llamado **config** y apuntar la dirección
+a el nuevo **rollup.config.js.**
+
+De esta manera, abre el **package.json** y agrega:
+
+````json
+"config": {
+  "ionic_rollup": "./scripts/rollup.config.js"
+}
+````
+
+Esto hara que tu nueva app use el nuevo **scripts/rollup.config.js** para Rollup.
+
+Vamos a probar para ver si esta trabajando, abre **scripts/rollup.config.js** y sobre la primera linea agregamos **console.log** para ver si esta
+se muestra en la terminal. Este puede ser cualquier cosa que tu quieras, Nosotros solo necesitamos ver si se esta leyendo el archivo.
+
+Asi que este se vera de esta forma.
+
+````json
+console.log("I'm the Hulk");
+var nodeResolve = require('rollup-plugin-node-resolve');
+var commonjs = require('rollup-plugin-commonjs');
+var globals = require('rollup-plugin-node-globals');
+var builtins = require('rollup-plugin-node-builtins');
+var json = require('rollup-plugin-json');
+
+
+// https://github.com/rollup/rollup/wiki/JavaScript-API
+
+var rollupConfig = {
+  /**
+   * entry: The bundle's starting point. This file will
+   * be included, along with the minimum necessary code
+   * from its dependencies
+   */
+  entry: 'src/app/main.dev.ts',
+
+  /**
+   * sourceMap: If true, a separate sourcemap file will
+   * be created.
+   */
+  sourceMap: true,
+
+  /**
+   * format: The format of the generated bundle
+   */
+  format: 'iife',
+
+  /**
+   * dest: the output filename for the bundle in the buildDir
+   */
+  dest: 'main.js',
+
+  /**
+   * plugins: Array of plugin objects, or a single plugin object.
+   * See https://github.com/rollup/rollup/wiki/Plugins for more info.
+   */
+  plugins: [
+    builtins(),
+    commonjs(),
+    nodeResolve({
+      module: true,
+      jsnext: true,
+      main: true,
+      browser: true,
+      extensions: ['.js']
+    }),
+    globals(),
+    json()
+  ]
+
+};
+
+
+if (process.env.IONIC_ENV == 'prod') {
+  // production mode
+  rollupConfig.entry = '{{TMP}}/app/main.prod.ts';
+  rollupConfig.sourceMap = false;
+}
+
+
+module.exports = rollupConfig;
+````
+
+Entonces, abre tu terminal y ejecuta <code>$ npm run build</code>
+
+<img class="img-responsive" src="https://i1.wp.com/javebratt.com/wp-content/uploads/2016/10/hulk.png?resize=1024%2C576&ssl=1"/>
+
+Ahora que sabemos que estamos en el archivo correcto (**scripts/rollup.config.js**) vamos a agregar 2 cosas.
+
+Primero, Nosotros agregaremos **useStrict: false,** a el archivo principal de node en la variable **rollupConfig** , esto evitara
+errores de **eval** cuando realices tu build.
+
+Ahora debemos decir a nuestro nuevo archivo de configuración que use nuestros modulos commonjs (En este caso solo Firebase)
+
+````javascript
+commonjs({
+  include: [
+    'node_modules/rxjs/**', // firebase needs rxjs to avoid build errors
+    'node_modules/firebase/**', // here we're calling firebase.
+  ],
+  namedExports: {
+    'node_modules/firebase/firebase.js': ['initializeApp', 'auth', 'database'],
+  }
+}),
+````
+
+En el final del archivo **scripts/rollup.config.js** deberia estar como:
+
+````javascript
+var nodeResolve = require('rollup-plugin-node-resolve');
+var commonjs = require('rollup-plugin-commonjs');
+var globals = require('rollup-plugin-node-globals');
+var builtins = require('rollup-plugin-node-builtins');
+var json = require('rollup-plugin-json');
+
+
+// https://github.com/rollup/rollup/wiki/JavaScript-API
+
+var rollupConfig = {
+  /**
+   * entry: The bundle's starting point. This file will
+   * be included, along with the minimum necessary code
+   * from its dependencies
+   */
+  entry: 'src/app/main.dev.ts',
+
+  /**
+   * sourceMap: If true, a separate sourcemap file will
+   * be created.
+   */
+  sourceMap: true,
+
+  /**
+   * format: The format of the generated bundle
+   */
+  format: 'iife',
+
+  /**
+   * dest: the output filename for the bundle in the buildDir
+   */
+  dest: 'main.js',
+
+  // Add this to avoid eval errors
+  useStrict: false,
+
+  /**
+   * plugins: Array of plugin objects, or a single plugin object.
+   * See https://github.com/rollup/rollup/wiki/Plugins for more info.
+   */
+  plugins: [
+    builtins(),
+    commonjs({
+      include: [
+        'node_modules/rxjs/**', // firebase needs rxjs to avoid build errors
+        'node_modules/firebase/**', // here we're calling firebase.
+      ],
+      namedExports: {
+        'node_modules/firebase/firebase.js': ['initializeApp', 'auth', 'database'],
+      }
+    }),
+    nodeResolve({
+      module: true,
+      jsnext: true,
+      main: true,
+      browser: true,
+      extensions: ['.js']
+    }),
+    globals(),
+    json()
+  ]
+
+};
+
+
+if (process.env.IONIC_ENV == 'prod') {
+  // production mode
+  rollupConfig.entry = '{{TMP}}/app/main.prod.ts';
+  rollupConfig.sourceMap = false;
+}
+
+
+module.exports = rollupConfig;
+````
+
+Ahora necesitamos hacer una ultima cosa para tener a Firebase trabajando, necesitamos agregarlas a nuestro archivo <code>tsconfig.js</code>, asi que 
+vamos y agreguemos una opción a  **Types** que sera **firebase**
+
+````javascript
+"types": [
+    "firebase"
+],
+````
+
+Al final el archivo deberia verse algo asi:
+
+````javascript
+{
+  "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
+    "declaration": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "lib": [
+      "dom",
+      "es2015"
+    ],
+    "module": "es2015",
+    "moduleResolution": "node",
+    "target": "es5"
+  },
+  "types": [
+    "firebase"
+  ],
+  "exclude": [
+    "node_modules"
+  ],
+  "compileOnSave": false,
+  "atom": {
+    "rewriteTsconfig": false
+  }
+}
+````
+
+Ahora puedes inicializar firebase yendo a **src/app/app.component.js** e importando todo lo que tu necesitas de Firebase:
+
+````javascript
+import firebase from 'firebase'; // Big change from '* as firebase'.
+
+// Get your info from your firebase console.
+const firebaseconfig = { 
+  apiKey: '',
+  authDomain: '',
+  databaseURL: '',
+  storageBucket: ''
+};
+````
+
+Y entonces inicializalo dentro del constructor:
+
+````javascript
+@Component({
+  template: `<ion-nav [root]="rootPage"></ion-nav>`
+})
+export class MyApp {
+  rootPage = HomePage;
+
+  constructor(platform: Platform) {
+    firebase.initializeApp(firebaseconfig); // Here we initialize Firebase.
+
+    platform.ready().then(() => {
+      StatusBar.styleDefault();
+    });
+  }
+}
+````
+
+En el final del archivo deberia verse algo asi.
+
+````javascript
+import { Component } from '@angular/core';
+import { Platform } from 'ionic-angular';
+import { StatusBar } from 'ionic-native';
+
+import { HomePage } from '../pages/home/home';
+import firebase from 'firebase'; // Big change from '* as firebase'.
+
+// Get your info from your firebase console.
+const firebaseconfig = { 
+  apiKey: '',
+  authDomain: '',
+  databaseURL: '',
+  storageBucket: ''
+};
+
+@Component({
+  template: `<ion-nav [root]="rootPage"></ion-nav>`
+})
+export class MyApp {
+  rootPage = HomePage;
+
+  constructor(platform: Platform) {
+    firebase.initializeApp(firebaseconfig); // init Firebase
+
+    platform.ready().then(() => {
+      StatusBar.styleDefault();
+    });
+  }
+}
+````
+
+Esto dara acceso a **firebase** en tu app, todo loq ue debes hacer es:
+
+````javascript
+import firebase from 'firebase'; // Instead of '* as firebase'.
+````
+
+Puedes encontrar tus datos de  **firebaseConfig** en la [Consola](https://console.firebase.google.com/)
+
+Solo debes ir a tu consola, click en tu app (O crea una nueva) y ahi va a darte algunas opciones.
+
+## Proximos pasos.
+
+Ya lo tienes trabajando? Estas teniendo algun problema? Dejame Saberlo.
+
+Hey, yo escribi un libro llamado "Build your first Firebase powered Ionic2 app using AngularFire2" este te llevara por todo el 
+proceso para crear una App con Ionic 2 y AngularFire 2. Esta en ingles te dejo el boton [aqui](https://gumroad.com/javebratt).
