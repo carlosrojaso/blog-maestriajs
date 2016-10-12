@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Conectando Ionic 2 con Firebase 3"
+title: "Conectando Ionic 2 con Firebase 3 en RC0"
 tags: ionic2, firebase3
 date: 2016-10-12
 categories: ionic2
@@ -76,6 +76,7 @@ Eso significa, el comando **start** va a instalar todos los requerimientos de **
 como el archivo **package.json** deberia ser:
 
 ````json
+
 {
   "name": "ionic-hello-world",
   "author": "Ionic Framework",
@@ -111,6 +112,7 @@ como el archivo **package.json** deberia ser:
   ],
   "cordovaPlatforms": [],
 }
+
 ```` 
 
 Dependiendo cuando lo leas, estos paquetes pueden variar (Especialmente los numeros de versión) entonces mantén eso en mente,
@@ -233,9 +235,11 @@ a el nuevo **rollup.config.js.**
 De esta manera, abre el **package.json** y agrega:
 
 ````json
+
 "config": {
   "ionic_rollup": "./scripts/rollup.config.js"
 }
+
 ````
 
 Esto hara que tu nueva app use el nuevo **scripts/rollup.config.js** para Rollup.
