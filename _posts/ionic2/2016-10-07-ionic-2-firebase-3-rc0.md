@@ -133,7 +133,7 @@ Asi que todo lo que tu necesitas hacer es un pequeño hack para lograr tener est
 
 ## Configurando Rollup
 
-En su ultima actualización, Ionic 2 dejo de lado Webpack para empezar a trabajar con Rollup, como ellos dicén en su (Sitio)[http://j.mp/2dn0P1f]: Rollup es la 
+En su ultima actualización, Ionic 2 dejo de lado Webpack para empezar a trabajar con Rollup, como ellos dicén en su [Sitio](http://j.mp/2dn0P1f): Rollup es la 
 proxima generación de Javascript module Bundle
 
 y yo tengo que decir, Nosotros migramos una app a producción y esta trabajando realmente bién, el tiempo de arranque fue reducido considerablemente.
