@@ -12,7 +12,7 @@ draft: false
 
 <img src="http://i.imgur.com/5mTwi1e.jpg" class="img-responsive" />
 
-Post en (Ingles)[https://javebratt.com/ionic2rc0-firebase-js-sdk/]
+Post en [Ingles](https://javebratt.com/ionic2rc0-firebase-js-sdk/)
 
 ## Esta tu entorno de desarrollo actualizado?
 
