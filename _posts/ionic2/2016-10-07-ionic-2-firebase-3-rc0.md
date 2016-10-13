@@ -75,7 +75,7 @@ que tu proyecto tiene los paquetes/modulos **npm** necesarios.
 Eso significa, el comando **start** va a instalar todos los requerimientos de **ionic-angular** , **angularjs** y más. Asi es
 como el archivo **package.json** deberia ser:
 
-{% highlight json  %}
+{% highlight javascript  %}
 
 {
   "name": "ionic-hello-world",
