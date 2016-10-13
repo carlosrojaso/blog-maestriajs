@@ -26,7 +26,7 @@ en mis apps.
 La segunda cosa que debes hacer es estar seguro que tienes Ionic, Cordova y Typescript instalado, podras hacer esto abriendo tu terminal
 y escribiendo.
 
-<pre>
+<pre> 
 $ npm install -g ionic cordova typescript
 </pre>
 
@@ -158,7 +158,7 @@ Dentro de la carpeta voy a necesitar crear un archivo llamado **rollup.config.js
 Ahora debes ir a **node_modules/@ionic/app-scripts/config/rollup.config.js** este deberia verse un poco como esto:
 
 
-{% highlight json  %}
+{% highlight javascript  %}
 
 var nodeResolve = require('rollup-plugin-node-resolve');
 var commonjs = require('rollup-plugin-commonjs');
@@ -253,7 +253,7 @@ se muestra en la terminal. Este puede ser cualquier cosa que tu quieras, Nosotro
 Asi que este se vera de esta forma.
 
 
-{% highlight json  %}
+{% highlight javascript  %}
 console.log("I'm the Hulk");
 var nodeResolve = require('rollup-plugin-node-resolve');
 var commonjs = require('rollup-plugin-commonjs');
@@ -331,7 +331,7 @@ errores de **eval** cuando realices tu build.
 Ahora debemos decir a nuestro nuevo archivo de configuración que use nuestros modulos commonjs (En este caso solo Firebase)
 
 
-{% highlight json  %}
+{% highlight javascript  %}
 commonjs({
   include: [
     'node_modules/rxjs/**', // firebase needs rxjs to avoid build errors
@@ -346,7 +346,7 @@ commonjs({
 En el final del archivo **scripts/rollup.config.js** deberia estar como:
 
 
-{% highlight json  %}
+{% highlight javascript  %}
 var nodeResolve = require('rollup-plugin-node-resolve');
 var commonjs = require('rollup-plugin-commonjs');
 var globals = require('rollup-plugin-node-globals');
@@ -466,7 +466,7 @@ Al final el archivo deberia verse algo asi:
 Ahora puedes inicializar firebase yendo a **src/app/app.component.js** e importando todo lo que tu necesitas de Firebase:
 
 
-{% highlight ts linenos %}
+{% highlight ts  %}
 import firebase from 'firebase'; // Big change from '* as firebase'.
 
 // Get your info from your firebase console.
@@ -481,7 +481,7 @@ const firebaseconfig = {
 Y entonces inicializalo dentro del constructor:
 
 
-{% highlight ts linenos %}
+{% highlight ts  %}
 @Component({
   template: `<ion-nav [root]="rootPage"></ion-nav>`
 })
@@ -501,7 +501,7 @@ export class MyApp {
 En el final del archivo deberia verse algo asi.
 
 
-{% highlight ts linenos %}
+{% highlight ts  %}
 import { Component } from '@angular/core';
 import { Platform } from 'ionic-angular';
 import { StatusBar } from 'ionic-native';
@@ -536,7 +536,7 @@ export class MyApp {
 Esto dara acceso a **firebase** en tu app, todo loq ue debes hacer es:
 
 
-{% highlight javascript linenos %}
+{% highlight javascript %}
 import firebase from 'firebase'; // Instead of '* as firebase'.
 {% endhighlight %}
 
