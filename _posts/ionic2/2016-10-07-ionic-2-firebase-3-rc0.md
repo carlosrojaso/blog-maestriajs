@@ -26,9 +26,9 @@ en mis apps.
 La segunda cosa que debes hacer es estar seguro que tienes Ionic, Cordova y Typescript instalado, podras hacer esto abriendo tu terminal
 y escribiendo.
 
-<pre> 
+```
 $ npm install -g ionic cordova typescript
-</pre>
+```
 
 Dependiendo de tu sistema operativo (Mayormente si corres Linux o Mac) debes tener que agregar **sudo** antes del comando
 **npm install**
@@ -46,11 +46,11 @@ Para esto solo necesitaras (Mientras aún estas en la terminal) navegar al folde
 
 Para mi es mi directorio de desarrollo en mi <pre>~/</pre>:
 
-<pre>
+```
 $ cd Development
 $ ionic start debtTracker blank --v2
 $ cd debtTracker
-</pre>
+```
 
 Lo que hace estas lineas es lo siguiente:
 
@@ -127,9 +127,9 @@ Especialmente Firebase y AngularFire 2 (hey, eso es de lo que se trata el post :
 
 Abre tu terminal ( Deberias ya estar en el directorio de tu proyecto ) e instala los paquetes en este ordén:
 
-<code>
+```
 npm install firebase angularfire2 --save
-</code>
+```
 
 **Nota en RC0:** Usualmente el ecosistema de Types es fuerte y todo lo que tu necesitas es hacer <pre>npm install @types/package_name</pre>
 para tener este trabajando, pero Firebase no ha actualizado su definición de type para 3.x y ellos aún estan utilizando 2.4.x esa es para consolas antiguas.
