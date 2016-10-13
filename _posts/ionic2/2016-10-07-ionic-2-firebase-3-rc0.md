@@ -75,7 +75,7 @@ que tu proyecto tiene los paquetes/modulos **npm** necesarios.
 Eso significa, el comando **start** va a instalar todos los requerimientos de **ionic-angular** , **angularjs** y más. Asi es
 como el archivo **package.json** deberia ser:
 
-````json
+{% highlight json  %}
 
 {
   "name": "ionic-hello-world",
@@ -113,7 +113,8 @@ como el archivo **package.json** deberia ser:
   "cordovaPlatforms": [],
 }
 
-```` 
+
+{% endhighlight %} 
 
 Dependiendo cuando lo leas, estos paquetes pueden variar (Especialmente los numeros de versión) entonces mantén eso en mente,
 también puedes escribirme a j@javebratt.com si tienes alguna pregunta/problema/acontecimiento con esto.
@@ -156,7 +157,8 @@ Dentro de la carpeta voy a necesitar crear un archivo llamado **rollup.config.js
 
 Ahora debes ir a **node_modules/@ionic/app-scripts/config/rollup.config.js** este deberia verse un poco como esto:
 
-````json
+
+{% highlight json  %}
 
 var nodeResolve = require('rollup-plugin-node-resolve');
 var commonjs = require('rollup-plugin-commonjs');
@@ -221,7 +223,7 @@ if (process.env.IONIC_ENV == 'prod') {
 
 module.exports = rollupConfig;
 
-````
+{% endhighlight %}
 
 Ahora tu debes copiar el contenido entero de ese archivo y pegar este en el nuevo archivo que tu acabas de crear en  **scripts/rollup.config.js**
 
@@ -234,13 +236,14 @@ a el nuevo **rollup.config.js.**
 
 De esta manera, abre el **package.json** y agrega:
 
-````json
+
+{% highlight json  %}
 
 "config": {
   "ionic_rollup": "./scripts/rollup.config.js"
 }
 
-````
+{% endhighlight %}
 
 Esto hara que tu nueva app use el nuevo **scripts/rollup.config.js** para Rollup.
 
@@ -249,7 +252,8 @@ se muestra en la terminal. Este puede ser cualquier cosa que tu quieras, Nosotro
 
 Asi que este se vera de esta forma.
 
-````json
+
+{% highlight json  %}
 console.log("I'm the Hulk");
 var nodeResolve = require('rollup-plugin-node-resolve');
 var commonjs = require('rollup-plugin-commonjs');
@@ -313,7 +317,7 @@ if (process.env.IONIC_ENV == 'prod') {
 
 
 module.exports = rollupConfig;
-````
+{% endhighlight %}
 
 Entonces, abre tu terminal y ejecuta <code>$ npm run build</code>
 
@@ -326,7 +330,8 @@ errores de **eval** cuando realices tu build.
 
 Ahora debemos decir a nuestro nuevo archivo de configuración que use nuestros modulos commonjs (En este caso solo Firebase)
 
-````javascript
+
+{% highlight json  %}
 commonjs({
   include: [
     'node_modules/rxjs/**', // firebase needs rxjs to avoid build errors
@@ -336,11 +341,12 @@ commonjs({
     'node_modules/firebase/firebase.js': ['initializeApp', 'auth', 'database'],
   }
 }),
-````
+{% endhighlight %}
 
 En el final del archivo **scripts/rollup.config.js** deberia estar como:
 
-````javascript
+
+{% highlight json  %}
 var nodeResolve = require('rollup-plugin-node-resolve');
 var commonjs = require('rollup-plugin-commonjs');
 var globals = require('rollup-plugin-node-globals');
@@ -414,20 +420,22 @@ if (process.env.IONIC_ENV == 'prod') {
 
 
 module.exports = rollupConfig;
-````
+{% endhighlight %}
 
 Ahora necesitamos hacer una ultima cosa para tener a Firebase trabajando, necesitamos agregarlas a nuestro archivo <code>tsconfig.js</code>, asi que 
 vamos y agreguemos una opción a  **Types** que sera **firebase**
 
-````javascript
+
+{% highlight json  %}
 "types": [
     "firebase"
 ],
-````
+{% endhighlight %}
 
 Al final el archivo deberia verse algo asi:
 
-````javascript
+
+{% highlight json  %}
 {
   "compilerOptions": {
     "allowSyntheticDefaultImports": true,
@@ -453,11 +461,12 @@ Al final el archivo deberia verse algo asi:
     "rewriteTsconfig": false
   }
 }
-````
+{% endhighlight %}
 
 Ahora puedes inicializar firebase yendo a **src/app/app.component.js** e importando todo lo que tu necesitas de Firebase:
 
-````javascript
+
+{% highlight ts linenos %}
 import firebase from 'firebase'; // Big change from '* as firebase'.
 
 // Get your info from your firebase console.
@@ -467,11 +476,12 @@ const firebaseconfig = {
   databaseURL: '',
   storageBucket: ''
 };
-````
+{% endhighlight %}
 
 Y entonces inicializalo dentro del constructor:
 
-````javascript
+
+{% highlight ts linenos %}
 @Component({
   template: `<ion-nav [root]="rootPage"></ion-nav>`
 })
@@ -486,11 +496,12 @@ export class MyApp {
     });
   }
 }
-````
+{% endhighlight %}
 
 En el final del archivo deberia verse algo asi.
 
-````javascript
+
+{% highlight ts linenos %}
 import { Component } from '@angular/core';
 import { Platform } from 'ionic-angular';
 import { StatusBar } from 'ionic-native';
@@ -520,13 +531,14 @@ export class MyApp {
     });
   }
 }
-````
+{% endhighlight %}
 
 Esto dara acceso a **firebase** en tu app, todo loq ue debes hacer es:
 
-````javascript
+
+{% highlight javascript linenos %}
 import firebase from 'firebase'; // Instead of '* as firebase'.
-````
+{% endhighlight %}
 
 Puedes encontrar tus datos de  **firebaseConfig** en la [Consola](https://console.firebase.google.com/)
 
