@@ -79,6 +79,16 @@ authors:
         icon: "fa-twitter"
       - link: "https://github.com/unjavascripter"
         icon: "fa-github"
+  javebratt:
+    name: "Jorge Vergara"
+    url: "/javebratt"
+    avatar: "https://s9.postimg.org/fhmw4iggf/Iu_N5_UI0o.jpg"
+    bio: "Ayudo a emprendedores que están atacando proyectos de impacto social a planear y construir la primera versión de su aplicación móvil para que puedan salir al mercado rápido. Ayudo a desarrolladores de Ionic2 a usar esos conocimientos para construir aplicaciones basadas en Firebase."
+    social_links:
+      - link: "https://twitter.com/javebratt"
+        icon: "fa-twitter"
+      - link: "https://facebook.com/javebrattDev"
+        icon: "fa-facebook"
 
 social_links: 
   - url: "https://twitter.com/ion_book"
