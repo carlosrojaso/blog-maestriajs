@@ -59,16 +59,16 @@ authors:
         icon: "fa-linkedin"
       - link: "https://www.facebook.com/daniel.l.sanchez.501"
         icon: "fa-facebook"
-  the_luchillo:
-    name: "Carlos Esteban Lopez"
-    url: "/the_luchillo"
-    avatar: "http://i.cubeupload.com/pHepUB.jpg"
-    bio: "Soy Desarrollador de aplicaciones digitales, auto-didacta, amante de la tecnologia y el arte digital, estudiante de Ing. de Sistemas, 6 años de estudio auto-didacta y desarrollo profesionalmente desde 2014, me gusta aportar a la comunidad con cursos de desarrollo, proyectos open source y en foros de desarrollo."
-    social_links:
-      - link: "https://twitter.com/the_luchillo"
-        icon: "fa-twitter"
-      - link: "https://github.com/Luchillo"
-        icon: "fa-github"
+    #the_luchillo:
+    # name: "Carlos Esteban Lopez"
+    # url: "/the_luchillo"
+    # avatar: "http://i.cubeupload.com/pHepUB.jpg"
+    # bio: "Soy Desarrollador de aplicaciones digitales, auto-didacta, amante de la tecnologia y el arte digital, estudiante de Ing. de Sistemas, 6 años de estudio auto-didacta y desarrollo profesionalmente desde 2014, me gusta aportar a la comunidad con cursos de desarrollo, proyectos open source y en foros de desarrollo."
+    # social_links:
+    #   - link: "https://twitter.com/the_luchillo"
+    #     icon: "fa-twitter"
+    #   - link: "https://github.com/Luchillo"
+    #     icon: "fa-github"
   unjavascripter:
     name: "Diego Coy"
     url: "/unjavascripter"
