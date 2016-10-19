@@ -6,7 +6,7 @@ tags: ionic2 google
 categories: demos
 comments: true
 repo: "https://github.com/mayrarodriguez1709/ionic2-google-maps-markers"
-author: nicobytes
+author: mayrititis
 cover: "http://i.cubeupload.com/y2EKrQ.jpg"
 remember: true
 draft: true

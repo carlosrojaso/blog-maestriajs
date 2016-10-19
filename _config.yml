@@ -89,6 +89,19 @@ authors:
         icon: "fa-twitter"
       - link: "https://facebook.com/javebrattDev"
         icon: "fa-facebook"
+  mayrititis:
+    name: "Mayra Rodríguez"
+    url: "/mayrititis"
+    avatar: "https://a248.e.akamai.net/secure.meetupstatic.com/photos/event/4/f/f/8/600_454640472.jpeg"
+    website: "http://mayrarodriguez.me/"
+    bio: "Soy Ingeniera en Computación egresada de la Universidad Fermín Toro, Cabudare Edo. Lara. Me dedico al Desarrollo Web Full Stack y Móvil de manera Freelance. Me siento aficionada por el UX y el UI, así como también el desarrollo de aplicaciones innovadoras."
+    social_links:
+      - link: "https://twitter.com/mayrititis"
+        icon: "fa-twitter"
+      - link: "https://www.linkedin.com/in/mayrarodriguez1709"
+        icon: "fa-linkedin"
+      - link: "https://www.facebook.com/mayrititis"
+        icon: "fa-facebook"
 
 social_links: 
   - url: "https://twitter.com/ion_book"
