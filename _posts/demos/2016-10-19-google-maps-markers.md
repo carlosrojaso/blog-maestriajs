@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Google Maps con Markers"
-date: 2016-10-18
+date: 2016-10-19
 tags: ionic2 google
 categories: demos
 comments: true
@@ -9,7 +9,6 @@ repo: "https://github.com/mayrarodriguez1709/ionic2-google-maps-markers"
 author: mayrititis
 cover: "http://i.cubeupload.com/y2EKrQ.jpg"
 remember: true
-draft: true
 ---
 
 > Ya hemos visto en los posts anteriores sobre cómo integrar Google Maps con nuestra aplicación en Ionic 2, bien sea de forma [nativa](http://www.ion-book.com/ionic2/google-maps-native){:target="_blank"} o con [javascript](http://www.ion-book.com/demos/google-maps-js-and-ionic-2){:target="_blank"}. En este post veremos un poco más sobre la integración de **Google Maps con Ionic 2** y es sobre el tema de los **Markers**.
@@ -180,7 +179,7 @@ setMarker(){
 
 <div class="row">
   <div class="col-xs-12 col-sm-6 col-sm-offset-3">
-    <img class="img-responsive" src="http://i.cubeupload.com/HZbINA.jpg" alt="app 2">
+    <img class="img-responsive" src="http://i.cubeupload.com/qmD4AO.png" alt="app">
   </div>
 </div>
 
@@ -213,7 +212,7 @@ ionic run android ó ionic run ios
 
 <div class="row">
   <div class="col-xs-12 col-sm-6 col-sm-offset-3">
-    <img class="img-responsive" src="http://i.cubeupload.com/HZbINA.jpg" alt="app 2">
+    <img class="img-responsive" src="http://i.cubeupload.com/3jjfy6.png" alt="app 2">
   </div>
 </div>
 
