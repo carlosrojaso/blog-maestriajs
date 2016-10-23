@@ -119,3 +119,7 @@ publications:
     title: "Construye un App de Fotos"
     cover: "http://i.cubeupload.com/xvlIA6.png"
     summaty: "Deseas realizar un App de Fotos con Ionic 1, este es tu punto de partida."
+  - url: "http://www.paywithapost.de/pay?id=356c87df-fcf3-4b7c-baa8-dec66570445d"
+    title: "Construye un App de Tareas"
+    cover: "https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/ebooks%2FEbook.png?alt=media"
+    summaty: "Realiza un App de Tareas con Ionic 1, manejando tabs"
