@@ -7,7 +7,6 @@ categories: tips
 comments: true
 author: nicobytes
 cover: "https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2Ftdd%2Ftdd.jpg?alt=media"
-draft: true
 ---
 
 > Crear grandes productos que agreguen valor y mantener un producto de calidad para los clientes es un gran reto, las **pruebas unitarias** aseguran que esto sea más fácil y una de las mejores estrategias es aplicando Desarrollo guiado por pruebas, más conocido por sus siglas en inglés **TDD (Test Driven Development)**
