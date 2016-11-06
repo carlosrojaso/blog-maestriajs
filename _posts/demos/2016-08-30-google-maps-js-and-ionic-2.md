@@ -34,69 +34,62 @@ cd demo105
 
 Como iniciamos nuestro proyecto con el template **blank** tendremos una estructura básica del proyecto, la carpeta en la que vamos a trabajar sera *app*.
 
-# Paso 2: Agregar Typings
+# Paso 2: Agregar Type
 
 Este proceso se hace para que dentro de nuestro proyecto [Typescript](http://www.ion-book.com/ionic2/typescript){:target="_blank"} reconozca las variables del SDK de google y las podamos usar sin problema.
 
-
-Si no tienes **Typings CLI** instalado en tu computadora debes instalarlo ejecutando este comando en la terminal:
-
-Install Typings CLI utility:
-
 ```
-npm install typings --global
-```
-
-Si ya lo tienes solo tienes que ubicarte dentro de proyecto y ejecutar el siguiente comando:
-
-```
-typings install github:DefinitelyTyped/DefinitelyTyped/googlemaps/google.maps.d.ts --global --save
+npm install --save @types/googlemaps
 ```
 
 # Paso 3: Incluir el SDk
 
-Ahora iremos al archivo `index.html` que se encuentra la carpeta `www` y luego de llamar a `app.bundle.js` incluimos el SDK, ademas tienes que agregar el **API KEY** que te ofrece google para usar el SDK, lo puedes generar desde está [URL](https://developers.google.com/maps/documentation/javascript/get-api-key?hl=es){:target="_blank"}.
+Ahora iremos al archivo `index.html` que se encuentra la carpeta `src` y luego de llamar a `build/polyfills.js` incluimos el SDK, ademas tienes que agregar el **API KEY** que te ofrece google para usar el SDK, lo puedes generar desde está [URL](https://developers.google.com/maps/documentation/javascript/get-api-key?hl=es){:target="_blank"}.
 
 {% highlight javascript linenos %}
-<!--cordova.js required for cordova apps -->
-<script src="cordova.js"></script>
-<!--Polyfill needed for platforms without Promise and Collection support -->
-<script src="build/js/es6-shim.min.js"></script>
-<!--Zone.js and Reflect-metadata  -->
-<script src="build/js/Reflect.js"></script>
-<script src="build/js/zone.js"></script>
-<!--The bundle which is built from the app's source code -->
-<script src="build/js/app.bundle.js"></script>
+<body>
 
-<script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY"></script>
+  <!-- Ionic's root component and where the app will load -->
+  <ion-app></ion-app>
+
+  <!-- The polyfills js is generated during the build process -->
+  <script src="build/polyfills.js"></script>
+
+  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY"></script>
+  <!-- The bundle js is generated during the build process -->
+  <script src="build/main.js"></script>
+
+</body>
 {% endhighlight %}
 
 # Paso 4: Crear mapa.
 
-Ahora en el archivo `home.ts` crearemos la variable `map` (*línea 9*) donde guardaremos la instancia del mapa creado y con el uso de el metodo `ionViewLoaded` detectaremos cuando la vista ya este completamente cargada y usamos el SDK de google para crear el mapa.
+Ahora en el archivo `src/pages/home/home.ts` crearemos la variable `map` (*línea 10*) donde guardaremos la instancia del mapa creado y con el uso de el metodo `ionViewDidLoad` detectaremos cuando la vista ya este completamente cargada y usamos el SDK de google para crear el mapa.
 
 {% highlight javascript linenos %}
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 
 @Component({
-  templateUrl: 'build/pages/home/home.html'
+  selector: 'page-home',
+  templateUrl: 'home.html'
 })
 export class HomePage {
 
   map: any;
 
-  constructor(public navCtrl: NavController) {
-  }
+  constructor(
+    public navCtrl: NavController
+  ) {}
 
-  ionViewLoaded(){
+  ionViewDidLoad(){
     let mapEle = document.getElementById('map');
-    let map = new google.maps.Map(mapEle, {
+    this.map = new google.maps.Map(mapEle, {
       center: {lat: 4.5981, lng: -74.0758},
-      zoom: 16
+      zoom: 12
     });
 
-    google.maps.event.addListenerOnce(map, 'idle', () => {
+    google.maps.event.addListenerOnce(this.map, 'idle', () => {
       mapEle.classList.add('show-map');
       google.maps.event.trigger(mapEle, 'resize');
     });
@@ -111,8 +104,10 @@ Ahora en el archivo `home.html` vamos a declarar un div con id **map** (*línea 
 
 {% highlight html linenos %}
 <ion-header>
-  <ion-navbar>
-    <ion-title>Demo 105</ion-title>
+  <ion-navbar color="primary">
+    <ion-title>
+      Demo 105
+    </ion-title>
   </ion-navbar>
 </ion-header>
 
@@ -124,7 +119,7 @@ Ahora en el archivo `home.html` vamos a declarar un div con id **map** (*línea 
 Y finalmente podemos añadir estilos para hacer que el mapa se muestre al 100% de alto y ancho de la pantalla, estos estilos estaran en el archivo `home.scss`:
 
 {% highlight scss linenos %}
-.home-page{
+page-home {
   ion-content{
     background: rgb(229, 227, 223);
     #map {
@@ -138,6 +133,7 @@ Y finalmente podemos añadir estilos para hacer que el mapa se muestre al 100% d
     }
   }
 }
+
 {% endhighlight %}
 
 # Resultado:
