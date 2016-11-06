@@ -5,15 +5,20 @@ date: 2016-10-04
 tags: ionic2 translate
 categories: demos
 comments: true
-repo: "https://ion-book.github.io/demo106/"
+laucher: "/laucher/demo106"
 author: nicobytes
 cover: "https://s17.postimg.org/tneheudov/translate.jpg"
 remember: true
 ---
 
-> Varias aplicaciones tienen usos en diferentes países, por lo cual las aplicaciones deben adaptar sus contenidos a varios idiomas y con [**ng2-translate**](https://github.com/ocombe/ng2-translate){:target="_blank"} podremos hacer esto con ionic. Este demo esta con la versión de [**Ionic RC0**](http://www.ion-book.com/news/ionic-2-release-candidate){:target="_blank"}
+> Varias aplicaciones tienen usos en diferentes países, por lo cual las aplicaciones deben adaptar sus contenidos a varios idiomas y con [**ng2-translate**](https://github.com/ocombe/ng2-translate){:target="_blank"} podremos hacer esto con ionic.
 
 <img class="img-responsive" src="https://s17.postimg.org/tneheudov/translate.jpg" alt="firebase-database-and-ionic-2">
+
+# Actualización (06/11/2016)
+<hr/>
+Hemos actualizado este demo con el último release de [Ionic 2 RC 2](http://www.ion-book.com/news/ionic-2-rc-2){:target="_blank"}, si aun estas en alguna de las versiones Beta puedes seguir estos pasos [Steps to Upgrade](https://github.com/driftyco/ionic/blob/master/CHANGELOG.md#steps-to-upgrade-to-rc0){:target="_blank"}.
+<hr/>
 
 # Paso 1: Iniciando el proyecto
 
@@ -48,9 +53,13 @@ import { NgModule } from '@angular/core';
 import { IonicApp, IonicModule } from 'ionic-angular';
 import { MyApp } from './app.component';
 import { HttpModule, Http } from '@angular/http';
-import { TranslateModule, TranslateLoader, TranslateStaticLoader } from 'ng2-translate/ng2-translate';
+import { TranslateModule, TranslateLoader, TranslateStaticLoader } from 'ng2-translate';
 
 import { HomePage } from '../pages/home/home';
+
+export function createTranslateLoader(http: Http) {
+    return new TranslateStaticLoader(http, './assets/i18n', '.json');
+}
 
 @NgModule({
   declarations: [
@@ -60,10 +69,10 @@ import { HomePage } from '../pages/home/home';
   imports: [
     BrowserModule,
     HttpModule,
-    TranslateModule.forRoot({ 
-      provide: TranslateLoader,
-      useFactory: (http: Http) => new TranslateStaticLoader(http, '/assets/i18n', '.json'),
-      deps: [Http]
+    TranslateModule.forRoot({
+        provide: TranslateLoader,
+        useFactory: (createTranslateLoader),
+        deps: [Http] 
     }),
     IonicModule.forRoot(MyApp)
   ],
@@ -78,19 +87,16 @@ export class AppModule {}
 {% endhighlight %}
 
 - En la *línea 6* importamos las dependencias que necesitamos de **ng2-translate**
-- En la *línea 15* definimos las importaciones necesarias.
-
-**Nota:** En la *línea 20* enviamos la dirección `assets/i18n` esta carpeta debe estar ubicada  en `src`.
+- Desde la *línea 10 a la línea 12* creamos un función que llamaras a los assets necesarios `src/assets/i18n`.
+- Desde la *línea 22 a la línea 26* incluimos el modulo **TranslateModule**.
 
 # Paso 4: Definir idioma por defecto
 
 Ahora debemos definir en `app.component.ts`, el idioma con el cual la aplicación inicia por defecto. 
 
 {% highlight ts linenos %}
-import { Component } from '@angular/core';
-import { Platform } from 'ionic-angular';
 import { StatusBar } from 'ionic-native';
-import { TranslateService } from 'ng2-translate/ng2-translate'
+import { TranslateService } from 'ng2-translate'
 
 import { HomePage } from '../pages/home/home';
 
@@ -117,9 +123,9 @@ export class MyApp {
 }
 {% endhighlight %}
 
-- En la *línea 4* importamos a `TranslateService`
-- En la *línea 17* inyectamos el servcio a nuestra clase.
-- En la *línea 21 y 22* definimos el idioma que seleccionaremos por defecto.
+- En la *línea 2* importamos a `TranslateService`
+- En la *línea 15* inyectamos el servcio a nuestra clase.
+- En la *línea 19 y 20* definimos el idioma que seleccionaremos por defecto.
 
 # Paso 5: Crear archivos de idiomas
 
@@ -205,7 +211,6 @@ export class HomePage {
     this.translateService.use(lang);
   }
 }
-
 {% endhighlight %}
 
 Y nuestro template `home.html`: 
@@ -214,7 +219,7 @@ Y nuestro template `home.html`:
 {% raw %}
 <ion-header>
   <ion-navbar color="primary">
-    <ion-title>Home</ion-title>
+    <ion-title>Demo 106</ion-title>
   </ion-navbar>
 </ion-header>
 
