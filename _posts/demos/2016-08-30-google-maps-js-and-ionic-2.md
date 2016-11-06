@@ -51,7 +51,7 @@ npm install --save @types/googlemaps
 
 Ahora iremos al archivo `index.html` que se encuentra la carpeta `src` y luego de llamar a `build/polyfills.js` incluimos el SDK, ademas tienes que agregar el **API KEY** que te ofrece google para usar el SDK, lo puedes generar desde está [URL](https://developers.google.com/maps/documentation/javascript/get-api-key?hl=es){:target="_blank"}.
 
-{% highlight javascript linenos %}
+{% highlight html linenos %}
 <body>
 
   <!-- Ionic's root component and where the app will load -->
