@@ -15,6 +15,12 @@ remember: true
 
 <img class="img-responsive" src="http://i.cubeupload.com/gxxOpn.png" alt="firebase-database-and-ionic-2">
 
+# Actualización (06/11/2016)
+<hr/>
+Hemos actualizado este demo con el último release de [Ionic 2 RC 2](http://www.ion-book.com/news/ionic-2-rc-2){:target="_blank"}, si aun estas en alguna de las versiones Beta puedes seguir estos pasos [Steps to Upgrade](https://github.com/driftyco/ionic/blob/master/CHANGELOG.md#steps-to-upgrade-to-rc0){:target="_blank"}.
+
+<hr/>
+
 Hay dos maneras de implementar google maps en nuestras aplicaciones, una es manejando el **SDK de JS** y la otra manera es integrar el **SDK nativo** al proyecto, en este artículo veremos cómo hacerlo con el SDK de js y en futuros artículos hablaremos de cómo implementar el SDK nativo.
 
 # Paso 1: Iniciando el proyecto
