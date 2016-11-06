@@ -70,7 +70,7 @@ export class MyFormPage {
 
 {% endhighlight %}
 
-Presta atención a de la *linea 23 a la 35*, aqui es donde ocurre la magia, haciendo uso de nuestra variable `this.formBuilder` podremos crear un controlador para cada uno de nuestros campos en el formulario, aquí podremos enviar validaciones tan sencillas o complejas como queramos. 
+Presta atención a de la *linea 24 a la 36*, aqui es donde ocurre la magia, haciendo uso de nuestra variable `this.formBuilder` podremos crear un controlador para cada uno de nuestros campos en el formulario, aquí podremos enviar validaciones tan sencillas o complejas como queramos. 
 
 El **Form** es algo largo pero sencillo:
 
