@@ -5,7 +5,7 @@ date: 2016-08-30
 tags: ionic2 maps
 categories: demos
 comments: true
-repo: "https://ion-book.github.io/demo105/"
+laucher: "/laucher/demo105"
 author: nicobytes
 cover: "http://i.cubeupload.com/gxxOpn.png"
 remember: true
