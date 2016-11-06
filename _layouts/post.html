@@ -20,6 +20,13 @@ layout: default
     </a>
   </div>
   {% endif %}
+  {% if page.laucher %}
+  <div class="col-xs-12 col-md-2 button-demo">
+    <a href="{{ page.laucher }}" class="btn btn-primary btn-lg btn-block link-repo" target="_blank">
+      <i class="fa fa-github" aria-hidden="true"></i> Ver demo
+    </a>
+  </div>
+  {% endif %}
 </div>
 <div class="container article-detail">
   <div class="row">
@@ -29,6 +36,13 @@ layout: default
         {% if page.repo %}
         <p>
           <a href="{{ page.repo }}" class="btn btn-primary btn-lg link-repo" target="_blank">
+            <i class="fa fa-github" aria-hidden="true"></i> Ver demo
+          </a>
+        </p>
+        {% endif %}
+        {% if page.laucher %}
+        <p>
+          <a href="{{ page.laucher }}" class="btn btn-primary btn-lg link-repo" target="_blank">
             <i class="fa fa-github" aria-hidden="true"></i> Ver demo
           </a>
         </p>
