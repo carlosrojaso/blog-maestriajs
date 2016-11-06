@@ -27,30 +27,31 @@ Como **ionic2** usa **Angular2**, podremos usar esta clase con los componentes d
 
 Examinemos el siguiente código:
 
-{% highlight javascript linenos %}
+{% highlight ts linenos %}
 import {Component} from '@angular/core';
 import {NavController} from 'ionic-angular';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 
 @Component({
-  templateUrl: 'build/pages/my-form/my-form.html',
+  selector: 'page-form',
+  templateUrl: 'my-form.html',
 })
 export class MyFormPage {
 
   myForm: FormGroup;
   
   constructor(
-    private nav: NavController,
-    private formBuilder: FormBuilder
+    public navCtrl: NavController,
+    public formBuilder: FormBuilder
   ) {
-    this.myForm = this._createMyForm();
+    this.myForm = this.createMyForm();
   }
   
   saveData(){
     console.log(this.myForm.value);
   }
   
-  private _createMyForm(){
+  private createMyForm(){
     return this.formBuilder.group({
       name: ['', Validators.required],
       lastName: ['', Validators.required],
@@ -66,6 +67,7 @@ export class MyFormPage {
 }
 
 
+
 {% endhighlight %}
 
 Presta atención a de la *linea 23 a la 35*, aqui es donde ocurre la magia, haciendo uso de nuestra variable `this.formBuilder` podremos crear un controlador para cada uno de nuestros campos en el formulario, aquí podremos enviar validaciones tan sencillas o complejas como queramos. 
@@ -76,54 +78,54 @@ El **Form** es algo largo pero sencillo:
 
 <form [formGroup]="myForm" (ngSubmit)="saveData()">
     <ion-list>
-    <ion-item>
-      <ion-icon name="person" item-left></ion-icon>
-      <ion-label stacked>Nombres:</ion-label>
-      <ion-input formControlName="name" type="text" placeholder="Nombre"></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-icon name="person" item-left></ion-icon>
-      <ion-label stacked>Apellidos:</ion-label>
-      <ion-input formControlName="lastName" type="text" placeholder="Apellidos"></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-icon name="mail" item-left></ion-icon>
-      <ion-label stacked>Correo electronico:</ion-label>
-      <ion-input formControlName="email" type="email" placeholder="Email"></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-icon name="calendar" item-left></ion-icon>
-      <ion-label stacked>Fecha de nacimiento:</ion-label>
-      <ion-datetime formControlName="dateBirth" displayFormat="MM-DD-YYYY" placeholder="MM-DD-YYY"></ion-datetime>
-    </ion-item>
-    <div formGroupName="passwordRetry">
       <ion-item>
-        <ion-icon name="eye" item-left></ion-icon>
-        <ion-label stacked>Contraseña:</ion-label>
-        <ion-input formControlName="password" type="password" placeholder="Contraseña"></ion-input>
+        <ion-icon name="person" item-left></ion-icon>
+        <ion-label stacked>Nombres:</ion-label>
+        <ion-input formControlName="name" type="text" placeholder="Nombre"></ion-input>
       </ion-item>
       <ion-item>
-        <ion-icon name="eye" item-left></ion-icon>
-        <ion-label stacked>Confirmar contraseña:</ion-label>
-        <ion-input formControlName="passwordConfirmation" type="password" placeholder="Confirmar contraseña"></ion-input>
+        <ion-icon name="person" item-left></ion-icon>
+        <ion-label stacked>Apellidos:</ion-label>
+        <ion-input formControlName="lastName" type="text" placeholder="Apellidos"></ion-input>
       </ion-item>
+      <ion-item>
+        <ion-icon name="mail" item-left></ion-icon>
+        <ion-label stacked>Correo electronico:</ion-label>
+        <ion-input formControlName="email" type="email" placeholder="Email"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="calendar" item-left></ion-icon>
+        <ion-label stacked>Fecha de nacimiento:</ion-label>
+        <ion-datetime formControlName="dateBirth" displayFormat="MM-DD-YYYY" placeholder="MM-DD-YYY"></ion-datetime>
+      </ion-item>
+      <div formGroupName="passwordRetry">
+        <ion-item>
+          <ion-icon name="eye" item-left></ion-icon>
+          <ion-label stacked>Contraseña:</ion-label>
+          <ion-input formControlName="password" type="password" placeholder="Contraseña"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="eye" item-left></ion-icon>
+          <ion-label stacked>Confirmar contraseña:</ion-label>
+          <ion-input formControlName="passwordConfirmation" type="password" placeholder="Confirmar contraseña"></ion-input>
+        </ion-item>
+      </div>
+      <ion-row radio-group formControlName="gender">
+        <ion-item>
+          <ion-icon name="woman" item-left></ion-icon>
+          <ion-label>Mujer</ion-label>
+          <ion-radio value="2"></ion-radio>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="man" item-left></ion-icon>
+          <ion-label>Hombre</ion-label>
+          <ion-radio value="1"></ion-radio>
+        </ion-item>
+      </ion-row>
+    </ion-list>
+    <div padding>
+      <button ion-button block type="submit" [disabled]="!myForm.valid">Guardar</button>
     </div>
-    <ion-row radio-group formControlName="gender">
-      <ion-item>
-        <ion-icon name="woman" item-left></ion-icon>
-        <ion-label>Mujer</ion-label>
-        <ion-radio value="2"></ion-radio>
-      </ion-item>
-      <ion-item>
-        <ion-icon name="man" item-left></ion-icon>
-        <ion-label>Hombre</ion-label>
-        <ion-radio value="1"></ion-radio>
-      </ion-item>
-    </ion-row>
-  </ion-list>
-  <div padding>
-    <button primary block type="submit" [disabled]="!myForm.valid">Guardar</button>
-  </div>
-</form> 
+  </form>
 
 {% endhighlight %}
