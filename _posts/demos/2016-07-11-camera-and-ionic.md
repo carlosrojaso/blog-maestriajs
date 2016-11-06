@@ -15,9 +15,9 @@ remember: true
 
 <img class="img-responsive" src="http://i.imgur.com/9Uq2Naw.jpg" alt="camera-and-ionic">
 
-# Actualización (17/08/2016)
+# Actualización (06/11/2016)
 <hr/>
-Hemos actualizado este demo con el último release de [Ionic 2 Beta 11](http://www.ion-book.com/news/ionic-2-beta-11){:target="_blank"}, que tiene la más reciente actulización con [ionic native](http://www.ion-book.com/news/ionic-native-news){:target="_blank"}. Aquí está cómo se puede hacer la actualización [Steps to Upgrade](https://github.com/driftyco/ionic/blob/master/CHANGELOG.md#steps-to-upgrade-to-beta-11){:target="_blank"}.
+Hemos actualizado este demo con el último release de [Ionic 2 RC 2](http://www.ion-book.com/news/ionic-2-rc-2){:target="_blank"}, si aun estas en alguna de las versiones Beta puedes seguir estos pasos [Steps to Upgrade](https://github.com/driftyco/ionic/blob/master/CHANGELOG.md#steps-to-upgrade-to-rc0){:target="_blank"}.
 
 <hr/>
 
@@ -36,9 +36,9 @@ Ahora entramos a la carpeta del proyecto desde nuestra terminal con:
 cd demo102
 ```
 
-Como iniciamos nuestro proyecto con el template **blank** tendremos una estructura básica del proyecto, la carpeta en la que vamos a trabajar sera *app* y lucirá de esta manera:
+Como iniciamos nuestro proyecto con el template **blank** tendremos una estructura básica del proyecto, la carpeta en la que vamos a trabajar sera `src`:
 
-<img class="img-responsive" src="http://i.imgur.com/rGu7pp9.png" alt="folders">
+<img class="img-responsive center-block" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/demos%2Fdemo102%2FScreenshot%20from%202016-11-06%2012-46-16.png?alt=media" alt="folders">
 
 Agregamos la plataforma para la que vamos a desarrollar:
 
@@ -69,7 +69,8 @@ import {Component} from '@angular/core';
 import {Camera} from 'ionic-native';
 
 @Component({
-  templateUrl: 'build/pages/home/home.html'
+  selector: 'page-home',
+  templateUrl: 'home.html'
 })
 export class HomePage {
 
@@ -95,15 +96,15 @@ export class HomePage {
 }
 {% endhighlight %}
 
-En la *línea 2* importamos la cámara desde [ionic-native](http://www.ion-book.com/ionic2/ionic-native){:target="_blank"}, luego en la *línea 9* tendremos la variable `image` de tipo string que guardara la imagen, en la *línea 11* dejaremos un constructor vacío, ahora desde la *línea 13 a la línea 27* tendremos la definición de `getPicture` para implementar el uso de cámara.
+En la *línea 2* importamos la cámara desde [ionic-native](http://www.ion-book.com/ionic2/ionic-native){:target="_blank"}, luego en la *línea 10* tendremos la variable `image` de tipo string que guardara la imagen, en la *línea 12* dejaremos un constructor vacío, ahora desde la *línea 14 a la línea 28* tendremos la definición de `getPicture` para implementar el uso de cámara.
 
-En la *línea 14* definimos las opciones al momento de tomar la fotografía, estas opciones las podrás encontrar en la documentación de cordova [aquí](https://github.com/apache/cordova-plugin-camera#cameracameraoptions--object){:target="_blank"}. Luego con el uso de `Camera.getPicture` lanzamos la cámara del dispositivo, si todo salió bien y toma la fotografía, ejecutará la promesa y en la *línea 21* la fotografía tomada se la asignamos a nuestra variable `image`, la imagen nos la retorna en `Base64` por esto debemos indicar `data:image/jpeg;base64,` y concatenarlo con la `imageData` y si algo sale mal se mostrará un error en consola haciendo uso de `catch`.
+En la *línea 15* definimos las opciones al momento de tomar la fotografía, estas opciones las podrás encontrar en la documentación de cordova [aquí](https://github.com/apache/cordova-plugin-camera#cameracameraoptions--object){:target="_blank"}. Luego con el uso de `Camera.getPicture` lanzamos la cámara del dispositivo, si todo salió bien y toma la fotografía, ejecutará la promesa y en la *línea 22* la fotografía tomada se la asignamos a nuestra variable `image`, la imagen nos la retorna en `Base64` por esto debemos indicar `data:image/jpeg;base64,` y concatenarlo con la `imageData` y si algo sale mal se mostrará un error en consola haciendo uso de `catch`.
 
 Veamos ahora nuestro template `home.html`:
 
 {% highlight html linenos %}
 <ion-header>
-  <ion-navbar>
+  <ion-navbar color="primary">
     <ion-title>
       Demo 102
     </ion-title>
@@ -111,7 +112,7 @@ Veamos ahora nuestro template `home.html`:
 </ion-header>
 
 <ion-content padding>
-  <button block (click)="getPicture()">Toma una foto</button>
+  <button ion-button block (click)="getPicture()">Toma una foto</button>
   <img [src]="image" *ngIf="image" />
 </ion-content>
 
