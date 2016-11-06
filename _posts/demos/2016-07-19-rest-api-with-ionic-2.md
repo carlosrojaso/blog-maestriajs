@@ -5,7 +5,7 @@ date: 2016-07-19
 tags: ionic2 api
 categories: demos
 comments: true
-repo: "https://github.com/ion-book/demo103"
+laucher: "/laucher/demo103"
 author: nicobytes
 cover: "http://i.imgur.com/tDpJiCR.jpg"
 remember: true
@@ -15,9 +15,9 @@ remember: true
 
 <img class="img-responsive" src="http://i.imgur.com/tDpJiCR.jpg" alt="camera-and-ionic">
 
-# Actualización (17/08/2016)
+# Actualización (06/11/2016)
 <hr/>
-Hemos actualizado este demo con el último release de [Ionic 2 Beta 11](http://www.ion-book.com/news/ionic-2-beta-11){:target="_blank"}, que tiene la más reciente actulización. Aquí está cómo se puede hacer la actualización [Steps to Upgrade](https://github.com/driftyco/ionic/blob/master/CHANGELOG.md#steps-to-upgrade-to-beta-11){:target="_blank"}.
+Hemos actualizado este demo con el último release de [Ionic 2 RC 2](http://www.ion-book.com/news/ionic-2-rc-2){:target="_blank"}, si aun estas en alguna de las versiones Beta puedes seguir estos pasos [Steps to Upgrade](https://github.com/driftyco/ionic/blob/master/CHANGELOG.md#steps-to-upgrade-to-rc0){:target="_blank"}.
 
 <hr/>
 
@@ -27,7 +27,7 @@ Lo primero que haremos será iniciar un nuevo proyecto con ionic, si no lo recue
 Vamos a nuestra terminal y ejecutamos:
 
 ```
-ionic start demo103 blank --v2 --ts
+ionic start demo103 blank --v2
 ```
 
 Ahora entramos a la carpeta del proyecto desde nuestra terminal con:
@@ -36,21 +36,21 @@ Ahora entramos a la carpeta del proyecto desde nuestra terminal con:
 cd demo103
 ```
 
-Como iniciamos nuestro proyecto con el template **blank** tendremos una estructura básica del proyecto, la carpeta en la que vamos a trabajar sera *app* y lucirá de esta manera:
+Como iniciamos nuestro proyecto con el template **blank** tendremos una estructura básica del proyecto, la carpeta en la que vamos a trabajar sera `src` y lucirá de esta manera:
 
-<img class="img-responsive" src="http://i.imgur.com/WERV3xa.png" alt="folders">
+<img class="img-responsive center-block" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/demos%2Fdemo102%2FScreenshot%20from%202016-11-06%2012-46-16.png?alt=media" alt="folders">
 
 # Paso 2: Crear provider
 
 Vamos a usar [ionic generator](http://www.ion-book.com/ionic2/ionic-generator){:target="_blank"} para crear nuestro nuevo proveedor de datos
 
 ```
-ionic g provider userService
+ionic g provider user-service
 ```
 
-ionic creará una carpeta donde esta ubicado nuestro archivo `user-service.ts`:
+ionic creará un archivo para nuestro servicio que estará en `src/providers/user-service.ts`:
 
-<img class="img-responsive" src="http://i.imgur.com/t8I3cHh.png" alt="folders">
+Recuerda que debes agregar este provider dentro del array `providers` en `app/app.module.ts`
 
 # Paso 3: Conectarse a Random User API
 
@@ -121,6 +121,7 @@ import { Injectable } from '@angular/core';
 import { Http } from '@angular/http';
 import 'rxjs/add/operator/map';
 
+
 @Injectable()
 export class UserService {
   data: any;
@@ -134,6 +135,8 @@ export class UserService {
       // already loaded data
       return Promise.resolve(this.data);
     }
+
+    // don't have the data yet
     return new Promise(resolve => {
       this.http.get('https://randomuser.me/api/?results=25')
         .map(res => res.json())
@@ -146,28 +149,28 @@ export class UserService {
 }
 {% endhighlight %}
 
-Como vemos en *la línea 19*  hacemos la solicitud correspondiente, en *la línea 20* procesamos la solicitud convirtiéndola en formato JSON, esto nos retorna un [Observable](http://www.ion-book.com/ionic2/observables-angular2){:target="_blank"} al cual nos suscribimos y luego en *la línea 22* obtenemos la data con `data.results`, finalmente retornamos con `resolve(this.data)`.
+Como vemos en *la línea 22*  hacemos la solicitud correspondiente, en *la línea 23* procesamos la solicitud convirtiéndola en formato JSON, esto nos retorna un [Observable](http://www.ion-book.com/ionic2/observables-angular2){:target="_blank"} al cual nos suscribimos y luego en *la línea 25* obtenemos la data con `data.results`, finalmente retornamos con `resolve(this.data)`.
 
 # Paso 3: Inyectar el servicio en el Ctrl.
 
 Desde el archivo `home.ts` vamos a inyectar en servicio creado de esta manera:
 
-{% highlight javascript linenos %}
+{% highlight ts linenos %}
 import {Component} from '@angular/core';
 import {NavController} from 'ionic-angular';
-import {UserService} from '../../providers/user-service/user-service';
+import {UserService} from '../../providers/user-service';
 
 @Component({
-  templateUrl: 'build/pages/home/home.html',
-  providers: [UserService]
+  selector: 'page-home',
+  templateUrl: 'home.html',
 })
 export class HomePage {
 
   users: any[] = [];
 
   constructor(
-    private navController: NavController,
-    private userService: UserService
+    public navCtrl: NavController,
+    public userService: UserService
   ) {
     this.userService.load()
     .then(data => {
@@ -186,9 +189,9 @@ Ahora en el template de home.html lo único que nos queda es mostrar los usuario
 {% highlight html linenos %}
 {% raw %}
 <ion-header>
-  <ion-navbar primary>
+  <ion-navbar color="primary">
     <ion-title>
-      Ionic Blank
+      Demo 103
     </ion-title>
   </ion-navbar>
 </ion-header>
