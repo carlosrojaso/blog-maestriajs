@@ -1,7 +1,7 @@
 ---
-layout: laucher
+layout: launcher
 title: "Chat Firebase"
-permalink: /laucher/chat-firebase/
+permalink: /launcher/chat-firebase/
 demo: "http://www.nicobytes.com/chatIonicFirebase/"
 repo: "https://github.com/nicobytes/chatIonicFirebase"
 ---

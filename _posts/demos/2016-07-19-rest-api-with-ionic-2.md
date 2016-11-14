@@ -5,7 +5,7 @@ date: 2016-07-19
 tags: ionic2 api
 categories: demos
 comments: true
-laucher: "/laucher/demo103"
+laucher: "/launcher/demo103"
 author: nicobytes
 cover: "http://i.imgur.com/tDpJiCR.jpg"
 remember: true

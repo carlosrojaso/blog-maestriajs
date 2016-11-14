@@ -5,7 +5,7 @@ date: 2016-10-04
 tags: ionic2 translate
 categories: demos
 comments: true
-laucher: "/laucher/demo106"
+laucher: "/launcher/demo106"
 author: nicobytes
 cover: "https://s17.postimg.org/tneheudov/translate.jpg"
 remember: true

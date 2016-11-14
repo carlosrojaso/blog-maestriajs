@@ -5,7 +5,7 @@ date: 2016-08-02
 tags: ionic2 firebase
 categories: demos
 comments: true
-repo: "https://ion-book.github.io/demo104/"
+laucher: "/launcher/demo104"
 author: nicobytes
 cover: "http://i.cubeupload.com/T62oZF.jpg"
 remember: true

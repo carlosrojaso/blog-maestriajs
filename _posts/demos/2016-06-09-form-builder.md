@@ -5,7 +5,7 @@ date: 2016-06-09
 tags: ionic2 angular2 forms
 categories: demos
 comments: true
-laucher: "/laucher/demo101"
+laucher: "/launcher/demo101"
 author: nicobytes
 cover: "http://i.imgur.com/PWBxv0C.png"
 remember: true
