@@ -15,9 +15,9 @@ remember: true
 
 <img class="img-responsive" src="http://i.cubeupload.com/T62oZF.jpg" alt="firebase-database-and-ionic-2">
 
-# Actualización (17/08/2016)
+# Actualización (14/11/2016)
 <hr/>
-Hemos actualizado este demo con el último release de [Ionic 2 Beta 11](http://www.ion-book.com/news/ionic-2-beta-11){:target="_blank"}, que tiene la más reciente actulización. Aquí está cómo se puede hacer la actualización [Steps to Upgrade](https://github.com/driftyco/ionic/blob/master/CHANGELOG.md#steps-to-upgrade-to-beta-11){:target="_blank"}.
+Hemos actualizado este demo con el último release de [Ionic 2 RC 2](http://www.ion-book.com/news/ionic-2-rc-2){:target="_blank"}, que tiene la más reciente actulización.
 
 <hr/>
 
@@ -54,84 +54,94 @@ Ahora entramos a la carpeta del proyecto desde nuestra terminal con:
 cd demo104
 ```
 
-Como iniciamos nuestro proyecto con el template **blank** tendremos una estructura básica del proyecto, la carpeta en la que vamos a trabajar sera *app*.
+Como iniciamos nuestro proyecto con el template **blank** tendremos una estructura básica del proyecto, la carpeta en la que vamos a trabajar sera `src`.
 
 # Paso 5: Agregar Firebase y AngularFire2
 
 Ahora para integrar firebase y Angularfire 2 solo se debe instalar dos dependencias en el proyecto.
 
 ```
-npm install firebase --save
-npm install angularfire2 --save
+npm install @types/request@0.0.30 --save-dev --save-exact
+npm install firebase angularfire2 --save
 ```
 
-# Paso 6: Agregar typing
+# Paso 6: Crear variable de configuración
 
-Ahora para que typescript reconsica a firebase y Angularfire2 debemos agregar la definición de typescript para esta librería, así que vamos al archivo de `typings/index.d.ts` y agregamos la siguiente línea:
+{% highlight ts %}
+export const firebaseConfig = {
+  apiKey: "AIzaSyAvYzM1bqFjoVi-VGMHeDbN0XwFsYDtLQ0",
+  authDomain: "demo104-60efc.firebaseapp.com",
+  databaseURL: "https://demo104-60efc.firebaseio.com",
+  storageBucket: "demo104-60efc.appspot.com",
+  messagingSenderId: "903778168776"
+};
+{% endhighlight %}
 
-```
-/// <reference path="../node_modules/angularfire2/firebase3.d.ts" />
-```
+Estas las otorga firebase, creado un proyecto en [firebase.google.com](https://firebase.google.com){:target="_blank"}
+
 
 # Paso 7: Conectado Ionic 2 con Firebase 3
 
 Ahora dentro de nuestra aplicación debemos agregar los datos copiados en el **paso 2**, así conectaremos nuestra aplicación con Firebase.
 
 {% highlight javascript linenos %}
-import {Component} from '@angular/core';
-import {Platform, ionicBootstrap} from 'ionic-angular';
-import {StatusBar} from 'ionic-native';
-import {HomePage} from './pages/home/home';
-import {FIREBASE_PROVIDERS, defaultFirebase, AngularFire} from 'angularfire2';
+import { NgModule } from '@angular/core';
+import { IonicApp, IonicModule } from 'ionic-angular';
+import { AngularFireModule } from 'angularfire2';
 
-@Component({
-  template: '<ion-nav [root]="rootPage"></ion-nav>'
+import { MyApp } from './app.component';
+import { HomePage } from '../pages/home/home';
+
+export const firebaseConfig = {
+  apiKey: "AIzaSyAvYzM1bqFjoVi-VGMHeDbN0XwFsYDtLQ0",
+  authDomain: "demo104-60efc.firebaseapp.com",
+  databaseURL: "https://demo104-60efc.firebaseio.com",
+  storageBucket: "demo104-60efc.appspot.com",
+  messagingSenderId: "903778168776"
+};
+
+@NgModule({
+  declarations: [
+    MyApp,
+    HomePage
+  ],
+  imports: [
+    IonicModule.forRoot(MyApp),
+    AngularFireModule.initializeApp(firebaseConfig)
+  ],
+  bootstrap: [IonicApp],
+  entryComponents: [
+    MyApp,
+    HomePage
+  ],
+  providers: []
 })
-export class MyApp {
-  rootPage: any = HomePage;
-
-  constructor(platform: Platform, af: AngularFire) {
-    platform.ready().then(() => {
-      // Okay, so the platform is ready and our plugins are available.
-      // Here you can do any higher level native things you might need.
-      StatusBar.styleDefault();
-    });
-  }
-}
-
-ionicBootstrap(MyApp, [
-  FIREBASE_PROVIDERS,
-  defaultFirebase({
-    apiKey: "AIzaSyAvYzM1bqFjoVi-VGMHeDbN0XwFsYDtLQ0",
-    authDomain: "demo104-60efc.firebaseapp.com",
-    databaseURL: "https://demo104-60efc.firebaseio.com",
-    storageBucket: "demo104-60efc.appspot.com",
-  }),
-]);
+export class AppModule {}
 {% endhighlight %}
 
-En *la línea 5* debemos importar a `FIREBASE_PROVIDERS` y `defaultFirebase`, ahora modificaremos el método de `ionicBootstrap`, en *la línea 21* definimos los proveedores de Firebase como globales y desde *la línea 22 hasta la línea 27* enviamos las variables de configuración.
+En *la línea 3* debemos importar a `AngularFireModule`, ahora modificaremos agregamos a los imports (**línea 23**) `AngularFireModule.initializeApp(firebaseConfig)` y le enviamos la variable `firebaseConfig`.
 
 # Paso 8: Creando el Controlador.
 
 Ahora haremos uso del archivo `pages/home/home.ts` para mostrar las tareas, modificándolo de esta manera:
 
 {% highlight javascript linenos %}
-import {Component} from '@angular/core';
-import {NavController, AlertController} from 'ionic-angular';
-import {FirebaseListObservable, FirebaseDatabase} from 'angularfire2';
+import { Component } from '@angular/core';
+import { NavController, AlertController } from 'ionic-angular';
+import { FirebaseListObservable, AngularFireDatabase  } from 'angularfire2';
 
 @Component({
-  templateUrl: 'build/pages/home/home.html'
+  selector: 'page-home',
+  templateUrl: 'home.html'
 })
 export class HomePage {
 
   tasks: FirebaseListObservable<any>;
 
   constructor(
-    private navCtrl: NavController,
-    private alertCtrl: AlertController,
-    private database: FirebaseDatabase
+    public navCtrl: NavController,
+    public alertCtrl: AlertController,
+    public database: AngularFireDatabase
   ) {
     this.tasks = this.database.list('/tasks')
   }
@@ -181,16 +191,15 @@ export class HomePage {
   }
 }
 
-
 {% endhighlight %}
 
-En *la línea 3* importamos `FirebaseListObservable` y  `FirebaseDatabase`, en *la línea 10* declaramos la variable `tasks` que sea de tipo FirebaseListObservable, en *la línea 14* inyectamos  a FirebaseDatabase como dependencia y luego en *la línea 16* vamos a definir qué `tasks` es igual a la base de datos con la dirección `/tasks`.
+En *la línea 3* importamos `FirebaseListObservable` y  `AngularFireDatabase`, en *la línea 11* declaramos la variable `tasks` que sea de tipo FirebaseListObservable, en *la línea 16* inyectamos a AngularFireDatabase como dependencia y luego en *la línea 18* vamos a definir qué `tasks` es igual a la base de datos con la dirección `/tasks`.
 
-En *la línea 19* declaramos el método `createTask` el cual agrega un tarea a la base de datos haciendo, mediante un alert donde con un campo de texto capturamos la tarea y luego en *la línea 39* con uso del método **push** agregamos la tarea.
+En *la línea 21* declaramos el método `createTask` el cual agrega un tarea a la base de datos haciendo, mediante un alert donde con un campo de texto capturamos la tarea y luego en *la línea 41* con uso del método **push** agregamos la tarea.
 
-En *la línea 50* declaramos el método `updateTask` el cual actualiza una tarea con el método **update**, pero a este debemos enviarle el id de la tarea con **task.$key** y los datos a actualizar.
+En *la línea 52* declaramos el método `updateTask` el cual actualiza una tarea con el método **update**, pero a este debemos enviarle el id de la tarea con **task.$key** y los datos a actualizar.
 
-Finalmente en *la línea 59* declaramos el método `removeTask` que elimina una tarea con el método **remove** al cual tenemos que enviarle el id de la tarea con **task.$key**.
+Finalmente en *la línea 61* declaramos el método `removeTask` que elimina una tarea con el método **remove** al cual tenemos que enviarle el id de la tarea con **task.$key**.
 
 # Paso 9: El template.
 
@@ -199,12 +208,12 @@ Ahora solo nos queda trabajar en el template `pages/home/home.html` que modifica
 {% highlight html linenos %}
 {% raw %}
 <ion-header>
-  <ion-navbar primary>
+  <ion-navbar color="primary">
     <ion-title>
       Tasks
     </ion-title>
     <ion-buttons start>
-      <button (click)="createTask()">
+      <button ion-button (click)="createTask()">
         <ion-icon name="add"></ion-icon>
       </button>
     </ion-buttons>
@@ -216,10 +225,10 @@ Ahora solo nos queda trabajar en el template `pages/home/home.html` que modifica
     <ion-item-sliding *ngFor='let task of tasks | async'>
       <ion-item>
         <ion-label>{{ task.title }}</ion-label>
-        <ion-checkbox (click)="updateTask( task )" [(ngModel)]="task.done" ngDefaultControl></ion-checkbox>
+        <ion-checkbox (ionChange)="updateTask( task )" [(ngModel)]="task.done"></ion-checkbox>
       </ion-item>
        <ion-item-options>
-        <button danger (click)="removeTask( task )">
+        <button ion-button danger (click)="removeTask( task )">
           Delete
         </button>
        </ion-item-options>
@@ -238,8 +247,3 @@ Ahora podemos ver el resultado ejecutando:
 ```
 ionic serve -l
 ```
-<br/>
-<a target="_blank" href="{{ page.repo }}">
-  <img class="img-responsive" src="http://i.cubeupload.com/xEo4BC.png" alt="result">
-</a>
-
