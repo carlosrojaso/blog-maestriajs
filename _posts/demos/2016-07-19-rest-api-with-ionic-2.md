@@ -2,7 +2,7 @@
 layout: post
 title: "Conectado una REST API con Ionic 2"
 date: 2016-07-19
-tags: ionic2 api
+tags: [rest, demos, ionic2]
 categories: demos
 comments: true
 laucher: "/launcher/demo103"

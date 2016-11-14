@@ -2,7 +2,7 @@
 layout: post
 title: "App con múltiples idiomas en 6 pasos."
 date: 2016-10-04
-tags: ionic2 translate
+tags: [libs, demos, ionic2]
 categories: demos
 comments: true
 laucher: "/launcher/demo106"

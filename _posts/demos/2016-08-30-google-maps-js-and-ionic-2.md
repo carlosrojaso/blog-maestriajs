@@ -2,7 +2,7 @@
 layout: post
 title: "Google Maps JS + Ionic 2 en 4 pasos"
 date: 2016-08-30
-tags: ionic2 maps
+tags: [maps, demos, ionic2]
 categories: demos
 comments: true
 laucher: "/launcher/demo105"

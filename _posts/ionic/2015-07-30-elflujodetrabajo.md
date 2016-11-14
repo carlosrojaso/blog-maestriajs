@@ -3,7 +3,7 @@ layout: post
 title: "El Flujo de Trabajo!"
 date: 2015-07-30  
 categories: ionic
-tags: productividad workflow
+tags: [tips, ionic1]
 comments: true
 author: carlosrojas
 cover: "http://i.imgur.com/JtabKqV.png"

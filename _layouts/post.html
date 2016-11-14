@@ -77,6 +77,22 @@ layout: default
         </p>
       </article>
       <hr/>
+      <section>
+        <h3>Artículos relacionados:</h3>
+        <div class="row">
+          {% assign count = 0 %}
+          {% for tag in page.tags %}
+            {% for post in site.posts %}
+              {% if post.tags contains tag and count < site.count_related_posts and post.title != page.title %}
+              {% assign count = count | plus: 1 %}
+              <div class="col-xs-12 col-sm-6">
+                {% include article_tags.html trucate="85" %}
+              </div>
+              {% endif %}
+            {% endfor %}
+          {% endfor %}
+        </div>
+      </section>
       {% if page.comments %}{% include disqus.html %}{% endif %}
       <div align="center">
         <a href="#">

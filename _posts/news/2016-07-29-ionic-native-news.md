@@ -3,7 +3,7 @@ layout: post
 title: "Nueva versión de Ionic Native"
 date: 2016-07-26
 categories: news
-tags: news ionic2
+tags: [native, ionic2]
 comments: true
 author: carlosrojas
 cover: "http://blog.ionic.io/wp-content/uploads/2016/06/ionic-native-header.jpg"

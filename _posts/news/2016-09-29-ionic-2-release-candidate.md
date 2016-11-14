@@ -2,7 +2,7 @@
 layout: post
 title: "Ionic 2 Release Candidate!"
 date: 2016-09-29
-tags: ionic2 news
+tags: [release, ionic2]
 categories: news
 comments: true
 author: nicobytes

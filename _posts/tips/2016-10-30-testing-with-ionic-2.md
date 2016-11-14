@@ -2,7 +2,7 @@
 layout: post
 title: "Testing en Angular 2 / Ionic 2"
 date: 2016-10-30
-tags: ionic2 testing
+tags: [testing, ionic2]
 categories: tips
 comments: true
 author: nicobytes

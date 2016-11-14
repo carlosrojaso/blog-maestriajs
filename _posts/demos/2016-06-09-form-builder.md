@@ -2,7 +2,7 @@
 layout: post
 title: "Forms con IonicV2"
 date: 2016-06-09
-tags: ionic2 angular2 forms
+tags: [forms, demos, ionic2]
 categories: demos
 comments: true
 laucher: "/launcher/demo101"

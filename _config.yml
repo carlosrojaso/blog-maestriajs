@@ -123,3 +123,5 @@ publications:
     title: "Construye un App de Tareas"
     cover: "https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/ebooks%2FEbook.png?alt=media"
     summaty: "Realiza un App de Tareas con Ionic 1, manejando tabs"
+
+count_related_posts: 4

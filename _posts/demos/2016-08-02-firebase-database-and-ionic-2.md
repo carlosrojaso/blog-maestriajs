@@ -2,7 +2,7 @@
 layout: post
 title: "Firebase Database + Ionic 2"
 date: 2016-08-02
-tags: ionic2 firebase
+tags: [firebase, demos, ionic2]
 categories: demos
 comments: true
 laucher: "/launcher/demo104"

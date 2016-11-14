@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "¿Qué es Typescript?"
-tags: typescript  
+tags: [typescript, ionic2]  
 date: 2016-06-22
 categories: ionic2
 comments: true

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Observables en Angular 2"
-tags: ionic2  
+tags: [tips, angular2, ionic2]  
 date: 2016-07-07
 categories: ionic2
 comments: true

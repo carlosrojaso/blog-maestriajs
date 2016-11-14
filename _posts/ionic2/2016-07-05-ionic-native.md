@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "¿Qué es Ionic Native?"
-tags: ionic2  
+tags: [native, ionic2]  
 date: 2016-07-05
 categories: ionic2
 comments: true

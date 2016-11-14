@@ -3,7 +3,7 @@ layout: post
 title: "asFirebase Starter"
 date: 2016-05-21
 categories: ionic
-tags: ionic1 starter
+tags: [firebase, ionic1]
 comments: true
 author: carlosrojas
 cover: "http://img.youtube.com/vi/O17OWyx08Cg/0.jpg"

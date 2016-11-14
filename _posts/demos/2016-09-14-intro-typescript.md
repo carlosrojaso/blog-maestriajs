@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "¿Introducción a TypeScript?"
-tags: typescript  
+tags: [typescript, demos, ionic2]  
 date: 2016-09-14
 categories: demos
 comments: true

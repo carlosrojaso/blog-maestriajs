@@ -3,7 +3,7 @@ layout: post
 title: "Ionic Market"
 date: 2015-08-24
 categories: news
-tags: market
+tags: [tools, tips]
 comments: true
 author: carlosrojas
 cover: "http://img.youtube.com/vi/URobJP0uPa8/hqdefault.jpg"

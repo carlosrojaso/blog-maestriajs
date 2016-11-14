@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Aumenta el performance con Crosswalk"
-tags: plugins tips  
+tags: [native, tips]  
 date: 2016-06-28
 categories: tips
 comments: true

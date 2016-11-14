@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Introducción a Ionic 2"
-tags: ionic2
+tags: [tips, ionic2]
 date: 2016-06-13
 categories: ionic2
 comments: true

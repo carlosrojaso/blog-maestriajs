@@ -3,7 +3,7 @@ layout: post
 title: "Ionic Platform"
 date: 2016-06-30
 categories: news
-tags: news
+tags: [tools, tips]
 comments: true
 author: carlosrojas
 cover: "http://i.imgur.com/iRCx2TE.jpg"

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Conectando Ionic 2 con Firebase 3"
-tags: ionic2, firebase3
+tags: [firebase, ionic2]
 date: 2016-07-15
 categories: ionic2
 comments: true

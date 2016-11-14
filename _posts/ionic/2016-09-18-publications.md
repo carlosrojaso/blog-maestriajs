@@ -3,7 +3,7 @@ layout: post
 title: "Construye un app de Fotos"
 date: 2016-09-18
 categories: ionic
-tags: ionic1 starter
+tags: [publications, ionic1]
 comments: true
 author: nicobytes
 cover: "http://i.cubeupload.com/ysfDTY.jpg"
