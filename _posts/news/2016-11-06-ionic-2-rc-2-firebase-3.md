@@ -1,17 +1,18 @@
 ---
 layout: post
-title: "Firebase 3  + Ionic 2 RC 2 en 3 pasos"
+title: "Firebase 3  + Ionic 2 RC 2 en 4 pasos"
 date: 2016-11-14
 categories: news
 tags: firebase ionic2
 comments: true
 author: nicobytes
-cover: "https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2Fionic-2-rc-2%2Fcover.jpg?alt=media"
+cover: "https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2Fionic-2-rc2-firebase-3%2FFirebase%203%20%2B%20Ionic%202.png?alt=media"
+draf: true
 ---
 
 > Incluir **Firebase** en un proyecto de ionic puede ser algo complejo pero en este último release de [**Ionic el RC2**](http://www.ion-book.com/news/ionic-2-rc-2){:target="_blank"}, es mucho más fácil hacer la implementación ya que no toca entrar a archivos de configuración etc etc.
 
-<img class="img-responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2Fionic-2-rc-2%2Fcover.jpg?alt=media" alt="upgrade">
+<img class="img-responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2Fionic-2-rc2-firebase-3%2FFirebase%203%20%2B%20Ionic%202.png?alt=media" alt="upgrade">
 
 ## Paso 1: Iniciando el proyecto
 
@@ -60,7 +61,7 @@ export const firebaseConfig = {
 
 Estas las otorga firebase, creado un proyecto en [firebase.google.com](https://firebase.google.com){:target="_blank"}
 
-## Paso 3: Incluir keys en NgModule
+## Paso 4: Incluir keys en NgModule
 
 {% highlight ts %}
 @NgModule({
