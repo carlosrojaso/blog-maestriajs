@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "SQLite + Ionic 2 en 5 pasos"
+title: "SQLite + Ionic 2 en 6 pasos"
 date: 2016-11-28
 tags: [native, demos, ionic2]
 categories: demos
@@ -434,6 +434,73 @@ En el template se encargará de llamar las funciones creadas en `HomePage` y mos
   </ion-list>
 </ion-content>
 {% endraw %}
+{% endhighlight %}
+
+## Paso 6: Añadir Servicio y llamar a openDatabase
+
+En este último paso asegurate de que el servicio `TasksService` este agregado en el array de providers de `app.module.ts`:
+
+{% highlight ts linenos%}
+import { NgModule, ErrorHandler } from '@angular/core';
+import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
+import { MyApp } from './app.component';
+import { HomePage } from '../pages/home/home';
+import { TasksService } from '../providers/tasks-service';
+
+@NgModule({
+  declarations: [
+    MyApp,
+    HomePage
+  ],
+  imports: [
+    IonicModule.forRoot(MyApp)
+  ],
+  bootstrap: [IonicApp],
+  entryComponents: [
+    MyApp,
+    HomePage
+  ],
+  providers: [
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    TasksService
+  ]
+})
+export class AppModule {}
+{% endhighlight %}
+
+Y cuando la app esté lista para iniciar en `app.component.ts` asegurate de llamar a `openDatabase` y crear la tabla.
+
+{% highlight ts linenos%}
+import { Component } from '@angular/core';
+import { Platform } from 'ionic-angular';
+import { StatusBar, Splashscreen } from 'ionic-native';
+
+import { HomePage } from '../pages/home/home';
+import { TasksService } from '../providers/tasks-service';
+
+
+@Component({
+  template: `<ion-nav [root]="rootPage"></ion-nav>`
+})
+export class MyApp {
+  rootPage: any = null;
+
+  constructor(
+    public platform: Platform,
+    public tasksService: TasksService
+  ) {
+    this.platform.ready().then(() => {
+      StatusBar.styleDefault();
+      Splashscreen.hide();
+      tasksService.openDatabase()
+      .then(() => this.tasksService.createTable())
+      .then(()=>{
+        this.rootPage = HomePage;
+      })
+    });
+  }
+}
+
 {% endhighlight %}
 
 ## Resultado:
