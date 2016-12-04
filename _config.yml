@@ -123,5 +123,9 @@ publications:
     title: "Construye un App de Tareas"
     cover: "https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/ebooks%2FEbook.png?alt=media"
     summaty: "Realiza un App de Tareas con Ionic 1, manejando tabs"
+  - url: "http://www.paywithapost.de/pay?id=29729e3f-6765-4e1f-8ee1-84bba161feec"
+    title: "Construye un App para eventos"
+    cover: "https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2Fion-events%2FccC0xr.png?alt=media"
+    summaty: "Realiza un App para eventos con Ionic 1, con REST API"
 
 count_related_posts: 4
