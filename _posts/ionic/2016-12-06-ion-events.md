@@ -13,7 +13,7 @@ cover: "https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts
 
 <img class="img-responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2Fion-events%2FConstruye%20un%20app%20para%20Eventos!.jpg?alt=media" alt="publicaciones">
 
-La aplicación que vamos a crear con ionic es una aplicación de eventos donde nos basaremos en la interfaz de la aplicación de meetup.com. Revisemos un momento las pantallas de esta aplicación y en las cuales nos vamos a basar para el desarrollo de nuestra aplicación.
+La aplicación que vamos a crear con ionic es una aplicación de eventos donde nos basaremos en la interfaz de la aplicación de meetup.com. Revisemos un momento las pantallas de esta aplicación, en las cuales nos vamos a basar para el desarrollo de nuestra aplicación.
 
 <img class="img-responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2Fion-events%2Fmeetup.png?alt=media" alt="result">
 
