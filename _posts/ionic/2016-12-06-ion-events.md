@@ -17,7 +17,7 @@ La aplicación que vamos a crear con ionic es una aplicación de eventos donde n
 
 <img class="img-responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2Fion-events%2Fmeetup.png?alt=media" alt="result">
 
-El **E-book**, esta divido en pasos:
+El **E-book**, esta dividido en pasos:
 
 1. Iniciando el proyecto
 1. Creando templates
@@ -25,7 +25,7 @@ El **E-book**, esta divido en pasos:
 1. Creando Controladores
 1. Conectando a una REST API
 
-AL final lograremos, una aplicación de eventos donde estamos controlando el flujo de datos desde controladores y adaptamos la UI/UX, teniendo una navegación por tabs. Con la aplicación terminada lograrás:
+Al final lograremos, una aplicación de eventos donde estamos controlando el flujo de datos desde controladores y adaptamos la UI/UX, teniendo una navegación por tabs. Con la aplicación terminada, lograrás:
 
 - Controlar navegación con Tabs.
 - Crear controladores y sus funcionalidades. 
