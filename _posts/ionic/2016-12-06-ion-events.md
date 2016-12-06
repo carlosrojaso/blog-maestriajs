@@ -25,7 +25,7 @@ El **E-book**, esta dividido en pasos:
 1. Creando Controladores
 1. Conectando a una REST API
 
-Al final lograremos, una aplicación de eventos donde estamos controlando el flujo de datos desde controladores y adaptamos la UI/UX, teniendo una navegación por tabs. Con la aplicación terminada, lograrás:
+Al final lograremos una aplicación de eventos donde estamos controlando el flujo de datos desde controladores y adaptamos la UI/UX, teniendo una navegación por tabs. Con la aplicación terminada, lograrás:
 
 - Controlar navegación con Tabs.
 - Crear controladores y sus funcionalidades. 
