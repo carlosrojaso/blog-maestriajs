@@ -1,13 +1,12 @@
 ---
 layout: post
 title: "Construye un app para Eventos"
-date: 2016-12-04
+date: 2016-12-06
 categories: ionic
 tags: [publications, ionic1]
 comments: true
 author: nicobytes
 cover: "https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2Fion-events%2FConstruye%20un%20app%20para%20Eventos!.jpg?alt=media"
-draft: true
 ---
 
 > Ion book ahora tiene una nueva sección llamada [**publicaciones**](http://www.ion-book.com/publications/){:target="_blank"}, serán completos e-books con una guía paso a paso para desarrollar aplicaciones desde cero hasta niveles más avanzados. Nuestra tercera publicación es hacer un app de eventos con **Ionic 1.3** 
