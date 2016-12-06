@@ -21,7 +21,7 @@ El **E-book**, esta divido en pasos:
 
 1. Iniciando el proyecto
 1. Creando templates
-1. Creado UI/UX
+1. Creando UI/UX
 1. Creando Controladores
 1. Conectando a una REST API
 
