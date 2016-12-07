@@ -17,7 +17,7 @@ La aplicación que vamos a crear con ionic es una aplicación de eventos donde n
 
 <img class="img-responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2Fion-events%2Fmeetup.png?alt=media" alt="result">
 
-El **E-book**, esta dividido en pasos:
+El **E-book** esta dividido en pasos:
 
 1. Iniciando el proyecto
 1. Creando templates
@@ -38,6 +38,6 @@ Al final lograremos una aplicación de eventos donde estamos controlando el fluj
 
 <img class="img-responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2Fion-events%2Fresult.jpg?alt=media" alt="result">
 
-Si quieres esta publicación solo ve a [**publicaciones**](http://www.ion-book.com/publications/){:target="_blank"} y descargala.
+Si quieres esta publicación solo ve a [**publicaciones**](http://www.ion-book.com/publications/){:target="_blank"} y descárgala.
 
 Pronto lanzaremos más publicaciones sobre Ionic 1 y Ionic 2.
