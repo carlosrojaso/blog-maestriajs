@@ -28,7 +28,7 @@ import {
 } from '@angular/core';
 {% endhighlight %}
 
-Antes de empezar en necesario entender los conceptos básicos para desarrollar el demo de este artículo.
+Antes de empezar, es necesario entender los conceptos básicos para desarrollar el demo de este artículo.
 
 ## State
 
@@ -47,7 +47,7 @@ state('active',   style({
 
 ## Transition
 
-Las transiciones podemos definir las reglas de animación cuando se cambia de un estado a otro:
+En las transiciones se puede definir las reglas de animación al cambiar de un estado a otro:
 
 {% highlight ts %}
 transition('inactive => active', animate('100ms ease-in')),
