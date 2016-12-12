@@ -47,7 +47,7 @@ state('active',   style({
 
 ## Transition
 
-En las transiciones se puede definir las reglas de animación al cambiar de un estado a otro:
+Con Transition podemos definir las reglas de animación al cambiar de un estado a otro:
 
 {% highlight ts %}
 transition('inactive => active', animate('100ms ease-in')),
@@ -56,7 +56,7 @@ transition('active => inactive', animate('100ms ease-out'))
 
 <img class="img-responsive" src="https://angular.io/resources/images/devguide/animations/ng_animate_transitions_inactive_active.png" alt="transitions">
 
-En las transacciones también podemos agregar estilos que solo se aplican durante la animación y que no harán parte de **state**.
+En las **transitions** también podemos agregar estilos que solo se aplican durante la animación y que no harán parte de **state**.
 
 En angular 2 tenemos **dos** estados muy útiles, uno es el comodín (The wildcard state) *, este se refiere a cualquier estado y es muy útil cuando no hay un estado definido.
 
@@ -175,7 +175,7 @@ export class HomePage {
 }
 {% endhighlight %}
 
-## Paso 3: Agregado y elimando items.
+## Paso 3: Agregando y eliminando items.
 
 Ahora vamos a agregar el metodo `add` en línea 16 qué agregará un item a la lista y `remove` en línea 23 que elimina un item de la lista.
 
