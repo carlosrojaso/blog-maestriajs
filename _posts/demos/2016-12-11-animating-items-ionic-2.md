@@ -12,7 +12,7 @@ remember: true
 draft: true
 ---
 
-> Angular 2 integra [Web Animations API](https://web-animations.github.io/web-animations-demos/){:target="_blank"} para ejecutar animaciones en css que aprovechan la GPU del dispositivo y se puedan controlar con JS, sin duda esto provee un mayor control en las animaciones que podemos hacer.
+> Angular 2 integra [Web Animations API](https://web-animations.github.io/web-animations-demos/#waves/){:target="_blank"} para ejecutar animaciones en css que aprovechan la GPU del dispositivo y se puedan controlar con JS, sin duda esto provee un mayor control en las animaciones que podemos hacer.
 
 <img class="img-responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/demos%2Fdemo108%2Fitems.jpg?alt=media" alt="SQLite + Ionic 2 en 5 pasos">
 
