@@ -25,6 +25,9 @@
       div.tab{
         display: none;
         padding: 0px 16px;
+        &:nth-child(3){
+          padding-right: 0px;
+        }
         a{
           color: white;
           text-decoration: none;

@@ -27,6 +27,20 @@
     font-size: 1em;
   }
 }
+.article-right{
+  margin: 0px;
+  box-sizing: border-box;
+  h2{
+    margin-top: 0px;
+    font-size: 1.3em;
+    a{
+      font-family: $font-title-family;
+      color: $secondary-color;
+      font-weight: bold;
+      text-decoration: none;
+    }
+  }
+}
 .article-cover{
   margin: 20px 0px;
   box-sizing: border-box;
@@ -84,8 +98,14 @@
       text-align: left;
     }
   }
-  .content-article{
-    margin-left: 12%;
+  .article-detail{
+    padding-right: 2%;
+    .btn-demo{
+      width: 200px;
+    }
+  }
+  .article-right{
+    margin: 20px 8px;
   }
 }
 @media screen and (min-width: $min-width-large) {
@@ -106,7 +126,13 @@
       text-align: left;
     }
   }
-  .content-article{
-    margin-left: 12%;
+  .article-detail{
+    padding-right: 2%;
+    .btn-demo{
+      width: 200px;
+    }
+  }
+  .article-right{
+    margin: 0px;
   }
 }

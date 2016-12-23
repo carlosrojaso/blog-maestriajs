@@ -21,7 +21,8 @@ a{
 .center-block{
   display: block;
   margin-left: auto;
-  margin-right: auto; 
+  margin-right: auto;
+  clear: both;
 }
 button.menu{
   display: inline-block;

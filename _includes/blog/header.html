@@ -10,7 +10,7 @@
       <div class="col col-100 col-md-60 col-lg-60 hidden-sm">
         <ul>
           <li>
-            <a {% if page.layout == "default" %}class="active"{% endif %} href="{{ "/blog"  }}">Mostrar todo</a>
+            <a {% if page.layout == "default" %}class="active"{% endif %} href="{{ "/blog"  }}">Todo</a>
           </li>
           {% for item_page in site.pages %}
             {% if item_page.layout == "category" %}

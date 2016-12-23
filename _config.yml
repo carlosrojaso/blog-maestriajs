@@ -21,6 +21,13 @@ banner_course:
   btn_text: 'Ver Curso'
   link: ''
 # ==============================================================
+# Banner Slack
+banner_slack:
+  title: 'Unete a nuestra comunidad'
+  text: 'Unete unete unete, Soy uno con la fuerza, la fuerza me acompaña, Unete unete unete'
+  link: 'http://goo.gl/forms/ZCEc0cr3jydgK2wv1'
+  btn_text: 'Unete'
+# ==============================================================
 # Menu Header
 menu_header:
   - title: Home

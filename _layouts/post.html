@@ -5,27 +5,25 @@ layout: default
 {% assign author = site.authors[page.author] %}
 <div class="content">
   <div class="row wrap center">
-    <div class="col col-100 col-md-80 col-lg-80">
+    <div class="col col-100 col-md-100 col-lg-80">
       <h1 class="title-article">{{ page.title }}</h1>
       <div class="tags">
-        {% for tag in page.tags %}
-          <span class="tag">{{ tag }}</span>
-        {% endfor %} - 
+        {% for tag in page.tags %}<span class="tag">{{ tag }}</span>{% endfor %} - 
         {{ page.date | date: '%B %d, %Y' }} por 
         <a href="{{ author.url }}"><strong>{{ author.name }}</strong></a> 
       </div>
     </div>
     {% if page.repo %}
-    <div class="col col-100 col-md-20 col-lg-20">
-      <a href="{{ page.repo }}" class="btn btn-primary btn-round center-block" target="_blank">
-        <i class="fa fa-github" aria-hidden="true"></i> Ver demo
+    <div class="col col-100 col-md-100 col-lg-20">
+      <a href="{{ page.repo }}" class="btn btn-primary btn-round center-block btn-icon btn-demo" target="_blank">
+        <div class="icon icon-social-octocat"></div> Ver demo
       </a>
     </div>
     {% endif %}
     {% if page.laucher %}
-    <div class="col col-100 col-md-20 col-lg-20">
-      <a href="{{ page.laucher }}" class="btn btn-primary btn-round center-block" target="_blank">
-        <i class="fa fa-github" aria-hidden="true"></i> Ver demo
+    <div class="col col-100 col-md-100 col-lg-20">
+      <a href="{{ page.laucher }}" class="btn btn-primary btn-round center-block btn-icon btn-demo" target="_blank">
+        <div class="icon icon-social-octocat"></div> Ver demo
       </a>
     </div>
     {% endif %}
@@ -33,22 +31,19 @@ layout: default
 </div>
 <div class="content">
   <div class="row wrap baseline">
-    <div class="col col-100 col-md-80 col-lg-80">
-      <article>
-        {{ content }}
+    <div class="col col-100 col-md-100 col-lg-80">
+      <article class="article-detail">
+        <div class="text">{{ content }}</div>
         {% if page.repo %}
-        <p>
-          <a href="{{ page.repo }}" class="btn btn-primary btn-lg link-repo" target="_blank">
-            <i class="fa fa-github" aria-hidden="true"></i> Ver demo
-          </a>
-        </p>
+        
+        <a href="{{ page.repo }}" class="btn btn-primary btn-round center-block btn-icon btn-demo" target="_blank">
+          <div class="icon icon-social-octocat"></div> Ver demo
+        </a>
         {% endif %}
         {% if page.laucher %}
-        <p>
-          <a href="{{ page.laucher }}" class="btn btn-primary btn-lg link-repo" target="_blank">
-            <i class="fa fa-github" aria-hidden="true"></i> Ver demo
-          </a>
-        </p>
+        <a href="{{ page.laucher }}" class="btn btn-primary btn-round center-block btn-icon btn-demo" target="_blank">
+          <div class="icon icon-social-octocat"></div> Ver demo
+        </a>
         {% endif %}
         {% if page.remember %}
         <div class="remember-demo">
@@ -70,35 +65,11 @@ layout: default
         <p>¿Quieres saber más? Suscríbete a nuestro Newsletter o únete a nuestro canal en <a href="http://goo.gl/forms/ZCEc0cr3jydgK2wv1">Slack</a> y mantente atento.
         Espero sea de utilidad y sigan programando :)</p>
         <p>Por: <a href="{{ author.url }}"><strong>{{ author.name }}</strong></a></p>
-        <h4 class="title">Siguenos en:</h4>
-        <p>
-        {% for social in site.social_links %}
-          <a href="{{ social.url }}" target="_blank" class="btn btn-default">
-            <i class="fa {{ social.icon }}" aria-hidden="true"></i>
-          </a>
-        {% endfor %}
-        </p>
       </article>
-      <hr/>
-      <section>
-        <h3>Artículos relacionados:</h3>
-        <div class="row wrap baseline">
-          {% assign count = 0 %}
-          {% for tag in page.tags %}
-            {% for post in site.posts %}
-              {% if post.tags contains tag and count < site.blog.count_related_posts and post.title != page.title %}
-              {% assign count = count | plus: 1 %}
-              <div class="col col-100 col-md-33 col-lg-33">
-               {% include general/article.html %}
-              </div>
-              {% endif %}
-            {% endfor %}
-          {% endfor %}
-        </div>
-      </section>
       {% include blog/disqus.html %}
     </div>
-    <div class="col col-100 col-md-20 col-lg-20">
+    <div class="col col-100 col-md-100 col-lg-20">
+      {% include blog/right.html %}
     </div>
   </div>
 </div>
