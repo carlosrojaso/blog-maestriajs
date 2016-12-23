@@ -1,0 +1,35 @@
+{% if post.cover %}
+{% assign author = site.authors[post.author] %}
+<article class="article-cover">
+  <div class="row wrap">
+    <div class="col col-100 col-md-66 col-lg-66">
+      <a href="{{ post.url }}">
+        <amp-img src="{{ post.cover }}" alt="{{ post.title }}" width="1024" height="512" layout="responsive"></amp-img>
+      </a>
+    </div>
+    <div class="col col-100 col-md-33 col-lg-33">
+      <div class="content-text">
+        <h2>
+          <a href="{{ post.url }}">{{ post.title }}</a>
+        </h2>
+        <div class="info">
+          <small>{{ post.date | date: '%B %d, %Y' }}
+            por <a href="{{ author.url }}"><strong>{{ author.name }}</strong></a>
+          </small>
+        </div>
+        <div class="tags">
+          {% for tag in post.tags %}
+            <span class="tag">{{ tag }}</span>
+          {% endfor %}
+        </div>
+        <p class="summary">
+          {{ post.content | strip_html | truncate: 300  }}
+        </p>
+        <div class="more">
+          <a class="btn btn-primary btn-round" href="{{ post.url }}">Leer más...</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+{% endif %}

@@ -30,11 +30,11 @@ layout: default
         {% assign posts = site.posts | where:"draft", "false" | where:"author", page.author %}
         {% for post in posts %}
           <div class="col-xs-12 col-sm-6">
-            {% include article_home.html trucate="90" %}
+            {% include general/article.html trucate="90" %}
           </div>
         {% endfor %}
       </div>
     </div>
-    {% include right.html %}
+    {% include blog/right.html %}
   </div>
 </div>

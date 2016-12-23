@@ -1,0 +1,317 @@
+.row{
+  display: flex;
+  width: 100%;
+  &.wrap{
+    flex-wrap: wrap;
+  }
+  &.top{
+    align-items: flex-start;
+  }
+  &.bottom{
+    align-items: flex-end;
+  }
+  &.center{
+    align-items: center;
+  }
+  &.stretch{
+    align-items: stretch;
+  }
+  &.baseline{
+    align-items: baseline;
+  }
+}
+.col{
+  display: block;
+  flex: 1;
+  width: 100%;
+  // Column Offsets
+  // &.offset-10{
+  //   margin-left: 10%;
+  // }
+  // &.offset-20{
+  //   margin-left: 20%;
+  // }
+  // &.offset-25{
+  //   margin-left: 25%;
+  // }
+  // &.offset-33,
+  // &.offset-34{
+  //   margin-left: 33.3333%;
+  // }
+  // &.offset-50{
+  //   margin-left: 50%;
+  // }
+  // &.offset-66,
+  // &.offset-67{
+  //   margin-left: 66.6666%;
+  // }
+  // &.offset-75{
+  //   margin-left: 75%;
+  // }
+  // &.offset-80{
+  //   margin-left: 80%;
+  // }
+  // &.offset-90{
+  //   margin-left: 90%;
+  // }
+  // Explicit Column Percent Sizes
+  // By default each grid column will evenly distribute
+  // across the grid. However, you can specify individual
+  // columns to take up a certain size of the available area
+  &.col-10{
+    flex: 0 0 10%;
+    max-width: 10%;
+  }
+  &.col-20{
+    flex: 0 0 20%;
+    max-width: 20%;
+  }
+  &.col-25{
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
+  &.col-33,
+  &.col-34{
+    flex: 0 0 33.3333%;
+    max-width: 33.3333%;
+  }
+  
+  &.col-50{
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+  &.col-66,
+  &.col-67{
+    flex: 0 0 66.6666%;
+    max-width: 66.6666%;
+  }
+  &.col-75{
+    flex: 0 0 75%;
+    max-width: 75%;
+  }
+  &.col-80{
+    flex: 0 0 80%;
+    max-width: 80%;
+  }
+  &.col-90{
+    flex: 0 0 90%;
+    max-width: 90%;
+  }
+  &.col-100{
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+/* Medium only */
+@media screen and (min-width: $min-width-medium) and (max-width: $max-width-medium) {
+  .col{
+    &.offset-md-10{
+      margin-left: 10%;
+    }
+
+    &.offset-md-20{
+      margin-left: 20%;
+    }
+
+    &.offset-md-25{
+      margin-left: 25%;
+    }
+
+    &.offset-md-33,
+    &.offset-md-34{
+      margin-left: 33.3333%;
+    }
+
+    &.offset-md-50{
+      margin-left: 50%;
+    }
+
+    &.offset-md-66,
+    &.offset-md-67{
+      margin-left: 66.6666%;
+    }
+
+    &.offset-md-75{
+      margin-left: 75%;
+    }
+
+    &.offset-md-80{
+      margin-left: 80%;
+    }
+
+    &.offset-md-90{
+      margin-left: 90%;
+    }
+
+    //
+
+    &.col-md-10{
+      flex: 0 0 10%;
+      max-width: 10%;
+    }
+
+    &.col-md-20{
+      flex: 0 0 20%;
+      max-width: 20%;
+    }
+
+    &.col-md-25{
+      flex: 0 0 25%;
+      max-width: 25%;
+    }
+
+    &.col-md-33,
+    &.col-md-34{
+      flex: 0 0 33.3333%;
+      max-width: 33.3333%;
+    }
+
+    &.col-md-40{
+      flex: 0 0 40%;
+      max-width: 40%;
+    }
+
+    &.col-md-50{
+      flex: 0 0 50%;
+      max-width: 50%;
+    }
+
+    &.col-md-60{
+      flex: 0 0 60%;
+      max-width: 60%;
+    }
+
+    &.col-md-66,
+    &.col-md-67{
+      flex: 0 0 66.6666%;
+      max-width: 66.6666%;
+    }
+
+    &.col-md-75{
+      flex: 0 0 75%;
+      max-width: 75%;
+    }
+
+    &.col-md-80{
+      flex: 0 0 80%;
+      max-width: 80%;
+    }
+
+    &.col-md-90{
+      flex: 0 0 90%;
+      max-width: 90%;
+    }
+
+    &.col-md-100{
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+  }
+}
+
+/* Large and up */
+@media screen and (min-width: $min-width-large) {
+  .col{
+
+    &.offset-lg-10{
+      margin-left: 10%;
+    }
+
+    &.offset-lg-20{
+      margin-left: 20%;
+    }
+
+    &.offset-lg-25{
+      margin-left: 25%;
+    }
+
+    &.offset-lg-33,
+    &.offset-lg-34{
+      margin-left: 33.3333%;
+    }
+
+    &.col-lg-40{
+      flex: 0 0 40%;
+      max-width: 40%;
+    }
+
+    &.offset-lg-50{
+      margin-left: 50%;
+    }
+
+    &.col-lg-60{
+      flex: 0 0 60%;
+      max-width: 60%;
+    }
+
+    &.offset-lg-66,
+    &.offset-lg-67{
+      margin-left: 66.6666%;
+    }
+
+    &.offset-lg-75{
+      margin-left: 75%;
+    }
+
+    &.offset-lg-80{
+      margin-left: 80%;
+    }
+
+    &.offset-lg-90 {
+      margin-left: 90%;
+    }
+
+
+    &.col-lg-10{
+      flex: 0 0 10%;
+      max-width: 10%;
+    }
+
+    &.col-lg-20{
+      flex: 0 0 20%;
+      max-width: 20%;
+    }
+
+    &.col-lg-25{
+      flex: 0 0 25%;
+      max-width: 25%;
+    }
+
+    &.col-lg-33,
+    &.col-lg-34{
+      flex: 0 0 33.3333%;
+      max-width: 33.3333%;
+    }
+
+    &.col-lg-50{
+      flex: 0 0 50%;
+      max-width: 50%;
+    }
+
+    &.col-lg-66,
+    &.col-lg-67{
+      flex: 0 0 66.6666%;
+      max-width: 66.6666%;
+    }
+
+    &.col-lg-75{
+      flex: 0 0 75%;
+      max-width: 75%;
+    }
+
+    &.col-lg-80{
+      flex: 0 0 80%;
+      max-width: 80%;
+    }
+
+    &.col-lg-90{
+      flex: 0 0 90%;
+      max-width: 90%;
+    }
+
+    &.col-lg-100{
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+  }
+}

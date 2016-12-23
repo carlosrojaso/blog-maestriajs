@@ -1,26 +1,9 @@
 ---
 layout: default
+title: Home
 ---
-<div class="container">
-  <div class="row">
-    <div class="col-xs-12 col-md-9">
-      <div class="row">
-        {% assign posts = site.posts | where:"draft", "false" %}
-        {% for post in posts %}
-          {% if forloop.first %}
-          <div class="col-xs-12">
-            <section class="cover">
-              {% include article_home.html trucate="200" %}
-            </section>
-          </div>
-          {% else %}
-          <div class="col-xs-12 col-sm-6">
-            {% include article_home.html trucate="85" %}
-          </div>
-          {% endif %}
-        {% endfor %}
-      </div>
-    </div>
-    {% include right.html %}
-  </div>
-</div>
+{% include home/header.html %}
+{% include home/video.html %}
+{% include home/topics.html %}
+{% include home/banner-course.html %}
+{% include home/posts.html %}

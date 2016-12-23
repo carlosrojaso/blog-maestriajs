@@ -2,7 +2,7 @@
 layout: post
 title: "Construye un app para Eventos"
 date: 2016-12-06
-categories: ionic
+categories: ionic1
 tags: [publications, ionic1]
 comments: true
 author: nicobytes

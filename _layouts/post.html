@@ -1,36 +1,39 @@
 ---
 layout: default
 ---
+{% include blog/header.html %}
 {% assign author = site.authors[page.author] %}
-<div class="container">
-  <div class="col-xs-12 col-md-10">
-     <h1 class="title-article">{{ page.title }}</h1>
-     <div class="tags">
-      {% for tag in page.tags %}
-        <span class="tag">{{ tag }}</span>
-      {% endfor %} - 
-      {{ page.date | date: '%B %d, %Y' }} por 
-      <a href="{{ author.url }}"><strong>{{ author.name }}</strong></a> 
+<div class="content">
+  <div class="row wrap center">
+    <div class="col col-100 col-md-80 col-lg-80">
+      <h1 class="title-article">{{ page.title }}</h1>
+      <div class="tags">
+        {% for tag in page.tags %}
+          <span class="tag">{{ tag }}</span>
+        {% endfor %} - 
+        {{ page.date | date: '%B %d, %Y' }} por 
+        <a href="{{ author.url }}"><strong>{{ author.name }}</strong></a> 
+      </div>
     </div>
+    {% if page.repo %}
+    <div class="col col-100 col-md-20 col-lg-20">
+      <a href="{{ page.repo }}" class="btn btn-primary btn-round center-block" target="_blank">
+        <i class="fa fa-github" aria-hidden="true"></i> Ver demo
+      </a>
+    </div>
+    {% endif %}
+    {% if page.laucher %}
+    <div class="col col-100 col-md-20 col-lg-20">
+      <a href="{{ page.laucher }}" class="btn btn-primary btn-round center-block" target="_blank">
+        <i class="fa fa-github" aria-hidden="true"></i> Ver demo
+      </a>
+    </div>
+    {% endif %}
   </div>
-  {% if page.repo %}
-  <div class="col-xs-12 col-md-2 button-demo">
-    <a href="{{ page.repo }}" class="btn btn-primary btn-lg btn-block link-repo" target="_blank">
-      <i class="fa fa-github" aria-hidden="true"></i> Ver demo
-    </a>
-  </div>
-  {% endif %}
-  {% if page.laucher %}
-  <div class="col-xs-12 col-md-2 button-demo">
-    <a href="{{ page.laucher }}" class="btn btn-primary btn-lg btn-block link-repo" target="_blank">
-      <i class="fa fa-github" aria-hidden="true"></i> Ver demo
-    </a>
-  </div>
-  {% endif %}
 </div>
-<div class="container article-detail">
-  <div class="row">
-    <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
+<div class="content">
+  <div class="row wrap baseline">
+    <div class="col col-100 col-md-80 col-lg-80">
       <article>
         {{ content }}
         {% if page.repo %}
@@ -77,42 +80,25 @@ layout: default
         </p>
       </article>
       <hr/>
-      <div class="row">
-      <div class="col-xs-12 col-sm-12">
-      <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-      <!-- IonBookBlog recommend -->
-      <ins class="adsbygoogle"
-          style="display:block"
-          data-ad-client="ca-pub-8943241156434100"
-          data-ad-slot="1426017276"
-          data-ad-format="auto"></ins>
-      <script>
-      (adsbygoogle = window.adsbygoogle || []).push({});
-      </script>
-      </div>
-      </div>
       <section>
         <h3>Artículos relacionados:</h3>
-        <div class="row">
+        <div class="row wrap baseline">
           {% assign count = 0 %}
           {% for tag in page.tags %}
             {% for post in site.posts %}
-              {% if post.tags contains tag and count < site.count_related_posts and post.title != page.title %}
+              {% if post.tags contains tag and count < site.blog.count_related_posts and post.title != page.title %}
               {% assign count = count | plus: 1 %}
-              <div class="col-xs-12 col-sm-6">
-                {% include article_tags.html trucate="85" %}
+              <div class="col col-100 col-md-33 col-lg-33">
+               {% include general/article.html %}
               </div>
               {% endif %}
             {% endfor %}
           {% endfor %}
         </div>
       </section>
-      {% if page.comments %}{% include disqus.html %}{% endif %}
-      <div align="center">
-        <a href="#">
-        <i class="fa fa-arrow-circle-up fa-2x"></i>
-        </a>
-      </div>
+      {% include blog/disqus.html %}
+    </div>
+    <div class="col col-100 col-md-20 col-lg-20">
     </div>
   </div>
 </div>

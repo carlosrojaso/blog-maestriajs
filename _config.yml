@@ -1,27 +1,105 @@
-# Site settings
+# ==============================================================
+# General
 title: ion-book
 description: "Blog sobre Ionic Framework en Español"
-baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://ion-book.com" # the base hostname & protocol for your site
-book-url: "/"
-book-img: "http://i.imgur.com/cfKvAxi.jpg"
+keywords: "asas,as"
+baseurl: "/"
+url: "http://ion-book.com"
 cover: "http://i.imgur.com/cfKvAxi.jpg"
 timezone: "America/Bogota"
-
-courses-url: "http://bootcampwithus.usefedora.com/"
-
-sass:
-    style: compressed
-
-# Build settings
 markdown: kramdown
 markdown_ext:  markdown,mkdown,mkdn,mkd,md
-
-permalink: /:categories/:title
-
+permalink: /blog/:categories/:title/
 redcarpet:
   extensions: ["tables", "autolink", "strikethrough", "space_after_headers", "fenced_code_blocks"]
-  
+sass:
+    style: compressed
+# ==============================================================
+# Banner Course
+banner_course:
+  text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem reiciendis inventore velit, explicabo itaque autem.'
+  btn_text: 'Ver Curso'
+  link: ''
+# ==============================================================
+# Menu Header
+menu_header:
+  - title: Home
+    url: '/'
+    target: '_self'
+  - title: Blog
+    url: '/blog'
+    target: '_self'
+  - title: Cursos
+    url: '/talks'
+    target: '_self'
+# ==============================================================
+# Menu Footer
+menu_footer:
+  - title: Home
+    url: '/'
+    target: '_self'
+  - title: Blog
+    url: '/blog'
+    target: '_self'
+  - title: Cursos
+    url: '/talks'
+    target: '_self'
+# ==============================================================
+# Social Links
+social_links: 
+  - url: "https://twitter.com/ion_book"
+    title: "Twiiter"
+    icon: "icon-social-twitter"
+  - url: "https://www.facebook.com/ionbook/"
+    title: "Facebook"
+    icon: "icon-social-facebook"
+  - url: "http://goo.gl/forms/ZCEc0cr3jydgK2wv1"
+    title: "Slack"
+    icon: "icon-slack"
+  - url: "http://goo.gl/forms/ZCEc0cr3jydgK2wv1"
+    title: "Slack"
+    icon: "icon-social-youtube"
+# ==============================================================
+# Home Page
+home:
+  banner_title: "Aprende <span class='underline'>Ionic 2</span> y desarrolla increibles apps para Android y IOS."
+  banner_text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem reiciendis inventore velit, explicabo itaque autem."
+  topics_title: "¿Que aprenderas?"
+  topics_text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem reiciendis inventore velit, explicabo itaque autem."
+  topics_video: "lBTCB7yLs8Y"
+  topics:
+    - title: 'Conecta con Firebase 3'
+      icon: 'icon-fireball'
+      text: 'Conecta bases de datos en tiempo real con Firebase Database y Firebase Auth.'
+    - title: 'Enviar Push Notifications'
+      icon: 'icon-android-notifications'
+      text: 'Aprende a implementar el sistema de mensajeria Push.'
+    - title: 'Implementa Ionic Native'
+      icon: 'icon-ionic'
+      text: 'Accese al recursos nativos del dispositivo, como Camera, Geolocation etc.'
+    - title: 'Conexion a API REST'
+      icon: 'icon-code-working'
+      text: 'Conecta tu servicio backend usando observables .'
+    - title: 'Angular 2 y Typescript '
+      icon: 'icon-social-angular'
+      text: 'Aprende Angular 2 y Typescript para desarrollar con Ionic 2.'
+    - title: 'UI / UX usando SASS'
+      icon: 'icon-social-sass'
+      text: 'Modifica y crea tu propia interfaz haciendo uso de SASS.'
+    - title: 'Reactive Forms & Validations'
+      icon: 'icon-android-list'
+      text: 'Aprende a controlar formularios y manejar poderosas validaciones.'
+    - title: 'Publica tu app en tiendas'
+      icon: 'icon-upload'
+      text: 'Compila y publica tu increible app en Google play y App store'
+    - title: 'Aprende con buenas practicas'
+      icon: 'icon-android-favorite'
+      text: 'Sigue las mejores practicas entendiendo la arquirectuta de Ionic 2.'
+  blog_title: 'Nuestro Blog'
+  blog_text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem reiciendis inventore velit, explicabo itaque autem.'
+  blog_btn_text: 'Ver más articulos'
+# ==============================================================
+# Authors
 authors:
   nicobytes:
     name: Nicolas Molina
@@ -59,16 +137,6 @@ authors:
         icon: "fa-linkedin"
       - link: "https://www.facebook.com/daniel.l.sanchez.501"
         icon: "fa-facebook"
-    #the_luchillo:
-    # name: "Carlos Esteban Lopez"
-    # url: "/the_luchillo"
-    # avatar: "http://i.cubeupload.com/pHepUB.jpg"
-    # bio: "Soy Desarrollador de aplicaciones digitales, auto-didacta, amante de la tecnologia y el arte digital, estudiante de Ing. de Sistemas, 6 años de estudio auto-didacta y desarrollo profesionalmente desde 2014, me gusta aportar a la comunidad con cursos de desarrollo, proyectos open source y en foros de desarrollo."
-    # social_links:
-    #   - link: "https://twitter.com/the_luchillo"
-    #     icon: "fa-twitter"
-    #   - link: "https://github.com/Luchillo"
-    #     icon: "fa-github"
   unjavascripter:
     name: "Diego Coy"
     url: "/unjavascripter"
@@ -102,18 +170,8 @@ authors:
         icon: "fa-linkedin"
       - link: "https://www.facebook.com/mayrititis"
         icon: "fa-facebook"
-
-social_links: 
-  - url: "https://twitter.com/ion_book"
-    title: "Twiiter"
-    icon: "fa-twitter"
-  - url: "https://www.facebook.com/ionbook/"
-    title: "Facebook"
-    icon: "fa-facebook"
-  - url: "http://goo.gl/forms/ZCEc0cr3jydgK2wv1"
-    title: "Slack"
-    icon: "fa-slack"
-
+# ==============================================================
+# Publications
 publications:
   - url: "http://www.paywithapost.de/pay?id=b1b5bde8-da59-4bc4-b6f9-1b62231c2884"
     title: "Construye un App de Fotos"
@@ -127,5 +185,17 @@ publications:
     title: "Construye un App para eventos"
     cover: "https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2Fion-events%2FccC0xr.png?alt=media"
     summaty: "Realiza un App para eventos con Ionic 1, con REST API"
+# ==============================================================
+# Blog
+blog:
+  count_related_posts: 3
+# ==============================================================
+# Footer
+footer:
+  text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem reiciendis inventore velit, explicabo itaque autem.'
+# ==============================================================
+# Subscribe
+subscribe:
+  btn_text: 'Subscribete'
+  success_text: 'Gracias! Ahora estas suscrito a ion-book.'
 
-count_related_posts: 4

@@ -1,7 +1,9 @@
 <!DOCTYPE html>
-<html>
-  {% include head.html %}
+<html amp lang="en">{% include general/head.html %}
   <body>
-    {% include nav.html %}{{ content }}{% include footer.html %}{% include js.html %}
+    {% include general/sidebar.html %}
+    {{ content }}
+    {% include general/footer.html %}
+    {% include general/js.html %}
   </body>
 </html>

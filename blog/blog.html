@@ -1,0 +1,22 @@
+---
+layout: default
+title: Blog
+permalink: /blog/
+---
+{% include blog/header.html %}
+<div class="content">
+  <div class="row wrap baseline">
+    {% assign posts = site.posts | where:"draft", "false" %}
+    {% for post in posts %}
+    {% if forloop.first %}
+    <div class="col col-100">
+      {% include blog/article_cover.html %}
+    </div>
+    {% else %}
+    <div class="col col-100 col-md-33 col-lg-33">
+      {% include general/article.html %}
+    </div>
+    {% endif %}
+    {% endfor %}
+  </div>
+</div>

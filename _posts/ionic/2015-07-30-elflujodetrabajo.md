@@ -2,7 +2,7 @@
 layout: post
 title: "El Flujo de Trabajo!"
 date: 2015-07-30  
-categories: ionic
+categories: ionic1
 tags: [tips, ionic1]
 comments: true
 author: carlosrojas
