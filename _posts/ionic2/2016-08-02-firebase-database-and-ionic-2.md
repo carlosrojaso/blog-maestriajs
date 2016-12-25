@@ -4,7 +4,6 @@ title: "Firebase Database + Ionic 2"
 date: 2016-08-02
 tags: [firebase, demos, ionic2]
 categories: ionic2
-comments: true
 laucher: "/launcher/demo104"
 author: nicobytes
 cover: "http://i.cubeupload.com/T62oZF.jpg"

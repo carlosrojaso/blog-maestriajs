@@ -4,7 +4,6 @@ title: "Animando items con Ionic 2"
 date: 2016-12-11
 tags: [animations, demos, ionic2]
 categories: ionic2
-comments: true
 laucher: "/launcher/demo108"
 author: nicobytes
 cover: "https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/demos%2Fdemo108%2Fitems.jpg?alt=media"

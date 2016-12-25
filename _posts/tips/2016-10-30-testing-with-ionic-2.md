@@ -4,7 +4,6 @@ title: "Testing en Angular 2 / Ionic 2"
 date: 2016-10-30
 tags: [testing, ionic2]
 categories: tips
-comments: true
 author: nicobytes
 cover: "https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2Ftdd%2Ftdd.jpg?alt=media"
 ---

@@ -4,7 +4,6 @@ title: "¿Qué es Ionic Native?"
 tags: [native, ionic2]  
 date: 2016-07-05
 categories: ionic2
-comments: true
 author: nicobytes
 cover: "http://i.imgur.com/FSAJb3n.png"
 ---

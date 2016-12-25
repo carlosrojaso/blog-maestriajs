@@ -4,7 +4,6 @@ title: "¿Qué es ionic generator?"
 tags: [tools, ionic2]
 date: 2016-06-20
 categories: ionic2
-comments: true
 author: nicobytes
 cover: "http://i.imgur.com/rhTAWtE.jpg"
 ---

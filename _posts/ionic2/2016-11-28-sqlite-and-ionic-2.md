@@ -4,7 +4,6 @@ title: "SQLite + Ionic 2 en 6 pasos"
 date: 2016-11-28
 tags: [native, demos, ionic2]
 categories: ionic2
-comments: true
 repo: "https://github.com/ion-book/demo107"
 author: nicobytes
 cover: "https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/demos%2Fdemo107%2FConstruye%20una%20INCREDIBLE%20app%20de%20tareas.jpg?alt=media"

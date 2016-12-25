@@ -4,7 +4,6 @@ title: "Hora de actualizar"
 date: 2016-08-17
 categories: news
 tags: [release, ionic2]
-comments: true
 author: nicobytes
 cover: "http://i.cubeupload.com/EL4YUX.jpg"
 ---

@@ -2,5 +2,5 @@
 layout: author
 title: "Carlos Rojas"
 author: carlosrojas
-permalink: /carlosrojas/
+permalink: /blog/authors/carlosrojas/
 ---

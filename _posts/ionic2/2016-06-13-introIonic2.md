@@ -4,7 +4,6 @@ title: "Introducción a Ionic 2"
 tags: [tips, ionic2]
 date: 2016-06-13
 categories: ionic2
-comments: true
 author: carlosrojas
 cover: "http://img.youtube.com/vi/kWZcdgLbWQI/hqdefault.jpg"
 ---

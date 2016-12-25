@@ -4,7 +4,6 @@ title: "Fundamentos de SASS"
 date: 2016-08-18
 tags: [ui, ionic2]
 categories: ionic2
-comments: true
 author: carlosrojas
 cover: "http://sass-lang.com/assets/img/styleguide/color-1c4aab2b.png"
 ---

@@ -1,7 +1,7 @@
 ---
 layout: publications
 title: Publicaciones
-permalink: /blog/publications/
+permalink: /publications/
 ---
 ## **Publicaciones**
 

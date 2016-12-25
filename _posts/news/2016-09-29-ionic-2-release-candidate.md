@@ -4,7 +4,6 @@ title: "Ionic 2 Release Candidate!"
 date: 2016-09-29
 tags: [release, ionic2]
 categories: news
-comments: true
 author: nicobytes
 cover: "http://blog.ionic.io/wp-content/uploads/2016/09/ionicrc0-1024x304.png"
 ---

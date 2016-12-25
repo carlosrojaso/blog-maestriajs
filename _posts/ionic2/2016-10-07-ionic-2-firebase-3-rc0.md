@@ -4,7 +4,6 @@ title: "Conectando Ionic 2 con Firebase 3 en RC0"
 tags: [firebase, ionic2]
 date: 2016-10-12
 categories: ionic2
-comments: true
 author: javebratt
 cover: "http://i.imgur.com/5mTwi1e.jpg"
 draft: false

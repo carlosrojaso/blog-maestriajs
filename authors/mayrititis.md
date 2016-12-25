@@ -2,5 +2,5 @@
 layout: author
 title: "Mayra Rodríguez"
 author: mayrititis
-permalink: /mayrititis/
+permalink: /blog/authors/mayrititis/
 ---

@@ -4,7 +4,6 @@ title: "Google Maps JS + Ionic 2 en 4 pasos"
 date: 2016-08-30
 tags: [maps, demos, ionic2]
 categories: ionic2
-comments: true
 laucher: "/launcher/demo105"
 author: nicobytes
 cover: "http://i.cubeupload.com/gxxOpn.png"

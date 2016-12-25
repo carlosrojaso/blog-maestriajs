@@ -1,6 +1,6 @@
 ---
 layout: category
-title: ionic 1
+title: Ionic 1
 category: ionic1
 permalink: /blog/ionic1/
 ---

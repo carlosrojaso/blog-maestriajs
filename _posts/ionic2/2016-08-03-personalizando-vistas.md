@@ -4,7 +4,6 @@ title: "Personalizando vistas en Ionic 2"
 date: 2016-08-03
 tags: [ui, ionic2]
 categories: ionic2
-comments: true
 author: carlosrojas
 cover: "http://sass-lang.com/assets/img/styleguide/color-1c4aab2b.png"
 ---

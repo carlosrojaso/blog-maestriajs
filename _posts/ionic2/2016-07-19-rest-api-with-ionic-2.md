@@ -4,7 +4,6 @@ title: "Conectado una REST API con Ionic 2"
 date: 2016-07-19
 tags: [rest, demos, ionic2]
 categories: ionic2
-comments: true
 laucher: "/launcher/demo103"
 author: nicobytes
 cover: "http://i.imgur.com/tDpJiCR.jpg"

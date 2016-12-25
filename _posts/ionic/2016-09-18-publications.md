@@ -4,9 +4,9 @@ title: "Construye un app de Fotos"
 date: 2016-09-18
 categories: ionic1
 tags: [publications, ionic1]
-comments: true
 author: nicobytes
 cover: "http://i.cubeupload.com/ysfDTY.jpg"
+draft: true
 ---
 
 > Ion book ahora tiene una nueva sección llamada [**publicaciones**]({{site.urlblog}}/publications/){:target="_blank"}, serán completos e-books con una guía paso a paso para desarrollar aplicaciones desde cero hasta niveles más avanzados. Esta primer publicación se trata de realizar **IonGram** un App de fotos con **Ionic 1**, este es tu punto de partida.

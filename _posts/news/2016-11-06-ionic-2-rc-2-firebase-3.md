@@ -2,9 +2,8 @@
 layout: post
 title: "Firebase 3  + Ionic 2 RC 2 en 4 pasos"
 date: 2016-11-14
-categories: news
+categories: ionic2
 tags: [firebase, ionic2]
-comments: true
 author: nicobytes
 cover: "https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2Fionic-2-rc2-firebase-3%2FFirebase%203%20%2B%20Ionic%202.png?alt=media"
 ---

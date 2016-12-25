@@ -4,7 +4,6 @@ title: "App con múltiples idiomas en 6 pasos."
 date: 2016-10-04
 tags: [libs, demos, ionic2]
 categories: ionic2
-comments: true
 laucher: "/launcher/demo106"
 author: nicobytes
 cover: "https://s17.postimg.org/tneheudov/translate.jpg"

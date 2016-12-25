@@ -4,7 +4,6 @@ title: "Forms con IonicV2"
 date: 2016-06-09
 tags: [forms, demos, ionic2]
 categories: ionic2
-comments: true
 laucher: "/launcher/demo101"
 author: nicobytes
 cover: "http://i.imgur.com/PWBxv0C.png"

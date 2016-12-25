@@ -4,7 +4,6 @@ title: "Angular 2 Final Release."
 date: 2016-09-27
 categories: news
 tags: [release, angular2]
-comments: true
 author: carlosrojas
 cover: "http://i.imgur.com/ZiY7lT8.jpg"
 ---

@@ -1,5 +1,5 @@
 {% if post.cover %}
-{% assign author = site.authors[post.author] %}
+{% for item in site.authors %}{% if item.id == post.author%}{% assign author = item %}{% endif %}{% endfor %}
 <article class="article">
   <a href="{{ post.url }}">
     <amp-img src="{{ post.cover }}" alt="{{ post.title }}" width="1024" height="512" layout="responsive"></amp-img>

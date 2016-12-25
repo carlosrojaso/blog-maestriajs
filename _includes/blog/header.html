@@ -12,13 +12,9 @@
           <li>
             <a {% if page.layout == "default" %}class="active"{% endif %} href="{{ "/blog"  }}">Todo</a>
           </li>
-          {% for item_page in site.pages %}
-            {% if item_page.layout == "category" %}
-            <li>
+          {% for item_page in site.pages %}{% if item_page.layout == "category" %}<li>
               <a {% if page.title == item_page.title %}class="active"{% endif %} href="{{ item_page.url }}">{{ item_page.title }}</a>
-            </li>
-            {% endif %}
-          {% endfor %}
+          </li>{% endif %}{% endfor %}
         </ul>
       </div>
     </div>

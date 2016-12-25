@@ -4,7 +4,6 @@ title: "Google Maps con Markers"
 date: 2016-10-19
 tags: [maps, demos, ionic2]
 categories: ionic2
-comments: true
 repo: "https://github.com/mayrarodriguez1709/ionic2-google-maps-markers"
 author: mayrititis
 cover: "http://i.cubeupload.com/y2EKrQ.jpg"
