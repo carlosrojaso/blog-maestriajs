@@ -18,4 +18,8 @@ Hace unas semanas el equipo de Ionic libero una tienda Tienda para que todos los
 
 En este video les comparto un poco de que se trata.
 
-[<img src="http://img.youtube.com/vi/URobJP0uPa8/hqdefault.jpg" />](http://j.mp/1EfRHHR)
+<div class="row">
+  <div class="col col-100 col-md-50 col-lg-50">
+    <a href="http://j.mp/1EfRHHR" target="_blank"><amp-img width="480" height="360" layout="responsive" src="http://img.youtube.com/vi/URobJP0uPa8/hqdefault.jpg"></amp-img></a>
+  </div>
+</div>

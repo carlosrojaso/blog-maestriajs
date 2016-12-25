@@ -11,19 +11,19 @@ cover: "http://i.imgur.com/9Uq2Naw.jpg"
 remember: true
 ---
 
-> En los últimos artículos hemos visto una [introducción a Ionic 2](http://www.ion-book.com/ionic2/introIonic2){:target="_blank"} y como crear un [hola mundo](http://www.ion-book.com/ionic2/ionic2){:target="_blank"} con Ionic 2, ahora vamos hacer uso de [ionic native](http://www.ion-book.com/ionic2/ionic-native){:target="_blank"} para usar la cámara del dispositivo y tomar una fotografía.
+> En los últimos artículos hemos visto una [introducción a Ionic 2]({{site.urlblog}}/ionic2/introIonic2){:target="_blank"} y como crear un [hola mundo]({{site.urlblog}}/ionic2/ionic2){:target="_blank"} con Ionic 2, ahora vamos hacer uso de [ionic native]({{site.urlblog}}/ionic2/ionic-native){:target="_blank"} para usar la cámara del dispositivo y tomar una fotografía.
 
-<img class="img-responsive" src="http://i.imgur.com/9Uq2Naw.jpg" alt="camera-and-ionic">
+<amp-img width="810" height="540" layout="responsive" src="http://i.imgur.com/9Uq2Naw.jpg"></amp-img>
 
 # Actualización (06/11/2016)
 <hr/>
-Hemos actualizado este demo con el último release de [Ionic 2 RC 2](http://www.ion-book.com/news/ionic-2-rc-2){:target="_blank"}, si aun estas en alguna de las versiones Beta puedes seguir estos pasos [Steps to Upgrade](https://github.com/driftyco/ionic/blob/master/CHANGELOG.md#steps-to-upgrade-to-rc0){:target="_blank"}.
+Hemos actualizado este demo con el último release de [Ionic 2 RC 2]({{site.urlblog}}/news/ionic-2-rc-2){:target="_blank"}, si aun estas en alguna de las versiones Beta puedes seguir estos pasos [Steps to Upgrade](https://github.com/driftyco/ionic/blob/master/CHANGELOG.md#steps-to-upgrade-to-rc0){:target="_blank"}.
 
 <hr/>
 
 # Paso 1: Iniciando el proyecto
 
-Lo primero que haremos será iniciar un nuevo proyecto con ionic, si no lo recuerdas puedes ver esto con mas detalle en la [Introduccion a Ionic 2](http://www.ion-book.com/ionic2/ionic2){:target="_blank"}.
+Lo primero que haremos será iniciar un nuevo proyecto con ionic, si no lo recuerdas puedes ver esto con mas detalle en la [Introduccion a Ionic 2]({{site.urlblog}}/ionic2/ionic2){:target="_blank"}.
 Vamos a nuestra terminal y ejecutamos:
 
 ```
@@ -38,7 +38,11 @@ cd demo102
 
 Como iniciamos nuestro proyecto con el template **blank** tendremos una estructura básica del proyecto, la carpeta en la que vamos a trabajar sera `src`:
 
-<img class="img-responsive center-block" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/demos%2Fdemo102%2FScreenshot%20from%202016-11-06%2012-46-16.png?alt=media" alt="folders">
+<div class="row">
+  <div class="col col-100 col-md-50 col-lg-50">
+    <amp-img width="500" height="493" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/demos%2Fdemo102%2FScreenshot%20from%202016-11-06%2012-46-16.png?alt=media"></amp-img>
+  </div>
+</div>
 
 Agregamos la plataforma para la que vamos a desarrollar:
 
@@ -62,7 +66,7 @@ Esto lo que hará, es actualizar el archivo de `package.json` con las dependenci
 
 # Paso 2: Implementando la cámara
 
-Hace poco hablamos sobre [ionic-native](http://www.ion-book.com/ionic2/ionic-native){:target="_blank"} y ahora sera mas facil el consumo de cualquier API nativa con el uso de esta, ahora vamos nuestro archivo `home.ts` y implementaremos el uso de la cámara de esta manera:
+Hace poco hablamos sobre [ionic-native]({{site.urlblog}}/ionic2/ionic-native){:target="_blank"} y ahora sera mas facil el consumo de cualquier API nativa con el uso de esta, ahora vamos nuestro archivo `home.ts` y implementaremos el uso de la cámara de esta manera:
 
 {% highlight javascript linenos %}
 import {Component} from '@angular/core';
@@ -96,7 +100,7 @@ export class HomePage {
 }
 {% endhighlight %}
 
-En la *línea 2* importamos la cámara desde [ionic-native](http://www.ion-book.com/ionic2/ionic-native){:target="_blank"}, luego en la *línea 10* tendremos la variable `image` de tipo string que guardara la imagen, en la *línea 12* dejaremos un constructor vacío, ahora desde la *línea 14 a la línea 28* tendremos la definición de `getPicture` para implementar el uso de cámara.
+En la *línea 2* importamos la cámara desde [ionic-native]({{site.urlblog}}/ionic2/ionic-native){:target="_blank"}, luego en la *línea 10* tendremos la variable `image` de tipo string que guardara la imagen, en la *línea 12* dejaremos un constructor vacío, ahora desde la *línea 14 a la línea 28* tendremos la definición de `getPicture` para implementar el uso de cámara.
 
 En la *línea 15* definimos las opciones al momento de tomar la fotografía, estas opciones las podrás encontrar en la documentación de cordova [aquí](https://github.com/apache/cordova-plugin-camera#cameracameraoptions--object){:target="_blank"}. Luego con el uso de `Camera.getPicture` lanzamos la cámara del dispositivo, si todo salió bien y toma la fotografía, ejecutará la promesa y en la *línea 22* la fotografía tomada se la asignamos a nuestra variable `image`, la imagen nos la retorna en `Base64` por esto debemos indicar `data:image/jpeg;base64,` y concatenarlo con la `imageData` y si algo sale mal se mostrará un error en consola haciendo uso de `catch`.
 
@@ -138,4 +142,4 @@ ionic package build android
 # Resultado:
 
 <br/>
-<img class="img-responsive" src="http://i.imgur.com/OA55G0K.png" alt="result">  
+<amp-img width="641" height="1068" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/demos%2Fdemo102%2FScreenshot%20from%202016-11-06%2012-46-16.png?alt=media"></amp-img>

@@ -9,12 +9,16 @@ author: carlosrojas
 cover: "http://img.youtube.com/vi/O17OWyx08Cg/0.jpg"
 ---
 
-<a href="http://www.youtube.com/watch?v=O17OWyx08Cg"><img class="img-responsive" src="http://img.youtube.com/vi/O17OWyx08Cg/0.jpg" alt="Firebase"/></a>
+<div class="row">
+  <div class="col col-100 col-md-50 col-lg-50">
+    <a href="http://www.youtube.com/watch?v=O17OWyx08Cg" target="_blank">
+      <amp-img width="480" height="360" layout="responsive" src="http://img.youtube.com/vi/O17OWyx08Cg/0.jpg"></amp-img>
+    </a>
+  </div>
+</div>
 
 Hace unos dias se libero una nueva versión de Firebase llena de nuevas cosas interesantes, es por eso que decidimos
 actualizar nuestro starter [Firebase Auth Starter](http://market.ionic.io/starters/firebaseauthstarter) y de esta manera prepararnos para lo que se viene.
-
-
 
 Sus caracteristicas actuales son:
 

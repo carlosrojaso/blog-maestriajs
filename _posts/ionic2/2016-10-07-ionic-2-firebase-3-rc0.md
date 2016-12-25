@@ -10,7 +10,7 @@ cover: "http://i.imgur.com/5mTwi1e.jpg"
 draft: false
 ---
 
-<img src="http://i.imgur.com/5mTwi1e.jpg" class="img-responsive" />
+<amp-img width="800" height="292" layout="responsive" src="http://i.imgur.com/5mTwi1e.jpg"></amp-img>
 
 Post en [Ingles](https://javebratt.com/ionic2rc0-firebase-js-sdk/)
 
@@ -321,7 +321,7 @@ module.exports = rollupConfig;
 
 Entonces, abre tu terminal y ejecuta <code>$ npm run build</code>
 
-<img class="img-responsive" src="https://i1.wp.com/javebratt.com/wp-content/uploads/2016/10/hulk.png?resize=1024%2C576&ssl=1"/>
+<amp-img width="1024" height="576" layout="responsive" src="https://i1.wp.com/javebratt.com/wp-content/uploads/2016/10/hulk.png?resize=1024%2C576&ssl=1"></amp-img>
 
 Ahora que sabemos que estamos en el archivo correcto (**scripts/rollup.config.js**) vamos a agregar 2 cosas.
 

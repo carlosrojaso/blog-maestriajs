@@ -9,9 +9,13 @@ author: carlosrojas
 cover: "http://sass-lang.com/assets/img/styleguide/color-1c4aab2b.png"
 ---
 
-<img class="img-responsive" src="http://sass-lang.com/assets/img/styleguide/color-1c4aab2b.png" alt="sass logo">
+<div class="row">
+  <div class="col col-100 col-md-50 col-lg-50">
+    <amp-img width="427" height="320" layout="responsive" src="http://sass-lang.com/assets/img/styleguide/color-1c4aab2b.png" alt="firebase-database-and-ionic-2"></amp-img>
+  </div>
+</div>
 
-Como hablamos [anteriormente](http://www.ion-book.com/ionic2/personalizando-vistas) la manera de personalizar nuestras vistas en ionic 2 es a traves de los archivos SASS.
+Como hablamos [anteriormente]({{site.urlblog}}/ionic2/personalizando-vistas) la manera de personalizar nuestras vistas en ionic 2 es a traves de los archivos SASS.
 
 En este post vamos a hablar sobre los Fundamentos de SASS, para que de esta manera no tengamos problemas al realizar nuestras modificaciones.
 

@@ -16,7 +16,7 @@ cover: "http://i.imgur.com/tDpJiCR.jpg"
 
 # Paso 1: Iniciando el proyecto
 
-Lo primero que haremos será iniciar un nuevo proyecto con ionic, si no lo recuerdas puedes ver esto con mas detalle en la [Introduccion a Ionic 2](http://www.ion-book.com/ionic2/ionic2){:target="_blank"}.
+Lo primero que haremos será iniciar un nuevo proyecto con ionic, si no lo recuerdas puedes ver esto con mas detalle en la [Introduccion a Ionic 2]({{site.urlblog}}/ionic2/ionic2){:target="_blank"}.
 Vamos a nuestra terminal y ejecutamos:
 
 ```
@@ -35,7 +35,7 @@ Como iniciamos nuestro proyecto con el template **blank** tendremos una estructu
 
 # Paso 2: Crear provider
 
-Vamos a usar [ionic generator](http://www.ion-book.com/ionic2/ionic-generator){:target="_blank"} para crear nuestro nuevo proveedor de datos
+Vamos a usar [ionic generator]({{site.urlblog}}/ionic2/ionic-generator){:target="_blank"} para crear nuestro nuevo proveedor de datos
 
 ```
 ionic g provider userService
@@ -139,7 +139,7 @@ export class UserService {
 }
 {% endhighlight %}
 
-Como vemos en *la línea 19*  hacemos la solicitud correspondiente, en *la línea 20* procesamos la solicitud convirtiéndola en formato JSON, esto nos retorna un [Observable](http://www.ion-book.com/ionic2/observables-angular2){:target="_blank"} al cual nos suscribimos y luego en *la línea 22* obtenemos la data con `data.results`, finalmente retornamos con `resolve(this.data)`.
+Como vemos en *la línea 19*  hacemos la solicitud correspondiente, en *la línea 20* procesamos la solicitud convirtiéndola en formato JSON, esto nos retorna un [Observable]({{site.urlblog}}/ionic2/observables-angular2){:target="_blank"} al cual nos suscribimos y luego en *la línea 22* obtenemos la data con `data.results`, finalmente retornamos con `resolve(this.data)`.
 
 # Paso 3: Inyectar el servicio en el Ctrl.
 

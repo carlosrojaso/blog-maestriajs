@@ -9,12 +9,11 @@ laucher: "/launcher/demo108"
 author: nicobytes
 cover: "https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/demos%2Fdemo108%2Fitems.jpg?alt=media"
 remember: true
-draft: true
 ---
 
-> Angular 2 integra [Web Animations API](https://web-animations.github.io/web-animations-demos/#waves/){:target="_blank"} para ejecutar animaciones en css que aprovechan la GPU del dispositivo y se puedan controlar con JS, sin duda esto provee un mayor control en las animaciones que podemos hacer.
+> Angular 2 integra [Web Animations API](https://web-animations.github.io/web-animations-/ionic2/#waves/){:target="_blank"} para ejecutar animaciones en css que aprovechan la GPU del dispositivo y se puedan controlar con JS, sin duda esto provee un mayor control en las animaciones que podemos hacer.
 
-<img class="img-responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/demos%2Fdemo108%2Fitems.jpg?alt=media" alt="SQLite + Ionic 2 en 5 pasos">
+<amp-img width="1024" height="512" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/demos%2Fdemo108%2Fitems.jpg?alt=media" alt="Animando items con Ionic 2"></amp-img>
 
 Para hacer animaciones en Angular 2 / Ionic 2 tenemos varias funciones que son de gran utilidad para controlar y crear las animaciones:
 
@@ -54,20 +53,20 @@ transition('inactive => active', animate('100ms ease-in')),
 transition('active => inactive', animate('100ms ease-out'))
 {% endhighlight %}
 
-<img class="img-responsive" src="https://angular.io/resources/images/devguide/animations/ng_animate_transitions_inactive_active.png" alt="transitions">
+<amp-img width="1448" height="524" layout="responsive" src="https://angular.io/resources/images/devguide/animations/ng_animate_transitions_inactive_active.png" alt="transitions"></amp-img>
 
 En las **transitions** también podemos agregar estilos que solo se aplican durante la animación y que no harán parte de **state**.
 
 En angular 2 tenemos **dos** estados muy útiles, uno es el comodín (The wildcard state) *, este se refiere a cualquier estado y es muy útil cuando no hay un estado definido.
 
-<img class="img-responsive" src="https://angular.io/resources/images/devguide/animations/ng_animate_transitions_inactive_active_wildcards.png" alt="transitions">
+<amp-img width="1448" height="992" layout="responsive" src="https://angular.io/resources/images/devguide/animations/ng_animate_transitions_inactive_active_wildcards.png" alt="transitions"></amp-img>
 
 Y el segundo estado es **void** que es llamado automáticamente cuando es ejecutada cualquier animación y será muy util para ejecutar las animaciones cuando un item es agregado o un ítem es eliminado.
  
 - Enter: `void => *`
 - Leave: `* => void `
 
-<img class="img-responsive center-block" src="https://angular.io/resources/images/devguide/animations/animation_enter_leave.gif" alt="transitions">
+<img class="center-block" src="https://angular.io/resources/images/devguide/animations/animation_enter_leave.gif" alt="transitions">
 
 ## Trigger:
 
@@ -102,7 +101,7 @@ Con estas bases y conceptos ahora podremos hacer un demo sencillo donde haremos 
 
 ## Paso 1: Iniciando el proyecto
 
-Lo primero que haremos será iniciar un nuevo proyecto con ionic, si no lo recuerdas puedes ver esto con mas detalle en la [Introduccion a Ionic 2](http://www.ion-book.com/ionic2/ionic2){:target="_blank"}.
+Lo primero que haremos será iniciar un nuevo proyecto con ionic, si no lo recuerdas puedes ver esto con mas detalle en la [Introduccion a Ionic 2]({{site.urlblog}}/ionic2/ionic2){:target="_blank"}.
 Vamos a nuestra terminal y ejecutamos:
 
 ```

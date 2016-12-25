@@ -13,18 +13,18 @@ remember: true
 
 > La interacción con mapas en aplicaciones móviles es muy común y en este artículo explicaremos cómo integrar **Google Maps** usando el SDk de JS con **Ionic 2**.
 
-<img class="img-responsive" src="http://i.cubeupload.com/gxxOpn.png" alt="firebase-database-and-ionic-2">
+<amp-img width="1200" height="630" layout="responsive" src="http://i.cubeupload.com/gxxOpn.png"></amp-img>
 
 # Actualización (06/11/2016)
 <hr/>
-Hemos actualizado este demo con el último release de [Ionic 2 RC 2](http://www.ion-book.com/news/ionic-2-rc-2){:target="_blank"}, si aun estas en alguna de las versiones Beta puedes seguir estos pasos [Steps to Upgrade](https://github.com/driftyco/ionic/blob/master/CHANGELOG.md#steps-to-upgrade-to-rc0){:target="_blank"}.
+Hemos actualizado este demo con el último release de [Ionic 2 RC 2]({{site.urlblog}}/news/ionic-2-rc-2){:target="_blank"}, si aun estas en alguna de las versiones Beta puedes seguir estos pasos [Steps to Upgrade](https://github.com/driftyco/ionic/blob/master/CHANGELOG.md#steps-to-upgrade-to-rc0){:target="_blank"}.
 <hr/>
 
 Hay dos maneras de implementar google maps en nuestras aplicaciones, una es manejando el **SDK de JS** y la otra manera es integrar el **SDK nativo** al proyecto, en este artículo veremos cómo hacerlo con el SDK de js y en futuros artículos hablaremos de cómo implementar el SDK nativo.
 
 # Paso 1: Iniciando el proyecto
 
-Lo primero que haremos será iniciar un nuevo proyecto con ionic, si no lo recuerdas puedes ver esto con mas detalle en la [Introduccion a Ionic 2](http://www.ion-book.com/ionic2/ionic2){:target="_blank"}.
+Lo primero que haremos será iniciar un nuevo proyecto con ionic, si no lo recuerdas puedes ver esto con mas detalle en la [Introduccion a Ionic 2]({{site.urlblog}}/ionic2/ionic2){:target="_blank"}.
 Vamos a nuestra terminal y ejecutamos:
 
 ```
@@ -41,7 +41,7 @@ Como iniciamos nuestro proyecto con el template **blank** tendremos una estructu
 
 # Paso 2: Agregar Type
 
-Este proceso se hace para que dentro de nuestro proyecto [Typescript](http://www.ion-book.com/ionic2/typescript){:target="_blank"} reconozca las variables del SDK de google y las podamos usar sin problema.
+Este proceso se hace para que dentro de nuestro proyecto [Typescript]({{site.urlblog}}/ionic2/typescript){:target="_blank"} reconozca las variables del SDK de google y las podamos usar sin problema.
 
 ```
 npm install --save @types/googlemaps
@@ -151,5 +151,5 @@ ionic serve -l
 
 <br/>
 <a target="_blank" href="{{ page.repo }}">
-  <img class="img-responsive" src="http://i.cubeupload.com/43XZ5H.png" alt="result">
+  <amp-img width="962" height="572" layout="responsive" src="http://i.cubeupload.com/43XZ5H.png"></amp-img>
 </a>

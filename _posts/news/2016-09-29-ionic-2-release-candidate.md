@@ -11,19 +11,23 @@ cover: "http://blog.ionic.io/wp-content/uploads/2016/09/ionicrc0-1024x304.png"
 
 > Ayer tuvimos una gran noticia, **Ionic 2 release candidate** ya está aquí y hay cambios muy fuertes en la estructura del proyecto, pero trae grandes beneficios que serán de los que hablaremos hoy!
 
-<img class="img-responsive" src="http://blog.ionic.io/wp-content/uploads/2016/09/ionicrc0-1024x304.png" alt="google maps">
+<amp-img width="1024" height="304" layout="responsive" src="http://blog.ionic.io/wp-content/uploads/2016/09/ionicrc0-1024x304.png"></amp-img>
 
 # Estructura de la App.
 
 Ahora que angular ya está finalizado, ya hay una guia de como debería ser la estructura de aplicación de la forma más óptima, además algo muy bueno es que al momento de compilar la aplicación no lleva lo archivos de desarrollo dentro de la aplicación, solo lleva los archivos dentro del la carpeta `www` y ignora la carpeta `src` donde está todo nuestro código.
 
-<img class="img-responsive" src="http://i.cubeupload.com/ZBUnv9.png" alt="app">
+<div class="row">
+  <div class="col col-100 col-md-50 col-lg-50">
+    <amp-img width="332" height="446" layout="responsive" src="http://i.cubeupload.com/ZBUnv9.png"></amp-img>
+  </div>
+</div>
 
 # Ahead of Time Compiling
 
 Este es un gran cambio pero mejora el performance de nuestras aplicaciones y en vez de compilar los templates en tiempo de ejecución, ahora los templates pueden ser pre-compilados y esto mejora el tiempo de arranque en la aplicación. El código compilado que crea se crea por AOT es código que funciona mucho más rápido y está altamente optimizado. Descubre más sobre [**Ahead of Time Compiling (AOT)**](https://en.wikipedia.org/wiki/Ahead-of-time_compilation){:target="_blank"}
 
-<img src="http://blog.ionic.io/wp-content/uploads/2016/09/beta11-vs-beta12.gif" class="img-responsive" alt="aot">
+<amp-img width="1400" height="1200" layout="responsive" src="http://blog.ionic.io/wp-content/uploads/2016/09/beta11-vs-beta12.gif"></amp-img>
 
 # Angular 2 Final (NgModule)
 
@@ -50,4 +54,4 @@ Ahora ya no usan gulp como apoyo para correr tareas, han creado sus scripts prop
 
 ## Pasos para actualizar [aquí](https://github.com/driftyco/ionic/blob/master/CHANGELOG.md#steps-to-upgrade-to-rc0){:target="_blank"}
 
-**Nota:** *Hay muchas cosas que cambian pero con este release candidate el equipo de ionic nos promete que ya no habrá más cambios tan robustos al fin de acabo ya es la versión casi lista para producción, así que acogeremos estos cambios pronto y actualizaremos nuestros [demos](http://www.ion-book.com/demos/){:target="_blank"} en las próximas semanas.*
+**Nota:** *Hay muchas cosas que cambian pero con este release candidate el equipo de ionic nos promete que ya no habrá más cambios tan robustos al fin de acabo ya es la versión casi lista para producción, así que acogeremos estos cambios pronto y actualizaremos nuestros [demos]({{site.urlblog}}//ionic2/){:target="_blank"} en las próximas semanas.*

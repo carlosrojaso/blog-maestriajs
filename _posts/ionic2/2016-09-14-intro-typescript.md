@@ -10,7 +10,7 @@ repo: "https://github.com/UnJavaScripter/typescript-basics"
 cover: "http://i.cubeupload.com/hm2KzP.jpg"
 ---
 
-<img src="http://i.cubeupload.com/hm2KzP.jpg" class="img-responsive" alt="image angular2"/>
+<amp-img width="1200" height="675" layout="responsive" src="http://i.cubeupload.com/hm2KzP.jpg"></amp-img>
 
 El post original lo puedes ver en: [http://j.mp/2cHynLV](http://j.mp/2cHynLV)
 

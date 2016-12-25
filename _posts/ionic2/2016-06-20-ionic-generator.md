@@ -191,6 +191,6 @@ export class MyPipe {
 
 Por último tendremos toda nuestra aplicación de esta manera:
 
-<img src="http://i.imgur.com/rhTAWtE.jpg" class="img-responsive" alt="ionic generator"/>
+<amp-img width="800" height="460" layout="responsive" src="http://i.imgur.com/rhTAWtE.jpg"></amp-img>
  
 Nuestro proyecto quedará de una forma más ordenada y con un mayor control, todo esto lo podemos hacer manualmente pero sin duda con **ionic generator** podemos ahorrar tiempo valioso en la creación de cada uno de estos.

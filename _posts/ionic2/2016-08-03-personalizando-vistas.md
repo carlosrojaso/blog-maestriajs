@@ -9,7 +9,11 @@ author: carlosrojas
 cover: "http://sass-lang.com/assets/img/styleguide/color-1c4aab2b.png"
 ---
 
-<img class="img-responsive" src="http://sass-lang.com/assets/img/styleguide/color-1c4aab2b.png" alt="sass logo">
+<div class="row">
+  <div class="col col-100 col-md-50 col-lg-50">
+    <amp-img width="427" height="320" layout="responsive" src="http://sass-lang.com/assets/img/styleguide/color-1c4aab2b.png" alt="firebase-database-and-ionic-2"></amp-img>
+  </div>
+</div>
 
 La personalización de nuestras Apps es uno de los aspectos en el exito en el mar de Apps que puedes encontrar en Google Play o App Store.
 
@@ -17,17 +21,15 @@ Ahora si quieres personalizar las vistas en Ionic 2 deberas utilizar SASS, lo cu
 
 La forma mas facil de empezar es modificar el archivo `app/theme/app.variables.scss` aca podras encontrar las variables principales para poder modificar.
 
-<pre>
+```
 $colors: (
-
   primary:    #387ef5,
   secondary:  #32db64,
   danger:     #f53d3d,
   light:      #f4f4f4,
   dark:       #222,
-
 );
-</pre>
+```
 
 Puedes cambiar los colores en este archivo y podras observar como se modifica la apariencia general de tu app. Te recomendamos comenzar con `primary`
 

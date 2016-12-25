@@ -11,9 +11,9 @@ cover: "http://i.cubeupload.com/y2EKrQ.jpg"
 remember: true
 ---
 
-> Ya hemos visto en los posts anteriores sobre cómo integrar Google Maps con nuestra aplicación en Ionic 2, bien sea de forma [nativa](http://www.ion-book.com/ionic2/google-maps-native){:target="_blank"} o con [javascript](http://www.ion-book.com/demos/google-maps-js-and-ionic-2){:target="_blank"}. En este post veremos un poco más sobre la integración de **Google Maps con Ionic 2** y es sobre el tema de los **Markers**.
+> Ya hemos visto en los posts anteriores sobre cómo integrar Google Maps con nuestra aplicación en Ionic 2, bien sea de forma [nativa]({{site.urlblog}}/ionic2/google-maps-native){:target="_blank"} o con [javascript]({{site.urlblog}}//ionic2/google-maps-js-and-ionic-2){:target="_blank"}. En este post veremos un poco más sobre la integración de **Google Maps con Ionic 2** y es sobre el tema de los **Markers**.
 
-<img class="img-responsive" src="http://i.cubeupload.com/y2EKrQ.jpg" alt="google-maps-markers">
+<amp-img width="1200" height="675" layout="responsive" src="http://i.cubeupload.com/y2EKrQ.jpg"></amp-img>
 
 Los **Markers** nos permiten identificar un lugar en el mapa siempre y cuando tengamos las coordenadas geográficas, por defecto Google Maps trae un icono de color rojo que muchos seguramente conocen, sin embargo podemos personalizarlo, lo cual es sorprendentemente sencillo e increiblemente util. 
 
@@ -25,7 +25,7 @@ ionic start gm-markers blank --v2
 
 ## 2. Instalación de los Plugins de Cordova y de las Api keys de Android y iOS 
 
-Si te sientes un poco perdido sobre el tema de las Api keys, te invito a leer el post de [**Google maps native**](http://www.ion-book.com/ionic2/google-maps-native){:target="_blank"}
+Si te sientes un poco perdido sobre el tema de las Api keys, te invito a leer el post de [**Google maps native**]({{site.urlblog}}/ionic2/google-maps-native){:target="_blank"}
 
 ```
 cd gm-markers
@@ -41,7 +41,7 @@ ionic plugin add cordova-plugin-geolocation
 
 ## 3. Integración de Google Maps Nativo
 
-Tomando en cuenta el post de [**Google maps native**](http://www.ion-book.com/ionic2/google-maps-native){:target="_blank"}, integramos rapidamente nuestro mapa.
+Tomando en cuenta el post de [**Google maps native**]({{site.urlblog}}/ionic2/google-maps-native){:target="_blank"}, integramos rapidamente nuestro mapa.
 
 En `home.html`, debemos colocar un div con nuestro id ‘map’, o como queramos llamarlo.
 
@@ -178,8 +178,8 @@ setMarker(){
 **Resultado:**
 
 <div class="row">
-  <div class="col-xs-12 col-sm-6 col-sm-offset-3">
-    <img class="img-responsive" src="http://i.cubeupload.com/qmD4AO.png" alt="app">
+  <div class="col col-100 col-md-50 col-lg-50">
+    <amp-img width="408" height="725" layout="responsive" src="http://i.cubeupload.com/qmD4AO.png"></amp-img>
   </div>
 </div>
 
@@ -211,8 +211,8 @@ ionic run android ó ionic run ios
 **y voila!** 
 
 <div class="row">
-  <div class="col-xs-12 col-sm-6 col-sm-offset-3">
-    <img class="img-responsive" src="http://i.cubeupload.com/3jjfy6.png" alt="app 2">
+  <div class="col col-100 col-md-50 col-lg-50">
+    <amp-img width="408" height="725" layout="responsive" src="http://i.cubeupload.com/3jjfy6.png"></amp-img>
   </div>
 </div>
 

@@ -11,13 +11,13 @@ cover: "http://i.cubeupload.com/T62oZF.jpg"
 remember: true
 ---
 
-> En artículos pasados ya hemos hablado de firebase y sus [**servicios**](http://www.ion-book.com/ionic2/firebase-3){:target="_blank"} y una breve implementación con [**Ionic 2**](http://www.ion-book.com/ionic2/ionic-2-firebase-3){:target="_blank"}, ahora vamos a hacer una integración con su servicio de base de datos en tiempo real, usando la libreria de [**AngularFire2**](https://angularfire2.com/api/){:target="_blank"} creamos una simple aplicación de tareas.
+> En artículos pasados ya hemos hablado de firebase y sus [**servicios**]({{site.urlblog}}/ionic2/firebase-3){:target="_blank"} y una breve implementación con [**Ionic 2**]({{site.urlblog}}/ionic2/ionic-2-firebase-3){:target="_blank"}, ahora vamos a hacer una integración con su servicio de base de datos en tiempo real, usando la libreria de [**AngularFire2**](https://angularfire2.com/api/){:target="_blank"} creamos una simple aplicación de tareas.
 
-<img class="img-responsive" src="http://i.cubeupload.com/T62oZF.jpg" alt="firebase-database-and-ionic-2">
+<amp-img width="1920" height="1080" layout="responsive" src="http://i.cubeupload.com/T62oZF.jpg" alt="firebase-database-and-ionic-2"></amp-img>
 
 # Actualización (14/11/2016)
 <hr/>
-Hemos actualizado este demo con el último release de [Ionic 2 RC 2](http://www.ion-book.com/news/ionic-2-rc-2){:target="_blank"}, que tiene la más reciente actulización.
+Hemos actualizado este demo con el último release de [Ionic 2 RC 2]({{site.urlblog}}/news/ionic-2-rc-2){:target="_blank"}, que tiene la más reciente actulización.
 
 <hr/>
 
@@ -25,23 +25,23 @@ Hemos actualizado este demo con el último release de [Ionic 2 RC 2](http://www.
 
 Debes ir a la nueva consola de firebase [aquí](https://console.firebase.google.com){:target="_blank"} y crear un proyecto nuevo:
 
-<img class="img-responsive" src="http://i.cubeupload.com/9FkUqS.png" alt="folders">
+<amp-img width="999" height="572" layout="responsive" src="http://i.cubeupload.com/9FkUqS.png" alt="firebase-database-and-ionic-2"></amp-img>
 
 # Paso 2: Copiar las variables de configuración.
 
 Ahora debemos ir a la sección de **Auth** y copiar las variables de configuración que nos provee firebase, oprime el botón **WEB SETUP**:
 
-<img class="img-responsive" src="http://i.cubeupload.com/KpwFRs.png" alt="config">
+<amp-img width="1015" height="573" layout="responsive" src="http://i.cubeupload.com/KpwFRs.png" alt="firebase-database-and-ionic-2"></amp-img>
 
 # Paso 3: Reglas de seguridad
 
 Por último vamos a la sección de Database y configuraremos las reglas de seguridad para que nos permita conectarnos a la base de datos sin ninguna autentificación:
 
-<img class="img-responsive" src="http://i.cubeupload.com/sWK679.png" alt="rules">
+<amp-img width="1015" height="575" layout="responsive" src="http://i.cubeupload.com/sWK679.png" alt="firebase-database-and-ionic-2"></amp-img>
 
 # Paso 4: Iniciando el proyecto
 
-Lo primero que haremos será iniciar un nuevo proyecto con ionic, si no lo recuerdas puedes ver esto con mas detalle en la [Introduccion a Ionic 2](http://www.ion-book.com/ionic2/ionic2){:target="_blank"}.
+Lo primero que haremos será iniciar un nuevo proyecto con ionic, si no lo recuerdas puedes ver esto con mas detalle en la [Introduccion a Ionic 2]({{site.urlblog}}/ionic2/ionic2){:target="_blank"}.
 Vamos a nuestra terminal y ejecutamos:
 
 ```

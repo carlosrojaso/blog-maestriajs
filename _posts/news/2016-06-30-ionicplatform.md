@@ -9,7 +9,7 @@ author: carlosrojas
 cover: "http://i.imgur.com/iRCx2TE.jpg"
 ---
 
-<img class="img-responsive" src="http://i.imgur.com/iRCx2TE.jpg" alt="ionic">
+<amp-img width="1400" height="890" layout="responsive" src="http://i.imgur.com/iRCx2TE.jpg"></amp-img>
 
 Hola a todos!!!
 

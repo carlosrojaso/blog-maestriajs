@@ -9,7 +9,7 @@ author: carlosrojas
 cover: "http://i.imgur.com/5mTwi1e.jpg"
 ---
 
-<img src="http://i.imgur.com/5mTwi1e.jpg" class="img-responsive" />
+<amp-img width="800" height="292" layout="responsive" src="http://i.imgur.com/5mTwi1e.jpg"></amp-img>
 
 Firebase hace un tiempo evoluciono su plataforma para ofrecer una nueva serie de servicios entre los que resalta la autenticación,
 database, notificaciones, hosting entre otras.

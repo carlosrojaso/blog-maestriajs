@@ -11,12 +11,12 @@ cover: "https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/demos
 remember: true
 ---
 
-> Anteriormente hemos hablado sobre [**firebase**](http://www.ion-book.com/demos/firebase-database-and-ionic-2){:target="_blank"}, [**pouch**](http://www.ion-book.com/tips/pouchdb){:target="_blank"} y [**Rest API**](http://www.ion-book.com/demos/rest-api-with-ionic-2){:target="_blank"} para el consumo de datos, ahora en este nuevo demo haremos la integración con **SQLite** que es una base de datos nativa que proveen los dispositivos móviles.
+> Anteriormente hemos hablado sobre [**firebase**]({{site.urlblog}}//ionic2/firebase-database-and-ionic-2){:target="_blank"}, [**pouch**]({{site.urlblog}}/tips/pouchdb){:target="_blank"} y [**Rest API**]({{site.urlblog}}//ionic2/rest-api-with-ionic-2){:target="_blank"} para el consumo de datos, ahora en este nuevo demo haremos la integración con **SQLite** que es una base de datos nativa que proveen los dispositivos móviles.
 
 <amp-img width="1024" height="512" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/demos%2Fdemo107%2FConstruye%20una%20INCREDIBLE%20app%20de%20tareas.jpg?alt=media" alt="SQLite + Ionic 2 en 5 pasos"></amp-img>
 ## Paso 1: Iniciando el proyecto
 
-Lo primero que haremos será iniciar un nuevo proyecto con ionic, si no lo recuerdas puedes ver esto con mas detalle en la [Introduccion a Ionic 2](http://www.ion-book.com/ionic2/ionic2){:target="_blank"}.
+Lo primero que haremos será iniciar un nuevo proyecto con ionic, si no lo recuerdas puedes ver esto con mas detalle en la [Introduccion a Ionic 2]({{site.urlblog}}/ionic2/ionic2){:target="_blank"}.
 Vamos a nuestra terminal y ejecutamos:
 
 ```
@@ -44,7 +44,7 @@ La documentación en ionic native la puedes ver [**aquí**](http://ionicframewor
 
 ## Paso 3: Crear un servicio
 
-Vamos a crear el servicio  `TasksService` que se encargará de manejar todos los datos, usaremos [**ionic generator**](http://www.ion-book.com/ionic2/ionic-generator){:target="_blank"} para crear este servicio:
+Vamos a crear el servicio  `TasksService` que se encargará de manejar todos los datos, usaremos [**ionic generator**]({{site.urlblog}}/ionic2/ionic-generator){:target="_blank"} para crear este servicio:
 
 ```
 ionic g provider tasks-service
@@ -502,17 +502,17 @@ export class MyApp {
 
 ## Resultado:
 
-<!--<div class="row">
+<div class="row">
   <div class="col col-100 col-md-33 col-lg-33">
-    <img class="img-responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/demos%2Fdemo107%2FScreenshot_20161128-153234.png?alt=media" alt="app 2">
+    <amp-img width="720" height="1280" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/demos%2Fdemo107%2FScreenshot_20161128-153234.png?alt=media"></amp-img>
   </div>
   <div class="col col-100 col-md-33 col-lg-33">
-    <img class="img-responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/demos%2Fdemo107%2FScreenshot_20161128-153251.png?alt=media" alt="app 1">
+    <amp-img width="720" height="1280" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/demos%2Fdemo107%2FScreenshot_20161128-153251.png?alt=media"></amp-img>
   </div>
   <div class="col col-100 col-md-33 col-lg-33">
-    <img class="img-responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/demos%2Fdemo107%2FScreenshot_20161128-153254.png?alt=media" alt="app 3">
+    <amp-img width="720" height="1280" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/demos%2Fdemo107%2FScreenshot_20161128-153254.png?alt=media"></amp-img>
   </div>
 </div>
-<br>-->
+<br>
 
 **Nota:** Este demo solo funciona desde el dispositivo o emulador ya que SQLite no está disponible desde la web.

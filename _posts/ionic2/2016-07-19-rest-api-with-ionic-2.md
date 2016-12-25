@@ -13,17 +13,17 @@ remember: true
 
 > Una parte fundamental de cualquier aplicación es conectarse con servicio externos, en este caso vamos a conectarnos con una **REST API**. Vamos a crear una aplicación que se contecte con [http://randomuser.me/](http://randomuser.me/){:target="_blank"} un API con información de usuarios aleatorios.
 
-<img class="img-responsive" src="http://i.imgur.com/tDpJiCR.jpg" alt="camera-and-ionic">
+<amp-img width="1848" height="1039" layout="responsive" src="http://i.imgur.com/tDpJiCR.jpg"></amp-img>
 
 # Actualización (06/11/2016)
 <hr/>
-Hemos actualizado este demo con el último release de [Ionic 2 RC 2](http://www.ion-book.com/news/ionic-2-rc-2){:target="_blank"}, si aun estas en alguna de las versiones Beta puedes seguir estos pasos [Steps to Upgrade](https://github.com/driftyco/ionic/blob/master/CHANGELOG.md#steps-to-upgrade-to-rc0){:target="_blank"}.
+Hemos actualizado este demo con el último release de [Ionic 2 RC 2]({{site.urlblog}}/news/ionic-2-rc-2){:target="_blank"}, si aun estas en alguna de las versiones Beta puedes seguir estos pasos [Steps to Upgrade](https://github.com/driftyco/ionic/blob/master/CHANGELOG.md#steps-to-upgrade-to-rc0){:target="_blank"}.
 
 <hr/>
 
 # Paso 1: Iniciando el proyecto
 
-Lo primero que haremos será iniciar un nuevo proyecto con ionic, si no lo recuerdas puedes ver esto con mas detalle en la [Introduccion a Ionic 2](http://www.ion-book.com/ionic2/ionic2){:target="_blank"}.
+Lo primero que haremos será iniciar un nuevo proyecto con ionic, si no lo recuerdas puedes ver esto con mas detalle en la [Introduccion a Ionic 2]({{site.urlblog}}/ionic2/ionic2){:target="_blank"}.
 Vamos a nuestra terminal y ejecutamos:
 
 ```
@@ -38,11 +38,15 @@ cd demo103
 
 Como iniciamos nuestro proyecto con el template **blank** tendremos una estructura básica del proyecto, la carpeta en la que vamos a trabajar sera `src` y lucirá de esta manera:
 
-<img class="img-responsive center-block" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/demos%2Fdemo102%2FScreenshot%20from%202016-11-06%2012-46-16.png?alt=media" alt="folders">
+<div class="row">
+  <div class="col col-100 col-md-50 col-lg-50">
+    <amp-img width="500" height="493" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/demos%2Fdemo102%2FScreenshot%20from%202016-11-06%2012-46-16.png?alt=media"></amp-img>
+  </div>
+</div>
 
 # Paso 2: Crear provider
 
-Vamos a usar [ionic generator](http://www.ion-book.com/ionic2/ionic-generator){:target="_blank"} para crear nuestro nuevo proveedor de datos
+Vamos a usar [ionic generator]({{site.urlblog}}/ionic2/ionic-generator){:target="_blank"} para crear nuestro nuevo proveedor de datos
 
 ```
 ionic g provider user-service
@@ -149,7 +153,7 @@ export class UserService {
 }
 {% endhighlight %}
 
-Como vemos en *la línea 22*  hacemos la solicitud correspondiente, en *la línea 23* procesamos la solicitud convirtiéndola en formato JSON, esto nos retorna un [Observable](http://www.ion-book.com/ionic2/observables-angular2){:target="_blank"} al cual nos suscribimos y luego en *la línea 25* obtenemos la data con `data.results`, finalmente retornamos con `resolve(this.data)`.
+Como vemos en *la línea 22*  hacemos la solicitud correspondiente, en *la línea 23* procesamos la solicitud convirtiéndola en formato JSON, esto nos retorna un [Observable]({{site.urlblog}}/ionic2/observables-angular2){:target="_blank"} al cual nos suscribimos y luego en *la línea 25* obtenemos la data con `data.results`, finalmente retornamos con `resolve(this.data)`.
 
 # Paso 3: Inyectar el servicio en el Ctrl.
 
@@ -220,4 +224,5 @@ Ahora podemos ver el resultado ejecutando:
 ionic serve -l
 ```
 <br/>
-<img class="img-responsive" src="http://i.imgur.com/4r1RZ9x.png" alt="result">
+
+<amp-img width="911" height="547" layout="responsive" src="http://i.imgur.com/tDpJiCR.jpg"></amp-img>

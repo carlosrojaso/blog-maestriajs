@@ -9,9 +9,9 @@ author: nicobytes
 cover: "http://i.cubeupload.com/ysfDTY.jpg"
 ---
 
-> Ion book ahora tiene una nueva sección llamada [**publicaciones**](http://www.ion-book.com/publications/){:target="_blank"}, serán completos e-books con una guía paso a paso para desarrollar aplicaciones desde cero hasta niveles más avanzados. Esta primer publicación se trata de realizar **IonGram** un App de fotos con **Ionic 1**, este es tu punto de partida.
+> Ion book ahora tiene una nueva sección llamada [**publicaciones**]({{site.urlblog}}/publications/){:target="_blank"}, serán completos e-books con una guía paso a paso para desarrollar aplicaciones desde cero hasta niveles más avanzados. Esta primer publicación se trata de realizar **IonGram** un App de fotos con **Ionic 1**, este es tu punto de partida.
 
-<img class="img-responsive" src="http://i.cubeupload.com/ysfDTY.jpg" alt="publicaciones">
+<amp-img width="1200" height="630" layout="responsive" src="http://i.cubeupload.com/ysfDTY.jpg"></amp-img>
 
 La publicación tiene como objetivo que tu logres:
 
@@ -23,8 +23,8 @@ La publicación tiene como objetivo que tu logres:
 
 ## Resultado:
 
-<img class="img-responsive" src="http://i.cubeupload.com/TVFYlc.png" alt="iongram">
+<amp-img width="950" height="1700" layout="responsive" src="http://i.cubeupload.com/TVFYlc.png"></amp-img>
 
-Si quieres esta publicación solo ve a [**publicaciones**](http://www.ion-book.com/publications/){:target="_blank"} y descargala.
+Si quieres esta publicación solo ve a [**publicaciones**]({{site.urlblog}}/publications/){:target="_blank"} y descargala.
 
 Pronto lanzaremos más publicaciones sobre Ionic 1 y Ionic 2.

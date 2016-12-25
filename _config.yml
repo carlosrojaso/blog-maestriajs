@@ -4,6 +4,7 @@ title: ion-book
 description: "Blog sobre Ionic Framework en Español"
 keywords: "asas,as"
 baseurl: "/"
+urlblog: '/blog'
 url: "http://ion-book.com"
 cover: "http://i.imgur.com/cfKvAxi.jpg"
 timezone: "America/Bogota"
