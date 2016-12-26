@@ -5,7 +5,7 @@ description: "Aprende Ionic 2 y desarrolla increibles apps para Android y IOS."
 keywords: "asas,as"
 baseurl: "/"
 url: "https://www.ion-book.com/"
-urlblog: 'blog'
+urlblog: 'https://www.ion-book.com/blog'
 cover: "images/cover.jpg"
 timezone: "America/Bogota"
 markdown: kramdown
