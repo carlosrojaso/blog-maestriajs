@@ -4,7 +4,7 @@ title: ion-book
 description: "Aprende Ionic 2 y desarrolla increibles apps para Android y IOS."
 keywords: "asas,as"
 baseurl: "/"
-url: "https://ion-book.firebaseapp.com"
+url: "https://www.ion-book.com/"
 urlblog: 'blog'
 cover: "images/cover.jpg"
 timezone: "America/Bogota"
@@ -24,8 +24,8 @@ banner_course:
 # ==============================================================
 # Banner Slack
 banner_slack:
-  title: 'Unete a nuestra comunidad'
-  text: 'Unete unete unete, Soy uno con la fuerza, la fuerza me acompaña, Unete unete unete'
+  title: 'Únete a nuestra comunidad'
+  text: 'Únete a nuestro canal de slack y podras interactuar con toda la comunidad hispana en ionic.'
   link: 'http://goo.gl/forms/ZCEc0cr3jydgK2wv1'
   btn_text: 'Unete'
 # ==============================================================
@@ -68,14 +68,14 @@ social_links:
     title: "Slack"
     icon: "icon-slack"
   - url: "http://goo.gl/forms/ZCEc0cr3jydgK2wv1"
-    title: "Slack"
+    title: "Youtube"
     icon: "icon-social-youtube"
 # ==============================================================
 # Home Page
 home:
   banner_title: "Aprende <span class='underline'>Ionic 2</span> y desarrolla increibles apps para Android y IOS."
   banner_text: "Inscribete en nuestra lista de correos y recibe 3 guias paso a paso para construir un App de Tareas, un App de Eventos y un App para fotos."
-  topics_title: "¿Que aprenderas?"
+  topics_title: "¿Que aprenderás?"
   topics_text: "Construye la app que siempre soñaste usando tecnologias Web."
   topics_video: "kWZcdgLbWQI"
   topics:
