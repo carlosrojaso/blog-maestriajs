@@ -94,7 +94,7 @@ home:
     - title: 'Angular 2 y Typescript '
       icon: 'icon-social-angular'
       text: 'Aprende Angular 2 y Typescript para desarrollar con Ionic 2.'
-    - title: 'UI / UX usando SASS'
+    - title: 'UI/UX usando SASS'
       icon: 'icon-social-sass'
       text: 'Modifica y crea tu propia interfaz haciendo uso de SASS.'
     - title: 'Reactive Forms & Validations'
