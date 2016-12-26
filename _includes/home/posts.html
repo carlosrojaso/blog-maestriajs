@@ -1,0 +1,21 @@
+<div class="content content-posts-home">
+  <div class="row">
+    <div class="col">
+     <h2 class="title">{{ site.home.blog_title }}</h2>
+     <p class="text-center">{{ site.home.blog_text }}</p>
+    </div>
+  </div>
+  <div class="row wrap baseline">
+    {% assign posts = site.posts | where:"draft", "false" %}
+    {% for post in posts limit:3 %}
+    <div class="col col-100 col-md-33 col-lg-33">
+      {% include general/article.html %}
+    </div>
+    {% endfor %}
+  </div>
+  <div class="row">
+    <div class="col">
+      <a href="/blog" class="btn btn-primary btn-round btn-articles center-block">{{ site.home.blog_btn_text }}</a>
+    </div>
+  </div>
+</div>

@@ -1,129 +1,48 @@
 ---
 layout: default
 ---
-<div class="container">
-    <div class="col-xs-12 col-md-9">
-      
-      <div class="row">
-        <div class="col-xs-12">
-          {{ content }}
-        </div>
-        <div class="col-xs-12">
-          <h1 class="title">Autores:</h1>
-        </div>
-        <div class="col-xs-12">
-          <div class="row">
-            <div class="col-xs-8 col-sm-3">
-              <img src="{{ site.authors['carlosrojas'].avatar }}" class="img-responsive img-author" alt="photo">
-            </div>
-            <div class="col-xs-12 col-sm-9">
-              <h2 class="title">{{ site.authors['carlosrojas'].name }}</h2>
-              <p>{{ site.authors['carlosrojas'].bio }}</p>
-              <strong>Website:</strong> <a href="{{ site.authors['carlosrojas'].website }}" target="_blank"> {{ site.authors['carlosrojas'].website }}</a>
-              <p>
-              {% for social in site.authors['carlosrojas'].social_links %}
-                <a href="{{ social.link }}" target="_blank" class="btn btn-default">
-                  <i class="fa {{ social.icon }}" aria-hidden="true"></i>
-                </a>
-              {% endfor %}
-              </p>
-              <a href="{{site.authors['carlosrojas'].url}}" class="btn btn-primary">Ver artículos</a>
-            </div>
+{% include blog/header.html %}
+<div class="content">
+  <div class="row">
+    <div class="col">
+      <h1 class="title-page">Autores</h1>
+    </div>
+  </div>
+  <div class="row wrap top">
+    <div class="col col-100 col-md-80 col-lg-80 content-authors">
+      {% for author in site.authors %}
+      <div class="author">
+        <div class="row wrap center">
+          <div class="col col-100 col-md-20 col-lg-20">
+            <amp-img src="{{ author.avatar }}" alt="{{ author.name }}" width="800" height="800" layout="responsive"></amp-img>
           </div>
-          <div class="row">
-            <div class="col-xs-8 col-sm-3">
-              <img src="{{ site.authors['nicobytes'].avatar }}" class="img-responsive img-author" alt="photo">
-            </div>
-            <div class="col-xs-12 col-sm-9">
-              <h2 class="title">{{ site.authors['nicobytes'].name }}</h2>
-              <p>{{ site.authors['nicobytes'].bio }}</p>
-              <strong>Website:</strong> <a href="{{ site.authors['nicobytes'].website }}" target="_blank"> {{ site.authors['nicobytes'].website }}</a>
-              <p>
-              {% for social in site.authors['nicobytes'].social_links %}
-                <a href="{{ social.link }}" target="_blank" class="btn btn-default">
-                  <i class="fa {{ social.icon }}" aria-hidden="true"></i>
-                </a>
-              {% endfor %}
-              </p>
-              <a href="{{site.authors['nicobytes'].url}}" class="btn btn-primary">Ver artículos</a>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-xs-8 col-sm-3">
-              <img src="{{ site.authors['daniel_lsanchez'].avatar }}" class="img-responsive img-author" alt="photo">
-            </div>
-            <div class="col-xs-12 col-sm-9">
-              <h2 class="title">{{ site.authors['daniel_lsanchez'].name }}</h2>
-              <p>{{ site.authors['daniel_lsanchez'].bio }}</p>
-              <strong>Website:</strong> <a href="{{ site.authors['daniel_lsanchez'].website }}" target="_blank"> {{ site.authors['daniel_lsanchez'].website }}</a>
-              <p>
-              {% for social in site.authors['daniel_lsanchez'].social_links %}
-                <a href="{{ social.link }}" target="_blank" class="btn btn-default">
-                  <i class="fa {{ social.icon }}" aria-hidden="true"></i>
-                </a>
-              {% endfor %}
-              </p>
-              <a href="{{site.authors['daniel_lsanchez'].url}}" class="btn btn-primary">Ver artículos</a>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-xs-8 col-sm-3">
-              <img src="{{ site.authors['unjavascripter'].avatar }}" class="img-responsive img-author" alt="photo">
-            </div>
-            <div class="col-xs-12 col-sm-9">
-              <h2 class="title">{{ site.authors['unjavascripter'].name }}</h2>
-              <p>{{ site.authors['unjavascripter'].bio }}</p>
-              <strong>Website:</strong> <a href="{{ site.authors['unjavascripter'].website }}" target="_blank"> {{ site.authors['the_luchillo'].website }}</a>
-              <p>
-              {% for social in site.authors['unjavascripter'].social_links %}
-                <a href="{{ social.link }}" target="_blank" class="btn btn-default">
-                  <i class="fa {{ social.icon }}" aria-hidden="true"></i>
-                </a>
-              {% endfor %}
-              </p>
-              <a href="{{site.authors['unjavascripter'].url}}" class="btn btn-primary">Ver artículos</a>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-xs-8 col-sm-3">
-              <img src="{{ site.authors['mayrititis'].avatar }}" class="img-responsive img-author" alt="photo">
-            </div>
-            <div class="col-xs-12 col-sm-9">
-              <h2 class="title">{{ site.authors['mayrititis'].name }}</h2>
-              <p>{{ site.authors['mayrititis'].bio }}</p>
-              <strong>Website:</strong> <a href="{{ site.authors['the_luchillo'].website }}" target="_blank"> {{ site.authors['mayrititis'].website }}</a>
-              <p>
-              {% for social in site.authors['mayrititis'].social_links %}
-                <a href="{{ social.link }}" target="_blank" class="btn btn-default">
-                  <i class="fa {{ social.icon }}" aria-hidden="true"></i>
-                </a>
-              {% endfor %}
-              </p>
-              <a href="{{site.authors['mayrititis'].url}}" class="btn btn-primary">Ver artículos</a>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-xs-8 col-sm-3">
-              <img src="{{ site.authors['javebratt'].avatar }}" class="img-responsive img-author" alt="photo">
-            </div>
-            <div class="col-xs-12 col-sm-9">
-              <h2 class="title">{{ site.authors['javebratt'].name }}</h2>
-              <p>{{ site.authors['javebratt'].bio }}</p>
-              <strong>Website:</strong> <a href="{{ site.authors['javebratt'].website }}" target="_blank"> {{ site.authors['javebratt'].website }}</a>
-              <p>
-              {% for social in site.authors['javebratt'].social_links %}
-                <a href="{{ social.link }}" target="_blank" class="btn btn-default">
-                  <i class="fa {{ social.icon }}" aria-hidden="true"></i>
-                </a>
-              {% endfor %}
-              </p>
-              <a href="{{site.authors['javebratt'].url}}" class="btn btn-primary">Ver artículos</a>
+          <div class="col col-100 col-md-80 col-lg-80 text">
+            <h2>{{ author.name }}</h2>
+            <div class="info"><p>{{ author.bio | strip_html | truncate: 200  }}...</p></div>
+            {% assign posts = site.posts | where:"draft", "false" | where:"author", author.id %}
+            <div class="more">
+              <a class="btn btn-primary btn-round" href="{{ author.url }}">Ver artículos ({{ posts | size }})</a>
             </div>
           </div>
         </div>
-        
+      </div>
+      {% endfor %}
+    </div>
+    <div class="col col-100 col-md-100 col-lg-20">
+      <div class="row wrap baseline">
+        <div class="col col-100">
+          <section class="content-article-right">
+            <h3>Ultimos artículos:</h3>
+            <div class="row wrap baseline">
+              {% for post in site.posts limit: 8 %}
+                <div class="col col-100 col-md-33 col-lg-100">
+                  {% include blog/article_right.html %}
+                </div>
+              {% endfor %}
+            </div>
+          </section>
+        </div>
       </div>
     </div>
-    {% include right.html %}
   </div>
 </div>

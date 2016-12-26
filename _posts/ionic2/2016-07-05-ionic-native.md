@@ -4,14 +4,13 @@ title: "¿Qué es Ionic Native?"
 tags: [native, ionic2]  
 date: 2016-07-05
 categories: ionic2
-comments: true
 author: nicobytes
 cover: "http://i.imgur.com/FSAJb3n.png"
 ---
 
 > **Ionic-native** es todo un conjunto de envolturas en ES5/ES6/Typescript para cualquiera de los plugins de **Cordova/Phonegap**, la cual hace que cuando queremos agregar cualquier función nativa a nuestra aplicación sea muy fácil.
 
-<img src="http://i.imgur.com/FSAJb3n.png" class="img-responsive" alt="image angular2"/>
+<amp-img width="1318" height="764" layout="responsive" src="http://i.imgur.com/FSAJb3n.png"></amp-img>
 
 Recordemos que en la versión en ionic1, tuvimos a **ngCordova** que eran servicios que envolvían las funciones de los plugins de **Cordova/Phonegap**, esto nos ayudó mucho a implementar los plugins a nuestra app de forma muy fácil, pero el problema era el difícil mantenimiento a **ngCordova** ya que los plugins de Cordova cambian constantemente mantener actualizado **ngCordova** es algo complejo, entonces nos tocaba estar pendiente y mirar la documentación de ngCordova + la documentación del plugin nativo.
 

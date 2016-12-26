@@ -1,51 +1,48 @@
 ---
 layout: default
 ---
-{% assign author = site.authors[page.author] %}
-<div class="container">
-  <div class="col-xs-12 col-md-10">
-     <h1 class="title-article">{{ page.title }}</h1>
-     <div class="tags">
-      {% for tag in page.tags %}
-        <span class="tag">{{ tag }}</span>
-      {% endfor %} - 
-      {{ page.date | date: '%B %d, %Y' }} por 
-      <a href="{{ author.url }}"><strong>{{ author.name }}</strong></a> 
+{% include blog/header.html %}
+{% for item in site.authors %}{% if item.id == page.author%}{% assign author = item %}{% endif %}{% endfor %}
+<div class="content content-title">
+  <div class="row wrap center">
+    <div class="col col-100 col-md-100 col-lg-80">
+      <h1 class="title-article">{{ page.title }}</h1>
+      <div class="tags">
+        {% for tag in page.tags %}<span class="tag">{{ tag }}</span>{% endfor %} - 
+        {{ page.date | date: '%B %d, %Y' }} por 
+        <a href="{{ author.url }}"><strong>{{ author.name }}</strong></a> 
+      </div>
     </div>
+    {% if page.repo %}
+    <div class="col col-100 col-md-100 col-lg-20">
+      <a href="{{ page.repo }}" class="btn btn-primary btn-round center-block btn-icon btn-demo" target="_blank">
+        <div class="icon icon-social-octocat"></div> Ver demo
+      </a>
+    </div>
+    {% endif %}
+    {% if page.laucher %}
+    <div class="col col-100 col-md-100 col-lg-20">
+      <a href="{{ page.laucher }}" class="btn btn-primary btn-round center-block btn-icon btn-demo" target="_blank">
+        <div class="icon icon-social-octocat"></div> Ver demo
+      </a>
+    </div>
+    {% endif %}
   </div>
-  {% if page.repo %}
-  <div class="col-xs-12 col-md-2 button-demo">
-    <a href="{{ page.repo }}" class="btn btn-primary btn-lg btn-block link-repo" target="_blank">
-      <i class="fa fa-github" aria-hidden="true"></i> Ver demo
-    </a>
-  </div>
-  {% endif %}
-  {% if page.laucher %}
-  <div class="col-xs-12 col-md-2 button-demo">
-    <a href="{{ page.laucher }}" class="btn btn-primary btn-lg btn-block link-repo" target="_blank">
-      <i class="fa fa-github" aria-hidden="true"></i> Ver demo
-    </a>
-  </div>
-  {% endif %}
 </div>
-<div class="container article-detail">
-  <div class="row">
-    <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
+<div class="content">
+  <div class="row wrap top">
+    <div class="col col-100 col-md-100 col-lg-80 article-detail">
       <article>
-        {{ content }}
+        <div class="text">{{ content }}</div>
         {% if page.repo %}
-        <p>
-          <a href="{{ page.repo }}" class="btn btn-primary btn-lg link-repo" target="_blank">
-            <i class="fa fa-github" aria-hidden="true"></i> Ver demo
-          </a>
-        </p>
+        <a href="{{ page.repo }}" class="btn btn-primary btn-round center-block btn-icon btn-demo" target="_blank">
+          <div class="icon icon-social-octocat"></div> Ver demo
+        </a>
         {% endif %}
         {% if page.laucher %}
-        <p>
-          <a href="{{ page.laucher }}" class="btn btn-primary btn-lg link-repo" target="_blank">
-            <i class="fa fa-github" aria-hidden="true"></i> Ver demo
-          </a>
-        </p>
+        <a href="{{ page.laucher }}" class="btn btn-primary btn-round center-block btn-icon btn-demo" target="_blank">
+          <div class="icon icon-social-octocat"></div> Ver demo
+        </a>
         {% endif %}
         {% if page.remember %}
         <div class="remember-demo">
@@ -67,52 +64,11 @@ layout: default
         <p>¿Quieres saber más? Suscríbete a nuestro Newsletter o únete a nuestro canal en <a href="http://goo.gl/forms/ZCEc0cr3jydgK2wv1">Slack</a> y mantente atento.
         Espero sea de utilidad y sigan programando :)</p>
         <p>Por: <a href="{{ author.url }}"><strong>{{ author.name }}</strong></a></p>
-        <h4 class="title">Siguenos en:</h4>
-        <p>
-        {% for social in site.social_links %}
-          <a href="{{ social.url }}" target="_blank" class="btn btn-default">
-            <i class="fa {{ social.icon }}" aria-hidden="true"></i>
-          </a>
-        {% endfor %}
-        </p>
       </article>
-      <hr/>
-      <div class="row">
-      <div class="col-xs-12 col-sm-12">
-      <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-      <!-- IonBookBlog recommend -->
-      <ins class="adsbygoogle"
-          style="display:block"
-          data-ad-client="ca-pub-8943241156434100"
-          data-ad-slot="1426017276"
-          data-ad-format="auto"></ins>
-      <script>
-      (adsbygoogle = window.adsbygoogle || []).push({});
-      </script>
-      </div>
-      </div>
-      <section>
-        <h3>Artículos relacionados:</h3>
-        <div class="row">
-          {% assign count = 0 %}
-          {% for tag in page.tags %}
-            {% for post in site.posts %}
-              {% if post.tags contains tag and count < site.count_related_posts and post.title != page.title %}
-              {% assign count = count | plus: 1 %}
-              <div class="col-xs-12 col-sm-6">
-                {% include article_tags.html trucate="85" %}
-              </div>
-              {% endif %}
-            {% endfor %}
-          {% endfor %}
-        </div>
-      </section>
-      {% if page.comments %}{% include disqus.html %}{% endif %}
-      <div align="center">
-        <a href="#">
-        <i class="fa fa-arrow-circle-up fa-2x"></i>
-        </a>
-      </div>
+      {% include blog/disqus.html %}
+    </div>
+    <div class="col col-100 col-md-100 col-lg-20">
+      {% include blog/right.html %}
     </div>
   </div>
 </div>

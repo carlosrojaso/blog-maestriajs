@@ -4,14 +4,13 @@ title: "Aumenta el performance con Crosswalk"
 tags: [native, tips]  
 date: 2016-06-28
 categories: tips
-comments: true
 author: nicobytes
 cover: "http://i.imgur.com/Ed37R8S.jpg"
 ---
 
 > Al desarrollar aplicaciones para Android basadas en un **Webview** nos enfrentamos al problema de la fragmentación en dispositivos, es decir hay muchas versiones de Android viejas en el mercado, con **[Crosswalk Project](https://crosswalk-project.org/){:target="_blank"}** no solo solucionamos el problema de la fragmentación sino que aumentamos el performance de la aplicación.
 
-<img src="http://i.imgur.com/Ed37R8S.jpg" class="img-responsive" alt="crosswalk"/>
+<amp-img width="1746" height="934" layout="responsive" src="http://i.imgur.com/Ed37R8S.jpg" alt="crosswalk"></amp-img>
 
 [Crosswalk Project](https://crosswalk-project.org/){:target="_blank"} es un proyecto de intel que nos provee un **Webview** estándar y con las últimas APIs, para poder usarlo sin importar que versión de android tenga el usuario, al usar el **Webview** de **Crosswalk Project** aumentamos el performance de la aplicación ya que tiene un **Webview** mucho mas optimo para correr las aplicaciones, brindando una buena experiencia tanto para usuarios con versiones viejas como para versiones actuales.
 
@@ -44,43 +43,43 @@ Algunas más:
     <tbody>
       <tr>
         <td>WebRTC </td>
-        <td><i class="fa fa-times" aria-hidden="true"></i></td> 
-        <td><i class="fa fa-check" aria-hidden="true"></i></td>
+        <td><div class="icon icon-android-close"></div></td> 
+        <td><div class="icon icon-android-done"></div></td>
       </tr>
       <tr>
         <td>WebGL</td>
-        <td><i class="fa fa-times" aria-hidden="true"></i></td> 
-        <td><i class="fa fa-check" aria-hidden="true"></i></td>
+        <td><div class="icon icon-android-close"></div></td> 
+        <td><div class="icon icon-android-done"></div></td>
       </tr>
       <tr>
         <td>Vibration API</td>
-        <td><i class="fa fa-times" aria-hidden="true"></i></td> 
-        <td><i class="fa fa-check" aria-hidden="true"></i></td>
+        <td><div class="icon icon-android-close"></div></td> 
+        <td><div class="icon icon-android-done"></div></td>
       </tr>
       <tr>
         <td>Predictable layout</td>
-        <td><i class="fa fa-times" aria-hidden="true"></i></td> 
-        <td><i class="fa fa-check" aria-hidden="true"></i></td>
+        <td><div class="icon icon-android-close"></div></td> 
+        <td><div class="icon icon-android-done"></div></td>
       </tr>
       <tr>
         <td>CSS feature queries</td>
-        <td><i class="fa fa-times" aria-hidden="true"></i></td> 
-        <td><i class="fa fa-check" aria-hidden="true"></i></td>
+        <td><div class="icon icon-android-close"></div></td> 
+        <td><div class="icon icon-android-done"></div></td>
       </tr>
       <tr>
         <td>Current Flexbox</td>
-        <td><i class="fa fa-times" aria-hidden="true"></i></td> 
-        <td><i class="fa fa-check" aria-hidden="true"></i></td>
+        <td><div class="icon icon-android-close"></div></td> 
+        <td><div class="icon icon-android-done"></div></td>
       </tr>
       <tr>
         <td>WOFF web fonts</td>
-        <td><i class="fa fa-times" aria-hidden="true"></i></td> 
-        <td><i class="fa fa-check" aria-hidden="true"></i></td>
+        <td><div class="icon icon-android-close"></div></td> 
+        <td><div class="icon icon-android-done"></div></td>
       </tr>
       <tr>
         <td>Controlled WebView updates</td>
-        <td><i class="fa fa-times" aria-hidden="true"></i></td> 
-        <td><i class="fa fa-check" aria-hidden="true"></i></td>
+        <td><div class="icon icon-android-close"></div></td> 
+        <td><div class="icon icon-android-done"></div></td>
       </tr>
     </tbody>
   </table>
@@ -92,10 +91,10 @@ Android es un sistema operativo que se puede adaptar a cualquier hardware en com
 
 Por esto varios fabricantes pueden hacer su propio hardware y luego incluir Android como sistema operativo, esto ha generado un problema y es la fragmentación de dispositivos, es decir tenemos muchos fabricantes que no permiten una fácil actualización de android y por eso la adopción de nuevas versiones en android es más compleja, miremos la siguiente gráfica:
 
-<img src="http://i.imgur.com/uxiY1ij.png" class="img-responsive" alt="crosswalk"/>
+<amp-img width="1046" height="589" layout="responsive" src="http://i.imgur.com/uxiY1ij.png" alt="crosswalk"></amp-img>
 
 [https://mixpanel.com/trends/#report/android_os_adoption](https://mixpanel.com/trends/#report/android_os_adoption)
 
 Por eso Crosswalk soluciona este problema y muchas empresas confían en el:
 
-<img src="http://i.imgur.com/YGjGovL.png" class="img-responsive" alt="crosswalk"/>
+<amp-img width="1091" height="436" layout="responsive" src="http://i.imgur.com/YGjGovL.png" alt="crosswalk"></amp-img>

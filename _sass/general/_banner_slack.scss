@@ -1,0 +1,48 @@
+.banner-slack{
+  border: 1px solid $secondary-color;;
+  border-radius: 4px;
+  padding: $padding;
+  margin: 50px 0px;
+  display: block;
+  color: $secondary-color;
+  h3{
+    margin: 0px;
+    font-size: 1em;
+    color: $secondary-color;
+  }
+  p{
+    font-size: .8em;
+    color: $secondary-color;
+  }
+  .icon{
+    font-size: 4em;
+  }
+  .btn-join{
+    font-size: .8em;
+    padding: 10px;
+    display: block;
+  }
+}
+@media screen and (min-width: $min-width-large) {
+  .content-slack{
+    .banner-slack{
+      .btn-join{
+        width: 100px;
+      }
+    }
+  }
+  .content-slack-right{
+    div.col.col-lg-50{
+      margin: 0px;
+      flex: 0 0 100%;
+      max-width: 100%;
+      .banner-slack{
+        margin: 0px;
+        div.col{
+          flex: 0 0 100%;
+          max-width: 100%;
+        }
+      }
+    }
+  }
+}

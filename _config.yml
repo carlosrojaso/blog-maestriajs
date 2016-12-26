@@ -1,55 +1,144 @@
-# Site settings
+# ==============================================================
+# General
 title: ion-book
-description: "Blog sobre Ionic Framework en Español"
-baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://ion-book.com" # the base hostname & protocol for your site
-book-url: "/"
-book-img: "http://i.imgur.com/cfKvAxi.jpg"
-cover: "http://i.imgur.com/cfKvAxi.jpg"
+description: "Aprende Ionic 2 y desarrolla increibles apps para Android y IOS."
+keywords: "asas,as"
+baseurl: "/"
+url: "https://www.ion-book.com/"
+urlblog: 'blog'
+cover: "images/cover.jpg"
 timezone: "America/Bogota"
-
-courses-url: "http://bootcampwithus.usefedora.com/"
-
-sass:
-    style: compressed
-
-# Build settings
 markdown: kramdown
 markdown_ext:  markdown,mkdown,mkdn,mkd,md
-
-permalink: /:categories/:title
-
+permalink: blog/:categories/:title/
 redcarpet:
   extensions: ["tables", "autolink", "strikethrough", "space_after_headers", "fenced_code_blocks"]
-  
+sass:
+    style: compressed
+# ==============================================================
+# Banner Course
+banner_course:
+  text: 'Hemos creado un increible curso de nuestra experiencia en Colombia, Chile, Bolivia y Peru.'
+  btn_text: 'Ver Curso'
+  link: 'http://bootcampwithus.usefedora.com/p/curso-basico-ionic-2-0/'
+# ==============================================================
+# Banner Slack
+banner_slack:
+  title: 'Únete a nuestra comunidad'
+  text: 'Únete a nuestro canal de slack y podras interactuar con toda la comunidad hispana en ionic.'
+  link: 'http://goo.gl/forms/ZCEc0cr3jydgK2wv1'
+  btn_text: 'Unete'
+# ==============================================================
+# Menu Header
+menu_header:
+  - title: Home
+    url: '/'
+    target: '_self'
+  - title: Blog
+    url: '/blog'
+    target: '_self'
+  - title: Cursos
+    url: 'http://bootcampwithus.usefedora.com/'
+    target: '_blank'
+# ==============================================================
+# Menu Footer
+menu_footer:
+  - title: Home
+    url: '/'
+    target: '_self'
+  - title: Blog
+    url: '/blog'
+    target: '_self'
+  - title: Cursos
+    url: 'http://bootcampwithus.usefedora.com/'
+    target: '_blank'
+  - title: Autores
+    url: '/blog/authors'
+    target: '_self'
+# ==============================================================
+# Social Links
+social_links: 
+  - url: "https://twitter.com/ion_book"
+    title: "Twiiter"
+    icon: "icon-social-twitter"
+  - url: "https://www.facebook.com/ionbook/"
+    title: "Facebook"
+    icon: "icon-social-facebook"
+  - url: "http://goo.gl/forms/ZCEc0cr3jydgK2wv1"
+    title: "Slack"
+    icon: "icon-slack"
+  - url: "http://goo.gl/forms/ZCEc0cr3jydgK2wv1"
+    title: "Youtube"
+    icon: "icon-social-youtube"
+# ==============================================================
+# Home Page
+home:
+  banner_title: "Aprende <span class='underline'>Ionic 2</span> y desarrolla increibles apps para Android y IOS."
+  banner_text: "Inscribete en nuestra lista de correos y recibe 3 guias paso a paso para construir un App de Tareas, un App de Eventos y un App para fotos."
+  topics_title: "¿Que aprenderás?"
+  topics_text: "Construye la app que siempre soñaste usando tecnologias Web."
+  topics_video: "kWZcdgLbWQI"
+  topics:
+    - title: 'Conecta con Firebase 3'
+      icon: 'icon-fireball'
+      text: 'Conecta bases de datos en tiempo real con Firebase Database y Firebase Auth.'
+    - title: 'Enviar Push Notifications'
+      icon: 'icon-android-notifications'
+      text: 'Aprende a implementar el sistema de mensajeria Push.'
+    - title: 'Implementa Ionic Native'
+      icon: 'icon-ionic'
+      text: 'Accese al recursos nativos del dispositivo, como Camera, Geolocation etc.'
+    - title: 'Conexion a API REST'
+      icon: 'icon-code-working'
+      text: 'Conecta tu servicio backend usando observables .'
+    - title: 'Angular 2 y Typescript '
+      icon: 'icon-social-angular'
+      text: 'Aprende Angular 2 y Typescript para desarrollar con Ionic 2.'
+    - title: 'UI / UX usando SASS'
+      icon: 'icon-social-sass'
+      text: 'Modifica y crea tu propia interfaz haciendo uso de SASS.'
+    - title: 'Reactive Forms & Validations'
+      icon: 'icon-android-list'
+      text: 'Aprende a controlar formularios y manejar poderosas validaciones.'
+    - title: 'Publica tu app en tiendas'
+      icon: 'icon-upload'
+      text: 'Compila y publica tu increible app en Google play y App store'
+    - title: 'Aprende con buenas practicas'
+      icon: 'icon-android-favorite'
+      text: 'Sigue las mejores practicas entendiendo la arquirectuta de Ionic 2.'
+  blog_title: 'Nuestro Blog'
+  blog_text: 'Somos una comunidad de Ionic en español. Aprende a crear apps con HTML, CSS, JS.'
+  blog_btn_text: 'Ver más articulos'
+# ==============================================================
+# Authors
 authors:
-  nicobytes:
+  - id: 'nicobytes'
     name: Nicolas Molina
-    url: "/nicobytes"
+    url: "/blog/authors/nicobytes"
     avatar: "http://i.imgur.com/mwT2iig.png"
     website: "http://nicobytes.com"
     bio: "Soy desarrollador web especializado en el área de FrontEnd & HybripApps, enfocado en aprendizaje de JS y al desarrollo de apps con Angular2 y Ionic2. Mis pasiones son el desarrollo de productos, compartir con las comunidades de desarrollo y viajar por todo el mundo."
     social_links:
       - link: "https://twitter.com/nicobytes"
-        icon: "fa-twitter"
+        icon: "icon-social-twitter"
       - link: "https://github.com/nicobytes"
-        icon: "fa-github"
+        icon: "icon-social-octocat"
       - link: "https://co.linkedin.com/in/nicobytes"
-        icon: "fa-linkedin"
+        icon: "icon-linkedin"
       - link: "https://www.facebook.com/nicolas.molina.127"
-        icon: "fa-facebook"
-  carlosrojas:
+        icon: "icon-social-facebook"
+  - id: 'carlosrojas'
     name: Carlos Rojas
-    url: "/carlosrojas"
+    url: "/blog/authors/carlosrojas"
     avatar: "http://i.imgur.com/ecNB0is.png"
     website: "http://www.carlosrojasblog.com/"
     bio: "Soy un creativo, organizado, autodidacta emprendedor y líder. Disfruto de enseñar a las personas a programar."
     social_links:
       - link: "https://twitter.com/carlosrojas_o"
         icon: "fa-twitter"
-  daniel_lsanchez:
+  - id: "daniel_lsanchez"
     name: "Daniel Londoño Sanchez"
-    url: "/daniel_lsanchez"
+    url: "/blog/authors/daniel_lsanchez"
     avatar: "http://i.cubeupload.com/lIAZlV.png"
     bio: "Soy desarrollador de software enfocado en especializarme en desarrollo web y móvil, me gusta ayudar a las personas y dar el conocimiento que adquiero sin nada a cambio. Me apasiono por construir productos innovadores y que ayuden a la sociedad, me gustan las motos y salir a viajar en ellas."
     social_links:
@@ -59,39 +148,9 @@ authors:
         icon: "fa-linkedin"
       - link: "https://www.facebook.com/daniel.l.sanchez.501"
         icon: "fa-facebook"
-    #the_luchillo:
-    # name: "Carlos Esteban Lopez"
-    # url: "/the_luchillo"
-    # avatar: "http://i.cubeupload.com/pHepUB.jpg"
-    # bio: "Soy Desarrollador de aplicaciones digitales, auto-didacta, amante de la tecnologia y el arte digital, estudiante de Ing. de Sistemas, 6 años de estudio auto-didacta y desarrollo profesionalmente desde 2014, me gusta aportar a la comunidad con cursos de desarrollo, proyectos open source y en foros de desarrollo."
-    # social_links:
-    #   - link: "https://twitter.com/the_luchillo"
-    #     icon: "fa-twitter"
-    #   - link: "https://github.com/Luchillo"
-    #     icon: "fa-github"
-  unjavascripter:
-    name: "Diego Coy"
-    url: "/unjavascripter"
-    avatar: "http://i.cubeupload.com/fiMbBz.png"
-    bio: "I spend my time learning about new technologies and coding. I really enjoy developing web applications using JavaScript. I'm currently working with (and loving) AngularJS. I founded a group where people can learn and share about AngularJS in Colombia, there I'm the organizer and sometimes speaker. I've been enjoying teaching people about new cool technologies "
-    social_links:
-      - link: "https://twitter.com/unjavascripter"
-        icon: "fa-twitter"
-      - link: "https://github.com/unjavascripter"
-        icon: "fa-github"
-  javebratt:
-    name: "Jorge Vergara"
-    url: "/javebratt"
-    avatar: "https://s9.postimg.org/fhmw4iggf/Iu_N5_UI0o.jpg"
-    bio: "Ayudo a emprendedores que están atacando proyectos de impacto social a planear y construir la primera versión de su aplicación móvil para que puedan salir al mercado rápido. Ayudo a desarrolladores de Ionic2 a usar esos conocimientos para construir aplicaciones basadas en Firebase."
-    social_links:
-      - link: "https://twitter.com/javebratt"
-        icon: "fa-twitter"
-      - link: "https://facebook.com/javebrattDev"
-        icon: "fa-facebook"
-  mayrititis:
+  - id: "mayrititis"
     name: "Mayra Rodríguez"
-    url: "/mayrititis"
+    url: "/blog/authors/mayrititis"
     avatar: "https://a248.e.akamai.net/secure.meetupstatic.com/photos/event/4/f/f/8/600_454640472.jpeg"
     website: "http://mayrarodriguez.me/"
     bio: "Soy Ingeniera en Computación egresada de la Universidad Fermín Toro, Cabudare Edo. Lara. Me dedico al Desarrollo Web Full Stack y Móvil de manera Freelance. Me siento aficionada por el UX y el UI, así como también el desarrollo de aplicaciones innovadoras."
@@ -102,18 +161,28 @@ authors:
         icon: "fa-linkedin"
       - link: "https://www.facebook.com/mayrititis"
         icon: "fa-facebook"
-
-social_links: 
-  - url: "https://twitter.com/ion_book"
-    title: "Twiiter"
-    icon: "fa-twitter"
-  - url: "https://www.facebook.com/ionbook/"
-    title: "Facebook"
-    icon: "fa-facebook"
-  - url: "http://goo.gl/forms/ZCEc0cr3jydgK2wv1"
-    title: "Slack"
-    icon: "fa-slack"
-
+  - id: "unjavascripter"
+    name: "Diego Coy"
+    url: "/blog/authors/unjavascripter"
+    avatar: "http://i.cubeupload.com/fiMbBz.png"
+    bio: "I spend my time learning about new technologies and coding. I really enjoy developing web applications using JavaScript. I'm currently working with (and loving) AngularJS. I founded a group where people can learn and share about AngularJS in Colombia, there I'm the organizer and sometimes speaker. I've been enjoying teaching people about new cool technologies "
+    social_links:
+      - link: "https://twitter.com/unjavascripter"
+        icon: "fa-twitter"
+      - link: "https://github.com/unjavascripter"
+        icon: "fa-github"
+  - id: "javebratt"
+    name: "Jorge Vergara"
+    url: "/javebratt"
+    avatar: "https://s9.postimg.org/fhmw4iggf/Iu_N5_UI0o.jpg"
+    bio: "Ayudo a emprendedores que están atacando proyectos de impacto social a planear y construir la primera versión de su aplicación móvil para que puedan salir al mercado rápido. Ayudo a desarrolladores de Ionic2 a usar esos conocimientos para construir aplicaciones basadas en Firebase."
+    social_links:
+      - link: "https://twitter.com/javebratt"
+        icon: "fa-twitter"
+      - link: "https://facebook.com/javebrattDev"
+        icon: "fa-facebook"
+# ==============================================================
+# Publications
 publications:
   - url: "http://www.paywithapost.de/pay?id=b1b5bde8-da59-4bc4-b6f9-1b62231c2884"
     title: "Construye un App de Fotos"
@@ -127,5 +196,17 @@ publications:
     title: "Construye un App para eventos"
     cover: "https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2Fion-events%2FccC0xr.png?alt=media"
     summaty: "Realiza un App para eventos con Ionic 1, con REST API"
+# ==============================================================
+# Blog
+blog:
+  count_related_posts: 3
+# ==============================================================
+# Footer
+footer:
+  text: 'Comunidad de Ionic en español. Aprende a crear apps con HTML, CSS, JS.'
+# ==============================================================
+# Subscribe
+subscribe:
+  btn_text: 'Subscribete'
+  success_text: 'Gracias! Ahora estas suscrito a ion-book.'
 
-count_related_posts: 4

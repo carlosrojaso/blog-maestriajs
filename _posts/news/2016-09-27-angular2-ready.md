@@ -4,12 +4,11 @@ title: "Angular 2 Final Release."
 date: 2016-09-27
 categories: news
 tags: [release, angular2]
-comments: true
 author: carlosrojas
 cover: "http://i.imgur.com/ZiY7lT8.jpg"
 ---
 
-<img class="img-responsive" src="http://www.ion-book.com/images/Angular2.gif" alt="ionic">
+<amp-img width="480" height="264" layout="responsive" src="{{site.urlblog}}/images/Angular2.gif"></amp-img>
 
 Hola a todos!!!
 

@@ -1,26 +1,19 @@
 ---
 layout: default
 ---
-<div class="container">
+{% include blog/header.html %}
+{% assign posts = site.categories[page.category] | where:"draft", "false" %}
+<div class="content">
   <div class="row">
-    <div class="col-xs-12 col-md-9">
-      <div class="row">
-        <div class="col-xs-12 col-sm-6">
-          <h1 class="title">{{ page.title }}</h1>
-          {{ content }}
-        </div>
-      </div>
-      <div class="row">
-        {% assign posts = site.categories[page.category] | where:"draft", "false" %}
-        {% for post in posts %}
-          {% unless post.draft %}
-          <div class="col-xs-12 col-sm-6">
-            {% include article_home.html trucate="90" %}
-          </div>
-          {% endunless %}
-        {% endfor %}
-      </div>
+    <div class="col">
+      <h1 class="title-page">{{page.title}} ({{ posts | size }}):</h1>
     </div>
-    {% include right.html %}
+  </div>
+  <div class="row wrap baseline">
+    {% for post in posts %}
+    <div class="col col-100 col-md-33 col-lg-33">
+      {% include general/article.html %}
+    </div>
+    {% endfor %}
   </div>
 </div>

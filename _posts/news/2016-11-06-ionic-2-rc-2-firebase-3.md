@@ -2,20 +2,19 @@
 layout: post
 title: "Firebase 3  + Ionic 2 RC 2 en 4 pasos"
 date: 2016-11-14
-categories: news
+categories: ionic2
 tags: [firebase, ionic2]
-comments: true
 author: nicobytes
 cover: "https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2Fionic-2-rc2-firebase-3%2FFirebase%203%20%2B%20Ionic%202.png?alt=media"
 ---
 
-> Incluir **Firebase** en un proyecto de ionic puede ser algo complejo pero en este último release de [**Ionic 2 RC2**](http://www.ion-book.com/news/ionic-2-rc-2){:target="_blank"}, es mucho más fácil hacer la implementación ya que no toca entrar a archivos de configuración etc etc.
+> Incluir **Firebase** en un proyecto de ionic puede ser algo complejo pero en este último release de [**Ionic 2 RC2**]({{site.urlblog}}/news/ionic-2-rc-2){:target="_blank"}, es mucho más fácil hacer la implementación ya que no toca entrar a archivos de configuración etc etc.
 
-<img class="img-responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2Fionic-2-rc2-firebase-3%2FFirebase%203%20%2B%20Ionic%202.png?alt=media" alt="upgrade">
+<amp-img width="1024" height="512" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2Fionic-2-rc2-firebase-3%2FFirebase%203%20%2B%20Ionic%202.png?alt=media"></amp-img>
 
 ## Paso 1: Iniciando el proyecto
 
-Lo primero que haremos será iniciar un nuevo proyecto con ionic, si no lo recuerdas puedes ver esto con mas detalle en la [Introduccion a Ionic 2](http://www.ion-book.com/ionic2/ionic2){:target="_blank"}.
+Lo primero que haremos será iniciar un nuevo proyecto con ionic, si no lo recuerdas puedes ver esto con mas detalle en la [Introduccion a Ionic 2]({{site.urlblog}}/ionic2/ionic2){:target="_blank"}.
 Vamos a nuestra terminal y ejecutamos:
 
 ```
@@ -126,30 +125,30 @@ Y listo ya con la anterior configuración conectamos Ionic con Firebase, tambié
   <div class="col-xs-12 col-sm-6">
     <article class="article-home">
       <div class="cover-crop">
-        <a href="http://www.ion-book.com/demos/firebase-database-and-ionic-2" target="_blank">
+        <a href="{{site.urlblog}}//ionic2/firebase-database-and-ionic-2" target="_blank">
           <img src="http://i.cubeupload.com/T62oZF.jpg" class="img-responsive" alt="demo"/>
         </a>
       </div>
       <h1>
-        <a href="http://www.ion-book.com/demos/firebase-database-and-ionic-2" target="_blank">Firebase Database + Ionic 2.</a>
+        <a href="{{site.urlblog}}//ionic2/firebase-database-and-ionic-2" target="_blank">Firebase Database + Ionic 2.</a>
       </h1>
       <div class="more">
-        <a class="btn btn-primary" href="http://www.ion-book.com/demos/firebase-database-and-ionic-2" target="_blank">Leer más...</a>
+        <a class="btn btn-primary" href="{{site.urlblog}}//ionic2/firebase-database-and-ionic-2" target="_blank">Leer más...</a>
       </div>
     </article>
   </div>
   <div class="col-xs-12 col-sm-6">
     <article class="article-home">
       <div class="cover-crop">
-        <a href="http://www.ion-book.com/ionic2/firebase-3 Ionic" target="_blank">
+        <a href="{{site.urlblog}}/ionic2/firebase-3 Ionic" target="_blank">
           <img src="http://i.imgur.com/5mTwi1e.jpg" class="img-responsive" alt="demo"/>
         </a>
       </div>
       <h1>
-        <a href="http://www.ion-book.com/ionic2/firebase-3" target="_blank">Firebase 3 + Ionic</a>
+        <a href="{{site.urlblog}}/ionic2/firebase-3" target="_blank">Firebase 3 + Ionic</a>
       </h1>
       <div class="more">
-        <a class="btn btn-primary" href="http://www.ion-book.com/ionic2/firebase-3" target="_blank">Leer más...</a>
+        <a class="btn btn-primary" href="{{site.urlblog}}/ionic2/firebase-3" target="_blank">Leer más...</a>
       </div>
     </article>
   </div>

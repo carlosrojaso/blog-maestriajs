@@ -2,5 +2,5 @@
 layout: author
 title: "Nicolas Molina"
 author: nicobytes
-permalink: /nicobytes/
+permalink: /blog/authors/nicobytes/
 ---

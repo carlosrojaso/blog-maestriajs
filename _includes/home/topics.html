@@ -1,0 +1,19 @@
+<div class="content content-topics">
+  <div class="row wrap">
+    {% for topic in site.home.topics %}
+      <div class="col col-100 col-md-50 col-lg-33 topic">
+        <div>
+          <div class="row center">
+            <div class="col col-33">
+              <div class="icon {{topic.icon}}"></div>
+            </div>
+            <div class="col col-67">
+              <h3>{{ topic.title }}</h3>
+              <p>{{ topic.text }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</div>

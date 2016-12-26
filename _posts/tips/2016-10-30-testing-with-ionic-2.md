@@ -4,14 +4,13 @@ title: "Testing en Angular 2 / Ionic 2"
 date: 2016-10-30
 tags: [testing, ionic2]
 categories: tips
-comments: true
 author: nicobytes
 cover: "https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2Ftdd%2Ftdd.jpg?alt=media"
 ---
 
 > Crear grandes productos que agreguen valor y mantener un producto de calidad para los clientes es un gran reto, las **pruebas unitarias** aseguran que esto sea más fácil y una de las mejores estrategias es aplicando Desarrollo guiado por pruebas, más conocido por sus siglas en inglés **TDD (Test Driven Development)**
 
-<img class="img-responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2Ftdd%2Ftdd.jpg?alt=media" alt="pouchdb">
+<amp-img width="1200" height="630" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2Ftdd%2Ftdd.jpg?alt=media"></amp-img>
 
 Mantener la calidad del código y más aún asegurar la entrega de un gran producto no es cosa fácil, aparte de estar preocupado porque el producto resuelva un problema, debemos asegurar que en la entrega continua de valor no se presenten errores o se pasen ciertos bugs a producción y que el usuario final no llegue a experimentar fallas en el producto.
 
@@ -21,7 +20,7 @@ Todos queremos evitar que los problemas y bugs aparezcan, lo cual es **IMPOSIBLE
 
 Y precisamente es lo que queremos a la hora de desarrollar un producto, queremos evitar que los usuarios experimenten errores en nuestro producto o que al menos tengamos las herramientas necesarias para detectar a tiempo un posible problema, por eso existen varios ambientes de desarrollo como por ejemplo: *production*, *staging*, *tests* y *develop*.
 
-<img class="img-responsive center-block" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2Ftdd%2F1-TeKrkWmFnrz84EnYxyD7VA.png?alt=media" alt="tdd">
+<amp-img width="600" height="447" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2Ftdd%2F1-TeKrkWmFnrz84EnYxyD7VA.png?alt=media"></amp-img>
 
 Aquí es donde viene la puesta en marcha de TDD (Desarrollo guiado por pruebas) lo que va permitir mejorar la calidad de nuestro producto y nuestro código (y por consecuencia ser mejores profesionales).
 
@@ -31,19 +30,20 @@ Aplicando TDD vas a obtener beneficios para ti (*podrás irte un fin de semana t
 - Refactorización
 - Un gran producto ❤
 
-<img class="img-responsive center-block"  src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2Ftdd%2F1-SY2qSO11sdH11x9d5dweug.gif?alt=media" alt="tdd">
+<amp-img width="371" height="343" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2Ftdd%2F1-SY2qSO11sdH11x9d5dweug.gif?alt=media"></amp-img>
 
 TDD se basa en un círculo de iteraciones en el cual primero escribimos las pruebas, luego construimos el código que cumpla con todas las pruebas escritas, por último refactorizamos (eliminando la redundancia).
 
 **Pruebas unitarias** es probar partes aisladas de nuestro código para asegurar que el producto funcione correctamente. Pero hay muchas más pruebas a las que debemos someter el producto.
 
-<img class="img-responsive center-block"  src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2Ftdd%2F1-tresTrQ81DKVI7bZL2pugw.png?alt=media" alt="tdd">
+<amp-img width="619" height="160" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2Ftdd%2F1-tresTrQ81DKVI7bZL2pugw.png?alt=media"></amp-img>
 
 Pero algo aún más importante, todo este trabajo es tiempo y esfuerzo por lo cual se debe manejar en paralelo al desarrollo del producto y por ende a la construcción de la propuesta de valor hacia los clientes. No se puede dejar la parte de testing para lo último, tiene que ser parte del desarrollo.
 
 Para lograr gestionar todo este esfuerzo y tener un gran producto que los clientes amen, existe el método de Agile Testing que se basa en cuatro cuadrantes:
 
-<img class="img-responsive center-block" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2Ftdd%2F1-QFNCtd8fmnm2BFKs9s7o7A.png?alt=media" alt="tdd">
+<amp-img width="722" height="543" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2Ftdd%2F1-QFNCtd8fmnm2BFKs9s7o7A.png?alt=media"></amp-img>
+
 
 1. **Acceptance Testing** ¿Estamos construyendo el producto correcto?
 2. **Usability Testing** ¿Construimos el producto correcto?
@@ -54,7 +54,10 @@ En cada uno de los cuatro cuadrantes hay más tipos de pruebas pero éstas son l
 
 Puedes ver el #devHangout donde Stephanie Frias nos habla más sobre esta matriz.
 
-<iframe width="560" height="315" class="center-block" src="https://www.youtube.com/embed/wzSk6lSdTtg" frameborder="0" allowfullscreen></iframe>
+<amp-youtube width="560" 
+            height="315"
+            layout="responsive"
+            data-videoid="wzSk6lSdTtg"></amp-youtube>
 
 ## Pruebas Unitarias 
 

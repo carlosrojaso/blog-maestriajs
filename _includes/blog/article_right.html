@@ -1,0 +1,16 @@
+{% if post.cover %}
+<article class="article-right">
+  <div class="row wrap">
+    <div class="col col-100">
+      <a href="{{ post.url }}">
+        <amp-img src="{{ post.cover }}" alt="{{ post.title }}" width="1024" height="512" layout="responsive"></amp-img>
+      </a>
+      <div class="content-text">
+        <h2>
+          <a href="{{ post.url }}">{{ post.title }}</a>
+        </h2>
+      </div>
+    </div>
+  </div>
+</article>
+{% endif %}

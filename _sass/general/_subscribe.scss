@@ -1,0 +1,101 @@
+#mlb2-3764889 a:hover {
+  cursor: pointer;
+}
+#mlb2-3764889 .subscribe-form{
+  box-sizing: border-box;
+  width: 100%;
+}
+#mlb2-3764889 .subscribe-form .form-section p,
+#mlb2-3764889 .subscribe-form .form-section li {
+  text-align: center;
+  color: white;
+}
+#mlb2-3764889.ml-subscribe-form button[disabled] {
+  cursor: not-allowed;
+}
+#mlb2-3764889.ml-subscribe-form .form-group.ml-error .form-control {
+  border-color: red;
+}
+#mlb2-3764889.ml-subscribe-form .btn-register{
+  width: 100%;
+  margin: 0 auto;
+  display: block;
+}
+#mlb2-3764889.ml-subscribe-form input{
+  border: 0px;
+  width: 100%;
+  margin: 0 auto;
+  display: block;
+  padding: 10px $padding;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+}
+.menu-blog{
+  #mlb2-3764889.ml-subscribe-form .btn-register{
+    background-color: $primary-color;
+  }
+}
+@media screen and (min-width: $min-width-medium) and (max-width: $max-width-medium) {
+  .header-home{
+    #mlb2-3764889 .subscribe-form{
+      width: 80%;
+      display: flex;
+    }
+  }
+  .menu-blog{
+    #mlb2-3764889 .subscribe-form{
+      display: flex;
+    }
+  }
+  #mlb2-3764889 .subscribe-form .form-section-mail{
+    flex: 0 0 60%;
+    max-width: 60%;
+    input{
+      padding: $padding;
+      margin-bottom: 0px;
+      border-radius:  $border-radius-btn 0px 0px $border-radius-btn;
+    }
+  }
+  #mlb2-3764889.ml-subscribe-form .btn-register{
+    border-radius: 0px $border-radius-btn $border-radius-btn 0px;
+  }
+  #mlb2-3764889.ml-subscribe-form .btn-register.loading{
+    padding: 13px;
+  }
+  #mlb2-3764889 .subscribe-form .form-section p,
+  #mlb2-3764889 .subscribe-form .form-section li {
+    text-align: left;
+  }
+}
+@media screen and (min-width: $min-width-large) {
+  .header-home{
+    #mlb2-3764889 .subscribe-form{
+      width: 80%;
+      display: flex;
+    }
+  }
+  .menu-blog{
+    #mlb2-3764889 .subscribe-form{
+      display: flex;
+    }
+  }
+  #mlb2-3764889 .subscribe-form .form-section-mail{
+    flex: 0 0 60%;
+    max-width: 60%;
+    input{
+      padding: $padding;
+      margin-bottom: 0px;
+      border-radius:  $border-radius-btn 0px 0px $border-radius-btn;
+    }
+  }
+  #mlb2-3764889.ml-subscribe-form .btn-register{
+    border-radius: 0px $border-radius-btn $border-radius-btn 0px;
+  }
+  #mlb2-3764889.ml-subscribe-form .btn-register.loading{
+    padding: 13px;
+  }
+  #mlb2-3764889 .subscribe-form .form-section p,
+  #mlb2-3764889 .subscribe-form .form-section li {
+    text-align: left;
+  }
+}

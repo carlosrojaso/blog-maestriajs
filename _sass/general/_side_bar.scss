@@ -1,0 +1,40 @@
+amp-sidebar{
+  background-color: white;
+  section{
+    display: flex;
+    &.header-menu{
+      h2{
+        padding-left: 16px;
+        flex: 1 1 auto;
+        color: $primary-color;
+      }
+    }
+  }
+  nav{
+    width: 200px;
+    ul{
+      list-style: none;
+      margin: 0px;
+      padding: 0px;
+      a{
+        padding: $padding;
+        display: block;
+        font-weight: bold;
+        color: $primary-color;
+        text-decoration: none;
+        text-transform: capitalize;
+        border-bottom: 1px solid $primary-color;
+        &.active{
+          border-left: 10px solid $primary-color;
+        }
+      }
+      a + ul{
+        a{
+          font-size: .9em;
+          padding-left: 28px;
+          font-style: italic;
+        }
+      }
+    }
+  }
+}

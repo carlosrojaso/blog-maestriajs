@@ -4,12 +4,11 @@ title: "¿Qué es Typescript?"
 tags: [typescript, ionic2]  
 date: 2016-06-22
 categories: ionic2
-comments: true
 author: carlosrojas
 cover: "http://i.imgur.com/yFY9ETL.png"
 ---
 
-<img src="http://i.imgur.com/yFY9ETL.png" class="img-responsive" alt="image angular2"/>
+<amp-img width="814" height="234" layout="responsive" src="http://i.imgur.com/yFY9ETL.png"></amp-img>
 
 Si has observado un proyecto en Ionic habras observado que ahora contiene dos carpetas una "app" y otra "www" que es distinto a como se estructuraba un proyecto en Ionic 1 y ademas si abres la carpeta "app" veras archivos con una extensión TS, esto 
 es debido a que ahora se utiliza Typescript para trabajar con Ionic.

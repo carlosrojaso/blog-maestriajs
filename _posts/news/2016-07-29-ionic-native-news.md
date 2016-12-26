@@ -4,14 +4,13 @@ title: "Nueva versión de Ionic Native"
 date: 2016-07-26
 categories: news
 tags: [native, ionic2]
-comments: true
 author: carlosrojas
 cover: "http://blog.ionic.io/wp-content/uploads/2016/06/ionic-native-header.jpg"
 ---
 
-Ya hemos hablado sobre [Ionic Native](http://www.ion-book.com/ionic2/ionic-native) en este blog.
+Ya hemos hablado sobre [Ionic Native]({{site.urlblog}}/ionic2/ionic-native) en este blog.
 
-<img class="img-responsive" src="http://blog.ionic.io/wp-content/uploads/2016/06/ionic-native-header.jpg" alt="es6">
+<amp-img width="1400" height="600" layout="responsive" src="http://blog.ionic.io/wp-content/uploads/2016/06/ionic-native-header.jpg"></amp-img>
 
 Ionic-native es todo un conjunto de envolturas en ES5/ES6/Typescript para cualquiera de los plugins de Cordova/Phonegap, la cual hace que cuando queremos agregar cualquier función nativa a nuestra aplicación sea muy fácil.
 

@@ -1,40 +1,43 @@
 ---
 layout: default
 ---
-{% assign author = site.authors[page.author] %}
-<div class="container">
-    <div class="col-xs-12 col-md-9">
-      <div class="row">
-        <div class="col-xs-8 col-sm-3">
-          <img src="{{ author.avatar }}" class="img-responsive img-author" alt="photo">
-        </div>
-        <div class="col-xs-12 col-sm-9">
-          <h2 class="title">{{ author.name }}</h2>
-          <p>{{ author.bio }}</p>
-          <strong>Website:</strong> <a href="{{ author.website }}" target="_blank"> {{ author.website }}</a>
-          <p>
-          {% for social in author.social_links %}
-            <a href="{{ social.link }}" target="_blank" class="btn btn-default">
-              <i class="fa {{ social.icon }}" aria-hidden="true"></i>
-            </a>
-          {% endfor %}
-          </p>
-        </div>
-      </div>
-       <div class="row">
-        <div class="col-xs-12">
-          <h3 class="title">Artículos:</h3>
-        </div>
-      </div>
-      <div class="row">
-        {% assign posts = site.posts | where:"draft", "false" | where:"author", page.author %}
-        {% for post in posts %}
-          <div class="col-xs-12 col-sm-6">
-            {% include article_home.html trucate="90" %}
+{% for item in site.authors %}{% if item.id == page.author %}{% assign author = item %}{% endif %}{% endfor %}
+{% include blog/header.html %}
+{% assign posts = site.posts | where:"draft", "false" | where:"author", author.id %}
+<div class="content">
+  <div class="row wrap top">
+    <div class="col">
+      <div class="author">
+        <div class="row wrap center">
+          <div class="col col-100 col-md-20 col-lg-20">
+            <amp-img src="{{ author.avatar }}" alt="{{ author.name }}" width="800" height="800" layout="responsive"></amp-img>
           </div>
-        {% endfor %}
+          <div class="col col-100 col-md-67 col-lg-67 text">
+            <h2>{{ author.name }}</h2>
+            <div class="info"><p>{{ author.bio }}</p></div>
+            {% if author.website %}
+            <p><strong>Website:</strong> <a href="{{ author.website }}" target="_blank"> {{ author.website }}</a></p>
+            {% endif %}
+            {% for social in author.social_links %}
+              <a href="{{ social.link }}" target="_blank" class="btn-social">
+                <div class="icon {{ social.icon }}"></div>
+              </a>
+            {% endfor %}
+          </div>
+        </div>
       </div>
     </div>
-    {% include right.html %}
+  </div>
+  <div class="row">
+    <div class="col">
+      <h1 class="title-page">Artículos ({{ posts | size }}):</h1>
+    </div>
+  </div>
+  <div class="row wrap baseline">
+    {% for post in posts %}
+    <div class="col col-100 col-md-33 col-lg-33">
+      {% include general/article.html %}
+    </div>
+    {% endfor %}
   </div>
 </div>

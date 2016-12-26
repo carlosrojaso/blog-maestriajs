@@ -4,7 +4,6 @@ title: "Observables en Angular 2"
 tags: [tips, angular2, ionic2]  
 date: 2016-07-07
 categories: ionic2
-comments: true
 author: carlosrojas
 cover: "http://i.imgur.com/zo6SD90.jpg"
 ---

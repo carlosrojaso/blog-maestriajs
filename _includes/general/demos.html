@@ -1,0 +1,19 @@
+<div class="row wrap baseline">
+  {% assign posts = site.posts | where:"draft", "false" %}
+  {% for post in posts %}
+    {% if post.tags contains "demos" and post.title != page.title %}
+    <div class="col col-100 col-md-33 col-lg-33">
+      {% if post.cover %}
+      <article class="article">
+        <a href="{{ post.url }}">
+          <amp-img src="{{ post.cover }}" alt="{{ post.title }}" width="1024" height="512" layout="responsive"></amp-img>
+        </a>
+        <h2>
+          <a href="{{ post.url }}">{{ post.title }}</a>
+        </h2>
+      </article>
+      {% endif %}
+    </div>
+    {% endif %}
+  {% endfor %}
+</div>
