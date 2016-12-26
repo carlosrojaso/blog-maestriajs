@@ -18,9 +18,9 @@ sass:
 # ==============================================================
 # Banner Course
 banner_course:
-  text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem reiciendis inventore velit, explicabo itaque autem.'
+  text: 'Hemos creado un increible curso de nuestra experiencia en Colombia, Chile, Bolivia y Peru.'
   btn_text: 'Ver Curso'
-  link: ''
+  link: 'http://bootcampwithus.usefedora.com/p/curso-basico-ionic-2-0/'
 # ==============================================================
 # Banner Slack
 banner_slack:
@@ -74,10 +74,10 @@ social_links:
 # Home Page
 home:
   banner_title: "Aprende <span class='underline'>Ionic 2</span> y desarrolla increibles apps para Android y IOS."
-  banner_text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem reiciendis inventore velit, explicabo itaque autem."
+  banner_text: "Inscribete en nuestra lista de correos y recibe 3 guias paso a paso para construir un App de Tareas, un App de Eventos y un App para fotos."
   topics_title: "¿Que aprenderas?"
-  topics_text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem reiciendis inventore velit, explicabo itaque autem."
-  topics_video: "lBTCB7yLs8Y"
+  topics_text: "Construye la app que siempre soñaste usando tecnologias Web."
+  topics_video: "kWZcdgLbWQI"
   topics:
     - title: 'Conecta con Firebase 3'
       icon: 'icon-fireball'
@@ -107,7 +107,7 @@ home:
       icon: 'icon-android-favorite'
       text: 'Sigue las mejores practicas entendiendo la arquirectuta de Ionic 2.'
   blog_title: 'Nuestro Blog'
-  blog_text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem reiciendis inventore velit, explicabo itaque autem.'
+  blog_text: 'Somos una comunidad de Ionic en español. Aprende a crear apps con HTML, CSS, JS.'
   blog_btn_text: 'Ver más articulos'
 # ==============================================================
 # Authors
@@ -203,7 +203,7 @@ blog:
 # ==============================================================
 # Footer
 footer:
-  text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem reiciendis inventore velit, explicabo itaque autem.'
+  text: 'Comunidad de Ionic en español. Aprende a crear apps con HTML, CSS, JS.'
 # ==============================================================
 # Subscribe
 subscribe:
