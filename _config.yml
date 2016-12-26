@@ -108,7 +108,7 @@ home:
       text: 'Sigue las mejores practicas entendiendo la arquirectuta de Ionic 2.'
   blog_title: 'Nuestro Blog'
   blog_text: 'Somos una comunidad de Ionic en español. Aprende a crear apps con HTML, CSS, JS.'
-  blog_btn_text: 'Ver más articulos'
+  blog_btn_text: 'Ver más artículos'
 # ==============================================================
 # Authors
 authors:
