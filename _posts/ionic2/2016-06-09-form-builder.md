@@ -17,7 +17,6 @@ Por eso es de vital importancia hacer un buen manejo de ellos, tener las validac
 # Actualización (06/11/2016)
 <hr/>
 Hemos actualizado este demo con el último release de [Ionic 2 RC 2]({{site.urlblog}}/news/ionic-2-rc-2){:target="_blank"}, si aun estas en alguna de las versiones Beta puedes seguir estos pasos [Steps to Upgrade](https://github.com/driftyco/ionic/blob/master/CHANGELOG.md#steps-to-upgrade-to-rc0){:target="_blank"}.
-
 <hr/>
 
 Como **ionic2** usa **Angular2**, podremos usar esta clase con los componentes de UI de ionic2.
