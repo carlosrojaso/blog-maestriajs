@@ -122,6 +122,10 @@
       margin-left: 33.3333%;
     }
 
+    &.offset-md-40{
+      margin-left: 40%;
+    }
+
     &.offset-md-50{
       margin-left: 50%;
     }
@@ -230,9 +234,8 @@
       margin-left: 33.3333%;
     }
 
-    &.col-lg-40{
-      flex: 0 0 40%;
-      max-width: 40%;
+    &.offset-lg-40{
+      margin-left: 40%;
     }
 
     &.offset-lg-50{
@@ -281,6 +284,11 @@
     &.col-lg-34{
       flex: 0 0 33.3333%;
       max-width: 33.3333%;
+    }
+
+    &.col-lg-40{
+      flex: 0 0 40%;
+      max-width: 40%;
     }
 
     &.col-lg-50{
