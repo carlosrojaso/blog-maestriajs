@@ -6,16 +6,15 @@
   <section>
     <nav>
       <ul>
-        {% for link in site.menu_header %}
-        <li>
+        {% for link in site.menu_header %}<li>
           <a {% if page.title == link.title %}class="active"{% endif %} href="{{ link.url }}" target="{{ link.target }}">{{ link.title }}</a>
           {% if link.title == 'Blog' %}<ul>
             {% for item_page in site.pages %}{% if item_page.layout == "category" %}<li>
               <a {% if page.title == item_page.title %}class="active"{% endif %} href="{{ item_page.url }}">{{ item_page.title }}</a>
             </li>{% endif %}{% endfor %}
           </ul>{% endif %}
-        </li> 
-      </ul>{% endfor %}
+        </li>{% endfor %}
+      </ul>
     </nav>
   </section>
 </amp-sidebar>
