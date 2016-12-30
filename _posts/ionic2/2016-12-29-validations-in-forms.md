@@ -6,13 +6,13 @@ tags: [forms, demos, ionic2]
 categories: ionic2
 laucher: "/launcher/demo109"
 author: nicobytes
-cover: "https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/demos%2Fdemo108%2Fitems.jpg?alt=media"
+cover: "https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2Fvalidations-in-forms%2FValidaciones%20en%20Formularios.jpg?alt=media"
 remember: true
 ---
 
 > La forma más común de capturar información de los usuarios son los **Formularios** y depende de una buena UI/UX ganar o perder un usuario en nuestra aplicación.
 
-<amp-img width="1024" height="512" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/demos%2Fdemo108%2Fitems.jpg?alt=media" alt="Animando items con Ionic 2"></amp-img>
+<amp-img width="1024" height="512" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2Fvalidations-in-forms%2FValidaciones%20en%20Formularios.jpg?alt=media" alt="Validaciones en Formularios"></amp-img>
 
 Por eso es de vital importancia hacer un buen manejo de ellos, tener las validaciones adecuadas y por esto Angular2 nos ofrece **FormBuilder**, una clase que nos provee una completa herramienta para controlar y validar formularios de forma muy eficiente y sencilla.
 
