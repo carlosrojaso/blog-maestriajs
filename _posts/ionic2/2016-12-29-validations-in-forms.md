@@ -215,7 +215,7 @@ como podemos ver usamos todos los métodos que nos provee la clase `Validators`.
 
 ### Expresiones regulares
 
-Las expresiones regulares son un uso muy frecuente para validar datos, las expresiones y imagenes a continuacion son del artiulo [8 Regular Expressions You Should Know](https://code.tutsplus.com/tutorials/8-regular-expressions-you-should-know--net-6149){:target="_blank"}
+Las expresiones regulares son muy frecuente para validar datos, las expresiones y imagenes a continuacion son del artiulo [8 Regular Expressions You Should Know](https://code.tutsplus.com/tutorials/8-regular-expressions-you-should-know--net-6149){:target="_blank"}
 
 En la línea 20 usamos la siguiente expresión regular para validar el **email**:
 
