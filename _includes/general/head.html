@@ -2,9 +2,11 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+  <meta name="author" content="Nicolas Molina and Carlos Rojas">
   <title>{% if page.title | upcase %}{{ page.title }}{% else %}{{ site.title | upcase }}{% endif %}</title>
   <!-- SE0 -->
-  <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+  <meta name="keywords" content="{% if page.keywords %}{{ page.keywords }}{% endif %}{{ site.keywords }}">
+  <meta name="description" content="{% if page.excerpt %}{{ page.excerpt  | remove: '<amp-img>' | remove: '</amp-img>' | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
   <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "feed.xml" | prepend: site.baseurl | prepend: site.url }}" />
   <!--<script type="application/ld+json">
