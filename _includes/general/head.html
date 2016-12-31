@@ -9,18 +9,33 @@
   <meta name="description" content="{% if page.excerpt %}{{ page.excerpt  | remove: '<amp-img>' | remove: '</amp-img>' | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
   <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "feed.xml" | prepend: site.baseurl | prepend: site.url }}" />
-  <!--<script type="application/ld+json">
-      {
+  {% if page && page.layout == 'post' %}{% for item in site.authors %}{% if item.id == page.author%}{% assign author = item %}{% endif %}{% endfor %}<script type="application/ld+json">
+    {
         "@context": "http://schema.org",
-        "@type": "Person",
-        "email": "mailto:nicolas.molina.monroy@gmail.com",
-        "image": "http://www.nicobytes.com/images/photo.jpg",
-        "jobTitle": "Software Developer",
-        "name": "Nicolas Molina Monroy",
-        "telephone": "(425) 123-4567",
-        "url": "http://www.nicobytes.com"
-      }
-  </script>-->
+        "@type": "BlogPosting",
+        "mainEntityOfPage":{
+            "@type":"WebPage",
+            "@id":"{{site.url}}{{ page.url }}"
+        },
+        "headline": "{{ page.title }}",
+        "image": {
+          "@type": "ImageObject",
+          "url": "{{ page.cover }}",
+          "width": 1024,
+          "height": 512
+        },
+        "author": {
+            "@type": "Person",
+            "name": "{{ author.name }}",
+            "image": "{{ author.avatar }}",
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "ion-book"
+        },
+        "datePublished": "{{ page.date | date: "%-d %B %Y" }}"
+    }
+  </script>{% endif %}
   <!-- facebook -->
   <meta property="og:url" content="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}" />
   <meta property="og:type" content="article" />
