@@ -2,14 +2,13 @@
 layout: post
 title: "Validaciones en Formularios"
 keywords: "validaciones con ionic, formularios con angular 2, validar email con angular 2, formbuilder, formularios con ionic 2"
-date: 2016-12-29
+date: 2017-01-03
 tags: [forms, demos, ionic2]
 categories: ionic2
 laucher: "/launcher/demo109"
 author: nicobytes
 cover: "https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2Fvalidations-in-forms%2FValidaciones%20en%20Formularios.jpg?alt=media"
 remember: true
-draft: true
 ---
 
 > La forma más común de capturar información de los usuarios son los **Formularios** y depende de una buena UI/UX ganar o perder un usuario en nuestra aplicación.
