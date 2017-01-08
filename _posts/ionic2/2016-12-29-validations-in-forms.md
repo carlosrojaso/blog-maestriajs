@@ -290,7 +290,6 @@ Ahora en el template vamos a controlar cómo mostrar los errores al usuario a pa
     </ion-item>
     <ion-item *ngIf="myForm.get('age').errors && myForm.get('age').dirty">
       <p *ngIf="myForm.get('age').hasError('required')">Field is required</p>
-      <p *ngIf="myForm.get('age').hasError('invalid')">You are not adult</p>
     </ion-item>
     <ion-item>
       <ion-label stacked>Url:</ion-label>
