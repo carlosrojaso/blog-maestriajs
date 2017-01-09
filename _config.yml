@@ -208,6 +208,6 @@ footer:
 # ==============================================================
 # Subscribe
 subscribe:
-  btn_text: 'Subscribete'
+  btn_text: 'Subscríbete'
   success_text: 'Gracias! Ahora estas suscrito a ion-book.'
 

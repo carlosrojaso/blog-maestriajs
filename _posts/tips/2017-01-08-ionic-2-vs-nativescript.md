@@ -72,6 +72,8 @@ Los dos nos prometen que con una sola base de código puedes desarrollar aplicac
 
 Ionic 2 al usar tecnología web puede estar en muchas más plataformas y ser versátil. 
 
+{% include blog/subscribe.html %}
+
 ## Performance
 
 Ahora en este punto Nativescript tiene un mayor performance que las apps en Ionic 2, ya que la interfaz no se renderiza en un **WebView** sino nativamente en el sistema operativo, pero la diferencia es muy poca entre la una y otra. En el caso de Ionic 2 se puede habilitar el proceso de **AOT (Compilación de alto nivel)** que hará que tus la app reduzca el tiempo de carga.

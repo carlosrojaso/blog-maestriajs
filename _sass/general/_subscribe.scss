@@ -35,6 +35,11 @@
     background-color: $primary-color;
   }
 }
+.subscribe-blog{
+  #mlb2-3764889.ml-subscribe-form input{
+    box-shadow: 0px 0px 1px $primary-color;
+  }
+}
 @media screen and (min-width: $min-width-medium) and (max-width: $max-width-medium) {
   .header-home{
     #mlb2-3764889 .subscribe-form{
@@ -45,6 +50,15 @@
   .menu-blog{
     #mlb2-3764889 .subscribe-form{
       display: flex;
+    }
+  }
+  .subscribe-blog{
+    #mlb2-3764889 .subscribe-form{
+      display: flex;
+    }
+    #mlb2-3764889 .subscribe-form .form-section p,
+    #mlb2-3764889 .subscribe-form .form-section li{
+      color: black;
     }
   }
   #mlb2-3764889 .subscribe-form .form-section-mail{
@@ -77,6 +91,15 @@
   .menu-blog{
     #mlb2-3764889 .subscribe-form{
       display: flex;
+    }
+  }
+  .subscribe-blog{
+    #mlb2-3764889 .subscribe-form{
+      display: flex;
+    }
+    #mlb2-3764889 .subscribe-form .form-section p,
+    #mlb2-3764889 .subscribe-form .form-section li{
+      color: black;
     }
   }
   #mlb2-3764889 .subscribe-form .form-section-mail{
