@@ -21,7 +21,7 @@ Hace poco tuve la oportunidad de participar en un hangout, discutiendo sobre est
             layout="responsive"
             data-videoid="UA8CVdhRvlk"></amp-youtube>
 
-Voy a tocar algunos puntos que son importantes al comparar cada uino, empecemos.
+Voy a tocar algunos puntos que son importantes al comparar cada uno, empecemos!
 
 ## Cross Platform
 
@@ -77,35 +77,35 @@ Ionic 2 al usar tecnología web puede estar en muchas más plataformas y ser ver
 
 ## Performance
 
-Ahora en este punto Nativescript tiene un mayor performance que las apps en Ionic 2, ya que la interfaz no se renderiza en un **WebView** sino nativamente en el sistema operativo, pero la diferencia es muy poca entre la una y otra. En el caso de Ionic 2 se puede habilitar el proceso de **AOT (Compilación de alto nivel)** que hará que tus la app reduzca el tiempo de carga.
+Ahora en este punto Nativescript tiene un mayor performance que las apps en Ionic 2, ya que la interfaz no se renderiza en un **WebView** sino nativamente en el sistema operativo, pero la diferencia es muy poca entre una y la otra. En el caso de Ionic 2 se puede habilitar el proceso de **AOT (Compilación de alto nivel)** que hará que la app reduzca el tiempo de carga.
 
 Ahora si este punto del performance es sumamente importante para ti, hablando de milisegundos de diferencia, tu opción podria ser NativeScript o react native o incluso si quieres que tu app tenga un alto performance hazlo nativo en android y ios y no busques soluciones híbridas.
 
 ## Comunidad
 
-Bueno en este caso Ionic tiene muchisima más comunidad, pero esto se debe a que ionic ya lleva bastante tiempo en mercado y por eso tiene una comunidad más fuerte, en cambio NativeScript lleva mucho menos tiempo aún así su comunidad es buena y tiene a grandes exponentes dentro de la comunidad.
+Bueno en este caso Ionic tiene muchisima más comunidad, pero esto se debe a que ionic ya lleva bastante tiempo en el mercado y por eso tiene una comunidad más fuerte, en cambio NativeScript lleva mucho menos tiempo aún así su comunidad es buena y tiene a grandes exponentes.
 
 ## Curva de aprendizaje
 
-Debemos suponer que ya se tiene bases en HTML, Css y Javascript, teniendo eso en cuenta, en el caso de Ionic 2 debes aprender Angular, Typescript y Scss lo cual no es complejo y de por sí es fácil entender cómo trabaja. Con nativescript la curva es más alta debes aprender todo lo de ionic pero agregale algo de **XML** y algunas etiquetas de css de más.
+Debemos suponer que ya se tiene bases en HTML, CSS y JavaScript, teniendo eso en cuenta, en el caso de Ionic 2 debes aprender Angular, Typescript y SCSS lo cual no es complejo y de por sí es fácil entender cómo trabaja. Con NativeScript la curva es más alta debes aprender todo lo de ionic pero agregale algo de **XML** y algunas etiquetas de CSS de más.
 
 ## Angular
 
-Este es un gran punto ya que los dos soportar trabajar **Angular**, bueno en realidad en Ionic 2 es una obligación, en el caso de NativeScript es opcional, pero la mejor forma de trabajarlo es en conjunto con Angular.
+Este es un gran punto ya que los dos soportan trabajar con **Angular**, bueno en realidad en Ionic 2 es una obligación, en el caso de NativeScript es opcional, pero la mejor forma de trabajarlo es en conjunto con Angular.
 
 ## El SDK (componentes)
 
-En componentes Ionic tiene muchos más componentes disponibles para usar que Nativescript, es decir nos dan un libreria mucho más amplia para usar en comparación, por otro lado NativeScript tiene una parte de componentes pagos, es decir hay una suite que nos ofrecen con componentes más avanzados pero son de pago.
+En componentes, Ionic tiene muchos más disponibles para usar que Nativescript, es decir nos dan un librería mucho más amplia para usar en comparación. Por otro lado NativeScript tiene una parte de componentes de pago, es decir hay una suite que nos ofrecen con componentes más avanzados pero son de pago.
 
 ## Nativo
 
-Ok en el acceso de recursos nativos, las apps en Ionic se renderizan en un WebView y por eso debe usar plugins para conectarse a los recursos nativos como la cámara, geolocalización, acelerómetro y lo mismo si queremos consumir alguna librería de algún tercero como el SDK de Firebase o el SDK de Fabric, por ejemplo tenemos que buscar si estan los plugins hechos para estas librerías.
+Ok, en el acceso de recursos nativos las apps en Ionic se renderizan en un WebView y por eso deben usar plugins para conectarse a los recursos nativos como la cámara, geolocalización, acelerómetro y lo mismo si queremos consumir alguna librería de algún tercero como el SDK de Firebase o el SDK de Fabric, por ejemplo tenemos que buscar si estan los plugins hechos para estas librerías.
 
-En el caso de NativeScript no hay problema puedes usar cualquier recurso nativo y sdk externo sin necesidad de plugins.
+En el caso de NativeScript no hay problema puedes usar cualquier recurso nativo y SDK externo sin necesidad de plugins.
 
 ## Soporte
 
-Las dos tecnologías tiene geniales empresas detrás, en el caso de Ionic es **driftyco (ionic.io)** que es un empresa que solo se enfoca al desarrollo de todo el ecosistema de ionic, lo cual es un muy buena mezcla ya que solo se enfocan en ionic y sus productos alrededor de él, por parte de NativeScript esta **telerik** es una empresa que ya lleva mucho más tiempo en el mercado de apps, pero no es su producto a lo que están enfocados al 100% sin embargo llevan mucho invirtiendo en este framework.
+Las dos tecnologías tieneN geniales empresas detrás, en el caso de Ionic es **driftyco (ionic.io)** que es un empresa que solo se enfoca al desarrollo de todo el ecosistema de ionic, lo cual es un muy buena mezcla ya que solo se enfocan en ionic y sus productos alrededor de él, por parte de NativeScript esta **telerik** es una empresa que ya lleva mucho más tiempo en el mercado de apps, pero no es UN producto a lo que están enfocados al 100% sin embargo llevan mucho invirtiendo en este framework.
 
 Ahora vamos a parar de hablar y vamos a ver algunas diferencias en cuanto a código:
 
@@ -258,11 +258,11 @@ export class MyComponent {
 
 ## Conclusión (Mi opinión)
 
-Ionic 2 es un gran solución y he desarrollado con el ya por más de 2 años productos para empresas, agencias, startups etc y ahora con la nueva versión es muchísimo más potente que antes y la comunidad es magnífica, el performance y UX es una de mis preocupaciones, en cuanto al performance lo puedes solucionar con **AOT (Compilación de alto nivel)** y hacer UI/UX con SCSS, HTML y JS es mucho más fácil que nativo o con XML, sin embargo con NativeScript se obtiene un poco más de performance pero construir interfaz lleva un curva de aprendizaje un poco más alta. 
+Ionic 2 es un gran solución y he desarrollado con este framework por más de 2 años productos para empresas, agencias, startups, etc y ahora con la versión de Ionic 2 es muchísimo más potente que antes y la comunidad es magnífica, el performance y UX es una de mis preocupaciones, en cuanto al performance en Ionic 2 se puede solucionar con **AOT (Compilación de alto nivel)** y hacer UI/UX con SCSS, HTML y JS es mucho más fácil, con NativeScript se obtiene más de performance ya que no corre en un WebView, pero hacer UI/UX lleva una curva de aprendizaje más alta.
 
-El otro puntos son los SDKs externos como Firebase o Fabric por ejemplo, son más difíciles de implementar en Ionic ya que deben estar por medio de plugin y aun asi no esta todo habilitado en el caso de NativeScript puedes usar cualquier sdk sin mayores problemas.
+Otro aspecto importante son los SDKs externos por ejemplo Firebase o Fabric, son más difíciles de implementar en Ionic ya que deben estar por medio de un plugin y aún así no está todo disponible, en el caso de NativeScript puedo usar cualquier SDK sin mayor problema.
 
-En mi punto de vista con Ionic 2 puedo solucionar estos problemas, pero si en verdad quiero consumir los SDK a su máximo y adquirir un verdadero performance estaría más inclinado a probar **React Native** que NativeScript.
+En mi punto de vista con Ionic 2 se pueden solucionar estos problemas, pero si en verdad quiero consumir los SDK de terceros al máximo y adquirir un verdadero performance estaría más inclinado a probar React Native que NativeScript.
 
 ## Otros puntos de vista
 
