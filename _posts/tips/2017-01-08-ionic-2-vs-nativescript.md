@@ -7,6 +7,7 @@ tags: [tips, ionic2, news]
 categories: tips
 author: nicobytes
 cover: "https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2Fionicvsnative%2FFOLLOW.jpg?alt=media"
+draft: true
 ---
 
 > Vamos a analizar estos dos geniales frameworks e indagar sobre las ventajas y desventajas de cada uno.
