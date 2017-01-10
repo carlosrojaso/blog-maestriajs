@@ -39,7 +39,7 @@ menu_header:
     url: '/blog'
     target: '_self'
   - title: Cursos
-    url: 'http://bootcampwithus.usefedora.com/'
+    url: 'http://academia.ion-book.com/'
     target: '_blank'
 # ==============================================================
 # Menu Footer
@@ -51,7 +51,7 @@ menu_footer:
     url: '/blog'
     target: '_self'
   - title: Cursos
-    url: 'http://bootcampwithus.usefedora.com/'
+    url: 'http://academia.ion-book.com/'
     target: '_blank'
   - title: Autores
     url: '/blog/authors'
@@ -68,17 +68,17 @@ social_links:
   - url: "http://goo.gl/forms/ZCEc0cr3jydgK2wv1"
     title: "Slack"
     icon: "icon-slack"
-  - url: "http://goo.gl/forms/ZCEc0cr3jydgK2wv1"
+  - url: "https://www.youtube.com/channel/UCxs-DaSRmp8k23n79WjXndw"
     title: "Youtube"
     icon: "icon-social-youtube"
 # ==============================================================
 # Home Page
 home:
   banner_title: "Aprende <span class='underline'>Ionic 2</span> y desarrolla increibles apps para Android y IOS."
-  banner_text: "Inscríbete en nuestra lista de correos, recibe las últimas noticias y 3 guias paso a paso para construir un App de Tareas, un App de Eventos y un App para fotos."
+  banner_text: "Inscríbete en nuestra lista de correos, recibe las últimas noticias y un paso a paso para construir tu primera App en Ionic 2."
   topics_title: "¿Que aprenderás?"
   topics_text: "Construye la app que siempre soñaste usando tecnologias Web."
-  topics_video: "kWZcdgLbWQI"
+  topics_video: "UTJ_u6imses"
   topics:
     - title: 'Conecta con Firebase 3'
       icon: 'icon-fireball'
