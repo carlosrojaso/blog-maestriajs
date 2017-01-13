@@ -6,48 +6,45 @@ tags: [class, ionic2, ionic cloud]
 categories: ionic2
 comments: true
 author: carlosrojas
-cover: "https://firebasestorage.googleapis.com/v0/b/startupers-9cbb6.appspot.com/o/Posts%2Ffirebase-ionic-user-authentication.png?alt=media&token=a0422048-52b1-4b85-b017-48063ce1fd85"
+cover: "https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2Fclase3%2Fimage.png?alt=media&token=467c26b2-725e-43c4-a7b2-e9accee85304"
 ---
 
-<amp-img width="1024" height="512" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/startupers-9cbb6.appspot.com/o/Posts%2Ffirebase-ionic-user-authentication.png?alt=media&token=a0422048-52b1-4b85-b017-48063ce1fd85"></amp-img> 
+<amp-img width="1024" height="512" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2Fclase3%2Fimage.png?alt=media&token=467c26b2-725e-43c4-a7b2-e9accee85304"></amp-img> 
 
-Hello Startupers!!! and welcome to our lesson number 3. Hooray!!!
+Hola Ioner!!! y bienvenido a nuestra clase 3.
 
-if you remember the first lesson we create a simple App called *myFirstApp* you can go [here](http://www.startupers.io/ionic-2-lesson1)
+Si recuerdas la primera clase, nosostros creamos unas simple App llamada *myFirstApp* puede ir [aquí](https://www.ion-book.com/blog/ionic2/clase-1-feed/)
+Ahora, vamos a continuar construyendo nuestra App. Recordemos nuestras metas.
 
-Now, we going to continue building our amazing App. Remember our goals.
+* Leer noticias desde el Feed (RSS).
+* Registrar usuarios.
+* Autenticar usuarios.
+* Restaurar el password.
 
-* Read news from a Feed (RSS).
-* Register users.
-* Authenticate users.
-* Reset password.
+Primero, Debemos eliminar las paginas existentes en nuestro proyecto. Cuanto creas un nuevo proyecto por defecto Ionic te agrega algunas paginas *About*, *Contacts*, *Tabs*, *etc*.
 
-First, we need delete the existing pages in my project. When you create a new project by default ionic add some pages about, contacts, tabs, etc.
+Si tu quieres un proyecto en blanco tu puedes agregar el parametro *blank* en el final de
 
-If you want a project blank you can add the *blank* parameter in the end of
-
-````javascript
-
+```
 $ionic start myFirstApp --v2 blank
+```
 
-````
+Borra todos los directorios en  ````src/pages/````
 
-Delete all the directories in ````src/pages/````
+Ahora, Nosotros vamos a necesitar crear algunas Paginas. Para hacer esto vamos a utilizar el comando del CLI llamado [generate](http://ionicframework.com/docs/v2/cli/generate/)
 
-Now, We going to need create some Pages. to do this we going to use a CLI command called [generate](http://ionicframework.com/docs/v2/cli/generate/)
-
-````javascript
+```
 $ ionic generate page NewsDetail
 $ ionic generate page NewsListing
 $ ionic generate page Login
 $ ionic generate page Profile
 $ ionic generate page ResetPassword
 $ ionic generate page Signup
-````
+```
 
-That will generate all the pages we need, and then we need go to our ````src/app/app.module.ts```` and import all our news pages and remove the old ones, at the end we would to have something like this:
+Esto generara todas las paginas que nosotros necesitamos. Ahora debemos ir a ````src/app/app.module.ts```` e imporatemos todas las paginas de noticias y removeremos las antiguas, al final tu deberias tener algo como esto:
 
-````javascript
+{% highlight js %}
 
 import { NgModule } from '@angular/core';
 import { IonicApp, IonicModule } from 'ionic-angular';
@@ -59,11 +56,11 @@ import { ProfilePage } from '../pages/profile/profile';
 import { ResetPasswordPage } from '../pages/reset-password/reset-password';
 import { SignupPage } from '../pages/signup/signup';
 
-````
+{% endhighlight %}
 
-And add the pages in NgModule
+y agregamos las nuevas pagnas en NgModule
 
-````javascript
+{% highlight js %}
 
 @NgModule({
   declarations: [
@@ -92,29 +89,30 @@ And add the pages in NgModule
 })
 export class AppModule {}
 
-````
+{% endhighlight %}
 
-## Connecting our App with Ionic Cloud.
+## Conectando nuestra App con Ionic Cloud.
 
-Now, we need install the Cloud service client.
+Ahora, necesitamos instalar el Cloud Service client.
 
-````javascript
+{% highlight js %}
 
 $ npm install @ionic/cloud-angular --save
 
-````
+{% endhighlight %}
 
-Before you can configure your cloud settings, you’ll need to have an app ID. In your project directory, run:
+Antes de que puedas configurar tus cloud settings, tendras que tener un app ID. en el directorio de tu proyecto, ejecuta:
 
-````javascript
+```
 
 $ ionic io init
 
-````
+```
 
 Define a CloudSettings object for your app’s cloud settings. Replace APP_ID with your app’s ID, which you can find in your ````ionic.config.json```` file.
+Define los objetos 
 
-````javascript
+{% highlight js %}
 
 import { CloudSettings, CloudModule } from '@ionic/cloud-angular';
 
@@ -124,12 +122,12 @@ const cloudSettings: CloudSettings = {
   }
 };
 
-````
+{% endhighlight %}
 
-And we need to add your cloud settings into ````CloudModule.forRoot()```` inside ````NgModule````
+Y nosotros necesitamos agregar tus preferencias de cloud en ```CloudModule.forRoot()```` dentro de ````NgModule````
 
 
-````javascript
+{% highlight js %}
 
 @NgModule({
   declarations: [ ... ],
@@ -142,34 +140,23 @@ And we need to add your cloud settings into ````CloudModule.forRoot()```` inside
   providers: [ ... ]
 })
 
-````
+{% endhighlight %}
 
-Ok, in this point we should have everything connected.
+Ok, en este punto deberiamos tener todo conectado.
 
-<br/>
-*Are you enjoying this Post?*
+{% include blog/subscribe.html %}
 
-*Enroll in our FREE 5 lesson course that will help take your understand Ionic 2 and Ionic Cloud.*
+## Creando la pagina de Login.
 
-<form action="https://gumroad.com/follow_from_embed_form" class="form gumroad-follow-form-embed" method="post">
-<input name="seller_id" type="hidden" value="8823315497069">
-<input name="email" placeholder="Your email address" type="email">
-<button data-custom-highlight-color="" type="submit">Subscribe</button>
-</form>
-<br/>
-
-
-## Creating the Login Page.
-
-If you remember we create some pages with the [ generate command ](http://ionicframework.com/docs/v2/cli/generate/) and you should have this pages in ```` src/pages/ ````
+Si recuerdas nosotros creamos algunas paginas con el [ generate command ](http://ionicframework.com/docs/v2/cli/generate/) y deberias tener esta pagina en ```` src/pages/ ````
 
 <img src="https://firebasestorage.googleapis.com/v0/b/startupers-9cbb6.appspot.com/o/Posts%2Fdir_pages.png?alt=media&token=72d7dc02-5947-4700-ad31-97a6b00e10b0" alt="">
 
-We going to create our *login view* first we need open ```` src/pages/login/login.html ```` and add some components.
+Nosotros vamos a crear nuestro *login view* por lo que vamos a abrir ```` src/pages/login/login.html ```` y agregar algunos componentes.
 
 ### login.html 
 
-```` javascript
+{% highlight js %}
 
 <ion-header>
   <ion-navbar color="primary">
@@ -206,11 +193,11 @@ We going to create our *login view* first we need open ```` src/pages/login/logi
   </div>
 </ion-content>
 
-````
+{% endhighlight %}
 
-here we gonna see that we are using some components that are from Ionic Framework. 
+En este punto podemos ver que estamos usando algunos componentes que son del Ionic Framework.
 
-We going to see more in depth what the components are in the next lessons, but meanwhile you can check this links:
+Nosotros vamos a ver más a fondo que son los componentes en las proximas clases, pero mientras tanto tu puedes ver estos links:
 
 [ion-content](https://ionicframework.com/docs/v2/api/components/content/Content/){:target="_blank"}
 
@@ -220,12 +207,12 @@ We going to see more in depth what the components are in the next lessons, but m
 
 [Forms](https://ionicframework.com/docs/v2/resources/forms/){:target="_blank"}
 
-the important thing to see here is the functions ````loginUser()```` ,  ````goToSignup()```` and ````goToResetPassword()````
+Las cosas importante para ver aqui son las funciones ````loginUser()```` ,  ````goToSignup()```` y ````goToResetPassword()````
 
-We going need that when the user submit the *form* our app send the info to *Ionic Cloud* and register the new user.
+Nosotros vamos a necesitar que cuando el usuario envie el *form* nuestra app envie la info a *Ionic Cloud* y registre el nuevo usuario.
 
 
-````javascript
+{% highlight js %}
 
   private loginUser(){
 
@@ -250,44 +237,45 @@ We going need that when the user submit the *form* our app send the info to *Ion
 
   }
 
-````
-Because we are using a ````FormGroup```` we need to use this way to get the values.
+{% endhighlight %}
 
-````javascript
+Debido a que estamos usando el ````FormGroup```` necesitaremos usar esta forma para obtener los valores.
+
+{% highlight js %}
 this.myForm.controls['email'].value
 this.myForm.controls['password'].value
-````
+{% endhighlight %}
 
-and after that we going to use the login method provide for *Ionic Cloud*
+y despues nososotros vamos a usar el metodo de login proveido por *Ionic Cloud*
 
-````javascript
+{% highlight js %}
 
 this.auth.login('basic', details).then( ... );
 
-````
+{% endhighlight %}
 
-the other functions are for navigation in the views.
+las otras funciones las usamos para navegación.
 
-````javascript
+{% highlight js %}
 
 private goToSignup(){
     this.navCtrl.push(SignupPage);
   }
 
-````
+{% endhighlight %}
 
-````javascript
+{% highlight js %}
 
 private goToResetPassword(){
     this.navCtrl.push(ResetPasswordPage);
   }
-````
+{% endhighlight %}
 
-and all the magic together
+y toda la magia junta se ve asi.
 
 ### login.ts 
 
-````typescript
+{% highlight js %}
 
 import { Component } from '@angular/core';
 import { NavController, AlertController, LoadingController } from 'ionic-angular';
@@ -350,9 +338,9 @@ export class LoginPage {
 
 }
 
-````
+{% endhighlight %}
 
-we can add some styles too in ```` src/pages/login/login.scss ````:
+nosotros podemos agregar algunos estilos tambien en ```` src/pages/login/login.scss ````:
 
 ### login.scss 
 
@@ -377,18 +365,18 @@ we can add some styles too in ```` src/pages/login/login.scss ````:
 
 `````
 
-In this point we should see something like this:
+En este punto deberiamos utizar algo como esto:
 
-<img src="https://firebasestorage.googleapis.com/v0/b/startupers-9cbb6.appspot.com/o/Posts%2FScreen%20Shot%202016-12-19%20at%2010.59.23%20PM.png?alt=media&token=6820112d-a01d-4612-81cc-fa9e6191b075" alt="">
+<amp-img width="1024" height="512" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/startupers-9cbb6.appspot.com/o/Posts%2FScreen%20Shot%202016-12-19%20at%2010.59.23%20PM.png?alt=media&token=6820112d-a01d-4612-81cc-fa9e6191b075"></amp-img> 
 
 
-Ok, now we need modify the *SignupPage* to create new users in our app.
+Ok, ahora necesitamos modificar el *SignupPage* para crear el nuevo usuario en nuestra app.
 
-We can use a similar form like in the login page.
+Nosotros podemos usar un formulario similar como en la pagina de login.
 
 ### signup.html
 
-````javascript
+{% highlight js %}
 
 <ion-header>
   <ion-navbar color="primary">
@@ -417,11 +405,11 @@ We can use a similar form like in the login page.
   </form>
 </ion-content>
 
-````
+{% endhighlight %}
 
-Important to see here the function ````Signup()```` where we need to apply the *signup* method from Ionic Cloud.
+Algo importante es ver aqui la funcion ````Signup()```` donde nosotros necesitamos aplicar el metodo *signup* desde Ionic Cloud.
 
-````
+{% highlight js %}
 
 this.auth.signup(details).then(() => {
   // `this.user` is now registered
@@ -435,13 +423,13 @@ this.auth.signup(details).then(() => {
   }
 });
 
-````
+{% endhighlight %}
 
-all together
+todo junto
 
 ### signup.ts
 
-````javascript
+{% highlight js %}
 
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
@@ -516,13 +504,13 @@ export class SignupPage {
 }
 
 
-````
+{% endhighlight %}
 
-ok, now we gonna build the reset page.
+ok, ahora vamos a construir la pagina de restaurar.
 
 ### reset-password.html
 
-````javascript
+{% highlight js %}
 
 <ion-header>
 
@@ -549,11 +537,12 @@ ok, now we gonna build the reset page.
   </form>
 </ion-content>
 
-````
+{% endhighlight %}
 
 ### reset-password.ts
 
-````javascript
+{% highlight js %}
+
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { Auth, IDetailedError } from '@ionic/cloud-angular';
@@ -611,21 +600,15 @@ export class ResetPasswordPage {
   }
 
 }
-````
+{% endhighlight %}
 
-Ok, in this point you should to see something like this:
+Ok, en este punto deberias ver algo como esto:
 
-[Demo](/launcher/demo101/){:target="_blank"}
 
-[Repo](https://github.com/StartupersAcademy/myFirstApp){:target="_blank"}
+[Demo](/launcher/demo110/){:target="_blank"}
 
-Ok, this is everything for now. In 6 or 7 days since received this in your email you going to receive the next lesson. but, meanwhile you can read the next links :)  
+[Repo](https://startupersacademy.github.io/myFirstApp/){:target="_blank"}
+
+Ok, esto es todo por ahora pero puedes ver este leer este link y aprender un poco sobre los formularios
 
 [Forms](https://ionicframework.com/docs/v2/resources/forms/){:target="_blank"}
-
-Please rate this [lesson here](https://carlosrojaso.typeform.com/to/Y07Lg9) and Help us to improve :)
-
-Keep coding...
-
-Carlos Rojas
-@carlosrojas_o
