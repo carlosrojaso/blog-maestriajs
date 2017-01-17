@@ -6,10 +6,9 @@ categories: ionic1
 tags: [publications, ionic1]
 author: nicobytes
 cover: "https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2Fion-events%2FConstruye%20un%20app%20para%20Eventos!.jpg?alt=media"
-draft: true
 ---
 
-> Ion book ahora tiene una nueva sección llamada [**publicaciones**]({{site.urlblog}}/publications/){:target="_blank"}, serán completos e-books con una guía paso a paso para desarrollar aplicaciones desde cero hasta niveles más avanzados. Nuestra tercera publicación es hacer un app de eventos con **Ionic 1.3**.
+> Ion book ahora tiene una nueva sección llamada [**publicaciones**]({{site.url}}/publications/){:target="_blank"}, serán completos e-books con una guía paso a paso para desarrollar aplicaciones desde cero hasta niveles más avanzados. Nuestra tercera publicación es hacer un app de eventos con **Ionic 1.3**.
 
 <amp-img width="1200" height="630" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2Fion-events%2FConstruye%20un%20app%20para%20Eventos!.jpg?alt=media"></amp-img>
 
@@ -38,6 +37,6 @@ Al final lograremos una aplicación de eventos donde estamos controlando el fluj
 
 <amp-img width="842" height="1552" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2Fion-events%2Fresult.jpg?alt=media"></amp-img>
 
-Si quieres esta publicación solo ve a [**publicaciones**]({{site.urlblog}}/publications/){:target="_blank"} y descárgala.
+Si quieres esta publicación solo ve a [**publicaciones**]({{site.url}}/publications/){:target="_blank"} y descárgala.
 
 Pronto lanzaremos más publicaciones sobre Ionic 1 y Ionic 2.

@@ -187,15 +187,15 @@ authors:
 publications:
   - url: "http://www.paywithapost.de/pay?id=b1b5bde8-da59-4bc4-b6f9-1b62231c2884"
     title: "Construye un App de Fotos"
-    cover: "http://i.cubeupload.com/xvlIA6.png"
+    cover: "https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/ebooks%2Fion-gram.jpg?alt=media&"
     summary: "Deseas realizar un App de Fotos con Ionic 1, este es tu punto de partida."
   - url: "http://www.paywithapost.de/pay?id=356c87df-fcf3-4b7c-baa8-dec66570445d"
     title: "Construye un App de Tareas"
-    cover: "https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/ebooks%2FEbook.png?alt=media"
+    cover: "https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/ebooks%2Fion-list.jpg?alt=media"
     summary: "Realiza un App de Tareas con Ionic 1, manejando tabs"
   - url: "http://www.paywithapost.de/pay?id=29729e3f-6765-4e1f-8ee1-84bba161feec"
     title: "Construye un App para eventos"
-    cover: "https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2Fion-events%2FccC0xr.png?alt=media"
+    cover: "https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/ebooks%2Fion-events.jpg?alt=media"
     summary: "Realiza un App para eventos con Ionic 1, con REST API"
 # ==============================================================
 # Blog

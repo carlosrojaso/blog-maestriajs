@@ -5,35 +5,11 @@ permalink: /blog/
 ---
 {% include blog/header.html %}
 <div class="content">
-  <div class="row">
-    <!--<div class="col col-100">
- dirty ads, dont hate me 'cause i need to eat, => Are you eat with 1 USD per month?
-    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-8943241156434100"
-     data-ad-slot="7344056075"
-     data-ad-format="auto"></ins>
-<script>
-(adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-
-</div></div>-->
-
-<!--end Ads-->
   <div class="row wrap baseline">
     {% assign posts = site.posts | where:"draft", "false" %}
-    {% for post in posts %}
-    {% if forloop.first %}
-    <div class="col col-100">
-      {% include blog/article_cover.html %}
-    </div>
-    {% else %}
-    <div class="col col-100 col-md-33 col-lg-33">
-      {% include general/article.html %}
-    </div>
-    {% endif %}
+    {% for post in posts %}{% if forloop.first %}
+    <div class="col col-100">{% include blog/article_cover.html %}</div>{% else %}
+    <div class="col col-100 col-md-33 col-lg-33">{% include general/article.html %}</div>{% endif %}
     {% endfor %}
   </div>
 </div>

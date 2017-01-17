@@ -1,28 +1,47 @@
 ---
 layout: default
 ---
-<div class="container">
-    <div class="col-xs-12 col-md-9">
-      
-      <div class="row">
-        <div class="col-xs-12">
-          {{ content }}
-        </div>
-        {% for publication in site.publications %}
-          <div class="col-xs-12 col-sm-6 col-md-4">
-            <article class="publication">
-              <img src="{{ publication.cover }}" class="img-responsive" alt="publication">
-              <h2 class="title">{{ publication.title }}</h2>
-              <p>{{ publication.summaty }}</p>
-              <a href="{{publication.url}}" target="_blank" class="btn btn-primary">
-                <i class="fa fa-twitter" aria-hidden="true"></i> Descargar
-              </a>
-            </article>
-            
+{% include blog/header.html %}
+<div class="content">
+  <div class="row">
+    <div class="col">
+      <h1 class="title-page">Publicaciones</h1>
+    </div>
+  </div>
+  <div class="row wrap top">
+    <div class="col col-100 col-md-80 col-lg-80 content-authors">
+      {% for publication in site.publications %}
+        <div class="author">
+          <div class="row wrap top">
+            <div class="col col-100 col-md-20 col-lg-20">
+              <amp-img src="{{ publication.cover }}" alt="{{ author.name }}" width="513" height="752" layout="responsive"></amp-img>
+            </div>
+            <div class="col col-100 col-md-80 col-lg-80 text">
+              <h2>{{ publication.title }}</h2>
+              <div class="info"><p>{{ publication.summary  }}</p></div>
+              <div class="more">
+                <a class="btn btn-primary btn-round" href="{{ publication.url }}" target="_blank">Descargar</a>
+              </div>
+            </div>
           </div>
-        {% endfor %}
+        </div>
+      {% endfor %}
+    </div>
+    <div class="col col-100 col-md-100 col-lg-20">
+      <div class="row wrap baseline">
+        <div class="col col-100">
+          <section class="content-article-right">
+            <h3>Ultimos artículos:</h3>
+            <div class="row wrap baseline">
+              {% for post in site.posts limit: 8 %}
+                <div class="col col-100 col-md-33 col-lg-100">
+                  {% include blog/article_right.html %}
+                </div>
+              {% endfor %}
+            </div>
+          </section>
+        </div>
       </div>
     </div>
-    {% include blog/right.html %}
   </div>
 </div>
