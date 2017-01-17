@@ -74,6 +74,8 @@ Podemos solucionar errores encontrados en los templates antes de enviar la aplic
 
 AOT ya tiene las plantillas y componentes compilados, así que no hay llamadas a recursos externos por consecuencia hay menos oportunidad para ataques de inyección.
 
+{% include blog/subscribe.html %}
+
 ## Ok Ok, entonces ¿Cómo lo uso?
 
 Bueno si tienes una aplicación con Angular debes darle el contexto necesario con **NgModule** y instalar estas herramientas para hacerlo (**con ionic 2 NO es necesario**):
