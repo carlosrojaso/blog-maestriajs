@@ -41,6 +41,9 @@ menu_header:
   - title: Cursos
     url: 'http://academia.ion-book.com/'
     target: '_blank'
+  - title: Publicaciones
+    url: '/publications'
+    target: '_self'
 # ==============================================================
 # Menu Footer
 menu_footer:
@@ -55,6 +58,9 @@ menu_footer:
     target: '_blank'
   - title: Autores
     url: '/blog/authors'
+    target: '_self'
+  - title: Publicaciones
+    url: '/publications'
     target: '_self'
 # ==============================================================
 # Social Links
