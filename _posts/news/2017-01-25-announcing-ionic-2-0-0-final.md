@@ -10,7 +10,7 @@ cover: "https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts
 ---
 > Ha sido un camino largo donde hemos encontrado tropiezos y momentos de ira, sobre todo en las versiones RC0 hasta RC1 pero finalmente han dicho las palabras mágicas, el equipo de Ionic ha anunciado su [versión estable](http://blog.ionic.io/announcing-ionic-2-0-0-final/){:target="_blank"}.
 
-<amp-img width="1024" height="512" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2Fnews%2Fionic-2-final-header.jpg?alt=media&token=c5deb097-7881-438d-9fd0-9bc9ecf0aabc"></amp-img> 
+<amp-img width="1600" height="960" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2Fnews%2Fionic-2-final-header.jpg?alt=media&token=c5deb097-7881-438d-9fd0-9bc9ecf0aabc"></amp-img> 
 
 Hace unas horas se hizo el anuncio oficial por parte del equipo que muchos hemos esperado.  En el Post Oficial [Max Lynch](https://twitter.com/maxlynch){:target="_blank"} uno de los founders cuenta una pequeña historia
 de como llegar a este punto no fue facil, sobre todo por que al hacer un excelente trabajo en Ionic 1 y querer hacer un excelente trabajo en Ionic 2 debierón mantenerse sobre la linea confiando una vez más en Angular y en el gran equipo que esta detras.
