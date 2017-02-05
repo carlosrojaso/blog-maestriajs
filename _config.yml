@@ -77,6 +77,9 @@ social_links:
   - url: "https://www.youtube.com/channel/UCxs-DaSRmp8k23n79WjXndw"
     title: "Youtube"
     icon: "icon-social-youtube"
+  - url: "https://www.instagram.com/ion_book/"
+    title: "Instagram"
+    icon: "icon-social-instagram"
 # ==============================================================
 # Home Page
 home:
@@ -84,7 +87,7 @@ home:
   banner_text: "Inscríbete en nuestra lista de correos, recibe las últimas noticias y un paso a paso para construir tu primera App en Ionic 2."
   topics_title: "¿Que aprenderás?"
   topics_text: "Construye la app que siempre soñaste usando tecnologias Web."
-  topics_video: "UTJ_u6imses"
+  topics_video: "KVoW-1tRfXM"
   topics:
     - title: 'Conecta con Firebase 3'
       icon: 'icon-fireball'
@@ -139,10 +142,12 @@ authors:
     url: "/blog/authors/carlosrojas"
     avatar: "http://i.imgur.com/ecNB0is.png"
     website: "http://www.carlosrojasblog.com/"
-    bio: "Soy un creativo, organizado, autodidacta emprendedor y líder. Disfruto de enseñar a las personas a programar."
+    bio: "Carlos Rojas es Google Product Strategy Expert. Cuando no esta dando charlas en conferencias sobre Angular, Ionic o TypeScript da cursos en Startupers Academy."
     social_links:
       - link: "https://twitter.com/carlosrojas_o"
         icon: "fa-twitter"
+      - link: "https://youtube.com/carlosrojas84"
+        icon: "fa-youtube"
   - id: "daniel_lsanchez"
     name: "Daniel Londoño Sanchez"
     url: "/blog/authors/daniel_lsanchez"
@@ -192,17 +197,17 @@ authors:
 # Publications
 publications:
   - url: "http://www.paywithapost.de/pay?id=b1b5bde8-da59-4bc4-b6f9-1b62231c2884"
-    title: "Construye un App de Fotos"
+    title: "Empieza con este paso a paso de como hacer una App de Fotos con Ionic 1."
     cover: "https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/ebooks%2Fion-gram.jpg?alt=media&"
-    summary: "Deseas realizar un App de Fotos con Ionic 1, este es tu punto de partida."
+    summary: "Todos soñamos con hacer el proximo Instagram. Empieza con este paso a paso de como hacer una App de Fotos con Ionic 1."
   - url: "http://www.paywithapost.de/pay?id=356c87df-fcf3-4b7c-baa8-dec66570445d"
     title: "Construye un App de Tareas"
     cover: "https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/ebooks%2Fion-list.jpg?alt=media"
-    summary: "Realiza un App de Tareas con Ionic 1, manejando tabs"
+    summary: "Aprende a manejar Tabs en Ionic 1 realizando una App que te ayudara a aumentar tu Productividad."
   - url: "http://www.paywithapost.de/pay?id=29729e3f-6765-4e1f-8ee1-84bba161feec"
     title: "Construye un App para eventos"
     cover: "https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/ebooks%2Fion-events.jpg?alt=media"
-    summary: "Realiza un App para eventos con Ionic 1, con REST API"
+    summary: "Aprende a manejar APIs con este paso a paso de un App para eventos en Ionic 1."
 # ==============================================================
 # Blog
 blog:
