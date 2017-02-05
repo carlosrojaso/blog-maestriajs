@@ -41,9 +41,13 @@ menu_header:
   - title: Cursos
     url: 'http://academia.ion-book.com/'
     target: '_blank'
+  - title: Libro
+    url: 'https://www.gitbook.com/book/carlosrojaso1/ionbook/details'
+    target: '_blank'
   - title: Publicaciones
     url: '/publications'
     target: '_self'
+  
 # ==============================================================
 # Menu Footer
 menu_footer:
