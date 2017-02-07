@@ -2,7 +2,7 @@
 layout: post
 title: "Ionic 2 + OneSignal = PushNotification Awesome Easy"
 keywords: "ionic push notifications, OneSignal, push notifications, notifications, notifications en ionic 2, OneSignal y ionic"
-date: 2017-01-30
+date: 2017-02-07
 tags: [push, ionic2, native]
 categories: ionic2
 author: levanocarlos
