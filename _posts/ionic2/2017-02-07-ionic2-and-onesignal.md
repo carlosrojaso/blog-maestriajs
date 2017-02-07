@@ -6,14 +6,14 @@ date: 2017-01-30
 tags: [push, ionic2, native]
 categories: ionic2
 author: levanocarlos
-cover: "https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2FPUSH%20(1).jpg?alt=media"
+cover: "https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2Fonesignal%2F1.-%20dashboard_onesignal.png?alt=media"
 ---
 
 > En el mundo de las aplicaciones móviles ya sean Híbridas o Nativas es sumamente necesario implementar las notificaciones push.
 Existen diversas alternativas para hacer que tu aplicación tenga las **Notificaciones Push**.
 <!--summary-->
 
-<amp-img width="1024" height="512" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2FPUSH%20(1).jpg?alt=media" alt="Ionic Push Notifications"></amp-img>
+<amp-img width="1024" height="512" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2Fonesignal%2F1.-%20dashboard_onesignal.png?alt=media" alt="Ionic Push Notifications"></amp-img>
 
 Hace poco salio un post de parte del equipo de **ion-book** donde te enseñaban a usar las [Notificaciones Push](https://www.ion-book.com/blog/ionic2/ionic-push-notifications/){:target="_blank"} de Ionic con su [**Ionic Cloud**](https://www.ion-book.com/blog/ionic2/ionic-push-notifications/){:target="_blank"}.
 

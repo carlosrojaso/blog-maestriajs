@@ -3,7 +3,7 @@ layout: post
 title: "Ionic Push Notifications"
 keywords: "ionic push notifications, ionic push, push notifications, notifications, notifications en ionic 2"
 date: 2017-01-30
-tags: [demos, ionic2, native]
+tags: [push, demos, ionic2, native]
 categories: ionic2
 repo: "https://github.com/ion-book/demo110"
 author: nicobytes
