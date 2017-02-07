@@ -81,9 +81,6 @@ social_links:
   - url: "https://www.youtube.com/channel/UCxs-DaSRmp8k23n79WjXndw"
     title: "Youtube"
     icon: "icon-social-youtube"
-  - url: "https://www.instagram.com/ion_book/"
-    title: "Instagram"
-    icon: "icon-social-instagram"
 # ==============================================================
 # Home Page
 home:
