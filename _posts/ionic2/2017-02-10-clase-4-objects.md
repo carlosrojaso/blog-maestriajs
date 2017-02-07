@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Clase 4 - Objetos."
-date: 2017-01-19
+date: 2017-02-10
 tags: [class, ionic2]
 categories: ionic2
 author: carlosrojas
