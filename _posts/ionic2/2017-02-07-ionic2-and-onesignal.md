@@ -5,7 +5,7 @@ keywords: "ionic push notifications, OneSignal, push notifications, notification
 date: 2017-01-30
 tags: [push, ionic2, native]
 categories: ionic2
-author: nicobytes
+author: levanocarlos
 cover: "https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2FPUSH%20(1).jpg?alt=media"
 ---
 
