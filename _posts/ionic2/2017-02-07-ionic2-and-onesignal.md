@@ -7,6 +7,7 @@ tags: [push, ionic2, native]
 categories: ionic2
 author: levanocarlos
 cover: "https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2Fonesignal%2FMay%20this%20new%20year%20bring%20lots%20of%20crazy%20colour%20and%20fun%20to%20your%20life..jpg?alt=media"
+draft: true
 ---
 
 > En el mundo de las aplicaciones móviles ya sean Híbridas o Nativas es sumamente necesario implementar las notificaciones push.
