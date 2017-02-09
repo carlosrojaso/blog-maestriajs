@@ -191,7 +191,7 @@ authors:
         icon: "fa-github"
   - id: "javebratt"
     name: "Jorge Vergara"
-    url: "/javebratt"
+    url: "/blog/authors/javebratt"
     avatar: "https://s9.postimg.org/fhmw4iggf/Iu_N5_UI0o.jpg"
     bio: "Ayudo a emprendedores que están atacando proyectos de impacto social a planear y construir la primera versión de su aplicación móvil para que puedan salir al mercado rápido. Ayudo a desarrolladores de Ionic2 a usar esos conocimientos para construir aplicaciones basadas en Firebase."
     social_links:
@@ -199,6 +199,17 @@ authors:
         icon: "fa-twitter"
       - link: "https://facebook.com/javebrattDev"
         icon: "fa-facebook"
+  - id: "jorgecano"
+    name: "Jorge Cano"
+    url: "/blog/authors/jorgecano"
+    avatar: "https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/authors%2Fangulargderedondo.png?alt=media&token=71a0f757-4f37-4958-8350-f54201f5fe78"
+    bio: "Después de más de 9 años desarrollando, Jorge es un full stack developer avocado a las tecnologías en javascript. Hoy en día Jorge es Director de “departamento de nuevas tecnologías” en el cual prueba y decide qué tecnologías utilizar para brindar el mejor servicio performance y seguridad con Angular / Firebase y otras tecnologías de punta… Profesor de varios cursos relacionados a javascript, Google Developer Expert en tecnologías web y Angular Developer Expert , speaker internacional, y escritor de artículos técnicos.
+    "
+    social_links:
+      - link: "https://twitter.com/jorgeucano"
+        icon: "fa-twitter"
+      - link: "https://github.com/jorgeucano"
+        icon: "fa-github"
 # ==============================================================
 # Publications
 publications:
