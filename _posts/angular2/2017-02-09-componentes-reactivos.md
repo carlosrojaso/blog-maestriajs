@@ -6,7 +6,6 @@ date: 2017-02-09
 categories: angular2
 author: jorgecano
 cover: "https://cdn-images-1.medium.com/max/800/1*0VVxvtVPgHFR8Cm_tQKaOA.png"
-draft: true
 ---
 > Hablemos un poco de los componentes reactivos, que son para que sirven y como utilizarlos…
 
