@@ -41,12 +41,6 @@ menu_header:
   - title: Cursos
     url: 'http://academia.ion-book.com/'
     target: '_blank'
-  - title: Libro
-    url: 'https://www.gitbook.com/book/carlosrojaso1/ionbook/details'
-    target: '_blank'
-  - title: Publicaciones
-    url: '/publications'
-    target: '_self'
   
 # ==============================================================
 # Menu Footer
@@ -66,6 +60,13 @@ menu_footer:
   - title: Publicaciones
     url: '/publications'
     target: '_self'
+  - title: Libro
+    url: 'https://libro.ion-book.com/'
+    target: '_blank'
+  - title: Publicaciones
+    url: '/publications'
+    target: '_self'
+
 # ==============================================================
 # Social Links
 social_links: 
@@ -232,7 +233,9 @@ blog:
 # ==============================================================
 # Footer
 footer:
-  text: 'Comunidad de Ionic en español. Aprende a crear apps con HTML, CSS, JS.'
+  text: 'Somos un pequeño pedazo del Internet empoderado por la Comunidad de Ionic en Español. 
+  
+  Aprende a crear apps con HTML, CSS y Javascript con nuestros Tutoriales, Libro, Slack y Publicaciones.'
 # ==============================================================
 # Subscribe
 subscribe:
