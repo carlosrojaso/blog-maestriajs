@@ -3,7 +3,7 @@ layout: post
 title: "Componentes Reactivos"
 tags: [angular2]
 date: 2017-02-09
-categories: angular2
+categories: tips
 author: jorgecano
 cover: "https://cdn-images-1.medium.com/max/800/1*0VVxvtVPgHFR8Cm_tQKaOA.png"
 ---

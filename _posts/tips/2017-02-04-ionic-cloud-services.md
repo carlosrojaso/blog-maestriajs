@@ -3,7 +3,7 @@ layout: post
 title: "¿ Que es Ionic Cloud Services ?"
 date: 2017-02-04
 tags: [class, ionic2]
-categories: ionic2
+categories: tips
 author: carlosrojas
 cover: "https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2Fcloudservices%2Fcloud-welcome-illustration.png?alt=media&token=96d7e1a3-e269-4440-9b55-bf1f00793338"
 ---
