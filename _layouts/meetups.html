@@ -1,0 +1,47 @@
+---
+layout: default
+---
+{% include blog/header.html %}
+<div class="content">
+  <div class="row">
+    <div class="col">
+      <h1 class="title-page">Encuentrate con la Comunidad.</h1>
+    </div>
+  </div>
+  <div class="row wrap top">
+    <div class="col col-100 col-md-80 col-lg-80 content-authors">
+      {% for meetups in site.meetups %}
+        <div class="author">
+          <div class="row wrap top">
+            <div class="col col-100 col-md-20 col-lg-20">
+              <amp-img src="{{ meetups.cover }}" alt="{{ author.name }}" width="500" height="500" layout="responsive"></amp-img>
+            </div>
+            <div class="col col-100 col-md-80 col-lg-80 text">
+              <h2>{{ meetups.title }}</h2>
+              <div class="info"><p>{{ meetups.country  }}</p></div>
+              <div class="more">
+                <a class="btn btn-primary btn-round" href="{{ meetups.url }}" target="_blank">Ver</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+    <div class="col col-100 col-md-100 col-lg-20">
+      <div class="row wrap baseline">
+        <div class="col col-100">
+          <section class="content-article-right">
+            <h3>Ultimos artículos:</h3>
+            <div class="row wrap baseline">
+              {% for post in site.posts limit: 8 %}
+                <div class="col col-100 col-md-33 col-lg-100">
+                  {% include blog/article_right.html %}
+                </div>
+              {% endfor %}
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
