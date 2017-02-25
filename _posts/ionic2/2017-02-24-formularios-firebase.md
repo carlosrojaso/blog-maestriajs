@@ -3,7 +3,7 @@ layout: post
 title: "Aprende a validar formularios con Ionic y Firebase"
 keywords: "ionic,firebase"
 date: 2017-02-24
-tags: [push, ionic2, native]
+tags: [firebase, ionic2]
 categories: ionic2
 author: javebratt
 cover: "https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2F2017-02-24-formsularios-firebase%2F5mTwi1e.jpg?alt=media&token=506ec3e9-8174-4f3f-8311-edddc5a3abbd"
@@ -78,15 +78,15 @@ constructor(public navCtrl: NavController,
 
 Ahora vamos a crear un nuevo formulario y declarar este antes del constructor.
 
-````
+{% highlight ts %}
 public addSongForm: any;
 constructor(public navCtrl: NavController, 
   public formBuilder: FormBuilder) {...}
-````
+{% endhighlight %}
 
 Ahora vamos a inicializar el formulario y declarar las entradas esto va a ser.
 
-````
+{% highlight ts %}
 this.addSongForm = formBuilder.group({
   songName: ['', Validators.compose([Validators.required, 
     Validators.maxLength(45)])],
@@ -94,7 +94,7 @@ this.addSongForm = formBuilder.group({
     Validators.minLength(2)])],
   userAge: ['', Validators.compose([Validators.required])]
 });
-````
+{% endhighlight %}
 
 vamos con un poco de teoria sobre lo que acabamos de ver.
 
@@ -174,25 +174,25 @@ El formulario va a tener algunas cosas:
 
 Despues de que el formulario es creado es tiempo para agregar nuestro primera entrada, primero crearemos la entrada:
 
-````
+{% highlight html %}
 <ion-item>
   <ion-label stacked>Song Name</ion-label>
   <ion-input formControlName="songName" type="text" 
     placeholder="What's the song's name?">
   </ion-input>
 </ion-item>
-````
+{% endhighlight %}
 
 entonces,  nosotros mostraremos un mensaje de error si el formulario no es valido, asi que es correcto despues que la entrada agrega un parrafo con el mensaje de error.
 
-````
+{% highlight html %}
 <ion-item class="error-message" *ngIf="!addSongForm.controls.songName.valid 
   && addSongForm.controls.songName.dirty">
   <p>
     The song's name is required to be under 45 characters.
   </p>
 </ion-item>
-````
+{% endhighlight %}
 
 Hemos configurado un mensaje de error para que permanezca escondido, y se muestre solo si:
 
@@ -201,11 +201,11 @@ Hemos configurado un mensaje de error para que permanezca escondido, y se muestr
 
 Vamos también a agregar una clase CSS para mostrar una pequeña linea roja si el campo no es valido (ya sabes, nada dice que un formulario tiene un error como una lineas rojas) 
 
-````
+{% highlight html %}
   <ion-input [class.invalid]="!addSongForm.controls.songName.valid 
     &&  addSongForm.controls.songName.dirty">
   </ion-input>
-````
+{% endhighlight %}
 
 Eso justo ahi agrega una clase CSS llamada ```ìnvalid```` si el formulario no es valido y tiene un valor adentro.
 
@@ -219,7 +219,7 @@ por cierto, esta es la linea de CSS.
 
 Al final la entrada entera deberia verse asi.
 
-````
+{% highlight html %}
 <ion-item>
   <ion-label stacked>Song Name</ion-label>
   <ion-input formControlName="songName" type="text" 
@@ -233,11 +233,11 @@ Al final la entrada entera deberia verse asi.
     The song's name is required to be under 45 characters.
   </p>
 </ion-item>
-````
+{% endhighlight %}
 
 Ahora repite el proceso dos veces para el nombre del artista.
 
-````
+{% highlight html %}
 <ion-item>
   <ion-label stacked>Artist Name</ion-label>
   <ion-input formControlName="artistName" type="text" 
@@ -251,11 +251,11 @@ Ahora repite el proceso dos veces para el nombre del artista.
     The artist's name has to be at least 2 characters long.
   </p>
 </ion-item>
-````
+{% endhighlight %}
 
 y para la edad del usuario.
 
-````
+{% highlight html %}
 <ion-item>
   <ion-label stacked>How old are you?</ion-label>
   <ion-input formControlName="userAge" type="number" 
@@ -269,23 +269,23 @@ y para la edad del usuario.
     You must be 18 or older to use this app.
   </p>
 </ion-item>
-````
+{% endhighlight %}
 
 y finalmente agregaras un boton de enviar.
 
-````
+{% highlight html %}
 <button ion-button block type="submit">
   Add Song
 </button>
-````
+{% endhighlight %}
 
 Vamos a adelantarnos y desactivar el botón hasta que el formulario sea valido.
 
-````
+{% highlight html %}
 <button ion-button block type="submit" [disabled]="!addSongForm.valid">
   Add Song
 </button>
-````
+{% endhighlight %}
 
 <amp-img width="350" height="538" layout="fixed" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2F2017-02-24-formsularios-firebase%2Finvalid-squashed.png?alt=media&token=07bc18d5-ec67-4496-a8bb-d92bde21f92a" alt="Pic2"></amp-img>
 
@@ -309,23 +309,23 @@ import firebase from 'firebase';
 
 y entonces solo crearemos la función para empujar una nueva canción a la base de datos:
 
-````
+{% highlight ts %}
 saveSong(songName, artistName, userAge) {
   return firebase.database().ref('songs')
     .push({ songName, artistName, userAge });
 }
-````
+{% endhighlight %}
 
 eso es una función normal  ````push()```` para agregar objetos a una lista en Firebase, una cosa buena que aprendi de [ES6 for Everyone](https://javebratt.com/es6) es que si las propiedades del objeto y los valores
 tienen el mismo nombre tu puedes solo tipear estos muchas veces, asi:
 
-````
+{% highlight ts %}
 .push({
   songName: songName,
   artistName: artistName,
   userAge: userAge
 });
-````
+{% endhighlight %}
 
 Se convierte en:
 
@@ -343,7 +343,7 @@ Eso le dice a TypeScript que las canciones nombradas tienen que ser ````String``
 
 Ahora en tu archivo ````home.ts```` solo debes crear la función ````addSong()```` para enviar datos al proveedor, esto deberia ser algo como:
 
-````
+{% highlight ts %}
 addSong(){
   if (!this.addSongForm.valid){
     console.log("Nice try!");
@@ -355,7 +355,8 @@ addSong(){
   }
 
 }
-````
+{% endhighlight %}
+
 Si el formulario no es valido, no hagas nada, y si lo es, entonces, enviaremos los datos a el proveedor, estoy reseteando todos los valores despues de guardados.
 
 Lo ves? Acabamos de agregar una capa extra de integridad de los datos con este pequeño trabajo.
@@ -381,13 +382,14 @@ Para editar esto, ve a reglas de seguridad desde tu consola de Firebase.
 
 Entonces, nosotros agregaremos las reglas, para las simples reglas de leer/escribir que tienes ahi, agregaras una regla de validación al nodo cancion:
 
-````
+{% highlight json %}
 "songs": {
   "$songId": {
     ".validate": ""
   }
 }
-````
+{% endhighlight %}
+
 Dentro de la propiedad ````validate```` agregaremos nuestras reglas.
 
 Firebase tiene unas pocas reglas listas para usar, como ````data````, ````newData````. y ````now````.
@@ -400,13 +402,14 @@ La primera cosa que nosotros necesitaremos para estar seguros es que cada cada n
 
 Para eso usaremos la propiedad ````.hasChildren()````
 
-````
+{% highlight json %}
 "songs": {
   "$songId": {
     ".validate": "newData.hasChildren(['songName', 'artistName', 'userAge'])"
   }
 }
-````
+{% endhighlight %}
+
 En esa linea, nosotros le estamos diciendo a Firebase que cada nueva canción que nosotros guardaremos necesita tener 3 hijos, un hijo llamado ````songName````, otro llamado ````artistName```` y el tercero
 llamado ````userAge````.
 
@@ -447,7 +450,7 @@ newData.child('userAge').isNumber() && newData.child('userAge').val() > 17
 
 Al final las reglas se veran asi:
 
-````
+{% highlight json %}
 {
   "rules": {
     ".read": true,
@@ -460,7 +463,7 @@ Al final las reglas se veran asi:
     }
   }
 }
-````
+{% endhighlight %}
 
 De esta manera te aseguraras que siempre guarde la información correcta si por cualquier cosa tu envias tu información como un String en lugar de un numero en la edad del usuario, entonces el metodo ````.push()````
 te enviara un error **Permission Denied**
