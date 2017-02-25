@@ -6,7 +6,7 @@ date: 2017-02-25
 tags: [ionic2, news]
 categories: news
 author: carlosrojas
-cover: "http://blog.ionic.io/wp-content/uploads/2017/02/grid.gif"
+cover: "https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2Fnews%2Fionic-2-final-header.jpg?alt=media&token=c5deb097-7881-438d-9fd0-9bc9ecf0aabc"
 ---
 > El dia de ayer desde el [Blog oficial de Ionic](http://blog.ionic.io/build-awesome-desktop-apps-with-ionics-new-responsive-grid/), se ha anunciado una mejora en la grilla en su uso con dispositivos de escritorio.
 
@@ -36,7 +36,7 @@ Vamos a ir mas a fondo en el nuevo sistema de grilla.
 
 <amp-img width="1024" height="512" layout="responsive" src="http://blog.ionic.io/wp-content/uploads/2017/02/grid-2-1.gif"></amp-img> 
 
-##Instalando
+## Instalando
 
 Para usar la nueva grilla simplemente actualiza a la ultima versión de Ionic corriendo el siguiente comando.
 
