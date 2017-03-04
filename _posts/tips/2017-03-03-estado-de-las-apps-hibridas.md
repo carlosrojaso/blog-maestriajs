@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Componentes Reactivos"
+title: "El estado del arte de las Apps."
 tags: [tips]
 date: 2017-03-03
 categories: tips
