@@ -109,7 +109,8 @@ $ ionic io init
 
 ```
 
-Define a CloudSettings object for your app’s cloud settings. Replace APP_ID with your app’s ID, which you can find in your ````ionic.config.json```` file.
+Debes crear el objeto ````CloudSettings```` para tu app. Esto lo debemos hacer en el archivo ````app.module.ts```` y reemplazar el APP_ID con el ID que  te generarón al usar ````ionic io init```` y lo puedes encontrar en el archivo ````ionic.config.json```` que se encuentra en la raiz de tu proyecto.
+
 Define los objetos 
 
 {% highlight js %}
@@ -124,7 +125,7 @@ const cloudSettings: CloudSettings = {
 
 {% endhighlight %}
 
-Y nosotros necesitamos agregar tus preferencias de cloud en ```CloudModule.forRoot()```` dentro de ````NgModule````
+Y nosotros necesitamos agregar tus preferencias de cloud en ````CloudModule.forRoot()```` dentro de ````NgModule````
 
 
 {% highlight js %}
