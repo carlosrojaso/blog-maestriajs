@@ -19,9 +19,9 @@ Las Apps hibridas se construyen sobre Apache Cordova y basicamente, te permiten 
 
 {% include blog/subscribe.html %}
 
-## Cross Platform Apps
+## JS Runtime
 
-Las Apps resultantes de estas tecnologias son nativas (No solamente tienen un Webview). Su característica principal es que son escritas con Javascript y usan un transpilador para convertirlas a componentes Nativos. El que considero más importante en esta tecnologia es [NativeScript](https://www.nativescript.org/).
+Las Apps resultantes de estas tecnologias tienen componentes nativos (No estan insertadas en un Webview). Su característica principal es que son escritas con Javascript y usan una maquina virtual para convertirlas a componentes Nativos. El que considero más importante en esta tecnologia es [NativeScript](https://www.nativescript.org/).
 
 ## Native Apps
 
