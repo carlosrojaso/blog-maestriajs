@@ -2,14 +2,13 @@
 layout: post
 title: "Google Maps + Geocoder"
 keywords: "ionic push notifications, OneSignal, push notifications, notifications, notifications en ionic 2, OneSignal y ionic"
-date: 2017-03-06
+date: 2017-03-07
 tags: [maps, ionic2, native]
 categories: ionic2
 author: levanocarlos
 repo: 'https://github.com/calevano/geocoder-ionic2'
 cover: "/images/posts/ionic2/2017-03-06-google-maps-and-geocoder/cover.jpg"
 remember: true
-draft: true
 ---
 
 Tengan ustedes un excelente día, en esta ocasión les traigo un nuevo artículo, pero esta vez un artículo con respecto a **GEOCODER**, existen dos formas:
