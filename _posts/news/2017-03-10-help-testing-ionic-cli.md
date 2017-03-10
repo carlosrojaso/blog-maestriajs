@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "Ionic 2.2.0. ha llegado."
+title: "Ionic CLI v.3 en beta."
 keywords: "Ionic"
-date: 2017-03-08
+date: 2017-03-10
 tags: [ionic2, news]
 categories: news
 author: carlosrojas
