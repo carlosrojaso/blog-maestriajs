@@ -34,6 +34,8 @@ Vamos a ir mas a fondo en el nuevo sistema de grilla.
 * Atributos de fila responsivas han sido deprecadas, pero las mismas pueden ser logradas usando los nuevos atributos.
 * Seleccionar la grilla a un tamaño fijo basado en el tamaño de la pantalla al agregar el atributo ````fixed````.
 
+{% include blog/subscribe.html %}
+
 <amp-img width="1024" height="512" layout="responsive" src="http://blog.ionic.io/wp-content/uploads/2017/02/grid-2-1.gif"></amp-img> 
 
 ## Instalando

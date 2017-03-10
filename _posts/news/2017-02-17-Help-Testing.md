@@ -21,6 +21,8 @@ podra trabajar independientemente del contenido o ellos pueden trabajar en conju
 
 Para ayudar a probar debes instalar la versión nocturna de Ionic.
 
+{% include blog/subscribe.html %}
+
 ```
 $npm install --save ionic-angular@nightly
 ```
