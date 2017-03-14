@@ -10,7 +10,7 @@ cover: "https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts
 ---
 > El dia de ayer desde el (Foro de Ionic)[https://forum.ionicframework.com/t/wkwebview-v3-0-0/82814] **Mike Hartington** escribio acerca de los avances en el plugin [WKWebview](https://github.com/apache/cordova-plugin-wkwebview-engine) y le pide a la comunidad el probar y dar retroalimentación.
 
-<amp-img width="1400" height="440" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2F2017-03-14-help-testing-WKWebview%2FUntitled-1.png?alt=media&token=81b1dfa4-b01c-45c8-abe2-deddb27b6803"></amp-img> 
+<amp-img width="1400" height="440" layout="" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2F2017-03-14-help-testing-WKWebview%2FUntitled-1.png?alt=media&token=81b1dfa4-b01c-45c8-abe2-deddb27b6803"></amp-img> 
 
 ## Que es WKWebView ?
 
