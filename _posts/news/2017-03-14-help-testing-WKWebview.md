@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Ionic CLI v.3 en beta."
+title: "Ayuda al equipo de Ionic a probar el Plugin ."
 keywords: "Ionic"
 date: 2017-03-10
 tags: [ionic2, news]
