@@ -1,53 +1,40 @@
 ---
 layout: post
-title: "Ayuda al equipo de Ionic a probar el Plugin ."
+title: "Ayuda al equipo de Ionic a probar el Plugin WKWebView."
 keywords: "Ionic"
-date: 2017-03-10
+date: 2017-03-14
 tags: [ionic2, news]
 categories: news
 author: carlosrojas
-cover: "https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2F2017-03-10-help-testing-ionic-cli%2Fionicli.png?alt=media&token=99d489e8-c09b-4aca-a90d-d8ed282a4b9c"
+cover: "https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2F2017-03-14-help-testing-WKWebview%2FUntitled-1.png?alt=media&token=81b1dfa4-b01c-45c8-abe2-deddb27b6803"
 ---
-> El dia de ayer desde el [Blog oficial de Ionic](http://blog.ionic.io/ionic-cli-v3-beta/), se ha anunciado que la versión 3 del ionic CLI esta en beta y que necesitán que la probemos ;)
+> El dia de ayer desde el (Foro de Ionic)[https://forum.ionicframework.com/t/wkwebview-v3-0-0/82814] **Mike Hartington** escribio acerca de los avances en el plugin [WKWebview](https://github.com/apache/cordova-plugin-wkwebview-engine) y le pide a la comunidad el probar y dar retroalimentación.
 
-<amp-img width="1024" height="512" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2F2017-03-10-help-testing-ionic-cli%2Fionicli.png?alt=media&token=99d489e8-c09b-4aca-a90d-d8ed282a4b9c"></amp-img> 
+<amp-img width="1400" height="440" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2F2017-03-14-help-testing-WKWebview%2FUntitled-1.png?alt=media&token=81b1dfa4-b01c-45c8-abe2-deddb27b6803"></amp-img> 
 
-El equipo de Ionic ha estado trabando los ultimos meses en lograr que la experiencia para los desarrolladores sea tan buena como el framework que soporta ❤️
+## Que es WKWebView ?
 
-El motivador en esta ocasión fue lograr una mayor velocidad, lo cual es lo primero que vas a percibir cuando instales el nuevo CLI. Se ha reducido el tiempo de 150 segundos en CLI v.2. a solo 10 segundos en CLI v.3. 👏
-
-Los comandos ahora son mas responsivos, mostrando mejor ayuda en la documentación y mas guia mientras interactuas con ella lo cual fue otra meta para la versión 3.
+El navegador por defecto en IOS es Safari. y simplificando Safari utiliza un Webview. La plataforma de IOS provee dos tipos de Webview que pueden ser utilizados. **UIWebView** que es el viejo(y lento) Webview y uno nuevo que llamado **WKWebView**. WKWebView es mejor y rapido que UIWebview en todos los aspectos. ademas de ser significativamente más rapido y fluido, Apple esta activamente actualizandolo en cada versión de IOS.
 
 {% include blog/subscribe.html %}
 
-La ayuda de los comandos ahora es mas clara y provee un interesante resumén de la interfaz de comandos.
+<amp-img width="852" height="516" layout="" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2F2017-03-14-help-testing-WKWebview%2FCaptura%20de%20pantalla%202017-03-14%20a%20las%209.30.43%20a.m..png?alt=media&token=59240375-c107-4ffc-ac2a-720b0d4af2ec"></amp-img> 
 
-<amp-img width="670" height="283" layout="" src="http://blog.ionic.io/wp-content/uploads/2017/03/Screen-Shot-2017-03-08-at-1.43.15-PM.png"></amp-img> 
+## Como actualizar ?
 
-## Como comenzar?
-
-Ejecuta:
+1. Si ya lo tienes instalado, remuevelo.
 
 ````
-npm install -g ionic@beta
+ionic plugin rm cordova-plugin-wkwebview-engine --save
 ````
 
-Si tienes proyectos existentes debes ejecutar esto en el directorio del proyecto.
-
-Para Ionic 1.
+2. Entonces, instalar desde el master en git.
 
 ````
-npm install --save-dev @ionic/cli-build-ionic1@beta @ionic/cli-plugin-cordova@beta
+ionic plugin install https://github.com/driftyco/cordova-plugin-wkwebview-engine --save
 ````
 
-Para Ionic 2.
+Si encuentras algún problema solo debes crear un [Issue](https://github.com/driftyco/cordova-plugin-wkwebview-engine/issues)
 
-````
-npm install --save-dev @ionic/cli-build-ionic-angular@beta @ionic/cli-plugin-cordova@beta
-````
 
-Información adicional puede ser encontrada en el [README](npm install --save-dev @ionic/cli-build-ionic-angular@beta @ionic/cli-plugin-cordova@beta).
 
-Para reportar solo debes agregar un *issue* en el [http://github.com/driftyco/ionic-cli](http://github.com/driftyco/ionic-cli).
-
-Que te han parecido las nuevas mejoras? No olvides comentar.
