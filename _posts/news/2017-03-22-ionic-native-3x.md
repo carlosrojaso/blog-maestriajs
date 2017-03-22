@@ -10,7 +10,7 @@ cover: "https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts
 ---
 > El dia de ayer desde el [Blog de Ionic](http://blog.ionic.io/ionic-native-3-x/) **Max Lynch** escribio acerca del anuncio de Ionic Native 3.x
 
-<amp-img width="1400" height="440" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2F2017-03-22-ionic-native-3x%2Fionic-native-header.jpg?alt=media&token=e0cf5098-3541-494a-bc3f-f28d30aac01b"></amp-img> 
+<amp-img width="1400" height="600" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2F2017-03-22-ionic-native-3x%2Fionic-native-header.jpg?alt=media&token=e0cf5098-3541-494a-bc3f-f28d30aac01b"></amp-img> 
 
 ## Que es Ionic Native ?
 
