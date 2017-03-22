@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "Ayuda al equipo de Ionic a probar el Plugin WKWebView."
-keywords: "Ionic Native 3.x"
+title: "Ionic Native 3.x"
+keywords: "ionic native"
 date: 2017-03-22
 tags: [ionic2, news]
 categories: news
