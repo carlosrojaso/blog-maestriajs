@@ -48,6 +48,27 @@ El ciclo de vida de una Cloud Function es:
 ## Cloud Functions en acción.
 
 Vamos a ir a través de todo el Flujo de Trabajo de creación y despliegue de un Cloud Function para un App, imaginate teniendo un App para entrenadores de acondicionamiento fisico, donde ellos necesitán crear cuentas para los clientes y ayudarlos a estar en forma.
+
 (*Nota:* Una app no te va a poner en forma, debes realmente levantar los pesos )
+
+Entonces, cada vez que el entrenador agregue a alguien como un cliente, nosotros tendremos una Cloud Function escuchando ese nodo y creara una cuenta para esa persona.
+
+Para empezar a escribir Cloud Functions ( Lo vamos a llamar a partir de ahora CF para ahorrarme algo de escritura ) nosotros necesitaremos instalar el Firebase CLI, vamos ahora a abrir tu terminal y tipea
+
+````
+$ npm install -g firebase-tools
+````
+
+Dependiendo de tu sistema operativo ( Principalmente si usas Linux ) deberas agregar ````sudo```` antes de ejecutar esa linea de codigo.
+
+Ahora, vamos a necesitar ingresar a nuestra cuenta desde Firebase CLI, de esta manera tendras acceso a tus Apps, para esto debemos ejecutar:
+
+````
+$ firebase login
+````
+
+Desde que nuestra cuenta esta conectada a nuestra cuenta de Gmail, ese comando abrira un navegador por nosotros para que ingresemos en nuestra cuenta de Google/Gmail y autoricemos Firebase. Una vez hagas esto, el CLI va a loguear y seras capaz de acceder a todo su potencial.
+
+Ahora, voy a asumir que estas en la carpeta de tu 
 
 
