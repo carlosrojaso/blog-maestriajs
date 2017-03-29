@@ -2,7 +2,7 @@
 layout: post
 title: "IonicDB va a morir."
 keywords: "ionicdb"
-date: 2017-03-22
+date: 2017-03-29
 tags: [ionic2, news]
 categories: news
 author: carlosrojas
