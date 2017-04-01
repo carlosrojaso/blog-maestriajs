@@ -6,7 +6,6 @@ date: 2017-03-31
 tags: [firebase]
 categories: news
 author: javebratt
-draft: true
 cover: "https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2F2017-03-24-firebase-functions%2Ffunctions-15b.png?alt=media&token=d6777bd5-21ac-4ba6-97b2-cee72ad69721"
 ---
 > Firebase Cloud functions administrado, privado y escalable entorno de Node.js donde tu puedes correr codigo en Javascript. El SDK de Firebase integra la Plataforma dejandote escribir codigo que responda a eventos e invoque funcionalidad de otras caracteristicas en Firebase.
@@ -70,6 +69,171 @@ $ firebase login
 
 Desde que nuestra cuenta esta conectada a nuestra cuenta de Gmail, ese comando abrira un navegador por nosotros para que ingresemos en nuestra cuenta de Google/Gmail y autoricemos Firebase. Una vez hagas esto, el CLI va a loguear y seras capaz de acceder a todo su potencial.
 
-Ahora, voy a asumir que estas en la carpeta de tu 
+{% include blog/subscribe.html %}
 
+Ahora, voy a asumir que estas en la carpeta de tu App en la terminal, porque tu sabes que estas trabajando en una app para Fitness, primero, sal de la carpeta de tu app,  y crea un nuevo folder para tu CF:
+
+````
+$ cd ..
+$ mkdir functions
+$ cd functions
+````
+
+esto te dejara con 2 carpetas, uno para tu App y otro para las funciones, ambas carpetas estan en el mismo nivel (Ellos no deben tener que estar necesariamente, pueden estar en carpetas distintas si tu quieres) y entonces debemos ir a la carpeta ```` functions ````, donde inicializaremos tus funciones:
+
+````
+$ firebase init functions
+````
+
+Ese comando te mostrara una lista de aplicaciones que existen en Firebase, tu deberas elegir en el que estas trabajando para que de esta manera se conecte la consola con el app en Firebase correctamente.
+
+Cuando elijas la aplicación, se creara una estructura de carpetas dentro de la carpeta ````functions```` que creamos.
+
+<amp-img width="640px" height="260px" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2F2017-03-24-firebase-functions%2Ffirebase-functions-init.png?alt=media&token=bb5d09b6-ccb1-40d3-8e7b-57696536dc74"></amp-img>
+
+Una pocas cosas para tener en cuenta:
+
+* Es un entorno de Node.js, lo que significa que puede ejecutar ````npm install --save package_name```` y usar cualquier paquete que tu quieras en tus funciones.
+* Todas tus funciones necesitan ser creadas y exportadas dentro del ´´´´index.js````
+* Esto viene con 2 paquetes instalados e importado:
+
+````
+const functions = require('firebase-functions');
+const admin = require('firebase-admin');
+admin.initializeApp(functions.config().firebase);
+````
+
+````firebase-functions```` hace referencia a el SDK de CF para Firebase, para cuando tengamos que escuchar la autenticacion o los cambios en la base de datos.
+
+y el ````firebase-admin```` hace referencia a el ADMIN SDK de Firebase, para cuando tengamos que escribir y/o leer de la base de datos, Crear Usuarios y más.
+
+Presta especial atención a esta linea.
+
+````
+admin.initializeApp(functions.config().firebase);
+````
+
+Si has prestado atención anteriormente, la función ````.initializeApp()```` inicia nuestra App, igual que cuando nosotros usamos el JS SDK de AngularFire2 en nuestras Apps, y le estamos pasando a esta ````functions.config().firebase```` que ya tiene todos los keys/secrets del API para conectar nuestra APP, todo debido a que usamos el CLI para ingresar.
+
+Ahora es tiempo de escribir nuestra primera función (esto fue realmente muy excitante de ejecutar y ver los cambios en la base de datos pasando sin mi escribiendo nada a ella ), nosotros vamos a escribir una función llamada ````createClientAccount()````.
+
+La función escuchara a la base de datos, para acceder la base de datos desde CF nosotros tenemos las funciones de la base de datos en ````functions.database````, y tendremos que escuchar a un nodo especifico.
+
+````
+exports.createClientAccount = functions.database.ref('/userProfile/{userId}/clientList/{clientId}');
+````
+
+justo ahi hemos creado una referencia a la base de datos en el nodo.
+
+````
+'/userProfile/{userId}/clientList/{clientId}'
+````
+
+Una cosa importante para tener en cuenta, es que las referencias a la base de datos dentro de CF acepta comodines, asi que la referencia, ````{userId}```` y  ````clientId```` son comodines, eso significa que:
+
+````
+'/userProfile/javebratt/clientList/client1'
+'/userProfile/javebratt/clientList/client2'
+'/userProfile/another_weird_id/clientList/client54'
+'/userProfile/another_weird_id/clientList/client49'
+````
+
+Todos estos van a encontrar la referencia a la base de datos, y dentro de la función, vamos a ser capaz de capturar todos estos valores.
+
+Ahora necesitaremos disparar nuestra función, y esto puede parecer familiar para ti, tu sabes que nosotros tenemos varios activadores para los escuchas en nuestras apps, especialmente cosas como ````.on()````o ````.once()````, para CF nosotros también tenemos disparadores para escuchar la base de datos, nosotros tenemos uno llamado ````.onWrite()```` que se disparara cuando alguién escriba en un nodo de la base de datos. Asi que nuestra función se vera como esto:
+
+````
+exports.createClientAccount = functions.database
+  .ref('/userProfile/{userId}/clientList/{clientId}').onWrite( event => {
+  // We'll handle all the logic here
+  });
+````
+
+Eso es una función activa, listo para escuchar al nodo de la base de datos y ejecutar cada vez que alguién escribe datos ahi (este también se disparara cuando se actualice o borre ese nodo, ya que borrar un nodo es basicamente hacer ````.set(null)````).
+
+La primera cosa que debemos hacer es crear el nuevo usuario, para eso, vamos a utilizar el firebase admin, un consejo rapido que deberias entender sobre el Admin SDK, es que es exactamente la misma cosa que es JS SDK, solo que debes anteceder todo con ````admin.````. en lugar de ````firebase.````, asi que si en el JS SDK normalmente hacemos:
+
+````
+firebase.auth().createUser(credentials);
+````
+en el admin SDK haremos:
+
+````
+admin.auth().createUser(credentials);
+````
+
+Asi, que adelante crea una nueva cuenta de usuario:
+
+````
+exports.createClientAccount = functions.database
+    .ref('/userProfile/{userId}/clientList/{clientId}').onWrite( event => {
+
+  return admin.auth().createUser({})
+    .catch( error => { console.log("Error creating new user:", error); });
+});
+````
+
+Nosotros queremos pasar algo de información a la función ````createUser()````, tu no necesitaras realmente que hacer nada, pero si tu envias este en blanco este creara una cuenta anonima, y entonces este sera un dolor de cabeza al tratar de linkear nuestras cuentas de usuario.
+
+{% include blog/subscribe.html %}
+
+Vamos a pasar varios valores, si nosotros queremos:
+
+* El UID, No estamos apuntando a obtener uno de los UIDs automaticos de Firebase (User id) vamos a pasar nuestro propio UID, el cual Firebase crea como un ID dentro del nodo de la base de datos:
+
+````
+'/userProfile/{userId}/clientList/{clientId}'
+````
+
+Asi que vamos a tomar el ````clientId```` y lo vamos a pasar a la funcion como el UID, también pasaremos el email del cliente como el username/email para la autenticación, estamos pasando el nombre del cliente al objeto del usuario y vamos a crear una contraseña temporal.
+
+Te puedes estar preguntando, pero jorge, donde diablos se esta obteniendo el email y el nombre? y te tengo grandes noticias, El CF SDK puede acceder toda la información dentro del nodo ````'/userProfile/{userId}/clientList/{clientId}'````, esta disponible en la variable ````event```` que la función ````onWrite()```` retorna, asi que nuestra funcion se vera algo asi:
+
+````
+exports.createClientAccount = functions.database
+  .ref('/userProfile/{userId}/clientList/{clientId}').onWrite( event => {
+
+  return admin.auth().createUser({
+    uid: event.params.clientId, 
+    email: event.data.val().email,
+    password: "123456789",
+    displayName: event.data.val().fullName 
+  })
+  .catch( error => { console.log("Error creating new user:", error); });
+});
+````
+Note como estamos accediendo la información en 2 maneras distintas, vamos a obtener acceso a los comodines a través de la interfaz ````event.params````, asi en algún punto, podremos hacer ````event.params.clientId```` y obtendremos el ID de cliente actual y asi lo configuramos como el nuevo ID del usuario.
+
+y los datos dentro del objeto es disponible via la interfaz ````event.data````, asi que nosotros tendremos acceso al correo electronico, el nombre completo, y aún el peso inicial a través ````event.data.val().property_name````
+
+y eso eso es, todo lo que tendremos que hacer ahora es desplegar nuestras funciones a los servidores de Firebase y *Boom*, cada vez que un entrenador crea un nuevo registro de un cliente en la base de datos, disparara CF.
+
+Antes de desplegar esto, quiero estar seguro que yo te de unos consejos para hacer tu vida mas facil, y asegurarme que funcionen.
+
+## Los Cloud Functions pueden morir. 
+
+Yup, ellas pueden morir sin ser completadas, los servidores pueden matar las funciones ociosas, para evitar eso nosotros necesitamos estar seguro que estamos devolviendo una promesa, Cuando tu retornas una promesa en Javascript al CF, esa función se mantiene hasta que la promesa es resuelta o rechazada, de esa manera CF evita matar tu función hasta que se complete exitosamente o falle con un error.
+
+## Evita ciclos infinitos a todo costo.
+
+Esto es algo a lo que debes prestarle especial atención, ejecutar un ciclo infinito, que podria haber ocurrido (y en realidad lo hizo ) si yo hubiera decidido despues de crear el usuario, guardar algo de información sobre el usuario dentro de el nodo de los entrenadores ````clientList````?
+
+Este habria disparado la función de nuevo, el resultado deberia haber invocado la llamada de la función, y esto deberia haberse ejecutado en un ciclo infinito.
+
+esta fue la razón por la cual decidi agregar un ````uid```` personalizado en lugar de dejar a Firebase crear este, mi idea original fue crear el usuario y entonces escribir el ````uid```` del usuario para reemplazar el ID del cliente y el nodo del perfil del entrenador. Si yo hubiese seguido ese camino, entonces cuando la función cambiara el ID en el nodo de los entrenadores este se deberia haber disparado a el mismo de nuevo.
+
+## Desplegando tu CF a Firebase.
+
+Ahora viene la parte divertida, vamos a desplegar nuestras funciones a los servidores de Firebase asi que este pueda realmente trabajar,  esa es la parte facil, todo lo que necesitas hacer es abrir tu terminal, recuerda que debes estar dentro de la carpeta donde creaste las funciones.  
+
+````
+$ firebase deploy --only functions
+````
+
+entonces presta atención a tu terminal, esta te dejara saber si tus funciones fueron cargadas exitosamente o fallaron por algun error de sintaxis.
+
+Asi que, que piensas sobre CF para Firebase? es algo que usaras? Dejame saberlo.
+
+Ver el post [original en ingles](https://javebratt.com/firebase-cloud-functions/).
+ 
 
