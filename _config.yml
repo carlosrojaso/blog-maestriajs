@@ -32,9 +32,6 @@ banner_slack:
 # ==============================================================
 # Menu Header
 menu_header:
-  - title: Home
-    url: '/'
-    target: '_self'
   - title: Blog
     url: '/blog'
     target: '_self'
@@ -45,27 +42,15 @@ menu_header:
 # ==============================================================
 # Menu Footer
 menu_footer:
-  - title: Home
-    url: '/'
-    target: '_self'
   - title: Blog
     url: '/blog'
     target: '_self'
-  - title: Cursos
-    url: 'http://academia.ion-book.com/'
-    target: '_blank'
   - title: Autores
     url: '/blog/authors'
-    target: '_self'
-  - title: Publicaciones
-    url: '/publications'
     target: '_self'
   - title: Libro
     url: 'https://libro.ion-book.com/'
     target: '_blank'
-  - title: Publicaciones
-    url: '/publications'
-    target: '_self'
 
 # ==============================================================
 # Social Links
