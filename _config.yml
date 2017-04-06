@@ -42,6 +42,9 @@ menu_header:
 # ==============================================================
 # Menu Footer
 menu_footer:
+  - title: Home
+    url: '/'
+    target: '_self'
   - title: Blog
     url: '/blog'
     target: '_self'
