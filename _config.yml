@@ -207,6 +207,17 @@ authors:
         icon: "fa-twitter"
       - link: "https://github.com/jorgeucano"
         icon: "fa-github"
+  - id: "thecouk"
+    name: "Oscar A."
+    url: "/blog/authors/thecouk"
+    avatar: "https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/authors%2F27030647.jpeg?alt=media&token=89deeacb-e02c-4176-87da-b8b8c6bcb2a5"
+    bio: "Web & Mobile Developer, PHP, Laravel, AJAX, Ionic, Angular, Javascript - Creo que el conocimiento es una de las pocas cosas que no se pierde cuando se comparte.
+    "
+    social_links:
+      - link: "https://twitter.com/thecouk"
+        icon: "fa-twitter"
+      - link: "https://github.com/thecouk"
+        icon: "fa-github"
 # ==============================================================
 # Publications
 publications:
