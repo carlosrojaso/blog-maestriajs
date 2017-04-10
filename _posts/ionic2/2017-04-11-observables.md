@@ -2,7 +2,7 @@
 layout: post
 title: "Usando Observables en Ionic 2"
 keywords: "ionic"
-date: 2017-04-11
+date: 2017-04-10
 tags: [ionic2]
 categories: ionic2
 author: thecouk
