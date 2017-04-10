@@ -2,14 +2,13 @@
 layout: post
 title: "Usando Observables en Ionic 2"
 keywords: "ionic"
-date: 2017-04-10
+date: 2017-04-11
 tags: [ionic2]
 categories: ionic2
 author: thecouk
 repo: 'https://github.com/thecouk/ObservablesIonic'
 cover: "http://blog.rangle.io/content/images/2016/04/observables-and-reactive-programming-in-angular-2-rangleio.gif"
 remember: true
-draft: true
 ---
 
 Este tutorial pretende ejemplificar el uso de los observables dentro de un proyecto en Ionic 2.
