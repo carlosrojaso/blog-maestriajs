@@ -60,11 +60,11 @@ Ahora debemos actualizar las versiones de las dependencias de nuestro proyecto y
 
 Si existen otras dependencias aparte de las que maneja Ionic, se debe revisar la documentación de estas dependencias y si es necesario actualizarlas, lo más importante es que sean compatibles con la versión de angular 4.
 
-## Paso 2: Instalar nuevas dependencias 
+## Paso 3: Instalar nuevas dependencias 
 
 Ahora solo debemos instalar estas nuevas dependencias en el proyecto y para esto ejecutamos el comando `npm install` desde la terminal.
 
-## Paso 3: Importar **BrowserModule**
+## Paso 4: Importar **BrowserModule**
 
 Ahora debemos agregar `BrowserModule` en nuestro archivo `app.module.ts`, así:
 
