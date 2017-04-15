@@ -1,0 +1,341 @@
+---
+layout: post
+title: "Aprende a migrar tu proyecto de Ionic 2 a Ionic 3"
+keywords: "migrar de ionic 2 a ionic 3, de ionic 2 a ionic 3, ionic 2 a ionic 3, ionic 3"
+date: 2017-04-15
+tags: [tips, news]
+categories: tips
+author: nicobytes
+cover: "/images/posts/news/2017-04-15-ionic-2-to-ionic3/cover.jpg"
+---
+
+> Hace poco mencionamos que Ionic lanzó su más reciente versión [**(Ionic v3)**]({{site.urlblog}}/news/ionic-v-3){:target="_blank"} y mencionamos acerca de sus principales novedades, ahora en este artículo vamos a ver cómo actulizar un proyecto desde la versión 2 a la versión 3.
+<!--summary-->
+
+<amp-img width="1024" height="512" layout="responsive" src="/images/posts/news/2017-04-15-ionic-2-to-ionic3/cover.jpg"></amp-img>
+
+## Paso 1: Borrar node_modules
+
+Debemos borrar esta carpeta para luego instalar las nuevas dependencias del proyecto. Se puede borrar esta carpeta desde la terminal de la siguiente manera:
+
+Mac / Linux
+```
+rm -rf node_modules
+```
+
+Windows
+```
+rd /s node_modules 
+```
+
+# Paso 2: Actualizar package.json
+
+Ahora debemos actualizar las versiones de las dependencias de nuestro proyecto y las que de ionic 3 necesita para trabajar correctamente, las versiones deben quedar de la siguiente manera:
+
+{% highlight json %}
+"dependencies": {
+  "@angular/common": "4.0.0",
+  "@angular/compiler": "4.0.0",
+  "@angular/compiler-cli": "4.0.0",
+  "@angular/core": "4.0.0",
+  "@angular/forms": "4.0.0",
+  "@angular/http": "4.0.0",
+  "@angular/platform-browser": "4.0.0",
+  "@angular/platform-browser-dynamic": "4.0.0",
+  "@ionic-native/core": "3.4.2",
+  "@ionic-native/splash-screen": "3.4.2",
+  "@ionic-native/status-bar": "3.4.2",
+  "@ionic/storage": "2.0.1",
+  "ionic-angular": "3.0.1",
+  "ionicons": "3.0.0",
+  "rxjs": "5.1.1",
+  "sw-toolbox": "3.4.0",
+  "zone.js": "^0.8.4"
+},
+"devDependencies": {
+  "@ionic/app-scripts": "1.3.0",
+  "typescript": "~2.2.1"
+}
+{% endhighlight %}
+
+Si existen otras dependencias aparte de las que maneja Ionic, se debe revisar la documentación de estas dependencias y si es necesario actualizarlas, lo más importante es que sean compatibles con la versión de angular 4.
+
+## Paso 2: Instalar nuevas dependencias 
+
+Ahora solo debemos instalar estas nuevas dependencias en el proyecto y para esto ejecutamos el comando `npm install` desde la terminal.
+
+## Paso 3: Importar **BrowserModule**
+
+Ahora debemos agregar `BrowserModule` en nuestro archivo `app.module.ts`, así:
+
+{% highlight ts %}
+import { BrowserModule } from '@angular/platform-browser';
+
+...
+
+@NgModule({
+  declarations: [
+    MyApp
+  ],
+  imports: [
+    BrowserModule,
+    IonicModule.forRoot(MyApp),
+  ],
+  bootstrap: [IonicApp],
+  entryComponents: [
+    DuetyApp
+  ],
+  providers: [
+    // Keep this to enable Ionic's runtime error handling during development
+    { provide: ErrorHandler, useClass: RavenErrorHandler },
+  ]
+})
+export class AppModule {}
+{% endhighlight %}
+
+## Paso 4: Importar **HttpModule**
+
+Este paso es muy importante si dentro de la aplicación se usa la dependencia `Http`, así:
+
+{% highlight ts %}
+import { HttpModule } from '@angular/http';
+
+...
+
+@NgModule({
+  declarations: [
+    MyApp,
+    HomePage
+  ],
+  imports: [
+    BrowserModule,
+    HttpModule,
+    IonicModule.forRoot(MyApp),
+  ],
+  bootstrap: [IonicApp],
+  entryComponents: [
+    DuetyApp,
+    HomePage
+  ],
+  providers: [
+    // Keep this to enable Ionic's runtime error handling during development
+    { provide: ErrorHandler, useClass: RavenErrorHandler },
+  ]
+})
+export class AppModule {}
+{% endhighlight %}
+
+!Y ya esto es todo! Suena algo fácil, pero ahora explicaré algunas consideraciones a tener en cuenta y como solucionarlas en caso de tener problemas.
+
+## Tip 1: Ionic Native 3
+
+Hace poco tuvimos la más reciente actualización de Ionic Native y fue un gran cambio, ahora las cada uno de los plugins nativos debe ser inyectado como dependencia en los controladores o pages, esto hace más fácil hacer pruebas unitarias o soportar estos plugins en las web. Por supuesto si quieres actualizar a ionic 3 también debes actualizar tu versión de ionic native.
+
+Desde ahora cada plugin se debe instalar con su dependencia de ionic native, por ejemplo se debe instalar el plugin correspondiente junto con su provider, por ejemplo con el plugin de la cámara sería así:
+
+```
+ionic plugin add cordova-plugin-camera -save
+npm install @ionic-native/camera --save
+```
+
+Luego de instalar el plugin y el provider debemos agregar este provider en el array de `providers` en el archivo `app.module.ts`, asi:
+
+{% highlight ts %}
+import { Camera } from '@ionic-native/camera';
+
+...
+
+@NgModule({
+  declarations: [
+    MyApp,
+    HomePage
+  ],
+  imports: [
+    BrowserModule,
+    HttpModule,
+    IonicModule.forRoot(MyApp),
+  ],
+  bootstrap: [IonicApp],
+  entryComponents: [
+    DuetyApp,
+    HomePage
+  ],
+  providers: [
+    // Keep this to enable Ionic's runtime error handling during development
+    { provide: ErrorHandler, useClass: RavenErrorHandler },
+    Camera
+  ]
+})
+export class AppModule {}
+{% endhighlight %}
+
+Y por último, se debe inyectar el provider como dependencia en la clase que se quiera hacer uso de este plugin, de la siguiente manera:
+
+{% highlight ts %}
+import { Camera } from '@ionic-native/camera';
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'page-home',
+  templateUrl: 'home.html'
+})
+export class HomePage{
+
+  constructor(
+    public camera: Camera,
+  ) {}
+
+  ...
+}
+{% endhighlight %}
+
+## Tip 2: Grid
+
+Con la versión 3 de Ionic el sistema de grillas de ionic v2 ya no es soportado, ahora para brindar soporte a aplicaciones de escritorio y tablets, se usa un nuevo sistema de grillas, mucho más amplio y versátil, por consecuencia si usábamos el anterior sistema debes actualizarlo, este en un ejemplo del nuevo sistema:
+
+### Antes (v2)
+
+{% highlight html %}
+<ion-grid>
+  <ion-row center>
+    <ion-col width-20>...</ion-col>
+    <ion-col width-80>...</ion-col>
+  </ion-row>
+</ion-grid>
+{% endhighlight %}
+
+### Ahora (v3)
+
+{% highlight html %}
+<ion-grid>
+  <ion-row align-items-center>
+    <ion-col col-4>...</ion-col>
+    <ion-col col-8>...</ion-col>
+  </ion-row>
+</ion-grid>
+{% endhighlight %}
+
+Pueden ver la documentación completa en [**Ionic Grids Docs**](https://ionicframework.com/docs/theming/responsive-grid/){:target="_blank"}.
+
+# Tip 3: Typography
+
+También han removido selectores de color en textos, esto quiere decir que si usábamos la propiedad color en los textos para cambiar el color ya no funcionará, ahora se debe agregar la propiedad `ion-text` para que esta funcione:
+
+### Antes (v2)
+
+{% highlight html %}
+<p color="danger">...</p>
+<strong color="secondary">...</strong>
+<span color="dark">...</span>
+{% endhighlight %}
+
+### Ahora (v3)
+
+{% highlight html %}
+<p ion-text color="danger">...</p>
+<strong ion-text color="secondary">...</strong>
+<span ion-text color="dark">...</span>
+{% endhighlight %}
+
+# Tip 4: Animations
+
+La API de animaciones de angular ha cambiado en la versión 4 y sí estabamos haciendo uso de esta API ahora debemos instalar el módulo de angular `@angular/animations` así:
+
+```
+npm install @angular/animations --save
+```
+
+Luego debemos importar `BrowserAnimationsModule` en el archivo `app.module.ts`, asi:
+
+{% highlight ts %}
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+...
+
+@NgModule({
+  declarations: [
+    MyApp,
+    HomePage
+  ],
+  imports: [
+    BrowserModule,
+    HttpModule,
+    BrowserAnimationsModule,
+    IonicModule.forRoot(MyApp),
+  ],
+  bootstrap: [IonicApp],
+  entryComponents: [
+    DuetyApp,
+    HomePage
+  ],
+  providers: [
+    // Keep this to enable Ionic's runtime error handling during development
+    { provide: ErrorHandler, useClass: RavenErrorHandler },
+  ]
+})
+export class AppModule {}
+{% endhighlight %}
+
+Y ahora en las páginas que estemos usando el API de animaciones, ya no importamos las utilidades desde `@angular/core` sino desde `angular/animations`, así:
+
+### Antes (v2)
+
+{% highlight ts %}
+import { Component, trigger, state, style, transition, animate } from '@angular/core';
+
+@Component({
+  selector: 'home-page',
+  templateUrl: 'home.html',
+  animations: [
+    ...
+  ]
+})
+export class HomePage {
+  ...
+{% endhighlight %}
+
+### Ahora (v3)
+
+{% highlight ts %}
+import { Component } from '@angular/core';
+import { trigger, state, style, transition, animate } from '@angular/animations';
+
+@Component({
+  selector: 'home-page',
+  templateUrl: 'home.html',
+  animations: [
+    ...
+  ]
+})
+export class HomePage {
+  ...
+{% endhighlight %}
+
+## Tip 5: Ionic generator
+
+Si te fijas últimamente cuando creamos una página con el generador de ionic, así:
+
+```
+ionic g page login
+```
+
+Nos crea un archivo más `login.module.ts`:
+
+<div class="row">
+  <div class="col col-100 col-md-50 offset-md-25 col-lg-50 offset-lg-25">
+    <amp-img width="484" height="183" layout="responsive" src="/images/posts/news/2017-04-15-ionic-2-to-ionic3/tree.png"></amp-img>
+  </div>
+</div>
+
+Y esto es debido a que ahora ionic en la versión 3 soporta **lazy loading**, lo cual es maravilloso, pero hablaremos de cómo usar esta característica en el siguiente artículo. Por ahora si quieres continuar sin problemas debemos borrar este archivo y quitar el decorador de **@IonicPage** que crea en la página `login.ts`.
+
+> Este último tip es para no tener problemas con la migración de ionic 2 a **ionic 3**, ya que usar el nuevo decorador **@IonicPage** y **lazy loading** es opcional. 
+
+En el próximo artículo haremos la implementación exitosa en un proyecto usando @IonicPage y lazy loading.
+
+> **Spoiler:** Usar @IonicPage y lazy loading, baja el peso de la app y reduce el tiempo de carga.
+
+
+
+
+

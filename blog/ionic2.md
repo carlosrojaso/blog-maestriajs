@@ -1,6 +1,6 @@
 ---
 layout: category
-title: Ionic 2
+title: Tutoriales
 category: ionic2
 permalink: /blog/ionic2/
 ---
