@@ -2,14 +2,13 @@
 layout: post
 title: "Usando Observables en Ionic 2"
 keywords: "ionic"
-date: 2017-04-10
+date: 2017-04-11
 tags: [ionic2]
 categories: ionic2
 author: thecouk
 repo: 'https://github.com/thecouk/ObservablesIonic'
 cover: "http://blog.rangle.io/content/images/2016/04/observables-and-reactive-programming-in-angular-2-rangleio.gif"
 remember: true
-draft: true
 ---
 
 Este tutorial pretende ejemplificar el uso de los observables dentro de un proyecto en Ionic 2.
@@ -35,10 +34,9 @@ Pero porque fireBase si lo hace? Bueno es que es una combinación entre observab
 
 Antes de empezar a trabajar en Ionic, empecemos por tener una fuente de datos para nuestro ejemplo. Para ello te recomiendo que te descargues:
 
-* [JSON-SERVER](https://github.com/typicode/json-server) - Servidor para generar y imitar una API en 30 segundos, luego genera el JSON de ejemplo en un archivo
+* [JSON-SERVER](https://github.com/typicode/json-server) - Servidor para generar e imitar una API en 30 segundos, luego genera el JSON de ejemplo en un archivo
 
-```
-{
+````
   "personas": [
     {
       "id": 1,
@@ -47,14 +45,15 @@ Antes de empezar a trabajar en Ionic, empecemos por tener una fuente de datos pa
       "megusta": false
     }
   ]
-}
-```
+````
 
 Ve a la terminal de tu equipo y ejecuta el siguiente comando:
 
-```
+````
+
 json-server personasbd.json
-```
+
+````
 
 Y listo tendras algo como esto:
 
