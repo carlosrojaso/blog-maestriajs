@@ -9,14 +9,14 @@ author: nicobytes
 cover: "/images/posts/news/2017-04-15-ionic-2-to-ionic3/cover.jpg"
 ---
 
-> Hace poco Ionic lanzó su más reciente versión [**(Ionic v3)**]({{site.urlblog}}/news/ionic-v-3){:target="_blank"} y mencionamos acerca de sus principales novedades, ahora en este artículo vamos a ver cómo actulizar un proyecto desde la versión 2 a la versión 3.
+> Hace poco Ionic lanzó su más reciente versión [**(Ionic v3)**]({{site.urlblog}}/news/ionic-v-3){:target="_blank"} y mencionamos acerca de sus principales novedades, ahora en este artículo vamos a ver cómo actulizar un proyecto desde la versión 2 a la versión 3 y como resolver los problemas más comunes.
 <!--summary-->
 
 <amp-img width="1024" height="512" layout="responsive" src="/images/posts/news/2017-04-15-ionic-2-to-ionic3/cover.jpg"></amp-img>
 
 ## Paso 1: Borrar node_modules
 
-Debemos borrar esta carpeta para luego instalar las nuevas dependencias del proyecto. Se puede borrar esta carpeta desde la terminal de la siguiente manera:
+Debemos borrar la carpeta `node_modules`, para luego instalar las nuevas dependencias del proyecto. Se puede borrar desde la terminal de la siguiente manera:
 
 Mac / Linux
 ```
@@ -62,7 +62,7 @@ Si existen otras dependencias aparte de las que maneja Ionic, se debe revisar la
 
 ## Paso 3: Instalar nuevas dependencias 
 
-Ahora solo debemos instalar estas nuevas dependencias en el proyecto y para esto ejecutamos el comando `npm install` desde la terminal.
+Ahora solo debemos instalar las nuevas dependencias en el proyecto y para esto ejecutamos el comando `npm install` desde la terminal.
 
 ## Paso 4: Importar **BrowserModule**
 
@@ -95,7 +95,7 @@ export class AppModule {}
 
 ## Paso 4: Importar **HttpModule**
 
-Este paso es muy importante si dentro de la aplicación se usa la dependencia `Http`, así:
+Ahora debemos agregar `HttpModule` en nuestro archivo `app.module.ts`, este paso es muy importante si dentro de la aplicación se usa la dependencia `Http`:
 
 {% highlight ts %}
 import { HttpModule } from '@angular/http';
@@ -125,20 +125,20 @@ import { HttpModule } from '@angular/http';
 export class AppModule {}
 {% endhighlight %}
 
-!Y ya esto es todo! Suena algo fácil, pero ahora explicaré algunas consideraciones a tener en cuenta y como solucionarlas en caso de tener problemas.
+**!Y ya eso es todo!** Se ve algo fácil, pero ahora explicaré algunos de los problemas más comunes y como solucionarlos:
 
 ## Tip 1: Ionic Native 3
 
-Hace poco tuvimos la más reciente actualización de Ionic Native y fue un gran cambio, ahora las cada uno de los plugins nativos debe ser inyectado como dependencia en los controladores o pages, esto hace más fácil hacer pruebas unitarias o soportar estos plugins en las web. Por supuesto si quieres actualizar a ionic 3 también debes actualizar tu versión de ionic native.
+Hace poco tuvimos la más reciente actualización de Ionic Native, ahora cada uno de los plugins debe ser inyectado como dependencia en los controladores o `pages`, esto hace más fácil hacer pruebas unitarias o soportar estos plugins en las web. Por supuesto si quieres actualizar a ionic 3 también debes actualizar tu versión de ionic native.
 
-Desde ahora cada plugin se debe instalar con su dependencia de ionic native, por ejemplo se debe instalar el plugin correspondiente junto con su provider, por ejemplo con el plugin de la cámara sería así:
+Desde ahora cada plugin se debe instalar con su dependencia de ionic native, por ejemplo se debe instalar el plugin correspondiente junto con su provider, por ejemplo con el plugin de la cámara sería de la siguiente manera:
 
 ```
 ionic plugin add cordova-plugin-camera -save
 npm install @ionic-native/camera --save
 ```
 
-Luego de instalar el plugin y el provider debemos agregar este provider en el array de `providers` en el archivo `app.module.ts`, asi:
+Luego de instalar el plugin y el provider debemos agregar este provider en el array de `providers` en el archivo `app.module.ts` , asi:
 
 {% highlight ts %}
 import { Camera } from '@ionic-native/camera';
@@ -169,7 +169,7 @@ import { Camera } from '@ionic-native/camera';
 export class AppModule {}
 {% endhighlight %}
 
-Y por último, se debe inyectar el provider como dependencia en la clase que se quiera hacer uso de este plugin, de la siguiente manera:
+Y por último, se debe inyectar el provider como dependencia en la clase que se quiera hacer uso de este plugin, así:
 
 {% highlight ts %}
 import { Camera } from '@ionic-native/camera';
@@ -191,7 +191,7 @@ export class HomePage{
 
 ## Tip 2: Grid
 
-Con la versión 3 de Ionic el sistema de grillas de ionic v2 ya no es soportado, ahora para brindar soporte a aplicaciones de escritorio y tablets, se usa un nuevo sistema de grillas, mucho más amplio y versátil, por consecuencia si usábamos el anterior sistema debes actualizarlo, este en un ejemplo del nuevo sistema:
+Con la versión 3 de Ionic el sistema de grillas de ionic v2 ya no es soportado, ahora para brindar soporte a aplicaciones de escritorio y tablets, se usa un nuevo sistema de grillas, mucho más amplio y versátil, por consecuencia si usábamos el anterior sistema debemos actualizarlo, este es un pequeño ejemplo del nuevo sistema de grillas:
 
 ### Antes (v2)
 
@@ -219,7 +219,7 @@ Pueden ver la documentación completa en [**Ionic Grids Docs**](https://ionicfra
 
 # Tip 3: Typography
 
-También han removido selectores de color en textos, esto quiere decir que si usábamos la propiedad color en los textos para cambiar el color ya no funcionará, ahora se debe agregar la propiedad `ion-text` para que esta funcione:
+También han removido selectores de color en textos, esto quiere decir que si usábamos la propiedad color en los textos para cambiar el color, con ionic v3 ya no funcionará, ahora se debe agregar la propiedad `ion-text` para que esta funcione:
 
 ### Antes (v2)
 
@@ -239,7 +239,7 @@ También han removido selectores de color en textos, esto quiere decir que si us
 
 # Tip 4: Animations
 
-La API de animaciones de angular ha cambiado en la versión 4 y sí estabamos haciendo uso de esta API ahora debemos instalar el módulo de angular `@angular/animations` así:
+La API de animaciones de **Angular** ha cambiado en la versión 4 y sí estabamos haciendo uso de esta API ahora debemos instalar el módulo `@angular/animations`, así:
 
 ```
 npm install @angular/animations --save
@@ -327,7 +327,7 @@ Nos crea un archivo más `login.module.ts`:
   </div>
 </div>
 
-Y esto es debido a que ahora ionic en la versión 3 soporta **lazy loading**, lo cual es maravilloso, pero hablaremos de cómo usar esta característica en el siguiente artículo. Por ahora si quieres continuar sin problemas debemos borrar este archivo y quitar el decorador de **@IonicPage** que crea en la página `login.ts`.
+Y esto es debido a que ahora ionic en la versión 3 soporta **lazy loading**, lo cual es maravilloso, pero hablaremos de cómo usar esta característica en el siguiente artículo. Por ahora si quieres continuar sin problemas debemos borrar este archivo y quitar el decorador de **@IonicPage** que crea en la página `login.ts` y luego agregar `LoginPage` en el array de `entryComponents` y `declarations` en el archivo `app.modules.ts` (como siempre lo hemos hecho).
 
 > Este último tip es para no tener problemas con la migración de ionic 2 a **ionic 3**, ya que usar el nuevo decorador **@IonicPage** y **lazy loading** es opcional. 
 
