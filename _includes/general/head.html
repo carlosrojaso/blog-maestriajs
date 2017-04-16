@@ -1,8 +1,9 @@
 <head>
+ {% if page && page.layout == 'post' %}{% for item in site.authors %}{% if item.id == page.author%}{% assign author = item %}{% endif %}{% endfor %}
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
-  <meta name="author" content="Nicolas Molina and Carlos Rojas">
+  <meta name="author" content="{% if author %}{{ author.name }}{% else %}Nicolas Molina and Carlos Rojas{% endif %}">
   <title>{% if page.title | upcase %}{{ page.title }}{% else %}{{ site.title | upcase }}{% endif %}</title>
   <meta http-equiv="origin-trial" data-feature="Web Share" data-expires="2017-04-04" content="Ajcrk411RcpUCQ3ovgC8le4e7Te/1kARZsW5Hd/OCnW6vIHTs5Kcq1PaABs7SzcrtfvT0TIlFh9Vdb5xWi9LiQsAAABSeyJvcmlnaW4iOiJodHRwczovL2FtcGJ5ZXhhbXBsZS5jb206NDQzIiwiZmVhdHVyZSI6IldlYlNoYXJlIiwiZXhwaXJ5IjoxNDkxMzM3MDEwfQ==">
   <!-- SE0 -->
@@ -11,7 +12,7 @@
   <link rel="amphtml" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.path }}" />
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.path }}">
   <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.path }}" />
-  {% if page && page.layout == 'post' %}{% for item in site.authors %}{% if item.id == page.author%}{% assign author = item %}{% endif %}{% endfor %}<script type="application/ld+json">
+  <script type="application/ld+json">
     {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
@@ -28,8 +29,8 @@
         },
         "author": {
             "@type": "Person",
-            "name": "{{ author.name }}",
-            "image": "{{ author.avatar }}"
+            "name": "{% if author %}{{ author.name }}{% else %}Nicolas Molina and Carlos Rojas{% endif %}",
+            "image": "{% if author %}{{ author.avatar }}{% endif %}"
         },
         "publisher": {
             "@type": "Organization",
