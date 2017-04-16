@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html amp lang="en">{% include general/head.html %}
   <body>
+    {% if page.layout != 'post' %}{% include general/share-vertical.html %}{% endif %}
     {% include general/sidebar.html %}
     {{ content }}
     {% include general/footer.html %}

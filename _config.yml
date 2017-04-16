@@ -4,6 +4,7 @@ title: "ion-book, La Comunidad de Ionic Framework en español"
 description: "Aprende Ionic 2 y desarrolla increibles apps para Android y IOS."
 keywords: "ion-book,html5,javascript,mobile,ionic,hybrid,phonegap,cordova,native,ios,android,angularjs,ionic 2,angular 2,curso de ionic 2, aprender ionic 2,ionic framework,hacer aplicaciones con ionic,aplicaciones hibridas"
 baseurl: ""
+path: "https://www.ion-book.com"
 url: "https://www.ion-book.com"
 urlblog: 'https://www.ion-book.com/blog'
 cover: "images/cover.jpg"

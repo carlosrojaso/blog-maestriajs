@@ -1,5 +1,5 @@
 ---
-layout: blog
+layout: default
 ---
 {% include blog/header.html %}
 {% for item in site.authors %}{% if item.id == page.author%}{% assign author = item %}{% endif %}{% endfor %}
@@ -32,6 +32,7 @@ layout: blog
 <div class="content">
   <div class="row wrap top">
     <div class="col col-100 col-md-100 col-lg-80 article-detail">
+      {% include blog/share.html %}
       <article>
         <div class="text">{{ content }}</div>
         {% if page.repo %}
@@ -64,6 +65,10 @@ layout: blog
         <p>¿Quieres saber más? Suscríbete a nuestro Newsletter o únete a nuestro canal en <a href="http://goo.gl/forms/ZCEc0cr3jydgK2wv1">Slack</a> y mantente atento.
         Espero sea de utilidad y sigan programando :)</p>
         <p>Por: <a href="{{ author.url }}"><strong>{{ author.name }}</strong></a></p>
+      </article>
+      <article>
+        <h3>¡Compártelo!</h3>
+        {% include blog/share.html %}
       </article>
       {% include blog/disqus.html %}
     </div>
