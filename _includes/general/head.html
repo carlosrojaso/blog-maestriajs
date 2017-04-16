@@ -40,13 +40,15 @@
     }
   </script>{% endif %}
   <!-- facebook -->
+  <meta property="fb:app_id" content="877264572411311" /> 
   <meta property="og:url" content="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.path }}" />
   <meta property="og:type" content="article" />
   <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}" />
   <meta property="og:description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}"
   />
-  <meta property="og:image" content="{% if page.cover %}{{ page.cover }}{% else %}{{ site.cover | prepend: site.baseurl | prepend: site.path }}{% endif %}" />
+  <meta property="og:image" content="{% if page.cover %}{{ page.cover }}{% else %}{{ site.cover | prepend: '/' | prepend: site.baseurl | prepend: site.path }}{% endif %}" />
   <meta property="og:site_name" content="ion-book" />
+  {% if author &&  author.facebook_url  %}<meta property="article:author" content="{{ author.facebook_url }}">{% endif %}
   <!-- twitter -->
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:site" content="@ion_book" />

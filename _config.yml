@@ -1,8 +1,8 @@
 # ==============================================================
 # General
 title: "ion-book, La Comunidad de Ionic Framework en español"
-description: "Aprende Ionic 2 y desarrolla increibles apps para Android y IOS."
-keywords: "ion-book,html5,javascript,mobile,ionic,hybrid,phonegap,cordova,native,ios,android,angularjs,ionic 2,angular 2,curso de ionic 2, aprender ionic 2,ionic framework,hacer aplicaciones con ionic,aplicaciones hibridas"
+description: "Aprende Ionic y desarrolla increibles apps para Android y IOS."
+keywords: "ion-book,html5,javascript,mobile,ionic,hybrid,phonegap,cordova,native,ios,android,angularjs,ionic 2,angular 2,curso de ionic 2, aprender ionic 2, ionic 3, ionic framework,hacer aplicaciones con ionic,aplicaciones hibridas, angular 4"
 baseurl: ""
 path: "https://www.ion-book.com"
 url: "https://www.ion-book.com"
@@ -77,7 +77,7 @@ social_links:
 # ==============================================================
 # Home Page
 home:
-  banner_title: "Aprende <span class='underline'>Ionic 2</span> y desarrolla increibles apps para Android y IOS."
+  banner_title: "Aprende <span class='underline'>Ionic</span> y desarrolla increibles apps para Android y IOS."
   banner_text: "Inscríbete en nuestra lista de correos, recibe las últimas noticias y un paso a paso para construir tu primera App en Ionic 2."
   topics_title: "¿Que aprenderás?"
   topics_text: "Construye la app que siempre soñaste usando tecnologias Web."
@@ -122,6 +122,7 @@ authors:
     avatar: "http://i.imgur.com/mwT2iig.png"
     website: "http://nicobytes.com"
     bio: "Soy desarrollador web especializado en el área de FrontEnd & HybripApps, enfocado en aprendizaje de JS y al desarrollo de apps con Angular2 y Ionic2. Mis pasiones son el desarrollo de productos, compartir con las comunidades de desarrollo y viajar por todo el mundo."
+    facebook_url: 'https://www.facebook.com/nicobytes'
     social_links:
       - link: "https://twitter.com/nicobytes"
         icon: "icon-social-twitter"
@@ -137,6 +138,7 @@ authors:
     avatar: "http://i.imgur.com/ecNB0is.png"
     website: "http://www.carlosrojasblog.com/"
     bio: "Carlos Rojas es Google Product Strategy Expert. Cuando no esta dando charlas en conferencias sobre Angular, Ionic o TypeScript da cursos en Startupers Academy."
+    facebook_url: 'https://www.facebook.com/carlosandresrojas'
     social_links:
       - link: "https://twitter.com/carlosrojas_o"
         icon: "icon-social-twitter"
@@ -147,6 +149,7 @@ authors:
     url: "/blog/authors/daniel_lsanchez"
     avatar: "http://i.cubeupload.com/lIAZlV.png"
     bio: "Soy desarrollador de software enfocado en especializarme en desarrollo web y móvil, me gusta ayudar a las personas y dar el conocimiento que adquiero sin nada a cambio. Me apasiono por construir productos innovadores y que ayuden a la sociedad, me gustan las motos y salir a viajar en ellas."
+    facebook_url: 'https://www.facebook.com/daniel.l.sanchez.501'
     social_links:
       - link: "https://twitter.com/daniel_lsanchez"
         icon: "icon-social-twitter"
@@ -160,6 +163,7 @@ authors:
     website: "http://calevano.github.io/"
     avatar: "https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/authors%2Flevanocarlos.jpg?alt=media"
     bio: "Desarrollador Web, Ingeniero de Sistemas, amante de Laravel , IonicFramework, ReactNative, PHP, manoseando Android y Swift. Amante del café y series de Netflix."
+    facebook_url: 'https://www.facebook.com/LevanoCarlos'
     social_links:
       - link: "https://twitter.com/calevano"
         icon: "icon-social-twitter"
@@ -173,6 +177,7 @@ authors:
     avatar: "https://a248.e.akamai.net/secure.meetupstatic.com/photos/event/4/f/f/8/600_454640472.jpeg"
     website: "http://mayrarodriguez.me/"
     bio: "Soy Ingeniera en Computación egresada de la Universidad Fermín Toro, Cabudare Edo. Lara. Me dedico al Desarrollo Web Full Stack y Móvil de manera Freelance. Me siento aficionada por el UX y el UI, así como también el desarrollo de aplicaciones innovadoras."
+    facebook_url: 'https://www.facebook.com/mayrititis'
     social_links:
       - link: "https://twitter.com/mayrititis"
         icon: "icon-social-twitter"
@@ -185,6 +190,7 @@ authors:
     url: "/blog/authors/unjavascripter"
     avatar: "http://i.cubeupload.com/fiMbBz.png"
     bio: "I spend my time learning about new technologies and coding. I really enjoy developing web applications using JavaScript. I'm currently working with (and loving) AngularJS. I founded a group where people can learn and share about AngularJS in Colombia, there I'm the organizer and sometimes speaker. I've been enjoying teaching people about new cool technologies "
+    facebook_url: 'https://www.facebook.com/diegocoyisnotafunction'
     social_links:
       - link: "https://twitter.com/unjavascripter"
         icon: "icon-social-twitter"
@@ -195,6 +201,7 @@ authors:
     url: "/blog/authors/javebratt"
     avatar: "https://s9.postimg.org/fhmw4iggf/Iu_N5_UI0o.jpg"
     bio: "Ayudo a emprendedores que están atacando proyectos de impacto social a planear y construir la primera versión de su aplicación móvil para que puedan salir al mercado rápido. Ayudo a desarrolladores de Ionic2 a usar esos conocimientos para construir aplicaciones basadas en Firebase."
+    facebook_url: 'https://facebook.com/javebrattDev'
     social_links:
       - link: "https://twitter.com/javebratt"
         icon: "icon-social-twitter"
@@ -206,6 +213,7 @@ authors:
     avatar: "https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/authors%2Fangulargderedondo.png?alt=media&token=71a0f757-4f37-4958-8350-f54201f5fe78"
     bio: "Después de más de 9 años desarrollando, Jorge es un full stack developer avocado a las tecnologías en javascript. Hoy en día Jorge es Director de “departamento de nuevas tecnologías” en el cual prueba y decide qué tecnologías utilizar para brindar el mejor servicio performance y seguridad con Angular / Firebase y otras tecnologías de punta… Profesor de varios cursos relacionados a javascript, Google Developer Expert en tecnologías web y Angular Developer Expert , speaker internacional, y escritor de artículos técnicos.
     "
+    facebook_url: ''
     social_links:
       - link: "https://twitter.com/jorgeucano"
         icon: "icon-social-twitter"
@@ -217,6 +225,7 @@ authors:
     avatar: "https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/authors%2FImage%20uploaded%20from%20iOS%20(1).jpg?alt=media&token=f6c0d80a-893e-4b70-90f3-7843fbe3d54f"
     bio: "Web & Mobile Developer, PHP, Laravel, AJAX, Ionic, Angular, Javascript - Creo que el conocimiento es una de las pocas cosas que no se pierde cuando se comparte.
     "
+    facebook_url: ''
     social_links:
       - link: "https://twitter.com/thecouk"
         icon: "icon-social-twitter"
