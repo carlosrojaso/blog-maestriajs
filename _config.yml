@@ -71,6 +71,9 @@ social_links:
   - url: "https://www.youtube.com/channel/UCxs-DaSRmp8k23n79WjXndw"
     title: "Youtube"
     icon: "icon-social-youtube"
+  - url: "https://www.instagram.com/ion_book"
+    title: "Instagram"
+    icon: "icon-social-instagram-outline"
 # ==============================================================
 # Home Page
 home:
@@ -138,7 +141,7 @@ authors:
       - link: "https://twitter.com/carlosrojas_o"
         icon: "icon-social-twitter"
       - link: "https://youtube.com/carlosrojas84"
-        icon: "fa-youtube"
+        icon: "icon-social-youtube"
   - id: "daniel_lsanchez"
     name: "Daniel Londoño Sanchez"
     url: "/blog/authors/daniel_lsanchez"
@@ -150,7 +153,7 @@ authors:
       - link: "https://www.linkedin.com/in/daniel-londo%C3%B1o-61296b84"
         icon: "icon-linkedin"
       - link: "https://www.facebook.com/daniel.l.sanchez.501"
-        icon: "icon-social-facebook"
+        icon: "icon-social-octocat"
   - id: "levanocarlos"
     name: "Levano Carlos"
     url: "/blog/authors/levanocarlos"
@@ -159,9 +162,9 @@ authors:
     bio: "Desarrollador Web, Ingeniero de Sistemas, amante de Laravel , IonicFramework, ReactNative, PHP, manoseando Android y Swift. Amante del café y series de Netflix."
     social_links:
       - link: "https://twitter.com/calevano"
-        icon: "icon-social-twitter"
+        icon: "icon-social-octocat"
       - link: "https://www.linkedin.com/in/calevano/"
-        icon: "icon-linkedin"
+        icon: "icon-social-octocat"
       - link: "https://github.com/calevano"
         icon: "icon-social-octocat"
   - id: "mayrititis"
@@ -172,11 +175,11 @@ authors:
     bio: "Soy Ingeniera en Computación egresada de la Universidad Fermín Toro, Cabudare Edo. Lara. Me dedico al Desarrollo Web Full Stack y Móvil de manera Freelance. Me siento aficionada por el UX y el UI, así como también el desarrollo de aplicaciones innovadoras."
     social_links:
       - link: "https://twitter.com/mayrititis"
-        icon: "fa-twitter"
+        icon: "icon-social-octocat"
       - link: "https://www.linkedin.com/in/mayrarodriguez1709"
-        icon: "fa-linkedin"
+        icon: "icon-social-octocat"
       - link: "https://www.facebook.com/mayrititis"
-        icon: "fa-facebook"
+        icon: "icon-social-octocat"
   - id: "unjavascripter"
     name: "Diego Coy"
     url: "/blog/authors/unjavascripter"
@@ -184,9 +187,9 @@ authors:
     bio: "I spend my time learning about new technologies and coding. I really enjoy developing web applications using JavaScript. I'm currently working with (and loving) AngularJS. I founded a group where people can learn and share about AngularJS in Colombia, there I'm the organizer and sometimes speaker. I've been enjoying teaching people about new cool technologies "
     social_links:
       - link: "https://twitter.com/unjavascripter"
-        icon: "fa-twitter"
+        icon: "icon-social-twitter"
       - link: "https://github.com/unjavascripter"
-        icon: "fa-github"
+        icon: "icon-social-octocat"
   - id: "javebratt"
     name: "Jorge Vergara"
     url: "/blog/authors/javebratt"
@@ -194,9 +197,9 @@ authors:
     bio: "Ayudo a emprendedores que están atacando proyectos de impacto social a planear y construir la primera versión de su aplicación móvil para que puedan salir al mercado rápido. Ayudo a desarrolladores de Ionic2 a usar esos conocimientos para construir aplicaciones basadas en Firebase."
     social_links:
       - link: "https://twitter.com/javebratt"
-        icon: "fa-twitter"
+        icon: "icon-social-twitter"
       - link: "https://facebook.com/javebrattDev"
-        icon: "fa-facebook"
+        icon: "icon-social-octocat"
   - id: "jorgecano"
     name: "Jorge Cano"
     url: "/blog/authors/jorgecano"
@@ -205,9 +208,9 @@ authors:
     "
     social_links:
       - link: "https://twitter.com/jorgeucano"
-        icon: "fa-twitter"
+        icon: "icon-social-twitter"
       - link: "https://github.com/jorgeucano"
-        icon: "fa-github"
+        icon: "icon-social-octocat"
   - id: "thecouk"
     name: "Oscar Andrade"
     url: "/blog/authors/thecouk"
@@ -216,9 +219,9 @@ authors:
     "
     social_links:
       - link: "https://twitter.com/thecouk"
-        icon: "fa-twitter"
+        icon: "icon-social-twitter"
       - link: "https://github.com/thecouk"
-        icon: "fa-github"
+        icon: "icon-social-octocat"
 # ==============================================================
 # Publications
 publications:
