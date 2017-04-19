@@ -28,7 +28,9 @@ versions:
 
 Hemos actualizado este demo con el último release de **Ionic 3**, si aún estas en alguna de las versiones anteriores puedes seguir estos pasos [de Ionic 2 a Ionic 3](https://www.ion-book.com/blog/tips/ionic-2-to-ionic3/){:target="_blank"}.
 
-Ademas en este demo se usa la funcion de lazy loading y @IonicPage. 
+Ademas en este demo usamos la función de **lazy loading** y **@IonicPage**. Puedes ver el repositorio [**Demo111**](https://github.com/ion-book/demo111){:target="_blank"}
+
+<hr/>
 
 Para integrar Google Maps en tu aplicación es necesario que te registres en la cuenta de Google para desarrolladores y generes el API KEY de la aplicación ya sea para android o ios, esta te permitirá trabajar con Google Maps. Aquí dejo el link para ingresar a generar la key [**Link**](https://developers.google.com/maps/?hl=es-419.){:target="_blank"}
 
@@ -69,19 +71,13 @@ El siguiente paso es crear nuestra aplicación Ionic, en este caso usare la plan
 ionic start demo111 blank --v2
 ```
 
-<div class="row">
-  <div class="col col-100 col-md-66 col-lg-66">
-    <amp-img width="586" height="402" layout="responsive" src="http://i.cubeupload.com/asIPEb.jpg"></amp-img>
-  </div>
-</div>
-
 Una vez se crea el proyecto, nos dirigimos a la carpeta que ionic crea con su estructura para comenzar a integrar Google Maps en nuestra aplicación.
 
 ```
-cd MapasNativo
+cd demo111
 ```
 
-Para integrar Google Maps Nativo de ionic 2, necesitaremos hacer uso de 2 plugins: Geolocalización y Google Maps.
+Para integrar **Google Maps Nativo** de ionic, necesitaremos hacer uso de 2 plugins: Geolocalización y Google Maps.
 
 Ya sabiendo cuales son los plugins a instalar, procedemos a agregarlos a nuestra aplicación.
 
@@ -98,12 +94,6 @@ Google Maps:
 ionic plugin add cordova-plugin-googlemaps --variable API_KEY_FOR_ANDROID="YOUR_ANDROID_API_KEY_IS_HERE" --variable API_KEY_FOR_IOS="YOUR_IOS_API_KEY_IS_HERE" --save
 npm install @ionic-native/google-maps --save
 ```
-<div class="row">
-  <div class="col col-100 col-md-66 col-lg-66">
-    <amp-img width="586" height="402" layout="responsive" src="http://i.cubeupload.com/NamKFU.jpg"></amp-img>
-  </div>
-</div>
-
 
 Ahora debemos importar los servicios de Geolocation y GoogleMaps en el array de providers en el archivo `src/app/app.module.ts`, así:
 
