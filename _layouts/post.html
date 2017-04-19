@@ -12,6 +12,11 @@ layout: default
         {{ page.date | date: '%B %d, %Y' }} por 
         <a href="{{ author.url }}"><strong>{{ author.name }}</strong></a> 
       </div>
+      {% if page.versions %}
+      <div class="versions">
+        {% for version in page.versions %}<span class="version"><span>{{ version.title }}</span><span>{{ version.number }}</span></span>{% endfor %}
+      </div>
+      {% endif %}
     </div>
     {% if page.repo %}
     <div class="col col-100 col-md-100 col-lg-20">

@@ -128,6 +128,23 @@ blockquote {
 .content-404{
   text-align: center;
 }
+div.versions{
+  span.version{
+    font-size: .9em;
+    border-radius: 2px;
+    overflow: hidden;
+    background-color: $primary-color;
+    color: white;
+    margin-right: 3px;
+    padding: 0px 2px;
+    margin-top: 2px;
+    span:last-child{
+      margin-left: 5px;
+      font-weight: bold;
+      border-left: 1px solid white;
+    }
+  }
+}
 @import
 "normalize",
 "buttons",

@@ -1,16 +1,34 @@
 ---
 layout: post
-title: "Google Maps Nativo con Ionic 2"
+title: "Google Maps Nativo con Ionic"
 date: 2016-09-23
 tags: [maps, demos, ionic2]
 categories: ionic2
 author: daniel_lsanchez
-cover: "http://i.cubeupload.com/vzI3hJ.jpg"
+cover: "/images/posts/ionic2/2016-09-23-google-maps-native/cover.jpg"
+remember: true
+repo: "https://github.com/ion-book/demo111"
+versions:
+  - title: 'ionic'
+    number: '3.0.1'
+  - title: 'ionic-native'
+    number: '3.0.1'
+  - title: 'cordova-cli'
+    number: '6.5.0'
+  - title: 'ionic-cli'
+    number: '2.2.2'
 ---
 
-> Hola a todos, en esta ocasión les traemos un pequeño ejemplo de cómo poder implementar **Google Maps Nativo** en tu proyecto de **Ionic 2**, es algo muy sencillo y de seguro que con estas bases podrás dar inicio a una gran idea.
+> Hola a todos, en esta ocasión les traemos un pequeño ejemplo de cómo poder implementar **Google Maps Nativo** en tu proyecto de **Ionic**, es algo muy sencillo y de seguro que con estas bases podrás dar inicio a una gran idea.
 
-<amp-img width="1200" height="675" layout="responsive" src="http://i.cubeupload.com/vzI3hJ.jpg"></amp-img>
+<amp-img width="1200" height="675" layout="responsive" src="/images/posts/ionic2/2016-09-23-google-maps-native/cover.jpg"></amp-img>
+
+# Actualización (19/04/2017)
+<hr/>
+
+Hemos actualizado este demo con el último release de **Ionic 3**, si aún estas en alguna de las versiones anteriores puedes seguir estos pasos [de Ionic 2 a Ionic 3](https://www.ion-book.com/blog/tips/ionic-2-to-ionic3/){:target="_blank"}.
+
+Ademas en este demo se usa la funcion de lazy loading y @IonicPage. 
 
 Para integrar Google Maps en tu aplicación es necesario que te registres en la cuenta de Google para desarrolladores y generes el API KEY de la aplicación ya sea para android o ios, esta te permitirá trabajar con Google Maps. Aquí dejo el link para ingresar a generar la key [**Link**](https://developers.google.com/maps/?hl=es-419.){:target="_blank"}
 
@@ -48,7 +66,7 @@ Copia esta clave API ya que con esta realizaremos la integración con Google Map
 El siguiente paso es crear nuestra aplicación Ionic, en este caso usare la plantilla blank que trae ionic.
 
 ```
-ionic start MapasNativo blank --v2
+ionic start demo111 blank --v2
 ```
 
 <div class="row">
@@ -70,13 +88,15 @@ Ya sabiendo cuales son los plugins a instalar, procedemos a agregarlos a nuestra
 Geolocalización:
 
 ```
-ionic plugin add cordova-plugin-geolocation
+ionic plugin add cordova-plugin-geolocation --save
+npm install @ionic-native/geolocation --save
 ```
 
 Google Maps:
 
 ```
-ionic plugin add cordova-plugin-googlemaps --variable API_KEY_FOR_ANDROID=”Ingresa el api key que generaste para android” --variable API_KEY_FOR_IOS=”Ingresa el api key que generaste para ios”
+ionic plugin add cordova-plugin-googlemaps --variable API_KEY_FOR_ANDROID="YOUR_ANDROID_API_KEY_IS_HERE" --variable API_KEY_FOR_IOS="YOUR_IOS_API_KEY_IS_HERE" --save
+npm install @ionic-native/google-maps --save
 ```
 <div class="row">
   <div class="col col-100 col-md-66 col-lg-66">
@@ -84,84 +104,125 @@ ionic plugin add cordova-plugin-googlemaps --variable API_KEY_FOR_ANDROID=”Ing
   </div>
 </div>
 
-Ahora ya tenemos lo necesario para integrar mapas en nuestra aplicación, vamos a realizar la importación de las librerías referentes a los plugin que instalamos. Para esto nos dirigimos a la carpeta del proyecto creado por ionic “app/page” y abrimos el archivo “home.ts” e importamos las librerías.
+
+Ahora debemos importar los servicios de Geolocation y GoogleMaps en el array de providers en el archivo `src/app/app.module.ts`, así:
 
 {% highlight ts linenos %}
-import { Geolocation, GoogleMapsEvent, GoogleMapsLatLng, GoogleMap } from 'ionic-native';
+...
+import { Geolocation } from '@ionic-native/geolocation';
+import { GoogleMaps } from '@ionic-native/google-maps';
+...
+
+@NgModule({
+  declarations: [
+    MyApp,
+  ],
+  imports: [
+    BrowserModule,
+    IonicModule.forRoot(MyApp)
+  ],
+  bootstrap: [IonicApp],
+  entryComponents: [
+    MyApp,
+  ],
+  providers: [
+    StatusBar,
+    SplashScreen,
+    Geolocation,
+    GoogleMaps,
+    {provide: ErrorHandler, useClass: IonicErrorHandler}
+  ]
+})
+export class AppModule {}
+{% endhighlight %}
+ 
+Ahora ya tenemos lo necesario para integrar mapas en nuestra aplicación, vamos a realizar la importación de las librerías referentes a los plugin que instalamos. Para esto nos dirigimos a la carpeta del proyecto creado por ionic `app/page` y abrimos el archivo `home.ts` e importamos las librerías.
+
+{% highlight ts linenos %}
+...
+
+import { Geolocation, Geoposition } from '@ionic-native/geolocation';
+import {
+ GoogleMaps,
+ GoogleMap,
+ GoogleMapsEvent,
+ LatLng,
+ CameraPosition
+} from '@ionic-native/google-maps';
+
+@IonicPage()
+@Component({
+  selector: 'page-home',
+  templateUrl: 'home.html'
+})
+export class HomePage {
+
+  constructor(
+    public navCtrl: NavController,
+    public geolocation: Geolocation,
+    public googleMaps: GoogleMaps
+  ) {
+
+...
 {% endhighlight %}
 
 Las librerias Geolocation y GoogleMaps hacen parte de [**Ionic Native**]({{site.urlblog}}/ionic2/ionic-native){:target="_blank"}:
-
-<amp-img width="1275" height="718" layout="responsive" src="http://i.cubeupload.com/4kBzpX.jpg"></amp-img>
 
 Para este ejemplo vamos a declarar dos métodos en nuestro archivo `home.ts` estos se llamarán:
 
 `obtenerPosicion()`: Este método nos devolverá la posición actual del dispositivo en coordenadas de latitud y longitud. Para esto debe de estar activo el servicio de GPS del dispositivo. En este método usaremos la librería Geolocation ya que esta tiene una función que nos recupera la posición actual del dispositivo. Estas coordenadas son pasadas al método `loadMap(coordenadas)`.
 
-{% highlight ts linenos %}
+{% highlight ts %}
 obtenerPosicion():any{
-  Geolocation.getCurrentPosition().then(res => {
-    console.log(res.coords);
-    let coordenada = [{
-      'longitude' : res.coords.longitude,
-      'latitude' : res.coords.latitude
-    }];
-    console.log(coordenada);
-    this.loadMap(coordenada);
-  });
+  this.geolocation.getCurrentPosition().then(response => {
+    this.loadMap(response);
+  })
+  .catch(error =>{
+    console.log(error);
+  })
 }
 {% endhighlight %}
 
 `loadMap(coordenadas:any)`: Este método recibe como parámetro las coordenadas expresadas en latitud y longitud (estas coordenadas son tomadas del método `obtenerPosicion()`) y posiciona el mapa en la posición actual del dispositivo.
 
 {% highlight ts linenos %}
-loadMap(coordenada:any[]){
-  console.log(coordenada);
-  let longitud = coordenada[0]['longitude'];
-  let latitude = coordenada[0]['latitude'];
-  // let location: crea un objeto con las coordenadas latitude y longitud y es pasada a las // opciones de google maps.
+loadMap(postion: Geoposition){
+  let latitude = postion.coords.latitude;
+  let longitud = postion.coords.longitude;
+  
+  // create a new map by passing HTMLElement
+  let element: HTMLElement = document.getElementById('map');
 
-  let location = new GoogleMapsLatLng(latitude,longitud);
-  this.map = new GoogleMap('map', {
-      'backgroundColor': 'white',
-      'controls': {
-      'compass': true,
-      'myLocationButton': true,
-      'indoorPicker': true,
-      'zoom': true,
-    },
-    'gestures': {
-      'scroll': true,
-      'tilt': true,
-      'rotate': true,
-      'zoom': true
-    },
-    'camera': {
-      'latLng': location,
-      'tilt': 30,
-      'zoom': 15,
-      'bearing': 50
-    }
-  });
-  this.map.on(GoogleMapsEvent.MAP_READY).subscribe(() => {
-  console.log('Map is ready!');
-});
+  let map: GoogleMap = this.googleMaps.create(element);
+  map.one(GoogleMapsEvent.MAP_READY).then(() => console.log('Map is ready!'));
 
+  // create LatLng object
+  let myPosition: LatLng = new LatLng(latitude,longitud);
+
+  // create CameraPosition
+  let position: CameraPosition = {
+    target: myPosition,
+    zoom: 18,
+    tilt: 30
+  };
+
+  // move the map's camera to position
+  map.moveCamera(position);
+}
 {% endhighlight %}
-
-<amp-img width="1280" height="717" layout="responsive" src="http://i.cubeupload.com/6alr1n.jpg"></amp-img>
-<amp-img width="1280" height="711" layout="responsive" src="http://i.cubeupload.com/6c3Ff6.jpg"></amp-img>
 
 Ahora vamos a abrir el archivo `home.html` y vamos a incluir un div con un `id=”map”`.
 
 {% highlight html linenos %}
 <ion-header>
-  <ion-navbar>
-    <ion-title>Ionic Blank</ion-title>
+  <ion-navbar color="primary">
+    <ion-title>
+      Demo 111
+    </ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
+<ion-content>
   <div id="map"></div>
 </ion-content>
 {% endhighlight %}
@@ -169,9 +230,11 @@ Ahora vamos a abrir el archivo `home.html` y vamos a incluir un div con un `id=�
 Ahora vamos a nuestro archivo `home.scss` e incluiremos el siguiente código.
 
 {% highlight scss linenos %}
-.home-page{
+page-home {
   #map{
+    display: block;
     height: 100%;
+    width: 100%;
   }
 }
 {% endhighlight %}
@@ -179,7 +242,8 @@ Ahora vamos a nuestro archivo `home.scss` e incluiremos el siguiente código.
 Ya con esto debería de quedar todo listo. Ahora vamos a compilar nuestro proyecto y realizaremos una prueba.
 
 ```
-ionic build android
+ionic platform add android
+ionic build android --prod
 ```
 
 NOTA: Recuerda activar el acceso a mapas de la aplicación por la configuración del celular en aplicaciones.
