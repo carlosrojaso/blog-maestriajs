@@ -58,6 +58,9 @@ menu_footer:
   - title: Libro
     url: 'https://libro.ion-book.com/'
     target: '_blank'
+  - title: Codigo de Conducta
+    url: 'https://github.com/ion-book/codigo-de-conducta'
+    target: '_blank'
 
 # ==============================================================
 # Social Links
