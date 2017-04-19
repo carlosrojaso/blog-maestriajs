@@ -147,7 +147,9 @@ import {
  GoogleMap,
  GoogleMapsEvent,
  LatLng,
- CameraPosition
+ CameraPosition,
+ MarkerOptions,
+ Marker
 } from '@ionic-native/google-maps';
 
 @IonicPage()
@@ -183,18 +185,18 @@ obtenerPosicion():any{
 }
 {% endhighlight %}
 
-`loadMap(coordenadas:any)`: Este método recibe como parámetro las coordenadas expresadas en latitud y longitud (estas coordenadas son tomadas del método `obtenerPosicion()`) y posiciona el mapa en la posición actual del dispositivo.
+`loadMap(postion: Geoposition)`: Este método recibe como parámetro las coordenadas expresadas en latitud y longitud (estas coordenadas son tomadas del método `obtenerPosicion()`) y posiciona el mapa en la posición actual del dispositivo.
 
 {% highlight ts linenos %}
 loadMap(postion: Geoposition){
   let latitude = postion.coords.latitude;
   let longitud = postion.coords.longitude;
+  console.log(latitude, longitud);
   
   // create a new map by passing HTMLElement
   let element: HTMLElement = document.getElementById('map');
 
   let map: GoogleMap = this.googleMaps.create(element);
-  map.one(GoogleMapsEvent.MAP_READY).then(() => console.log('Map is ready!'));
 
   // create LatLng object
   let myPosition: LatLng = new LatLng(latitude,longitud);
@@ -206,8 +208,102 @@ loadMap(postion: Geoposition){
     tilt: 30
   };
 
-  // move the map's camera to position
-  map.moveCamera(position);
+  map.one(GoogleMapsEvent.MAP_READY).then(()=>{
+    console.log('Map is ready!');
+
+    // move the map's camera to position
+    map.moveCamera(position);
+
+    // create new marker
+    let markerOptions: MarkerOptions = {
+      position: myPosition,
+      title: 'Here'
+    };
+    map.addMarker(markerOptions);
+  });
+
+}
+{% endhighlight %}
+
+Finalmente toda la clase `HomePage` queda así:
+
+{% highlight ts linenos %}
+import { Component } from '@angular/core';
+import { IonicPage, NavController } from 'ionic-angular';
+
+import { Geolocation, Geoposition } from '@ionic-native/geolocation';
+import {
+ GoogleMaps,
+ GoogleMap,
+ GoogleMapsEvent,
+ LatLng,
+ CameraPosition,
+ MarkerOptions,
+ Marker
+} from '@ionic-native/google-maps';
+
+@IonicPage()
+@Component({
+  selector: 'page-home',
+  templateUrl: 'home.html'
+})
+export class HomePage {
+
+  constructor(
+    public navCtrl: NavController,
+    public geolocation: Geolocation,
+    public googleMaps: GoogleMaps
+  ) {}
+
+  ionViewDidLoad(){
+    this.obtenerPosicion();
+  }
+
+  obtenerPosicion():any{
+    this.geolocation.getCurrentPosition().then(response => {
+      this.loadMap(response);
+    })
+    .catch(error =>{
+      console.log(error);
+    })
+  }
+
+  loadMap(postion: Geoposition){
+    let latitude = postion.coords.latitude;
+    let longitud = postion.coords.longitude;
+    console.log(latitude, longitud);
+   
+    // create a new map by passing HTMLElement
+    let element: HTMLElement = document.getElementById('map');
+
+    let map: GoogleMap = this.googleMaps.create(element);
+
+    // create LatLng object
+    let myPosition: LatLng = new LatLng(latitude,longitud);
+
+    // create CameraPosition
+    let position: CameraPosition = {
+      target: myPosition,
+      zoom: 18,
+      tilt: 30
+    };
+
+    map.one(GoogleMapsEvent.MAP_READY).then(()=>{
+      console.log('Map is ready!');
+
+      // move the map's camera to position
+      map.moveCamera(position);
+
+      // create new marker
+      let markerOptions: MarkerOptions = {
+        position: myPosition,
+        title: 'Here'
+      };
+      map.addMarker(markerOptions);
+    });
+
+  }
+
 }
 {% endhighlight %}
 
@@ -252,12 +348,12 @@ NOTA: Recuerda activar el acceso a mapas de la aplicación por la configuración
 
 <div class="row">
   <div class="col col-100 col-md-33 col-lg-33">
-    <amp-img width="720" height="1280" layout="responsive" src="http://i.cubeupload.com/lQvKh1.jpg"></amp-img>
+    <amp-img width="720" height="1280" layout="responsive" src="/images/posts/ionic2/2016-09-23-google-maps-native/result1.jpeg"></amp-img>
   </div>
   <div class="col col-100 col-md-33 col-lg-33">
-    <amp-img width="720" height="1280" layout="responsive" src="http://i.cubeupload.com/lhHr7n.jpg"></amp-img>
+    <amp-img width="720" height="1280" layout="responsive" src="/images/posts/ionic2/2016-09-23-google-maps-native/result2.jpeg"></amp-img>
   </div>
   <div class="col col-100 col-md-33 col-lg-33">
-    <amp-img width="720" height="1280" layout="responsive" src="http://i.cubeupload.com/HZbINA.jpg"></amp-img>
+    <amp-img width="720" height="1280" layout="responsive" src="/images/posts/ionic2/2016-09-23-google-maps-native/result3.jpeg"></amp-img>
   </div>
 </div>
