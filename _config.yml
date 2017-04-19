@@ -39,6 +39,9 @@ menu_header:
   - title: Cursos
     url: 'http://academia.ion-book.com/'
     target: '_blank'
+  - title: Workshops
+    url: 'http://www.startupers.io/'
+    target: '_blank'
   
 # ==============================================================
 # Menu Footer
@@ -115,6 +118,9 @@ home:
   blog_btn_text: 'Ver más artículos'
 # ==============================================================
 # Authors
+authorpage:
+  description: 'Estos increibles tutoriales, tips y demos se logran gracias a nuestros increible autores.'
+
 authors:
   - id: 'nicobytes'
     name: Nicolas Molina
