@@ -118,6 +118,9 @@ home:
   blog_btn_text: 'Ver más artículos'
 # ==============================================================
 # Authors
+authorpage:
+  description: 'Estos increibles tutoriales, tips y demos se logran gracias a nuestros increible autores.'
+
 authors:
   - id: 'nicobytes'
     name: Nicolas Molina
