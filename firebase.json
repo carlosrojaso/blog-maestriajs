@@ -20,17 +20,17 @@
       "value" : "*"
     } ]
     }, {
-      "source" : "**/*.@(jpg|jpeg|gif|png)",
+      "source" : "**/*.@(jpg|jpeg|gif|png|js|webp)",
       "headers" : [ {
         "key" : "Cache-Control",
-        "value" : "max-age=7200"
+        "value" : "max-age=86400"
       } ]
     }, {
       // Sets the cache header for 404 pages to cache for 5 minutes
       "source" : "404.html",
       "headers" : [ {
         "key" : "Cache-Control",
-        "value" : "max-age=300"
+        "value" : "max-age=86400"
       } ]
     } ]
   }
