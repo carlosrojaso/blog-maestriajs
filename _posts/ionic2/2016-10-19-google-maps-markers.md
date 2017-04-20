@@ -8,6 +8,9 @@ repo: "https://github.com/mayrarodriguez1709/ionic2-google-maps-markers"
 author: mayrititis
 cover: "http://i.cubeupload.com/y2EKrQ.jpg"
 remember: true
+versions:
+  - title: 'ionic'
+    number: '2.0.0'
 ---
 
 > Ya hemos visto en los posts anteriores sobre cómo integrar Google Maps con nuestra aplicación en Ionic 2, bien sea de forma [nativa]({{site.urlblog}}/ionic2/google-maps-native){:target="_blank"} o con [javascript]({{site.urlblog}}//ionic2/google-maps-js-and-ionic-2){:target="_blank"}. En este post veremos un poco más sobre la integración de **Google Maps con Ionic 2** y es sobre el tema de los **Markers**.

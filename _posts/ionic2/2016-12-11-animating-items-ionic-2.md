@@ -8,6 +8,11 @@ laucher: "/launcher/demo108"
 author: nicobytes
 cover: "https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/demos%2Fdemo108%2Fitems.jpg?alt=media"
 remember: true
+versions:
+  - title: 'ionic'
+    number: '2.0.0-rc.3'
+  - title: 'ionic-native'
+    number: '2.2.3'
 ---
 
 > Angular 2 integra [Web Animations API](https://web-animations.github.io/web-animations-demos/#waves/){:target="_blank"} para ejecutar animaciones en css que aprovechan la GPU del dispositivo y se puedan controlar con JS, sin duda esto provee un mayor control en las animaciones que podemos hacer.

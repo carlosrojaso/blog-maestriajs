@@ -6,6 +6,9 @@ tags: [native, libs, demos, ionic2]
 categories: ionic2
 author: daniel_lsanchez
 cover: "http://i.cubeupload.com/itTXFO.png"
+versions:
+  - title: 'ionic'
+    number: '2.0.0-rc2'
 ---
 
 > **Facebook** es una de las métodos más comunes y usados para registrar y capturar nuevos usuarios, así que en este artículo veremos como hacer el proceso de registrar nuestros usuarios usando **facebook + ionic 2**.

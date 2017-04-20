@@ -8,6 +8,9 @@ laucher: "/launcher/demo105"
 author: nicobytes
 cover: "http://i.cubeupload.com/gxxOpn.png"
 remember: true
+versions:
+  - title: 'ionic'
+    number: '2.0.0-rc2'
 ---
 
 > La interacción con mapas en aplicaciones móviles es muy común y en este artículo explicaremos cómo integrar **Google Maps** usando el SDk de JS con **Ionic 2**.

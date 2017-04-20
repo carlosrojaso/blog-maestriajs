@@ -7,6 +7,11 @@ tags: [tips, news]
 categories: tips
 author: nicobytes
 cover: "/images/posts/news/2017-04-15-ionic-2-to-ionic3/cover.jpg"
+versions:
+  - title: 'ionic'
+    number: '3.0.1'
+  - title: 'ionic-native'
+    number: '3.4.2'
 ---
 
 > Hace poco Ionic lanzó su más reciente versión [**(Ionic v3)**]({{site.urlblog}}/news/ionic-v-3){:target="_blank"} y mencionamos acerca de sus principales novedades, ahora en este artículo vamos a ver cómo actulizar un proyecto desde la versión 2 a la versión 3 y como resolver los problemas más comunes.

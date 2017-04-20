@@ -8,6 +8,9 @@ repo: "https://github.com/ion-book/demo102"
 author: nicobytes
 cover: "http://i.imgur.com/9Uq2Naw.jpg"
 remember: true
+versions:
+  - title: 'ionic'
+    number: '2.0.0-rc2'
 ---
 
 > En los últimos artículos hemos visto una [introducción a Ionic 2]({{site.urlblog}}/ionic2/introIonic2){:target="_blank"} y como crear un [hola mundo]({{site.urlblog}}/ionic2/ionic2){:target="_blank"} con Ionic 2, ahora vamos hacer uso de [ionic native]({{site.urlblog}}/ionic2/ionic-native){:target="_blank"} para usar la cámara del dispositivo y tomar una fotografía.

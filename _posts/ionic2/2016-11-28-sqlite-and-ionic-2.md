@@ -8,6 +8,11 @@ repo: "https://github.com/ion-book/demo107"
 author: nicobytes
 cover: "https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/demos%2Fdemo107%2FConstruye%20una%20INCREDIBLE%20app%20de%20tareas.jpg?alt=media"
 remember: true
+versions:
+  - title: 'ionic'
+    number: '2.0.0-rc.3'
+  - title: 'ionic-native'
+    number: '2.2.3'
 ---
 
 > Anteriormente hemos hablado sobre [**firebase**]({{site.urlblog}}//ionic2/firebase-database-and-ionic-2){:target="_blank"}, [**pouch**]({{site.urlblog}}/tips/pouchdb){:target="_blank"} y [**Rest API**]({{site.urlblog}}//ionic2/rest-api-with-ionic-2){:target="_blank"} para el consumo de datos, ahora en este nuevo demo haremos la integración con **SQLite** que es una base de datos nativa que proveen los dispositivos móviles.

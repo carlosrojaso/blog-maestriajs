@@ -7,6 +7,11 @@ categories: ionic2
 comments: true
 author: carlosrojas
 cover: "https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2Fclase3%2Fimage.png?alt=media&token=467c26b2-725e-43c4-a7b2-e9accee85304"
+versions:
+  - title: 'ionic'
+    number: '2.0.0-rc.3'
+  - title: 'ionic-native'
+    number: '2.2.3'
 ---
 
 <amp-img width="1024" height="512" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2Fclase3%2Fimage.png?alt=media&token=467c26b2-725e-43c4-a7b2-e9accee85304"></amp-img> 

@@ -6,6 +6,9 @@ date: 2016-07-15
 categories: ionic2
 author: carlosrojas
 cover: "http://i.imgur.com/5mTwi1e.jpg"
+versions:
+  - title: 'ionic'
+    number: '3.0.1'
 ---
 
 <amp-img width="800" height="292" layout="responsive" src="http://i.imgur.com/5mTwi1e.jpg"></amp-img>

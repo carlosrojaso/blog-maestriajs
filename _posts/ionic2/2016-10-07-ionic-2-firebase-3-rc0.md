@@ -7,6 +7,9 @@ categories: ionic2
 author: javebratt
 cover: "http://i.imgur.com/5mTwi1e.jpg"
 draft: false
+versions:
+  - title: 'ionic'
+    number: '2.0.0-rc0'
 ---
 
 <amp-img width="800" height="292" layout="responsive" src="http://i.imgur.com/5mTwi1e.jpg"></amp-img>

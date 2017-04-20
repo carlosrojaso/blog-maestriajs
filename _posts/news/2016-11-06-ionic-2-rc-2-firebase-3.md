@@ -6,6 +6,9 @@ categories: ionic2
 tags: [firebase, ionic2]
 author: nicobytes
 cover: "https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2Fionic-2-rc2-firebase-3%2FFirebase%203%20%2B%20Ionic%202.png?alt=media"
+versions:
+  - title: 'ionic'
+    number: '2.0.0-rc2'
 ---
 
 > Incluir **Firebase** en un proyecto de ionic puede ser algo complejo pero en este último release de [**Ionic 2 RC2**]({{site.urlblog}}/news/ionic-2-rc-2){:target="_blank"}, es mucho más fácil hacer la implementación ya que no toca entrar a archivos de configuración etc etc.

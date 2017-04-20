@@ -9,6 +9,11 @@ author: levanocarlos
 repo: 'https://github.com/calevano/geocoder-ionic2'
 cover: "/images/posts/ionic2/2017-03-06-google-maps-and-geocoder/cover.jpg"
 remember: true
+versions:
+  - title: 'ionic'
+    number: '2.1.0'
+  - title: 'ionic-native'
+    number: '2.4.1'
 ---
 
 Tengan ustedes un excelente día, en esta ocasión les traigo un nuevo artículo, pero esta vez un artículo con respecto a **GEOCODER**, existen dos formas:

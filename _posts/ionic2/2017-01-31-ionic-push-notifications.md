@@ -8,6 +8,11 @@ categories: ionic2
 repo: "https://github.com/ion-book/demo110"
 author: nicobytes
 cover: "https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2FPUSH%20(1).jpg?alt=media"
+versions:
+  - title: 'ionic'
+    number: '2.0.0'
+  - title: 'ionic-native'
+    number: '2.4.1'
 ---
 
 > Implementar el sistema de **notificaciones push** en una aplicación es una de las tareas más comunes y Ionic tiene un servicio que nos ahorra este trabajo.

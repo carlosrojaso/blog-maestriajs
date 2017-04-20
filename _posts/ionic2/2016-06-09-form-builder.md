@@ -8,6 +8,9 @@ laucher: "/launcher/demo101"
 author: nicobytes
 cover: "http://i.imgur.com/PWBxv0C.png"
 remember: true
+versions:
+  - title: 'ionic'
+    number: '2.0.0-rc2'
 ---
 
 > La forma más común de capturar información de los usuarios son los **Formularios** y depende de una buena UI/UX ganar o perder un usuario en nuestra aplicación. 

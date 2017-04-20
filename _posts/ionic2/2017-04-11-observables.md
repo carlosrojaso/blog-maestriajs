@@ -9,6 +9,11 @@ author: thecouk
 repo: 'https://github.com/thecouk/ObservablesIonic'
 cover: "http://blog.rangle.io/content/images/2016/04/observables-and-reactive-programming-in-angular-2-rangleio.gif"
 remember: true
+versions:
+  - title: 'ionic'
+    number: '2.1.0'
+  - title: 'ionic-native'
+    number: '2.4.1'
 ---
 
 Este tutorial pretende ejemplificar el uso de los observables dentro de un proyecto en Ionic 2.

@@ -8,6 +8,9 @@ laucher: "/launcher/demo106"
 author: nicobytes
 cover: "https://s17.postimg.org/tneheudov/translate.jpg"
 remember: true
+versions:
+  - title: 'ionic'
+    number: '2.0.0-rc2'
 ---
 
 > Varias aplicaciones tienen usos en diferentes países, por lo cual las aplicaciones deben adaptar sus contenidos a varios idiomas y con [**ng2-translate**](https://github.com/ocombe/ng2-translate){:target="_blank"} podremos hacer esto con ionic.

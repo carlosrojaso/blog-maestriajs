@@ -7,6 +7,11 @@ tags: [firebase, ionic2]
 categories: ionic2
 author: javebratt
 cover: "https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2F2017-02-24-formsularios-firebase%2F5mTwi1e.jpg?alt=media&token=506ec3e9-8174-4f3f-8311-edddc5a3abbd"
+versions:
+  - title: 'ionic'
+    number: '2.0.0'
+  - title: 'ionic-native'
+    number: '2.4.1'
 ---
 
 > Estas seguro del tipo de dato que estas enviando desde tu App en Ionic es la misma que se esta almacenando en la base de datos de Firebase? Resulta que para mi no lo era.
