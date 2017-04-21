@@ -7,7 +7,7 @@ tags: [ionic2]
 categories: ionic2
 author: thecouk
 repo: 'https://github.com/thecouk/ObservablesIonic'
-cover: "http://blog.rangle.io/content/images/2016/04/observables-and-reactive-programming-in-angular-2-rangleio.gif"
+cover: "https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2F2016-07-08-observables-angular2%2Fobservables-and-reactive-programming-in-angular-2-rangleio%20(1).png?alt=media&token=0425540b-2b95-493c-a2f7-d061880a37a1"
 remember: true
 versions:
   - title: 'ionic'
@@ -20,7 +20,7 @@ Este tutorial pretende ejemplificar el uso de los observables dentro de un proye
 
 <!--summary-->
 
-<amp-img width="918" height="410" layout="responsive" src="http://blog.rangle.io/content/images/2016/04/observables-and-reactive-programming-in-angular-2-rangleio.gif" alt="Observables"></amp-img>
+<amp-img width="918" height="410" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2F2016-07-08-observables-angular2%2Fobservables-and-reactive-programming-in-angular-2-rangleio%20(1).png?alt=media&token=0425540b-2b95-493c-a2f7-d061880a37a1" alt="Observables"></amp-img>
 
 Porque el uso de los observables? Me encontre con la necesidad de utilizar información reflejada en la primera vista en otras vistas dentro de la aplicación lo cual no estaba logrando con las promesas ya que si realizaba un cambio en los datos presentandos en ese momento solo podia verlos en la vista donde me encontraba, pero si me movia a otra vista, el cambio no se veía reflejado a menos que por supuesto refrescara. Por otra parte viendo el funcionamiento de fireBase note algo peculiar y fue que al momento de desplegar una lista por medio de un *nFor se utiliza un pipe async y por supuesto cuando los datos ya se encontraban desplegados mi di cuenta que al cambiar el objeto dentro de fireBase mi lista automaticamente se refrescaba, lo cúal me motivo a buscar información.
 
