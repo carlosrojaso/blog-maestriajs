@@ -6,7 +6,7 @@ date: 2017-04-15
 tags: [tips, news]
 categories: tips
 author: nicobytes
-cover: "/images/posts/news/2017-04-15-ionic-2-to-ionic3/cover.jpg"
+cover: "/images/posts/tips/2017-04-15-ionic-2-to-ionic3/cover.jpg"
 versions:
   - title: 'ionic'
     number: '3.0.1'
@@ -17,7 +17,7 @@ versions:
 > Hace poco Ionic lanzó su más reciente versión [**(Ionic v3)**]({{site.urlblog}}/news/ionic-v-3){:target="_blank"} y mencionamos acerca de sus principales novedades, ahora en este artículo vamos a ver cómo actulizar un proyecto desde la versión 2 a la versión 3 y como resolver los problemas más comunes.
 <!--summary-->
 
-<amp-img width="1024" height="512" layout="responsive" src="/images/posts/news/2017-04-15-ionic-2-to-ionic3/cover.jpg"></amp-img>
+<amp-img width="1024" height="512" layout="responsive" src="/images/posts/tips/2017-04-15-ionic-2-to-ionic3/cover.jpg"></amp-img>
 
 ## Paso 1: Borrar node_modules
 

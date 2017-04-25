@@ -1,27 +1,43 @@
 ---
 layout: post
-title: "SQLite + Ionic 2 en 6 pasos"
-date: 2016-11-28
+title: "SQLite + Ionic en 7 pasos"
+keywords: "cordova-sqlite-storage, sqlite, ionic sqlite, ionic db"
+date: 2017-04-25
 tags: [native, demos, ionic2]
 categories: ionic2
 repo: "https://github.com/ion-book/demo107"
 author: nicobytes
-cover: "https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/demos%2Fdemo107%2FConstruye%20una%20INCREDIBLE%20app%20de%20tareas.jpg?alt=media"
+cover: "/images/posts/ionic2/2016-11-28-sqlite-and-ionic-2/cover.jpg"
 remember: true
 versions:
   - title: 'ionic'
-    number: '2.0.0-rc.3'
+    number: '3.0.1'
   - title: 'ionic-native'
-    number: '2.2.3'
+    number: '3.4.2'
+  - title: 'cordova-cli'
+    number: '6.5.0'
+  - title: 'ionic-cli'
+    number: '2.2.2'
 ---
 
 > Anteriormente hemos hablado sobre [**firebase**]({{site.urlblog}}//ionic2/firebase-database-and-ionic-2){:target="_blank"}, [**pouch**]({{site.urlblog}}/tips/pouchdb){:target="_blank"} y [**Rest API**]({{site.urlblog}}//ionic2/rest-api-with-ionic-2){:target="_blank"} para el consumo de datos, ahora en este nuevo demo haremos la integración con **SQLite** que es una base de datos nativa que proveen los dispositivos móviles.
 
-<amp-img width="1024" height="512" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/demos%2Fdemo107%2FConstruye%20una%20INCREDIBLE%20app%20de%20tareas.jpg?alt=media" alt="SQLite + Ionic 2 en 5 pasos"></amp-img>
+<amp-img width="1024" height="512" layout="responsive" src="/images/posts/ionic2/2016-11-28-sqlite-and-ionic-2/cover.jpg" alt="SQLite + Ionic 2 en 5 pasos"></amp-img>
+
+# Actualización (25/04/2017)
+<hr/>
+
+Hemos actualizado este demo con el último release de **Ionic 3**, si aún estas en alguna de las versiones anteriores puedes seguir estos pasos [de Ionic 2 a Ionic 3](https://www.ion-book.com/blog/tips/ionic-2-to-ionic3/){:target="_blank"}.
+
+Ademas en este demo usamos la función de **lazy loading** y **@IonicPage**. Puedes ver el repositorio [**Demo107**](https://github.com/ion-book/demo107){:target="_blank"}
+
+<hr/>
+
+{% include blog/subscribe.html %}
+
 ## Paso 1: Iniciando el proyecto
 
-Lo primero que haremos será iniciar un nuevo proyecto con ionic, si no lo recuerdas puedes ver esto con mas detalle en la [Introduccion a Ionic 2]({{site.urlblog}}/ionic2/ionic2){:target="_blank"}.
-Vamos a nuestra terminal y ejecutamos:
+Lo primero que haremos será iniciar un nuevo proyecto con ionic. Vamos a nuestra terminal y ejecutamos:
 
 ```
 ionic start demo107 blank --v2
@@ -33,57 +49,193 @@ Ahora entramos a la carpeta del proyecto desde nuestra terminal con:
 cd demo107
 ```
 
-Como iniciamos nuestro proyecto con el template **blank** tendremos una estructura básica del proyecto, la carpeta en la que vamos a trabajar sera *app*.
-
+Como iniciamos nuestro proyecto con el template **blank** tendremos una estructura básica del proyecto, la carpeta en la que vamos a trabajar sera **src**.
 
 ## Paso 2: Instalar SQLite al proyecto
 
-Ahora agregamos el plugin en el proyecto:
+Ahora agregamos el plugin de **cordova-sqlite-storage** y el provider de **sqlite** en el proyecto:
 
 ```
 ionic plugin add cordova-sqlite-storage --save
+npm install @ionic-native/sqlite --save
 ```
 
-La documentación en ionic native la puedes ver [**aquí**](http://ionicframework.com/docs/v2/native/sqlite/){:target="_blank"} y la doc del plugin de cordova [**aquí**](https://github.com/litehelpers/Cordova-sqlite-storage){:target="_blank"}.
+La documentación en ionic native la puedes ver [**aquí**](https://ionicframework.com/docs/native/sqlite/){:target="_blank"} y la documentación del plugin de cordova [**aquí**](https://github.com/litehelpers/Cordova-sqlite-storage){:target="_blank"}.
 
-## Paso 3: Crear un servicio
+Recuerda que debes agregar el provider de sqlite en `app.module.ts`, así:
 
-Vamos a crear el servicio  `TasksService` que se encargará de manejar todos los datos, usaremos [**ionic generator**]({{site.urlblog}}/ionic2/ionic-generator){:target="_blank"} para crear este servicio:
+{% highlight ts %}
+...
+import { SQLite } from '@ionic-native/sqlite';
+
+@NgModule({
+  declarations: [
+    MyApp
+  ],
+  imports: [
+    BrowserModule,
+    HttpModule,
+    IonicModule.forRoot(MyApp)
+  ],
+  bootstrap: [IonicApp],
+  entryComponents: [
+    MyApp
+  ],
+  providers: [
+    StatusBar,
+    SplashScreen,
+    SQLite,
+    {provide: ErrorHandler, useClass: IonicErrorHandler}
+  ]
+})
+export class AppModule {}
+{% endhighlight %}
+
+## Paso 3: Abrir una base de datos
+
+Ahora desde el archivo `app.component.ts`, vamos a crear una base de datos para la aplicación, por eso debemos inyectar como dependencia a *SQLite* en el constructor, así:
+
+{% highlight ts %}
+import { SQLite } from '@ionic-native/sqlite';
+
+@Component({
+  template: `<ion-nav [root]="rootPage"></ion-nav>`
+})
+export class MyApp {
+  rootPage: string = 'HomePage';
+
+  constructor(
+    public platform: Platform,
+    public statusBar: StatusBar,
+    public splashScreen: SplashScreen,
+    public sqlite: SQLite
+  ) {
+    this.platform.ready().then(() => {
+      this.splashScreen.hide();
+      this.statusBar.styleDefault();
+    });
+  }
+  ....
+}
+{% endhighlight %}
+
+Seguido a esto vamos a crear el método `createDatabase` que se encargada de crear una base de datos para la aplicación:
+
+{% highlight ts %}
+private createDatabase(){
+  this.sqlite.create({
+    name: 'data.db',
+    location: 'default' // the location field is required
+  })
+  .then((db) => {
+    console.log(db);
+  })
+  .catch(error =>{
+    console.error(error);
+  });
+}
+{% endhighlight %}
+
+Como resultado tendremos la instancia de la base de datos con la que podremos ejecutar consultas, el método `createDatabase` debemos llamarlo dentro de `this.platform.ready`:
+
+{% highlight ts %}
+....
+@Component({
+  template: `<ion-nav [root]="rootPage"></ion-nav>`
+})
+export class MyApp {
+  rootPage: string = 'HomePage';
+
+  constructor(
+    public platform: Platform,
+    public statusBar: StatusBar,
+    public splashScreen: SplashScreen,
+    public sqlite: SQLite
+  ) {
+    this.platform.ready().then(() => {
+      this.splashScreen.hide();
+      this.statusBar.styleDefault();
+      this.createDatabase();
+    });
+  }
+
+  private createDatabase(){
+    this.sqlite.create({
+      name: 'data.db',
+      location: 'default' // the location field is required
+    })
+    .then((db) => {
+      console.log(db);
+    })
+    .catch(error =>{
+      console.error(error);
+    });
+  }
+}
+{% endhighlight %}
+
+## Paso 4: Crear un servicio
+
+Vamos a crear el servicio `TasksService` que se encargará de manejar todos los datos, usaremos [**ionic generator**]({{site.urlblog}}/ionic2/ionic-generator){:target="_blank"} para crear este servicio:
 
 ```
 ionic g provider tasks-service
 ```
 
-En el servicio vamos a importar a **SQLite** desde ionic-native (*línea 2*) y luego creamos declaramos la variable `db` (*línea 10*) y en el constructor creamos una instancia de SQLite.
+Recuerda que debemos agregar nuestro servicio al array de `providers` en `app.module.ts`:
+
+{% highlight ts %}
+...
+import { TasksService } from '../providers/tasks-service';
+
+@NgModule({
+  declarations: [
+    MyApp
+  ],
+  imports: [
+    BrowserModule,
+    HttpModule,
+    IonicModule.forRoot(MyApp)
+  ],
+  bootstrap: [IonicApp],
+  entryComponents: [
+    MyApp
+  ],
+  providers: [
+    StatusBar,
+    SplashScreen,
+    SQLite,
+    TasksService,
+    {provide: ErrorHandler, useClass: IonicErrorHandler}
+  ]
+})
+export class AppModule {}
+{% endhighlight %}
+
+
+En el servicio vamos a importar a **SQLiteObject** desde ionic-native (*línea 2*) y luego declaramos el método `setDatabase` (*línea 11*) para guadar la instancia de SQLiteObject.
 
 {% highlight ts linenos %}
 import { Injectable } from '@angular/core';
-import { SQLite } from 'ionic-native';
+import { SQLiteObject } from '@ionic-native/sqlite';
 
 @Injectable()
 export class TasksService {
 
-  db: SQLite = null;
+  db: SQLiteObject = null;
 
-  constructor() {
-    this.db = new SQLite();
+  constructor() {}
+
+  setDatabase(db: SQLiteObject){
+    if(this.db === null){
+      this.db = db;
+    }
   }
 
 }
 {% endhighlight %}
 
-Seguido a esto vamos a crear el método `openDatabase` que se encargada de abrir la base de datos y nos retorna una promesa:
-
-{% highlight ts %}
-openDatabase(){
-  return this.db.openDatabase({
-    name: 'data.db',
-    location: 'default' // the location field is required
-  });
-}
-{% endhighlight %}
-
-Ahora tendremos el método `createTable` que se encargara de crear la estructura de la base de datos que queremos. En este caso haremos una tabla para gestionar tareas.
+Ahora declaramos el método `createTable` que se encargara de crear la estructura de la base de datos que queremos. En este caso haremos una tabla para gestionar tareas.
 
 {% highlight ts %}
 createTable(){
@@ -92,7 +244,7 @@ createTable(){
 }
 {% endhighlight %}
 
-Vamos a crear nuestro primer método funcional `getAll` el cual nos hará una consulta a la base de datos y obtiene todas las tareas que estén en la tabla y luego serán retornadas en una promesa.
+Ahora declaramos el método `getAll` el cual nos hará una consulta a la base de datos y obtiene todas las tareas que estén en la tabla y luego serán retornadas en una promesa.
 
 {% highlight ts %}
 getAll(){
@@ -105,6 +257,7 @@ getAll(){
     }
     return Promise.resolve( tasks );
   })
+  .catch(error => Promise.reject(error));
 }
 {% endhighlight %}
 
@@ -139,20 +292,24 @@ En resumen todo nuestro servicio quedará así:
 
 {% highlight ts linenos%}
 import { Injectable } from '@angular/core';
-import { SQLite } from 'ionic-native';
+import { SQLiteObject } from '@ionic-native/sqlite';
 
 @Injectable()
 export class TasksService {
 
   // public properties
 
-  db: SQLite = null;
+  db: SQLiteObject = null;
 
-  constructor() {
-    this.db = new SQLite();
-  }
+  constructor() {}
 
   // public methods
+
+  setDatabase(db: SQLiteObject){
+    if(this.db === null){
+      this.db = db;
+    }
+  }
 
   create(task: any){
     let sql = 'INSERT INTO tasks(title, completed) VALUES(?,?)';
@@ -179,13 +336,7 @@ export class TasksService {
       }
       return Promise.resolve( tasks );
     })
-  }
-
-  openDatabase(){
-    return this.db.openDatabase({
-      name: 'data.db',
-      location: 'default' // the location field is required
-    });
+    .catch(error => Promise.reject(error));
   }
 
   update(task: any){
@@ -196,7 +347,53 @@ export class TasksService {
 }
 {% endhighlight %}
 
-## Paso 4: El controlador
+## Paso 5: Añadir Servicio y llamar a setDatabase
+
+Ahora vamos a inyectar como dependencia a `TasksService` en `app.component.ts` y en el método `createDatabase` luego de obtener la instancia de la base de datos vamos a ejecutar el metodo `setDatabase` y crear la tabla:
+
+{% highlight ts linenos%}
+import { TasksService } from '../providers/tasks-service';
+
+@Component({
+  template: `<ion-nav [root]="rootPage"></ion-nav>`
+})
+export class MyApp {
+  rootPage: string = null;
+
+  constructor(
+    public platform: Platform,
+    public statusBar: StatusBar,
+    public splashScreen: SplashScreen,
+    public tasksService: TasksService,
+    public sqlite: SQLite
+  ) {
+    this.platform.ready().then(() => {
+      this.statusBar.styleDefault();
+      this.createDatabase();
+    });
+  }
+
+  private createDatabase(){
+    this.sqlite.create({
+      name: 'data.db',
+      location: 'default' // the location field is required
+    })
+    .then((db) => {
+      this.tasksService.setDatabase(db);
+      return this.tasksService.createTable();
+    })
+    .then(() =>{
+      this.splashScreen.hide();
+      this.rootPage = 'HomePage';
+    })
+    .catch(error =>{
+      console.error(error);
+    });
+  }
+}
+{% endhighlight %}
+
+## Paso 6: El controlador
 
 Ahora desde el controlador de la página `home.ts` vamos a implementar el servicio de `TaskService` en este controlador haremos uso de AlertController para crear tareas a partir de una Alert. Y creamos el arreglo `tasks` como vacío en *línea 12*.
 
@@ -230,6 +427,9 @@ getAllTasks(){
   .then(tasks => {
     this.tasks = tasks;
   })
+  .catch( error => {
+    console.error( error );
+  });
 }
 {% endhighlight %}
 
@@ -346,6 +546,9 @@ export class HomePage{
       console.log(tasks);
       this.tasks = tasks;
     })
+    .catch( error => {
+      console.error( error );
+    });
   }
 
   openAlertNewTask(){
@@ -398,7 +601,7 @@ export class HomePage{
 }
 {% endhighlight %}
 
-## Paso 5: El template
+## Paso 7: El template
 
 En el template se encargará de llamar las funciones creadas en `HomePage` y mostrar las tareas de la base de datos.
 
@@ -437,84 +640,17 @@ En el template se encargará de llamar las funciones creadas en `HomePage` y mos
 {% endraw %}
 {% endhighlight %}
 
-## Paso 6: Añadir Servicio y llamar a openDatabase
-
-En este último paso asegurate de que el servicio `TasksService` este agregado en el array de providers de `app.module.ts`:
-
-{% highlight ts linenos%}
-import { NgModule, ErrorHandler } from '@angular/core';
-import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
-import { MyApp } from './app.component';
-import { HomePage } from '../pages/home/home';
-import { TasksService } from '../providers/tasks-service';
-
-@NgModule({
-  declarations: [
-    MyApp,
-    HomePage
-  ],
-  imports: [
-    IonicModule.forRoot(MyApp)
-  ],
-  bootstrap: [IonicApp],
-  entryComponents: [
-    MyApp,
-    HomePage
-  ],
-  providers: [
-    {provide: ErrorHandler, useClass: IonicErrorHandler},
-    TasksService
-  ]
-})
-export class AppModule {}
-{% endhighlight %}
-
-Y cuando la app esté lista para iniciar en `app.component.ts` asegurate de llamar a `openDatabase` y crear la tabla.
-
-{% highlight ts linenos%}
-import { Component } from '@angular/core';
-import { Platform } from 'ionic-angular';
-import { StatusBar, Splashscreen } from 'ionic-native';
-
-import { HomePage } from '../pages/home/home';
-import { TasksService } from '../providers/tasks-service';
-
-
-@Component({
-  template: `<ion-nav [root]="rootPage"></ion-nav>`
-})
-export class MyApp {
-  rootPage: any = null;
-
-  constructor(
-    public platform: Platform,
-    public tasksService: TasksService
-  ) {
-    this.platform.ready().then(() => {
-      StatusBar.styleDefault();
-      Splashscreen.hide();
-      tasksService.openDatabase()
-      .then(() => this.tasksService.createTable())
-      .then(()=>{
-        this.rootPage = HomePage;
-      })
-    });
-  }
-}
-
-{% endhighlight %}
-
 ## Resultado:
 
-<div class="row">
+<div class="row wrap">
   <div class="col col-100 col-md-33 col-lg-33">
-    <amp-img width="720" height="1280" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/demos%2Fdemo107%2FScreenshot_20161128-153234.png?alt=media"></amp-img>
+    <amp-img width="720" height="1280" layout="responsive" src="/images/posts/ionic2/2016-11-28-sqlite-and-ionic-2/screen1.png"></amp-img>
   </div>
   <div class="col col-100 col-md-33 col-lg-33">
-    <amp-img width="720" height="1280" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/demos%2Fdemo107%2FScreenshot_20161128-153251.png?alt=media"></amp-img>
+    <amp-img width="720" height="1280" layout="responsive" src="/images/posts/ionic2/2016-11-28-sqlite-and-ionic-2/screen2.png"></amp-img>
   </div>
   <div class="col col-100 col-md-33 col-lg-33">
-    <amp-img width="720" height="1280" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/demos%2Fdemo107%2FScreenshot_20161128-153254.png?alt=media"></amp-img>
+    <amp-img width="720" height="1280" layout="responsive" src="/images/posts/ionic2/2016-11-28-sqlite-and-ionic-2/screen3.png"></amp-img>
   </div>
 </div>
 <br>

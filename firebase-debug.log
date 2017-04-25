@@ -1,0 +1,23 @@
+[debug] ----------------------------------------------------------------------
+[debug] Command:      /usr/local/bin/node /usr/local/bin/firebase deploy
+[debug] CLI Version:  3.6.1
+[debug] Platform:     darwin
+[debug] Node Version: v7.7.2
+[debug] Time:         Tue Apr 25 2017 10:08:20 GMT-0400 (-04)
+[debug] ----------------------------------------------------------------------
+[debug] 
+[debug] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/ion-book  
+ Tue Apr 25 2017 10:08:21 GMT-0400 (-04)
+[debug] <<< HTTP RESPONSE 200
+[debug] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/ion-book/tokens  
+ Tue Apr 25 2017 10:08:22 GMT-0400 (-04)
+[debug] <<< HTTP RESPONSE 200
+[info] 
+[info] === Deploying to 'ion-book'...
+[info] 
+[info] i  deploying database, hosting
+[info] ✔  database: rules ready to deploy.
+[info] i  hosting: preparing _site directory for upload...
+[debug] >>> HTTP REQUEST PUT https://deploy.firebase.com/v1/hosting/ion-book/uploads/-Ki_RGZSsuyFwqlQMHra?fileCount=141&message=  
+ Tue Apr 25 2017 10:08:28 GMT-0400 (-04)
