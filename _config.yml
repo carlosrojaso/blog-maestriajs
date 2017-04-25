@@ -81,7 +81,7 @@ social_links:
 # Home Page
 home:
   banner_title: "Aprende <span class='underline'>Ionic</span> y desarrolla increibles apps para Android y IOS."
-  banner_text: "Inscríbete en nuestra lista de correos, recibe las últimas noticias y un paso a paso para construir tu primera App en Ionic 2."
+  banner_text: "Inscríbete en nuestra lista de correos, recibe las últimas noticias y un paso a paso para construir tu primera App en Ionic."
   topics_title: "¿Que aprenderás?"
   topics_text: "Construye la app que siempre soñaste usando tecnologias Web."
   topics_video: "KVoW-1tRfXM"
