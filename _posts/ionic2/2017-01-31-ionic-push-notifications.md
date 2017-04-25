@@ -237,7 +237,7 @@ Luego seleccionamos el perfil de seguridad y enviamos.
 
 ## Resultado:
 
-<div class="row">
+<div class="row wrap">
   <div class="col col-100 col-md-33 col-lg-33">
     <amp-img width="720" height="1280" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2FScreenshot_20170130-185440.png?alt=media"></amp-img>
   </div>

@@ -2,11 +2,12 @@
 layout: post
 title: "Reduce el tiempo de carga de tu app"
 keywords: "migrar de ionic 2 a ionic 3, de ionic 2 a ionic 3, ionic 2 a ionic 3, ionic 3, ionic page, lazy loading"
-date: 2017-04-24
+date: 2017-04-27
 tags: [tips, news]
 categories: tips
 author: nicobytes
 cover: "/images/posts/tips/2017-04-24-ionic-page-and-lazy-loading/cover.jpg"
+draft: true
 ---
 
 > Hace poco publicamos un artículo donde explicamos cómo actualizar una aplicación de la versión de [**ionic 2 a ionic 3**]({{site.urlblog}}/news/ionic-v-3){:target="_blank"}, pero sin usar el decorador @IonicPage ni lazy loading que son dos de las principales características en ionic 3.
@@ -15,7 +16,7 @@ cover: "/images/posts/tips/2017-04-24-ionic-page-and-lazy-loading/cover.jpg"
 
 <amp-img width="1024" height="512" layout="responsive" src="/images/posts/tips/2017-04-24-ionic-page-and-lazy-loading/cover.jpg"></amp-img>
 
-* **Nota:** En este artículo explicaremos cómo aprovechar estas nuevas características de ionic 3, pero si estas usando ionic 2, primero lee [**cómo migrar de ionic 2 a ionic 3**]({{site.urlblog}}/news/ionic-v-3){:target="_blank"} para seguir este artículo.*
+**Nota:** En este artículo explicaremos cómo aprovechar estas nuevas características de ionic 3, pero si estas usando ionic 2, primero lee [**cómo migrar de ionic 2 a ionic 3**]({{site.urlblog}}/news/ionic-v-3){:target="_blank"} para seguir este artículo.
 
 Una de las principales características de ionic 3 está en el manejo de las urls, esto para poder dar un mejor soporte a deeplinks, aplicaciones con electron y [**progressive web apps (PWA)**](http://blog.ionic.io/announcing-pwa-support-in-ionic-2/){:target="_blank"}.
 

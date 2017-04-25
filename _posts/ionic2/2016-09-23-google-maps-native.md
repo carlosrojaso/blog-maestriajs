@@ -12,7 +12,7 @@ versions:
   - title: 'ionic'
     number: '3.0.1'
   - title: 'ionic-native'
-    number: '3.0.1'
+    number: '3.4.2'
   - title: 'cordova-cli'
     number: '6.5.0'
   - title: 'ionic-cli'
@@ -31,6 +31,8 @@ Hemos actualizado este demo con el último release de **Ionic 3**, si aún estas
 Ademas en este demo usamos la función de **lazy loading** y **@IonicPage**. Puedes ver el repositorio [**Demo111**](https://github.com/ion-book/demo111){:target="_blank"}
 
 <hr/>
+
+{% include blog/subscribe.html %}
 
 Para integrar Google Maps en tu aplicación es necesario que te registres en la cuenta de Google para desarrolladores y generes el API KEY de la aplicación ya sea para android o ios, esta te permitirá trabajar con Google Maps. Aquí dejo el link para ingresar a generar la key [**Link**](https://developers.google.com/maps/?hl=es-419.){:target="_blank"}
 
@@ -336,7 +338,7 @@ NOTA: Recuerda activar el acceso a mapas de la aplicación por la configuración
 
 # Resultados de la aplicación: 
 
-<div class="row">
+<div class="row wrap">
   <div class="col col-100 col-md-33 col-lg-33">
     <amp-img width="720" height="1280" layout="responsive" src="/images/posts/ionic2/2016-09-23-google-maps-native/result1.jpeg"></amp-img>
   </div>
