@@ -113,7 +113,7 @@ export class UsersModule {}
 
 {% include blog/subscribe.html %}
 
-# Paso 2: Remover página de declarations y entryCompomntes
+## Paso 2: Remover página de declarations y entryCompomntes
 
 Ahora como las páginas se van a cargar solo cuando sea necesario ya no deben ir en el array de declarations y entryCompomntes de `src/app/app.module.ts`, el archivo deberá lucir así:
 
@@ -137,7 +137,7 @@ Ahora como las páginas se van a cargar solo cuando sea necesario ya no deben ir
 export class AppModule {}
 {% endhighlight %}
 
-# Paso 3: Cambios en navegación
+## Paso 3: Cambios en navegación
 
 Tampoco es necesario importar la página desde la página donde se quiere hacer `push` o `setRoot`, solo con el nombre de la clase como string, se puede hacer uso de push o seeRoot, asi:
 
