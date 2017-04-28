@@ -7,7 +7,19 @@ tags: [tips, news]
 categories: tips
 author: nicobytes
 cover: "/images/posts/tips/2017-04-24-ionic-page-and-lazy-loading/cover.jpg"
+repo: https://github.com/ion-book/demo112
 draft: true
+versions:
+  - title: 'ionic'
+    number: '3.1.0'
+  - title: 'ionic-native'
+    number: '3.6.1'
+  - title: 'ionic-app-scripts'
+    number: '1.3.6'
+  - title: 'ionic-cli'
+    number: '2.2.3'
+  - title: 'cordova-cli'
+    number: '6.5.0'
 ---
 
 > Hace poco publicamos un artículo donde explicamos cómo actualizar una aplicación de la versión de [**ionic 2 a ionic 3**]({{site.urlblog}}/news/ionic-v-3){:target="_blank"}, pero sin usar el decorador @IonicPage ni lazy loading que son dos de las principales características en ionic 3.
@@ -149,7 +161,9 @@ Y ya! Eso es todo ahora ya estás trabajando con esta increíble característica
 
 ## Tip 1: Trabajando con componentes, pipes y directives.
 
-Ahora como cada página es un módulo deberás importar tus components, pipes y directives en cada una de las páginas, de lo contrario no funcionarán, para este paso seguiremos la guía de estilo de Angular, para crear un SharedModule que podamos implementar en cada uno de nuestros módulos.
+Ahora como cada página es un módulo deberás importar tus components, pipes y directives en cada una de las páginas, de lo contrario no funcionarán, para este paso seguiremos la guía de estilo de Angular. 
+
+**Angular** tiene toda una sección de buenas prácticas para desarrollar una aplicación escalable y mantenible, puedes ver toda la guía [aqui](https://angular.io/docs/ts/latest/guide/style-guide.html){:target="_blank"}. Vamos seguir la regla [STYLE 04-10](https://angular.io/docs/ts/latest/guide/style-guide.html#!#04-10){:target="_blank"}, que nos dice como crear un módulo compartido que será implementando en otros módulos. Ha este módulo lo nombraremos **SharedModule**.
 
 Ionic crear una carpeta de componentes y pipes pero nosotros lo organizaremos nuestros components, directives y pipes en base a la buena práctica de Angular de esta manera:
 
@@ -240,27 +254,21 @@ export class SharedModule {}
 
 Como parte final hemos hecho un repositorio de ejemplo con esta arquitectura y cómo usar correctamente **@IonicPage**. El proyecto está organizado así:
 
-<div class="row">
-  <div class="col col-100 col-md-50 offset-md-25 col-lg-50 offset-lg-25">
+<div class="row wrap">
+  <div class="col col-100 col-md-33 col-lg-33">
     <amp-img width="346" height="173" layout="responsive" src="/images/posts/tips/2017-04-24-ionic-page-and-lazy-loading/tree3.png"></amp-img>
   </div>
-</div>
-
-<div class="row">
-  <div class="col col-100 col-md-50 offset-md-25 col-lg-50 offset-lg-25">
-    <amp-img width="460" height="626" layout="responsive" src="/images/posts/tips/2017-04-24-ionic-page-and-lazy-loading/tree4.png"></amp-img>
+  <div class="col col-100 col-md-33 col-lg-33">
+   <amp-img width="270" height="72" layout="responsive" src="/images/posts/tips/2017-04-24-ionic-page-and-lazy-loading/tree5.png"></amp-img>
   </div>
-</div>
-
-<div class="row">
-  <div class="col col-100 col-md-50 offset-md-25 col-lg-50 offset-lg-25">
-    <amp-img width="270" height="72" layout="responsive" src="/images/posts/tips/2017-04-24-ionic-page-and-lazy-loading/tree5.png"></amp-img>
+  <div class="col col-100 col-md-33 col-lg-33">
+   <amp-img width="370" height="300" layout="responsive" src="/images/posts/tips/2017-04-24-ionic-page-and-lazy-loading/tree6.png"></amp-img>
   </div>
-</div>
+</div>  
 
 <div class="row">
   <div class="col col-100 col-md-50 offset-md-25 col-lg-50 offset-lg-25">
-    <amp-img width="370" height="300" layout="responsive" src="/images/posts/tips/2017-04-24-ionic-page-and-lazy-loading/tree6.png"></amp-img>
+    <amp-img width="460" height="626" layout="responsive" src="/images/posts/tips/2017-04-24-ionic-page-and-lazy-loading/tree5.png"></amp-img>
   </div>
 </div>
 
