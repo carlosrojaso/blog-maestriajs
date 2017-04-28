@@ -8,7 +8,6 @@ categories: tips
 author: nicobytes
 cover: "/images/posts/tips/2017-04-24-ionic-page-and-lazy-loading/cover.jpg"
 repo: https://github.com/ion-book/demo112
-draft: true
 versions:
   - title: 'ionic'
     number: '3.1.0'
@@ -75,7 +74,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 export class HomePage {
 {% endhighlight %}
 
-Con **@IonicPage** podremos habilitar a cada página **lazy loading**, que básicamente lo que hace es que carga una pagina solo cuando es necesario. Entonces ya no sera obligacion cargar todas las páginas al inicio de la aplicación, ahora la página es cargada cuando en verdad sea necesario y **como resultado esto puede reducir el tiempo de carga de nuestra aplicación.**
+Con __@IonicPage__ podremos habilitar a cada página **lazy loading**, que básicamente lo que hace es que carga una pagina solo cuando es necesario. Entonces ya no sera obligacion cargar todas las páginas al inicio de la aplicación, ahora la página es cargada cuando en verdad sea necesario y **como resultado esto puede reducir el tiempo de carga de nuestra aplicación.**
 
 Usar **@IonicPage** implica crear un módulo de la página usando **@NgModule**, que se usa para configurar dependencias de una parte específica de la aplicación, antes teníamos un solo modulo, `app.module.ts` pero podemos crear tantos como queramos.
 
@@ -112,6 +111,7 @@ import { UsersPage } from './users';
 export class UsersModule {}
 {% endhighlight %}
 
+{% include blog/subscribe.html %}
 
 # Paso 2: Remover página de declarations y entryCompomntes
 
@@ -268,7 +268,7 @@ Como parte final hemos hecho un repositorio de ejemplo con esta arquitectura y c
 
 <div class="row">
   <div class="col col-100 col-md-50 offset-md-25 col-lg-50 offset-lg-25">
-    <amp-img width="460" height="626" layout="responsive" src="/images/posts/tips/2017-04-24-ionic-page-and-lazy-loading/tree5.png"></amp-img>
+    <amp-img width="460" height="626" layout="responsive" src="/images/posts/tips/2017-04-24-ionic-page-and-lazy-loading/tree4.png"></amp-img>
   </div>
 </div>
 
