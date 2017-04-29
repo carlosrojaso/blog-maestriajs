@@ -39,10 +39,7 @@ menu_header:
   - title: Cursos
     url: 'http://academia.ion-book.com/'
     target: '_blank'
-  - title: Workshops
-    url: 'http://www.startupers.io/'
-    target: '_blank'
-  
+    
 # ==============================================================
 # Menu Footer
 menu_footer:
