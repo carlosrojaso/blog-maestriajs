@@ -4,7 +4,7 @@ title: "Formularios con Ionic"
 date: 2017-05-02
 tags: [forms, demos, ionic2]
 categories: ionic2
-laucher: "/launcher/demo101"
+repo: "https://github.com/ion-book/demo101"
 author: nicobytes
 cover: "/images/posts/ionic2/2016-06-09-form-builder/cover.png"
 remember: true
