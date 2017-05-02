@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Forms con Ionic"
+title: "Formularios con Ionic"
 date: 2017-05-02
 tags: [forms, demos, ionic2]
 categories: ionic2
