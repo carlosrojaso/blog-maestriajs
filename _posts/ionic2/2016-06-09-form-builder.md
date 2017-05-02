@@ -120,6 +120,8 @@ export class MyFormPage {
 }
 {% endhighlight %}
 
+{% include blog/subscribe.html %}
+
 Ahora para agregar el controlador de nuestro formulario debemos asignar dentro `formGroup` la instancia de `myForm`, además debemos asignar un método para recibir la información, así:
 
 {% highlight html %}
