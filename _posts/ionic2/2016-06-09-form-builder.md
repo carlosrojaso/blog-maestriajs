@@ -1,38 +1,90 @@
 ---
 layout: post
-title: "Forms con IonicV2"
-date: 2016-06-09
+title: "Forms con Ionic"
+date: 2017-05-02
 tags: [forms, demos, ionic2]
 categories: ionic2
 laucher: "/launcher/demo101"
 author: nicobytes
-cover: "http://i.imgur.com/PWBxv0C.png"
+cover: "/images/posts/ionic2/2016-06-09-form-builder/cover.png"
 remember: true
 versions:
   - title: 'ionic'
-    number: '2.0.0-rc2'
+    number: '3.1.1'
+  - title: 'ionic-native'
+    number: '3.4.2'
+  - title: 'ionic-app-scripts'
+    number: '1.3.6'
+  - title: 'cordova-cli'
+    number: '6.5.0'
+  - title: 'ionic-cli'
+    number: '2.2.2'
 ---
 
-> La forma más común de capturar información de los usuarios son los **Formularios** y depende de una buena UI/UX ganar o perder un usuario en nuestra aplicación. 
+> La forma más común de capturar información de los usuarios es a partir de **Formularios** y depende de una buena UI/UX ganar o perder un usuario en nuestra aplicación. 
 
-Por eso es de vital importancia hacer un buen manejo de ellos, tener las validaciones adecuadas y por esto Angular2 nos ofrece **FormBuilder**, una clase que nos provee una completa herramienta para controlar y validar formularios de forma muy eficiente y sencilla.
+<amp-img width="1366" height="779" layout="responsive" src="/images/posts/ionic2/2016-06-09-form-builder/cover.png" alt="Ionic Form Builder"></amp-img>
 
-# Actualización (06/11/2016)
+Por eso es de vital importancia hacer un buen manejo de ellos, tener las validaciones adecuadas y por esto Angular nos ofrece **FormBuilder**, una clase que nos provee una completa herramienta para controlar y validar formularios de forma muy eficiente y sencilla.
+
+# Actualización (02/05/2017)
 <hr/>
-Hemos actualizado este demo con el último release de [Ionic 2 RC 2]({{site.urlblog}}/news/ionic-2-rc-2){:target="_blank"}, si aun estas en alguna de las versiones Beta puedes seguir estos pasos [Steps to Upgrade](https://github.com/driftyco/ionic/blob/master/CHANGELOG.md#steps-to-upgrade-to-rc0){:target="_blank"}.
+
+Hemos actualizado este demo con el último release de **Ionic 3**, si aún estas en alguna de las versiones anteriores puedes seguir estos pasos [de Ionic 2 a Ionic 3](https://www.ion-book.com/blog/tips/ionic-2-to-ionic3/){:target="_blank"}.
+
+Ademas en este demo usamos la función de [**lazy loading** y **@IonicPage**](https://www.ion-book.com/blog/tips/ionic-page-and-lazy-loading/){:target="_blank"}. Puedes ver el repositorio [**Demo101**](https://github.com/ion-book/demo101){:target="_blank"}
+
 <hr/>
 
-Como **ionic2** usa **Angular2**, podremos usar esta clase con los componentes de UI de ionic2.
+Cómo ionic usa Angular, podremos usar la clase FormBuilder con los componentes del SDK de ionic. Para lograr esto debemos inyectar a FormBuilder como dependencia a nuestro **constructor**, así:
 
-<amp-img width="1366" height="779" layout="responsive" src="http://i.imgur.com/PWBxv0C.png"></amp-img>
+{% highlight ts %}
+...
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
-Examinemos el siguiente código:
+@IonicPage()
+@Component({
+  selector: 'page-form',
+  templateUrl: 'my-form.html',
+})
+export class MyFormPage {
 
-{% highlight ts linenos %}
-import {Component} from '@angular/core';
-import {NavController} from 'ionic-angular';
-import {FormBuilder, FormGroup, Validators} from '@angular/forms';
+  myForm: FormGroup;
+  
+  constructor(
+    public navCtrl: NavController,
+    public formBuilder: FormBuilder
+  ) {
+  ...
+}
+{% endhighlight %}
 
+Ahora creamos el método privado `createMyForm` para crear el formulario, haciendo uso de nuestra variable `this.formBuilder` podremos crear un controlador para cada uno de nuestros campos en el formulario, aquí podremos enviar validaciones tan sencillas o complejas como queramos, así: 
+
+{% highlight ts %}
+private createMyForm(){
+  return this.formBuilder.group({
+    name: ['', Validators.required],
+    lastName: ['', Validators.required],
+    email: ['', Validators.required],
+    dateBirth: ['', Validators.required],
+    passwordRetry: this.formBuilder.group({
+      password: ['', Validators.required],
+      passwordConfirmation: ['', Validators.required]
+    }),
+    gender: ['', Validators.required],
+  });
+}
+{% endhighlight %}
+
+Como resultado tenemos la clase completa así:
+
+{% highlight ts %}
+import { Component } from '@angular/core';
+import { IonicPage , NavController } from 'ionic-angular';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+
+@IonicPage()
 @Component({
   selector: 'page-form',
   templateUrl: 'my-form.html',
@@ -66,18 +118,37 @@ export class MyFormPage {
     });
   }
 }
-
-
-
 {% endhighlight %}
 
-Presta atención a de la *linea 24 a la 36*, aqui es donde ocurre la magia, haciendo uso de nuestra variable `this.formBuilder` podremos crear un controlador para cada uno de nuestros campos en el formulario, aquí podremos enviar validaciones tan sencillas o complejas como queramos. 
+Ahora para agregar el controlador de nuestro formulario debemos asignar dentro `formGroup` la instancia de `myForm`, además debemos asignar un método para recibir la información, así:
 
-El **Form** es algo largo pero sencillo:
+{% highlight html %}
+<form [formGroup]="myForm" (ngSubmit)="saveData()">
+...
+</form>
+{% endhighlight %}
+
+Por último por cada campo que tengamos debemos usar `formControlName` para asignar el controlador en cada campo, así:
+
+{% highlight html %}
+<ion-item>
+  <ion-icon name="person" item-left></ion-icon>
+  <ion-label stacked>Nombres:</ion-label>
+  <ion-input formControlName="name" type="text" placeholder="Nombre"></ion-input>
+</ion-item>
+{% endhighlight %}
+
+Todo el template como resultado quedará así:
 
 {% highlight html linenos %}
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>Formulario</ion-title>
+  </ion-navbar>
+</ion-header>
 
-<form [formGroup]="myForm" (ngSubmit)="saveData()">
+<ion-content>
+  <form [formGroup]="myForm" (ngSubmit)="saveData()">
     <ion-list>
       <ion-item>
         <ion-icon name="person" item-left></ion-icon>
@@ -128,5 +199,5 @@ El **Form** es algo largo pero sencillo:
       <button ion-button block type="submit" [disabled]="!myForm.valid">Guardar</button>
     </div>
   </form>
-
+</ion-content>
 {% endhighlight %}
