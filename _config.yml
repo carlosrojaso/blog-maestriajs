@@ -52,9 +52,6 @@ menu_footer:
   - title: Autores
     url: '/blog/authors'
     target: '_self'
-  - title: Libro
-    url: 'https://libro.ion-book.com/'
-    target: '_blank'
   - title: Codigo de Conducta
     url: 'https://github.com/ion-book/codigo-de-conducta'
     target: '_blank'
