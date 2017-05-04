@@ -119,7 +119,7 @@ import { HttpModule } from '@angular/http';
   ],
   bootstrap: [IonicApp],
   entryComponents: [
-    DuetyApp,
+    MyApp,
     HomePage
   ],
   providers: [
