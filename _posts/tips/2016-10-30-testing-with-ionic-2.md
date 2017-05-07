@@ -65,7 +65,7 @@ Se trata de probar cada función o métodos de manera aislada e inyectando las d
 
 Por ejemplo, si queremos probar una característica del producto, primero escribimos una prueba la cual contempla la forma correcta en la cual esa característica debería funcionar.
 
-{% highlight js linenos%}
+```js
 function multipleTest1() {
 	// Test
 	let result = calculator.multiply( 3, 3 );
@@ -76,22 +76,22 @@ function multipleTest1() {
 		console.log( "Test Failed" );
 	}
 }
-{% endhighlight %}
+```
 
 Ya teniendo la prueba podemos escribir el código que cumpla con los requerimientos de la prueba.
 
-{% highlight js linenos%}
+```js
 var calculator = {
 	multiply: function( numberA, numberB ){
 		return numberA * numberB;
 	}
 };
 multipleTest1();
-{% endhighlight %}
+```
 
 Con esto hemos probado que nuestra función cumple su propósito, para lo que fue diseñada. Otra ventaja es que podemos mejorar nuestro código con la refactorización, gracias al proceso entre escribir pruebas y construir código que cumpla esas pruebas podemos llegar a reducir el código de manera significativa y controlar ciertos escenarios.
 
-{% highlight js linenos%}
+```js
 /* Avoid */
 var abc = function(z) {
 	let x = false;
@@ -110,7 +110,7 @@ var isTenOrGreater = function( value ){
 var isTenOrGreater = function( value ){
 	return value > 10;
 }
-{% endhighlight %}
+```
 
 Resolviendo el requerimiento de forma más explícita y simple (Clean Code).
 

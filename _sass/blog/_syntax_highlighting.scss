@@ -1,5 +1,12 @@
 div.highlighter-rouge{
-  margin-top: 5px;
+  margin-top: 15px;
+  &.language-js{
+    pre{
+      &:before{
+        content: "\79";
+      }
+    }
+  }
   &.language-ts{
     pre{
       &:before{
@@ -11,6 +18,15 @@ div.highlighter-rouge{
     pre{
       &:before{
         content: "\78";
+      }
+    }
+  }
+  &.language-sass,
+  &.language-scss,
+  &.language-css{
+    pre{
+      &:before{
+        content: "\6c";
       }
     }
   }

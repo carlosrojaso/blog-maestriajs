@@ -69,7 +69,7 @@ npm install firebase angularfire2 --save
 
 # Paso 6: Crear variable de configuración
 
-{% highlight ts %}
+```ts
 export const firebaseConfig = {
   apiKey: "AIzaSyAvYzM1bqFjoVi-VGMHeDbN0XwFsYDtLQ0",
   authDomain: "demo104-60efc.firebaseapp.com",
@@ -77,7 +77,7 @@ export const firebaseConfig = {
   storageBucket: "demo104-60efc.appspot.com",
   messagingSenderId: "903778168776"
 };
-{% endhighlight %}
+```
 
 Estas las otorga firebase, creado un proyecto en [firebase.google.com](https://firebase.google.com){:target="_blank"}
 
@@ -86,7 +86,7 @@ Estas las otorga firebase, creado un proyecto en [firebase.google.com](https://f
 
 Ahora dentro de nuestra aplicación debemos agregar los datos copiados en el **paso 2**, así conectaremos nuestra aplicación con Firebase.
 
-{% highlight javascript linenos %}
+```ts
 import { NgModule } from '@angular/core';
 import { IonicApp, IonicModule } from 'ionic-angular';
 import { AngularFireModule } from 'angularfire2';
@@ -119,7 +119,7 @@ export const firebaseConfig = {
   providers: []
 })
 export class AppModule {}
-{% endhighlight %}
+```
 
 En *la línea 3* debemos importar a `AngularFireModule`, ahora modificaremos agregamos a los imports (**línea 23**) `AngularFireModule.initializeApp(firebaseConfig)` y le enviamos la variable `firebaseConfig`.
 
@@ -127,7 +127,7 @@ En *la línea 3* debemos importar a `AngularFireModule`, ahora modificaremos agr
 
 Ahora haremos uso del archivo `pages/home/home.ts` para mostrar las tareas, modificándolo de esta manera:
 
-{% highlight javascript linenos %}
+```ts
 import { Component } from '@angular/core';
 import { NavController, AlertController } from 'ionic-angular';
 import { FirebaseListObservable, AngularFireDatabase  } from 'angularfire2';
@@ -193,7 +193,7 @@ export class HomePage {
   }
 }
 
-{% endhighlight %}
+```
 
 En *la línea 3* importamos `FirebaseListObservable` y  `AngularFireDatabase`, en *la línea 11* declaramos la variable `tasks` que sea de tipo FirebaseListObservable, en *la línea 16* inyectamos a AngularFireDatabase como dependencia y luego en *la línea 18* vamos a definir qué `tasks` es igual a la base de datos con la dirección `/tasks`.
 
@@ -207,7 +207,7 @@ Finalmente en *la línea 61* declaramos el método `removeTask` que elimina una 
 
 Ahora solo nos queda trabajar en el template `pages/home/home.html` que modificaremos de esta manera:
 
-{% highlight html linenos %}
+```html
 {% raw %}
 <ion-header>
   <ion-navbar color="primary">
@@ -238,7 +238,7 @@ Ahora solo nos queda trabajar en el template `pages/home/home.html` que modifica
   </ion-list>
 </ion-content>
 {% endraw %}
-{% endhighlight %}
+```
 
 En *la línea 7* tendremos un botón que ejecuta la función `createTask`, la cual nos muestra el Alert para agregar una nueva tarea, en *la línea 16* iteramos el array de tareas, pero usaremos el pipe de **async** (`let task of tasks | async`) lo cual nos permite recorrer una lista asíncrona, en *la línea 19* tendremos el método de `updateTask` y cada vez que oprimimos check en una tarea se actualiza y finalmente en *la línea 22* tendremos el botón que ejecuta a `removeTask` para eliminar una tarea.
 

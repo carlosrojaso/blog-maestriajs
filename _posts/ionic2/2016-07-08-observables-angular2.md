@@ -15,17 +15,17 @@ pero no solo tratara de encontrar la información una sola vez sino que creara u
 
 Para utilizar Observables en nuestra App deberas tener al menos la libreria importada en tu codigo.
 
-`
+```ts
 import {Observable} from 'rxjs/Observable';
-`
+```
 
 y utilizar el metodo subscribe que indicara que vas a suscribirte a la info.
 
-`
+```ts
 MiObservable.subscribe((resultado) => {
   console.log(resultado);
 });
-`
+```
 
 entonces, ahora cuando veas en el codigo de Ionic 2 este metodo ya sabes para que se esta utilizando :)
 

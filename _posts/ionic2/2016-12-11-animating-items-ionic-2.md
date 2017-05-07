@@ -21,7 +21,7 @@ versions:
 
 Para hacer animaciones en Angular 2 / Ionic 2 tenemos varias funciones que son de gran utilidad para controlar y crear las animaciones:
 
-{% highlight ts %}
+```ts
 import {
   trigger,
   state,
@@ -29,7 +29,7 @@ import {
   transition,
   animate
 } from '@angular/core';
-{% endhighlight %}
+```
 
 Antes de empezar, es necesario entender los conceptos básicos para desarrollar el demo de este artículo.
 
@@ -37,7 +37,7 @@ Antes de empezar, es necesario entender los conceptos básicos para desarrollar 
 
 Un state lo usamos para definir el estado de la animación, podemos tener muchos estados dentro de una animación, los estados se aplicarán al elemento del DOM donde se aplican estilos según cada estado:
 
-{% highlight ts %}
+```ts
 state('inactive', style({
   backgroundColor: '#eee',
   transform: 'scale(1)'
@@ -46,16 +46,16 @@ state('active',   style({
   backgroundColor: '#cfd8dc',
   transform: 'scale(1.1)'
 })),
-{% endhighlight %}
+```
 
 ## Transition
 
 Con Transition podemos definir las reglas de animación al cambiar de un estado a otro:
 
-{% highlight ts %}
+```ts
 transition('inactive => active', animate('100ms ease-in')),
 transition('active => inactive', animate('100ms ease-out'))
-{% endhighlight %}
+```
 
 <amp-img width="1448" height="524" layout="responsive" src="https://angular.io/resources/images/devguide/animations/ng_animate_transitions_inactive_active.png" alt="transitions"></amp-img>
 
@@ -76,7 +76,7 @@ Y el segundo estado es **void** que es llamado automáticamente cuando es ejecut
 
 Este será el evento con el cual vamos a ejecutar las animaciones de acuerdo a cada estado.
 
-{% highlight ts %}
+```ts
 animations: [
   trigger('itemState', [
     state('inactive', style({
@@ -91,15 +91,15 @@ animations: [
     transition('active => inactive', animate('100ms ease-out'))
   ])
 ]
-{% endhighlight %}
+```
 
 Y para agregar la animación a un elemento del DOM, se agrega el trigger así:
 
-{% highlight html %}
+```html
 <button ion-button (click)="item.state = 'active'">Active</button>
 <button ion-button (click)="item.state = 'inactive'">InActive</button>
 <ion-item [@itemState]="item.state">...</ion-item>
-{% endhighlight %}
+```
 
 Con estas bases y conceptos ahora podremos hacer un demo sencillo donde haremos una animación cuando un ítem es agregado y otra animación cuando es eliminado. La documentación oficial sobre animaciones la pueden ver [**aqui**](https://angular.io/docs/ts/latest/guide/animations.html){:target="_blank"}.
 
@@ -122,7 +122,7 @@ Como iniciamos nuestro proyecto con el template **blank** tendremos una estructu
 
 ## Paso 2: Creando la animación
 
-{% highlight ts linenos %}
+```ts
 animations: [
   trigger('itemState', [
     state('in', style({opacity: 1, transform: 'translateX(0)'})),
@@ -139,7 +139,7 @@ animations: [
     }))),
   ])
 ]
-{% endhighlight %}
+```
 
 Vamos a crear un `trigger` llamado **itemState** que tendrá el estado **in** (línea 3) este estado representa al item cuando sea agregado a la lista. Luego definimos las animación de entrada (línea 4) a la cual le agregamos un estilo por defecto antes que ejecute la animación, luego en la animación de salida (línea 11) colocaremos la animación agregando un estilo a esta. Con lo cual lograremos el siguiente efecto:
 
@@ -147,7 +147,7 @@ Vamos a crear un `trigger` llamado **itemState** que tendrá el estado **in** (l
 
 El código finalmente quedará asi:
 
-{% highlight ts %}
+```ts
 import { Component, trigger,state, style, transition, animate } from '@angular/core';
 import { NavController } from 'ionic-angular';
 
@@ -176,13 +176,13 @@ import { NavController } from 'ionic-angular';
 export class HomePage {
   ...
 }
-{% endhighlight %}
+```
 
 ## Paso 3: Agregando y eliminando items.
 
 Ahora vamos a agregar el metodo `add` en línea 16 qué agregará un item a la lista y `remove` en línea 23 que elimina un item de la lista.
 
-{% highlight ts linenos %}
+```ts
 import { Component, trigger,state, style, transition, animate } from '@angular/core';
 
 import { NavController } from 'ionic-angular';
@@ -210,13 +210,13 @@ export class HomePage {
   }
 
 }
-{% endhighlight %}
+```
 
 ## Paso 4: El template.
 
 En el template crearemos dos botones, un botón para agregar un item en la línea 10 y el segundo botón para eliminar un item en la línea 11. Luego en línea 16 itereamos la lista y agregamos el **trigger** de animacion que depende del estado del item.
 
-{% highlight html linenos %}
+```html
 {% raw %}
 <ion-header>
   <ion-navbar color="primary">
@@ -239,6 +239,6 @@ En el template crearemos dos botones, un botón para agregar un item en la líne
   </ion-list>
 </ion-content>
 {% endraw %}
-{% endhighlight %}
+```
 
 En proximos demos trabajaremos en animaciones más complejas =).

@@ -22,7 +22,7 @@ Cuando hacemos la implementación de **ionic-native** tendremos como respuesta u
 
 Un `Observable` será cuando queremos hacer seguimiento constante de alguna función, por ejemplo pedir lo geolocalización cada 5 minutos, aquí los usaremos un `Observable`. Miremos el ejemplo:
 
-{% highlight js linenos %}
+```ts
 import {Geolocation} from 'ionic-native';
 
 Geolocation.getCurrentPosition().then(pos => {
@@ -35,7 +35,7 @@ let watch = Geolocation.watchPosition().subscribe(pos => {
 
 // to stop watching
 watch.unsubscribe();
-{% endhighlight %}
+```
 
 En la *línea 3* manejamos un `Promise` en donde solo recibimos los datos pero en *línea 7* donde usamos `watchPosition` para estar pidiendo la geolocalización cada X tiempo usamos un `Observable` en el cual podemos usar `subscribe` y `unsubscribe`.
 ## Runtime Diagnostics

@@ -53,7 +53,7 @@ npm install --save @types/googlemaps
 
 Ahora iremos al archivo `index.html` que se encuentra la carpeta `src` y luego de llamar a `build/polyfills.js` incluimos el SDK, ademas tienes que agregar el **API KEY** que te ofrece google para usar el SDK, lo puedes generar desde está [URL](https://developers.google.com/maps/documentation/javascript/get-api-key?hl=es){:target="_blank"}.
 
-{% highlight html linenos %}
+```html
 <body>
 
   <!-- Ionic's root component and where the app will load -->
@@ -67,15 +67,17 @@ Ahora iremos al archivo `index.html` que se encuentra la carpeta `src` y luego d
   <script src="build/main.js"></script>
 
 </body>
-{% endhighlight %}
+```
 
 # Paso 4: Crear mapa.
 
 Ahora en el archivo `src/pages/home/home.ts` crearemos la variable `map` (*línea 10*) donde guardaremos la instancia del mapa creado y con el uso de el metodo `ionViewDidLoad` detectaremos cuando la vista ya este completamente cargada y usamos el SDK de google para crear el mapa.
 
-{% highlight javascript linenos %}
+```ts
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
+
+declare var google;
 
 @Component({
   selector: 'page-home',
@@ -102,14 +104,14 @@ export class HomePage {
     });
   }
 }
-{% endhighlight %}
+```
 
 # Paso 4: Template y estilos.
 
 
 Ahora en el archivo `home.html` vamos a declarar un div con id **map** (*línea 8*) para poder identificar el elemento sobre el cual vamos a mostrar el mapa.
 
-{% highlight html linenos %}
+```html
 <ion-header>
   <ion-navbar color="primary">
     <ion-title>
@@ -121,11 +123,11 @@ Ahora en el archivo `home.html` vamos a declarar un div con id **map** (*línea 
 <ion-content>
   <div id="map"></div>
 </ion-content>
-{% endhighlight %}
+```
 
 Y finalmente podemos añadir estilos para hacer que el mapa se muestre al 100% de alto y ancho de la pantalla, estos estilos estaran en el archivo `home.scss`:
 
-{% highlight scss linenos %}
+```css
 page-home {
   ion-content{
     background: rgb(229, 227, 223);
@@ -140,15 +142,14 @@ page-home {
     }
   }
 }
-
-{% endhighlight %}
+```
 
 # Resultado:
 
 Ahora podemos ver el resultado ejecutando:
 
 ```
-ionic serve -l
+ionic serve --lab
 ```
 
 <br/>

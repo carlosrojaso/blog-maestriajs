@@ -47,7 +47,7 @@ Tomando en cuenta el post de [**Google maps native**]({{site.urlblog}}/ionic2/go
 
 En `home.html`, debemos colocar un div con nuestro id ‘map’, o como queramos llamarlo.
 
-{% highlight html linenos%}
+```html
 <ion-header>
   <ion-navbar>
     <ion-title>
@@ -59,35 +59,35 @@ En `home.html`, debemos colocar un div con nuestro id ‘map’, o como queramos
 <ion-content>
   <div id="map"></div>  
 </ion-content>
-{% endhighlight %}
+```
 
 En nuestro `home.ts`, importamos las librerias para el map, la geolocalización y las referentes al Marker
 
-{% highlight ts%}
+```ts
 import {Geolocation, GoogleMap, GoogleMapsEvent, GoogleMapsLatLng, 
   GoogleMapsMarkerOptions, GoogleMapsMarker, Toast} from 'ionic-native';
-{% endhighlight %}
+```
 
 Dentro de la clase declaramos dos variables
 
-{% highlight ts%}
+```ts
 map: GoogleMap;
 latLng: any;
-{% endhighlight %}
+```
 
 En el constructor llamamos a la función `getCurrentPosition()` para obtener la position del usuario.
 
-{% highlight ts%}
+```ts
 constructor(public navCtrl: NavController, private platform: Platform) {
   platform.ready().then(() => {
       this.getCurrentPosition();
   });
 }
-{% endhighlight %}
+```
 
 Luego escribimos la función para obtener la localización:
 
-{% highlight ts%}
+```ts
 getCurrentPosition(){
   Geolocation.getCurrentPosition()
     .then(position => {
@@ -100,11 +100,11 @@ getCurrentPosition(){
       this.loadMap();
   });
 }
-{% endhighlight %}
+```
 
 Así mismo escribimos la función para cargar el mapa, la cual he decido llamar `loadMap()`
 
-{% highlight ts%}
+```ts
 loadMap(){
   this.map = new GoogleMap('map', {
       'backgroundColor': 'white',
@@ -132,7 +132,7 @@ loadMap(){
     console.log('Map is ready!');
   });
 }
-{% endhighlight %}
+```
 
 Ahora ejecuta:
 
@@ -148,7 +148,7 @@ Una vez concluido el paso anterior colocaremos justo debajo de `console.log(‘M
 
 Esta función contendrá lo siguiente
 
-{% highlight ts%}
+```ts
 setMarker(){
   //primero validamos que tengamos los datos de la localización
   if(this.latLng){
@@ -175,7 +175,7 @@ setMarker(){
     );
   }
 }
-{% endhighlight %}
+```
 
 **Resultado:**
 
@@ -190,19 +190,19 @@ setMarker(){
 Para colocarle una imagen personalizada nuestro marker, basta con almacenar la imagen en la carpeta de `assets` ubicada en el directorio `src`, luego guardamos la dirección desde la raíz de nuestro proyecto en una variable:
 
 
-{% highlight ts%}
+```ts
 let customMarker = "www/assets/custom-marker.png";
-{% endhighlight %}
+```
 
 y agregamos `icon: customMarker` en los parámetros que recibe el `markerOptions`, de la siguiente manera:
 
-{% highlight ts%}
+```ts
 let markerOptions: GoogleMapsMarkerOptions = {
   position: this.latLng,
   title: 'Mi posicion',
   icon: customMarker
 };
-{% endhighlight %}
+```
 
 Ahora ejecuta:
 

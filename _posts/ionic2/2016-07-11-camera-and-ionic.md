@@ -70,7 +70,7 @@ Esto lo que hará, es actualizar el archivo de `package.json` con las dependenci
 
 Hace poco hablamos sobre [ionic-native]({{site.urlblog}}/ionic2/ionic-native){:target="_blank"} y ahora sera mas facil el consumo de cualquier API nativa con el uso de esta, ahora vamos nuestro archivo `home.ts` y implementaremos el uso de la cámara de esta manera:
 
-{% highlight javascript linenos %}
+```ts
 import {Component} from '@angular/core';
 import {Camera} from 'ionic-native';
 
@@ -100,7 +100,7 @@ export class HomePage {
     });
   }
 }
-{% endhighlight %}
+```
 
 En la *línea 2* importamos la cámara desde [ionic-native]({{site.urlblog}}/ionic2/ionic-native){:target="_blank"}, luego en la *línea 10* tendremos la variable `image` de tipo string que guardara la imagen, en la *línea 12* dejaremos un constructor vacío, ahora desde la *línea 14 a la línea 28* tendremos la definición de `getPicture` para implementar el uso de cámara.
 
@@ -108,7 +108,7 @@ En la *línea 15* definimos las opciones al momento de tomar la fotografía, est
 
 Veamos ahora nuestro template `home.html`:
 
-{% highlight html linenos %}
+```html
 <ion-header>
   <ion-navbar color="primary">
     <ion-title>
@@ -121,8 +121,7 @@ Veamos ahora nuestro template `home.html`:
   <button ion-button block (click)="getPicture()">Toma una foto</button>
   <img [src]="image" *ngIf="image" />
 </ion-content>
-
-{% endhighlight %}
+```
 
 En la *línea 10* tendremos el botón que ejecutará la función `getPicture` del controlador y en la *línea 11* mostraremos la imagen, usamos la directiva `ngIf` para que muestre la imagen solo si ya tomamos la fotografía.
 
@@ -131,17 +130,11 @@ En la *línea 10* tendremos el botón que ejecutará la función `getPicture` de
 Ahora para compilar el código solo tendremos que ejecutar en nuestra terminal (Si tienen computadora configurada):
 
 ```
-ionic build android
+ionic build android --prod
 ```
 
 En el caso que no tegamos la computadora configurada podrán usar el servicio de ionic package para generar el apk (deben crear una cuenta en ionic.io):
 
 ```
-ionic package build android
+ionic package build android --prod
 ```
-
-
-# Resultado:
-
-<br/>
-<amp-img width="641" height="1068" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/demos%2Fdemo102%2FScreenshot%20from%202016-11-06%2012-46-16.png?alt=media"></amp-img>

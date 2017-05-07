@@ -49,7 +49,7 @@ npm install ng2-translate --save
 
 Ahora debemos importar y agregar a nuestro archivo `app.module.ts` así:
 
-{% highlight ts linenos %}
+```ts
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from '@angular/core';
 import { IonicApp, IonicModule } from 'ionic-angular';
@@ -86,7 +86,7 @@ export function createTranslateLoader(http: Http) {
   providers: []
 })
 export class AppModule {}
-{% endhighlight %}
+```
 
 - En la *línea 6* importamos las dependencias que necesitamos de **ng2-translate**
 - Desde la *línea 10 a la línea 12* creamos un función que llamaras a los assets necesarios `src/assets/i18n`.
@@ -96,7 +96,7 @@ export class AppModule {}
 
 Ahora debemos definir en `app.component.ts`, el idioma con el cual la aplicación inicia por defecto. 
 
-{% highlight ts linenos %}
+```ts
 import { StatusBar } from 'ionic-native';
 import { TranslateService } from 'ng2-translate'
 
@@ -123,7 +123,7 @@ export class MyApp {
     });
   }
 }
-{% endhighlight %}
+```
 
 - En la *línea 2* importamos a `TranslateService`
 - En la *línea 15* inyectamos el servcio a nuestra clase.
@@ -134,37 +134,37 @@ export class MyApp {
 Ahora dentro de la carpeta  `src/assets/i18n` es donde estarán todos los archivos de los idiomas en formato:
 
 `en.json`:
-{% highlight json %}
+```json
 {
   "HELLO": "Hello",
   "WELCOME": "Welcome",
   "GREETING": "Hi, {{ value }}"
 }
-{% endhighlight %}
+```
 
 `es.json`:
-{% highlight json %}
+```json
 {
   "HELLO": "Hola",
   "WELCOME": "Bienvenido",
   "GREETING": "Hola, {{ value }}"
 }
-{% endhighlight %}
+```
 
 `pt.json`:
-{% highlight json %}
+```json
 {
   "HELLO": "Olá",
   "WELCOME": "Bem-vindo",
   "GREETING": "oi, {{ value }}"
 }
-{% endhighlight %}
+```
 
 # Paso 6: Implementar pipe
 
 Ahora solo nos queda implementar el pipe que provee **ng2-translate** para usarlo en nuestros templates:
 
-{% highlight html %}
+```html
 {% raw %}
 <div padding>
   <h1>{{ 'HELLO' | translate }}</h1>
@@ -172,11 +172,11 @@ Ahora solo nos queda implementar el pipe que provee **ng2-translate** para usarl
   <p>{{ 'GREETING' | translate:{value: '@nicobytes'} }}</p>
 </div>
 {% endraw %}
-{% endhighlight %}
+```
 
 Y para hacer el cambio dinámicamente haremos uso de ion-select para escoger el idioma, esto la haremos en el archivo `src/pages/home.ts`, asi:  
 
-{% highlight ts linenos %}
+```ts
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { TranslateService } from 'ng2-translate/ng2-translate'
@@ -213,11 +213,11 @@ export class HomePage {
     this.translateService.use(lang);
   }
 }
-{% endhighlight %}
+```
 
 Y nuestro template `home.html`: 
 
-{% highlight html linenos %}
+```html
 {% raw %}
 <ion-header>
   <ion-navbar color="primary">
@@ -243,7 +243,7 @@ Y nuestro template `home.html`:
   </div>
 </ion-content>
 {% endraw %}
-{% endhighlight %}
+```
 
 # Resultado:
 

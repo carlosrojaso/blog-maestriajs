@@ -70,7 +70,7 @@ https://randomuser.me/api/?results=25
 
 La respuesta de random user api será de esta manera:
 
-{% highlight json %}
+```json
 {
   "results": [
     {
@@ -118,11 +118,11 @@ La respuesta de random user api será de esta manera:
     "version": "1.0"
   }
 }
-{% endhighlight %}
+```
 
 Nos retorna toda la información necesaria respecto a usuario, ahora solo modificaremos el método `load()` del `archivo user-service.ts`:
 
-{% highlight javascript linenos %}
+```ts
 import { Injectable } from '@angular/core';
 import { Http } from '@angular/http';
 import 'rxjs/add/operator/map';
@@ -153,7 +153,7 @@ export class UserService {
     });
   }
 }
-{% endhighlight %}
+```
 
 Como vemos en *la línea 22*  hacemos la solicitud correspondiente, en *la línea 23* procesamos la solicitud convirtiéndola en formato JSON, esto nos retorna un [Observable]({{site.urlblog}}/ionic2/observables-angular2){:target="_blank"} al cual nos suscribimos y luego en *la línea 25* obtenemos la data con `data.results`, finalmente retornamos con `resolve(this.data)`.
 
@@ -161,7 +161,7 @@ Como vemos en *la línea 22*  hacemos la solicitud correspondiente, en *la líne
 
 Desde el archivo `home.ts` vamos a inyectar en servicio creado de esta manera:
 
-{% highlight ts linenos %}
+```ts
 import {Component} from '@angular/core';
 import {NavController} from 'ionic-angular';
 import {UserService} from '../../providers/user-service';
@@ -184,7 +184,7 @@ export class HomePage {
     }) ;
   }
 }
-{% endhighlight %}
+```
 
 En *la línea 3* importamos el servicio de `UserService` desde su ubicación, en *la línea 7* tenemos que indicarle que este componente usará nuestro proveedor `UserService`, en *la línea 11* definiremos `users` como un array vacío, luego en *la línea 15* lo inyectamos como una dependencia de nuestra clase y finalmente desde *la línea 17 hasta la línea 20*, llamamos al método `load` que hará la solicitud y la respuesta la asigna a `this.users`.
 
@@ -192,7 +192,7 @@ En *la línea 3* importamos el servicio de `UserService` desde su ubicación, en
 
 Ahora en el template de home.html lo único que nos queda es mostrar los usuarios:
 
-{% highlight html linenos %}
+```html
 {% raw %}
 <ion-header>
   <ion-navbar color="primary">
@@ -214,7 +214,7 @@ Ahora en el template de home.html lo único que nos queda es mostrar los usuario
   </ion-list>
 </ion-content>
 {% endraw %}
-{% endhighlight %}
+```
 
 En *la línea 11* iteramos array de users y luego solo mostramos las atributos de cada usuario.
 
@@ -223,8 +223,5 @@ En *la línea 11* iteramos array de users y luego solo mostramos las atributos d
 Ahora podemos ver el resultado ejecutando:
 
 ```
-ionic serve -l
+ionic serve --lab
 ```
-<br/>
-
-<amp-img width="911" height="547" layout="responsive" src="http://i.imgur.com/tDpJiCR.jpg"></amp-img>

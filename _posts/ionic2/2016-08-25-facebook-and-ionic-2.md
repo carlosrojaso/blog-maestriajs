@@ -120,7 +120,7 @@ nos dirigimos al directorio `app/pages/home` en este nos centraremos para nuestr
 
 En el archivo `home.html` agregaremos un botón el cual ejecutará al hacer click la función **loginFacebook** y mostraremos los datos que nos recupera al validar la información de registro.
 
-{% highlight html linenos %}
+```html
 <ion-header>
   <ion-navbar>
     <ion-title>
@@ -133,12 +133,11 @@ En el archivo `home.html` agregaremos un botón el cual ejecutará al hacer clic
   Prueba registro con facebook.
   <button block(click)="loginFacebook()">Login con facebook</button>
 </ion-content>
-
-{% endhighlight %}
+```
 
 En el archivo `home.ts` incluiremos el código necesario para realizar la comunicación con Facebook. Debemos de importar la librería Facebook esta nos permitirá la comunicación con Facebook.
 
-{% highlight javascript linenos %}
+```ts
 import {Component} from '@angular/core';
 import {NavController} from 'ionic-angular';
 import {Facebook} from 'ionic-native';
@@ -170,20 +169,20 @@ export class HomePage {
     });
   }
 }
-{% endhighlight %}
+```
 
 Con esto ya está todo listo para compilar nuestro proyecto y realizar la prueba. 
 Para compilar nuestro proyecto android digitamos el comando en la consola:
 
 ```
-sudo ionic build android
+ionic build android --prod
 ```
 
 Esto nos generará el apk y este lo podremos instalar en nuestro dispositivo o en un emulador para realizar la prueba.
 
 # Resultado:
 
-<div class="row">
+<div class="row wrap">
   <div class="col col-100 col-md-50 col-lg-50">
     <amp-img width="720" height="1280" layout="responsive" src="http://i.cubeupload.com/psktlb.jpeg"></amp-img>
   </div>
