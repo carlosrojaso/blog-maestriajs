@@ -16,6 +16,10 @@
     background-color: $secondary-color;
     color: white;
   }
+  &.btn-success{
+    background-color: $success-color;
+    color: white;
+  }
   &.btn-round{
     border-radius: $border-radius-btn;
   }
