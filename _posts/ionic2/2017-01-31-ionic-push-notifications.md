@@ -90,7 +90,7 @@ ionic io init
 
 Esto genera un **ID** para la aplicación, que lo encontramos en `ionic.config.json`, ahora debemos agregar ionic cloud a los módulos de la aplicación en `src/app/app.module.ts`, así:
 
-{% highlight ts linenos %}
+```ts
 ...
 import { CloudSettings, CloudModule } from '@ionic/cloud-angular';
 
@@ -109,7 +109,7 @@ const cloudSettings: CloudSettings = {
   ...
 })
 export class AppModule {}
-{% endhighlight %}
+```
 
 Si todo quedo bien dentro de la cuenta de ionic.io debe mostrar la aplicación creada, así:
 
@@ -148,7 +148,7 @@ ionic plugin add phonegap-plugin-push --variable SENDER_ID=your_sender_id --save
 
 Además debemos añadir la configuración de notificaciones en `src/app/app.module.ts`, así:
 
-{% highlight ts linenos %}
+```ts
 const cloudSettings: CloudSettings = {
   'core': {
     'app_id': 'APP_ID',
@@ -166,7 +166,7 @@ const cloudSettings: CloudSettings = {
     }
   }
 };
-{% endhighlight %}
+```
 
 *Nota: Hay varias opciones que se pueden configurar como el sonido, icono etc, para ver todas las opciones revisar la documentación oficial de [Ionic Push](http://docs.ionic.io/services/push/){:target="_blank"}*
 
@@ -174,7 +174,7 @@ const cloudSettings: CloudSettings = {
 
 Ahora debemos registrar el **PushToken** de cada dispositivo, el **PushToken** es un identificador único de cada dispositivo y debemos obtenerlo y luego registrarlo en ionic.io. Para esto crearemos el método `registerToken` en `app.component.ts`, así:
 
-{% highlight ts linenos %}
+```ts
 ....
 import {
   Push,
@@ -207,16 +207,16 @@ export class MyApp {
     });
   }
 }
-{% endhighlight %}
+```
 
 Finalmente para recibir y controlar notificaciones, puedes agregar este método en el lugar que se necesite, puede ser en el Home de la aplicación luego que el usuario ingrese o desde el inicio en `app.component.ts`:
 
-{% highlight ts linenos %}
+```ts
 this.push.rx.notification()
 .subscribe((msg) => {
   alert(msg.title + ': ' + msg.text);
 });
-{% endhighlight %}
+```
 
 ## Paso 7: Enviando notificaciones
 

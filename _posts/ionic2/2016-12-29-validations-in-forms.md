@@ -41,7 +41,7 @@ Con FormBuilder dejas toda la lógica del lado del controlador (esto es muy úti
 
 Para crear nuestro formulario con FormBuilder, vamos a ver la siguiente estructura básica:
 
-{% highlight ts %}
+```ts
 this.myForm = this.fb.group({
   'name': ['', Validators.required],
   'company': ['', Validators.required],
@@ -50,11 +50,11 @@ this.myForm = this.fb.group({
   'url': ['', Validators.required],
   'password': ['', Validators.required],
 });
-{% endhighlight %}
+```
 
 La clase completa se vera asi `home.ts`:
 
-{% highlight ts %}
+```ts
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators} from '@angular/forms';
 import { NavController } from 'ionic-angular';
@@ -86,7 +86,7 @@ export class HomePage {
   }
 
 }
-{% endhighlight %}
+```
 
 Con el método `saveData` obtenemos la información del formulario luego que todo sea validado.
 
@@ -104,9 +104,9 @@ La validación asíncrona es aquella que no necesitamos de consultar ninguna fue
 
 Teniendo esto en cuenta podemos hacer combinaciones muy útiles de validaciones respetando esta la siguiente forma:
 
-{% highlight ts %}
+```ts
 'field': [_value_, [validaciones sincronas], [validaciones asíncronas]],
-{% endhighlight %}
+```
 
 Como ven primero va el valor por defecto, luego declaramos el conjunto de la validaciones sincronas y luego el conjunto de validaciones asíncronas. En este artículo trabajaremos con validaciones sincronas (más adelante escribiremos sobre las validaciones asíncronas).
 
@@ -119,9 +119,9 @@ Como ven primero va el valor por defecto, luego declaramos el conjunto de la val
 
 Con estas funciones podemos crear conjuntos de validaciones, por ejemplo al campo company podemos agregar el siguiente conjunto de validaciones:
 
-{% highlight ts %}
+```ts
 'company': ['', [Validators.required, Validators.minLength(5), Validators.maxLength(10)]],
-{% endhighlight %}
+```
 
 Y esto hará que el campo cumpla con todas las validaciones que fueron declaradas para que el campo `company` sea un campo válido.
 
@@ -129,7 +129,7 @@ Y esto hará que el campo cumpla con todas las validaciones que fueron declarada
 
 Ahora nos enfocaremos en el template y mostrar los errores de cada campo al usuario, como ejemplo tomaremos en cuenta nuestro campo `company` que debe cumplir con varias validaciones al mismo tiempo.
 
-{% highlight html %}
+```html
 ...
 <ion-item>
   <ion-label stacked>Company:</ion-label>
@@ -141,7 +141,7 @@ Ahora nos enfocaremos en el template y mostrar los errores de cada campo al usua
   <p *ngIf="myForm.get('company').hasError('maxlength')">Max of 10 characters</p>
 </ion-item>
 ..
-{% endhighlight %}
+```
 
 Como podemos ver se hace uso del elemento myForm dentro del formulario y así podemos obtener el estado actual del campo, y haciendo uso de `myForm.get('field').hasError(‘typeError')` podremos saber cuál mensaje mostrar al usuario dependiendo del error que tenga el campo.
 
@@ -181,7 +181,7 @@ ionic platform add ios
 
 Vamos a usar FormBuilder para crear nuestro formulario, de esta manera:
 
-{% highlight ts linenos %}
+```ts
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators} from '@angular/forms';
 import { NavController } from 'ionic-angular';
@@ -213,7 +213,7 @@ export class HomePage {
   }
 
 }
-{% endhighlight %}
+```
 
 como podemos ver usamos todos los métodos que nos provee la clase `Validators`.
 
@@ -262,7 +262,7 @@ En la línea 23 usamos la siguiente expresión regular para validar un **passwor
 
 Ahora en el template vamos a controlar cómo mostrar los errores al usuario a partir de el formulario `myForm` declarada en el controlador, nuestro template completo será el siguiente:
 
-{% highlight html linenos %}
+```html
 <form [formGroup]="myForm" (ngSubmit)="saveData()" novalidate>
   <ion-list> 
     <ion-item>
@@ -317,6 +317,6 @@ Ahora en el template vamos a controlar cómo mostrar los errores al usuario a pa
     <button ion-button block type="submit" [disabled]="myForm.invalid">Guardar</button>
   </div>
 </form>
-{% endhighlight %}
+```
 
 En el template agregamos cada uno de los mensajes correspondientes a cada error, finalmente si todo el formulario es válido se habilita el botón de guardar (línea 53) y podremos obtener la información con el método `saveData` que está en `home.ts` 

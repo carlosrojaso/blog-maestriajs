@@ -31,9 +31,9 @@ Otro problema con JIT son los errores de vinculaciones en las plantillas con el 
 
 Por ejemplo, hagamos de cuenta que la función `doSomething` la usamos en algún template, pero no fue declarada en ningun lado.
 
-{% highlight html%}
+```html
 <button ion-button (click)="doSomething()"></button>
-{% endhighlight %}
+```
 
 Cuando se ejecute la función click nos damos cuenta que la función `doSomething` nunca fue declarada y este error solo lo vemos una vez la aplicación ya está corriendo en el navegador, no antes.
 
@@ -81,7 +81,7 @@ AOT ya tiene las plantillas y componentes compilados, así que no hay llamadas a
 Bueno si tienes una aplicación con Angular debes darle el contexto necesario con **NgModule** y instalar estas herramientas para hacerlo (**con ionic 2 NO es necesario**):
 
 
-{% highlight ts%}
+```ts
 // The browser platform with a compiler
 import { 
    platformBrowser 
@@ -96,7 +96,7 @@ import {
 platformBrowser().bootstrapModuleFactory(
    AppModuleNgFactory
 );
-{% endhighlight %}
+```
 
 Y luego:
 

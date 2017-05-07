@@ -110,9 +110,9 @@ Ahora vamos a parar de hablar y vamos a ver algunas diferencias en cuanto a cód
 
 ### images (Ionic 2)
 
-{% highlight html%}
+```html
 <img src="https://placehold.it/350x150" />
-{% endhighlight %}
+```
 
 <div class="row">
 	<div class="col col-100 col-md-66 col-lg-66">
@@ -122,9 +122,9 @@ Ahora vamos a parar de hablar y vamos a ver algunas diferencias en cuanto a cód
 
 ### images (NativeScript)
 
-{% highlight xml%}
+```xml
 <Image src="https://placehold.it/350x150"></Image>
-{% endhighlight %}
+```
 
 <div class="row">
 	<div class="col col-100 col-md-66 col-lg-66">
@@ -134,13 +134,15 @@ Ahora vamos a parar de hablar y vamos a ver algunas diferencias en cuanto a cód
 
 ### Lists (Ionic 2)
 
-{% highlight html%}{% raw %}
+```html
+{% raw %}
 <ion-list>
   <ion-item *ngFor="let item of items">
 	  {{ item.title }}
   </ion-item>
 </ion-list>
-{% endraw %}{% endhighlight %}
+{% endraw %}
+```
 
 <div class="row">
 	<div class="col col-100 col-md-66 col-lg-66">
@@ -150,13 +152,13 @@ Ahora vamos a parar de hablar y vamos a ver algunas diferencias en cuanto a cód
 
 ### Lists (NativeScript)
 
-{% highlight html%}
+```xml
 <ListView [items]="items">
   <template let-item="item">
     <Label [text]="item.title"></Label>
   </template>
 </ListView>
-{% endhighlight %}
+```
 
 <div class="row">
 	<div class="col col-100 col-md-66 col-lg-66">
@@ -166,7 +168,7 @@ Ahora vamos a parar de hablar y vamos a ver algunas diferencias en cuanto a cód
 
 ### Text Inputs (Ionic 2)
 
-{% highlight html%}
+```html
 <ion-list>
   <ion-item>
     <ion-label>Username</ion-label>
@@ -177,7 +179,7 @@ Ahora vamos a parar de hablar y vamos a ver algunas diferencias en cuanto a cód
     <ion-input type="password"></ion-input>
   </ion-item>
 </ion-list>
-{% endhighlight %}
+```
 
 <div class="row">
 	<div class="col col-100 col-md-66 col-lg-66">
@@ -187,14 +189,16 @@ Ahora vamos a parar de hablar y vamos a ver algunas diferencias en cuanto a cód
 
 ### Text Inputs (NativeScript)
 
-{% highlight html%}{% raw %}
+```xml
+{% raw %}
 <GridLayout rows="auto auto" columns="90 *">
   <Label text="Username" row="0" col="0"></Label>
   <TextField text="" row="0" col="1"></TextField>
   <Label text="Password" row="1" col="0"></Label>
   <TextField secure="true" text="" row="1" col="1"></TextField>
 </GridLayout>
-{% endraw %}{% endhighlight %}
+{% endraw %}
+```
 
 <div class="row">
 	<div class="col col-100 col-md-66 col-lg-66">
@@ -204,7 +208,7 @@ Ahora vamos a parar de hablar y vamos a ver algunas diferencias en cuanto a cód
 
 ### Dialogs (Ionic 2)
 
-{% highlight ts %}
+```ts
 import { AlertController } from "ionic-angular";
 
 export class MyPage {
@@ -221,7 +225,7 @@ export class MyPage {
   }
 
 }
-{% endhighlight %}
+```
 
 <div class="row">
 	<div class="col col-100 col-md-66 col-lg-66">
@@ -231,7 +235,7 @@ export class MyPage {
 
 ### Dialogs (NativeScript)
 
-{% highlight ts %}
+```ts
 import * as dialogs from "ui/dialogs";
 
 export class MyComponent {
@@ -247,7 +251,7 @@ export class MyComponent {
   }
 
 }
-{% endhighlight %}
+```
 
 <div class="row">
 	<div class="col col-100 col-md-66 col-lg-66">

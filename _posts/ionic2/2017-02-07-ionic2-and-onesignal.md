@@ -147,7 +147,7 @@ code .
 
 6.- Tenemos que modificar el archivo `app.components` dentro de la carpeta `src/app`, colocamos este script después del `splashscreen.hide()`;
 
-{% highlight ts linenos %}
+```ts
  constructor(platform: Platform, alertCtrl: AlertController) {
     platform.ready().then(() => {
       StatusBar.styleDefault();
@@ -169,7 +169,7 @@ code .
         .endInit();
     });
   }
-{% endhighlight %}
+```
 
 ### Septimo
 

@@ -29,7 +29,7 @@ $npm install --save ionic-angular@nightly
 
 para uso basico simplemente usa  ```<ion-split-panel>``` alrededor de tus etiquetas ```<ion-menu>``` y ```<ion-nav>```:
 
-{% highlight js %}
+```html
 
 <ion-split-panel>
   <ion-menu [content]="content">
@@ -37,7 +37,7 @@ para uso basico simplemente usa  ```<ion-split-panel>``` alrededor de tus etique
   <ion-nav [root]="rootPage" #content swipeBackEnabled="false" main></ion-nav>
 </ion-split-panel>
 
-{% endhighlight %}
+```
 
 **Nota:** Split Panel solo esta disponible en Ionic 2.x.x y superior.
 
