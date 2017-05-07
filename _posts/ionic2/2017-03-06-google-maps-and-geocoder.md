@@ -77,7 +77,7 @@ Ok, quiero creer que es así, entonces tenemos que modificar las importaciones d
 
 Teníamos esto:
 
-{% highlight ts %}
+```ts
 import {
   Geolocation, 
   GoogleMap, 
@@ -87,11 +87,11 @@ import {
   GoogleMapsMarkerOptions, 
   Toast
 } from 'ionic-native';
-{% endhighlight %}
+```
 
 Y cambiemoslo a esto:
 
-{% highlight ts %}
+```ts
 import {
   Geolocation, 
   GoogleMap, 
@@ -104,20 +104,20 @@ import {
   GoogleMapsMarkerOptions, 
   Toast
 } from 'ionic-native';
-{% endhighlight %}
+```
 
 En una parte de nuestro código tenemos esto:
 
-{% highlight ts %}
+```ts
 this.map.addMarker(markerOptions)
 .then((marker: GoogleMapsMarker) => {
     marker.showInfoWindow();
 });
-{% endhighlight %}
+```
 
 Y cambiemoslo a esto:
 
-{% highlight ts %}
+```ts
 this.map.addMarker(markerOptions)
 .then((marker: GoogleMapsMarker) => {
 
@@ -132,7 +132,7 @@ this.map.addMarker(markerOptions)
     marker.showInfoWindow();
   });
 });
-{% endhighlight %}
+```
 
 7.- Ya tenemos todo listo, ahora tenemos que construir el App e instalarlo en nuestro celular. Hacemos esto:
 

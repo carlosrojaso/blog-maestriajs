@@ -37,7 +37,7 @@ rd /s node_modules
 
 Ahora debemos actualizar las versiones de las dependencias de nuestro proyecto y las que de ionic 3 necesita para trabajar correctamente, las versiones deben quedar de la siguiente manera:
 
-{% highlight json %}
+```json
 "dependencies": {
   "@angular/common": "4.0.0",
   "@angular/compiler": "4.0.0",
@@ -61,7 +61,7 @@ Ahora debemos actualizar las versiones de las dependencias de nuestro proyecto y
   "@ionic/app-scripts": "1.3.0",
   "typescript": "~2.2.1"
 }
-{% endhighlight %}
+```
 
 Si existen otras dependencias aparte de las que maneja Ionic, se debe revisar la documentación de estas dependencias y si es necesario actualizarlas, lo más importante es que sean compatibles con la versión de angular 4.
 
@@ -73,7 +73,7 @@ Ahora solo debemos instalar las nuevas dependencias en el proyecto y para esto e
 
 Ahora debemos agregar `BrowserModule` en nuestro archivo `app.module.ts`, así:
 
-{% highlight ts %}
+```ts
 import { BrowserModule } from '@angular/platform-browser';
 
 ...
@@ -96,13 +96,13 @@ import { BrowserModule } from '@angular/platform-browser';
   ]
 })
 export class AppModule {}
-{% endhighlight %}
+```
 
 ## Paso 4: Importar **HttpModule**
 
 Ahora debemos agregar `HttpModule` en nuestro archivo `app.module.ts`, este paso es muy importante si dentro de la aplicación se usa la dependencia `Http`:
 
-{% highlight ts %}
+```ts
 import { HttpModule } from '@angular/http';
 
 ...
@@ -128,7 +128,7 @@ import { HttpModule } from '@angular/http';
   ]
 })
 export class AppModule {}
-{% endhighlight %}
+```
 
 **!Y ya eso es todo!** Se ve algo fácil, pero ahora explicaré algunos de los problemas más comunes y como solucionarlos:
 
@@ -145,7 +145,7 @@ npm install @ionic-native/camera --save
 
 Luego de instalar el plugin y el provider debemos agregar este provider en el array de `providers` en el archivo `app.module.ts` , asi:
 
-{% highlight ts %}
+```ts
 import { Camera } from '@ionic-native/camera';
 
 ...
@@ -172,11 +172,11 @@ import { Camera } from '@ionic-native/camera';
   ]
 })
 export class AppModule {}
-{% endhighlight %}
+```
 
 Y por último, se debe inyectar el provider como dependencia en la clase que se quiera hacer uso de este plugin, así:
 
-{% highlight ts %}
+```ts
 import { Camera } from '@ionic-native/camera';
 import { Component } from '@angular/core';
 
@@ -192,7 +192,7 @@ export class HomePage{
 
   ...
 }
-{% endhighlight %}
+```
 
 ## Tip 2: Grid
 
@@ -200,25 +200,25 @@ Con la versión 3 de Ionic el sistema de grillas de ionic v2 ya no es soportado,
 
 ### Antes (v2)
 
-{% highlight html %}
+```html
 <ion-grid>
   <ion-row center>
     <ion-col width-20>...</ion-col>
     <ion-col width-80>...</ion-col>
   </ion-row>
 </ion-grid>
-{% endhighlight %}
+```
 
 ### Ahora (v3)
 
-{% highlight html %}
+```html
 <ion-grid>
   <ion-row align-items-center>
     <ion-col col-4>...</ion-col>
     <ion-col col-8>...</ion-col>
   </ion-row>
 </ion-grid>
-{% endhighlight %}
+```
 
 Pueden ver la documentación completa en [**Ionic Grids Docs**](https://ionicframework.com/docs/theming/responsive-grid/){:target="_blank"}.
 
@@ -228,19 +228,19 @@ También han removido selectores de color en textos, esto quiere decir que si us
 
 ### Antes (v2)
 
-{% highlight html %}
+```html
 <p color="danger">...</p>
 <strong color="secondary">...</strong>
 <span color="dark">...</span>
-{% endhighlight %}
+```
 
 ### Ahora (v3)
 
-{% highlight html %}
+```html
 <p ion-text color="danger">...</p>
 <strong ion-text color="secondary">...</strong>
 <span ion-text color="dark">...</span>
-{% endhighlight %}
+```
 
 # Tip 4: Animations
 
@@ -252,7 +252,7 @@ npm install @angular/animations --save
 
 Luego debemos importar `BrowserAnimationsModule` en el archivo `app.module.ts`, asi:
 
-{% highlight ts %}
+```ts
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 ...
@@ -279,13 +279,13 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
   ]
 })
 export class AppModule {}
-{% endhighlight %}
+```
 
 Y ahora en las páginas que estemos usando el API de animaciones, ya no importamos las utilidades desde `@angular/core` sino desde `angular/animations`, así:
 
 ### Antes (v2)
 
-{% highlight ts %}
+```ts
 import { Component, trigger, state, style, transition, animate } from '@angular/core';
 
 @Component({
@@ -297,11 +297,11 @@ import { Component, trigger, state, style, transition, animate } from '@angular/
 })
 export class HomePage {
   ...
-{% endhighlight %}
+```
 
 ### Ahora (v3)
 
-{% highlight ts %}
+```ts
 import { Component } from '@angular/core';
 import { trigger, state, style, transition, animate } from '@angular/animations';
 
@@ -314,7 +314,7 @@ import { trigger, state, style, transition, animate } from '@angular/animations'
 })
 export class HomePage {
   ...
-{% endhighlight %}
+```
 
 ## Tip 5: Ionic generator
 

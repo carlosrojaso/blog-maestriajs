@@ -49,7 +49,7 @@ Este seguimiento de urls ahora se puede habilitar con el nuevo decorador @IonicP
 
 ### Sin @IonicPage
 
-{% highlight ts %}
+```ts
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 
@@ -58,11 +58,11 @@ import { NavController, NavParams } from 'ionic-angular';
   templateUrl: 'home.html',
 })
 export class HomePage {
-{% endhighlight %}
+```
 
 ### Con @IonicPage
 
-{% highlight ts %}
+```ts
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
@@ -72,7 +72,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'home.html',
 })
 export class HomePage {
-{% endhighlight %}
+```
 
 Con __@IonicPage__ podremos habilitar a cada página **lazy loading**, que básicamente lo que hace es que carga una pagina solo cuando es necesario. Entonces ya no sera obligacion cargar todas las páginas al inicio de la aplicación, ahora la página es cargada cuando en verdad sea necesario y **como resultado esto puede reducir el tiempo de carga de nuestra aplicación.**
 
@@ -92,7 +92,7 @@ Vamos a usar ionic generate para crear una página `ionic g page users`, esto ah
 
 Puedes que tengas un error en users.module.ts (bug en el generador de ionic), pero debemos importar `IonicPageModule` y usarlo de esta manera:
 
-{% highlight ts %}
+```ts
 import { NgModule } from '@angular/core';
 import { IonicPageModule } from 'ionic-angular';
 import { UsersPage } from './users';
@@ -109,7 +109,7 @@ import { UsersPage } from './users';
   ]
 })
 export class UsersModule {}
-{% endhighlight %}
+```
 
 {% include blog/subscribe.html %}
 
@@ -117,7 +117,7 @@ export class UsersModule {}
 
 Ahora como las páginas se van a cargar solo cuando sea necesario ya no deben ir en el array de declarations y entryCompomntes de `src/app/app.module.ts`, el archivo deberá lucir así:
 
-{% highlight ts %}
+```ts
 ...
 @NgModule({
   declarations: [
@@ -135,26 +135,26 @@ Ahora como las páginas se van a cargar solo cuando sea necesario ya no deben ir
   providers: [...]
 })
 export class AppModule {}
-{% endhighlight %}
+```
 
 ## Paso 3: Cambios en navegación
 
 Tampoco es necesario importar la página desde la página donde se quiere hacer `push` o `setRoot`, solo con el nombre de la clase como string, se puede hacer uso de push o seeRoot, asi:
 
-{% highlight ts %}
+```ts
 goToPage(){
   this.navCtrl.push('UsersPage', {....});
 }
-{% endhighlight %}
+```
 
 También aplica para los modales así:
 
-{% highlight ts %}
+```ts
 openModal(){
   let modal = this.modalCtrl.create('UsersPage', {...});
   modal.preset();
 }
-{% endhighlight %}
+```
 
 Y ya! Eso es todo ahora ya estás trabajando con esta increíble característica, pero una cosa más, trabajar con @NgModule tiene sus ventajas pero también implica un trabajo de más y hay dos problemas comunes que pueden tener, que resolveremos a continuación con estos tips:
 
@@ -177,7 +177,7 @@ Nota: en el módulo compartido solo van components, pipes y directives NO provid
 
 Nuestro archivo shared.module.ts, quedará de esta manera:
 
-{% highlight ts %}
+```ts
 import { NgModule } from '@angular/core';
 import { IonicPageModule } from 'ionic-angular';
 import { ItemUserComponent } from './components/item-user/item-user';
@@ -198,11 +198,11 @@ import { ReversePipe } from './pipes/reverse';
   ]
 })
 export class SharedModule {}
-{% endhighlight %}
+```
 
 Y ahora donde queramos usar cualquiera de estos componentes en una de nuestras páginas, debemos importar el módulo SharedModule en el módulo de la página así:
 
-{% highlight ts %}
+```ts
 import { NgModule } from '@angular/core';
 import { IonicPageModule } from 'ionic-angular';
 import { SharedModule } from '../../shared/shared.module';
@@ -221,13 +221,13 @@ import { UsersPage } from './users';
   ]
 })
 export class UsersModule {}
-{% endhighlight %}
+```
 
 ## Tip 2: Usando el SDK ionic dentro de componentes propios
 
 Si dentro de nuestros propios componentes queremos usar alguna funcionalidad de ionic debemos agregar `IonicModule` dentro del módulo SharedModule, asi:
 
-{% highlight ts %}
+```ts
 import { NgModule } from '@angular/core';
 import { IonicPageModule, IonicModule } from 'ionic-angular';
 import { ItemUserComponent } from './components/item-user/item-user';
@@ -250,7 +250,7 @@ import { ReversePipe } from './pipes/reverse';
   ]
 })
 export class SharedModule {}
-{% endhighlight %}
+```
 
 Como parte final hemos hecho un repositorio de ejemplo con esta arquitectura y cómo usar correctamente **@IonicPage**. El proyecto está organizado así:
 

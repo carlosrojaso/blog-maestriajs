@@ -41,7 +41,7 @@ Antes de empezar a trabajar en Ionic, empecemos por tener una fuente de datos pa
 
 * [JSON-SERVER](https://github.com/typicode/json-server) - Servidor para generar e imitar una API en 30 segundos, luego genera el JSON de ejemplo en un archivo
 
-````
+```
   "personas": [
     {
       "id": 1,
@@ -50,15 +50,13 @@ Antes de empezar a trabajar en Ionic, empecemos por tener una fuente de datos pa
       "megusta": false
     }
   ]
-````
+```
 
 Ve a la terminal de tu equipo y ejecuta el siguiente comando:
 
-````
-
+```
 json-server personasbd.json
-
-````
+```
 
 Y listo tendras algo como esto:
 

@@ -64,7 +64,7 @@ La documentación en ionic native la puedes ver [**aquí**](https://ionicframewo
 
 Recuerda que debes agregar el provider de sqlite en `app.module.ts`, así:
 
-{% highlight ts %}
+```ts
 ...
 import { SQLite } from '@ionic-native/sqlite';
 
@@ -89,13 +89,13 @@ import { SQLite } from '@ionic-native/sqlite';
   ]
 })
 export class AppModule {}
-{% endhighlight %}
+```
 
 ## Paso 3: Abrir una base de datos
 
 Ahora desde el archivo `app.component.ts`, vamos a crear una base de datos para la aplicación, por eso debemos inyectar como dependencia a *SQLite* en el constructor, así:
 
-{% highlight ts %}
+```ts
 import { SQLite } from '@ionic-native/sqlite';
 
 @Component({
@@ -117,11 +117,11 @@ export class MyApp {
   }
   ....
 }
-{% endhighlight %}
+```
 
 Seguido a esto vamos a crear el método `createDatabase` que se encargada de crear una base de datos para la aplicación:
 
-{% highlight ts %}
+```ts
 private createDatabase(){
   this.sqlite.create({
     name: 'data.db',
@@ -134,12 +134,12 @@ private createDatabase(){
     console.error(error);
   });
 }
-{% endhighlight %}
+```
 
 Como resultado tendremos la instancia de la base de datos con la que podremos ejecutar consultas, el método `createDatabase` debemos llamarlo dentro de `this.platform.ready`:
 
-{% highlight ts %}
-....
+```ts
+...
 @Component({
   template: `<ion-nav [root]="rootPage"></ion-nav>`
 })
@@ -172,7 +172,7 @@ export class MyApp {
     });
   }
 }
-{% endhighlight %}
+```
 
 ## Paso 4: Crear un servicio
 
@@ -184,7 +184,7 @@ ionic g provider tasks-service
 
 Recuerda que debemos agregar nuestro servicio al array de `providers` en `app.module.ts`:
 
-{% highlight ts %}
+```ts
 ...
 import { TasksService } from '../providers/tasks-service';
 
@@ -210,12 +210,12 @@ import { TasksService } from '../providers/tasks-service';
   ]
 })
 export class AppModule {}
-{% endhighlight %}
+```
 
 
 En el servicio vamos a importar a **SQLiteObject** desde ionic-native (*línea 2*) y luego declaramos el método `setDatabase` (*línea 11*) para guadar la instancia de SQLiteObject.
 
-{% highlight ts linenos %}
+```ts
 import { Injectable } from '@angular/core';
 import { SQLiteObject } from '@ionic-native/sqlite';
 
@@ -233,20 +233,20 @@ export class TasksService {
   }
 
 }
-{% endhighlight %}
+```
 
 Ahora declaramos el método `createTable` que se encargara de crear la estructura de la base de datos que queremos. En este caso haremos una tabla para gestionar tareas.
 
-{% highlight ts %}
+```ts
 createTable(){
   let sql = 'CREATE TABLE IF NOT EXISTS tasks(id INTEGER PRIMARY KEY AUTOINCREMENT, title TEXT, completed INTEGER)';
   return this.db.executeSql(sql, []);
 }
-{% endhighlight %}
+```
 
 Ahora declaramos el método `getAll` el cual nos hará una consulta a la base de datos y obtiene todas las tareas que estén en la tabla y luego serán retornadas en una promesa.
 
-{% highlight ts %}
+```ts
 getAll(){
   let sql = 'SELECT * FROM tasks';
   return this.db.executeSql(sql, [])
@@ -259,38 +259,38 @@ getAll(){
   })
   .catch(error => Promise.reject(error));
 }
-{% endhighlight %}
+```
 
 Ahora con el método `create` vamos a ejecutar un **INSERT** para guardar una nueva tarea en la base de datos.
 
-{% highlight ts %}
+```ts
 create(task: any){
   let sql = 'INSERT INTO tasks(title, completed) VALUES(?,?)';
   return this.db.executeSql(sql, [task.title, task.completed]);
 }
-{% endhighlight %}
+```
 
 Con el método `update` vamos a ejecutar un **UPDATE** para actualizar una tarea en la base de datos.
 
-{% highlight ts %}
+```ts
 update(task: any){
   let sql = 'UPDATE tasks SET title=?, completed=? WHERE id=?';
   return this.db.executeSql(sql, [task.title, task.completed, task.id]);
 }
-{% endhighlight %}
+```
 
 Finalmente con el método `delete` vamos a ejecutar un **DELETE** para eliminar una tarea en la base de datos.
 
-{% highlight ts %}
+```ts
 delete(task: any){
   let sql = 'DELETE FROM tasks WHERE id=?';
   return this.db.executeSql(sql, [task.id]);
 }
-{% endhighlight %}
+```
 
 En resumen todo nuestro servicio quedará así: 
 
-{% highlight ts linenos%}
+```ts
 import { Injectable } from '@angular/core';
 import { SQLiteObject } from '@ionic-native/sqlite';
 
@@ -345,13 +345,13 @@ export class TasksService {
   }
 
 }
-{% endhighlight %}
+```
 
 ## Paso 5: Añadir Servicio y llamar a setDatabase
 
 Ahora vamos a inyectar como dependencia a `TasksService` en `app.component.ts` y en el método `createDatabase` luego de obtener la instancia de la base de datos vamos a ejecutar el metodo `setDatabase` y crear la tabla:
 
-{% highlight ts linenos%}
+```ts
 import { TasksService } from '../providers/tasks-service';
 
 @Component({
@@ -391,13 +391,13 @@ export class MyApp {
     });
   }
 }
-{% endhighlight %}
+```
 
 ## Paso 6: El controlador
 
 Ahora desde el controlador de la página `home.ts` vamos a implementar el servicio de `TaskService` en este controlador haremos uso de AlertController para crear tareas a partir de una Alert. Y creamos el arreglo `tasks` como vacío en *línea 12*.
 
-{% highlight ts linenos%}
+```ts
 import { Component } from '@angular/core';
 import { NavController, AlertController } from 'ionic-angular';
 
@@ -417,11 +417,11 @@ export class HomePage {
     public tasksService: TasksService
   ) {}
 }
-{% endhighlight %}
+```
 
 Con el método `getAllTasks` vamos a obtener todas las tareas que estén en la base de datos y en la línea 4 asignamos la respuesta al array de  `tasks`.
 
-{% highlight ts linenos%}
+```ts
 getAllTasks(){
   this.tasksService.getAll()
   .then(tasks => {
@@ -431,11 +431,11 @@ getAllTasks(){
     console.error( error );
   });
 }
-{% endhighlight %}
+```
 
 Para crear una nueva tarea creamos un alert con un input que capture el título de la nueva tarea luego desde la línea 21 hasta la línea 28 creamos la tarea haciendo uso de `tasksService` y la agregamos al array `tasks`. 
 
-{% highlight ts linenos%}
+```ts
 openAlertNewTask(){
   let alert = this.alertCtrl.create({
     title: 'Crear tarea',
@@ -470,11 +470,11 @@ openAlertNewTask(){
   });
   alert.present();
 }
-{% endhighlight %}
+```
 
 Con el método `updateTask` actualizamos una tarea pero este método recibe dos parámetros el primero la tarea que vamos a actualizar y el segundo será la posición exacta en el array  `tasks`, estos parámetros serán enviados desde el template.
 
-{% highlight ts linenos%}
+```ts
 updateTask(task, index){
   task = Object.assign({}, task);
   task.completed = !task.completed;
@@ -486,11 +486,11 @@ updateTask(task, index){
     console.error( error );
   })
 }
-{% endhighlight %}
+```
 
 Con el método `deleteTask` eliminamos una tarea y recibe los dos mismos parámetros que el método `updateTask` y cuando sea eliminada removemos la tarea del array `tasks` con un splice (línea 5)
 
-{% highlight ts linenos%}
+```ts
 deleteTask(task: any, index){
   this.tasksService.delete(task)
   .then(response => {
@@ -501,11 +501,11 @@ deleteTask(task: any, index){
     console.error( error );
   })
 }
-{% endhighlight %}
+```
 
 Finalmente el controlador de `HomePage` será así, observen que el método `getAllTasks` lo llamamos desde `ionViewDidLoad` (línea 21):
 
-{% highlight ts linenos%}
+```ts
 import { Component } from '@angular/core';
 import { NavController, AlertController } from 'ionic-angular';
 
@@ -599,13 +599,13 @@ export class HomePage{
   }
 
 }
-{% endhighlight %}
+```
 
 ## Paso 7: El template
 
 En el template se encargará de llamar las funciones creadas en `HomePage` y mostrar las tareas de la base de datos.
 
-{% highlight html linenos %}
+```html
 {% raw %}
 <ion-header>
   <ion-navbar color="primary">
@@ -638,7 +638,7 @@ En el template se encargará de llamar las funciones creadas en `HomePage` y mos
   </ion-list>
 </ion-content>
 {% endraw %}
-{% endhighlight %}
+```
 
 ## Resultado:
 

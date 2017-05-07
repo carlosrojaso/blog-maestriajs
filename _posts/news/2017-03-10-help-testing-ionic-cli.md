@@ -28,23 +28,23 @@ La ayuda de los comandos ahora es mas clara y provee un interesante resumén de 
 
 Ejecuta:
 
-````
+```
 npm install -g ionic@beta
-````
+```
 
 Si tienes proyectos existentes debes ejecutar esto en el directorio del proyecto.
 
 Para Ionic 1.
 
-````
+```
 npm install --save-dev @ionic/cli-build-ionic1@beta @ionic/cli-plugin-cordova@beta
-````
+```
 
 Para Ionic 2.
 
-````
+```
 npm install --save-dev @ionic/cli-build-ionic-angular@beta @ionic/cli-plugin-cordova@beta
-````
+```
 
 Información adicional puede ser encontrada en el [README](npm install --save-dev @ionic/cli-build-ionic-angular@beta @ionic/cli-plugin-cordova@beta).
 

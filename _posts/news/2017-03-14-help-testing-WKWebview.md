@@ -24,15 +24,15 @@ El navegador por defecto en IOS es Safari. y simplificando Safari utiliza un Web
 
 1. Si ya lo tienes instalado, remuevelo.
 
-````
+```
 ionic plugin rm cordova-plugin-wkwebview-engine --save
-````
+```
 
 2. Entonces, instalar desde el master en git.
 
-````
+```
 ionic plugin install https://github.com/driftyco/cordova-plugin-wkwebview-engine --save
-````
+```
 
 Si encuentras algún problema solo debes crear un [Issue](https://github.com/driftyco/cordova-plugin-wkwebview-engine/issues)
 
