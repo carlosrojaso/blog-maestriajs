@@ -27,6 +27,12 @@ a{
   margin-right: auto;
   clear: both;
 }
+blockquote {
+  padding: 10px 20px;
+  margin: 5px 0px 20px 0px;
+  font-size: 1.2em;
+  border-left: 5px solid #eee;
+}
 button.menu{
   display: inline-block;
   background-color: transparent;
@@ -58,67 +64,6 @@ button.menu{
 }
 .text-center{
   text-align: center;
-}
-figure.highlight{
-  margin: 0px;
-  pre{
-    background-color: #272822;
-    border: 0px;
-    color: white;
-    display: block;
-    padding: 9.5px;
-    margin: 0 0 10px;
-    font-size: 12px;
-    line-height: 1.42857143;
-    word-break: break-all;
-    word-wrap: break-word;
-    border-radius: 4px;
-    overflow: auto;
-    code{
-      padding: 0;
-      font-size: inherit;
-      color: inherit;
-      white-space: pre-wrap;
-      background-color: transparent;
-      border-radius: 0;
-    }
-  }
-}
-code.highlighter-rouge{
-  padding: 2px 4px;
-  font-size: 90%;
-  color: #c7254e;
-  background-color: #f9f2f4;
-  border-radius: 4px;
-}
-div.highlighter-rouge{
-  pre{
-    display: block;
-    padding: 9.5px;
-    margin: 0 0 10px;
-    font-size: 12px;
-    line-height: 1.42857143;
-    color: #333;
-    word-break: break-all;
-    word-wrap: break-word;
-    background-color: #f5f5f5;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    code{
-      padding: 0;
-      font-size: inherit;
-      color: inherit;
-      white-space: pre-wrap;
-      background-color: transparent;
-      border-radius: 0;
-    }
-  }
-}
-blockquote {
-  padding: 10px 20px;
-  margin: 5px 0px 20px 0px;
-  font-size: 1.2em;
-  border-left: 5px solid #eee;
 }
 .title-page{
   color: $secondary-color;

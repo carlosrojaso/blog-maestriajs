@@ -59,7 +59,7 @@ El archivo `login.html` será nuestro template, el archivo `login.scss` será do
 
 `login.ts`:
 
-{% highlight ts linenos %}
+```ts
 import { Component } from '@angular/core';
 import { IonicPage, NavController } from 'ionic-angular';
 
@@ -71,11 +71,11 @@ import { IonicPage, NavController } from 'ionic-angular';
 export class LoginPage {
   constructor(public nav: NavController) {}
 }
-{% endhighlight %}
+```
 
 y su template `login.html`: 
 
-{% highlight html linenos %}
+```html
 <ion-header>
   <ion-navbar>
     <ion-title>login</ion-title>
@@ -83,7 +83,7 @@ y su template `login.html`:
 </ion-header>
 <ion-content padding>
 </ion-content>
-{% endhighlight %}
+```
 
 
 Nota: Si usas ionic 2 para continuar sin problemas debemos borrar este el archivo `login.module.ts` y quitar el decorador de **@IonicPage** que crea en la página `login.ts` y luego agregar `LoginPage` en el array de `entryComponents` y `declarations` en el archivo `app.modules.ts`.
@@ -106,7 +106,7 @@ ionic g component myComponent
 
 `my-component.ts`:
 
-{% highlight javascript linenos %}
+```ts
 import { Component } from '@angular/core';
 @Component({
   selector: 'my-component',
@@ -118,7 +118,7 @@ export class MyComponent {
     this.text = 'Hello World';
   }
 }
-{% endhighlight %}
+```
 
 Nota: Si usas ionic 2 para continuar sin problemas debemos borrar este el archivo `my-component.module.ts` y luego agregar `MyComponent` en el array de `entryComponents` en el archivo `app.modules.ts`.
 
@@ -137,7 +137,7 @@ ionic nos dejará nuestra nueva **directive** igualmente dentro de la carpeta **
 
 `my-directive.ts`:
 
-{% highlight javascript linenos %}
+```ts
 import {Directive} from '@angular/core';
 @Directive({
   selector: '[my-directive]' // Attribute selector
@@ -147,7 +147,7 @@ export class MyDirective {
     console.log('Hello World');
   }
 }
-{% endhighlight %}
+```
 
 Nota: Si usas ionic 2 debemos agregar `MyDirective` en el array de `entryComponents` en el archivo `app.modules.ts`.
 
@@ -166,7 +166,7 @@ el código del servicio será el siguiente:
 
 `user-service.ts`:
 
-{% highlight javascript linenos %}
+```ts
 import {Injectable} from '@angular/core';
 import {Http} from '@angular/http';
 import 'rxjs/add/operator/map';
@@ -175,11 +175,11 @@ import 'rxjs/add/operator/map';
 export class UserService {
   constructor(public http: Http) {}
 }
-{% endhighlight %}
+```
 
 Nota: Recuerda que los servicios deben ser agregados al array de `providers` en `app.module.ts` y si usas el Http, deberas importar `HttpModule` así:
 
-{% highlight ts %}
+```ts
 import { HttpModule } from '@angular/http';
 import { UserService } from '../providers/user-service';
 
@@ -207,7 +207,7 @@ import { UserService } from '../providers/user-service';
   ]
 })
 export class AppModule {}
-{% endhighlight %}
+```
 
 ionic nos dejará todos los providers dentro de una carpeta llamada *providers*.
 
@@ -226,7 +226,7 @@ el código de nuestro pipe es el siguiente:
 
 `myPipe.ts`:
 
-{% highlight ts %}
+```ts
 import {Injectable, Pipe} from '@angular/core';
 
 @Pipe({
@@ -238,7 +238,7 @@ export class MyPipe {
     return value.toLowerCase();
   }
 }
-{% endhighlight %}
+```
 
 Nota: Si usas ionic 2 debemos agregar `MyPipe` en el array de `entryComponents` en el archivo `app.modules.ts`.
 
@@ -264,7 +264,7 @@ Nota: en el módulo compartido solo van components, pipes y directives NO provid
 
 Nuestro archivo shared.module.ts, quedará de esta manera:
 
-{% highlight ts %}
+```ts
 import { NgModule } from '@angular/core';
 import { IonicPageModule } from 'ionic-angular';
 import { ItemUserComponent } from './components/item-user/item-user';
@@ -285,11 +285,11 @@ import { ReversePipe } from './pipes/reverse';
   ]
 })
 export class SharedModule {}
-{% endhighlight %}
+```
 
 Y ahora donde queramos usar cualquiera de estos componentes en una de nuestras páginas, debemos importar el módulo `SharedModule` en el módulo de la página así:
 
-{% highlight ts %}
+```ts
 import { NgModule } from '@angular/core';
 import { IonicPageModule } from 'ionic-angular';
 import { SharedModule } from '../../shared/shared.module';
@@ -308,13 +308,13 @@ import { UsersPage } from './users';
   ]
 })
 export class UsersModule {}
-{% endhighlight %}
+```
 
 ### Tip 2: Usando el SDK ionic dentro de componentes propios
 
 Si dentro de nuestros propios componentes queremos usar alguna funcionalidad de ionic, como usar ion-list, ion-item, alerts, modals etc, debemos agregar `IonicModule` dentro del módulo SharedModule, asi:
 
-{% highlight ts %}
+```ts
 import { NgModule } from '@angular/core';
 import { IonicPageModule, IonicModule } from 'ionic-angular';
 import { ItemUserComponent } from './components/item-user/item-user';
@@ -337,13 +337,13 @@ import { ReversePipe } from './pipes/reverse';
   ]
 })
 export class SharedModule {}
-{% endhighlight %}
+```
 
 ### Tip 3: Importar **HttpModule**
 
 Ahora debemos agregar `HttpModule` en nuestro archivo `app.module.ts`, este paso es muy importante si dentro de la aplicación se usa la dependencia `Http`:
 
-{% highlight ts %}
+```ts
 import { HttpModule } from '@angular/http';
 
 ...
@@ -367,7 +367,7 @@ import { HttpModule } from '@angular/http';
   ]
 })
 export class AppModule {}
-{% endhighlight %}
+```
  
 Nuestro proyecto quedará de una forma más ordenada y con un mayor control, todo esto lo podemos hacer manualmente pero sin duda con **ionic generator** podemos ahorrar tiempo valioso en la creación de cada uno de estos.
 

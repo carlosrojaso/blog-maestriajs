@@ -10,7 +10,6 @@ urlblog: 'https://www.ion-book.com/blog'
 cover: "images/cover.jpg"
 timezone: "America/Bogota"
 markdown: kramdown
-markdown_ext:  markdown,mkdown,mkdn,mkd,md
 permalink: blog/:categories/:title/
 redcarpet:
   extensions: ["tables", "autolink", "strikethrough", "space_after_headers", "fenced_code_blocks"]
