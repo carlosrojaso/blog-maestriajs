@@ -143,7 +143,7 @@ Tampoco es necesario importar la página desde la página donde se quiere hacer 
 
 ```ts
 goToPage(){
-  this.navCtrl.push('UsersPage', {....});
+  this.navCtrl.push('UsersPage', {...});
 }
 ```
 
