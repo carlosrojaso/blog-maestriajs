@@ -1,8 +1,14 @@
 .menu-blog{
   background-color: $secondary-color;
-  text-align: right;
   .content{
     padding: 20px $padding;
+    .btn-request{
+      padding: 8px;
+      font-size: .9em;     
+    }
+    .nav-bar{
+      justify-content: flex-end;
+    }
     ul{
       list-style: none;
       margin: 0px;

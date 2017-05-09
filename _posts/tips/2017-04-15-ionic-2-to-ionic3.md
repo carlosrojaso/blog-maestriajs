@@ -39,26 +39,27 @@ Ahora debemos actualizar las versiones de las dependencias de nuestro proyecto y
 
 ```json
 "dependencies": {
-  "@angular/common": "4.0.0",
-  "@angular/compiler": "4.0.0",
-  "@angular/compiler-cli": "4.0.0",
-  "@angular/core": "4.0.0",
-  "@angular/forms": "4.0.0",
-  "@angular/http": "4.0.0",
-  "@angular/platform-browser": "4.0.0",
-  "@angular/platform-browser-dynamic": "4.0.0",
+  "@angular/common": "4.0.2",
+  "@angular/compiler": "4.0.2",
+  "@angular/compiler-cli": "4.0.2",
+  "@angular/core": "4.0.2",
+  "@angular/forms": "4.0.2",
+  "@angular/http": "4.0.2",
+  "@angular/platform-browser": "4.0.2",
+  "@angular/platform-browser-dynamic": "4.0.2",
+  "@ionic-native/camera": "3.4.2",
   "@ionic-native/core": "3.4.2",
   "@ionic-native/splash-screen": "3.4.2",
   "@ionic-native/status-bar": "3.4.2",
   "@ionic/storage": "2.0.1",
-  "ionic-angular": "3.0.1",
+  "ionic-angular": "3.1.1",
   "ionicons": "3.0.0",
   "rxjs": "5.1.1",
   "sw-toolbox": "3.4.0",
-  "zone.js": "^0.8.4"
+  "zone.js": "0.8.5"
 },
 "devDependencies": {
-  "@ionic/app-scripts": "1.3.0",
+  "@ionic/app-scripts": "1.3.7",
   "typescript": "~2.2.1"
 }
 ```
@@ -328,7 +329,7 @@ Nos crea un archivo más `login.module.ts`:
 
 <div class="row">
   <div class="col col-100 col-md-50 offset-md-25 col-lg-50 offset-lg-25">
-    <amp-img width="484" height="183" layout="responsive" src="/images/posts/news/2017-04-15-ionic-2-to-ionic3/tree.png"></amp-img>
+    <amp-img width="484" height="183" layout="responsive" src="/images/posts/tips/2017-04-15-ionic-2-to-ionic3/tree.png"></amp-img>
   </div>
 </div>
 
