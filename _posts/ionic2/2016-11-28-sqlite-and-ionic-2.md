@@ -11,13 +11,15 @@ cover: "/images/posts/ionic2/2016-11-28-sqlite-and-ionic-2/cover.jpg"
 remember: true
 versions:
   - title: 'ionic'
-    number: '3.0.1'
+    number: '3.2.0'
   - title: 'ionic-native'
-    number: '3.4.2'
+    number: '3.7.0'
+  - title: 'ionic-app-scripts'
+    number: '1.3.7'
   - title: 'cordova-cli'
-    number: '6.5.0'
+    number: '7.0.0'
   - title: 'ionic-cli'
-    number: '2.2.2'
+    number: '3.0.0'
 ---
 
 > Anteriormente hemos hablado sobre [**firebase**]({{site.urlblog}}//ionic2/firebase-database-and-ionic-2){:target="_blank"}, [**pouch**]({{site.urlblog}}/tips/pouchdb){:target="_blank"} y [**Rest API**]({{site.urlblog}}//ionic2/rest-api-with-ionic-2){:target="_blank"} para el consumo de datos, ahora en este nuevo demo haremos la integración con **SQLite** que es una base de datos nativa que proveen los dispositivos móviles.
@@ -40,7 +42,7 @@ Ademas en este demo usamos la función de **lazy loading** y **@IonicPage**. Pue
 Lo primero que haremos será iniciar un nuevo proyecto con ionic. Vamos a nuestra terminal y ejecutamos:
 
 ```
-ionic start demo107 blank --v2
+ionic start demo107 blank
 ```
 
 Ahora entramos a la carpeta del proyecto desde nuestra terminal con:
@@ -56,7 +58,7 @@ Como iniciamos nuestro proyecto con el template **blank** tendremos una estructu
 Ahora agregamos el plugin de **cordova-sqlite-storage** y el provider de **sqlite** en el proyecto:
 
 ```
-ionic plugin add cordova-sqlite-storage --save
+ionic cordova plugin add cordova-sqlite-storage --save
 npm install @ionic-native/sqlite --save
 ```
 

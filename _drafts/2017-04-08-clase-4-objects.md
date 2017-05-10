@@ -39,7 +39,7 @@ Si pones un ojo en tu App nosotros podemos encontrar este elemento en nuestro Pr
 
 ### login.ts
 
-{% highlight js %}
+```ts
 
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
@@ -47,7 +47,7 @@ export class LoginPage {
    myForm: FormGroup;
 }
 
-{% endhighlight %}
+```
 
 Si ves esta pieza de codigo, tu puedes ver las palabras ````ìmport```` y ````export````. ````import```` es la palabra que le dice a Ionic que vas a
 crear objetos de las clases que estas importando. De la misma manera la palabra ````export```` le dice a Ionic que esa clase que estas creando  podra ser 
@@ -56,17 +56,17 @@ importada en el futuro.
 Ahora vamos a usar un servicio. Un servicio es algo asi como una pieza de codigo con metodos que tu vas a reusar en diferentes partes de tu app.
 para crear un provider vamos utilziar el comando ````generate````.
 
-{% highlight js %}
+```ts
 
 $ ionic g provider rssService
 
-{% endhighlight %}
+```
 
 y ahora necesitamos decirle a Ionic que vamos a utilizar este servicio.
 
 ### app.module.ts
 
-{% highlight js %}
+```ts
 
 ...
 import { rssService } from '../providers/rssService';
@@ -80,7 +80,7 @@ import { rssService } from '../providers/rssService';
 })
 export class AppModule {}
 
-{% endhighlight %}
+```
 
 Ok, ahora estamos listos para continuar con nuestra App.
 

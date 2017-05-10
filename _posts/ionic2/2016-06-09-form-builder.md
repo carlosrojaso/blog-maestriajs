@@ -10,15 +10,15 @@ cover: "/images/posts/ionic2/2016-06-09-form-builder/cover.png"
 remember: true
 versions:
   - title: 'ionic'
-    number: '3.1.1'
+    number: '3.2.0'
   - title: 'ionic-native'
-    number: '3.4.2'
+    number: '3.7.0'
   - title: 'ionic-app-scripts'
-    number: '1.3.6'
+    number: '1.3.7'
   - title: 'cordova-cli'
-    number: '6.5.0'
+    number: '7.0.0'
   - title: 'ionic-cli'
-    number: '2.2.2'
+    number: '3.0.0'
 ---
 
 > La forma más común de capturar información de los usuarios es a partir de **Formularios** y depende de una buena UI/UX ganar o perder un usuario en nuestra aplicación. 
@@ -38,7 +38,7 @@ Ademas en este demo usamos la función de [**lazy loading** y **@IonicPage**](ht
 
 Cómo ionic usa Angular, podremos usar la clase FormBuilder con los componentes del SDK de ionic. Para lograr esto debemos inyectar a FormBuilder como dependencia a nuestro **constructor**, así:
 
-{% highlight ts %}
+```ts
 ...
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
@@ -57,11 +57,11 @@ export class MyFormPage {
   ) {
   ...
 }
-{% endhighlight %}
+```
 
 Ahora creamos el método privado `createMyForm` para crear el formulario, haciendo uso de nuestra variable `this.formBuilder` podremos crear un controlador para cada uno de nuestros campos en el formulario, aquí podremos enviar validaciones tan sencillas o complejas como queramos, así: 
 
-{% highlight ts %}
+```ts
 private createMyForm(){
   return this.formBuilder.group({
     name: ['', Validators.required],
@@ -75,11 +75,11 @@ private createMyForm(){
     gender: ['', Validators.required],
   });
 }
-{% endhighlight %}
+```
 
 Como resultado tenemos la clase completa así:
 
-{% highlight ts %}
+```ts
 import { Component } from '@angular/core';
 import { IonicPage , NavController } from 'ionic-angular';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
@@ -118,31 +118,31 @@ export class MyFormPage {
     });
   }
 }
-{% endhighlight %}
+```
 
 {% include blog/subscribe.html %}
 
 Ahora para agregar el controlador de nuestro formulario debemos asignar dentro `formGroup` la instancia de `myForm`, además debemos asignar un método para recibir la información, así:
 
-{% highlight html %}
+```html
 <form [formGroup]="myForm" (ngSubmit)="saveData()">
 ...
 </form>
-{% endhighlight %}
+```
 
 Por último por cada campo que tengamos debemos usar `formControlName` para asignar el controlador en cada campo, así:
 
-{% highlight html %}
+```html
 <ion-item>
   <ion-icon name="person" item-left></ion-icon>
   <ion-label stacked>Nombres:</ion-label>
   <ion-input formControlName="name" type="text" placeholder="Nombre"></ion-input>
 </ion-item>
-{% endhighlight %}
+```
 
 Todo el template como resultado quedará así:
 
-{% highlight html linenos %}
+```html
 <ion-header>
   <ion-navbar color="primary">
     <ion-title>Formulario</ion-title>
@@ -202,4 +202,4 @@ Todo el template como resultado quedará así:
     </div>
   </form>
 </ion-content>
-{% endhighlight %}
+```

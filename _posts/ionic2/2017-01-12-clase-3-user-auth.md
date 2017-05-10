@@ -49,7 +49,7 @@ $ ionic generate page Signup
 
 Esto generara todas las paginas que nosotros necesitamos. Ahora debemos ir a ````src/app/app.module.ts```` e imporatemos todas las paginas de noticias y removeremos las antiguas, al final tu deberias tener algo como esto:
 
-{% highlight js %}
+```ts
 
 import { NgModule } from '@angular/core';
 import { IonicApp, IonicModule } from 'ionic-angular';
@@ -61,11 +61,11 @@ import { ProfilePage } from '../pages/profile/profile';
 import { ResetPasswordPage } from '../pages/reset-password/reset-password';
 import { SignupPage } from '../pages/signup/signup';
 
-{% endhighlight %}
+```
 
 y agregamos las nuevas pagnas en NgModule
 
-{% highlight js %}
+```ts
 
 @NgModule({
   declarations: [
@@ -94,22 +94,21 @@ y agregamos las nuevas pagnas en NgModule
 })
 export class AppModule {}
 
-{% endhighlight %}
+```
 
 ## Conectando nuestra App con Ionic Cloud.
 
 Ahora, necesitamos instalar el Cloud Service client.
 
-{% highlight js %}
+```ts
 
 $ npm install @ionic/cloud-angular --save
 
-{% endhighlight %}
+```
 
 Antes de que puedas configurar tus cloud settings, tendras que tener un app ID. en el directorio de tu proyecto, ejecuta:
 
 ```
-
 $ ionic io init
 
 ```
@@ -118,7 +117,7 @@ Debes crear el objeto ````CloudSettings```` para tu app. Esto lo debemos hacer e
 
 Define los objetos 
 
-{% highlight js %}
+```ts
 
 import { CloudSettings, CloudModule } from '@ionic/cloud-angular';
 
@@ -128,12 +127,12 @@ const cloudSettings: CloudSettings = {
   }
 };
 
-{% endhighlight %}
+```
 
 Y nosotros necesitamos agregar tus preferencias de cloud en ````CloudModule.forRoot()```` dentro de ````NgModule````
 
 
-{% highlight js %}
+```ts
 
 @NgModule({
   declarations: [ ... ],
@@ -146,7 +145,7 @@ Y nosotros necesitamos agregar tus preferencias de cloud en ````CloudModule.forR
   providers: [ ... ]
 })
 
-{% endhighlight %}
+```
 
 Ok, en este punto deberiamos tener todo conectado.
 
@@ -162,7 +161,7 @@ Nosotros vamos a crear nuestro *login view* por lo que vamos a abrir ```` src/pa
 
 ### login.html 
 
-{% highlight js %}
+```ts
 
 <ion-header>
   <ion-navbar color="primary">
@@ -199,7 +198,7 @@ Nosotros vamos a crear nuestro *login view* por lo que vamos a abrir ```` src/pa
   </div>
 </ion-content>
 
-{% endhighlight %}
+```
 
 En este punto podemos ver que estamos usando algunos componentes que son del Ionic Framework.
 
@@ -218,7 +217,7 @@ Las cosas importante para ver aqui son las funciones ````loginUser()```` ,  ````
 Nosotros vamos a necesitar que cuando el usuario envie el *form* nuestra app envie la info a *Ionic Cloud* y registre el nuevo usuario.
 
 
-{% highlight js %}
+```ts
 
   private loginUser(){
 
@@ -243,45 +242,45 @@ Nosotros vamos a necesitar que cuando el usuario envie el *form* nuestra app env
 
   }
 
-{% endhighlight %}
+```
 
 Debido a que estamos usando el ````FormGroup```` necesitaremos usar esta forma para obtener los valores.
 
-{% highlight js %}
+```ts
 this.myForm.controls['email'].value
 this.myForm.controls['password'].value
-{% endhighlight %}
+```
 
 y despues nososotros vamos a usar el metodo de login proveido por *Ionic Cloud*
 
-{% highlight js %}
+```ts
 
 this.auth.login('basic', details).then( ... );
 
-{% endhighlight %}
+```
 
 las otras funciones las usamos para navegación.
 
-{% highlight js %}
+```ts
 
 private goToSignup(){
     this.navCtrl.push(SignupPage);
   }
 
-{% endhighlight %}
+```
 
-{% highlight js %}
+```ts
 
 private goToResetPassword(){
     this.navCtrl.push(ResetPasswordPage);
   }
-{% endhighlight %}
+```
 
 y toda la magia junta se ve asi.
 
 ### login.ts 
 
-{% highlight js %}
+```ts
 
 import { Component } from '@angular/core';
 import { NavController, AlertController, LoadingController } from 'ionic-angular';
@@ -344,7 +343,7 @@ export class LoginPage {
 
 }
 
-{% endhighlight %}
+```
 
 nosotros podemos agregar algunos estilos tambien en ```` src/pages/login/login.scss ````:
 
@@ -382,7 +381,7 @@ Nosotros podemos usar un formulario similar como en la pagina de login.
 
 ### signup.html
 
-{% highlight js %}
+```ts
 
 <ion-header>
   <ion-navbar color="primary">
@@ -411,11 +410,11 @@ Nosotros podemos usar un formulario similar como en la pagina de login.
   </form>
 </ion-content>
 
-{% endhighlight %}
+```
 
 Algo importante es ver aqui la funcion ````Signup()```` donde nosotros necesitamos aplicar el metodo *signup* desde Ionic Cloud.
 
-{% highlight js %}
+```ts
 
 this.auth.signup(details).then(() => {
   // `this.user` is now registered
@@ -429,13 +428,13 @@ this.auth.signup(details).then(() => {
   }
 });
 
-{% endhighlight %}
+```
 
 todo junto
 
 ### signup.ts
 
-{% highlight js %}
+```ts
 
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
@@ -510,13 +509,13 @@ export class SignupPage {
 }
 
 
-{% endhighlight %}
+```
 
 ok, ahora vamos a construir la pagina de restaurar.
 
 ### reset-password.html
 
-{% highlight js %}
+```ts
 
 <ion-header>
 
@@ -543,11 +542,11 @@ ok, ahora vamos a construir la pagina de restaurar.
   </form>
 </ion-content>
 
-{% endhighlight %}
+```
 
 ### reset-password.ts
 
-{% highlight js %}
+```ts
 
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
@@ -606,7 +605,7 @@ export class ResetPasswordPage {
   }
 
 }
-{% endhighlight %}
+```
 
 Ok, en este punto deberias ver algo como esto:
 

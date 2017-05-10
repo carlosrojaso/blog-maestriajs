@@ -10,13 +10,15 @@ remember: true
 repo: "https://github.com/ion-book/demo111"
 versions:
   - title: 'ionic'
-    number: '3.0.1'
+    number: '3.2.0'
   - title: 'ionic-native'
-    number: '3.4.2'
+    number: '3.7.0'
+  - title: 'ionic-app-scripts'
+    number: '1.3.7'
   - title: 'cordova-cli'
-    number: '6.5.0'
+    number: '7.0.0'
   - title: 'ionic-cli'
-    number: '2.2.2'
+    number: '3.0.0'
 ---
 
 > Hola a todos, en esta ocasión les traemos un pequeño ejemplo de cómo poder implementar **Google Maps Nativo** en tu proyecto de **Ionic**, es algo muy sencillo y de seguro que con estas bases podrás dar inicio a una gran idea.
@@ -70,7 +72,7 @@ Copia esta clave API ya que con esta realizaremos la integración con Google Map
 El siguiente paso es crear nuestra aplicación Ionic, en este caso usare la plantilla blank que trae ionic.
 
 ```
-ionic start demo111 blank --v2
+ionic start demo111 blank
 ```
 
 Una vez se crea el proyecto, nos dirigimos a la carpeta que ionic crea con su estructura para comenzar a integrar Google Maps en nuestra aplicación.
@@ -86,20 +88,20 @@ Ya sabiendo cuales son los plugins a instalar, procedemos a agregarlos a nuestra
 Geolocalización:
 
 ```
-ionic plugin add cordova-plugin-geolocation --save
+ionic cordova plugin add cordova-plugin-geolocation --save
 npm install @ionic-native/geolocation --save
 ```
 
 Google Maps:
 
 ```
-ionic plugin add cordova-plugin-googlemaps --variable API_KEY_FOR_ANDROID="YOUR_ANDROID_API_KEY_IS_HERE" --variable API_KEY_FOR_IOS="YOUR_IOS_API_KEY_IS_HERE" --save
+ionic cordova plugin add cordova-plugin-googlemaps --variable API_KEY_FOR_ANDROID="YOUR_ANDROID_API_KEY_IS_HERE" --variable API_KEY_FOR_IOS="YOUR_IOS_API_KEY_IS_HERE" --save
 npm install @ionic-native/google-maps --save
 ```
 
 Ahora debemos importar los servicios de Geolocation y GoogleMaps en el array de providers en el archivo `src/app/app.module.ts`, así:
 
-{% highlight ts linenos %}
+```ts
 ...
 import { Geolocation } from '@ionic-native/geolocation';
 import { GoogleMaps } from '@ionic-native/google-maps';
@@ -126,11 +128,11 @@ import { GoogleMaps } from '@ionic-native/google-maps';
   ]
 })
 export class AppModule {}
-{% endhighlight %}
+```
  
 Ahora ya tenemos lo necesario para integrar mapas en nuestra aplicación, vamos a realizar la importación de las librerías referentes a los plugin que instalamos. Para esto nos dirigimos a la carpeta del proyecto creado por ionic `app/page` y abrimos el archivo `home.ts` e importamos las librerías.
 
-{% highlight ts linenos %}
+```ts
 ...
 
 import { Geolocation, Geoposition } from '@ionic-native/geolocation';
@@ -158,7 +160,7 @@ export class HomePage {
   ) {
 
 ...
-{% endhighlight %}
+```
 
 Las librerias Geolocation y GoogleMaps hacen parte de [**Ionic Native**]({{site.urlblog}}/ionic2/ionic-native){:target="_blank"}:
 
@@ -166,7 +168,7 @@ Para este ejemplo vamos a declarar dos métodos en nuestro archivo `home.ts` est
 
 `obtenerPosicion()`: Este método nos devolverá la posición actual del dispositivo en coordenadas de latitud y longitud. Para esto debe de estar activo el servicio de GPS del dispositivo. En este método usaremos la librería Geolocation ya que esta tiene una función que nos recupera la posición actual del dispositivo. Estas coordenadas son pasadas al método `loadMap(coordenadas)`.
 
-{% highlight ts %}
+```ts
 obtenerPosicion():any{
   this.geolocation.getCurrentPosition().then(response => {
     this.loadMap(response);
@@ -175,11 +177,11 @@ obtenerPosicion():any{
     console.log(error);
   })
 }
-{% endhighlight %}
+```
 
 `loadMap(postion: Geoposition)`: Este método recibe como parámetro las coordenadas expresadas en latitud y longitud (estas coordenadas son tomadas del método `obtenerPosicion()`) y posiciona el mapa en la posición actual del dispositivo.
 
-{% highlight ts linenos %}
+```ts
 loadMap(postion: Geoposition){
   let latitude = postion.coords.latitude;
   let longitud = postion.coords.longitude;
@@ -215,11 +217,11 @@ loadMap(postion: Geoposition){
   });
 
 }
-{% endhighlight %}
+```
 
 Finalmente toda la clase `HomePage` queda así:
 
-{% highlight ts linenos %}
+```ts
 import { Component } from '@angular/core';
 import { IonicPage, NavController } from 'ionic-angular';
 
@@ -297,11 +299,11 @@ export class HomePage {
   }
 
 }
-{% endhighlight %}
+```
 
 Ahora vamos a abrir el archivo `home.html` y vamos a incluir un div con un `id=”map”`.
 
-{% highlight html linenos %}
+```html
 <ion-header>
   <ion-navbar color="primary">
     <ion-title>
@@ -313,11 +315,11 @@ Ahora vamos a abrir el archivo `home.html` y vamos a incluir un div con un `id=�
 <ion-content>
   <div id="map"></div>
 </ion-content>
-{% endhighlight %}
+```
 
 Ahora vamos a nuestro archivo `home.scss` e incluiremos el siguiente código.
 
-{% highlight scss linenos %}
+```css
 page-home {
   #map{
     display: block;
@@ -325,7 +327,7 @@ page-home {
     width: 100%;
   }
 }
-{% endhighlight %}
+```
 
 Ya con esto debería de quedar todo listo. Ahora vamos a compilar nuestro proyecto y realizaremos una prueba.
 
