@@ -1,8 +1,8 @@
 ---
 layout: post
 title: "Usando la cámara con Ionic"
-date: 2016-07-11
-tags: [native, demos, ionic2]
+date: 2017-05-11
+tags: [native, demos]
 categories: ionic2
 repo: "https://github.com/ion-book/demo102"
 author: nicobytes
