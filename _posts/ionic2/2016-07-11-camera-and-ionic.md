@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Usando la cámara con Ionic"
+title: "Usando la cámara con Ionic, en 4 pasos."
 date: 2017-05-11
 tags: [native, demos]
 categories: ionic2
