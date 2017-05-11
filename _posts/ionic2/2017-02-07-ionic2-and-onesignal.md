@@ -197,7 +197,7 @@ Muestro lo screenShot de las notificaciones push que llegan.
 
 ## Resultado:
 
-<div class="row">
+<div class="row wrap">
   <div class="col col-100 col-md-80 offset-md-10 col-lg-80 offset-lg-10">
     <div class="row">
       <div class="col col-100 col-md-50 col-lg-50">
