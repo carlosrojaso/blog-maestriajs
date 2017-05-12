@@ -82,7 +82,7 @@ home:
   topics_text: "Construye la app que siempre soñaste usando tecnologias Web."
   topics_video: "KVoW-1tRfXM"
   topics:
-    - title: 'Conecta con Firebase 3'
+    - title: 'Conecta con Firebase'
       icon: 'icon-fireball'
       text: 'Conecta bases de datos en tiempo real con Firebase Database y Firebase Auth.'
     - title: 'Enviar Push Notifications'
@@ -94,9 +94,9 @@ home:
     - title: 'Conexion a API REST'
       icon: 'icon-code-working'
       text: 'Conecta tu servicio backend usando observables .'
-    - title: 'Angular 2 y Typescript '
+    - title: 'Angular y Typescript '
       icon: 'icon-social-angular'
-      text: 'Aprende Angular 2 y Typescript para desarrollar con Ionic 2.'
+      text: 'Aprende Angular y Typescript para desarrollar con Ionic.'
     - title: 'UI/UX usando SASS'
       icon: 'icon-social-sass'
       text: 'Modifica y crea tu propia interfaz haciendo uso de SASS.'
@@ -108,7 +108,7 @@ home:
       text: 'Compila y publica tu increible app en Google play y App store'
     - title: 'Aprende con buenas practicas'
       icon: 'icon-android-favorite'
-      text: 'Sigue las mejores practicas entendiendo la arquirectuta de Ionic 2.'
+      text: 'Sigue las mejores practicas entendiendo la arquirectuta de Ionic.'
   blog_title: 'Nuestro Blog'
   blog_text: 'Somos una comunidad de Ionic en español. Aprende a crear apps con HTML, CSS, JS.'
   blog_btn_text: 'Ver más artículos'

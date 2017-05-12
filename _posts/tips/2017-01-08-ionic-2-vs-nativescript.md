@@ -6,6 +6,7 @@ date: 2017-01-08
 tags: [tips, ionic2, news]
 categories: tips
 author: nicobytes
+video: true
 cover: "https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2Fionicvsnative%2FFOLLOW.jpg?alt=media"
 ---
 

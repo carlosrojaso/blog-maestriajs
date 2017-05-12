@@ -5,6 +5,7 @@ date: 2016-10-30
 tags: [testing, ionic2]
 categories: tips
 author: nicobytes
+video: true
 cover: "https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2Ftdd%2Ftdd.jpg?alt=media"
 ---
 
