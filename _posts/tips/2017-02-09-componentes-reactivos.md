@@ -46,10 +46,22 @@ Si todo muy bonito, pero que significa esto?? cual es la gracia, si yo ya tenia 
 El primer ejemplo antes de meterme un poco mas en todo esto es el siguiente
 
 ### NO REACTIVO
-<script src="https://gist.github.com/jorgeucano/1259ed1e95e32a167558e3fe23cdf488.js"></script>
+```js
+var a = 5;
+var b = 10;
+var c = a + b;
+a = 10;
+if (c == 20 ) // false
+```
 
 ### REACTIVO
-<script src="https://gist.github.com/jorgeucano/22a49ec08a902a156167736317b454d6.js"></script>
+```js
+var a = 5;
+var b = 10;
+var c = a + b;
+var a = 10;
+if (c == 20)  // true
+```
 
 Claro, el código es el mismo, ahora uno es false (que parece mas lógico) y el otro es true…
 
@@ -103,11 +115,11 @@ Analizando un poco todo , importamos muchas cosas con RX no ?
 
 Arranquemos con los imports
 
-<blockquote>import { Observable } from ‘rxjs/Observable’;
-
+```ts
+import { Observable } from ‘rxjs/Observable’;
 import { RouteParams } from ‘@ngrx/router’;
-
-import ‘rxjs/add/operator/pluck’;</blockquote>
+import ‘rxjs/add/operator/pluck’
+```
 
 Las tres son de la librería Rx, unas directo de RxJS (de la que venimos hablando) y el router es de ngrx que es la implementación de RxJS para Angular2.
 
