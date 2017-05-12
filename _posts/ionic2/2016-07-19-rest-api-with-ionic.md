@@ -1,8 +1,8 @@
 ---
 layout: post
 title: "Conectado una API REST con Ionic"
-date: 2016-07-19
-tags: [rest, demos]
+date: 2017-05-12
+tags: [api, demos]
 categories: ionic2
 repo: "https://github.com/ion-book/demo103"
 author: nicobytes
