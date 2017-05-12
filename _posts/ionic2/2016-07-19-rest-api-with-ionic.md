@@ -127,7 +127,7 @@ import { UserService } from '../providers/user-service';
 export class AppModule {}
 ```
 
-# Paso 3: Conectarse a Random User API
+# Paso 4: Conectarse a Random User API
 
 Random User es un **REST API** que nos retorna usuarios aleatoriamente, pueden consultar la docs de esta API [aquí](https://randomuser.me/documentation){:target="_blank"}.
 
@@ -224,7 +224,7 @@ export class UserService {
 
 {% include blog/subscribe.html %}
 
-# Paso 4: Inyectar el servicio.
+# Paso 5: Inyectar el servicio.
 
 Desde el archivo `home.ts` vamos a inyectar a `UserService`, de esta manera:
 
@@ -261,7 +261,7 @@ export class HomePage {
 
 Importamos el servicio `UserService` desde su ubicación, luego definiremos `users` como un array vacío, luego en el constructor inyectamos como una dependencia a `UsersService` y finalmente dentro del método `ionViewDidLoad` llamamos al método `getUsers` que hará la solicitud y finalmente la respuesta la asigna a `this.users`.
 
-# Paso 5: El template
+# Paso 6: El template
 
 Ahora en el template de `home.html` lo único que nos queda es mostrar los usuarios, básicamente iteramos array de users y luego solo mostramos las atributos de cada usuario.:
 
