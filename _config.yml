@@ -19,9 +19,9 @@ excerpt_separator: <!--summary-->
 # ==============================================================
 # Banner Course
 banner_course:
-  text: 'Hemos creado un increible curso de nuestra experiencia en Colombia, Chile, Bolivia y Peru.'
-  btn_text: 'Ver Curso'
-  url: 'http://www.ng-classroom.com/p/curso-profesional-ionic-2-0?ref=ionbook'
+  text: 'Suscribete a nuestra lista de correos y nunca te pierdas un Tutorial.'
+  btn_text: 'Suscribirme'
+  url: 'http://eepurl.com/b5l-Ff'
 # ==============================================================
 # Banner Slack
 banner_slack:
@@ -77,7 +77,7 @@ social_links:
 # Home Page
 home:
   banner_title: "Aprende <span class='underline'>Ionic</span> y desarrolla increibles apps para Android y IOS."
-  banner_text: "Inscríbete en nuestra lista de correos, recibe las últimas noticias y un paso a paso para construir tu primera App en Ionic."
+  banner_text: "Hemos creado un curso integral en Videos para que aprendas todo lo necesario para enviar tus Apps al App Store."
   topics_title: "¿Que aprenderás?"
   topics_text: "Construye la app que siempre soñaste usando tecnologias Web."
   topics_video: "KVoW-1tRfXM"

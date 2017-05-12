@@ -66,25 +66,13 @@
   <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
   <script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
   <script async custom-element="amp-social-share" src="https://cdn.ampproject.org/v0/amp-social-share-0.1.js"></script>
-  <!--<script async type="text/javascript">
-    (function(p,u,s,h){
-        p._pcq=p._pcq||[];
-        p._pcq.push(['_currentTime',Date.now()]);
-        s=u.createElement('script');
-        s.type='text/javascript';
-        s.async=true;
-        s.src='https://www.ion-book.com/js/cd961b7fc40d92661a578254340c720d.js';
-        h=u.getElementsByTagName('script')[0];
-        h.parentNode.insertBefore(s,h);
-    })(window,document);
-  </script>-->
 
 <!-- TODO refactoring -->
 {% if page.title != "Home" and page.title != "Blog" %}
 <script async custom-element="amp-iframe" src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"></script>
 {% endif%}
 
-{% if page.title == "Home" %}
+{% if page.title == "Yolo" %}
 <script async custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
 {% endif%}
 
