@@ -5,17 +5,17 @@
         <a href="{{ "/"  | prepend: site.baseurl }}">
           <amp-img src="{{ '/images/ion-book-wh.png'  | prepend: site.baseurl }}"  width="553" height="193" layout="responsive"></amp-img>
         </a>
-        <p>{{ site.footer.text }}</p>
+        <p>{{ site.data.footer.text }}</p>
         </ul>
       </div>
       <div class="col col-100 col-md-33 col-lg-33">
         <ul class="menu-footer">
-          {% for link in site.menu_footer %}<li>
+          {% for link in site.data.nav.menu_footer %}<li>
               <a {% if page.title == link.title %}class="active"{% endif %} href="{{ link.url }}" target="{{link.target}}">{{ link.title }}</a>
           </li>{% endfor %}
         </ul>
         <div>
-            {% for social in site.social_links %}
+            {% for social in site.data.general.social_links %}
             <a href="{{ social.url }}" target="_blank" class="btn-social">
               <div class="icon {{social.icon}}"></div>
             </a>

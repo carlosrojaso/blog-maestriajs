@@ -1,0 +1,25 @@
+# ==============================================================
+# Menu Header
+menu_header:
+  - title: Blog
+    url: '/blog'
+    target: '_self'
+  - title: Cursos
+    url: 'http://www.ng-classroom.com/'
+    target: '_blank'
+    
+# ==============================================================
+# Menu Footer
+menu_footer:
+  - title: Home
+    url: '/'
+    target: '_self'
+  - title: Blog
+    url: '/blog'
+    target: '_self'
+  - title: Autores
+    url: '/blog/authors'
+    target: '_self'
+  - title: Codigo de Conducta
+    url: 'https://github.com/ion-book/codigo-de-conducta'
+    target: '_blank'

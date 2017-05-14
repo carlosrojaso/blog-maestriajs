@@ -1,0 +1,39 @@
+banner_title: "Aprende <span class='underline'>Ionic</span> y desarrolla increibles apps para Android y IOS."
+banner_text: "Hemos creado un curso integral en Videos para que aprendas todo lo necesario para enviar tus Apps al App Store."
+
+blog_title: 'Nuestro Blog'
+blog_text: 'Somos una comunidad de Ionic en español. Aprende a crear apps con HTML, CSS, JS.'
+blog_btn_text: 'Ver más artículos'
+
+topics_title: "¿Que aprenderás?"
+topics_text: "Construye la app que siempre soñaste usando tecnologias Web."
+topics_video: "KVoW-1tRfXM"
+
+topics:
+- title: 'Conecta con Firebase'
+  icon: 'icon-fireball'
+  text: 'Conecta bases de datos en tiempo real con Firebase Database y Firebase Auth.'
+- title: 'Enviar Push Notifications'
+  icon: 'icon-android-notifications'
+  text: 'Aprende a implementar el sistema de mensajeria Push.'
+- title: 'Implementa Ionic Native'
+  icon: 'icon-ionic'
+  text: 'Accese al recursos nativos del dispositivo, como Camera, Geolocation etc.'
+- title: 'Conexion a API REST'
+  icon: 'icon-code-working'
+  text: 'Conecta tu servicio backend usando observables .'
+- title: 'Angular y Typescript '
+  icon: 'icon-social-angular'
+  text: 'Aprende Angular y Typescript para desarrollar con Ionic.'
+- title: 'UI/UX usando SASS'
+  icon: 'icon-social-sass'
+  text: 'Modifica y crea tu propia interfaz haciendo uso de SASS.'
+- title: 'Reactive Forms & Validations'
+  icon: 'icon-android-list'
+  text: 'Aprende a controlar formularios y manejar poderosas validaciones.'
+- title: 'Publica tu app en tiendas'
+  icon: 'icon-upload'
+  text: 'Compila y publica tu increible app en Google play y App store'
+- title: 'Aprende con buenas practicas'
+  icon: 'icon-android-favorite'
+  text: 'Sigue las mejores practicas entendiendo la arquirectuta de Ionic.'

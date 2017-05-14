@@ -6,7 +6,7 @@
       </a>
     </div>
     <div class="right-nav">
-      {% for link in site.menu_header %}<div class="tab">
+      {% for link in site.data.nav.menu_header %}<div class="tab">
           <a {% if page.title == link.title %}class="active"{% endif %} href="{{ link.url }}" target="{{link.target}}">{{ link.title }}</a>
       </div>{% endfor %}
       <button class="tab menu" on='tap:sidebar.toggle'></button>

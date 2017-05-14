@@ -1,5 +1,5 @@
 <head>
- {% if page && page.layout == 'post' %}{% for item in site.authors %}{% if item.id == page.author%}{% assign author = item %}{% endif %}{% endfor %}
+ {% if page && page.layout == 'post' %}{% for item in site.data.authors %}{% if item.id == page.author%}{% assign author = item %}{% endif %}{% endfor %}
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
@@ -67,11 +67,9 @@
   <script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
   <script async custom-element="amp-social-share" src="https://cdn.ampproject.org/v0/amp-social-share-0.1.js"></script>
 
-<!-- TODO refactoring -->
-{% if page.title != "Home" and page.title != "Blog" %}
+{% if page.layout == 'post' %}
 <script async custom-element="amp-iframe" src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"></script>
 {% endif%}
-
 {% if page.video %}
 <script async custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
 {% endif%}

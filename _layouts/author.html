@@ -1,7 +1,7 @@
 ---
 layout: default
 ---
-{% for item in site.authors %}{% if item.id == page.author %}{% assign author = item %}{% endif %}{% endfor %}
+{% for item in site.data.authors %}{% if item.id == page.author %}{% assign author = item %}{% endif %}{% endfor %}
 {% include blog/header.html %}
 {% assign posts = site.posts | where:"draft", "false" | where:"author", author.id %}
 <div class="content">

@@ -6,7 +6,7 @@
   <section>
     <nav>
       <ul>
-        {% for link in site.menu_header %}<li>
+        {% for link in site.data.nav.menu_header %}<li>
           <a {% if page.title == link.title %}class="active"{% endif %} href="{{ link.url }}" target="{{ link.target }}">{{ link.title }}</a>
           {% if link.title == 'Blog' %}<ul>
             {% for item_page in site.pages %}{% if item_page.layout == "category" %}<li>
