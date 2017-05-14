@@ -16,6 +16,7 @@ redcarpet:
 sass:
     style: compressed
 excerpt_separator: <!--summary-->
+exclude: [CNAME,'*.sh','*.json','README.md']
 # ==============================================================
 # Banner Course
 banner_course:
