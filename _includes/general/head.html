@@ -1,5 +1,5 @@
 <head>
- {% if page && page.layout == 'post' %}{% for item in site.data.authors %}{% if item.id == page.author%}{% assign author = item %}{% endif %}{% endfor %}
+  {% if page && page.layout == 'post' %}{% for item in site.data.authors %}{% if item.id == page.author%}{% assign author = item %}{% endif %}{% endfor %}
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
@@ -9,21 +9,21 @@
   <!-- SE0 -->
   <meta name="keywords" content="{% if page.keywords %}{{ page.keywords }}{% endif %}{{ site.keywords }}">
   <meta name="description" content="{% if page.excerpt %}{{ page.excerpt  | remove: '<amp-img>' | remove: '</amp-img>' | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
-  <link rel="amphtml" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.path }}" />
-  <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.path }}">
-  <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.path }}" />
+  <link rel="amphtml" href="{{ page.url | replace:'index.html','' | prepend: site.url }}" />
+  <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.url }}">
+  <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml"| prepend: site.url }}" />
   <script type="application/ld+json">
     {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
         "mainEntityOfPage":{
             "@type":"WebPage",
-            "@id":"{{site.path}}{{ page.url }}"
+            "@id":"{{site.url}}{{ page.url }}"
         },
         "headline": "{{ page.title }}",
         "image": {
           "@type": "ImageObject",
-          "url": "{{ page.cover }}",
+          "url": "{{site.url}}{{ page.cover }}",
           "width": 1024,
           "height": 512
         },
@@ -41,12 +41,12 @@
   </script>{% endif %}
   <!-- facebook -->
   <meta property="fb:app_id" content="877264572411311" /> 
-  <meta property="og:url" content="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.path }}" />
+  <meta property="og:url" content="{{ page.url | replace:'index.html','' | prepend: site.url }}" />
   <meta property="og:type" content="article" />
   <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}" />
   <meta property="og:description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}"
   />
-  <meta property="og:image" content="{% if page.cover %}{{ page.cover }}{% else %}{{ site.cover | prepend: '/' | prepend: site.baseurl | prepend: site.path }}{% endif %}" />
+  <meta property="og:image" content="{% if page.cover %}{{ page.cover }}{% else %}{{ site.cover | prepend: site.url }}{% endif %}" />
   <meta property="og:site_name" content="ion-book" />
   {% if author &&  author.facebook_url  %}<meta property="article:author" content="{{ author.facebook_url }}">{% endif %}
   <!-- twitter -->
@@ -55,7 +55,7 @@
   <meta name="twitter:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}" />
   <meta name="twitter:description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}"
   />
-  <meta name="twitter:image" content="{% if page.cover %}{{ page.cover }}{% else %}{{ site.cover | prepend: site.baseurl | prepend: site.path }}{% endif %}" />
+  <meta name="twitter:image" content="{% if page.cover %}{{ page.cover }}{% else %}{{ site.cover | prepend: site.url }}{% endif %}" />
   <!-- Styles -->
   <link href="https://fonts.googleapis.com/css?family=Montserrat|Open+Sans" rel="stylesheet" type="text/css">
   <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
