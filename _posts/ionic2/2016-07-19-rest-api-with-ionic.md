@@ -23,7 +23,7 @@ versions:
 
 > Una parte fundamental de cualquier aplicación es conectarse con servicio externos, en este caso vamos a conectarnos con una **API REST**. Vamos a crear una aplicación que se contecte con [http://randomuser.me/](http://randomuser.me/){:target="_blank"} un API con información de usuarios aleatorios.
 
-<amp-img width="1848" height="1039" layout="responsive" src="http://i.imgur.com/tDpJiCR.jpg"></amp-img>
+<amp-img width="1848" height="1039" layout="responsive" src="/images/posts/ionic2/2016-07-19-rest-api-with-ionic/cover.jpg"></amp-img>
 
 # Actualización (01/05/2017)
 <hr/>
