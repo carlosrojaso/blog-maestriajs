@@ -23,7 +23,7 @@ versions:
 
 > En este artículo conectar una aplicación de ionic con el recurso nativo de la cámara con ionic native y ver varias de las opciones que nos ofrece ionic para manipular la cámara.
 
-<amp-img width="810" height="540" layout="responsive" src="{{site.url}}/images/posts/ionic2/2016-07-11-camera-and-ionic/cover.jpg"></amp-img>
+<amp-img width="810" height="540" layout="responsive" src="{{site.path}}/images/posts/ionic2/2016-07-11-camera-and-ionic/cover.jpg"></amp-img>
 
 # Actualización (01/05/2017)
 <hr/>

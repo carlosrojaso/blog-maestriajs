@@ -21,7 +21,7 @@ versions:
     number: '3.0.0'
 ---
 
-> En artículos pasados ya hemos hablado de firebase y sus [**servicios**]({{site.urlblog}}/ionic2/firebase-3){:target="_blank"} y una breve implementación con [**Ionic**]({{site.urlblog}}/ionic2/ionic-2-firebase-3){:target="_blank"}, ahora vamos a hacer una integración con su servicio de base de datos en tiempo real, usando la libreria de [**AngularFire**](https://angularfire2.com/api/){:target="_blank"} creamos una simple aplicación de tareas.
+> En artículos pasados ya hemos hablado de firebase y sus [**servicios**]({{site.urlbloglog}}/ionic2/firebase-3){:target="_blank"} y una breve implementación con [**Ionic**]({{site.urlbloglog}}/ionic2/ionic-2-firebase-3){:target="_blank"}, ahora vamos a hacer una integración con su servicio de base de datos en tiempo real, usando la libreria de [**AngularFire**](https://angularfire2.com/api/){:target="_blank"} creamos una simple aplicación de tareas.
 
 <amp-img width="1920" height="1080" layout="responsive" src="/images/posts/ionic2/2016-08-02-firebase-database-and-ionic/cover.jpg" alt="firebase-database-and-ionic-2"></amp-img>
 

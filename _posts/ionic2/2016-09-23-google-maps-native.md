@@ -162,7 +162,7 @@ export class HomePage {
 ...
 ```
 
-Las librerias Geolocation y GoogleMaps hacen parte de [**Ionic Native**]({{site.urlblog}}/ionic2/ionic-native){:target="_blank"}:
+Las librerias Geolocation y GoogleMaps hacen parte de [**Ionic Native**]({{site.urlbloglog}}/ionic2/ionic-native){:target="_blank"}:
 
 Para este ejemplo vamos a declarar dos métodos en nuestro archivo `home.ts` estos se llamarán:
 

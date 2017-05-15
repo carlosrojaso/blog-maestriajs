@@ -105,7 +105,7 @@ Con estas bases y conceptos ahora podremos hacer un demo sencillo donde haremos 
 
 ## Paso 1: Iniciando el proyecto
 
-Lo primero que haremos será iniciar un nuevo proyecto con ionic, si no lo recuerdas puedes ver esto con mas detalle en la [Introduccion a Ionic 2]({{site.urlblog}}/ionic2/ionic2){:target="_blank"}.
+Lo primero que haremos será iniciar un nuevo proyecto con ionic, si no lo recuerdas puedes ver esto con mas detalle en la [Introduccion a Ionic 2]({{site.urlbloglog}}/ionic2/ionic2){:target="_blank"}.
 Vamos a nuestra terminal y ejecutamos:
 
 ```

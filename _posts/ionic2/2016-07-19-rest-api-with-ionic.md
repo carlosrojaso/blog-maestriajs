@@ -91,7 +91,7 @@ export class AppModule {}
 
 # Paso 3: Crear provider
 
-Vamos a usar [ionic generator]({{site.urlblog}}/tips/ionic-generator/){:target="_blank"} para crear nuestro nuevo proveedor de datos
+Vamos a usar [ionic generator]({{site.urlbloglog}}/tips/ionic-generator/){:target="_blank"} para crear nuestro nuevo proveedor de datos
 
 ```
 ionic g provider user-service
