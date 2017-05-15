@@ -1,16 +1,24 @@
 ---
 layout: post
-title: "Google Maps JS + Ionic 2 en 4 pasos"
+title: "Google Maps JS + Ionic en 4 pasos"
 date: 2016-08-30
-tags: [maps, demos, ionic2]
+tags: [maps, demos]
 categories: ionic2
-laucher: "/launcher/demo105"
+repo: "https://github.com/ion-book/demo105"
 author: nicobytes
 cover: "http://i.cubeupload.com/gxxOpn.png"
 remember: true
 versions:
   - title: 'ionic'
-    number: '2.0.0-rc2'
+    number: '3.2.1'
+  - title: 'ionic-native'
+    number: '3.7.0'
+  - title: 'ionic-app-scripts'
+    number: '1.3.7'
+  - title: 'cordova-cli'
+    number: '7.0.1'
+  - title: 'ionic-cli'
+    number: '3.0.0'
 ---
 
 > La interacción con mapas en aplicaciones móviles es muy común y en este artículo explicaremos cómo integrar **Google Maps** usando el SDk de JS con **Ionic 2**.

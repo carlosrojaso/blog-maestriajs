@@ -11,13 +11,13 @@ versions:
     number: '2.0.0-rc2'
 ---
 
-> Incluir **Firebase** en un proyecto de ionic puede ser algo complejo pero en este último release de [**Ionic 2 RC2**]({{site.urlblog}}/news/ionic-2-rc-2){:target="_blank"}, es mucho más fácil hacer la implementación ya que no toca entrar a archivos de configuración etc etc.
+> Incluir **Firebase** en un proyecto de ionic puede ser algo complejo pero en este último release de [**Ionic 2 RC2**]({{site.urlbloglog}}/news/ionic-2-rc-2){:target="_blank"}, es mucho más fácil hacer la implementación ya que no toca entrar a archivos de configuración etc etc.
 
 <amp-img width="1024" height="512" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2Fionic-2-rc2-firebase-3%2FFirebase%203%20%2B%20Ionic%202.png?alt=media"></amp-img>
 
 ## Paso 1: Iniciando el proyecto
 
-Lo primero que haremos será iniciar un nuevo proyecto con ionic, si no lo recuerdas puedes ver esto con mas detalle en la [Introduccion a Ionic 2]({{site.urlblog}}/ionic2/ionic2){:target="_blank"}.
+Lo primero que haremos será iniciar un nuevo proyecto con ionic, si no lo recuerdas puedes ver esto con mas detalle en la [Introduccion a Ionic 2]({{site.urlbloglog}}/ionic2/ionic2){:target="_blank"}.
 Vamos a nuestra terminal y ejecutamos:
 
 ```

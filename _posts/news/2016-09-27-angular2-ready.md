@@ -8,7 +8,7 @@ author: carlosrojas
 cover: "http://i.imgur.com/ZiY7lT8.jpg"
 ---
 
-<amp-img width="480" height="264" layout="responsive" src="{{site.urlblog}}/images/Angular2.gif"></amp-img>
+<amp-img width="480" height="264" layout="responsive" src="{{site.urlbloglog}}/images/Angular2.gif"></amp-img>
 
 Hola a todos!!!
 

@@ -8,7 +8,7 @@ author: carlosrojas
 cover: "http://blog.ionic.io/wp-content/uploads/2016/06/ionic-native-header.jpg"
 ---
 
-Ya hemos hablado sobre [Ionic Native]({{site.urlblog}}/ionic2/ionic-native) en este blog.
+Ya hemos hablado sobre [Ionic Native]({{site.urlbloglog}}/ionic2/ionic-native) en este blog.
 
 <amp-img width="1400" height="600" layout="responsive" src="http://blog.ionic.io/wp-content/uploads/2016/06/ionic-native-header.jpg"></amp-img>
 

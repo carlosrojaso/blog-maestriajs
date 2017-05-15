@@ -5,6 +5,7 @@ keywords: "ion-book,html5,javascript,mobile,ionic,hybrid,phonegap,cordova,native
 baseurl: ""
 urlblog: '/blog'
 cover: "/images/cover.jpg"
+path: 'https://www.ion-book.com/'
 
 timezone: "America/Bogota"
 
