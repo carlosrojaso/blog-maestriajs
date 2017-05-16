@@ -345,7 +345,6 @@ Ahora debemos agregar `HttpModule` en nuestro archivo `app.module.ts`, este paso
 
 ```ts
 import { HttpModule } from '@angular/http';
-
 ...
 
 @NgModule({
