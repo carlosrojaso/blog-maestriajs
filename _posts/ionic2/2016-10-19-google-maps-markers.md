@@ -13,7 +13,7 @@ versions:
     number: '2.0.0'
 ---
 
-> Ya hemos visto en los posts anteriores sobre cómo integrar Google Maps con nuestra aplicación en Ionic 2, bien sea de forma [nativa]({{site.urlbloglog}}/ionic2/google-maps-native){:target="_blank"} o con [javascript]({{site.urlbloglog}}//ionic2/google-maps-js-and-ionic-2){:target="_blank"}. En este post veremos un poco más sobre la integración de **Google Maps con Ionic 2** y es sobre el tema de los **Markers**.
+> Ya hemos visto en los posts anteriores sobre cómo integrar Google Maps con nuestra aplicación en Ionic 2, bien sea de forma [nativa]({{site.urlblog}}/ionic2/google-maps-native){:target="_blank"} o con [javascript]({{site.urlblog}}//ionic2/google-maps-js-and-ionic-2){:target="_blank"}. En este post veremos un poco más sobre la integración de **Google Maps con Ionic 2** y es sobre el tema de los **Markers**.
 
 <amp-img width="1200" height="675" layout="responsive" src="http://i.cubeupload.com/y2EKrQ.jpg"></amp-img>
 
@@ -27,7 +27,7 @@ ionic start gm-markers blank --v2
 
 ## 2. Instalación de los Plugins de Cordova y de las Api keys de Android y iOS 
 
-Si te sientes un poco perdido sobre el tema de las Api keys, te invito a leer el post de [**Google maps native**]({{site.urlbloglog}}/ionic2/google-maps-native){:target="_blank"}
+Si te sientes un poco perdido sobre el tema de las Api keys, te invito a leer el post de [**Google maps native**]({{site.urlblog}}/ionic2/google-maps-native){:target="_blank"}
 
 ```
 cd gm-markers
@@ -43,7 +43,7 @@ ionic plugin add cordova-plugin-geolocation
 
 ## 3. Integración de Google Maps Nativo
 
-Tomando en cuenta el post de [**Google maps native**]({{site.urlbloglog}}/ionic2/google-maps-native){:target="_blank"}, integramos rapidamente nuestro mapa.
+Tomando en cuenta el post de [**Google maps native**]({{site.urlblog}}/ionic2/google-maps-native){:target="_blank"}, integramos rapidamente nuestro mapa.
 
 En `home.html`, debemos colocar un div con nuestro id ‘map’, o como queramos llamarlo.
 

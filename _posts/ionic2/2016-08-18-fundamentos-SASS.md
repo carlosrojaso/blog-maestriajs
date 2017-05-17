@@ -14,7 +14,7 @@ cover: "http://sass-lang.com/assets/img/styleguide/color-1c4aab2b.png"
   </div>
 </div>
 
-Como hablamos [anteriormente]({{site.urlbloglog}}/ionic2/personalizando-vistas) la manera de personalizar nuestras vistas en ionic 2 es a traves de los archivos SASS.
+Como hablamos [anteriormente]({{site.urlblog}}/ionic2/personalizando-vistas) la manera de personalizar nuestras vistas en ionic 2 es a traves de los archivos SASS.
 
 En este post vamos a hablar sobre los Fundamentos de SASS, para que de esta manera no tengamos problemas al realizar nuestras modificaciones.
 

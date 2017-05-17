@@ -22,7 +22,7 @@ versions:
     number: '3.0.0'
 ---
 
-> Anteriormente hemos hablado sobre [**firebase**]({{site.urlbloglog}}//ionic2/firebase-database-and-ionic-2){:target="_blank"}, [**pouch**]({{site.urlbloglog}}/tips/pouchdb){:target="_blank"} y [**Rest API**]({{site.urlbloglog}}//ionic2/rest-api-with-ionic-2){:target="_blank"} para el consumo de datos, ahora en este nuevo demo haremos la integración con **SQLite** que es una base de datos nativa que proveen los dispositivos móviles.
+> Anteriormente hemos hablado sobre [**firebase**]({{site.urlblog}}//ionic2/firebase-database-and-ionic-2){:target="_blank"}, [**pouch**]({{site.urlblog}}/tips/pouchdb){:target="_blank"} y [**Rest API**]({{site.urlblog}}//ionic2/rest-api-with-ionic-2){:target="_blank"} para el consumo de datos, ahora en este nuevo demo haremos la integración con **SQLite** que es una base de datos nativa que proveen los dispositivos móviles.
 
 <amp-img width="1024" height="512" layout="responsive" src="/images/posts/ionic2/2016-11-28-sqlite-and-ionic-2/cover.jpg" alt="SQLite + Ionic 2 en 5 pasos"></amp-img>
 
@@ -178,7 +178,7 @@ export class MyApp {
 
 ## Paso 4: Crear un servicio
 
-Vamos a crear el servicio `TasksService` que se encargará de manejar todos los datos, usaremos [**ionic generator**]({{site.urlbloglog}}/ionic2/ionic-generator){:target="_blank"} para crear este servicio:
+Vamos a crear el servicio `TasksService` que se encargará de manejar todos los datos, usaremos [**ionic generator**]({{site.urlblog}}/ionic2/ionic-generator){:target="_blank"} para crear este servicio:
 
 ```
 ionic g provider tasks-service

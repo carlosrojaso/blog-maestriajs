@@ -23,7 +23,7 @@ versions:
 
 Por eso es de vital importancia hacer un buen manejo de ellos, tener las validaciones adecuadas y por esto Angular2 nos ofrece **FormBuilder**, una clase que nos provee una completa herramienta para controlar y validar formularios de forma muy eficiente y sencilla.
 
-Antes puedes ver nuestro artículo anterior [**Forms con Ionic 2**]({{site.urlbloglog}}/ionic2/form-builder/){:target="_blank"} donde hacemos la construcción de un formulario sencillo, en este artículo nos enfocaremos en las **validaciones**.
+Antes puedes ver nuestro artículo anterior [**Forms con Ionic 2**]({{site.urlblog}}/ionic2/form-builder/){:target="_blank"} donde hacemos la construcción de un formulario sencillo, en este artículo nos enfocaremos en las **validaciones**.
 
 En Angular 2 existen tres maneras de trabajar con formularios:
 
@@ -149,7 +149,7 @@ Ahora si con estos conceptos claros podemos iniciar con nuestro demo (Demo Time)
 
 ## Paso 1: Iniciando el proyecto
 
-Lo primero que haremos será iniciar un nuevo proyecto con ionic, si no lo recuerdas puedes ver esto con mas detalle en la [Introduccion a Ionic 2]({{site.urlbloglog}}/ionic2/ionic2){:target="_blank"}.
+Lo primero que haremos será iniciar un nuevo proyecto con ionic, si no lo recuerdas puedes ver esto con mas detalle en la [Introduccion a Ionic 2]({{site.urlblog}}/ionic2/ionic2){:target="_blank"}.
 Vamos a nuestra terminal y ejecutamos:
 
 ```

@@ -29,9 +29,9 @@ La anterior información se sacó de la web de [**google-maps**](https://develop
 
 Antes de iniciar recomiendo haber leído estos artículos de nuestros compañeros.
 
-Aquí enseña cómo obtener el ApiKey: [**Google Maps Native**]({{site.urlbloglog}}/ionic2/google-maps-native/){:target="_blank"}
+Aquí enseña cómo obtener el ApiKey: [**Google Maps Native**]({{site.urlblog}}/ionic2/google-maps-native/){:target="_blank"}
 
-Aquí enseña a como colocar un marcador en nuestro mapa: [**Google Maps Markers**]({{site.urlbloglog}}/ionic2/google-maps-markers/){:target="_blank"}
+Aquí enseña a como colocar un marcador en nuestro mapa: [**Google Maps Markers**]({{site.urlblog}}/ionic2/google-maps-markers/){:target="_blank"}
 
 Entonces ya teniendo el concepto claro y de haber leído los artículos anteriores, vamos a proceder a realizar nuestro proyecto de ejemplo.
 
@@ -55,7 +55,7 @@ cd geocoder
 ionic platform add android
 ```
 
-4.- Ahora que hemos agregado la plataforma podemos hacer uso de [**Ionic Native**]({{site.urlbloglog}}/ionic2/ionic-native/){:target="_blank"}, para incluir a "Geolocation, GoogleMaps, Toast" sólo tenemos que hacer esto:
+4.- Ahora que hemos agregado la plataforma podemos hacer uso de [**Ionic Native**]({{site.urlblog}}/ionic2/ionic-native/){:target="_blank"}, para incluir a "Geolocation, GoogleMaps, Toast" sólo tenemos que hacer esto:
 
 ```
 ionic plugin add cordova-plugin-geolocation --save
@@ -71,7 +71,7 @@ ionic plugin add cordova-plugin-googlemaps --variable API_KEY_FOR_ANDROID="YOUR_
 code .
 ```
 
-6 .- Copiamos el script que realizó [**Mayra Rodriguez**]({{site.urlbloglog}}/authors/mayrititis/){:target="_blank"} en su post anterior sobre [**Google Maps Markers**]({{site.urlbloglog}}/ionic2/google-maps-markers/){:target="_blank"}, ya lo tienes copiado verdad?.
+6 .- Copiamos el script que realizó [**Mayra Rodriguez**]({{site.urlblog}}/authors/mayrititis/){:target="_blank"} en su post anterior sobre [**Google Maps Markers**]({{site.urlblog}}/ionic2/google-maps-markers/){:target="_blank"}, ya lo tienes copiado verdad?.
 
 Ok, quiero creer que es así, entonces tenemos que modificar las importaciones de ionic-native.
 

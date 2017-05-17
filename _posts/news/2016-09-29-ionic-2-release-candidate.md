@@ -53,4 +53,4 @@ Ahora ya no usan gulp como apoyo para correr tareas, han creado sus scripts prop
 
 ## Pasos para actualizar [aquí](https://github.com/driftyco/ionic/blob/master/CHANGELOG.md#steps-to-upgrade-to-rc0){:target="_blank"}
 
-**Nota:** *Hay muchas cosas que cambian pero con este release candidate el equipo de ionic nos promete que ya no habrá más cambios tan robustos al fin de acabo ya es la versión casi lista para producción, así que acogeremos estos cambios pronto y actualizaremos nuestros [demos]({{site.urlbloglog}}//ionic2/){:target="_blank"} en las próximas semanas.*
+**Nota:** *Hay muchas cosas que cambian pero con este release candidate el equipo de ionic nos promete que ya no habrá más cambios tan robustos al fin de acabo ya es la versión casi lista para producción, así que acogeremos estos cambios pronto y actualizaremos nuestros [demos]({{site.urlblog}}//ionic2/){:target="_blank"} en las próximas semanas.*
