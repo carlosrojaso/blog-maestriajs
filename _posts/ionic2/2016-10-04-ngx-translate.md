@@ -56,7 +56,7 @@ El proyecto inicia con el template **blank** y por esto tendremos una estructura
   </div>
 </div>
 
-# Paso 2: Instalar ngx-translate
+## Paso 2: Instalar ngx-translate
 
 Vamos a usar `ngx-translate` que es una de las librerías más estables para nuestro objetivo.
 
@@ -65,7 +65,7 @@ npm install @ngx-translate/core --save
 npm install @ngx-translate/http-loader --save
 ```
 
-# Paso 3: Configuración
+## Paso 3: Configuración
 
 Ahora en el arhivo `app.module.ts` debemos crear una función que desde  `src/assets/i18n` obtengan los archivos de las traducciones de la aplicación, así:
 
@@ -114,7 +114,7 @@ export class AppModule {}
 
 {% include blog/subscribe.html %}
 
-# Paso 4: Crear archivos de idiomas
+## Paso 4: Crear archivos de idiomas
 
 Ahora dentro de la carpeta  `src/assets/i18n` creáremos los archivos de los idiomas en este formato:
 
@@ -151,7 +151,7 @@ Ahora dentro de la carpeta  `src/assets/i18n` creáremos los archivos de los idi
 {% endraw %}
 ```
 
-# Paso 5: Agregar TranslateModule
+## Paso 5: Agregar TranslateModule
 
 Desde Ionic 3 podemos hacer modulos por cada pagína, lo cual hace necesario que en modúlo del Home debamos importar `TranslateModule` como parte del modúlo de la pagína `home.module.ts`, así:
 
@@ -176,7 +176,7 @@ import { HomePage } from './home';
 export class HomePageModule {}
 ```
 
-# Paso 6: Definir un idioma por defecto
+## Paso 6: Definir un idioma por defecto
 
 Ahora debemos definir en `app.component.ts`, el idioma con el cual la aplicación inicia por defecto y para esto debemos usar el provider `TranslateService` e inyectarlo en nuestro constructor. 
 
@@ -211,7 +211,7 @@ export class MyApp {
 }
 ```
 
-# Paso 7: Implementar pipe
+## Paso 7: Implementar pipe
 
 Ahora solo nos queda implementar el pipe que provee `ngx-translate` para usarlo en nuestros templates:
 
