@@ -112,6 +112,8 @@ export function createTranslateLoader(http: Http) {
 export class AppModule {}
 ```
 
+{% include blog/subscribe.html %}
+
 # Paso 4: Crear archivos de idiomas
 
 Ahora dentro de la carpeta  `src/assets/i18n` creáremos los archivos de los idiomas en este formato:
