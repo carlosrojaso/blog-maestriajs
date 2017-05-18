@@ -120,29 +120,35 @@ Ahora dentro de la carpeta  `src/assets/i18n` creáremos los archivos de los idi
 
 `en.json`:
 ```json
+{% raw %}
 {
   "HELLO": "Hello",
   "WELCOME": "Welcome",
   "GREETING": "Hi, {{ value }}"
 }
+{% endraw %}
 ```
 
 `es.json`:
 ```json
+{% raw %}
 {
   "HELLO": "Hola",
   "WELCOME": "Bienvenido",
   "GREETING": "Hola, {{ value }}"
 }
+{% endraw %}
 ```
 
 `pt.json`:
 ```json
+{% raw %}
 {
   "HELLO": "Olá",
   "WELCOME": "Bem-vindo",
   "GREETING": "oi, {{ value }}"
 }
+{% endraw %}
 ```
 
 # Paso 5: Agregar TranslateModule
@@ -170,7 +176,7 @@ import { HomePage } from './home';
 export class HomePageModule {}
 ```
 
-# Paso 6: Definir idioma por defecto
+# Paso 6: Definir un idioma por defecto
 
 Ahora debemos definir en `app.component.ts`, el idioma con el cual la aplicación inicia por defecto y para esto debemos usar el provider `TranslateService` e inyectarlo en nuestro constructor. 
 
