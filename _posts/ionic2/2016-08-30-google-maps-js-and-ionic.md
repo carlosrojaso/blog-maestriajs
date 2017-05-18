@@ -117,6 +117,8 @@ Ahora iremos al archivo `index.html` que se encuentra la carpeta `src` y luego d
 </body>
 ```
 
+{% include blog/subscribe.html %}
+
 ## Paso 4: Crear mapa.
 
 Ahora ya tenemos lo necesario para integrar mapas en nuestra aplicación, vamos a realizar la importación de las librerías referente al plugin que instalamos. Para esto nos dirigimos a la carpeta del proyecto creado por ionic `app/page` y abrimos el archivo `home.ts` e importamos las librerías y por último vamos a declarar una variable global para google `declare var google;`.

@@ -392,8 +392,6 @@ El template completo es así:
 
 # Resultado:
 
-Ahora podemos ver el resultado ejecutando:
-
 <div class="row wrap">
   <div class="col col-100 col-md-33 col-lg-33">
     <amp-img width="720" height="1280" layout="responsive" src="/images/posts/ionic2/2016-08-02-firebase-database-and-ionic/result1.jpg"></amp-img>
