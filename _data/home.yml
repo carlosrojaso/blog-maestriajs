@@ -6,6 +6,7 @@ blog_text: 'Somos una comunidad de Ionic en español. Aprende a crear apps con H
 blog_btn_text: 'Ver más artículos'
 
 topics_title: "¿Que aprenderás?"
+topics_title_subtext: "Estos son algunos de los temas que podras aprender en nuestro Blog."
 topics_text: "Construye la app que siempre soñaste usando tecnologias Web."
 topics_video: "KVoW-1tRfXM"
 

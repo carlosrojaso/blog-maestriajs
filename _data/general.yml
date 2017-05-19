@@ -32,6 +32,12 @@ banner_slack:
   url: 'http://goo.gl/forms/ZCEc0cr3jydgK2wv1'
   btn_text: 'Unete'
 
+# Banner Hnagouts
+banner_hangouts:
+  title: 'No te pierdas nuestro proximo ion-hangout'
+  text: 'Cada dos semanas invitamos a un amigo de la comunidad para hablar desde sus experiencia en estos tiempos emocionantes.'
+  url: 'https://www.youtube.com/channel/UCxs-DaSRmp8k23n79WjXndw?sub_confirmation=1'
+  btn_text: 'Ir'
 
 # ==============================================================
 # Blog
