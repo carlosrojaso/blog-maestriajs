@@ -40,7 +40,7 @@ El proyecto inicia con el template **blank** y por esto tendremos una estructura
 
 <div class="row">
   <div class="col col-100 col-md-50 col-lg-50">
-    <amp-img width="348" height="270" layout="responsive" src="/images/posts/ionic2/2017-05-19-ionic-redux/tree1.png"></amp-img>
+    <amp-img  width="376" height="183" layout="responsive" src="/images/posts/ionic2/2017-05-19-ionic-redux/tree1.png"></amp-img>
   </div>
 </div>
 
@@ -63,7 +63,7 @@ npm install --save-dev ngrx-store-freeze
 
 <div class="row">
   <div class="col col-100 col-md-50 col-lg-50">
-    <amp-img width="376" height="220" layout="responsive" src="/images/posts/ionic2/2017-05-19-ionic-redux/tree2.png"></amp-img>
+    <amp-img width="348" height="270" layout="responsive" src="/images/posts/ionic2/2017-05-19-ionic-redux/tree2.png"></amp-img>
   </div>
 </div>
 
