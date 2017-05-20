@@ -258,7 +258,7 @@ export class HomePage {
     {% raw %}
         <ion-header>
 
-          <ion-navbar>
+          <ion-navbar [ngClass]="theme$ | async">
             <ion-title>Home</ion-title>
           </ion-navbar>
 
@@ -267,10 +267,31 @@ export class HomePage {
 
         <ion-content padding>
 
-          <button *ngIf="( theme$ | async ) != 'default-theme'" ion-button block (click)="changeTheme('default-theme')" >Default Theme</button>
-          <button *ngIf="( theme$ | async ) == 'default-theme'" ion-button block color="secondary" (click)="changeTheme('ion-book-theme')">Ion-book Theme</button>
+          <button *ngIf="( theme$ | async ) != 'default-theme'" ion-button block (click)="changeTheme('default-theme')" >Apply Default Theme</button>
+          <button *ngIf="( theme$ | async ) == 'default-theme'" ion-button block color="secondary" (click)="changeTheme('ion-book-theme')">Apply Ion-book Theme</button>
 
         </ion-content>
+    {% endraw %}
+```
+
+`pages\home.scss`
+
+```css
+    {% raw %}
+        page-home {
+
+            .default-theme {
+                .toolbar-background {
+                    background-color: #488aff;
+                }
+            }
+
+            .ion-book-theme {
+                .toolbar-background {
+                    background-color: #32db64;
+                }
+            }
+        }
     {% endraw %}
 ```
 
