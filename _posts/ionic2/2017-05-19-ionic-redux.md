@@ -69,66 +69,68 @@ npm install --save-dev ngrx-store-freeze
 </div>
 
 `redux-states\actions\layout.ts`
+
 ```ts
 import { Action } from '@ngrx/store';
 
 export const ActionTypes = {
-    UPDATE_THEME: '[Layout] Update Theme',
-    UPDATE_THEME_COMPLETE: '[Layout] Updated Theme COMPLETE',
-    UPDATE_THEME_FAIL: '[Layout] Updated Theme FAIL',
+  UPDATE_THEME: '[Layout] Update Theme',
+  UPDATE_THEME_COMPLETE: '[Layout] Updated Theme COMPLETE',
+  UPDATE_THEME_FAIL: '[Layout] Updated Theme FAIL',
 };
 
 export class UpdateThemeAction implements Action {
-    type = ActionTypes.UPDATE_THEME;
+  type = ActionTypes.UPDATE_THEME;
 
-    constructor(public payload: any) { }
+  constructor(public payload: any) { }
 }
 
 export class UpdateThemeFailAction implements Action {
-    type = ActionTypes.UPDATE_THEME_FAIL;
+  type = ActionTypes.UPDATE_THEME_FAIL;
 
-    constructor(public payload: any) { }
+  constructor(public payload: any) { }
 }
 
 export class UpdateThemeCompleteAction implements Action {
-    type = ActionTypes.UPDATE_THEME_COMPLETE;
+  type = ActionTypes.UPDATE_THEME_COMPLETE;
 
-    constructor(public payload: any) { }
+  constructor(public payload: any) { }
 }
 
 export type Actions =
-    UpdateThemeAction |
-    UpdateThemeCompleteAction |
-    UpdateThemeFailAction;
+  UpdateThemeAction |
+  UpdateThemeCompleteAction |
+  UpdateThemeFailAction;
 ```
 
 `redux-states\reducers\layout.ts`
+
 ```ts
 import * as layout from '../actions/layout';
 
 export interface State {
-    theme: string,
-    lang: string,
+  theme: string,
+  lang: string,
 }
 
 const initialState: State = {
-    theme: 'default-theme',
-    lang: 'es',
+  theme: 'default-theme',
+  lang: 'es',
 };
 
 export function reducer(state = initialState, action: layout.Actions): State {
-    switch (action.type) {
+  switch (action.type) {
+    case layout.ActionTypes.UPDATE_THEME_COMPLETE:
+      return Object.assign({}, state, { theme: action.payload.theme });
 
-        case layout.ActionTypes.UPDATE_THEME_COMPLETE:
-            return Object.assign({}, state, { theme: action.payload.theme });
-
-        default:
-            return state;
-    }
+    default:
+      return state;
+  }
 }
 ```
 
 `redux-states\reducers\index.ts`
+
 ```ts
 import { ActionReducer } from '@ngrx/store';
 
@@ -138,16 +140,16 @@ import { combineReducers } from '@ngrx/store';
 import * as fromLayout from './layout';
 
 const environment = {
-    production: false
+  production: false
 }
 
 export interface State {
-    layout: fromLayout.State,
+  layout: fromLayout.State,
 }
 
 
 const reducers = {
-    layout: fromLayout.reducer
+  layout: fromLayout.reducer
 };
 
 /**
@@ -158,11 +160,11 @@ const developmentReducer: ActionReducer<State> = compose(storeFreeze, combineRed
 const productionReducer: ActionReducer<State> = combineReducers(reducers);
 
 export function reducer(state: any, action: any) {
-    if (environment.production) {
-        return productionReducer(state, action);
-    } else {
-        return developmentReducer(state, action);
-    }
+  if (environment.production) {
+    return productionReducer(state, action);
+  } else {
+    return developmentReducer(state, action);
+  }
 }
 ```
 
@@ -255,50 +257,43 @@ export class HomePage {
 `pages\home.html`
 
 ```html
-    {% raw %}
-        <ion-header>
+{% raw %}
+  <ion-header>
+    <ion-navbar [ngClass]="theme$ | async">
+      <ion-title>Home</ion-title>
+    </ion-navbar>
+  </ion-header>
 
-          <ion-navbar [ngClass]="theme$ | async">
-            <ion-title>Home</ion-title>
-          </ion-navbar>
-
-        </ion-header>
-
-
-        <ion-content padding>
-
-          <button *ngIf="( theme$ | async ) != 'default-theme'" ion-button block (click)="changeTheme('default-theme')" >Apply Default Theme</button>
-          <button *ngIf="( theme$ | async ) == 'default-theme'" ion-button block color="secondary" (click)="changeTheme('ion-book-theme')">Apply Ion-book Theme</button>
-
-        </ion-content>
-    {% endraw %}
+  <ion-content padding>
+    <button *ngIf="( theme$ | async ) != 'default-theme'" ion-button block (click)="changeTheme('default-theme')" >Apply Default Theme</button>
+    <button *ngIf="( theme$ | async ) == 'default-theme'" ion-button block color="secondary" (click)="changeTheme('ion-book-theme')">Apply Ion-book Theme</button>
+  </ion-content>
+{% endraw %}
 ```
 
 `pages\home.scss`
 
-```css
-    {% raw %}
-        page-home {
+```scss
+{% raw %}
+  page-home {
+    .default-theme {
+      .toolbar-background {
+          background-color: #488aff;
+      }
+    }
 
-            .default-theme {
-                .toolbar-background {
-                    background-color: #488aff;
-                }
-            }
-
-            .ion-book-theme {
-                .toolbar-background {
-                    background-color: #32db64;
-                }
-            }
-        }
-    {% endraw %}
+    .ion-book-theme {
+      .toolbar-background {
+          background-color: #32db64;
+      }
+    }
+  }
+{% endraw %}
 ```
 
 ## Resultado:
 
 <amp-img width="1024" height="512" layout="responsive" src="/images/posts/ionic2/2017-05-19-ionic-redux/devtool1.png"></amp-img>
-
 <amp-img width="1024" height="512" layout="responsive" src="/images/posts/ionic2/2017-05-19-ionic-redux/devtool2.png"></amp-img>
 
 <br />
