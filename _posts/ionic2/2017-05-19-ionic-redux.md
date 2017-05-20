@@ -53,7 +53,7 @@ npm install --save-dev ngrx-store-freeze
 
 1. **@ngrx/core @ngrx/store** instalación del core.
 1. **@ngrx/effects** para cuando necesitemos realizar peticiones server-side.
-1. **@ngrx/store-devtools** instalación del la herramienta de desarrollo que nos permite utilizar el [**time-travelling debugger**] (https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd?hl=en).
+1. **@ngrx/store-devtools** instalación del la herramienta de desarrollo que nos permite utilizar el [time-travelling debugger](https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd?hl=en){:target="_blank"}.
 1. **ngrx-store-freeze** instalación de una librería que nos ayudara a evitar modificar el store directamente cuando estemos en modo dev
 
 ## Paso 3: Configuración del Store y los Reducers ( funciones puras )
