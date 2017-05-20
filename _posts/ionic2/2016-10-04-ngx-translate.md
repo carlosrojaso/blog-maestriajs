@@ -119,6 +119,7 @@ export class AppModule {}
 Ahora dentro de la carpeta  `src/assets/i18n` creáremos los archivos de los idiomas en este formato:
 
 `en.json`:
+
 ```json
 {% raw %}
 {
@@ -130,6 +131,7 @@ Ahora dentro de la carpeta  `src/assets/i18n` creáremos los archivos de los idi
 ```
 
 `es.json`:
+
 ```json
 {% raw %}
 {
@@ -141,6 +143,7 @@ Ahora dentro de la carpeta  `src/assets/i18n` creáremos los archivos de los idi
 ```
 
 `pt.json`:
+
 ```json
 {% raw %}
 {
