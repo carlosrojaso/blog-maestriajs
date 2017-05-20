@@ -274,19 +274,19 @@ export class HomePage {
 
 ```scss
 {% raw %}
-  page-home {
-    .default-theme {
-      .toolbar-background {
-          background-color: #488aff;
-      }
-    }
-
-    .ion-book-theme {
-      .toolbar-background {
-          background-color: #32db64;
-      }
+page-home {
+  .default-theme {
+    .toolbar-background {
+        background-color: #488aff;
     }
   }
+
+  .ion-book-theme {
+    .toolbar-background {
+        background-color: #32db64;
+    }
+  }
+}
 {% endraw %}
 ```
 
