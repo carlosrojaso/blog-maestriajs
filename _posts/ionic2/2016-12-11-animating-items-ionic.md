@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Animando items con Ionic, en 5 pasos"
-date: 2016-12-11
+date: 2017-05-21
 tags: [animations, demos]
 categories: ionic2
 repo: "https://github.com/ion-book/demo108"
@@ -174,6 +174,19 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 export class AppModule {}
 ```
 
+## Paso 2.1 (Solo para IOS): Agregar polyfill.
+
+IOS no soporta aún **Web Animations API**, por esto debemos agregaremos un polyfill que agrega  soporte para IOS, descargamos el archivo `web-animations.min.js` desde `https://rawgit.com/web-animations/web-animations-js/master/web-animations.min.js` y lo incluimos en `src/index.html`, así:
+
+```html
+<body>
+  ...
+  <script src="build/polyfills.js"></script>
+  <script src="assets/js/web-animations.min.js"></script>
+  ...
+</body>
+```
+
 ## Paso 3: Creando la animación
 
 Vamos a crear un `trigger` llamado **itemState** que tendrá el estado **in**, este estado representa al item cuando sea agregado a la lista. Luego definimos las animación de entrada con `'void => *'` a la cual le agregamos un estilo por defecto antes que ejecute la animación, luego en la animación de salida con `* => void` y agregamos un estilo a esta. 
@@ -236,6 +249,8 @@ export class HomePage {
   ...
 }
 ```
+
+{% include blog/subscribe.html %}
 
 ## Paso 4: Agregando y eliminando items.
 
