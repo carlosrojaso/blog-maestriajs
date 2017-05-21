@@ -4,15 +4,21 @@ title: "Animando items con Ionic 2"
 date: 2016-12-11
 tags: [animations, demos, ionic2]
 categories: ionic2
-laucher: "/launcher/demo108"
+repo: "https://github.com/ion-book/demo108"
 author: nicobytes
 cover: "https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/demos%2Fdemo108%2Fitems.jpg?alt=media"
 remember: true
 versions:
   - title: 'ionic'
-    number: '2.0.0-rc.3'
+    number: '3.2.1'
   - title: 'ionic-native'
-    number: '2.2.3'
+    number: '3.10.2'
+  - title: 'ionic-app-scripts'
+    number: '1.3.7'
+  - title: 'cordova-cli'
+    number: '7.0.1'
+  - title: 'ionic-cli'
+    number: '3.1.2'
 ---
 
 > Angular 2 integra [Web Animations API](https://web-animations.github.io/web-animations-demos/#waves/){:target="_blank"} para ejecutar animaciones en css que aprovechan la GPU del dispositivo y se puedan controlar con JS, sin duda esto provee un mayor control en las animaciones que podemos hacer.

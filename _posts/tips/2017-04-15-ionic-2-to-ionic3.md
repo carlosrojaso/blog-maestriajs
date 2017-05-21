@@ -53,9 +53,9 @@ Ahora debemos actualizar las versiones de las dependencias de nuestro proyecto y
   "@angular/http": "4.1.0",
   "@angular/platform-browser": "4.1.0",
   "@angular/platform-browser-dynamic": "4.1.0",
-  "@ionic-native/core": "3.7.0",
-  "@ionic-native/splash-screen": "3.7.0",
-  "@ionic-native/status-bar": "3.7.0",
+  "@ionic-native/core": "3.10.2",
+  "@ionic-native/splash-screen": "3.10.2",
+  "@ionic-native/status-bar": "3.10.2",
   "@ionic/storage": "2.0.1",
   "ionic-angular": "3.2.1",
   "ionicons": "3.0.0",
@@ -65,8 +65,8 @@ Ahora debemos actualizar las versiones de las dependencias de nuestro proyecto y
 },
 "devDependencies": {
   "@ionic/app-scripts": "1.3.7",
-  "@ionic/cli-plugin-cordova": "^1.0.0",
-  "@ionic/cli-plugin-ionic-angular": "^1.0.0",
+  "@ionic/cli-plugin-cordova": "^1.1.2",
+  "@ionic/cli-plugin-ionic-angular": "^1.1.2",
   "typescript": "~2.2.1"
 }
 ```

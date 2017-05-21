@@ -10,9 +10,15 @@ author: nicobytes
 cover: "https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2FPUSH%20(1).jpg?alt=media"
 versions:
   - title: 'ionic'
-    number: '2.0.0'
+    number: '3.2.1'
   - title: 'ionic-native'
-    number: '2.4.1'
+    number: '3.10.2'
+  - title: 'ionic-app-scripts'
+    number: '1.3.7'
+  - title: 'cordova-cli'
+    number: '7.0.1'
+  - title: 'ionic-cli'
+    number: '3.1.2'
 ---
 
 > Implementar el sistema de **notificaciones push** en una aplicación es una de las tareas más comunes y Ionic tiene un servicio que nos ahorra este trabajo.

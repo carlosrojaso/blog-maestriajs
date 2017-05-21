@@ -10,15 +10,15 @@ cover: "/images/posts/ionic2/2016-07-11-camera-and-ionic/cover.jpg"
 remember: true
 versions:
   - title: 'ionic'
-    number: '3.2.0'
+    number: '3.2.1'
   - title: 'ionic-native'
-    number: '3.7.0'
+    number: '3.10.2'
   - title: 'ionic-app-scripts'
     number: '1.3.7'
   - title: 'cordova-cli'
-    number: '7.0.0'
+    number: '7.0.1'
   - title: 'ionic-cli'
-    number: '3.0.0'
+    number: '3.1.2'
 ---
 
 > En este artículo conectar una aplicación de ionic con el recurso nativo de la cámara con ionic native y ver varias de las opciones que nos ofrece ionic para manipular la cámara.

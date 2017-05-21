@@ -12,7 +12,7 @@ versions:
   - title: 'ionic'
     number: '3.2.1'
   - title: 'ionic-native'
-    number: '3.9.2'
+    number: '3.10.2'
   - title: 'ionic-app-scripts'
     number: '1.3.7'
   - title: 'cordova-cli'

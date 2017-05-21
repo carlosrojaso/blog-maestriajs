@@ -5,15 +5,21 @@ keywords: "validaciones con ionic, formularios con angular 2, validar email con 
 date: 2017-01-03
 tags: [forms, demos, ionic2]
 categories: ionic2
-laucher: "/launcher/demo109"
+repo: "https://github.com/ion-book/demo109"
 author: nicobytes
 cover: "https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2Fvalidations-in-forms%2FValidaciones%20en%20Formularios.jpg?alt=media"
 remember: true
 versions:
   - title: 'ionic'
-    number: '2.0.0-rc.3'
+    number: '3.2.1'
   - title: 'ionic-native'
-    number: '2.2.3'
+    number: '3.10.2'
+  - title: 'ionic-app-scripts'
+    number: '1.3.7'
+  - title: 'cordova-cli'
+    number: '7.0.1'
+  - title: 'ionic-cli'
+    number: '3.1.2'
 ---
 
 > La forma más común de capturar información de los usuarios son los **Formularios** y depende de una buena UI/UX ganar o perder un usuario en nuestra aplicación.
