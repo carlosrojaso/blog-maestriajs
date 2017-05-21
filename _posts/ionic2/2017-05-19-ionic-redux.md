@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Ionic + ngrx/store ( Redux )"
-tags: [tips, angular2, ionic2, redux, ngrx]
+tags: [tips, redux, ngrx]
 date: 2017-05-19
 categories: ionic2
 author: javico2609
