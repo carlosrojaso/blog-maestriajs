@@ -1,12 +1,12 @@
 ---
 layout: post
-title: "Animando items con Ionic 2"
+title: "Animando items con Ionic, en 5 pasos"
 date: 2016-12-11
-tags: [animations, demos, ionic2]
+tags: [animations, demos]
 categories: ionic2
 repo: "https://github.com/ion-book/demo108"
 author: nicobytes
-cover: "https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/demos%2Fdemo108%2Fitems.jpg?alt=media"
+cover: "/images/posts/ionic2/2016-12-11-animating-items-ionic/cover.jpg"
 remember: true
 versions:
   - title: 'ionic'
@@ -21,11 +21,20 @@ versions:
     number: '3.1.2'
 ---
 
-> Angular 2 integra [Web Animations API](https://web-animations.github.io/web-animations-demos/#waves/){:target="_blank"} para ejecutar animaciones en css que aprovechan la GPU del dispositivo y se puedan controlar con JS, sin duda esto provee un mayor control en las animaciones que podemos hacer.
+> Angular integra [Web Animations API](https://web-animations.github.io/web-animations-demos/#waves/){:target="_blank"} para ejecutar animaciones en css que aprovechan la GPU del dispositivo y se puedan controlar con JS, sin duda esto provee un mayor control en las animaciones que podemos hacer.
 
-<amp-img width="1024" height="512" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/demos%2Fdemo108%2Fitems.jpg?alt=media" alt="Animando items con Ionic 2"></amp-img>
+<amp-img width="1024" height="512" layout="responsive" src="/images/posts/ionic2/2016-12-11-animating-items-ionic/cover.jpg" alt="Animando items con Ionic"></amp-img>
 
-Para hacer animaciones en Angular 2 / Ionic 2 tenemos varias funciones que son de gran utilidad para controlar y crear las animaciones:
+# Actualización (21/05/2017)
+<hr/>
+
+Hemos actualizado este demo con el último release de **Ionic 3**, si aún estas en alguna de las versiones anteriores puedes seguir estos pasos [de Ionic 2 a Ionic 3](https://www.ion-book.com/blog/tips/ionic-2-to-ionic3/){:target="_blank"}.
+
+Ademas en este demo usamos la función de **lazy loading** y **@IonicPage**. Puedes ver el repositorio [**Demo108**](https://github.com/ion-book/demo108){:target="_blank"}
+
+<hr/>
+
+Para hacer animaciones en Angular/Ionic tenemos varias funciones que son de gran utilidad para controlar y crear las animaciones:
 
 ```ts
 import {
@@ -34,7 +43,7 @@ import {
   style,
   transition,
   animate
-} from '@angular/core';
+} from '@angular/animations';
 ```
 
 Antes de empezar, es necesario entender los conceptos básicos para desarrollar el demo de este artículo.
@@ -67,7 +76,7 @@ transition('active => inactive', animate('100ms ease-out'))
 
 En las **transitions** también podemos agregar estilos que solo se aplican durante la animación y que no harán parte de **state**.
 
-En angular 2 tenemos **dos** estados muy útiles, uno es el comodín (The wildcard state) *, este se refiere a cualquier estado y es muy útil cuando no hay un estado definido.
+En Angular tenemos **dos** estados muy útiles, uno es el comodín (The wildcard state) *, este se refiere a cualquier estado y es muy útil cuando no hay un estado definido.
 
 <amp-img width="1448" height="992" layout="responsive" src="https://angular.io/resources/images/devguide/animations/ng_animate_transitions_inactive_active_wildcards.png" alt="transitions"></amp-img>
 
@@ -111,22 +120,63 @@ Con estas bases y conceptos ahora podremos hacer un demo sencillo donde haremos 
 
 ## Paso 1: Iniciando el proyecto
 
-Lo primero que haremos será iniciar un nuevo proyecto con ionic, si no lo recuerdas puedes ver esto con mas detalle en la [Introduccion a Ionic 2]({{site.urlblog}}/ionic2/ionic2){:target="_blank"}.
-Vamos a nuestra terminal y ejecutamos:
+Lo primero que haremos será iniciar un nuevo proyecto con ionic, vamos a nuestra terminal y ejecutamos:
 
 ```
-ionic start demo108 blank --v2
+ionic start demo108 blank
 ```
 
-Ahora entramos a la carpeta del proyecto desde nuestra terminal con:
+Ionic crea una carpeta con el nombre del proyecto, nuestro siguiente paso será ubicarnos dentro a la carpeta del proyecto desde nuestra terminal con:
 
 ```
 cd demo108
 ```
 
-Como iniciamos nuestro proyecto con el template **blank** tendremos una estructura básica del proyecto, la carpeta en la que vamos a trabajar sera *app*.
+El proyecto inicia con el template **blank** y por esto tendremos una estructura básica del proyecto, la carpeta en la que vamos a trabajar será `src`:
 
-## Paso 2: Creando la animación
+<div class="row">
+  <div class="col col-100 col-md-50 col-lg-50">
+    <amp-img width="376" height="183" layout="responsive" src="/images/posts/ionic2/2016-07-11-camera-and-ionic/tree1.png"></amp-img>
+  </div>
+</div>
+
+## Paso 2: Agregar BrowserAnimationsModule
+
+Ahora debemos instalar el módulo `@angular/animations`, así:
+
+```
+npm install @angular/animations --save
+```
+
+Luego debemos importar `BrowserAnimationsModule` en el archivo `app.module.ts`, asi:
+
+```ts
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+...
+
+@NgModule({
+  declarations: [
+    MyApp
+  ],
+  imports: [
+    BrowserModule,
+    HttpModule,
+    BrowserAnimationsModule,
+    IonicModule.forRoot(MyApp),
+  ],
+  bootstrap: [IonicApp],
+  entryComponents: [
+    DuetyApp
+  ],
+  providers: [...]
+})
+export class AppModule {}
+```
+
+## Paso 3: Creando la animación
+
+Vamos a crear un `trigger` llamado **itemState** que tendrá el estado **in**, este estado representa al item cuando sea agregado a la lista. Luego definimos las animación de entrada con `'void => *'` a la cual le agregamos un estilo por defecto antes que ejecute la animación, luego en la animación de salida con `* => void` y agregamos un estilo a esta. 
 
 ```ts
 animations: [
@@ -147,16 +197,19 @@ animations: [
 ]
 ```
 
-Vamos a crear un `trigger` llamado **itemState** que tendrá el estado **in** (línea 3) este estado representa al item cuando sea agregado a la lista. Luego definimos las animación de entrada (línea 4) a la cual le agregamos un estilo por defecto antes que ejecute la animación, luego en la animación de salida (línea 11) colocaremos la animación agregando un estilo a esta. Con lo cual lograremos el siguiente efecto:
+Con lo cual lograremos el siguiente efecto:
 
 <img class="img-responsive center-block" src="https://angular.io/resources/images/devguide/animations/animation_enter_leave.gif" alt="transitions">
 
-El código finalmente quedará asi:
+`HomePage` finalmente quedará asi:
 
 ```ts
-import { Component, trigger,state, style, transition, animate } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { Component } from '@angular/core';
+import { trigger,state, style, transition, animate } from '@angular/animations';
 
+import { IonicPage, NavController } from 'ionic-angular';
+
+@IonicPage()
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html',
@@ -184,15 +237,17 @@ export class HomePage {
 }
 ```
 
-## Paso 3: Agregando y eliminando items.
+## Paso 4: Agregando y eliminando items.
 
-Ahora vamos a agregar el metodo `add` en línea 16 qué agregará un item a la lista y `remove` en línea 23 que elimina un item de la lista.
+Ahora vamos a agregar el metodo `add` qué agregará un item a la lista y `remove` que elimina un item de la lista, así:
 
 ```ts
-import { Component, trigger,state, style, transition, animate } from '@angular/core';
+import { Component } from '@angular/core';
+import { trigger,state, style, transition, animate } from '@angular/animations';
 
-import { NavController } from 'ionic-angular';
+import { IonicPage, NavController } from 'ionic-angular';
 
+@IonicPage()
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html',
@@ -218,9 +273,9 @@ export class HomePage {
 }
 ```
 
-## Paso 4: El template.
+## Paso 5: El template.
 
-En el template crearemos dos botones, un botón para agregar un item en la línea 10 y el segundo botón para eliminar un item en la línea 11. Luego en línea 16 itereamos la lista y agregamos el **trigger** de animacion que depende del estado del item.
+En el template crearemos dos botones, un botón para agregar un item y el segundo botón para eliminar un item . Luego itereamos la lista y agregamos el **trigger** de animacion que depende del estado del item.
 
 ```html
 {% raw %}
