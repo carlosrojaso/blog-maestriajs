@@ -268,13 +268,13 @@ Luego seleccionamos el perfil de seguridad y enviamos.
 
 <div class="row wrap">
   <div class="col col-100 col-md-33 col-lg-33">
-    <amp-img width="720" height="1280" layout="responsive" src="/images/posts/ionic2/2017-01-31-ionic-push-notifications/screen11.png"></amp-img>
-  </div>
-  <div class="col col-100 col-md-33 col-lg-33">
     <amp-img width="720" height="1280" layout="responsive" src="/images/posts/ionic2/2017-01-31-ionic-push-notifications/screen12.png"></amp-img>
   </div>
   <div class="col col-100 col-md-33 col-lg-33">
     <amp-img width="720" height="1280" layout="responsive" src="/images/posts/ionic2/2017-01-31-ionic-push-notifications/screen13.png"></amp-img>
+  </div>
+  <div class="col col-100 col-md-33 col-lg-33">
+    <amp-img width="720" height="1280" layout="responsive" src="/images/posts/ionic2/2017-01-31-ionic-push-notifications/screen14.png"></amp-img>
   </div>
 </div>
 <br>
