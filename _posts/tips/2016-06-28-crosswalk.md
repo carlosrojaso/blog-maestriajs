@@ -19,7 +19,7 @@ cover: "http://i.imgur.com/Ed37R8S.jpg"
 Para agregar el webview de Crosswalk Project a nuestra aplicación de ionic solo necesitamos ejecutar este comando dentro de nuestro proyecto:
 
 ```
-ionic plugin add cordova-plugin-crosswalk-webview
+ionic cordova plugin add cordova-plugin-crosswalk-webview
 ```
 
 # Principales ventajas de Crosswalk Project
