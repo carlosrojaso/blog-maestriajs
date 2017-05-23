@@ -2,8 +2,8 @@
 layout: post
 title: "Angular Y Observables: Como compartir información entre diferentes componentes de la aplicación de forma eficiente ?"
 keywords: "angular2, angular ,observable, performance en angular, como mejorar el rendimiento en angular, performance, change detection strategy"
-date: 2017-05-24
-tags: [tips, angular2, observable, rxjs, reactive programming, ChangeDetectionStrategy, ChangeDetectionStrategy.OnPush, performance]
+date: 2017-05-22
+tags: [tips, angular2, observable, rxjs]
 categories: tips
 author: javico2609
 cover: "https://d2slcw3kip6qmk.cloudfront.net/marketing/techblog/observables-angular2/data-flow.png"

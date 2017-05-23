@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Animando items con Ionic, en 5 pasos"
-date: 2017-05-21
+date: 2017-05-23
 tags: [animations, demos]
 categories: ionic2
 repo: "https://github.com/ion-book/demo108"
@@ -85,7 +85,7 @@ Y el segundo estado es **void** que es llamado automáticamente cuando es ejecut
 - Enter: `void => *`
 - Leave: `* => void `
 
-<img class="center-block" src="https://angular.io/resources/images/devguide/animations/animation_enter_leave.gif" alt="transitions">
+<amp-img width="389" height="248" layout="responsive" src="https://angular.io/resources/images/devguide/animations/animation_enter_leave.gif" alt="transitions"></amp-img>
 
 ## Trigger:
 
