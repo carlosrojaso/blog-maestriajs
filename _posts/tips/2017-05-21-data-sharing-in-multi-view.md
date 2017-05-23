@@ -2,7 +2,7 @@
 layout: post
 title: "Angular Y Observables: Como compartir información entre diferentes componentes de la aplicación de forma eficiente ?"
 keywords: "angular2, angular ,observable, performance en angular, como mejorar el rendimiento en angular, performance, change detection strategy"
-date: 2017-05-24
+date: 2017-05-22
 tags: [tips, angular2, observable, rxjs, reactive programming, ChangeDetectionStrategy, ChangeDetectionStrategy.OnPush, performance]
 categories: tips
 author: javico2609
@@ -58,6 +58,7 @@ ng generate service user
 ## Paso 3: Componente UserList
 
 `user-list-component.html`
+
 ```html
    {% raw %}
      <table class="ui compact celled definition table">
@@ -103,6 +104,7 @@ ng generate service user
 El componente tiene como entrada la lista de los `users` y tiene dos eventos de salida uno para crear un nuevo usuario y otro para aprobar que todos los usuarios tengan una cuenta Premium.
 
 `user-list-component.ts`
+
 ```ts
      import { Component, OnInit, Input, Output, EventEmitter, ChangeDetectionStrategy } from '@angular/core';
 
@@ -209,6 +211,7 @@ En el servicio utilizaremos BehaviorSubject que representara el mecanismo median
 ## Paso 4: App Component
 
 `app.component.html`
+
 ```html
    {% raw %}
     <div class="ui container" style="margin-top: 5%">

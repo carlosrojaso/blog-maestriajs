@@ -20,7 +20,7 @@ Ahora si quieres personalizar las vistas en Ionic 2 deberas utilizar SASS, lo cu
 
 La forma mas facil de empezar es modificar el archivo `app/theme/app.variables.scss` aca podras encontrar las variables principales para poder modificar.
 
-```css
+```scss
 $colors: (
   primary:    #387ef5,
   secondary:  #32db64,
