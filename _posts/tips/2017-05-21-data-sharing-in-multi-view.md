@@ -7,6 +7,11 @@ tags: [tips, angular2, observable, rxjs, reactive programming, ChangeDetectionSt
 categories: tips
 author: javico2609
 cover: "https://d2slcw3kip6qmk.cloudfront.net/marketing/techblog/observables-angular2/data-flow.png"
+versions:
+  - title: 'angular'
+    number: '4.0.0'
+  - title: 'rxjs'
+    number: '5.0.1'
 ---
 
 > Una práctica común en las aplicaciones de `angular` para almacenar los datos para después ser utilizados en los diferentes componentes es guardarlo en sus `services` pues estos son inyectados como `singlenton`, hasta aquí vamos bien pues de cierta forma los datos no se repiten y tenemos un punto común de acceso a los datos desde todos los componentes. ¿Dónde nos llegan los dolores de cabeza? Es a la hora de propagar el cambio de estos datos a través de todos los componentes, normalmente lo hacemos utilizando los `events` pero conlleva a un esfuerzo bastante grande y de cierta forma la aplicación queda muy acoplada y frágil ante los cambios futuros ya sea por bugs o nuevos requerimientos. En este articulo intentaremos darle solución a esta problemática utilizando la [**reactive programming**](http://reactivex.io/rxjs/){:target="_blank"} en particular la especificación para javascript `rxjs`.
