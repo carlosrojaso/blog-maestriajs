@@ -3,13 +3,22 @@ layout: post
 title: "Angular y Observables: ¿Como compartir información entre diferentes componentes de la aplicación de forma eficiente?"
 keywords: "angular2, angular ,observable, performance en angular, como mejorar el rendimiento en angular, performance, change detection strategy"
 date: 2017-05-22
+<<<<<<< HEAD
 tags: [tips, angular2, observable, rxjs, reactive programming, ChangeDetectionStrategy, ChangeDetectionStrategy.OnPush, performance]
+=======
+tags: [tips, angular2, observable, rxjs]
+>>>>>>> 15bcacf5913c9223b43ba7179281d9a5d14b0289
 categories: tips
 author: javico2609
 cover: "https://d2slcw3kip6qmk.cloudfront.net/marketing/techblog/observables-angular2/data-flow.png"
+versions:
+  - title: 'angular'
+    number: '4.0.0'
+  - title: 'rxjs'
+    number: '5.0.1'
 ---
 
-> Una práctica común en las aplicaciones de `angular` para almacenar los datos para después ser utilizados en los diferentes componentes es guardarlo en sus `services` pues estos son inyectados como `singlenton`, hasta aquí vamos bien pues de cierta forma los datos no se repiten y tenemos un punto común de acceso a los datos desde todos los componentes. ¿Dónde nos llegan los dolores de cabeza? Es a la hora de propagar el cambio de estos datos a través de todos los componentes, normalmente lo hacemos utilizando los `events` pero conlleva a un esfuerzo bastante grande y de cierta forma la aplicación queda muy acoplada y frágil ante los cambios futuros ya sea por bugs o nuevos requerimientos. En este articulo intentaremos darle solución a esta problemática utilizando la [**reactive programming**](http://reactivex.io/rxjs/){:target="_blank"} en particular la especificación para javascript `ngrx`.
+> Una práctica común en las aplicaciones de `angular` para almacenar los datos para después ser utilizados en los diferentes componentes es guardarlo en sus `services` pues estos son inyectados como `singlenton`, hasta aquí vamos bien pues de cierta forma los datos no se repiten y tenemos un punto común de acceso a los datos desde todos los componentes. ¿Dónde nos llegan los dolores de cabeza? Es a la hora de propagar el cambio de estos datos a través de todos los componentes, normalmente lo hacemos utilizando los `events` pero conlleva a un esfuerzo bastante grande y de cierta forma la aplicación queda muy acoplada y frágil ante los cambios futuros ya sea por bugs o nuevos requerimientos. En este articulo intentaremos darle solución a esta problemática utilizando la [**reactive programming**](http://reactivex.io/rxjs/){:target="_blank"} en particular la especificación para javascript `rxjs`.
 <!--summary-->
 
 <amp-img width="1024" height="512" layout="responsive" src="https://d2slcw3kip6qmk.cloudfront.net/marketing/techblog/observables-angular2/data-flow.png"></amp-img>
