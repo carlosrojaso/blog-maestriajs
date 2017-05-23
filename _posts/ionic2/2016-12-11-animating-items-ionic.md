@@ -212,7 +212,7 @@ animations: [
 
 Con lo cual lograremos el siguiente efecto:
 
-<img class="img-responsive center-block" src="https://angular.io/resources/images/devguide/animations/animation_enter_leave.gif" alt="transitions">
+<amp-img  width="389" height="248" src="https://angular.io/resources/images/devguide/animations/animation_enter_leave.gif" alt="transitions"></amp-img>
 
 `HomePage` finalmente quedará asi:
 
