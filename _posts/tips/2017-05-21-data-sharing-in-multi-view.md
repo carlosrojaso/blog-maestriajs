@@ -63,6 +63,7 @@ ng generate service user
 ## Paso 3: Componente UserList
 
 `user-list-component.html`
+
 ```html
    {% raw %}
      <table class="ui compact celled definition table">
@@ -108,6 +109,7 @@ ng generate service user
 El componente tiene como entrada la lista de los `users` y tiene dos eventos de salida uno para crear un nuevo usuario y otro para aprobar que todos los usuarios tengan una cuenta Premium.
 
 `user-list-component.ts`
+
 ```ts
      import { Component, OnInit, Input, Output, EventEmitter, ChangeDetectionStrategy } from '@angular/core';
 
@@ -214,6 +216,7 @@ En el servicio utilizaremos BehaviorSubject que representara el mecanismo median
 ## Paso 4: App Component
 
 `app.component.html`
+
 ```html
    {% raw %}
     <div class="ui container" style="margin-top: 5%">
@@ -255,9 +258,7 @@ En el servicio utilizaremos BehaviorSubject que representara el mecanismo median
     }
 ```
 
-<br />
-
-De esta forma no solo creamos un mecanismo que nos ayuda a mantener los datos de la aplicación de forma consistente, también desacoplamos la dependencia de los componentes y aumentamos el performace de la aplicación pues podemos desactivar el ` ChangeDetectionStrategy`  Cambiándolo a `OnPush`.
+De esta forma no solo creamos un mecanismo que nos ayuda a mantener los datos de la aplicación de forma consistente, también desacoplamos la dependencia de los componentes y aumentamos el performace de la aplicación pues podemos desactivar el `ChangeDetectionStrategy`  Cambiándolo a `OnPush`.
 
 ## Resultado
 
