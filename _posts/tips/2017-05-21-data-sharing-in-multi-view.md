@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Angular Y Observables: Como compartir información entre diferentes componentes de la aplicación de forma eficiente ?"
+title: "Angular y Observables: ¿Como compartir información entre diferentes componentes de la aplicación de forma eficiente?"
 keywords: "angular2, angular ,observable, performance en angular, como mejorar el rendimiento en angular, performance, change detection strategy"
 date: 2017-05-22
 tags: [tips, angular2, observable, rxjs]
@@ -29,28 +29,28 @@ cd angular-observable
 en el `index.html` incluir las dependencias de semantic-ui para darle algún  estilo al componente.
 
 ```html
-        <!doctype html>
-        <html lang="en">
+<!doctype html>
+<html lang="en">
 
-        <head>
-          <meta charset="utf-8">
-          <title>ServicesObservable</title>
-          <base href="/">
+<head>
+  <meta charset="utf-8">
+  <title>ServicesObservable</title>
+  <base href="/">
 
-          <meta name="viewport" content="width=device-width, initial-scale=1">
-          <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
 
-          <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.2/semantic.min.css">
-          <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-          <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.2/semantic.min.js"></script>
+  <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.2/semantic.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.2/semantic.min.js"></script>
 
-        </head>
+</head>
 
-        <body>
-          <app-root>Loading...</app-root>
-        </body>
+<body>
+  <app-root>Loading...</app-root>
+</body>
 
-        </html>
+</html>
 ```
 
 ## Paso 2: Crear un componente y el Servicio que se utilizará como contenedor de los datos
@@ -63,83 +63,85 @@ ng generate service user
 ## Paso 3: Componente UserList
 
 `user-list-component.html`
+
 ```html
-   {% raw %}
-     <table class="ui compact celled definition table">
-        <thead>
-          <tr>
-            <th></th>
-            <th>Name</th>
-            <th>Registration Date</th>
-            <th>E-mail address</th>
-            <th>Premium Plan</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr *ngFor="let user of users">
-            <td class="collapsing">
-              <div class="ui fitted slider checkbox">
-                <input type="checkbox" [checked]="user.isPremium"> <label></label>
-              </div>
-            </td>
-            <td>{{ user.name }}</td>
-            <td>{{ user.registration }}</td>
-            <td>{{ user.email }}</td>
-            <td>{{ user.isPremium }}</td>
-          </tr>
-        </tbody>
-        <tfoot class="full-width">
-          <tr>
-            <th></th>
-            <th colspan="4">
-              <div class="ui right floated small primary labeled icon button" (click)="createUser($event)">
-                <i class="user icon" ></i> Add User
-              </div>
-              <div class="ui small button" (click)="approveAll($event)">
-                Approve All
-              </div>
-            </th>
-          </tr>
-        </tfoot>
-      </table>
-   {% endraw %}
+{% raw %}
+  <table class="ui compact celled definition table">
+    <thead>
+      <tr>
+        <th></th>
+        <th>Name</th>
+        <th>Registration Date</th>
+        <th>E-mail address</th>
+        <th>Premium Plan</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of users">
+        <td class="collapsing">
+          <div class="ui fitted slider checkbox">
+            <input type="checkbox" [checked]="user.isPremium"> <label></label>
+          </div>
+        </td>
+        <td>{{ user.name }}</td>
+        <td>{{ user.registration }}</td>
+        <td>{{ user.email }}</td>
+        <td>{{ user.isPremium }}</td>
+      </tr>
+    </tbody>
+    <tfoot class="full-width">
+      <tr>
+        <th></th>
+        <th colspan="4">
+          <div class="ui right floated small primary labeled icon button" (click)="createUser($event)">
+            <i class="user icon" ></i> Add User
+          </div>
+          <div class="ui small button" (click)="approveAll($event)">
+            Approve All
+          </div>
+        </th>
+      </tr>
+    </tfoot>
+  </table>
+{% endraw %}
 ```
 
 El componente tiene como entrada la lista de los `users` y tiene dos eventos de salida uno para crear un nuevo usuario y otro para aprobar que todos los usuarios tengan una cuenta Premium.
 
 `user-list-component.ts`
+
 ```ts
-     import { Component, OnInit, Input, Output, EventEmitter, ChangeDetectionStrategy } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter, ChangeDetectionStrategy } from '@angular/core';
 
-     @Component({
-       selector: 'user-list',
-       templateUrl: './user-list.component.html',
-       styleUrls: ['./user-list.component.css'],
-       changeDetection: ChangeDetectionStrategy.OnPush
-     })
-     export class UserListComponent implements OnInit {
-       @Input() users;
-       @Output() onCreateUser: EventEmitter<any> = new EventEmitter();
-       @Output() onApproveAll: EventEmitter<any> = new EventEmitter();
+@Component({
+  selector: 'user-list',
+  templateUrl: './user-list.component.html',
+  styleUrls: ['./user-list.component.css'],
+  changeDetection: ChangeDetectionStrategy.OnPush
+})
+export class UserListComponent implements OnInit {
+  @Input() users;
+  @Output() onCreateUser: EventEmitter<any> = new EventEmitter();
+  @Output() onApproveAll: EventEmitter<any> = new EventEmitter();
 
-       constructor() { }
+  constructor() { }
 
-       ngOnInit() {
-       }
+  ngOnInit() {
+  }
 
-       createUser() {
-         this.onCreateUser.emit({
-           name: 'Prueba',
-           email: 'prueba@gmail.com',
-           registration: 'May 11, 2016',
-           isPremium: false
-         });
-       }
+  createUser() {
+    this.onCreateUser.emit({
+      name: 'Prueba',
+      email: 'prueba@gmail.com',
+      registration: 'May 11, 2016',
+      isPremium: false
+    });
+  }
 
-       approveAll() {
-         this.onApproveAll.emit();
-       }
-     }
+  approveAll() {
+    this.onApproveAll.emit();
+  }
+}
 ```
 
 ## Paso 4: User Service
@@ -147,112 +149,113 @@ El componente tiene como entrada la lista de los `users` y tiene dos eventos de 
 En el servicio utilizaremos BehaviorSubject que representara el mecanismo mediante el cual se va a mantener sincronizado los datos.
 
 ```ts
-    import { BehaviorSubject, Observable } from 'rxjs/Rx';
-    import { Injectable } from '@angular/core';
+import { BehaviorSubject, Observable } from 'rxjs/Rx';
+import { Injectable } from '@angular/core';
 
-    interface IUser {
-      name: string;
-      registration: string;
-      email: string;
-      isPremium: boolean;
-    }
+interface IUser {
+  name: string;
+  registration: string;
+  email: string;
+  isPremium: boolean;
+}
 
-    export const DUMMY_DATA = [
-      {
-        name: 'John Lilki',
-        registration: 'September 14, 2013',
-        email: 'jhlilk22@yahoo.com',
-        isPremium: true
-      },
-      {
-        name: 'Jamie Harington',
-        registration: 'January 11, 2014',
-        email: 'jamieharingonton@yahoo.com',
-        isPremium: true
-      },
-      {
-        name: 'Jill Lewis',
-        registration: 'May 11, 2014',
-        email: 'jilsewris22@yahoo.com',
-        isPremium: true
-      }
-    ];
+export const DUMMY_DATA = [
+  {
+    name: 'John Lilki',
+    registration: 'September 14, 2013',
+    email: 'jhlilk22@yahoo.com',
+    isPremium: true
+  },
+  {
+    name: 'Jamie Harington',
+    registration: 'January 11, 2014',
+    email: 'jamieharingonton@yahoo.com',
+    isPremium: true
+  },
+  {
+    name: 'Jill Lewis',
+    registration: 'May 11, 2014',
+    email: 'jilsewris22@yahoo.com',
+    isPremium: true
+  }
+];
 
-    @Injectable()
-    export class UserService {
-      private usersSubject = new BehaviorSubject([]);
-      private users: IUser[];
+@Injectable()
+export class UserService {
+  private usersSubject = new BehaviorSubject([]);
+  private users: IUser[];
 
-      constructor() { }
+  constructor() { }
 
-      getUsers(): Observable<IUser[]> {
-        return this.usersSubject.asObservable();
-      }
+  getUsers(): Observable<IUser[]> {
+    return this.usersSubject.asObservable();
+  }
 
-      private refresh() {
-        // Emitir los nuevos valores para que todos los que dependan se actualicen.
-        this.usersSubject.next(this.users);
-      }
+  private refresh() {
+    // Emitir los nuevos valores para que todos los que dependan se actualicen.
+    this.usersSubject.next(this.users);
+  }
 
-      createNewUser(user: IUser) {
-        this.users.push(user);
-        this.refresh();
-      }
+  createNewUser(user: IUser) {
+    this.users.push(user);
+    this.refresh();
+  }
 
-      loadDummyData() {
-        this.users = DUMMY_DATA;
-        this.refresh();
-      }
+  loadDummyData() {
+    this.users = DUMMY_DATA;
+    this.refresh();
+  }
 
-      approveAll() {
-        this.users.forEach(user => user.isPremium = true);
-        this.refresh();
-      }
-    }
+  approveAll() {
+    this.users.forEach(user => user.isPremium = true);
+    this.refresh();
+  }
+}
 ```
 
 ## Paso 4: App Component
 
 `app.component.html`
+
 ```html
-   {% raw %}
-    <div class="ui container" style="margin-top: 5%">
-      <user-list [users]="users$ | async" (onCreateUser)="createUser($event)" (onApproveAll)="approveAll($event)"></user-list>
-    </div>
-   {% endraw %}
+{% raw %}
+<div class="ui container" style="margin-top: 5%">
+  <user-list [users]="users$ | async" (onCreateUser)="createUser($event)" (onApproveAll)="approveAll($event)"></user-list>
+</div>
+{% endraw %}
 ```
 
 `app.component.ts`
 
 ```ts
-    import { Observable } from 'rxjs/Rx';
-    import { UserService } from './providers/user.service';
-    import { Component, ChangeDetectionStrategy } from '@angular/core';
+import { Observable } from 'rxjs/Rx';
+import { UserService } from './providers/user.service';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
-    @Component({
-      selector: 'app-root',
-      templateUrl: './app.component.html',
-      styleUrls: ['./app.component.css'],
-      changeDetection: ChangeDetectionStrategy.OnPush
-    })
-    export class AppComponent {
-      private users$: Observable<any[]>;
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css'],
+  changeDetection: ChangeDetectionStrategy.OnPush
+})
+export class AppComponent {
+  private users$: Observable<any[]>;
 
-      constructor(private userService: UserService) { }
+  constructor(private userService: UserService) { }
 
-      ngOnInit() {
-        this.users$ = this.userService.getUsers();
-        this.userService.loadDummyData();
-      }
+  ngOnInit() {
+    this.users$ = this.userService.getUsers();
+    this.userService.loadDummyData();
+  }
 
-      createUser(user) {
-        this.userService.createNewUser(user);
-      }
+  createUser(user) {
+    this.userService.createNewUser(user);
+  }
 
-      approveAll() {
-        this.userService.approveAll();
-      }
-    }
+  approveAll() {
+    this.userService.approveAll();
+  }
+}
 ```
 
 <br />
