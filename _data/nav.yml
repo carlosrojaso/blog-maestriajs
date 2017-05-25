@@ -5,9 +5,11 @@ menu_header:
     url: '/blog'
     target: '_self'
   - title: Cursos
-    url: 'http://www.ng-classroom.com/'
+    url: 'https://www.ng-classroom.com/'
     target: '_blank'
-    
+#  - title: Workshops
+#    url: 'https://startupers.ng-classroom.com/'
+#    target: '_blank'
 # ==============================================================
 # Menu Footer
 menu_footer:
