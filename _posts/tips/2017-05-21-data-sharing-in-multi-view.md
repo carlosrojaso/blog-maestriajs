@@ -258,9 +258,7 @@ export class AppComponent {
 }
 ```
 
-<br />
-
-De esta forma no solo creamos un mecanismo que nos ayuda a mantener los datos de la aplicación de forma consistente, también desacoplamos la dependencia de los componentes y aumentamos el performace de la aplicación pues podemos desactivar el ` ChangeDetectionStrategy`  Cambiándolo a `OnPush`.
+De esta forma no solo creamos un mecanismo que nos ayuda a mantener los datos de la aplicación de forma consistente, también desacoplamos la dependencia de los componentes y aumentamos el performace de la aplicación pues podemos desactivar el `ChangeDetectionStrategy`  Cambiándolo a `OnPush`.
 
 ## Resultado
 
