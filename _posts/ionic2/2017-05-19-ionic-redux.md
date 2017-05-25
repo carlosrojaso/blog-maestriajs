@@ -44,6 +44,8 @@ El proyecto inicia con el template **blank** y por esto tendremos una estructura
   </div>
 </div>
 
+{% include blog/subscribe.html %}
+
 
 ## Paso 2: Instalar la implementación del patrón  **Redux** [**ngrx/store**](https://github.com/ngrx/store){:target="_blank"}
 

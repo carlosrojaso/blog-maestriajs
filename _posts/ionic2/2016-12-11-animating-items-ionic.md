@@ -140,6 +140,8 @@ El proyecto inicia con el template **blank** y por esto tendremos una estructura
   </div>
 </div>
 
+{% include blog/subscribe.html %}
+
 ## Paso 2: Agregar BrowserAnimationsModule
 
 Ahora debemos instalar el módulo `@angular/animations`, así:
