@@ -10,15 +10,15 @@ cover: "/images/posts/ionic2/2016-08-02-firebase-database-and-ionic/cover.jpg"
 remember: true
 versions:
   - title: 'ionic'
-    number: '3.2.1'
+    number: '3.3.0'
   - title: 'ionic-native'
-    number: '3.10.2'
+    number: '3.10.3'
   - title: 'ionic-app-scripts'
     number: '1.3.7'
   - title: 'cordova-cli'
     number: '7.0.1'
   - title: 'ionic-cli'
-    number: '3.1.2'
+    number: '3.2.0'
 ---
 
 > En artículos pasados ya hemos hablado de firebase y sus [**servicios**]({{site.urlblog}}/ionic2/firebase-3){:target="_blank"} y una breve implementación con [**Ionic**]({{site.urlblog}}/ionic2/ionic-2-firebase-3){:target="_blank"}, ahora vamos a hacer una integración con su servicio de base de datos en tiempo real, usando la libreria de [**AngularFire**](https://angularfire2.com/api/){:target="_blank"} creamos una simple aplicación de tareas.

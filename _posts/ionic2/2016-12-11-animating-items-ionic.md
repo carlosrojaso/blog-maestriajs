@@ -10,15 +10,15 @@ cover: "/images/posts/ionic2/2016-12-11-animating-items-ionic/cover.jpg"
 remember: true
 versions:
   - title: 'ionic'
-    number: '3.2.1'
+    number: '3.3.0'
   - title: 'ionic-native'
-    number: '3.10.2'
+    number: '3.10.3'
   - title: 'ionic-app-scripts'
     number: '1.3.7'
   - title: 'cordova-cli'
     number: '7.0.1'
   - title: 'ionic-cli'
-    number: '3.1.2'
+    number: '3.2.0'
 ---
 
 > Angular integra [Web Animations API](https://web-animations.github.io/web-animations-demos/#waves/){:target="_blank"} para ejecutar animaciones en css que aprovechan la GPU del dispositivo y se puedan controlar con JS, sin duda esto provee un mayor control en las animaciones que podemos hacer.

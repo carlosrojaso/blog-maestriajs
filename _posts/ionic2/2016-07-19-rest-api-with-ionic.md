@@ -10,15 +10,15 @@ cover: "/images/posts/ionic2/2016-07-19-rest-api-with-ionic/cover.jpg"
 remember: true
 versions:
   - title: 'ionic'
-    number: '3.2.1'
+    number: '3.3.0'
   - title: 'ionic-native'
-    number: '3.10.2'
+    number: '3.10.3'
   - title: 'ionic-app-scripts'
     number: '1.3.7'
   - title: 'cordova-cli'
     number: '7.0.1'
   - title: 'ionic-cli'
-    number: '3.1.2'
+    number: '3.2.0'
 ---
 
 > Una parte fundamental de cualquier aplicación es conectarse con servicio externos, en este caso vamos a conectarnos con una **API REST**. Vamos a crear una aplicación que se contecte con [http://randomuser.me/](http://randomuser.me/){:target="_blank"} un API con información de usuarios aleatorios.

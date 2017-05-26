@@ -11,15 +11,15 @@ cover: "https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts
 remember: true
 versions:
   - title: 'ionic'
-    number: '3.2.1'
+    number: '3.3.0'
   - title: 'ionic-native'
-    number: '3.10.2'
+    number: '3.10.3'
   - title: 'ionic-app-scripts'
     number: '1.3.7'
   - title: 'cordova-cli'
     number: '7.0.1'
   - title: 'ionic-cli'
-    number: '3.1.2'
+    number: '3.2.0'
 ---
 
 > La forma más común de capturar información de los usuarios son los **Formularios** y depende de una buena UI/UX ganar o perder un usuario en nuestra aplicación.

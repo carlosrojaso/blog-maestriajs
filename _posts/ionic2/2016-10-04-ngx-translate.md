@@ -10,15 +10,15 @@ cover: "/images/posts/ionic2/2016-10-04-ngx-translate/cover.png"
 remember: true
 versions:
   - title: 'ionic'
-    number: '3.2.1'
+    number: '3.3.0'
   - title: 'ionic-native'
-    number: '3.10.2'
+    number: '3.10.3'
   - title: 'ionic-app-scripts'
     number: '1.3.7'
   - title: 'cordova-cli'
     number: '7.0.1'
   - title: 'ionic-cli'
-    number: '3.1.2'
+    number: '3.2.0'
 ---
 
 > Varias aplicaciones tienen usos en diferentes países, por lo cual las aplicaciones deben adaptar sus contenidos a varios idiomas y con [**ngx-translate**](http://www.ngx-translate.com/){:target="_blank"} podremos hacer esto con ionic.
