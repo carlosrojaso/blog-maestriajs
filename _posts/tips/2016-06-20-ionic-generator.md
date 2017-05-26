@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Ionic generator y buenas practicas"
+title: "Ionic generator y buenas prácticas"
 tags: [news, tools, cli]
 date: 2017-05-04
 categories: tips
