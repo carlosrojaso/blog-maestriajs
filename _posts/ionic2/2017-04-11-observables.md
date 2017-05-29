@@ -83,18 +83,18 @@ Ahora ya tienes lo necesario para trabajar ya con el proyecto de Ionic. Descarga
 
 ## Como funciona la App
 
-1. Pantalla Inicial abierta en dos browser:
+Pantalla Inicial abierta en dos browser:
 
-<amp-img width="918" height="410" layout="responsive" 
+<amp-img width="627" height="432" layout="responsive" 
 src="https://github.com/thecouk/ObservablesIonic/blob/master/src/assets/img-ejemplos/listaPersonasInicial.png?raw=true"></amp-img>
 
-2. Pantallas al momento de agregar personas:
+Pantallas al momento de agregar personas:
 
-<amp-img width="918" height="410" layout="responsive" src="https://github.com/thecouk/ObservablesIonic/blob/master/src/assets/img-ejemplos/listaPersonasAgregar.png?raw=true"></amp-img>
+<amp-img width="632" height="432" layout="responsive" src="https://github.com/thecouk/ObservablesIonic/blob/master/src/assets/img-ejemplos/listaPersonasAgregar.png?raw=true"></amp-img>
 
-3. Pantallas al momento de indicar Me Gusta:
+Pantallas al momento de indicar Me Gusta:
 
-<amp-img width="918" height="410" layout="responsive"src="https://github.com/thecouk/ObservablesIonic/blob/master/src/assets/img-ejemplos/listaPersonasMeGusta.png?raw=true"></amp-img>
+<amp-img width="632" height="432" layout="responsive" src="https://github.com/thecouk/ObservablesIonic/blob/master/src/assets/img-ejemplos/listaPersonasMeGusta.png?raw=true"></amp-img>
 
 ### Agradecimientos:
 
