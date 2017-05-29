@@ -12,6 +12,7 @@
   <link rel="amphtml" href="{{ page.url | replace:'index.html','' | prepend: site.path }}" />
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.path }}">
   <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml"| prepend: site.path }}" />
+  <link rel="manifest" href="manifest.json">
   <script type="application/ld+json">
     {
         "@context": "http://schema.org",
@@ -35,7 +36,9 @@
         "publisher": {
             "@type": "Organization",
             "name": "ion-book",
-            "logo": "hhttps://www.ion-book.com/images/logo.png"
+            "logo.url": "https://www.ion-book.com/images/logo.png",
+            "logo.height": "60",
+            "logo.width": "600"
         },
         "datePublished": "{{ page.date | date: "%-d %B %Y" }}",
         "dateModified": "{{ page.date | date: "%-d %B %Y" }}"
@@ -75,5 +78,13 @@
 {% if page.video %}
 <script async custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
 {% endif%}
+<script async custom-element="amp-install-serviceworker"
+  src="https://cdn.ampproject.org/v0/amp-install-serviceworker-0.1.js"></script>
+
+<!-- Install Service Worker -->
+<amp-install-serviceworker src="/sw.js"
+  data-iframe-src="https://www.ion-book.com/sw.html"
+  layout="nodisplay">
+</amp-install-serviceworker>
 
 </head>
