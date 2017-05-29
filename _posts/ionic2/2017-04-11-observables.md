@@ -85,15 +85,16 @@ Ahora ya tienes lo necesario para trabajar ya con el proyecto de Ionic. Descarga
 
 1. Pantalla Inicial abierta en dos browser:
 
-![Pantalla Inicial](https://github.com/thecouk/ObservablesIonic/blob/master/src/assets/img-ejemplos/listaPersonasInicial.png?raw=true)
+<amp-img width="918" height="410" layout="responsive" 
+src="https://github.com/thecouk/ObservablesIonic/blob/master/src/assets/img-ejemplos/listaPersonasInicial.png?raw=true"></amp-img>
 
 2. Pantallas al momento de agregar personas:
 
-![Pantalla Agregar Personas](https://github.com/thecouk/ObservablesIonic/blob/master/src/assets/img-ejemplos/listaPersonasAgregar.png?raw=true)
+<amp-img width="918" height="410" layout="responsive" src="https://github.com/thecouk/ObservablesIonic/blob/master/src/assets/img-ejemplos/listaPersonasAgregar.png?raw=true"></amp-img>
 
 3. Pantallas al momento de indicar Me Gusta:
 
-![Pantalla Me gusta Personas](https://github.com/thecouk/ObservablesIonic/blob/master/src/assets/img-ejemplos/listaPersonasMeGusta.png?raw=true)
+<amp-img width="918" height="410" layout="responsive"src="https://github.com/thecouk/ObservablesIonic/blob/master/src/assets/img-ejemplos/listaPersonasMeGusta.png?raw=true"></amp-img>
 
 ### Agradecimientos:
 
