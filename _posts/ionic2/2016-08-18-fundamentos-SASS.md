@@ -5,12 +5,12 @@ date: 2016-08-18
 tags: [ui, ionic2]
 categories: ionic2
 author: carlosrojas
-cover: "http://sass-lang.com/assets/img/styleguide/color-1c4aab2b.png"
+cover: "https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2Ffundamentos-SASS%2Fcolor-1c4aab2b.png?alt=media&token=6bf1e61d-c220-4657-8b56-f4ef7b3cf90f"
 ---
 
 <div class="row">
   <div class="col col-100 col-md-50 col-lg-50">
-    <amp-img width="427" height="320" layout="responsive" src="http://sass-lang.com/assets/img/styleguide/color-1c4aab2b.png" alt="firebase-database-and-ionic-2"></amp-img>
+    <amp-img width="427" height="320" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2Ffundamentos-SASS%2Fcolor-1c4aab2b.png?alt=media&token=6bf1e61d-c220-4657-8b56-f4ef7b3cf90f" alt="firebase-database-and-ionic-2"></amp-img>
   </div>
 </div>
 

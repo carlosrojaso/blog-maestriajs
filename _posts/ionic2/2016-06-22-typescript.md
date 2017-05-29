@@ -5,10 +5,10 @@ tags: [typescript, ionic2]
 date: 2016-06-22
 categories: ionic2
 author: carlosrojas
-cover: "http://i.imgur.com/yFY9ETL.png"
+cover: "https://i.imgur.com/yFY9ETL.png"
 ---
 
-<amp-img width="814" height="234" layout="responsive" src="http://i.imgur.com/yFY9ETL.png"></amp-img>
+<amp-img width="814" height="234" layout="responsive" src="https://i.imgur.com/yFY9ETL.png"></amp-img>
 
 Si has observado un proyecto en Ionic habras observado que ahora contiene dos carpetas una "app" y otra "www" que es distinto a como se estructuraba un proyecto en Ionic 1 y ademas si abres la carpeta "app" veras archivos con una extensión TS, esto 
 es debido a que ahora se utiliza Typescript para trabajar con Ionic.
@@ -22,14 +22,14 @@ de nuevo para ser entendido por los navegadores.
 ### ¿Como instalar Typescript?
 
 
-`
+```
 npm install -g typescript
-`
+```
 
 ### ¿Como transpilar Typescript?
 
 Como sabes los navegadores y por consecuencia el webview de los dispositivos solo entiende javascript, es por esto que debemos transpilar nuestro codigo en Typescript a Javascript. para esto debemos utilizar el comando tsc.
 
-`
+```
 tsc archivo.ts
-`
+```

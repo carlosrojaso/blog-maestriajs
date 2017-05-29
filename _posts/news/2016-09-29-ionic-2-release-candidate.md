@@ -5,12 +5,12 @@ date: 2016-09-29
 tags: [release, ionic2]
 categories: news
 author: nicobytes
-cover: "http://blog.ionic.io/wp-content/uploads/2016/09/ionicrc0-1024x304.png"
+cover: "https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2F2016-09-29-ionic-2-release-candidate%2Fionicrc0-1024x304.png?alt=media&token=b6d29ad9-af1d-4258-970e-ef95f8fbb647"
 ---
 
 > Ayer tuvimos una gran noticia, **Ionic 2 release candidate** ya está aquí y hay cambios muy fuertes en la estructura del proyecto, pero trae grandes beneficios que serán de los que hablaremos hoy!
 
-<amp-img width="1024" height="304" layout="responsive" src="http://blog.ionic.io/wp-content/uploads/2016/09/ionicrc0-1024x304.png"></amp-img>
+<amp-img width="1024" height="304" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2F2016-09-29-ionic-2-release-candidate%2Fionicrc0-1024x304.png?alt=media&token=b6d29ad9-af1d-4258-970e-ef95f8fbb647"></amp-img>
 
 # Estructura de la App.
 
@@ -18,7 +18,7 @@ Ahora que angular ya está finalizado, ya hay una guia de como debería ser la e
 
 <div class="row">
   <div class="col col-100 col-md-50 col-lg-50">
-    <amp-img width="332" height="446" layout="responsive" src="http://i.cubeupload.com/ZBUnv9.png"></amp-img>
+    <amp-img width="332" height="446" layout="responsive" src="https://u.cubeupload.com/ZBUnv9.png"></amp-img>
   </div>
 </div>
 
@@ -26,7 +26,7 @@ Ahora que angular ya está finalizado, ya hay una guia de como debería ser la e
 
 Este es un gran cambio pero mejora el performance de nuestras aplicaciones y en vez de compilar los templates en tiempo de ejecución, ahora los templates pueden ser pre-compilados y esto mejora el tiempo de arranque en la aplicación. El código compilado que crea se crea por AOT es código que funciona mucho más rápido y está altamente optimizado. Descubre más sobre [**Ahead of Time Compiling (AOT)**](https://en.wikipedia.org/wiki/Ahead-of-time_compilation){:target="_blank"}
 
-<amp-img width="1400" height="1200" layout="responsive" src="http://blog.ionic.io/wp-content/uploads/2016/09/beta11-vs-beta12.gif"></amp-img>
+<amp-img width="1400" height="1200" layout="responsive" src="https://blog.ionic.io/wp-content/uploads/2016/09/beta11-vs-beta12.gif"></amp-img>
 
 # Angular 2 Final (NgModule)
 
