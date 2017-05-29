@@ -109,7 +109,55 @@ Ahora, cuando podríamos usar esto es la pregunta…
 
 Hace poco tiempo con ng-baires ( la mejor meetup de universo(?) ) hicimos un bootcamp de Angular 2 y Firebase… Firebase tiene una librería especifica para Angular2 la cual esta armada con observables.
 
-<script src="https://gist.github.com/jorgeucano/4a9494a72d239cae021b5343486cf5de.js"></script>
+```ts
+import { Component, OnInit } from '@angular/core';
+
+import { AngularFire, FirebaseListObservable } from 'angularfire2';
+import { Observable } from 'rxjs/Observable';
+
+import { RouteParams } from '@ngrx/router';
+import 'rxjs/add/operator/pluck';
+
+@Component({
+  moduleId: module.id,
+  selector: 'app-post-page',
+  templateUrl: 'post-page.component.html',
+  styleUrls: ['post-page.component.css']
+})
+export class PostPageComponent implements OnInit {
+
+  afi : any;
+  id$: Observable<string>;
+  posts: FirebaseListObservable<any[]>;
+  post$: any;
+
+  constructor(af: AngularFire, routeParams$: RouteParams) {
+    this.afi = af;
+    this.id$ = routeParams$.pluck<string>('id');
+      this.post$ = routeParams$.pluck<string>('id')
+        // only update if `id` changes
+        .distinctUntilChanged()
+        // Request the post from the server when the ID updates
+        .mergeMap(id => {
+          // Mark that we are loading a new post:
+          this.posts = this.afi.database.list('/POSTS', {
+            query: {
+              orderByChild: 'id',
+              equalTo: parseInt(id)
+            }
+          });
+          return "";
+
+      });
+  }
+
+
+
+  ngOnInit() {
+  }
+
+}
+```
 
 Analizando un poco todo , importamos muchas cosas con RX no ?
 

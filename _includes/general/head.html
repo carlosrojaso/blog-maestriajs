@@ -16,6 +16,7 @@
     {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
+        "logo": "https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/logo.png?alt=media&token=f3083d69-2f6e-4033-bffa-6c8160d01a7c",
         "mainEntityOfPage":{
             "@type":"WebPage",
             "@id":"{{site.path}}{{ page.url }}"
@@ -36,7 +37,8 @@
             "@type": "Organization",
             "name": "ion-book"
         },
-        "datePublished": "{{ page.date | date: "%-d %B %Y" }}"
+        "datePublished": "{{ page.date | date: "%-d %B %Y" }}",
+        "dateModified": "{{ page.date | date: "%-d %B %Y" }}"
     }
   </script>{% endif %}
   <!-- facebook -->
