@@ -3,23 +3,30 @@ layout: null
 ---
 var urlsToCache = [];
 
-// Cache assets
-// Removed assets/posts because I only want assets from the most recent posts getting cached
 {% for file in site.static_files %}
-    {% if file.extname == '.js' or file.path contains '/images' %}
+    {% if file.path contains '/js' or file.path contains '/css' or file.path contains '/images' %}
     urlsToCache.push("{{ file.path }}")
     {% endif %}
 {% endfor %}
+// Cache assets
+// Removed assets/posts because I only want assets from the most recent posts getting cached
+/*
+{% for file in site.static_files %}
+    {% if file.extname == '.js' or file.extname == '.css' or file.path contains '/images' %}
+    urlsToCache.push("{{ file.path }}")
+    {% endif %}
+{% endfor %}
+*/
 
 // Cache posts
-{% for post in site.posts %}
+/*{% for post in site.posts %}
   urlsToCache.push("{{ post.url }}")
-{% endfor %}
+{% endfor %}*/
 
 // Cache pages
-{% for page in site.html_pages %}
+/*{% for page in site.html_pages %}
   urlsToCache.push("{{ page.url }}")
-{% endfor %}
+{% endfor %}*/
 
 var CACHE_NAME = 'ion-book-cache-v1';
 
@@ -57,6 +64,9 @@ self.addEventListener('fetch', function(event) {
         cache.put(event.request, response.clone());
         return response;
       });
+    }).catch(function() {
+      // Fallback to the offline page if not available in the cache.
+      return caches.match('/offline.html');
     })
   );
 });

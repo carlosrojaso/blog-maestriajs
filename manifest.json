@@ -1,22 +1,27 @@
 {
-  "short_name": "ionbook",
   "name": "ion-book",
+  "short_name": "ion-book",
+  "lang": "es-419",
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#4E8EF7",
+  "background_color": "#ffffff",
   "icons": [
     {
-      "src": "images/launcher-icon-1x.png",
-      "type": "image/png",
-      "sizes": "48x48"
+      "src": "https://www.ion-book.com/images/logo512.png",
+      "sizes": "512x512"
     },
     {
-      "src": "images/launcher-icon-2x.png",
-      "type": "image/png",
+      "src": "https://www.ion-book.com/images/logo192.png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "https://www.ion-book.com/images/logo96.png",
       "sizes": "96x96"
     },
     {
-      "src": "images/launcher-icon-4x.png",
-      "type": "image/png",
-      "sizes": "192x192"
+      "src": "https://www.ion-book.com/images/logo48.png",
+      "sizes": "48x48"
     }
-  ],
-  "start_url": "index.html?launcher=true"
+  ]
 }
