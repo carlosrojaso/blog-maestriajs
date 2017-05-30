@@ -1,26 +1,20 @@
 <head>
-  {% if page && page.layout == 'post' %}{% for item in site.data.authors %}{% if item.id == page.author%}{% assign author = item %}{% endif %}{% endfor %}
+  {% if page && page.layout == 'post' %}
+  {% for item in site.data.authors %}{% if item.id == page.author%}{% assign author = item %}{% endif %}{% endfor %}
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
   <meta name="author" content="{% if author %}{{ author.name }}{% else %}Nicolas Molina and Carlos Rojas{% endif %}">
-  <title>{% if page.title | upcase %}{{ page.title }}{% else %}{{ site.title | upcase }}{% endif %}</title>
+  <title>
+  {% if page.title | upcase %}{{ page.title }}{% else %}{{ site.title | upcase }}{% endif %}</title>
   <meta http-equiv="origin-trial" data-feature="Web Share" data-expires="2017-04-04" content="Ajcrk411RcpUCQ3ovgC8le4e7Te/1kARZsW5Hd/OCnW6vIHTs5Kcq1PaABs7SzcrtfvT0TIlFh9Vdb5xWi9LiQsAAABSeyJvcmlnaW4iOiJodHRwczovL2FtcGJ5ZXhhbXBsZS5jb206NDQzIiwiZmVhdHVyZSI6IldlYlNoYXJlIiwiZXhwaXJ5IjoxNDkxMzM3MDEwfQ==">
   <!-- SE0 -->
+ 
   <meta name="keywords" content="{% if page.keywords %}{{ page.keywords }}{% endif %}{{ site.keywords }}">
   <meta name="description" content="{% if page.excerpt %}{{ page.excerpt  | remove: '<amp-img>' | remove: '</amp-img>' | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
   <link rel="amphtml" href="{{ page.url | replace:'index.html','' | prepend: site.path }}" />
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.path }}">
   <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml"| prepend: site.path }}" />
-  <!-- PWA Stuff -->
-  <link rel="manifest" href="{{ "manifest.json"| prepend: site.path }}">
-  <!-- Chrome, Firefox OS and Opera -->
-  <meta name="theme-color" content="#4E8EF7"> 
-  <!-- Windows Phone -->
-  <meta name="msapplication-navbutton-color" content="#4E8EF7">
-  <!-- iOS Safari -->
-  <meta name="apple-mobile-web-app-status-bar-style" content="#4E8EF7">
-
   <script type="application/ld+json">
     {
         "@context": "http://schema.org",
@@ -44,14 +38,73 @@
         "publisher": {
             "@type": "Organization",
             "name": "ion-book",
-            "logo.url": "https://www.ion-book.com/images/logo.png",
-            "logo.height": "60",
-            "logo.width": "600"
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://www.ion-book.com/images/logo.png",
+              "width": 600,
+              "height": 60
+            }
         },
+        "description": "{{ page.content | strip_html | truncate: 300  }}",
         "datePublished": "{{ page.date | date: "%-d %B %Y" }}",
         "dateModified": "{{ page.date | date: "%-d %B %Y" }}"
     }
-  </script>{% endif %}
+  </script>
+ {% endif %}
+
+ {% if page.layout == 'category' %}
+ <script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+    "@type": "ListItem",
+    "position": 1,
+    "item": {
+      "@id": "https://www.ion-book.com/blog/ionic2/",
+      "name": "Tutoriales",
+      "image": "https://www.ion-book.com/images/tutorials.png"
+    }
+  },{
+    "@type": "ListItem",
+    "position": 2,
+    "item": {
+      "@id": "https://www.ion-book.com/blog/news/",
+      "name": "Noticias",
+      "image": "https://www.ion-book.com/images/news.png"
+    }
+  },{
+    "@type": "ListItem",
+    "position": 3,
+    "item": {
+      "@id": "https://www.ion-book.com/blog/tips/",
+      "name": "Tips",
+      "image": "https://www.ion-book.com/images/tips.png"
+    }
+  }]
+}
+</script>
+ {% endif %}
+ {% if page.title == 'Home' %}
+ <script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "url": "https://www.ion-book.com",
+  "logo": "https://www.ion-book.com/images/logo192.png"
+}
+</script>
+ {% endif %}
+
+  <!-- PWA Stuff -->
+  <link rel="manifest" href="{{ "manifest.json"| prepend: site.path }}">
+  <!-- Chrome, Firefox OS and Opera -->
+  <meta name="theme-color" content="#4E8EF7"> 
+  <!-- Windows Phone -->
+  <meta name="msapplication-navbutton-color" content="#4E8EF7">
+  <!-- iOS Safari -->
+  <meta name="apple-mobile-web-app-status-bar-style" content="#4E8EF7">
+ 
   <!-- facebook -->
   <meta property="fb:app_id" content="877264572411311" /> 
   <meta property="og:url" content="{{ page.url | replace:'index.html','' | prepend: site.path }}" />
