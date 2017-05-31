@@ -11,12 +11,12 @@
       <div class="col col-100 col-md-33 col-lg-33">
         <ul class="menu-footer">
           {% for link in site.data.nav.menu_footer %}<li>
-              <a {% if page.title == link.title %}class="active"{% endif %} href="{{ link.url }}" target="{{link.target}}">{{ link.title }}</a>
+              <a {% if page.title == link.title %}class="active"{% endif %} href="{{ link.url }}" target="{{link.target}}" rel="noopener">{{ link.title }}</a>
           </li>{% endfor %}
         </ul>
         <div>
             {% for social in site.data.general.social_links %}
-            <a href="{{ social.url }}" target="_blank" class="btn-social">
+            <a href="{{ social.url }}" target="_blank" class="btn-social" rel="noopener">
               <div class="icon {{social.icon}}"></div>
             </a>
           {% endfor %}
@@ -33,3 +33,11 @@
   data-no-service-worker-fallback-shell-url="https://www.ion-book.com/pwa">
   >
 </amp-install-serviceworker>
+<!-- Pushcrew -->
+<amp-iframe width="150"
+  height="1"
+  layout="responsive"
+  sandbox="allow-scripts allow-same-origin allow-popups"
+  frameborder="0"
+  src="https://amp.ng-classroom.com/pushcrews.html">
+</amp-iframe>
