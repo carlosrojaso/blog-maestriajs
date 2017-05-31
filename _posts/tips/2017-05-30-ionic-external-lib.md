@@ -20,19 +20,19 @@ versions:
 
 <amp-img width="200" height="200" src="http://i.imgur.com/ZYv3zLt.png"></amp-img>
 
-Con esta técnica podremos incluir librerías externas a nuestra aplicación como d3, Font Awesome icons.
+Con esta técnica podremos incluir librerías externas a nuestra aplicación como Font Awesome icons.
 
-## 1. Instalar Ionic 2 y Cordova.
+## 1. Instalar Ionic y Cordova.
 
 ```
-$# sudo npm install -g ionic@beta cordova
+$# npm install -g cordova ionic
 ```
 
 ## 2. Creamos una app con el Starter Tutorial.
 
 ```
-$# ionic start app tutorial --v2
-$# cd app
+$# ionic start myApp tabs
+$# cd myApp
 ```
 
 ## 3. Incluimos alguna librería externa como font awesome icons
@@ -45,7 +45,9 @@ $# cd app
   }
 ```
 
-## 4. Modificar uno de los parametros de configuracíon de las task d ionic especificamente el de `ionic_copy` por uno custom.
+## 4. Modificar uno de los parámetros de configuración de las task d ionic específicamente el de `ionic_copy` por uno custom en el `package.json`.
+
+`myApp\scripts\custom.lib.js`
 
 ```json
   "config": {
