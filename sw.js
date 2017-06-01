@@ -53,16 +53,21 @@ self.addEventListener('fetch', function(event) {
   );
 });
 
-self.addEventListener('fetch', function(event) {
-  event.respondWith(
-    caches.open(CACHE_NAME).then(function(cache) {
-      return fetch(event.request).then(function(response) {
-        cache.put(event.request, response.clone());
-        return response;
-      });
-    }).catch(function() {
-      // Fallback to the offline page if not available in the cache.
-      return caches.match('/404.html');
+self.addEventListener('activate', event => {
+  // delete any caches that aren't in expectedCaches
+  // which will get rid of static-v1
+
+  var expectedCaches = ['ion-book-cache-v1'];
+
+  event.waitUntil(
+    caches.keys().then(keys => Promise.all(
+      keys.map(key => {
+        if (!expectedCaches.includes(key)) {
+          return caches.delete(key);
+        }
+      })
+    )).then(() => {
+      console.log('V2 now ready to handle fetches!');
     })
   );
 });

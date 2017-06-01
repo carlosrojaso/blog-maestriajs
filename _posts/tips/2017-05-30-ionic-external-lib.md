@@ -45,7 +45,7 @@ $# cd myApp
   }
 ```
 
-## 4. Modificar uno de los parámetros de configuración de las task d ionic específicamente el de `ionic_copy` por uno custom en el `package.json`.
+## 4. Modificar uno de los parámetros de configuración de las task de ionic específicamente el de `ionic_copy` por uno custom en el `package.json`.
 
 `myApp\scripts\custom.lib.js`
 
