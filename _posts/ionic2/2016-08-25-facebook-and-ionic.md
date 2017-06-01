@@ -69,7 +69,7 @@ Se nos abrirá una ventana donde nos mostrará un pequeño tutorial para realiza
 
 <amp-img width="1280" height="800" layout="responsive" src="/images/posts/ionic2/2016-08-25-facebook-and-ionic/screen6.png"></amp-img>
 
-Vamos ir seguir los pasos, que nos dan a continuación, pero abrán varios pasos que simplemente vamos a saltar ya que se configuran de manera diferente con el plugin facebook, a continuación los pasos que si debemos tener en cuenta, lo demas solo daremos **'Next'**.
+Vamos ir seguir los pasos, que nos dan a continuación, pero abrán varios pasos que simplemente vamos a saltar ya que se configuran de manera diferente con el plugin de facebook, a continuación los pasos que si debemos tener en cuenta, lo demas solo daremos **'Next'**. Ahora vamos a crear poner el  **Package Name** de la aplicación. Este lo puedes ver en arhiivo `config.xml`.
 
 <amp-img width="1280" height="800" layout="responsive" src="/images/posts/ionic2/2016-08-25-facebook-and-ionic/screen7.png"></amp-img>
 
@@ -139,17 +139,23 @@ En el archivo `home.html` agregaremos un botón el cual ejecutará al hacer clic
 
 ```html
 <ion-header>
-  <ion-navbar>
-    <ion-title>
-      Login Facebook
-    </ion-title>
+  <ion-navbar color="primary">
+    <ion-title>Demo113</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
   Prueba registro con facebook.
   <button ion-button block (click)="loginFacebook()">Login con facebook</button>
+  <ion-item *ngIf="showUser">
+    <ion-avatar item-left>
+      <img [src]="user.picture.data.url" alt="">
+    </ion-avatar>
+    <h2>{{user.name}}</h2>
+    <p>{{user.email}}</p>
+  </ion-item>
 </ion-content>
+
 ```
 
 En el archivo `home.ts` incluiremos el código necesario para realizar la comunicación con Facebook. Debemos de importar la librería Facebook esta nos permitirá la comunicación con Facebook.
@@ -165,6 +171,9 @@ import { Facebook } from '@ionic-native/facebook';
   templateUrl: 'home.html',
 })
 export class HomePage {
+
+  user: any = {};
+  showUser: boolean = false;
 
   constructor(
     private navCtrl: NavController,
@@ -190,9 +199,11 @@ export class HomePage {
   }
 
   getInfo(){
-    this.facebook.api('/me?fields=id,name,email,first_name,last_name,gender',['public_profile','email'])
-    .then(rta=>{
-      console.log(rta);
+    this.facebook.api('/me?fields=id,name,email,first_name,picture,last_name,gender',['public_profile','email'])
+    .then(data=>{
+      console.log(data);
+      this.showUser = true; 
+      this.user = data;
     })
     .catch(error =>{
       console.error( error );
@@ -214,11 +225,14 @@ Esto nos generará el apk y este lo podremos instalar en nuestro dispositivo o e
 # Resultado:
 
 <div class="row wrap">
-  <div class="col col-100 col-md-50 col-lg-50">
-    <amp-img width="720" height="1280" layout="responsive" src="http://i.cubeupload.com/psktlb.jpeg"></amp-img>
+  <div class="col col-100 col-md-33 col-lg-33">
+    <amp-img width="720" height="1280" layout="responsive" src="/images/posts/ionic2/2016-08-25-facebook-and-ionic/screen14.png"></amp-img>
   </div>
-  <div class="col col-100 col-md-50 col-lg-50">
-   <amp-img width="720" height="1280" layout="responsive" src="http://i.cubeupload.com/m8LA1M.jpeg"></amp-img>
+  <div class="col col-100 col-md-33 col-lg-33">
+   <amp-img width="720" height="1280" layout="responsive" src="/images/posts/ionic2/2016-08-25-facebook-and-ionic/screen15.png"></amp-img>
+  </div>
+  <div class="col col-100 col-md-33 col-lg-33">
+   <amp-img width="720" height="1280" layout="responsive" src="/images/posts/ionic2/2016-08-25-facebook-and-ionic/screen16.png"></amp-img>
   </div>
 </div>
-<amp-img width="1280" height="800" layout="responsive" src="http://i.cubeupload.com/TrKouV.png"></amp-img>
+<amp-img width="1280" height="800" layout="responsive" src="/images/posts/ionic2/2016-08-25-facebook-and-ionic/screen13.png"></amp-img>
