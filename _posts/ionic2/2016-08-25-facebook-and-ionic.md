@@ -20,13 +20,13 @@ versions:
     number: '3.3.0'
 ---
 
-> **Facebook** es una de las métodos más comunes y usados para registrar y capturar nuevos usuarios, así que en este artículo veremos como hacer el proceso de registrar nuestros usuarios usando **facebook + ionic**.
+> **Facebook** es uno de las métodos más comunes y usados para registrar y capturar nuevos usuarios, así que en este artículo veremos como hacer el proceso de registrar nuestros usuarios usando **facebook + ionic**.
 
 <amp-img width="800" height="450" layout="responsive" src="/images/posts/ionic2/2016-08-25-facebook-and-ionic/cover.png"></amp-img>
 
 Para comenzar debemos de tener instalado todo el entorno de desarrollo de ionic [(inicio en ionic)](http://ionicframework.com/docs/intro/installation/){:target="_blank"}. Una vez lista nuestra máquina podemos comenzar.
 
-Primero que todo crearemos un proyecto en blanco y lo llamaremos **loginFacebook** en Ionic. Nos ubicamos en la ruta donde queremos almacenar nuestro proyecto y digitamos el siguiente comando en nuestra consola.
+Primero que todo crearemos un proyecto en blanco y lo llamaremos **demo113** en Ionic. Nos ubicamos en la ruta donde queremos almacenar nuestro proyecto y digitamos el siguiente comando en nuestra consola.
 
 ```
 ionic start demo113 blank
@@ -52,7 +52,7 @@ el siguiente paso es crear un identificador de la aplicación en la plataforma d
 
 <amp-img width="1280" height="800" layout="responsive" src="/images/posts/ionic2/2016-08-25-facebook-and-ionic/screen2.png"></amp-img>
 
-*Nota: En este caso coloque en nombre para mostrar solo login ya que Facebook restringe cualquier nombre para la aplicación que contenga las palabras FB, face, book, isnt. Entre otras.*
+*Nota: Recuerda que que Facebook restringe cualquier nombre para la aplicación que contenga las palabras FB, face, book, isnt. Entre otras.*
 
 Perfecto ahora ya tenemos un identificador para la aplicación.
 
@@ -70,7 +70,7 @@ Se nos abrirá una ventana donde nos mostrará un pequeño tutorial para realiza
 
 <amp-img width="1280" height="800" layout="responsive" src="/images/posts/ionic2/2016-08-25-facebook-and-ionic/screen6.png"></amp-img>
 
-Vamos ir seguir los pasos, que nos dan a continuación, pero abrán varios pasos que simplemente vamos a saltar ya que se configuran de manera diferente con el plugin de facebook, a continuación los pasos que si debemos tener en cuenta, lo demas solo daremos **'Next'**. Ahora vamos a crear poner el  **Package Name** de la aplicación. Este lo puedes ver en arhiivo `config.xml`.
+Vamos ir seguir los pasos, que nos dan a continuación, pero abrán varios pasos que simplemente vamos a saltar ya que se configuran de manera diferente con el plugin de facebook, a continuación veremos los pasos que si debemos tener en cuenta. Ahora vamos a poner el **Package Name** de la aplicación. Este lo puedes ver en archivo `config.xml` de tu aplicación.
 
 <amp-img width="1280" height="800" layout="responsive" src="/images/posts/ionic2/2016-08-25-facebook-and-ionic/screen7.png"></amp-img>
 
@@ -90,8 +90,7 @@ La clave hash que nos genera la copiamos en el campo requerido y finalizamos con
 
 <amp-img width="1280" height="800" layout="responsive" src="/images/posts/ionic2/2016-08-25-facebook-and-ionic/screen11.png"></amp-img>
 
-Ahora los pasos restantes solo vamos a oprimir el botón **Next**, luego volvemos a nuestra consola e instalaremos el plugin de [Facebook]
-](https://ionicframework.com/docs/native/facebook/){:target="_blank"}, digitamos en la consola el siguiente comando.
+Ahora los pasos restantes solo vamos a oprimir el botón **Next**, luego volvemos a nuestra consola e instalaremos el plugin de [Facebook](https://ionicframework.com/docs/native/facebook/){:target="_blank"}, digitamos en la consola el siguiente comando.
 
 ```
 ionic cordova plugin add cordova-plugin-facebook4 --variable APP_ID="1394107387338116" --variable APP_NAME="ion-demo"
@@ -139,6 +138,7 @@ con esto ya estamos listos para ir al código y realizar una prueba. Abrimos nue
 En el archivo `home.html` agregaremos un botón el cual ejecutará al hacer click la función **loginFacebook** y mostraremos los datos que nos recupera al validar la información de registro.
 
 ```html
+{% raw %}
 <ion-header>
   <ion-navbar color="primary">
     <ion-title>Demo113</ion-title>
@@ -156,7 +156,7 @@ En el archivo `home.html` agregaremos un botón el cual ejecutará al hacer clic
     <p>{{user.email}}</p>
   </ion-item>
 </ion-content>
-
+{% endraw %}
 ```
 
 En el archivo `home.ts` incluiremos el código necesario para realizar la comunicación con Facebook. Debemos de importar la librería Facebook esta nos permitirá la comunicación con Facebook.
@@ -218,7 +218,7 @@ Con esto ya está todo listo para compilar nuestro proyecto y realizar la prueba
 Para compilar nuestro proyecto android digitamos el comando en la consola:
 
 ```
-ionic corddova build android --prod
+ionic cordova build android --prod
 ```
 
 Esto nos generará el apk y este lo podremos instalar en nuestro dispositivo o en un emulador para realizar la prueba.
