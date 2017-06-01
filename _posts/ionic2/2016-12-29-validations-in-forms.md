@@ -2,30 +2,45 @@
 layout: post
 title: "Validaciones en Formularios"
 keywords: "validaciones con ionic, formularios con angular 2, validar email con angular 2, formbuilder, formularios con ionic 2"
-date: 2017-01-03
-tags: [forms, demos, ionic2]
+date: 2017-05-24
+tags: [forms, demos]
 categories: ionic2
-laucher: "/launcher/demo109"
+repo: "https://github.com/ion-book/demo109"
 author: nicobytes
 cover: "https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2Fvalidations-in-forms%2FValidaciones%20en%20Formularios.jpg?alt=media"
 remember: true
 versions:
   - title: 'ionic'
-    number: '2.0.0-rc.3'
+    number: '3.3.0'
   - title: 'ionic-native'
-    number: '2.2.3'
+    number: '3.10.3'
+  - title: 'ionic-app-scripts'
+    number: '1.3.7'
+  - title: 'cordova-cli'
+    number: '7.0.1'
+  - title: 'ionic-cli'
+    number: '3.2.0'
 ---
 
 > La forma más común de capturar información de los usuarios son los **Formularios** y depende de una buena UI/UX ganar o perder un usuario en nuestra aplicación.
 <!--summary-->
 
-<amp-img width="1024" height="512" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2Fvalidations-in-forms%2FValidaciones%20en%20Formularios.jpg?alt=media" alt="Validaciones en Formularios"></amp-img>
+<amp-img width="1024" height="512" layout="responsive" src="/images/posts/ionic2/2016-12-29-validations-in-forms/cover.jpg" alt="Validaciones en Formularios"></amp-img>
 
-Por eso es de vital importancia hacer un buen manejo de ellos, tener las validaciones adecuadas y por esto Angular2 nos ofrece **FormBuilder**, una clase que nos provee una completa herramienta para controlar y validar formularios de forma muy eficiente y sencilla.
+# Actualización (21/05/2017)
+<hr/>
 
-Antes puedes ver nuestro artículo anterior [**Forms con Ionic 2**]({{site.urlblog}}/ionic2/form-builder/){:target="_blank"} donde hacemos la construcción de un formulario sencillo, en este artículo nos enfocaremos en las **validaciones**.
+Hemos actualizado este demo con el último release de **Ionic 3**, si aún estas en alguna de las versiones anteriores puedes seguir estos pasos [de Ionic 2 a Ionic 3](https://www.ion-book.com/blog/tips/ionic-2-to-ionic3/){:target="_blank"}.
 
-En Angular 2 existen tres maneras de trabajar con formularios:
+Ademas en este demo usamos la función de **lazy loading** y **@IonicPage**. Puedes ver el repositorio [**Demo109**](https://github.com/ion-book/demo109){:target="_blank"}
+
+<hr/>
+
+Por eso es de vital importancia hacer un buen manejo de ellos, tener las validaciones adecuadas y por esto Angular nos ofrece **FormBuilder**, una clase que nos provee una completa herramienta para controlar y validar formularios de forma muy eficiente y sencilla.
+
+Antes puedes ver nuestro artículo anterior [**Formularios con Ionic**]({{site.urlblog}}/ionic2/form-builder/){:target="_blank"} donde hacemos la construcción de un formulario sencillo, en este artículo nos enfocaremos en las **validaciones**.
+
+En Angular existen tres maneras de trabajar con formularios:
 
 ## Forms con NgModel
 
@@ -43,12 +58,12 @@ Para crear nuestro formulario con FormBuilder, vamos a ver la siguiente estructu
 
 ```ts
 this.myForm = this.fb.group({
-  'name': ['', Validators.required],
-  'company': ['', Validators.required],
-  'email': ['', Validators.required],
-  'age': ['', Validators.required],
-  'url': ['', Validators.required],
-  'password': ['', Validators.required],
+  name: ['', [Validators.required]],
+  company: ['', [Validators.required]],
+  email: ['', [Validators.required]],
+  age: ['', [Validators.required]],
+  url: ['', [Validators.required]],
+  password: ['', [Validators.required]],
 });
 ```
 
@@ -57,8 +72,9 @@ La clase completa se vera asi `home.ts`:
 ```ts
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators} from '@angular/forms';
-import { NavController } from 'ionic-angular';
+import { IonicPage, NavController } from 'ionic-angular';
 
+@IonicPage()
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
@@ -72,17 +88,17 @@ export class HomePage {
     public fb: FormBuilder
   ) {
     this.myForm = this.fb.group({
-      'name': ['', Validators.required],
-      'company': ['', Validators.required],
-      'email': ['', Validators.required],
-      'age': ['', Validators.required],
-      'url': ['', Validators.required],
-      'password': ['', Validators.required],
+      name: ['', [Validators.required]],
+      company: ['', [Validators.required]],
+      email: ['', [Validators.required]],
+      age: ['', [Validators.required]],
+      url: ['', [Validators.required]],
+      password: ['', [Validators.required]],
     });
   }
 
   saveData(){
-    console.log(this.myForm.value);
+    alert(JSON.stringify(this.myForm.value));
   }
 
 }
@@ -92,7 +108,7 @@ Con el método `saveData` obtenemos la información del formulario luego que tod
 
 Antes de empezar, es necesario entender los conceptos básicos para desarrollar el demo de este artículo.
 
-Observamos que todos los campos tienen una validación la cual es `Validators.required`, es decir que todos los campos son obligatorios. Con Angular 2 y FormBuilder podemos agregar validaciones tan complejas como queramos, existen dos tipos de validaciones.
+Observamos que todos los campos tienen una validación la cual es `Validators.required`, es decir que todos los campos son obligatorios. Con Angular y FormBuilder podemos agregar validaciones tan complejas como queramos, existen dos tipos de validaciones.
 
 ## Validaciones asíncronas
 
@@ -110,12 +126,13 @@ Teniendo esto en cuenta podemos hacer combinaciones muy útiles de validaciones 
 
 Como ven primero va el valor por defecto, luego declaramos el conjunto de la validaciones sincronas y luego el conjunto de validaciones asíncronas. En este artículo trabajaremos con validaciones sincronas (más adelante escribiremos sobre las validaciones asíncronas).
 
-**Angular 2**, son provee la clase `Validators` que trae funciones comunes que son de mucha utilidad en los formularios:
+**Angular**, son provee la clase `Validators` que trae funciones comunes que son de mucha utilidad en los formularios:
 
 1. **Validators.required** = Comprueba que el campo sea llenado.
 1. **Validators.minLength** = Comprueba que el campo cumpla con un mínimo de caracteres.
 1. **Validators.maxLength** = Comprueba que el campo cumpla con un máximo de caracteres.
 1. **Validators.pattern** = Comprueba que el campo cumpla con un patrón usando una expresión regular.
+1. **Validators.email** = Comprueba que el campo cumpla con un patrón de correo válido.
 
 Con estas funciones podemos crear conjuntos de validaciones, por ejemplo al campo company podemos agregar el siguiente conjunto de validaciones:
 
@@ -149,32 +166,31 @@ Ahora si con estos conceptos claros podemos iniciar con nuestro demo (Demo Time)
 
 ## Paso 1: Iniciando el proyecto
 
-Lo primero que haremos será iniciar un nuevo proyecto con ionic, si no lo recuerdas puedes ver esto con mas detalle en la [Introduccion a Ionic 2]({{site.urlblog}}/ionic2/ionic2){:target="_blank"}.
-Vamos a nuestra terminal y ejecutamos:
+Lo primero que haremos será iniciar un nuevo proyecto con ionic, vamos a nuestra terminal y ejecutamos:
 
 ```
-ionic start demo109 blank --v2
+ionic start demo109 blank
 ```
 
-Ahora entramos a la carpeta del proyecto desde nuestra terminal con:
+Ionic crea una carpeta con el nombre del proyecto, nuestro siguiente paso será ubicarnos dentro a la carpeta del proyecto desde nuestra terminal con:
 
 ```
 cd demo109
 ```
 
-Como iniciamos nuestro proyecto con el template **blank** tendremos una estructura básica del proyecto, la carpeta en la que vamos a trabajar sera *app*.
+El proyecto inicia con el template **blank** y por esto tendremos una estructura básica del proyecto, la carpeta en la que vamos a trabajar será `src`:
 
 <div class="row">
   <div class="col col-100 col-md-50 col-lg-50">
-    <amp-img width="500" height="493" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/demos%2Fdemo102%2FScreenshot%20from%202016-11-06%2012-46-16.png?alt=media"></amp-img>
+    <amp-img width="376" height="183" layout="responsive" src="/images/posts/ionic2/2016-07-11-camera-and-ionic/tree1.png"></amp-img>
   </div>
 </div>
 
 Luego agregamos la plataforma para la que vamos a desarrollar:
 
 ```
-ionic platform add android
-ionic platform add ios
+ionic cordova platform add android
+ionic cordova platform add ios
 ```
 
 ## Paso 2: Crear el Formulario
@@ -184,8 +200,9 @@ Vamos a usar FormBuilder para crear nuestro formulario, de esta manera:
 ```ts
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators} from '@angular/forms';
-import { NavController } from 'ionic-angular';
+import { IonicPage, NavController } from 'ionic-angular';
 
+@IonicPage()
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
@@ -199,17 +216,17 @@ export class HomePage {
     public fb: FormBuilder
   ) {
     this.myForm = this.fb.group({
-      'name': ['', [Validators.required]],
-      'company': ['', [Validators.required, Validators.minLength(5), Validators.maxLength(10)]],
-      'email': ['', [Validators.required, Validators.pattern(/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/)]],
-      'age': ['', [Validators.required]],
-      'url': ['', [Validators.pattern(/^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$/)]],
-      'password': ['', [Validators.pattern(/^[a-z0-9_-]{6,18}$/)]],
+      name: ['', [Validators.required]],
+      company: ['', [Validators.required, Validators.minLength(5), Validators.maxLength(10)]],
+      email: ['', [Validators.required, Validators.email]],
+      age: ['', [Validators.required]],
+      url: ['', [Validators.pattern(/^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$/)]],
+      password: ['', [Validators.pattern(/^[a-z0-9_-]{6,18}$/)]],
     });
   }
 
   saveData(){
-    console.log(this.myForm.value);
+    alert(JSON.stringify(this.myForm.value));
   }
 
 }
@@ -221,19 +238,7 @@ como podemos ver usamos todos los métodos que nos provee la clase `Validators`.
 
 Las expresiones regulares son muy frecuente para validar datos, las expresiones y imagenes a continuacion son del artiulo [8 Regular Expressions You Should Know](https://code.tutsplus.com/tutorials/8-regular-expressions-you-should-know--net-6149){:target="_blank"}
 
-En la línea 20 usamos la siguiente expresión regular para validar el **email**:
-
-<div class="row">
-  <div class="col col-100 col-md-66 col-lg-66">
-    <amp-img width="600" height="500" layout="responsive" src="https://cdn.tutsplus.com/net/uploads/legacy/404_regularExpressions/images/email.jpg"></amp-img>
-  </div>
-</div>
-
-```
-/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/
-```
-
-En la línea 22 usamos la siguiente expresión regular para validar una **url**:
+Usamos la siguiente expresión regular para validar una **url**:
 
 <div class="row">
   <div class="col col-100 col-md-66 col-lg-66">
@@ -245,8 +250,7 @@ En la línea 22 usamos la siguiente expresión regular para validar una **url**:
 /^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$/
 ```
 
-
-En la línea 23 usamos la siguiente expresión regular para validar un **password**:
+Usamos la siguiente expresión regular para validar un **password**:
 
 <div class="row">
   <div class="col col-100 col-md-66 col-lg-66">
@@ -270,47 +274,48 @@ Ahora en el template vamos a controlar cómo mostrar los errores al usuario a pa
       <ion-input formControlName="name" type="text" placeholder="name"></ion-input>
     </ion-item>
     <ion-item *ngIf="myForm.get('name').errors && myForm.get('name').dirty">
-      <p *ngIf="myForm.get('name').hasError('required')">Field is required</p>
+      <p color="danger" ion-text *ngIf="myForm.get('name').hasError('required')">Field is required</p>
     </ion-item>
     <ion-item>
       <ion-label stacked>Company:</ion-label>
       <ion-input formControlName="company" type="text" placeholder="company"></ion-input>
     </ion-item>
     <ion-item *ngIf="myForm.get('company').errors && myForm.get('company').dirty">
-      <p *ngIf="myForm.get('company').hasError('required')">Field is required</p>
-      <p *ngIf="myForm.get('company').hasError('minlength')">Min of 5 characters</p>
-      <p *ngIf="myForm.get('company').hasError('maxlength')">Max of 10 characters</p>
+      <p color="danger" ion-text *ngIf="myForm.get('company').hasError('required')">Field is required</p>
+      <p color="danger" ion-text *ngIf="myForm.get('company').hasError('minlength')">Min of 5 characters</p>
+      <p color="danger" ion-text *ngIf="myForm.get('company').hasError('maxlength')">Max of 10 characters</p>
     </ion-item>
     <ion-item>
       <ion-label stacked>E-mail:</ion-label>
       <ion-input formControlName="email" type="text" placeholder="email"></ion-input>
     </ion-item>
     <ion-item *ngIf="myForm.get('email').errors && myForm.get('email').dirty">
-      <p *ngIf="myForm.get('email').hasError('required')">Field is required</p>
-      <p *ngIf="myForm.get('email').hasError('pattern')">It is not an email</p>
+      <p color="danger" ion-text *ngIf="myForm.get('email').hasError('required')">Field is required</p>
+      <p color="danger" ion-text *ngIf="myForm.get('email').hasError('email')">It is not an email</p>
     </ion-item>
     <ion-item>
       <ion-label stacked>Age:</ion-label>
       <ion-input formControlName="age" type="number" placeholder="age"></ion-input>
     </ion-item>
     <ion-item *ngIf="myForm.get('age').errors && myForm.get('age').dirty">
-      <p *ngIf="myForm.get('age').hasError('required')">Field is required</p>
+      <p color="danger" ion-text *ngIf="myForm.get('age').hasError('required')">Field is required</p>
+      <p color="danger" ion-text *ngIf="myForm.get('age').hasError('invalid')">You are not adult</p>
     </ion-item>
     <ion-item>
       <ion-label stacked>Url:</ion-label>
       <ion-input formControlName="url" type="text" placeholder="url"></ion-input>
     </ion-item>
     <ion-item *ngIf="myForm.get('url').errors && myForm.get('url').dirty">
-      <p *ngIf="myForm.get('url').hasError('required')">Field is required</p>
-      <p *ngIf="myForm.get('url').hasError('pattern')">It is not an url</p>
+      <p color="danger" ion-text *ngIf="myForm.get('url').hasError('required')">Field is required</p>
+      <p color="danger" ion-text *ngIf="myForm.get('url').hasError('pattern')">It is not an url</p>
     </ion-item>
     <ion-item>
       <ion-label stacked>Password:</ion-label>
       <ion-input formControlName="password" type="password" placeholder="password"></ion-input>
     </ion-item>
     <ion-item *ngIf="myForm.get('password').errors && myForm.get('password').dirty">
-      <p *ngIf="myForm.get('password').hasError('required')">Field is required</p>
-      <p *ngIf="myForm.get('password').hasError('pattern')">It is not a strong password</p>
+      <p color="danger" ion-text *ngIf="myForm.get('password').hasError('required')">Field is required</p>
+      <p color="danger" ion-text *ngIf="myForm.get('password').hasError('pattern')">It is not a strong password</p>
     </ion-item>
   </ion-list>
   <div padding>
@@ -319,4 +324,4 @@ Ahora en el template vamos a controlar cómo mostrar los errores al usuario a pa
 </form>
 ```
 
-En el template agregamos cada uno de los mensajes correspondientes a cada error, finalmente si todo el formulario es válido se habilita el botón de guardar (línea 53) y podremos obtener la información con el método `saveData` que está en `home.ts` 
+En el template agregamos cada uno de los mensajes correspondientes a cada error, finalmente si todo el formulario es válido se habilita el botón `Guardar` y podremos obtener la información con el método `saveData` que está en `home.ts` 

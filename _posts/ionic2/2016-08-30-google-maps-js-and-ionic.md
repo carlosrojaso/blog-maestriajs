@@ -10,15 +10,15 @@ cover: "/images/posts/ionic2/2016-08-30-google-maps-js-and-ionic/cover.png"
 remember: true
 versions:
   - title: 'ionic'
-    number: '3.2.1'
+    number: '3.3.0'
   - title: 'ionic-native'
-    number: '3.7.0'
+    number: '3.10.3'
   - title: 'ionic-app-scripts'
     number: '1.3.7'
   - title: 'cordova-cli'
     number: '7.0.1'
   - title: 'ionic-cli'
-    number: '3.0.0'
+    number: '3.2.0'
 ---
 
 > La interacción con mapas en aplicaciones móviles es muy común y en este artículo explicaremos cómo integrar **Google Maps** usando el SDk de JS con **Ionic**.

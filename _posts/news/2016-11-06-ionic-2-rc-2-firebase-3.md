@@ -32,7 +32,7 @@ cd test
 
 Como iniciamos nuestro proyecto con el template **blank** tendremos una estructura básica del proyecto, la carpeta en la que vamos a trabajar sera `src`:
 
-<img class="img-responsive center-block" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/demos%2Fdemo102%2FScreenshot%20from%202016-11-06%2012-46-16.png?alt=media" alt="folders">
+<amp-img width="500" height="493" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/demos%2Fdemo102%2FScreenshot%20from%202016-11-06%2012-46-16.png?alt=media" alt="folders"></amp-img>
 
 Agregamos la plataforma para la que vamos a desarrollar, puede android o IOS:
 

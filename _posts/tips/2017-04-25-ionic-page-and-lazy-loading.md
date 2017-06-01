@@ -10,15 +10,15 @@ cover: "/images/posts/tips/2017-04-24-ionic-page-and-lazy-loading/cover.jpg"
 repo: https://github.com/ion-book/demo112
 versions:
   - title: 'ionic'
-    number: '3.2.0'
+    number: '3.2.1'
   - title: 'ionic-native'
-    number: '3.7.0'
+    number: '3.10.2'
   - title: 'ionic-app-scripts'
     number: '1.3.7'
   - title: 'cordova-cli'
-    number: '7.0.0'
+    number: '7.0.1'
   - title: 'ionic-cli'
-    number: '3.0.0'
+    number: '3.1.2'
 ---
 
 > Hace poco publicamos un artículo donde explicamos cómo actualizar una aplicación de la versión de [**ionic 2 a ionic 3**]({{site.urlblog}}/news/ionic-v-3){:target="_blank"}, pero sin usar el decorador @IonicPage ni lazy loading que son dos de las principales características en ionic 3.

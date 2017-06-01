@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Testing en Angular 2 / Ionic 2"
+title: "Testing en Angular/Ionic"
 date: 2016-10-30
 tags: [testing, ionic2]
 categories: tips

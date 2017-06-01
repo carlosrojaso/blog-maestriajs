@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Ionic 2 VS Nativescript"
+title: "Ionic VS Nativescript"
 keywords: "ionic 2, nativescript, ionic 2 vs nativescript, ionic 2 o nativescript"
 date: 2017-01-08
 tags: [tips, ionic2, news]

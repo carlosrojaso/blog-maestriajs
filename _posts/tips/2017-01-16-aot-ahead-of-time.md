@@ -116,17 +116,17 @@ ng build --aot
 Bueno en el caso de Ionic 2, facilita todo el esfuerzo de configuración porque ya está habilitado y desde la versión RC4 hacia arriba solo tienes que agregar la bandera `--prod` al proceso de construcción, por ejemplo:
 
 ```
-ionic build android --prod
-ionic build ios --prod
-ionic run android --prod
-ionic run ios --prod
+ionic cordova build android --prod
+ionic cordova build ios --prod
+ionic cordova run android --prod
+ionic cordova run ios --prod
 ```
 
 Ó para release:
 
 ```
-ionic build android --release --prod
-ionic build ios --release --prod
+ionic cordova build android --release --prod
+ionic cordova build ios --release --prod
 ```
 
 El equipo de Ionic hizo un ejemplo de una app con **JIT** y otra con **AOT**
