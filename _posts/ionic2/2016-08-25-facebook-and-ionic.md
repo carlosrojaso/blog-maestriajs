@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Registro con Facebook + Ionic"
-date: 2016-08-25
+date: 2017-06-01
 tags: [native, demos]
 categories: ionic2
 author: daniel_lsanchez
