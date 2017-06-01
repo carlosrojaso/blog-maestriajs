@@ -6,6 +6,7 @@ tags: [native, demos]
 categories: ionic2
 author: daniel_lsanchez
 cover: "/images/posts/ionic2/2016-08-25-facebook-and-ionic/cover.png"
+repo: https://github.com/ion-book/demo113
 versions:
   - title: 'ionic'
     number: '3.3.0'
