@@ -18,7 +18,7 @@ versions:
   - title: 'cordova-cli'
     number: '7.0.1'
   - title: 'ionic-cli'
-    number: '3.2.0'
+    number: '3.3.0'
 ---
 
 > Hola a todos, en esta ocasión les traemos un pequeño ejemplo de cómo poder implementar **Google Maps Nativo** en tu proyecto de **Ionic**, es algo muy sencillo y de seguro que con estas bases podrás dar inicio a una gran idea.
