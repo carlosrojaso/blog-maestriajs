@@ -38,32 +38,32 @@ Ademas en este demo usamos la función de **lazy loading** y **@IonicPage**. Pue
 
 Para integrar Google Maps en tu aplicación es necesario que te registres en la cuenta de Google para desarrolladores y generes el API KEY de la aplicación ya sea para android o ios, esta te permitirá trabajar con Google Maps. Aquí dejo el link para ingresar a generar la key [**Link**](https://developers.google.com/maps/?hl=es-419.){:target="_blank"}
 
-<amp-img width="1200" height="800" layout="responsive" src="http://i.cubeupload.com/kX4StC.jpg"></amp-img>
+<amp-img width="1200" height="800" layout="responsive" src="/images/posts/ionic2/2016-09-23-google-maps-native/screen1.jpg"></amp-img>
 
 Una vez nos encontramos en la plataforma de google, es necesario que selecciones la tecnología con la cual se integrará Google Maps, para este ejemplo lo trabajaremos para la plataforma Android.
 
 Al seleccionar la plataforma nos aparecerá una serie de textos los cuales nos explican sobre Google Maps (esto lo puedes leer para que te enteres de todo lo que google tiene para nosotros trabajar con mapas), en este paso vamos a dar click en la parte superior de la ventana sobre costado derecho en el botón **“Obtener una clave”**.
 
-<amp-img width="1200" height="800" layout="responsive" src="http://i.cubeupload.com/ftWfcm.jpg"></amp-img>
-<amp-img width="1200" height="800" layout="responsive" src="http://i.cubeupload.com/Wpn8Ga.jpg"></amp-img>
+<amp-img width="1200" height="800" layout="responsive" src="/images/posts/ionic2/2016-09-23-google-maps-native/screen2.jpg"></amp-img>
+<amp-img width="1200" height="800" layout="responsive" src="/images/posts/ionic2/2016-09-23-google-maps-native/screen3.jpg"></amp-img>
 
 En la ventana que se nos abre, nos dirigimos a seleccionar la opción **“Crear proyecto”** y continuar.
 
 <div class="row">
   <div class="col col-100 col-md-66 col-lg-66">
-    <amp-img width="521" height="374" layout="responsive" src="http://i.cubeupload.com/48GboH.jpg"></amp-img>
+    <amp-img width="521" height="374" layout="responsive" src="/images/posts/ionic2/2016-09-23-google-maps-native/screen4.jpg"></amp-img>
   </div>
 </div>
 
 Continuamos digitando el nombre de nuestra aplicación para con este reconocer la clave generada por Google Maps. Yo he nombrado la app con el nombre **“MapasNativo”** y este será el nombre de nuestra aplicación.
 
-<amp-img width="915" height="580" layout="responsive" src="http://i.cubeupload.com/5iOdPK.jpg"></amp-img>
+<amp-img width="915" height="580" layout="responsive" src="/images/posts/ionic2/2016-09-23-google-maps-native/screen5.jpg"></amp-img>
 
 Apenas tengas lista la información, puedes pulsar el botón de **“Crear”** para que google te genere el id de tu producto.
 
 <div class="row">
   <div class="col col-100 col-md-66 col-lg-66">
-    <amp-img width="609" height="335" layout="responsive" src="http://i.cubeupload.com/QucGs7.jpg"></amp-img>
+    <amp-img width="609" height="335" layout="responsive" src="/images/posts/ionic2/2016-09-23-google-maps-native/screen6.jpg"></amp-img>
   </div>
 </div>
 
