@@ -4,15 +4,23 @@
     <title>Installing Service Worker</title>
     <script type="text/javascript">
         var swsource = "/sw.js";
-        if("serviceWorker" in navigator) {
-          navigator.serviceWorker.register(swsource)
-            .then(function(reg){
-              console.log('SW scope: ', reg.scope);
-            })
-            .catch(function(err) {
-              console.log('SW registration failed: ', err);
+
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register(swsource).then(function(reg) {
+                if (!reg.installing) return;
+                console.log("[*] ServiceWorker is installing...");
+
+                var worker = reg.installing;
+                worker.addEventListener('statechange', function() {
+                    if (worker.state == 'redundant') {
+                        console.log('[*] Install failed');
+                    }
+                    if (worker.state == 'installed') {
+                        console.log('[*] Install successful!');
+                    }
+                });
             });
-        };
+          }
     </script>
   </head>
   <body></body>
