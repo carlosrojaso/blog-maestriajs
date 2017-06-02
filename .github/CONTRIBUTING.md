@@ -25,18 +25,22 @@ Crea un [Issue](https://github.com/ion-book/ion-book.github.io/issues).
 git clone https://github.com/ion-book/ion-book.github.io.git
 ```
 
-4. Ingresar en el directorio de trabajo.
+## Creando artículo
+
+1. Ingresar en el directorio de trabajo.
 
 ```
 cd ion-book.github.io
 ```
 
-5. Crea un nuevo articulo en la carpeta *_posts*. Utiliza de guia los otros articulos para saber cuales etiquetas utilizar con Markdown.
+2. Crea un nuevo articulo en la carpeta *_posts*. Utiliza de guia los otros articulos para saber cuales etiquetas utilizar con Markdown.
 
-6. Enviar un [Pull Request](https://github.com/ion-book/ion-book.github.io/pulls).
+## Creando Pull Request
 
-7. Cuando sea aprobado el pull request, sera publicado en [staging.ion-book.com](http://staging.ion-book.com)
+1. Enviar un [Pull Request](https://github.com/ion-book/ion-book.github.io/pulls).
 
-8. Cuando sea publicado en el Sitio, lo podras saber en [Facebook](https://www.facebook.com/ionbook/)
+2. Cuando sea aprobado el pull request, sera publicado en [staging.ion-book.com](http://staging.ion-book.com)
+
+3. Cuando sea publicado en el Sitio, lo podras saber en [Facebook](https://www.facebook.com/ionbook/)
 
 Gracias por contribuir con la Comunidad :)
