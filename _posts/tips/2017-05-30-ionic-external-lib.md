@@ -18,7 +18,7 @@ versions:
     number: '3.0.0'
 ---
 
-<amp-img width="858" height="450" src="/images/posts/tips/2017-05-30-ionic-external-lib/cover.jpg"></amp-img>
+<amp-img width="858" height="450" layout="responsive" src="/images/posts/tips/2017-05-30-ionic-external-lib/cover.jpg"></amp-img>
 
 Con esta técnica podremos incluir librerías externas a nuestra aplicación como Font Awesome icons.
 
