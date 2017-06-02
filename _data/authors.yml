@@ -1,3 +1,15 @@
+- id: 'carlosrojas'
+  name: Carlos Rojas
+  url: "/blog/authors/carlosrojas"
+  avatar: "http://i.imgur.com/ecNB0is.png"
+  website: "http://www.carlosrojasblog.com/"
+  bio: "Carlos Rojas es Google Product Strategy Expert. Cuando no esta dando charlas en conferencias sobre Angular, Ionic o TypeScript da cursos en Startupers Academy."
+  facebook_url: 'https://www.facebook.com/carlosandresrojas'
+  social_links:
+    - link: "https://twitter.com/carlosrojas_o"
+      icon: "icon-social-twitter"
+    - link: "https://youtube.com/carlosrojas84"
+      icon: "icon-social-youtube"
 - id: 'nicobytes'
   name: Nicolas Molina
   url: "/blog/authors/nicobytes"
@@ -14,18 +26,31 @@
       icon: "icon-linkedin"
     - link: "https://www.facebook.com/nicolas.molina.127"
       icon: "icon-social-facebook"
-- id: 'carlosrojas'
-  name: Carlos Rojas
-  url: "/blog/authors/carlosrojas"
-  avatar: "http://i.imgur.com/ecNB0is.png"
-  website: "http://www.carlosrojasblog.com/"
-  bio: "Carlos Rojas es Google Product Strategy Expert. Cuando no esta dando charlas en conferencias sobre Angular, Ionic o TypeScript da cursos en Startupers Academy."
-  facebook_url: 'https://www.facebook.com/carlosandresrojas'
+- id: 'javico2609'
+  name: Javier González Rodríguez
+  url: "/blog/authors/javico2609"
+  avatar: "https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAApBAAAAJGUwOTY3N2UyLTYwZjAtNDQ0Yi1iZGNkLTAxMTRkOTc5YjRkNw.jpg"
+  website: "https://javico2609.github.io/blog"
+  bio: "Full Stack Developer enthusiastic for his job and loving of good practices. C#, .NET developer using ASP.NET MVC, WebApi, JavaScript + TypeScript using popular frameworks like: Angular 2, Ionic 2, Redux, Vue JS, ExtJs and Highcharts."
+  facebook_url: 'https://www.linkedin.com/in/javier-gonzalez-843a2597/'
   social_links:
-    - link: "https://twitter.com/carlosrojas_o"
+    - link: "https://twitter.com/javico_glez"
       icon: "icon-social-twitter"
-    - link: "https://youtube.com/carlosrojas84"
-      icon: "icon-social-youtube"
+    - link: "https://github.com/javico2609"
+      icon: "icon-social-octocat"
+    - link: "https://www.linkedin.com/in/javier-gonzalez-843a2597/"
+      icon: "icon-linkedin"
+- id: "javebratt"
+  name: "Jorge Vergara"
+  url: "/blog/authors/javebratt"
+  avatar: "https://s9.postimg.org/fhmw4iggf/Iu_N5_UI0o.jpg"
+  bio: "Ayudo a emprendedores que están atacando proyectos de impacto social a planear y construir la primera versión de su aplicación móvil para que puedan salir al mercado rápido. Ayudo a desarrolladores de Ionic2 a usar esos conocimientos para construir aplicaciones basadas en Firebase."
+  facebook_url: 'https://facebook.com/javebrattDev'
+  social_links:
+    - link: "https://twitter.com/javebratt"
+      icon: "icon-social-twitter"
+    - link: "https://facebook.com/javebrattDev"
+      icon: "icon-social-octocat"
 - id: "daniel_lsanchez"
   name: "Daniel Londoño Sanchez"
   url: "/blog/authors/daniel_lsanchez"
@@ -78,17 +103,6 @@
       icon: "icon-social-twitter"
     - link: "https://github.com/unjavascripter"
       icon: "icon-social-octocat"
-- id: "javebratt"
-  name: "Jorge Vergara"
-  url: "/blog/authors/javebratt"
-  avatar: "https://s9.postimg.org/fhmw4iggf/Iu_N5_UI0o.jpg"
-  bio: "Ayudo a emprendedores que están atacando proyectos de impacto social a planear y construir la primera versión de su aplicación móvil para que puedan salir al mercado rápido. Ayudo a desarrolladores de Ionic2 a usar esos conocimientos para construir aplicaciones basadas en Firebase."
-  facebook_url: 'https://facebook.com/javebrattDev'
-  social_links:
-    - link: "https://twitter.com/javebratt"
-      icon: "icon-social-twitter"
-    - link: "https://facebook.com/javebrattDev"
-      icon: "icon-social-octocat"
 - id: "jorgecano"
   name: "Jorge Cano"
   url: "/blog/authors/jorgecano"
@@ -113,17 +127,3 @@
       icon: "icon-social-twitter"
     - link: "https://github.com/thecouk"
       icon: "icon-social-octocat"
-- id: 'javico2609'
-  name: Javier González Rodríguez
-  url: "/blog/authors/javico2609"
-  avatar: "https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAApBAAAAJGUwOTY3N2UyLTYwZjAtNDQ0Yi1iZGNkLTAxMTRkOTc5YjRkNw.jpg"
-  website: "https://javico2609.github.io/blog"
-  bio: "Full Stack Developer enthusiastic for his job and loving of good practices. C#, .NET developer using ASP.NET MVC, WebApi, JavaScript + TypeScript using popular frameworks like: Angular 2, Ionic 2, Redux, Vue JS, ExtJs and Highcharts."
-  facebook_url: 'https://www.linkedin.com/in/javier-gonzalez-843a2597/'
-  social_links:
-    - link: "https://twitter.com/javico_glez"
-      icon: "icon-social-twitter"
-    - link: "https://github.com/javico2609"
-      icon: "icon-social-octocat"
-    - link: "https://www.linkedin.com/in/javier-gonzalez-843a2597/"
-      icon: "icon-linkedin"
