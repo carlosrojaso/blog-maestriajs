@@ -88,7 +88,7 @@ Ya sabiendo cuales son los plugins a instalar, procedemos a agregarlos a nuestra
 Geolocalización:
 
 ```
-ionic cordova plugin add cordova-plugin-geolocation --save
+ionic cordova plugin add cordova-plugin-geolocation --variable GEOLOCATION_USAGE_DESCRIPTION="The app need the geolocation"
 npm install @ionic-native/geolocation --save
 ```
 
