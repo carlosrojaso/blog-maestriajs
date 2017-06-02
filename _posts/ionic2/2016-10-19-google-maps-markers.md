@@ -1,10 +1,10 @@
 ---
 layout: post
 title: "Múltiples markers en Google Maps"
-date: 2016-10-19
+date: 2017-06-02
 tags: [maps, demos, ionic2]
 categories: ionic2
-repo: "https://github.com/mayrarodriguez1709/ionic2-google-maps-markers"
+repo: "https://github.com/nicobytes/ionic2-google-maps-markers"
 author: mayrititis
 cover: "/images/posts/ionic2/2016-10-19-google-maps-markers/cover.jpg"
 remember: true
