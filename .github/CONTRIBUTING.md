@@ -1,6 +1,5 @@
 # Contribuir
 
-Thanks for your interest in contributing to the Ionic Framework! :tada:
 Gracias por tu interes en contribuir en ion-book! :tada:
 
 ## ¿Encontraste un error?
