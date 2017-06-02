@@ -22,14 +22,14 @@ Crea un [Issue](https://github.com/ion-book/ion-book.github.io/issues).
 3. Clonar repositorio.
 
 ```
-$git clone https://github.com/ion-book/ion-book.github.io.git
+git clone https://github.com/ion-book/ion-book.github.io.git
 ```
 
 4. Ingresar en el directorio de trabajo.
 
-````
-$ cd ion-book.github.io
-````
+```
+cd ion-book.github.io
+```
 
 5. Crea un nuevo articulo en la carpeta *_posts*. Utiliza de guia los otros articulos para saber cuales etiquetas utilizar con Markdown.
 
