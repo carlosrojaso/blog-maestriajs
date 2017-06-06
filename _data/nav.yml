@@ -7,9 +7,9 @@ menu_header:
   - title: Cursos
     url: 'https://www.ng-classroom.com/'
     target: '_blank'
-#  - title: Workshops
-#    url: 'https://startupers.ng-classroom.com/'
-#    target: '_blank'
+  - title: Talleres
+    url: 'https://startupers.ng-classroom.com/'
+    target: '_blank'
 # ==============================================================
 # Menu Footer
 menu_footer:
@@ -22,6 +22,9 @@ menu_footer:
   - title: Autores
     url: '/blog/authors'
     target: '_self'
+  - title: Jobs
+    url: 'https://jobs.ionic.io/'
+    target: '_blank'
   - title: Codigo de Conducta
     url: 'https://github.com/ion-book/codigo-de-conducta'
     target: '_blank'

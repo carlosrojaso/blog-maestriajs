@@ -21,18 +21,35 @@ var urlsToCache = [
    urlsToCache.push("{{ page.url }}");
 {% endfor %}
 
-var CACHE_NAME = 'ion-book-cache-v1';
+var CACHE_NAME = 'ion-book-cache-v2';
 
 self.addEventListener('install', function(event) {
+  self.skipWaiting();
   // Perform install steps
   event.waitUntil(
     caches.open(CACHE_NAME)
       .then(function(cache) {
         console.log('Opened cache');
         return cache.addAll(urlsToCache);
-      }).catch(function(e) {
-      // Fallback to the offline page if not available in the cache.
-      console.log("error: " + e);
+      })
+  )
+});
+
+self.addEventListener('activate', event => {
+  // delete any caches that aren't in expectedCaches
+  // which will get rid of static-v1
+
+  var expectedCaches = []; // white-list
+
+  event.waitUntil(
+    caches.keys().then(keys => Promise.all(
+      keys.map(key => {
+        if (!expectedCaches.includes(key)) {
+          return caches.delete(key);
+        }
+      })
+    )).then(() => {
+      console.log('V2 now ready to handle fetches!');
     })
   );
 });
@@ -47,27 +64,8 @@ self.addEventListener('fetch', function(event) {
         });
       });
     }).catch(function() {
-      // Fallback to the offline page if not available in the cache.
-      return caches.match('/404.html');
+      console.log('Error un request.');
     })
   );
 });
 
-self.addEventListener('activate', event => {
-  // delete any caches that aren't in expectedCaches
-  // which will get rid of static-v1
-
-  var expectedCaches = ['ion-book-cache-v1'];
-
-  event.waitUntil(
-    caches.keys().then(keys => Promise.all(
-      keys.map(key => {
-        if (!expectedCaches.includes(key)) {
-          return caches.delete(key);
-        }
-      })
-    )).then(() => {
-      console.log('V2 now ready to handle fetches!');
-    })
-  );
-});
