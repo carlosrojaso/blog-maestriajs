@@ -44,6 +44,8 @@ export class HomePage {
 }
 ```
 
+{% include blog/subscribe.html %}
+
 ## ionViewCanEnter
 
 Este sería nuestro guardia de navegación y es muy útil si queremos chequear algo antes de entrar a la página. Es el evento ideal para comprobar si cuentas con los permisos para poder ver el contenido de la página.  Debes de asegurarte que la lógica que utilices acá devuelva un booleano.
