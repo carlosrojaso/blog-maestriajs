@@ -5,9 +5,8 @@ keywords: "ciclo de vida en ionic"
 date: 2017-06-06
 tags: [tips, news]
 categories: tips
-author: nicobytes
+author: hllauradofalco
 cover: "/images/posts/tips/2017-06-06-lifecycle-ionic/cover.jpg"
-draft: true
 ---
 
 > Aprender los ciclos de vida de un componente en Ionic, te ayudará a obtener mejor control de tu aplicación, aprende todo en este artículo. 
