@@ -10,7 +10,9 @@ layout: default
   </div>
   <div class="row">
     <div class="col">
-      <p>Estos increibles tutoriales, tips y demos se logran gracias a nuestros increibles miembros de la comunidad. <br/><br/>Revisa que nos motiva <a href="http://bit.ly/2o4ekwi" target="_blank">aquí.</a></p>
+      <p>Estos increibles tutoriales, tips y demos se logran gracias a nuestros increibles miembros de la comunidad. <br/><br/>
+      Revisa que nos motiva <a href="http://bit.ly/2o4ekwi" target="_blank">aquí.</a><br/><br/>
+      ¿Quieres escribir un articulo ? Envia un <a href="http://bit.ly/2qX3Xrr" target="_blank">Pull Request.</a></p>
     </div>
   </div>
   <div class="row wrap top">
@@ -23,6 +25,7 @@ layout: default
           </div>
           <div class="col col-100 col-md-80 col-lg-80 text">
             <h2>{{ author.name }}</h2>
+            <h3>{{ author.country }}</h3>
             <div class="info"><p>{{ author.bio | strip_html | truncate: 200  }}...</p></div>
             {% assign posts = site.posts | where:"draft", "false" | where:"author", author.id %}
             <div class="more">
