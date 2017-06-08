@@ -4,9 +4,13 @@
 .author{
   margin: 20px 0px;
   box-sizing: border-box;
-  h2{
+  .author-name{
     margin-top: 5px;
     margin-bottom: 0px;
+  }
+  .author-country{
+    margin-top: 0px;
+    font-size: .9em;
   }
   .avatar-profile{
     border-radius: 100%;
