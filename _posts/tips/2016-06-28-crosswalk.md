@@ -107,10 +107,10 @@ Android es un sistema operativo que se puede adaptar a cualquier hardware en com
 
 Por esto varios fabricantes pueden hacer su propio hardware y luego incluir Android como sistema operativo, esto ha generado un problema y es la fragmentación de dispositivos, es decir tenemos muchos fabricantes que no permiten una fácil actualización de android y por eso la adopción de nuevas versiones en android es más compleja, miremos la siguiente gráfica:
 
-<amp-img width="1046" height="589" layout="responsive" src="http://i.imgur.com/uxiY1ij.png" alt="crosswalk"></amp-img>
+<amp-img width="1046" height="589" layout="responsive" src="/images/posts/tips/2017-06-06-lifecycle-ionic/screen1.png" alt="crosswalk"></amp-img>
 
 [https://mixpanel.com/trends/#report/android_os_adoption](https://mixpanel.com/trends/#report/android_os_adoption)
 
 Por eso Crosswalk soluciona este problema y muchas empresas confían en el:
 
-<amp-img width="1091" height="436" layout="responsive" src="http://i.imgur.com/YGjGovL.png" alt="crosswalk"></amp-img>
+<amp-img width="1091" height="436" layout="responsive" src="/images/posts/tips/2017-06-06-lifecycle-ionic/screen.png" alt="crosswalk"></amp-img>
