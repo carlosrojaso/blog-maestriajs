@@ -29,6 +29,7 @@ Esto es un buena noticia, es decir crosswalk es un proyecto que nos ayudó a dar
 Aun así puedes seguir usando crosswalk:
  
 <hr/>
+{% include blog/subscribe.html %}
 
 # Ionic + Crosswalk Project
 
