@@ -6,6 +6,9 @@ tags: [ui]
 categories: ionic2
 author: carlosrojas
 cover: "/images/posts/ionic2/2016-08-03-custom-colors/cover.jpg"
+versions:
+  - title: 'ionic'
+    number: '3.3.0'
 ---
 
 <amp-img width="1024" height="512" layout="responsive" src="/images/posts/ionic2/2016-08-03-custom-colors/cover.jpg" alt="Personalizando colores en Ionic con Sass"></amp-img>
