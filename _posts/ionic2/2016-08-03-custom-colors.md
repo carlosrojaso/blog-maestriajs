@@ -8,7 +8,7 @@ author: carlosrojas
 cover: "/images/posts/ionic2/2016-08-03-custom-colors/cover.jpg"
 ---
 
-<amp-img width="1024" height="512" layout="responsive" src="/images/posts/ionic2/2016-08-03-personalizando-vistas/cover.png" alt="firebase-database-and-ionic-2"></amp-img>
+<amp-img width="1024" height="512" layout="responsive" src="/images/posts/ionic2/2016-08-03-custom-colors/cover.jpg" alt="Personalizando colores en Ionic con Sass"></amp-img>
 
 La personalización de nuestras Apps es uno de los aspectos en el exito en el mar de Apps que puedes encontrar en Google Play o App Store.
 

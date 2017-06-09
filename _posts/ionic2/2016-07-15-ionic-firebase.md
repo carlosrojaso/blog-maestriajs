@@ -11,7 +11,7 @@ versions:
     number: '3.3.0'
 ---
 
-<amp-img width="800" height="292" layout="responsive" src="/images/posts/ionic2/2016-07-15-ionic-firebase/cover.jpg"></amp-img>
+<amp-img width="1280" height="720" layout="responsive" src="/images/posts/ionic2/2016-07-15-ionic-firebase/cover.jpg"></amp-img>
 
 Firebase hace un tiempo evoluciono su plataforma para ofrecer una nueva serie de servicios entre los que resalta la autenticación, database, notificaciones, hosting entre otras.
 
