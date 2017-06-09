@@ -44,7 +44,14 @@ import * as firebase from 'firebase';
 En esta info debes colocar los parametros de inicialización en una variable.
 
 ```ts
-const firebaseConfig = {
+import { Component } from '@angular/core';
+import { Platform } from 'ionic-angular';
+import { StatusBar } from '@ionic-native/status-bar';
+import { SplashScreen } from '@ionic-native/splash-screen';
+
+import * as firebase from 'firebase';
+
+export const firebaseConfig = {
   apiKey: "AIzaSyAvYzM1bqFjoVi-VGMHeDbN0XwFsYDtLQ0",
   authDomain: "demo104-60efc.firebaseapp.com",
   databaseURL: "https://demo104-60efc.firebaseio.com",
@@ -52,12 +59,6 @@ const firebaseConfig = {
   storageBucket: "demo104-60efc.appspot.com",
   messagingSenderId: "903778168776"
 };
-import * as firebase from 'firebase';
-
-import { Component } from '@angular/core';
-import { Platform } from 'ionic-angular';
-import { StatusBar } from '@ionic-native/status-bar';
-import { SplashScreen } from '@ionic-native/splash-screen';
 
 @Component({
   templateUrl: 'app.html'
