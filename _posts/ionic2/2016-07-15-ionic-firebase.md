@@ -2,7 +2,7 @@
 layout: post
 title: "Conectando Ionic con Firebase"
 tags: [firebase]
-date: 2016-07-15
+date: 2017-06-09
 categories: ionic2
 author: carlosrojas
 cover: "/images/posts/ionic2/2016-07-15-ionic-firebase/cover.jpg"
