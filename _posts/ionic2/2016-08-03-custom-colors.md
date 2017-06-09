@@ -17,7 +17,7 @@ La personalización de nuestras Apps es uno de los aspectos en el exito en el ma
 
 Ahora si quieres personalizar las vistas en Ionic deberas utilizar SASS, lo cual hace muy fácil realizar cambios a todos los componentes de Ionic.
 
-La forma mas fácil de empezar es modificar el archivo `src/theme/app.variables.scss` aca podras encontrar las variables principales para poder modificar.
+La forma mas fácil de empezar es modificar el archivo `src/theme/variables.scss` aca podras encontrar las variables principales para poder modificar.
 
 ```scss
 $colors: (
