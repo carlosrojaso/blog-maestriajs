@@ -87,7 +87,7 @@ npm install firebase angularfire2 --save
 Debemos crear una variable que tenga las llaves otorgadas por Firebase en `app.module.ts`.
 
 ```ts
-export const firebaseConfig = {
+const firebaseConfig = {
   apiKey: "AIzaSyAvYzM1bqFjoVi-VGMHeDbN0XwFsYDtLQ0",
   authDomain: "demo104-60efc.firebaseapp.com",
   databaseURL: "https://demo104-60efc.firebaseio.com",
