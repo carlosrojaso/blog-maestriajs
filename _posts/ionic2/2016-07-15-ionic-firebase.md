@@ -33,6 +33,8 @@ ionic start myapp blank
 npm install firebase --save
 ```
 
+{% include blog/subscribe.html %}
+
 ## 4. Importar en los archivos donde vayas a utilizar la Firebase.
 
 ```ts

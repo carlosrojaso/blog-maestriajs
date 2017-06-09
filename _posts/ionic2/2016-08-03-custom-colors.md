@@ -42,6 +42,8 @@ $colors: (
 );
 ```
 
+{% include blog/subscribe.html %}
+
 Por otro lado puedes cambiar su color de contraste:
 
 ```scss
