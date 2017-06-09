@@ -115,3 +115,7 @@ Por esto varios fabricantes pueden hacer su propio hardware y luego incluir Andr
 Por eso Crosswalk soluciona este problema y muchas empresas confían en el:
 
 <amp-img width="1091" height="436" layout="responsive" src="/images/posts/tips/2016-06-28-crosswalk/screen.png" alt="crosswalk"></amp-img>
+
+# Desventajas
+
+Crosswalk aumenta el peso de la aplicación en 20 MB.
