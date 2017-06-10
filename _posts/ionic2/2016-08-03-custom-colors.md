@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Personalizando colores en Ionic con Sass"
-date: 2016-08-03
+date: 2017-06-10
 tags: [ui]
 categories: ionic2
 author: carlosrojas
@@ -13,7 +13,7 @@ versions:
 
 <amp-img width="1024" height="512" layout="responsive" src="/images/posts/ionic2/2016-08-03-custom-colors/cover.jpg" alt="Personalizando colores en Ionic con Sass"></amp-img>
 
-La personalización de nuestras Apps es uno de los aspectos en el exito en el mar de Apps que puedes encontrar en Google Play o App Store.
+La personalización de nuestras Apps es uno de los aspectos para el exito en la innumerable cantidad de Apps que puedes encontrar en Google Play o App Store.
 
 Ahora si quieres personalizar las vistas en Ionic deberas utilizar SASS, lo cual hace muy fácil realizar cambios a todos los componentes de Ionic.
 
