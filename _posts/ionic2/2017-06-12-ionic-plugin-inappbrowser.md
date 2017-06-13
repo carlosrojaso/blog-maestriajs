@@ -50,7 +50,7 @@ ionic cordova plugin add cordova-plugin-inappbrowser
 
 Nos pedira que instalemos el plugin de cordova, le decimos que si como en la siguiente imagen:
 
-<amp-img width="835" height="141" layout="responsive" src="/images/posts/ionic2/2017-06-12-ionic-plugin-inappbrowser/cli-plugin-cordova.png" alt="cli-plugin-cordova"></amp-img>
+<amp-img width="835" height="141" layout="responsive" src="/images/posts/ionic2/2017-06-12-ionic-plugin-inappbrowser/screen.png" alt="cli-plugin-cordova"></amp-img>
 
 Luego añadimos la libreria de ionic native
 
