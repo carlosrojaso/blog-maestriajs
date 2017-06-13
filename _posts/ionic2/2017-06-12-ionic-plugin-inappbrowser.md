@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Usar el plugin InAppBowser en Ionic"
-date: 2017-06-12
+date: 2017-06-13
 tags: [demos, cordova, plugin, native]
 categories: ionic2
 repo: "https://github.com/edy-ap/ionic-inappbrowser"
