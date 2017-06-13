@@ -27,6 +27,8 @@ una interfaz para poder utilizarlo en nuestro proyecto.
 En este ejemplo aprenderemos a utilizar el plugin [**InAppBowser**](https://ionicframework.com/docs/native/in-app-browser/){:target="_blank"}, basicamente este plugin nos permite abrir un link ya sea en el navegador(si utilizamos ionic serve) o
 en el navegador del dispositivo si estamos utilizando alguna plataforma como android o IOS.
 
+<amp-img width="1024" height="512" layout="responsive" src="/images/posts/ionic2/2017-06-12-ionic-plugin-inappbrowser/cli-plugin-cordova.png" alt="cli-plugin-cordova"></amp-img>
+
 Antes que nada debemos tener nuestro ambiente configurado, es decir tener el cli de ionic, si tienes dudas te dejo el link
 de [**Instalación**]( https://ionicframework.com/docs/intro/installation/){:target="_blank"}
  
