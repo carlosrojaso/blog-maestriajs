@@ -151,3 +151,16 @@
       icon: "icon-social-twitter"
     - link: "https://github.com/thecouk"
       icon: "icon-social-octocat"
+- id: "edyavendano"
+  name: "Edy Avendaño Pacheco"
+  url: "/blog/authors/edyavendano"
+  avatar: ""
+  country: "Mexico"
+  bio: "Web & Mobile Developer, Java, JSF, Spring, Ionic, Angular, Javascript..
+  "
+  facebook_url: ''
+  social_links:
+    - link: "https://twitter.com/edyap_"
+      icon: "icon-social-twitter"
+    - link: "https://github.com/edy-ap"
+      icon: "icon-social-octocat"
