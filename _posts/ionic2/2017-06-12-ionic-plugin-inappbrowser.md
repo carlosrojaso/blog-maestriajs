@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Usar el plugin InAppBowser en Ionic"
+title: "Usar el plugin InAppBrowser en Ionic"
 date: 2017-06-13
 tags: [demos, cordova, plugin, native]
 categories: ionic2
@@ -24,7 +24,7 @@ versions:
 > Ionic Framework nos ofrece soporte para los plugins de apache cordova, en la paqueteria **ionic-native**, lo cual nos proporciona
 una interfaz para poder utilizarlo en nuestro proyecto.
 
-En este ejemplo aprenderemos a utilizar el plugin [**InAppBowser**](https://ionicframework.com/docs/native/in-app-browser/){:target="_blank"}, basicamente este plugin nos permite abrir un link ya sea en el navegador(si utilizamos ionic serve) o
+En este ejemplo aprenderemos a utilizar el plugin [**InAppBrowser**](https://ionicframework.com/docs/native/in-app-browser/){:target="_blank"}, basicamente este plugin nos permite abrir un link ya sea en el navegador(si utilizamos ionic serve) o
 en el navegador del dispositivo si estamos utilizando alguna plataforma como android o IOS.
 
 <amp-img width="1024" height="512" layout="responsive" src="/images/posts/ionic2/2017-06-12-ionic-plugin-inappbrowser/cover.jpg" alt="cli-plugin-cordova"></amp-img>
@@ -40,7 +40,7 @@ Iniciaremos nuestro proyecto utilizando el siguiente comando
 ionic start ionic-inappbrowser blank
 ```
 
-# Paso 2: Añadiendo el plugin **InAppBroser**
+# Paso 2: Añadiendo el plugin **InAppBrowser**
 
 Para esto ejecutaremos el siguiente comando, que instala el plugin de cordova
 
