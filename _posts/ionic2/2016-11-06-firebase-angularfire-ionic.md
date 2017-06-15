@@ -56,6 +56,7 @@ Ionic crea una carpeta con el nombre del proyecto, nuestro siguiente paso será 
 ```
 cd demo104
 ```
+{% include blog/subscribe.html %}
 
 El proyecto inicia con el template **blank** y por esto tendremos una estructura básica del proyecto, la carpeta en la que vamos a trabajar será `src`:
 
