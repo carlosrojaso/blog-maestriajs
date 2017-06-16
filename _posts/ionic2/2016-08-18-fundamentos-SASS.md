@@ -8,6 +8,9 @@ author: carlosrojas
 cover: "/images/posts/ionic2/2016-08-18-fundamentos-sass/cover.jpg"
 ---
 
+Como hablamos [anteriormente](https://www.ion-book.com/blog/ionic2/custom-colors/) la manera de personalizar colores en nuestras vistas en Ionic es a traves de los archivos SASS.
+<!--summary-->
+
 <amp-img width="1024" height="512" layout="responsive" src="/images/posts/ionic2/2016-08-18-fundamentos-sass/cover.jpg"></amp-img>
 
 Como hablamos [anteriormente](https://www.ion-book.com/blog/ionic2/custom-colors/) la manera de personalizar colores en nuestras vistas en Ionic es a traves de los archivos SASS.
@@ -15,7 +18,7 @@ Como hablamos [anteriormente](https://www.ion-book.com/blog/ionic2/custom-colors
 En este post vamos a hablar sobre los Fundamentos de SASS, para que de esta manera no tengamos problemas al realizar nuestras modificaciones.
 
 <div class="row">
-  <div class="col col-100 col-md-50 col-lg-50">
+  <div class="col col-100 col-md-50 col-lg-50 offset-md-25 offset-lg-25">
     <amp-img width="427" height="320" layout="responsive" src="/images/posts/ionic2/2016-08-18-fundamentos-sass/logo.png" alt="sass"></amp-img>
   </div>
 </div>
