@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Fundamentos de SASS"
-date: 2016-08-18
+date: 2017-06-16
 tags: [ui]
 categories: ionic2
 author: carlosrojas
