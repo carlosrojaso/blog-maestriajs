@@ -27,11 +27,11 @@ En este post vamos a hablar sobre los Fundamentos de SASS, para que de esta mane
 
 SaSS es una forma de escribir hojas de estilos (CSS) con algunas mejoras que permiten tener una mejor estructura y hacerlo mas escalable.
 
-## ¿Por que usar SASS?
+## ¿Por qué usar SASS?
 
 Ahorrar tiempo a mediano plazo y proyectos mas escalables.
 
-## *Como usar SASS?
+## ¿Como usar SASS?
 
 Ionic por defecto maneja el uso de SASS desde tu proyecto, entonces, no debes preocuparte :)
 
