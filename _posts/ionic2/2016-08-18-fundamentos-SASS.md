@@ -2,7 +2,7 @@
 layout: post
 title: "Fundamentos de SASS"
 date: 2016-08-18
-tags: [ui, ionic2]
+tags: [ui]
 categories: ionic2
 author: carlosrojas
 cover: "/images/posts/ionic2/2016-08-18-fundamentos-sass/cover.jpg"
