@@ -98,8 +98,8 @@ body {
 
 ### Parciales
 
-Cada vez que creamos una versión un archivo a traves de importaciones esto crea copias de cada archivo en css. Con los parciales le decimos a SASS que no cree una versión indepentiente de ese archivo en CSS.
-Lo unico que debemos hacer es colocar `_` en el nombre para que se entienda que ese archivo no sera convertido.
+Cada vez que creamos una versión un archivo a traves de importaciones esto crea copias de cada archivo en css, con los parciales le decimos a SASS que no cree una versión indepentiente de ese archivo.
+Lo único que debemos hacer es colocar `_` en el nombre para que se entienda que ese archivo no sera convertido.
 
 ```css
 _reset.scss
@@ -107,7 +107,7 @@ _reset.scss
 
 ### Mixins
 
-Los Mixins te permiten crear grupos de código que estas pensando en reutilizar a través de la definicion de tu CSS. Un ejemplo claro son las definiciones de CSS3 para cada navegador.
+Los Mixins te permiten crear grupos de código que estas pensando en reutilizar a través de la definición de tu CSS. Un ejemplo claro son las definiciones de CSS3 para cada navegador.
 
 ```css
 @mixin border-radius($radius) {
@@ -124,7 +124,7 @@ Los Mixins te permiten crear grupos de código que estas pensando en reutilizar 
 
 ### Herencia/extend
 
-Con esta caracteristica podemos utilziar definiciones completas de un elemento en otros.
+Con esta característica podemos utilizar definiciones completas de un elemento en otros.
 
 ```css
 .message {
