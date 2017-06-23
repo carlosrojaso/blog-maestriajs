@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "TypeScript dundamentos y ejemplos básicos"
+title: "TypeScript fundamentos y ejemplos básicos"
 keywords: "typescript"
 date: 2017-06-23
 tags: [tips]
