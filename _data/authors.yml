@@ -164,3 +164,18 @@
       icon: "icon-social-twitter"
     - link: "https://github.com/edy-ap"
       icon: "icon-social-octocat"
+- id: "javaruiz"
+  name: "Javier Ruiz Vázquez"
+  url: "/blog/authors/javaruiz"
+  website: "https://javarv87.github.io"
+  avatar: "https://avatars3.githubusercontent.com/u/5413202?v=3&s=460"
+  country: "Mexico"
+  bio: "Web Developer amante de Javascript, de Guanajuato, Mex., fascinado por las nueva tendencias tecnológicas, gusto por el desarrollo Cross Platform - Actualmente ayudando a personas a envolverse en el desarrollo web"
+  facebook_url: ''
+  social_links:
+    - link: "https://www.linkedin.com/in/javaruiz/"
+      icon: "icon-linkedin"
+    - link: "https://twitter.com/_javaruiz"
+      icon: "icon-social-twitter"
+    - link: "https://github.com/javarv87"
+      icon: "icon-social-octocat"
