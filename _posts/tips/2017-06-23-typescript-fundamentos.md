@@ -6,8 +6,8 @@ date: 2017-06-23
 repo:
 tags: [tips]
 categories: tips
-author: Javier Ruiz Vázquez
-cover: "https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2F2017-06-22-ionic-native-contacts%2Fionic-native-header.jpg?alt=media&token=0d138d1f-626c-451e-ba0d-39cdba7f44fe"
+author: javaruiz
+cover: "https://cdn-images-1.medium.com/max/800/1*3CiMgJkSbc2drJMduoAzKA.jpeg"
 versions:
   - title: 'typescript'
     number: '2.3.4'
