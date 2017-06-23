@@ -1,19 +1,18 @@
 ---
 layout: post
-title: "TypeScript Fundamentos y Ejemplos Básicos"
+title: "TypeScript dundamentos y ejemplos básicos"
 keywords: "typescript"
 date: 2017-06-23
-repo:
 tags: [tips]
 categories: tips
 author: javaruiz
-cover: "https://cdn-images-1.medium.com/max/800/1*3CiMgJkSbc2drJMduoAzKA.jpeg"
+cover: "/images/posts/tips/2017-06-23-typescript-fundamentos/cover.jpeg"
 versions:
   - title: 'typescript'
     number: '2.3.4'
 ---
 
-<amp-img width="1024" height="512" layout="responsive" src="https://cdn-images-1.medium.com/max/800/1*3CiMgJkSbc2drJMduoAzKA.jpeg"></amp-img>
+<amp-img width="1024" height="512" layout="responsive" src="/images/posts/tips/2017-06-23-typescript-fundamentos/cover.jpeg"></amp-img>
 
 ## Typescript
 
@@ -145,7 +144,7 @@ enum Roles = { Admin = 1, User, Guest };
 let user: Roles = string = Roles[1];
 ```
 
-#Any y Object
+## Any y Object
 
 Si no sabemos que tipo de dato vamos a recibir, por ejemplo usando librerías de terceros o consumiendo un **API** podemos hacer uso de ***any***, ó bien si recibimos un ***Objeto***, que trae diferentes tipos de datos.
 
@@ -160,7 +159,7 @@ let user: Object = {
 console.log(list[0], user.name);
 ```
 
-#Interfaces
+## Interfaces
 
 TypeScript nos permite declarar objetos más complejos ó estructurados, por ejemplo:
 

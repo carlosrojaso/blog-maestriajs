@@ -2,21 +2,24 @@
 layout: post
 title: "Clase 3 - Autenticación de Usuarios."
 date: 2017-01-12
-tags: [class, ionic2, ionic cloud]
+tags: [class, ionic cloud]
 categories: ionic2
-comments: true
 author: carlosrojas
-cover: "https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2Fclase3%2Fimage.png?alt=media&token=467c26b2-725e-43c4-a7b2-e9accee85304"
+cover: "/images/posts/ionic2/2017-01-12-clase-3-user-auth/cover.png"
 versions:
   - title: 'ionic'
-    number: '2.0.0-rc.3'
-  - title: 'ionic-native'
-    number: '2.2.3'
+    number: '3.3.0'
+  - title: 'ionic-app-scripts'
+    number: '1.3.7'
+  - title: 'cordova-cli'
+    number: '7.0.0'
+  - title: 'ionic-cli'
+    number: '3.4.0'
 ---
 
-<amp-img width="1024" height="512" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2Fclase3%2Fimage.png?alt=media&token=467c26b2-725e-43c4-a7b2-e9accee85304"></amp-img> 
+<amp-img width="1024" height="512" layout="responsive" src="/images/posts/ionic2/2017-01-12-clase-3-user-auth/cover.png"></amp-img> 
 
-Hola Ioner!!! y bienvenido a nuestra clase 3.
+!Hola Ioner! y bienvenido a nuestra clase 3.
 
 Si recuerdas la primera clase, nosostros creamos unas simple App llamada *myFirstApp* puede ir [aquí](https://www.ion-book.com/blog/ionic2/clase-1-feed/)
 Ahora, vamos a continuar construyendo nuestra App. Recordemos nuestras metas.
@@ -31,12 +34,12 @@ Primero, Debemos eliminar las paginas existentes en nuestro proyecto. Cuanto cre
 Si tu quieres un proyecto en blanco tu puedes agregar el parametro *blank* en el final de
 
 ```
-$ionic start myFirstApp --v2 blank
+$ionic start myFirstApp blank
 ```
 
-Borra todos los directorios en  ````src/pages/````
+Borra todos los directorios en  `src/pages/`
 
-Ahora, Nosotros vamos a necesitar crear algunas Paginas. Para hacer esto vamos a utilizar el comando del CLI llamado [generate](http://ionicframework.com/docs/v2/cli/generate/)
+Ahora, nosotros vamos a necesitar crear algunas pagínas. Para hacer esto vamos a utilizar el comando del CLI llamado [generate](http://ionicframework.com/docs/v2/cli/generate/)
 
 ```
 $ ionic generate page NewsDetail
@@ -47,7 +50,7 @@ $ ionic generate page ResetPassword
 $ ionic generate page Signup
 ```
 
-Esto generara todas las paginas que nosotros necesitamos. Ahora debemos ir a ````src/app/app.module.ts```` e imporatemos todas las paginas de noticias y removeremos las antiguas, al final tu deberias tener algo como esto:
+Esto generara todas las pagínas que nosotros necesitamos. Ahora debemos ir a `src/app/app.module.ts` e imporatemos todas las paginas de noticias y removeremos las antiguas, al final tu deberias tener algo como esto:
 
 ```ts
 
@@ -101,9 +104,7 @@ export class AppModule {}
 Ahora, necesitamos instalar el Cloud Service client.
 
 ```ts
-
 $ npm install @ionic/cloud-angular --save
-
 ```
 
 Antes de que puedas configurar tus cloud settings, tendras que tener un app ID. en el directorio de tu proyecto, ejecuta:
