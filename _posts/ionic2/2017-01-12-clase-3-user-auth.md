@@ -325,7 +325,6 @@ Nosotros podemos usar un formulario similar como en la pagina de login.
 
 <ion-content>
   <form [formGroup]="myForm" (ngSubmit)="signup()">
-    <ion-icon name="contact"></ion-icon>
     <ion-list>
       <ion-item>
         <ion-icon name="person" item-left></ion-icon>
