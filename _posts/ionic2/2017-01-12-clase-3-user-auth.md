@@ -6,6 +6,7 @@ tags: [class, ionic cloud]
 categories: ionic2
 author: carlosrojas
 repo: 'https://github.com/ion-book/myFirstApp'
+remember: true
 cover: "/images/posts/ionic2/2017-01-12-clase-3-user-auth/cover.png"
 versions:
   - title: 'ionic'
@@ -304,6 +305,8 @@ export class LoginPage {
 
 }
 ```
+
+{% include blog/subscribe.html %}
 
 En este punto deberíamos utizar algo como esto:
 
