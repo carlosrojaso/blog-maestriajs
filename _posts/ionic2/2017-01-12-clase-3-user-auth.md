@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Clase 3 - Autenticación de Usuarios."
-date: 2017-01-12
+date: 2017-06-27
 tags: [class, ionic cloud]
 categories: ionic2
 author: carlosrojas
