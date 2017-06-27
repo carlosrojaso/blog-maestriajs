@@ -5,6 +5,7 @@ date: 2017-01-12
 tags: [class, ionic cloud]
 categories: ionic2
 author: carlosrojas
+repo: 'https://github.com/ion-book/myFirstApp'
 cover: "/images/posts/ionic2/2017-01-12-clase-3-user-auth/cover.png"
 versions:
   - title: 'ionic'
@@ -29,94 +30,54 @@ Ahora, vamos a continuar construyendo nuestra App. Recordemos nuestras metas.
 * Autenticar usuarios.
 * Restaurar el password.
 
-Primero, Debemos eliminar las paginas existentes en nuestro proyecto. Cuanto creas un nuevo proyecto por defecto Ionic te agrega algunas paginas *About*, *Contacts*, *Tabs*, *etc*.
+Primero, debemos eliminar las páginas existentes en nuestro proyecto. Cuanto creas un nuevo proyecto por defecto Ionic te agrega algunas paginas *About*, *Contacts*, *Tabs*, *etc*.
 
 Si tu quieres un proyecto en blanco tu puedes agregar el parametro *blank* en el final de
 
 ```
-$ionic start myFirstApp blank
+ionic start myFirstApp blank
 ```
 
-Borra todos los directorios en  `src/pages/`
+Ahora borra todos los directorios en `src/pages/`.
 
-Ahora, nosotros vamos a necesitar crear algunas pagínas. Para hacer esto vamos a utilizar el comando del CLI llamado [generate](http://ionicframework.com/docs/v2/cli/generate/)
-
-```
-$ ionic generate page NewsDetail
-$ ionic generate page NewsListing
-$ ionic generate page Login
-$ ionic generate page Profile
-$ ionic generate page ResetPassword
-$ ionic generate page Signup
-```
-
-Esto generara todas las pagínas que nosotros necesitamos. Ahora debemos ir a `src/app/app.module.ts` e imporatemos todas las paginas de noticias y removeremos las antiguas, al final tu deberias tener algo como esto:
-
-```ts
-
-import { NgModule } from '@angular/core';
-import { IonicApp, IonicModule } from 'ionic-angular';
-import { MyApp } from './app.component';
-import { NewsDetailPage } from '../pages/news-detail/news-detail';
-import { NewsListingPage } from '../pages/news-listing/news-listing';
-import { LoginPage } from '../pages/login/login';
-import { ProfilePage } from '../pages/profile/profile';
-import { ResetPasswordPage } from '../pages/reset-password/reset-password';
-import { SignupPage } from '../pages/signup/signup';
+Ahora, nosotros vamos a necesitar crear algunas páginas. Para hacer esto vamos a utilizar el comando del CLI llamado [generate](http://ionicframework.com/docs/v2/cli/generate/)
 
 ```
-
-y agregamos las nuevas pagnas en NgModule
-
-```ts
-
-@NgModule({
-  declarations: [
-    MyApp,
-    NewsDetailPage,
-    NewsListingPage,
-    LoginPage,
-    ProfilePage,
-    ResetPasswordPage,
-    SignupPage
-  ],
-  imports: [
-    IonicModule.forRoot(MyApp)
-  ],
-  bootstrap: [IonicApp],
-  entryComponents: [
-    MyApp,
-    NewsDetailPage,
-    NewsListingPage,
-    LoginPage,
-    ProfilePage,
-    ResetPasswordPage,
-    SignupPage
-  ],
-  providers: []
-})
-export class AppModule {}
-
+ionic generate page new-detail
+ionic generate page news-listing
+ionic generate page login
+ionic generate page profile
+ionic generate page reset-password
+ionic generate page signup
 ```
+
+Esto generara todas las páginas que nosotros necesitamos. Vamos a usar en esta app la función de [**lazy loading** y **@IonicPage**](https://www.ion-book.com/blog/tips/ionic-page-and-lazy-loading/){:target="_blank"}.
 
 ## Conectando nuestra App con Ionic Cloud.
 
-Ahora, necesitamos instalar el Cloud Service client.
+### Instalar Ionic Cloud.
 
-```ts
-$ npm install @ionic/cloud-angular --save
-```
-
-Antes de que puedas configurar tus cloud settings, tendras que tener un app ID. en el directorio de tu proyecto, ejecuta:
+Luego de crear la cuenta en Ionic.io, debemos implementar la librería para empezar a usar cualquier servicio de Ionic Cloud. Así que vamos a nuestra terminal y ejecutamos: 
 
 ```
-$ ionic io init
-
+npm install @ionic/cloud-angular --save
 ```
 
-Debes crear el objeto ````CloudSettings```` para tu app. Esto lo debemos hacer en el archivo ````app.module.ts```` y reemplazar el APP_ID con el ID que  te generarón al usar ````ionic io init```` y lo puedes encontrar en el archivo ````ionic.config.json```` que se encuentra en la raiz de tu proyecto.
+Luego debemos conectar nuestro usuario de ionic.io con la aplicación, así:
 
-Define los objetos 
+```
+ionic login
+```
+
+Luego, debemos crear nuestra aplicación en ionic.io, lo podemos hacer con:
+
+```
+ionic link
+```
+
+Debes crear el objeto `CloudSettings` para tu app. Esto lo debemos hacer en el archivo `app.module.ts` y reemplazar el APP_ID con el ID que te generarón y lo puedes encontrar en el archivo `ionic.config.json` que se encuentra en la raiz de tu proyecto.
+
+Define los objetos:
 
 ```ts
 
@@ -130,16 +91,17 @@ const cloudSettings: CloudSettings = {
 
 ```
 
-Y nosotros necesitamos agregar tus preferencias de cloud en ````CloudModule.forRoot()```` dentro de ````NgModule````
-
+Y nosotros necesitamos agregar tus preferencias de cloud en `CloudModule.forRoot()` dentro de `NgModule`.
 
 ```ts
 
 @NgModule({
   declarations: [ ... ],
   imports: [
+    ...
     IonicModule.forRoot(MyApp),
     CloudModule.forRoot(cloudSettings)
+    ...
   ],
   bootstrap: [IonicApp],
   entryComponents: [ ... ],
@@ -148,13 +110,17 @@ Y nosotros necesitamos agregar tus preferencias de cloud en ````CloudModule.forR
 
 ```
 
+Si todo quedo bien dentro de la cuenta de ionic.io debe mostrar la aplicación creada, así:
+
+<amp-img width="1280" height="800" layout="responsive" src="/images/posts/ionic2/2017-01-12-clase-3-user-auth/screen.png"></amp-img>
+
 Ok, en este punto deberiamos tener todo conectado.
 
 {% include blog/subscribe.html %}
 
-## Creando la pagina de Login.
+### Creando la página de Login.
 
-Si recuerdas nosotros creamos algunas paginas con el [ generate command ](http://ionicframework.com/docs/v2/cli/generate/) y deberias tener esta pagina en ```` src/pages/ ````
+Si recuerdas nosotros creamos algunas paginas con el [ generate command ](http://ionicframework.com/docs/v2/cli/generate/) y deberias tener esta pagina en ` src/pages/ `
 
 <amp-img width="771" height="438" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/startupers-9cbb6.appspot.com/o/Posts%2Fdir_pages.png?alt=media&token=72d7dc02-5947-4700-ad31-97a6b00e10b0"></amp-img>
 
@@ -162,8 +128,7 @@ Nosotros vamos a crear nuestro *login view* por lo que vamos a abrir ```` src/pa
 
 ### login.html 
 
-```ts
-
+```html
 <ion-header>
   <ion-navbar color="primary">
     <ion-title>Login</ion-title>
@@ -171,7 +136,7 @@ Nosotros vamos a crear nuestro *login view* por lo que vamos a abrir ```` src/pa
 </ion-header>
 
 <ion-content>
-  <form [formGroup]="myForm" (ngSubmit)="loginUser()" padding class="loginpage">
+  <form [formGroup]="myForm" (ngSubmit)="loginUser()">
     <ion-list>
       <ion-item>
         <ion-icon name="person" item-left></ion-icon>
@@ -189,16 +154,14 @@ Nosotros vamos a crear nuestro *login view* por lo que vamos a abrir ```` src/pa
     </div>
   </form>
   <div text-center>
-   <a block clear (click)="goToSignup()">
+    <a ion-button block clear (click)="goToSignup()">
       Create a new account
     </a>
-
-    <a block clear (click)="goToResetPassword()">
+    <a ion-button block clear (click)="goToResetPassword()">
       I forgot my password
     </a>
   </div>
 </ion-content>
-
 ```
 
 En este punto podemos ver que estamos usando algunos componentes que son del Ionic Framework.
@@ -211,25 +174,30 @@ Nosotros vamos a ver más a fondo que son los componentes en las proximas clases
 
 [ion-navbar](https://ionicframework.com/docs/v2/api/components/navbar/Navbar/){:target="_blank"}
 
-[Forms](https://ionicframework.com/docs/v2/resources/forms/){:target="_blank"}
+Para aprender más acerca de manejo de formularios puedes ver nuestros artículos sobre el tema:
 
-Las cosas importante para ver aqui son las funciones ````loginUser()```` ,  ````goToSignup()```` y ````goToResetPassword()````
+1. [Validaciones en Formularios](https://www.ion-book.com/blog/ionic2/validations-in-forms/){:target="_blank"}
+1. [Formularios con Ionic](https://www.ion-book.com/blog/ionic2/form-builder/){:target="_blank"}
+
+Las cosas importante para ver aqui son las funciones `loginUser()` ,  `goToSignup()` y `goToResetPassword()`
 
 Nosotros vamos a necesitar que cuando el usuario envie el *form* nuestra app envie la info a *Ionic Cloud* y registre el nuevo usuario.
 
-
 ```ts
 
-  private loginUser(){
+  loginUser(){
 
-    console.log("Email:" + this.myForm.controls['email'].value);
-    console.log("Password:" + this.myForm.controls['password'].value);
+    console.log("Email:" + this.myForm.value.email);
+    console.log("Password:" + this.myForm.value.password);
    
-    let details = {'email': this.myForm.controls['email'].value, 'password': this.myForm.controls['password'].value};
+    let details = {
+      'email': this.myForm.value.email,
+      'password': this.myForm.value.password
+    };
 
     this.auth.login('basic', details).then(() => {
-    console.log("User logging");
-    this.navCtrl.push(NewsListingPage);
+      console.log("User logging");
+      this.navCtrl.push('NewsListingPage');
     }, (err) => {
 
         console.log(err.message);
@@ -238,43 +206,36 @@ Nosotros vamos a necesitar que cuando el usuario envie el *form* nuestra app env
         if(err.message === 'UNPROCESSABLE ENTITY') errors += 'Email isn\'t valid.<br/>';
         if(err.message === 'UNAUTHORIZED') errors += 'Password is required.<br/>';
       }
-      );
-  
-
+    );
   }
 
 ```
 
-Debido a que estamos usando el ````FormGroup```` necesitaremos usar esta forma para obtener los valores.
+Debido a que estamos usando el `FormGroup` necesitaremos usar esta forma para obtener los valores.
 
 ```ts
-this.myForm.controls['email'].value
-this.myForm.controls['password'].value
+this.myForm.value.email
+this.myForm.value.password
 ```
 
 y despues nososotros vamos a usar el metodo de login proveido por *Ionic Cloud*
 
 ```ts
-
 this.auth.login('basic', details).then( ... );
-
 ```
 
 las otras funciones las usamos para navegación.
 
 ```ts
-
-private goToSignup(){
-    this.navCtrl.push(SignupPage);
-  }
-
+goToSignup(){
+  this.navCtrl.push('SignupPage');
+}
 ```
 
 ```ts
-
-private goToResetPassword(){
-    this.navCtrl.push(ResetPasswordPage);
-  }
+goToResetPassword(){
+  this.navCtrl.push('ResetPasswordPage');
+}
 ```
 
 y toda la magia junta se ve asi.
@@ -282,21 +243,19 @@ y toda la magia junta se ve asi.
 ### login.ts 
 
 ```ts
-
 import { Component } from '@angular/core';
-import { NavController, AlertController, LoadingController } from 'ionic-angular';
+import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { Auth, User } from '@ionic/cloud-angular';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { ResetPasswordPage } from '../reset-password/reset-password';
-import { SignupPage } from '../signup/signup';
-import { NewsListingPage } from '../news-listing/news-listing';
 
+@IonicPage()
 @Component({
   selector: 'page-login',
-  templateUrl: 'login.html'
+  templateUrl: 'login.html',
 })
 export class LoginPage {
-   myForm: FormGroup;
+
+  myForm: FormGroup;
 
   constructor(
     public navCtrl: NavController,
@@ -310,16 +269,19 @@ export class LoginPage {
     });
   }
 
-  private loginUser(){
+  loginUser(){
 
-    console.log("Email:" + this.myForm.controls['email'].value);
-    console.log("Password:" + this.myForm.controls['password'].value);
+    console.log("Email:" + this.myForm.value.email);
+    console.log("Password:" + this.myForm.value.password);
    
-    let details = {'email': this.myForm.controls['email'].value, 'password': this.myForm.controls['password'].value};
+    let details = {
+      'email': this.myForm.value.email,
+      'password': this.myForm.value.password
+    };
 
     this.auth.login('basic', details).then(() => {
-    console.log("User logging");
-    this.navCtrl.push(NewsListingPage);
+      console.log("User logging");
+      this.navCtrl.push('NewsListingPage');
     }, (err) => {
 
         console.log(err.message);
@@ -327,53 +289,25 @@ export class LoginPage {
         let errors = '';
         if(err.message === 'UNPROCESSABLE ENTITY') errors += 'Email isn\'t valid.<br/>';
         if(err.message === 'UNAUTHORIZED') errors += 'Password is required.<br/>';
-      }
-      );
+      }  
+    );
+  }
+
   
-
+ goToSignup(){
+    this.navCtrl.push('SignupPage');
   }
 
-  private goToSignup(){
-    this.navCtrl.push(SignupPage);
+  goToResetPassword(){
+    this.navCtrl.push('ResetPasswordPage');
   }
-
-  private goToResetPassword(){
-    this.navCtrl.push(ResetPasswordPage);
-  }
-
 
 }
-
 ```
 
-nosotros podemos agregar algunos estilos tambien en ```` src/pages/login/login.scss ````:
+En este punto deberíamos utizar algo como esto:
 
-### login.scss 
-
-`````scss
-
-.loginpage {
-  form {
-    margin-bottom: 20px;
-    button {
-      margin-top: 10px;
-    }
-  }
-  ion-label {
-    margin-left: 5px;
-  }
-
-  ion-input {
-    padding: 5px;
-  }
-
-}
-
-`````
-
-En este punto deberiamos utizar algo como esto:
-
-<amp-img width="1024" height="512" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/startupers-9cbb6.appspot.com/o/Posts%2FScreen%20Shot%202016-12-19%20at%2010.59.23%20PM.png?alt=media&token=6820112d-a01d-4612-81cc-fa9e6191b075"></amp-img> 
+<amp-img width="1280" height="800" layout="responsive" src="/images/posts/ionic2/2017-01-12-clase-3-user-auth/screen1.png"></amp-img>
 
 
 Ok, ahora necesitamos modificar el *SignupPage* para crear el nuevo usuario en nuestra app.
@@ -382,8 +316,7 @@ Nosotros podemos usar un formulario similar como en la pagina de login.
 
 ### signup.html
 
-```ts
-
+```html
 <ion-header>
   <ion-navbar color="primary">
     <ion-title>Signup</ion-title>
@@ -391,7 +324,7 @@ Nosotros podemos usar un formulario similar como en la pagina de login.
 </ion-header>
 
 <ion-content>
-  <form [formGroup]="myForm" (ngSubmit)="Signup()" padding class="login">
+  <form [formGroup]="myForm" (ngSubmit)="signup()">
     <ion-icon name="contact"></ion-icon>
     <ion-list>
       <ion-item>
@@ -410,10 +343,9 @@ Nosotros podemos usar un formulario similar como en la pagina de login.
     </div>
   </form>
 </ion-content>
-
 ```
 
-Algo importante es ver aqui la funcion ````Signup()```` donde nosotros necesitamos aplicar el metodo *signup* desde Ionic Cloud.
+Algo importante es ver aqui la funcion `Signup()` donde nosotros necesitamos aplicar el metodo *signup* desde Ionic Cloud.
 
 ```ts
 
@@ -436,22 +368,15 @@ todo junto
 ### signup.ts
 
 ```ts
-
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { Auth, User, UserDetails, IDetailedError } from '@ionic/cloud-angular';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { LoginPage } from '../login/login';
 
-/*
-  Generated class for the Signup page.
-
-  See http://ionicframework.com/docs/v2/components/#navigation for more info on
-  Ionic pages and navigation.
-*/
+@IonicPage()
 @Component({
   selector: 'page-signup',
-  templateUrl: 'signup.html'
+  templateUrl: 'signup.html',
 })
 export class SignupPage {
 
@@ -469,21 +394,20 @@ export class SignupPage {
     });
   }
 
-  ionViewDidLoad() {
-    
-  }
-  
-  private Signup(){
+  signup(){
 
-    console.log("Email:" + this.myForm.controls['email'].value);
-    console.log("Password:" + this.myForm.controls['password'].value);
+    console.log("Email:" + this.myForm.value.email);
+    console.log("Password:" + this.myForm.value.password);
    
-    let details: UserDetails = {'email': this.myForm.controls['email'].value, 'password': this.myForm.controls['password'].value};
+    let details: UserDetails = {
+      'email': this.myForm.value.email,
+      'password': this.myForm.value.password
+    };
 
     this.auth.signup(details).then(() => {
       // `this.user` is now registered
       console.log('Registered');
-      this.navCtrl.push(LoginPage);
+      this.navCtrl.push('LoginPage');
     }, (err: IDetailedError<string[]>) => {
       for (let e of err.details) {
         switch (e) {
@@ -507,28 +431,23 @@ export class SignupPage {
       }
     }); 
   }
+
 }
-
-
 ```
 
 ok, ahora vamos a construir la pagina de restaurar.
 
 ### reset-password.html
 
-```ts
-
+```html
 <ion-header>
-
   <ion-navbar>
     <ion-title>ResetPassword</ion-title>
   </ion-navbar>
-
 </ion-header>
 
-
 <ion-content padding>
-<form [formGroup]="myForm" (ngSubmit)="ResetPassword()" padding class="login">
+  <form [formGroup]="myForm" (ngSubmit)="resetPassword()">
     <ion-icon name="contact"></ion-icon>
     <ion-list>
       <ion-item>
@@ -542,30 +461,30 @@ ok, ahora vamos a construir la pagina de restaurar.
     </div>
   </form>
 </ion-content>
-
 ```
 
 ### reset-password.ts
 
 ```ts
-
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
-import { Auth, IDetailedError } from '@ionic/cloud-angular';
+import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { Auth, User, IDetailedError } from '@ionic/cloud-angular';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { LoginPage } from '../login/login';
 
-
+@IonicPage()
 @Component({
   selector: 'page-reset-password',
-  templateUrl: 'reset-password.html'
+  templateUrl: 'reset-password.html',
 })
 export class ResetPasswordPage {
+
   myForm: FormGroup;
 
-  constructor(public navCtrl: NavController,
-  public formBuilder: FormBuilder,
-  public auth: Auth, ) {
+  constructor(
+    private navCtrl: NavController,
+    private formBuilder: FormBuilder,
+    private auth: Auth
+  ) {
     this.myForm = this.formBuilder.group({
       email: ['', Validators.required]
     });
@@ -575,12 +494,13 @@ export class ResetPasswordPage {
     console.log('Hello ResetPasswordPage Page');
   }
 
-  private ResetPassword(){
-    console.log("Email:" + this.myForm.controls['email'].value);
-    this.auth.requestPasswordReset(this.myForm.controls['email'].value).then(() => {
+  resetPassword(){
+    console.log("Email:" + this.myForm.value.email);
+    this.auth.requestPasswordReset(this.myForm.value.email)
+    .then(() => {
       // `this.user` is now registered
       console.log('Request Sent');
-      this.navCtrl.push(LoginPage);
+      this.navCtrl.push('LoginPage');
     }, (err: IDetailedError<string[]>) => {
       for (let e of err.details) {
         switch (e) {
@@ -600,21 +520,15 @@ export class ResetPasswordPage {
         break;
         default:
           console.log('Something unknow.');
-      }     
+        }     
       }
     }); 
   }
 
-}
+}   
 ```
 
-Ok, en este punto deberias ver algo como esto:
+Ahora ya tienes una aplicación con registro, login y recuperar contraseña, luego vamos a trabajar aun más, por ahora puedes leer estos artículos y aprender un poco sobre los formularios:
 
-
-[Demo](/launcher/demo110/){:target="_blank"}
-
-[Repo](https://startupersacademy.github.io/myFirstApp/){:target="_blank"}
-
-Ok, esto es todo por ahora pero puedes ver este leer este link y aprender un poco sobre los formularios
-
-[Forms](https://ionicframework.com/docs/v2/resources/forms/){:target="_blank"}
+1. [Validaciones en Formularios](https://www.ion-book.com/blog/ionic2/validations-in-forms/){:target="_blank"}
+1. [Formularios con Ionic](https://www.ion-book.com/blog/ionic2/form-builder/){:target="_blank"}
