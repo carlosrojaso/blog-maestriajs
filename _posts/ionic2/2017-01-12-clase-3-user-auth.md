@@ -341,7 +341,7 @@ Nosotros podemos usar un formulario similar como en la pagina de login.
       <button ion-button block type="submit" [disabled]="!myForm.valid">Register</button>
     </div>
   </form>
-</ion-content>
+</ion-content>  
 ```
 
 Algo importante es ver aqui la funcion `Signup()` donde nosotros necesitamos aplicar el metodo *signup* desde Ionic Cloud.
