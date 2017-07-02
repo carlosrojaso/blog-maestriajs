@@ -158,13 +158,13 @@ En una parte de nuestro código tenemos esto:
 
 ```ts
 addMarker(options){
-    let markerOptions: MarkerOptions = {
-      position: new LatLng(options.position.latitude, options.position.longitude),
-      title: options.title,
-      icon: options.icon
-    };
-    this.map.addMarker(markerOptions);
-  }
+  let markerOptions: MarkerOptions = {
+    position: new LatLng(options.position.latitude, options.position.longitude),
+    title: options.title,
+    icon: options.icon
+  };
+  this.map.addMarker(markerOptions);
+}
 ```
 
 Y cambiemoslo a esto:
@@ -256,8 +256,9 @@ export class HomePage {
       this.loadMap();
     })
     .catch(error=>{
-      this.toast.show("No se ha podido obtener su ubicación", '5000', 'center')
-      .subscribe(toast => console.log(toast) );
+      console.log(error);
+      //this.toast.show("No se ha podido obtener su ubicación", '5000', 'center')
+      //.subscribe(toast => console.log(toast) );
     })
   }
 
