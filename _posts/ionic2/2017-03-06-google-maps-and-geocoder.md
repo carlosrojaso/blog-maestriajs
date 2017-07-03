@@ -122,6 +122,8 @@ code .
 
 Ok, quiero creer que es así, entonces tenemos que modificar las importaciones de ionic-native.
 
+{% include blog/subscribe.html %}
+
 Teníamos esto:
 
 ```ts
