@@ -64,12 +64,14 @@ ionic cordova platform add android
 4.- Ahora que hemos agregado la plataforma podemos hacer uso de [**Ionic Native**](https://www.ion-book.com/blog/ionic2/ionic-native/){:target="_blank"}, para incluir a `Geolocation`, `GoogleMaps`, y `Toast` sólo tenemos que hacer esto:
 
 `Geolocation`
+
 ```
 ionic cordova plugin add cordova-plugin-geolocation --variable GEOLOCATION_USAGE_DESCRIPTION="The app need the geolocation"
 npm install @ionic-native/geolocation --save
 ```
 
 `Google Maps Nativo`
+
 ```
 ionic cordova plugin add cordova-plugin-googlemaps --variable API_KEY_FOR_ANDROID="YOUR_ANDROID_API_KEY_IS_HERE" --variable API_KEY_FOR_IOS="YOUR_IOS_API_KEY_IS_HERE" --save
 npm install @ionic-native/google-maps --save
@@ -78,6 +80,7 @@ npm install @ionic-native/google-maps --save
 **Nota:** Tenemos que colocar en **YOUR_ANDROID_API_KEY_IS_HERE** nuestro ApiKey que habíamos generado
 
 `Toast`
+
 ```
 ionic cordova plugin add cordova-plugin-x-toast
 npm install @ionic-native/toast --save
@@ -256,7 +259,7 @@ export class HomePage {
       this.loadMap();
     })
     .catch(error=>{
-      console.log(error);
+      console.log(error–);
       //this.toast.show("No se ha podido obtener su ubicación", '5000', 'center')
       //.subscribe(toast => console.log(toast) );
     })
