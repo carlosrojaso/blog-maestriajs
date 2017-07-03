@@ -2,7 +2,7 @@
 layout: post
 title: "Google Maps + Geocoder"
 keywords: "ionic push notifications, OneSignal, push notifications, notifications, notifications en ionic 2, OneSignal y ionic"
-date: 2017-03-07
+date: 2017-07-03
 tags: [maps, native]
 categories: ionic2
 author: levanocarlos
@@ -124,6 +124,8 @@ code .
 6 .- Copiamos el script que realizó [**Mayra Rodriguez**]({{site.urlblog}}/authors/mayrititis/){:target="_blank"} en su post anterior sobre [**Google Maps Markers**]({{site.urlblog}}/ionic2/google-maps-markers/){:target="_blank"}, ya lo tienes copiado verdad?.
 
 Ok, quiero creer que es así, entonces tenemos que modificar las importaciones de ionic-native.
+
+{% include blog/subscribe.html %}
 
 Teníamos esto:
 
