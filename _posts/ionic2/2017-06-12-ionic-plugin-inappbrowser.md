@@ -29,6 +29,8 @@ en el navegador del dispositivo si estamos utilizando alguna plataforma como and
 
 <amp-img width="1024" height="512" layout="responsive" src="/images/posts/ionic2/2017-06-12-ionic-plugin-inappbrowser/cover.jpg" alt="cli-plugin-cordova"></amp-img>
 
+{% include general/net-promoter-score.html %} 
+
 Antes que nada debemos tener nuestro ambiente configurado, es decir tener el cli de ionic, si tienes dudas te dejo el link
 de [**Instalación**]( https://ionicframework.com/docs/intro/installation/){:target="_blank"}
  

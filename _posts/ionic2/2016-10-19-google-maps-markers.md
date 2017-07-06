@@ -25,6 +25,8 @@ versions:
 
 <amp-img width="1024" height="512" layout="responsive" src="/images/posts/ionic2/2016-10-19-google-maps-markers/cover.jpg"></amp-img>
 
+{% include general/net-promoter-score.html %} 
+
 Los **Markers** nos permiten identificar un lugar en el mapa siempre y cuando tengamos las coordenadas geográficas, por defecto Google Maps trae un icono de color rojo que muchos seguramente conocen, sin embargo podemos personalizarlo, lo cual es sorprendentemente sencillo e increiblemente util. 
 
 ## 1. Creación del proyecto

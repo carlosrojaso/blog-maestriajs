@@ -25,6 +25,8 @@ versions:
 
 <amp-img width="1024" height="512" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2F2017-06-22-ionic-native-contacts%2Fionic-native-header.jpg?alt=media&token=0d138d1f-626c-451e-ba0d-39cdba7f44fe"></amp-img>
 
+{% include general/net-promoter-score.html %} 
+
 Hola a chic@s el dia de hoy les vengo presentando este nuevo post el cual nos guiara al momento de implementar el plugin Contacts de ionic native.
 
 En esta oportunidad vamos a listar los contactos de nuestro dispositivo y a presentarlos en una lista, pero también tendremos un botón en el header de nuestra página el cual servirá para crear un nuevo contacto en nuestro dispositivo. Espero este post sea de gran utilidad para ustedes. Ahora solo nos queda comenzar :)

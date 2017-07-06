@@ -25,6 +25,8 @@ versions:
 
 <amp-img width="1366" height="779" layout="responsive" src="/images/posts/ionic2/2016-06-09-form-builder/cover.png" alt="Ionic Form Builder"></amp-img>
 
+{% include general/net-promoter-score.html %} 
+
 Por eso es de vital importancia hacer un buen manejo de ellos, tener las validaciones adecuadas y por esto Angular nos ofrece **FormBuilder**, una clase que nos provee una completa herramienta para controlar y validar formularios de forma muy eficiente y sencilla.
 
 # Actualización (02/05/2017)

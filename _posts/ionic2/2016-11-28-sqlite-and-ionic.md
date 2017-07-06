@@ -26,6 +26,8 @@ versions:
 
 <amp-img width="1024" height="512" layout="responsive" src="/images/posts/ionic2/2016-11-28-sqlite-and-ionic-2/cover.jpg" alt="SQLite + Ionic 2 en 5 pasos"></amp-img>
 
+{% include general/net-promoter-score.html %} 
+
 # Actualización (25/04/2017)
 <hr/>
 

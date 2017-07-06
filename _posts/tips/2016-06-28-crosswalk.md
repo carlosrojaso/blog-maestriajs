@@ -12,6 +12,8 @@ cover: "/images/posts/tips/2016-06-28-crosswalk/cover.jpg"
 
 <amp-img width="1746" height="934" layout="responsive" src="/images/posts/tips/2016-06-28-crosswalk/cover.jpg" alt="crosswalk"></amp-img>
 
+{% include general/net-promoter-score.html %} 
+
 [Crosswalk Project](https://crosswalk-project.org/){:target="_blank"} es un proyecto de intel que nos provee un **Webview** estándar y con las últimas APIs, para poder usarlo sin importar que versión de android tenga el usuario, al usar el **Webview** de **Crosswalk Project** aumentamos el performance de la aplicación ya que tiene un **Webview** mucho mas optimo para correr las aplicaciones, brindando una buena experiencia tanto para usuarios con versiones viejas como para versiones actuales.
 
 # Actualización (08/06/2017)

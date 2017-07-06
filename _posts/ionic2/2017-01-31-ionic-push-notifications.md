@@ -27,6 +27,8 @@ versions:
 
 <amp-img width="1024" height="512" layout="responsive" src="/images/posts/ionic2/2017-01-31-ionic-push-notifications/cover.jpg" alt="Ionic Push Notifications"></amp-img>
 
+{% include general/net-promoter-score.html %} 
+
 Ionic cuenta con un conjunto de servicios que tienen una gran integración con aplicaciónes hibridas. Se llama Ionic Cloud y ofrece varias herramientas que pueden potenciar las aplicaciónes:
 
 <div class="row">

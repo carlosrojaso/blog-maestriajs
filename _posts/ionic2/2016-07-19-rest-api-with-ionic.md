@@ -25,6 +25,8 @@ versions:
 
 <amp-img width="1848" height="1039" layout="responsive" src="/images/posts/ionic2/2016-07-19-rest-api-with-ionic/cover.jpg"></amp-img>
 
+{% include general/net-promoter-score.html %} 
+
 # Actualización (01/05/2017)
 <hr/>
 

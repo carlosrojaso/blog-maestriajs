@@ -13,6 +13,8 @@ cover: "/images/posts/tips/2017-01-16-aot-ahead-of-time/cover.jpg"
 
 <amp-img width="1024" height="512" layout="responsive" src="/images/posts/tips/2017-01-16-aot-ahead-of-time/cover.jpg" alt="Aumenta el performance de tu aplicación con AOT"></amp-img>
 
+{% include general/net-promoter-score.html %} 
+
 Primero debemos hacernos la pregunta: **¿Qué es una aplicación rápida?** y para que no sea algo ambiguo vamos a definirlo en tres aspectos claves que los usuarios califican a la hora de definir una aplicación rápida:
 
 1. Carga de la aplicación.

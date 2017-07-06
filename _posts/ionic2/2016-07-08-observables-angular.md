@@ -8,6 +8,8 @@ author: carlosrojas
 cover: "http://i.imgur.com/zo6SD90.jpg"
 ---
 
+{% include general/net-promoter-score.html %} 
+
 Los Observables son una de las grandes decisiones que creo hace que Angular sea una de las herramientas mas poderosas para realizar clientes web y moviles en la actualidad.
 
 Basicamente, Se han utilizado las Promesas para realizar peticiones asincronas y esperar por alguna respuesta en algun momento de la ejecución de nuestro codigo. Los Observables siguen la misma logica de las promesas

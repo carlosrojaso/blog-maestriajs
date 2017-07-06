@@ -25,6 +25,8 @@ versions:
 
 <amp-img width="1024" height="512" layout="responsive" src="/images/posts/ionic2/2016-11-06-firebase-angularfire-ionic/cover.jpg"></amp-img>
 
+{% include general/net-promoter-score.html %} 
+
 # Paso 1: Creación del proyecto en Firebase.
 
 Debes ir a la nueva consola de firebase [aquí](https://console.firebase.google.com){:target="_blank"} y crear un proyecto nuevo:

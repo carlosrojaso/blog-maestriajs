@@ -13,6 +13,8 @@ cover: "https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts
 
 <amp-img width="1200" height="630" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2Ftdd%2Ftdd.jpg?alt=media"></amp-img>
 
+{% include general/net-promoter-score.html %} 
+
 Mantener la calidad del código y más aún asegurar la entrega de un gran producto no es cosa fácil, aparte de estar preocupado porque el producto resuelva un problema, debemos asegurar que en la entrega continua de valor no se presenten errores o se pasen ciertos bugs a producción y que el usuario final no llegue a experimentar fallas en el producto.
 
 ## Desarrollo guiado por pruebas (TDD)

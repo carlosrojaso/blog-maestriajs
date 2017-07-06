@@ -11,6 +11,8 @@ cover: "https://cdn-images-1.medium.com/max/800/1*0VVxvtVPgHFR8Cm_tQKaOA.png"
 
 <amp-img width="750" height="422" layout="responsive" src="https://cdn-images-1.medium.com/max/800/1*0VVxvtVPgHFR8Cm_tQKaOA.png"></amp-img>
 
+{% include general/net-promoter-score.html %} 
+
 Y para no perder la costumbre los ejemplos van a ser con Angular 2 y Firebase
 
 <amp-img width="400" height="400" src="https://cdn-images-1.medium.com/max/800/1*m13nL_ZByB4L131aNhOysA.png"></amp-img>

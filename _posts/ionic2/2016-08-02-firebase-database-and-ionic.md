@@ -25,6 +25,8 @@ versions:
 
 <amp-img width="1920" height="1080" layout="responsive" src="/images/posts/ionic2/2016-08-02-firebase-database-and-ionic/cover.jpg" alt="firebase-database-and-ionic-2"></amp-img>
 
+{% include general/net-promoter-score.html %} 
+
 # Actualización (14/05/2017)
 <hr/>
 

@@ -14,6 +14,8 @@ versions:
 
 <amp-img width="1024" height="512" layout="responsive" src="/images/posts/tips/2017-06-23-typescript-fundamentos/cover.jpeg"></amp-img>
 
+{% include general/net-promoter-score.html %} 
+
 ## Typescript
 
 > We love TypeScript for many things… With TypeScript, several of our team members have said things like 'I now actually understand most of our own code!' because they can easily traverse it and understand relationships much better. And we’ve found several bugs via TypeScript’s checks.” — Brad Green, Engineering Director - AngularJS

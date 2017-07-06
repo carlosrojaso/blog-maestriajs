@@ -15,6 +15,8 @@ cover: "/images/posts/tips/2017-06-06-lifecycle-ionic/cover.jpg"
 
 <amp-img width="1024" height="512" layout="responsive" src="/images/posts/tips/2017-06-06-lifecycle-ionic/cover.jpg"></amp-img>
 
+{% include general/net-promoter-score.html %} 
+
 En Ionic normalmente cuando nos referimos a una vista de la aplicación estamos hablando de una página que a la vez es un componente de Angular. Todo componente de Angular tiene un ciclo de vida, lo mismo sucede con Ionic. Angular nos ofrece una serie de eventos que podemos capturar en cada etapa del ciclo de vida de su componente activo y que podemos hacer uso de ellos en Ionic, pero en este caso nos ocuparemos de los eventos propios de Ionic. 
 
 Estos eventos nos informan en qué etapa específica nos encontramos del ciclo de vida de un componente desde su creación hasta su destrucción para que de esta manera puedas ejecutar tareas de manera más eficientes en tu aplicación. 

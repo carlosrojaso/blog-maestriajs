@@ -25,6 +25,8 @@ versions:
 
 <amp-img width="1024" height="512" layout="responsive" src="/images/posts/tips/2017-04-15-ionic-2-to-ionic3/cover.jpg"></amp-img>
 
+{% include general/net-promoter-score.html %} 
+
 ## Paso 1: Borrar node_modules
 
 Debemos borrar la carpeta `node_modules`, para luego instalar las nuevas dependencias del proyecto. Se puede borrar desde la terminal de la siguiente manera:

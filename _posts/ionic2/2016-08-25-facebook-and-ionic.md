@@ -24,6 +24,8 @@ versions:
 
 <amp-img width="800" height="450" layout="responsive" src="/images/posts/ionic2/2016-08-25-facebook-and-ionic/cover.png"></amp-img>
 
+{% include general/net-promoter-score.html %} 
+
 Para comenzar debemos de tener instalado todo el entorno de desarrollo de ionic [(inicio en ionic)](http://ionicframework.com/docs/intro/installation/){:target="_blank"}. Una vez lista nuestra máquina podemos comenzar.
 
 Primero que todo crearemos un proyecto en blanco y lo llamaremos **demo113** en Ionic. Nos ubicamos en la ruta donde queremos almacenar nuestro proyecto y digitamos el siguiente comando en nuestra consola.

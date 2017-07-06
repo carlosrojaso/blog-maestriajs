@@ -25,6 +25,8 @@ versions:
 
 <amp-img width="1024" height="512" layout="responsive" src="/images/posts/ionic2/2016-10-04-ngx-translate/cover.png"></amp-img>
 
+{% include general/net-promoter-score.html %} 
+
 ## Actualización (17/05/2017)
 <hr/>
 

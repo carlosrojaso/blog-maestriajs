@@ -25,6 +25,8 @@ versions:
 
 <amp-img width="1200" height="630" layout="responsive" src="/images/posts/ionic2/2016-08-30-google-maps-js-and-ionic/cover.png"></amp-img>
 
+{% include general/net-promoter-score.html %} 
+
 ## Actualización (14/05/2017)
 <hr/>
 

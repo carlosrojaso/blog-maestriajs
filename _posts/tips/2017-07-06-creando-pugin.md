@@ -21,6 +21,8 @@ versions:
 
 <amp-img width="1280" height="720" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2F2017-07-06-creando-pugin%2FUntitled-1.png?alt=media&token=d6aa681a-7dd4-4d74-8b24-644074e1178e"></amp-img>
 
+{% include general/net-promoter-score.html %} 
+
 ## ¿Qué es un plugin de Cordova?
 
 Cordova es un conjunto de herramientas que funcionan como puente para crear aplicaciones nativas e hibridas que se comunican a tráves de código Javascript.
@@ -56,8 +58,6 @@ Seleccionar proyecto:
 ````
 cd nombreProyecto/
 ````
-
-{% include blog/subscribe.html %}
 
 ## Paso 3.
 
@@ -107,6 +107,7 @@ export class HomePage {
 
 }
 ```
+{% include blog/subscribe.html %} 
 
 ## Paso 5.
 

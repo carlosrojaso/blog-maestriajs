@@ -25,6 +25,8 @@ versions:
 
 <amp-img width="1024" height="512" layout="responsive" src="/images/posts/ionic2/2016-12-11-animating-items-ionic/cover.jpg" alt="Animando items con Ionic"></amp-img>
 
+{% include general/net-promoter-score.html %} 
+
 # Actualización (21/05/2017)
 <hr/>
 

@@ -33,6 +33,8 @@ La anterior información se sacó de la web de [**google-maps**](https://develop
 
 <amp-img width="1024" height="512" layout="responsive" src="{{site.baseurl}}/images/posts/ionic2/2017-03-06-google-maps-and-geocoder/cover.jpg" alt="Ionic Push Notifications"></amp-img>
 
+{% include general/net-promoter-score.html %} 
+
 Antes de iniciar recomiendo haber leído estos artículos de nuestros compañeros.
 
 Aquí enseña cómo obtener el ApiKey: [**Google Maps Native**]({{site.urlblog}}/ionic2/google-maps-native/){:target="_blank"}

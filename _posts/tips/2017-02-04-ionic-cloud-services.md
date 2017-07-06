@@ -11,6 +11,8 @@ cover: "https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts
 
 <amp-img width="1024" height="512" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2Fcloudservices%2Fcloud-welcome-illustration.png?alt=media&token=96d7e1a3-e269-4440-9b55-bf1f00793338"></amp-img> 
 
+{% include general/net-promoter-score.html %} 
+
 Esta solución llega en un momento perfecto donde existen otras soluciones como [Firebase](firebase.google.com){:target="_blank"} o [Parse](https://parseplatform.github.io/){:target="_blank"} que siempre han tratado a las Apps Hibridas (Basadas en Cordova) como un ciudadano 
 de Segunda Clase, y es aqui donde llega Ionic Cloud a solucionar los mismos problemas que estas tres solucionan pero tomando en cuenta su buen funcionamiento en nuestras Apps Hibridas, y eso significa no perder tiempo en tratar de hacer hacks para que todo funcione. Suena bien no?
 

@@ -12,6 +12,8 @@ cover: "/images/posts/ionic2/2016-07-05-ionic-native/cover.jpg"
 
 <amp-img width="1318" height="764" layout="responsive" src="/images/posts/ionic2/2016-07-05-ionic-native/cover.jpg"></amp-img>
 
+{% include general/net-promoter-score.html %} 
+
 Recordemos que en la versión en ionic1, tuvimos a **ngCordova** que eran servicios que envolvían las funciones de los plugins de **Cordova/Phonegap**. Pero ahora con **ionic native** esto cambio, y los plugins traen una fácil implementación y nos retorna una `Promise` o `Observable` para usar dentro del app.
 
 ## Promises and Observables

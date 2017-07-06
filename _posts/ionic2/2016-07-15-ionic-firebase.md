@@ -13,6 +13,8 @@ versions:
 
 <amp-img width="1280" height="720" layout="responsive" src="/images/posts/ionic2/2016-07-15-ionic-firebase/cover.jpg"></amp-img>
 
+{% include general/net-promoter-score.html %} 
+
 Firebase hace un tiempo evoluciono su plataforma para ofrecer una nueva serie de servicios entre los que resalta la autenticación, database, notificaciones, hosting entre otras.
 
 Pero esto ha ocasionado que mucha información este desactualizada y por lo tanto sea difícil realizar esta integración con Ionic, es por esto que colocare a grandes rasgos el procedimiento sin usar AngularFire.

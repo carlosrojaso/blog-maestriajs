@@ -21,6 +21,8 @@ versions:
 
 <amp-img width="1024" height="512" layout="responsive" src="/images/posts/ionic2/2017-01-12-clase-3-user-auth/cover.png"></amp-img> 
 
+{% include general/net-promoter-score.html %} 
+
 !Hola Ioner! y bienvenido a nuestra clase 3.
 
 Si recuerdas la primera clase, nosostros creamos unas simple App llamada *myFirstApp* puede ir [aquí](https://www.ion-book.com/blog/ionic2/clase-1-feed/)

@@ -25,6 +25,8 @@ versions:
 
 <amp-img width="810" height="540" layout="responsive" src="{{site.path}}/images/posts/ionic2/2016-07-11-camera-and-ionic/cover.jpg"></amp-img>
 
+{% include general/net-promoter-score.html %} 
+
 # Actualización (01/05/2017)
 <hr/>
 
