@@ -65,9 +65,12 @@
 {% if page.video %}
 <script async custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
 {% endif%}
-<script async custom-element="amp-install-serviceworker" src="https://cdn.ampproject.org/v0/amp-install-serviceworker-0.1.js"></script>
 
-<script async type="text/javascript">
+{% if site.pwa_enabled > 0 %}
+<script async custom-element="amp-install-serviceworker" src="https://cdn.ampproject.org/v0/amp-install-serviceworker-0.1.js"></script>
+{% endif%}
+
+<script type="text/javascript">
     (function(p,u,s,h){
         p._pcq=p._pcq||[];
         p._pcq.push(['_currentTime',Date.now()]);
