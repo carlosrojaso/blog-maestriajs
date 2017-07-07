@@ -1,102 +1,23 @@
 <head>
   {% if page && page.layout == 'post' %}
-  {% for item in site.data.authors %}{% if item.id == page.author%}{% assign author = item %}{% endif %}{% endfor %}
+  {% for item in site.data.authors %}
+  {% if item.id == page.author%}{% assign author = item %}
+  {% endif %}
+  {% endfor %}
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
   <meta name="author" content="{% if author %}{{ author.name }}{% else %}Nicolas Molina and Carlos Rojas{% endif %}">
   <title>
-  {% if page.title | upcase %}{{ page.title }}{% else %}{{ site.title | upcase }}{% endif %}</title>
-  <meta http-equiv="origin-trial" data-feature="Web Share" data-expires="2017-04-04" content="Ajcrk411RcpUCQ3ovgC8le4e7Te/1kARZsW5Hd/OCnW6vIHTs5Kcq1PaABs7SzcrtfvT0TIlFh9Vdb5xWi9LiQsAAABSeyJvcmlnaW4iOiJodHRwczovL2FtcGJ5ZXhhbXBsZS5jb206NDQzIiwiZmVhdHVyZSI6IldlYlNoYXJlIiwiZXhwaXJ5IjoxNDkxMzM3MDEwfQ==">
-  <!-- SE0 -->
- 
-  <meta name="keywords" content="{% if page.keywords %}{{ page.keywords }}{% endif %}{{ site.keywords }}">
-  <meta name="description" content="{% if page.excerpt %}{{ page.excerpt  | remove: '<amp-img>' | remove: '</amp-img>' | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
-  <link rel="amphtml" href="{{ page.url | replace:'index.html','' | prepend: site.path }}" />
-  <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.path }}">
-  <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml"| prepend: site.path }}" />
-  <script type="application/ld+json">
-    {
-        "@context": "http://schema.org",
-        "@type": "BlogPosting",
-        "mainEntityOfPage":{
-            "@type":"WebPage",
-            "@id":"{{site.path}}{{ page.url }}"
-        },
-        "headline": "{{ page.title }}",
-        "image": {
-          "@type": "ImageObject",
-          "url": "{{site.path}}{{ page.cover }}",
-          "width": 1024,
-          "height": 512
-        },
-        "author": {
-            "@type": "Person",
-            "name": "{% if author %}{{ author.name }}{% else %}Nicolas Molina and Carlos Rojas{% endif %}",
-            "image": "{% if author %}{{ author.avatar }}{% endif %}"
-        },
-        "publisher": {
-            "@type": "Organization",
-            "name": "ion-book",
-            "logo": {
-              "@type": "ImageObject",
-              "url": "https://www.ion-book.com/images/logo.png",
-              "width": 600,
-              "height": 60
-            }
-        },
-        "description": "{{ page.content | strip_html | truncate: 300  }}",
-        "datePublished": "{{ page.date | date: "%-d %B %Y" }}",
-        "dateModified": "{{ page.date | date: "%-d %B %Y" }}"
-    }
-  </script>
+  {% if page.title | upcase %}{{ page.title }}{% else %}{{ site.title | upcase }}
+  {% endif %}
+  </title>
+    <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml"| prepend: site.path }}" />
  {% endif %}
 
- {% if page.layout == 'category' %}
- <script type="application/ld+json">
-{
-  "@context": "http://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [{
-    "@type": "ListItem",
-    "position": 1,
-    "item": {
-      "@id": "https://www.ion-book.com/blog/ionic2/",
-      "name": "Tutoriales",
-      "image": "https://www.ion-book.com/images/tutorials.png"
-    }
-  },{
-    "@type": "ListItem",
-    "position": 2,
-    "item": {
-      "@id": "https://www.ion-book.com/blog/news/",
-      "name": "Noticias",
-      "image": "https://www.ion-book.com/images/news.png"
-    }
-  },{
-    "@type": "ListItem",
-    "position": 3,
-    "item": {
-      "@id": "https://www.ion-book.com/blog/tips/",
-      "name": "Tips",
-      "image": "https://www.ion-book.com/images/tips.png"
-    }
-  }]
-}
-</script>
- {% endif %}
- {% if page.title == 'Home' %}
- <meta name="keywords" content="Ionic, Español, Comunidad, Google Maps, PWA">
-  <meta name="description" content="Somos un pequeño pedazo del Internet empoderado por la Comunidad de Ionic en Español. Aprende a crear apps con HTML, CSS y Javascript con nuestros Tutoriales, Libro, Slack y Publicaciones.">
- <script type="application/ld+json">
-{
-  "@context": "http://schema.org",
-  "@type": "Organization",
-  "url": "https://www.ion-book.com",
-  "logo": "https://www.ion-book.com/images/logo192.png"
-}
-</script>
- {% endif %}
+ {% include general/seo.html %}
+
+
 
   <!-- PWA Stuff -->
   <link rel="manifest" href="{{ "manifest.json"| prepend: site.path }}">
@@ -117,6 +38,7 @@
   <meta property="og:image" content="{% if page.cover %}{{ page.cover }}{% else %}{{ site.cover | prepend: site.path }}{% endif %}" />
   <meta property="og:site_name" content="ion-book" />
   {% if author &&  author.facebook_url  %}<meta property="article:author" content="{{ author.facebook_url }}">{% endif %}
+ 
   <!-- twitter -->
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:site" content="@ion_book" />
@@ -124,16 +46,20 @@
   <meta name="twitter:description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}"
   />
   <meta name="twitter:image" content="{% if page.cover %}{{ page.cover }}{% else %}{{ site.cover | prepend: site.path }}{% endif %}" />
+  
   <!-- Styles -->
   <link href="https://fonts.googleapis.com/css?family=Montserrat|Open+Sans" rel="stylesheet" type="text/css">
   <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
   <noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
   {% capture styles %}{% include main.scss %}{% endcapture %}<style amp-custom>{{ styles | scssify }}</style>
+  <!-- End Styles -->
+  
   <!-- JS -->
   <script async src="https://cdn.ampproject.org/v0.js"></script>
   <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
   <script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
   <script async custom-element="amp-social-share" src="https://cdn.ampproject.org/v0/amp-social-share-0.1.js"></script>
+  <!-- End JS -->
 
 {% if page.layout == 'post' %}
 <script async custom-element="amp-iframe" src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"></script>
@@ -141,8 +67,20 @@
 {% if page.video %}
 <script async custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
 {% endif%}
+<script async custom-element="amp-install-serviceworker" src="https://cdn.ampproject.org/v0/amp-install-serviceworker-0.1.js"></script>
 
-<script async custom-element="amp-install-serviceworker"
-  src="https://cdn.ampproject.org/v0/amp-install-serviceworker-0.1.js"></script>
+<script async type="text/javascript">
+    (function(p,u,s,h){
+        p._pcq=p._pcq||[];
+        p._pcq.push(['_currentTime',Date.now()]);
+        s=u.createElement('script');
+        s.type='text/javascript';
+        s.async=true;
+        s.src='https://cdn.pushcrew.com/js/cd961b7fc40d92661a578254340c720d.js';
+        h=u.getElementsByTagName('script')[0];
+        h.parentNode.insertBefore(s,h);
+    })(window,document);
+</script>
+
 </head>
 
