@@ -179,3 +179,16 @@
       icon: "icon-social-twitter"
     - link: "https://github.com/javarv87"
       icon: "icon-social-octocat"
+- id: 'EduardoIbarra'
+  name: Eduardo Ibarra
+  url: "/blog/authors/EduardoIbarra"
+  avatar: "http://eduardoibarra.com/dl/img/eduardo.jpg"
+  website: "http://eduardoibarra.com/"
+  bio: "Eduardo es un arquitecto de sistemas y socio fundador de la compañía de sistemas Gobae Consulting. Ha dado charlas tanto online como en eventos internacionales como Campus Party (MX-2013). Además, ha producido video tutoriales en Youtube desde el 2009."
+  country: "México"
+  facebook_url: 'https://www.facebook.com/Ibarra.Ed'
+  social_links:
+    - link: "https://twitter.com/iBar_Ed"
+      icon: "icon-social-twitter"
+    - link: "https://www.youtube.com/channel/UCCFB7Sz1b2j6V4TbTUFXJUg/feed"
+      icon: "icon-social-youtube"
