@@ -7,9 +7,9 @@ menu_header:
   - title: Cursos
     url: 'https://www.ng-classroom.com/'
     target: '_blank'
-  - title: Talleres
-    url: 'https://startupers.ng-classroom.com/'
-    target: '_blank'
+# - title: Talleres
+#   url: 'https://startupers.ng-classroom.com/'
+#   target: '_blank'
 # ==============================================================
 # Menu Footer
 menu_footer:
