@@ -9,15 +9,15 @@ author: nicobytes
 cover: "/images/posts/tips/2017-04-15-ionic-2-to-ionic3/cover.jpg"
 versions:
   - title: 'ionic'
-    number: '3.3.0'
+    number: '3.5.3'
   - title: 'ionic-native'
-    number: '3.7.0'
+    number: '4.1.0'
   - title: 'ionic-app-scripts'
-    number: '1.3.7'
+    number: '2.0.2'
   - title: 'cordova-cli'
     number: '7.0.0'
   - title: 'ionic-cli'
-    number: '3.3.0'
+    number: '3.5.0'
 ---
 
 > Hace poco Ionic lanzó su más reciente versión [**(Ionic v3)**]({{site.urlblog}}/news/ionic-v-3){:target="_blank"} y mencionamos acerca de sus principales novedades, ahora en este artículo vamos a ver cómo actulizar un proyecto desde la versión 2 a la versión 3 y como resolver los problemas más comunes.
@@ -27,9 +27,17 @@ versions:
 
 {% include general/net-promoter-score.html %} 
 
-## Paso 1: Borrar node_modules
+## Paso 1: Actualizar Ionic CLI y Cordova
 
-Debemos borrar la carpeta `node_modules`, para luego instalar las nuevas dependencias del proyecto. Se puede borrar desde la terminal de la siguiente manera:
+Debemos aseguranos que tenemos la ultima versión de ionic CLI y cordova con:
+
+```
+npm install -g ionic@latest cordova@latest
+```
+
+## Paso 2: Borrar node_modules
+
+Debemos borrar la carpeta `node_modules` de nuestro proyecti, para luego instalar las nuevas dependencias. Se puede borrar desde la terminal de la siguiente manera:
 
 Mac / Linux
 ```
@@ -41,45 +49,45 @@ Windows
 rd /s node_modules 
 ```
 
-# Paso 2: Actualizar package.json
+# Paso 3: Actualizar package.json
 
 Ahora debemos actualizar las versiones de las dependencias de nuestro proyecto y las que de ionic 3 necesita para trabajar correctamente, las versiones deben quedar de la siguiente manera:
 
 ```json
 "dependencies": {
-  "@angular/common": "4.1.2",
-  "@angular/compiler": "4.1.2",
-  "@angular/compiler-cli": "4.1.2",
-  "@angular/core": "4.1.2",
-  "@angular/forms": "4.1.2",
-  "@angular/http": "4.1.2",
-  "@angular/platform-browser": "4.1.2",
-  "@angular/platform-browser-dynamic": "4.1.2",
-  "@ionic-native/core": "3.10.3",
-  "@ionic-native/splash-screen": "3.10.3",
-  "@ionic-native/status-bar": "3.10.3",
+  "@angular/common": "4.1.3",
+  "@angular/compiler": "4.1.3",
+  "@angular/compiler-cli": "4.1.3",
+  "@angular/core": "4.1.3",
+  "@angular/forms": "4.1.3",
+  "@angular/http": "4.1.3",
+  "@angular/platform-browser": "4.1.3",
+  "@angular/platform-browser-dynamic": "4.1.3",
+  "@ionic-native/core": "4.1.0",
+  "@ionic-native/splash-screen": "4.1.0",
+  "@ionic-native/status-bar": "4.1.0",
   "@ionic/storage": "2.0.1",
-  "ionic-angular": "3.3.0",
+  "ionic-angular": "3.5.3",
   "ionicons": "3.0.0",
-  "rxjs": "5.1.1",
+  "rxjs": "5.4.0",
   "sw-toolbox": "3.6.0",
-  "zone.js": "0.8.11"
+  "zone.js": "0.8.12"
 },
 "devDependencies": {
-  "@ionic/app-scripts": "1.3.7",
-  "@ionic/cli-plugin-cordova": "1.3.0",
-  "@ionic/cli-plugin-ionic-angular": "1.3.0",
-  "typescript": "2.3.3"
+  "@ionic/app-scripts": "2.0.2",
+  "@ionic/cli-plugin-cordova": "1.4.1",
+  "@ionic/cli-plugin-ionic-angular": "1.3.2",
+  "typescript": "2.3.4"
 }
 ```
 
 Si existen otras dependencias aparte de las que maneja Ionic, se debe revisar la documentación de estas dependencias y si es necesario actualizarlas, lo más importante es que sean compatibles con la versión de angular 4.
 
-## Paso 3: Instalar nuevas dependencias 
+## Paso 4: Instalar nuevas dependencias 
 
 Ahora solo debemos instalar las nuevas dependencias en el proyecto y para esto ejecutamos el comando `npm install` desde la terminal.
 
-## Paso 4: Importar **BrowserModule**
+## Paso 5: Importar **BrowserModule**
 
 Ahora debemos agregar `BrowserModule` en nuestro archivo `app.module.ts`, así:
 
@@ -108,7 +116,7 @@ import { BrowserModule } from '@angular/platform-browser';
 export class AppModule {}
 ```
 
-## Paso 4: Importar **HttpModule**
+## Paso 6: Importar **HttpModule**
 
 Ahora debemos agregar `HttpModule` en nuestro archivo `app.module.ts`, este paso es muy importante si dentro de la aplicación se usa la dependencia `Http`:
 
@@ -138,6 +146,27 @@ import { HttpModule } from '@angular/http';
   ]
 })
 export class AppModule {}
+```
+
+## Paso 7: Agregar vendors a Index.html
+
+Por último vamos a agregar en nuestro `src/index.html`, la ruta `build/vendor.js`, así debe quedar:
+
+```html
+...
+<!-- Ionic's root component and where the app will load -->
+<ion-app></ion-app>
+
+<!-- The polyfills js is generated during the build process -->
+<script src="build/polyfills.js"></script>
+
+<!-- The vendor js is generated during the build process
+      It contains all of the dependencies in node_modules -->
+<script src="build/vendor.js"></script>
+
+<!-- The main bundle js is generated during the build process -->
+<script src="build/main.js"></script>
+...
 ```
 
 **!Y ya eso es todo!** Se ve algo fácil, pero ahora explicaré algunos de los problemas más comunes y como solucionarlos:
