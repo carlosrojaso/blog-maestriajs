@@ -54,7 +54,6 @@
   
   <!-- JS -->
   <script async src="https://cdn.ampproject.org/v0.js"></script>
-  <!-- <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script> -->
   <script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
   <script async custom-element="amp-social-share" src="https://cdn.ampproject.org/v0/amp-social-share-0.1.js"></script>
   <!-- End JS -->
@@ -82,6 +81,7 @@
         h.parentNode.insertBefore(s,h);
     })(window,document);
 </script>
+{% if page.title == 'Home' %}
 <style>.async-hide { opacity: 0 !important} </style>
 <script>(function(a,s,y,n,c,h,i,d,e){s.className+=' '+y;h.start=1*new Date;
 h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')};
@@ -98,6 +98,11 @@ h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')};
   ga('require', 'GTM-KHCZVLB');
   ga('send', 'pageview');
 </script>
+{% endif%}
+
+{% if page.title != 'Home' %}
+  <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+{% endif%}
 
 </head>
 
