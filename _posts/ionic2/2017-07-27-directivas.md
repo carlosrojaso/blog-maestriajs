@@ -280,6 +280,8 @@ Nota: Sin entrar mucho en detalle, lo que estamos haciendo es añadiendo al prov
 
 La función forwardRef nos permite hacer referencia a instancias de clases que aún no se hayan creado en el sistema de inyección de dependencias de Angular. Es decir, en este caso, el decorador Directive está haciendo referencia a una instancia de LongitudNumeroTelefonoTipo que aún no se ha creado.
 
+{% include blog/subscribe.html %}
+
 Y nuestro archivo longitud-numero-telefonico-tipo.validator” quedaría asi:
 
 ```ts
