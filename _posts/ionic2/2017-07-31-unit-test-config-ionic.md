@@ -33,13 +33,13 @@ Necesitaremos el siguiente conjunto de herramientas:
 
 ## Karma (Test Runner)
 
-- (https://karma-runner.github.io/)[https://karma-runner.github.io/]{:target="_blank"}
+[https://karma-runner.github.io/](https://karma-runner.github.io/){:target="_blank"}
 
 Karma es el encargado de correr todas las pruebas unitarias que escribamos y como resultado nos da un reporte que nos muestra las pruebas que pasaron y las pruebas que fallaron. En la mayoría de veces para ejecutar las pruebas unitarias lanza un navegador para correr las pruebas unitarias.
 
 ## Jasmine
 
-- (https://jasmine.github.io/)[https://jasmine.github.io/]{:target="_blank"}
+[https://jasmine.github.io/](https://jasmine.github.io/){:target="_blank"}
 
 Jasmine es un framework para escribir pruebas unitarias, nos facilita herramientas para poder escribir pruebas de forma controlada y tiene funciones para hacer verificaciones, hablaremos más sobre Jasmine en el proximo artículo.
 
