@@ -2,7 +2,7 @@
 layout: post
 title: "Pruebas unitarias: Configuración de entorno"
 keywords: "unit test, pruebas unitartias, ionic, pruebas unitarias ionic, webpack"
-date: 2017-07-31
+date: 2017-08-02
 tags: [push, demos, native]
 categories: ionic2
 repo: "https://github.com/ion-book/demo117"
