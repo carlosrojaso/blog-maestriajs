@@ -29,6 +29,8 @@ versions:
 
 {% include general/net-promoter-score.html %}
 
+Recuerda nuestro artículo anterior sobre conceptos [Testing en Angular/Ionic](https://www.ion-book.com/blog/tips/testing-with-ionic/){:target="_blank"}.
+
 Necesitaremos el siguiente conjunto de herramientas:
 
 ## Karma (Test Runner)
@@ -61,6 +63,8 @@ npm install karma karma-chrome-launcher karma-jasmine karma-jasmine-html-reporte
 ```
 
 Son bastantes nuevas dependencias que debemos instalar en nuestro proyecto pero la bandera `—save-dev`nos asegura que estas dependencias solo se usan en el momento de desarrollo y no como parte del proyecto en producción.
+
+{% include blog/subscribe.html %}
 
 ## Paso 2:
 
