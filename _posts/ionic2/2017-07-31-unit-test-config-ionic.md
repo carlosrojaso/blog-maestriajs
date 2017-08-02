@@ -74,7 +74,7 @@ Vamos a crear una carpeta nueva llamada `testing` donde tendremos la configuraci
 1. [testing/karma.conf.js](https://github.com/ion-book/demo117/blob/master/testing/karma.conf.js){:target="_blank"}
 1. [testing/webpack.test.js](https://github.com/ion-book/demo117/blob/master/testing/webpack.test.js){:target="_blank"}
 
-Como son archivos largos, podemos el enlace directo a un repositorio para poder copiar y pegar.
+Como son archivos largos, ponemos el enlace directo a un repositorio para poder copiar y pegar.
 
 ## Paso 3:
 
