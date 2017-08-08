@@ -186,6 +186,8 @@ describe("Test for Person", ()=>{
 });
 ```
 
+{% include blog/subscribe.html %}
+
 Ahora vamos a correr nuestras pruebas pruebas con el comando `npm test` en la terminal y miremos el reporte que nos genera:
 
 <amp-img width="824" height="274" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2F2017-08-08-intro-jasmine%2FScreen%20Shot%202017-08-08%20at%209.08.48%20AM.png?alt=media&token=18b013ae-934e-4d75-b640-55887a783693"></amp-img>
