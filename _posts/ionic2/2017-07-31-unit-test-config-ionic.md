@@ -43,7 +43,7 @@ Karma es el encargado de correr todas las pruebas unitarias que escribamos y com
 
 [https://jasmine.github.io/](https://jasmine.github.io/){:target="_blank"}
 
-Jasmine es un framework para escribir pruebas unitarias, nos facilita herramientas para poder escribir pruebas de forma controlada y tiene funciones para hacer verificaciones, hablaremos más sobre Jasmine en el proximo artículo.
+Jasmine es un framework para escribir pruebas unitarias, nos facilita herramientas para poder escribir pruebas de forma controlada y tiene funciones para hacer verificaciones, en este artículo [Pruebas unitarias: Introducción a Jasmine](https://www.ion-book.com/blog/ionic2/intro-jasmine/){:target="_blank"} hablamos más a profunidad sobre **Jasmine**.
 
 ## Angular Testing
 
@@ -127,4 +127,4 @@ Y si volvemos a ejectar `npm test`, veremos los siguiente:
 ¡Genial! esta corriendo nuestra prueba, eso quiere decir que nuestro entorno quedo listo para trabajar.
 
 ¿Las sentencias `describe`, `it` y `expect` las viste antes?
-estas sentencias hacen parte de Jasmine, del cual hablaremos a más detalle en nuestro proximo artículo.
+estas sentencias hacen parte de Jasmine, si quieres saber más hacer de **Jasmine** mira nuestro artículo [Pruebas unitarias: Introducción a Jasmine](https://www.ion-book.com/blog/ionic2/intro-jasmine/){:target="_blank"}
