@@ -8,6 +8,7 @@ cover: "/images/cover.jpg"
 path: 'https://www.ion-book.com/'
 
 pwa_enabled: 0
+ads_enabled: 0
 
 timezone: "America/Bogota"
 
