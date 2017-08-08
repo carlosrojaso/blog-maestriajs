@@ -144,7 +144,7 @@ expect(null).toBeNull()
 expect("Nicolas").toEqual("Nicolas")
 ```
 
-Si miramos cada uno de los ejemplos estamos usando algunos verificadores de Jasmine en donde podemos verificar una variable contra una de las utilidades de Jasmine. Jasmine tiene varios muy útiles, puedes encontrarlos todos en la documentación oficial (aquí)[https://jasmine.github.io/api/2.7/matchers.html]{:target="_blank"}.
+Si miramos cada uno de los ejemplos estamos usando algunos verificadores de Jasmine en donde podemos verificar una variable contra una de las utilidades de Jasmine. Jasmine tiene varios muy útiles, puedes encontrarlos todos en la documentación oficial [aquí](https://jasmine.github.io/api/2.7/matchers.html){:target="_blank"}.
 
 Ahora podemos seguir con nuestro ejemplo y escribir cada unas de las verificaciones:
 
