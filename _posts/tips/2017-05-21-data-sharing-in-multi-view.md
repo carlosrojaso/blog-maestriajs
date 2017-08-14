@@ -19,6 +19,8 @@ versions:
 
 <amp-img width="1024" height="512" layout="responsive" src="https://d2slcw3kip6qmk.cloudfront.net/marketing/techblog/observables-angular2/data-flow.png"></amp-img>
 
+{% include general/net-promoter-score.html %} 
+
 # Actualización (31/05/2017)
 <hr/>
 

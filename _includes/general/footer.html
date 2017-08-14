@@ -25,11 +25,11 @@
     </div>
   </footer>
 </div>
+{% if site.pwa_enabled > 0 %}
 <!-- Install Service Worker -->
 <amp-install-serviceworker src="/sw.js"
   data-iframe-src="https://www.ion-book.com/sw.html"
   layout="nodisplay"
-  data-no-service-worker-fallback-url-match=".*"
-  data-no-service-worker-fallback-shell-url="https://www.ion-book.com/pwa">
   >
 </amp-install-serviceworker>
+{% endif%}

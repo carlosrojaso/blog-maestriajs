@@ -22,7 +22,7 @@ Los comandos ahora son mas responsivos, mostrando mejor ayuda en la documentaci√
 
 La ayuda de los comandos ahora es mas clara y provee un interesante resum√©n de la interfaz de comandos.
 
-<amp-img width="670" height="283" layout="" src="http://blog.ionic.io/wp-content/uploads/2017/03/Screen-Shot-2017-03-08-at-1.43.15-PM.png"></amp-img> 
+<amp-img width="670" height="283" layout="responsive" src="http://blog.ionic.io/wp-content/uploads/2017/03/Screen-Shot-2017-03-08-at-1.43.15-PM.png"></amp-img> 
 
 ## Como comenzar?
 

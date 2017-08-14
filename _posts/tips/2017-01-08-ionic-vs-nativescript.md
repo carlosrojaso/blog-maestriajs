@@ -14,6 +14,8 @@ cover: "https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts
 
 <amp-img width="1024" height="512" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2Fionicvsnative%2FFOLLOW.jpg?alt=media" alt="Validaciones en Formularios"></amp-img>
 
+{% include general/net-promoter-score.html %} 
+
 Hace poco tuve la oportunidad de participar en un hangout, discutiendo sobre estos dos frameworks y sus ventajas y desventajas. Les dejo el video:
 
 <amp-youtube width="560" 

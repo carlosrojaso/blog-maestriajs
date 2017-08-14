@@ -13,6 +13,8 @@ Lo primero es entender un poco las gamas de esta tecnologias actuales. En este g
 
 <amp-img width="750" height="422" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2F2017-03-03-estado-de-las-apps-hibridas%2F1-Pq2S2TRqVpSnurkKnhKbZw-squashed.png?alt=media&token=903f513a-3e48-4494-ad88-ca745cb048ab"></amp-img>
 
+{% include general/net-promoter-score.html %} 
+
 ## Hybrid Apps
 
 Las Apps hibridas se construyen sobre Apache Cordova y basicamente, te permiten realizar una app utilizando HTML + CSS + JS y la envuelve en un Webview (especificado en el SDK de Android e IOS), te da acceso a las características nativas del dispositivo y te permite extender la funcionalidad a traves de plugins (Pequeñas piezas de código Java o Swift — Objetive-C ). En esta clasificación a mi pensar el más completo es [Ionic Framework](http://ionicframework.com/) y es por eso que hablamos tanto sobre el en este blog ;)

@@ -18,12 +18,14 @@ versions:
   - title: 'cordova-cli'
     number: '7.0.1'
   - title: 'ionic-cli'
-    number: '3.2.0'
+    number: '3.3.0'
 ---
 
 > Angular integra [Web Animations API](https://web-animations.github.io/web-animations-demos/#waves/){:target="_blank"} para ejecutar animaciones en css que aprovechan la GPU del dispositivo y se puedan controlar con JS, sin duda esto provee un mayor control en las animaciones que podemos hacer.
 
 <amp-img width="1024" height="512" layout="responsive" src="/images/posts/ionic2/2016-12-11-animating-items-ionic/cover.jpg" alt="Animando items con Ionic"></amp-img>
+
+{% include general/net-promoter-score.html %} 
 
 # Actualización (21/05/2017)
 <hr/>

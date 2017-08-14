@@ -10,6 +10,8 @@ cover: "https://i.imgur.com/yFY9ETL.png"
 
 <amp-img width="814" height="234" layout="responsive" src="https://i.imgur.com/yFY9ETL.png"></amp-img>
 
+{% include general/net-promoter-score.html %} 
+
 Si has observado un proyecto en Ionic habras observado que ahora contiene dos carpetas una "app" y otra "www" que es distinto a como se estructuraba un proyecto en Ionic 1 y ademas si abres la carpeta "app" veras archivos con una extensión TS, esto 
 es debido a que ahora se utiliza Typescript para trabajar con Ionic.
 

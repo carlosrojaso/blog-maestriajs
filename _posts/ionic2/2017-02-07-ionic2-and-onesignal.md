@@ -15,6 +15,8 @@ Existen diversas alternativas para hacer que tu aplicación tenga las **Notifica
 
 <amp-img width="1024" height="512" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2Fonesignal%2FMay%20this%20new%20year%20bring%20lots%20of%20crazy%20colour%20and%20fun%20to%20your%20life..jpg?alt=media" alt="Ionic Push Notifications"></amp-img>
 
+{% include general/net-promoter-score.html %} 
+
 Hace poco salio un post de parte del equipo de **ion-book** donde te enseñaban a usar las [Notificaciones Push](https://www.ion-book.com/blog/ionic2/ionic-push-notifications/){:target="_blank"} de Ionic con su [**Ionic Cloud**](https://www.ion-book.com/blog/ionic2/ionic-push-notifications/){:target="_blank"}.
 
 Hoy les enseñare otra alternativa sencilla de implementar las **Notificaciones Push** sin usar tanto código gracias a una tecnología llamada **OneSignal** *(Es totalmente Gratis, incluso puedes usarlo para notificaciones para los navegadores web)*.

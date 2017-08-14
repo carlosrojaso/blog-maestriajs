@@ -11,6 +11,8 @@ cover: "http://i.cubeupload.com/hm2KzP.jpg"
 
 <amp-img width="1200" height="675" layout="responsive" src="http://i.cubeupload.com/hm2KzP.jpg"></amp-img>
 
+{% include general/net-promoter-score.html %} 
+
 El post original lo puedes ver en: [http://j.mp/2cHynLV](http://j.mp/2cHynLV)
 
 TypeScript es un ‘superset’ de JavaScript que añade ciertas funcionalidades a nuestro código como, tipos de dato definidos e interfaces. Angular 2 está hecho en TypeScript, por lo tanto vale la pena aprender un poco y ver de que se trata, lo más probable es que en el futuro cercano se popularice.

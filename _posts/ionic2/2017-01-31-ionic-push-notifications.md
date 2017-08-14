@@ -19,13 +19,15 @@ versions:
   - title: 'cordova-cli'
     number: '7.0.1'
   - title: 'ionic-cli'
-    number: '3.2.0'
+    number: '3.3.0'
 ---
 
 > Implementar el sistema de **notificaciones push** en una aplicación es una de las tareas más comunes y Ionic tiene un servicio que nos ahorra este trabajo.
 <!--summary-->
 
 <amp-img width="1024" height="512" layout="responsive" src="/images/posts/ionic2/2017-01-31-ionic-push-notifications/cover.jpg" alt="Ionic Push Notifications"></amp-img>
+
+{% include general/net-promoter-score.html %} 
 
 Ionic cuenta con un conjunto de servicios que tienen una gran integración con aplicaciónes hibridas. Se llama Ionic Cloud y ofrece varias herramientas que pueden potenciar las aplicaciónes:
 

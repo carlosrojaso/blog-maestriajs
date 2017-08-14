@@ -1,41 +1,55 @@
 ---
 layout: post
 title: "Fundamentos de SASS"
-date: 2016-08-18
-tags: [ui, ionic2]
+date: 2017-06-16
+tags: [ui]
 categories: ionic2
 author: carlosrojas
-cover: "https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2Ffundamentos-SASS%2Fcolor-1c4aab2b.png?alt=media&token=6bf1e61d-c220-4657-8b56-f4ef7b3cf90f"
+cover: "/images/posts/ionic2/2016-08-18-fundamentos-sass/cover.jpg"
 ---
 
-<div class="row">
-  <div class="col col-100 col-md-50 col-lg-50">
-    <amp-img width="427" height="320" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2Ffundamentos-SASS%2Fcolor-1c4aab2b.png?alt=media&token=6bf1e61d-c220-4657-8b56-f4ef7b3cf90f" alt="firebase-database-and-ionic-2"></amp-img>
-  </div>
-</div>
+Como hablamos [anteriormente](https://www.ion-book.com/blog/ionic2/custom-colors/) la manera de personalizar colores en nuestras vistas en Ionic es a traves de los archivos SASS.
+<!--summary-->
 
-Como hablamos [anteriormente]({{site.urlblog}}/ionic2/personalizando-vistas) la manera de personalizar nuestras vistas en ionic 2 es a traves de los archivos SASS.
+<amp-img width="1024" height="512" layout="responsive" src="/images/posts/ionic2/2016-08-18-fundamentos-sass/cover.jpg"></amp-img>
+
+{% include general/net-promoter-score.html %} 
+
+Como hablamos [anteriormente](https://www.ion-book.com/blog/ionic2/custom-colors/) la manera de personalizar colores en nuestras vistas en Ionic es a traves de los archivos SASS.
 
 En este post vamos a hablar sobre los Fundamentos de SASS, para que de esta manera no tengamos problemas al realizar nuestras modificaciones.
 
-## Que es SASS?
+<div class="row">
+  <div class="col col-100 col-md-50 col-lg-50 offset-md-25 offset-lg-25">
+    <amp-img width="427" height="320" layout="responsive" src="/images/posts/ionic2/2016-08-18-fundamentos-sass/logo.png" alt="sass"></amp-img>
+  </div>
+</div>
+
+## ¿Qué es SASS?
 
 SaSS es una forma de escribir hojas de estilos (CSS) con algunas mejoras que permiten tener una mejor estructura y hacerlo mas escalable.
 
-## Por que usar SASS?
+## ¿Por qué usar SASS?
 
 Ahorrar tiempo a mediano plazo y proyectos mas escalables.
 
-## Como usar SASS?
+## ¿Cómo usar SASS?
 
 Ionic por defecto maneja el uso de SASS desde tu proyecto, entonces, no debes preocuparte :)
 
 ## Fundamentos
 
+En un proyecto con Ionic debes tener en cuenta que existen dos archivos importantes:
+ 
+1. `src/themes/variables.scss`: Este será el archivo donde definimos las variables globales de la aplicación.
+1. `src/app/app.scss`: Este será el archivo donde definimos los estilos y reglas de css que igualmente serán globales en la aplicación.
+ 
+Luego tendremos un archivo `.scss` por cada página y componente que creemos en para la aplicación.
+
 ### Variables
 
 Las variables permiten asignar valor a cualquier serie de propiedades y de esta manera hacer cambios rapidos sobre la apariencia solamente modificando
-estas. Las variables utilizan <code>$</code>. Un ejemplo:
+estas. Las variables utilizan `$`. Un ejemplo:
 
 ```css
 $font-stack:    Helvetica, sans-serif;
@@ -71,8 +85,7 @@ nav {
 
 ### Importar
 
-SASS tambien ofrece la capacidad de importar, lo cual  crea una version completa de todos los modulos que hemos importado
-permitiendo utilizar una estructura modular en nuestro proyecto en el CSS. Un ejemplo puede ser:
+SASS tambien ofrece la capacidad de importar, lo cual  crea una version completa de todos los modulos que hemos importado permitiendo utilizar una estructura modular en nuestro proyecto. Un ejemplo puede ser:
 
 ```css
 // base.scss
@@ -87,8 +100,8 @@ body {
 
 ### Parciales
 
-Cada vez que creamos una version un archivo a traves de importaciones esto crea copias de cada archivo en css. Con los parciales le decimos a SASS que no cree una version indepentiente de ese archivo en CSS.
-Lo unico que debemos hacer es colocar <code>_</code> en el nombre para que se entienda que ese archivo no sera convertido.
+Cada vez que creamos una versión un archivo a traves de importaciones esto crea copias de cada archivo en css, con los parciales le decimos a SASS que no cree una versión indepentiente de ese archivo.
+Lo único que debemos hacer es colocar `_` en el nombre para que se entienda que ese archivo no sera convertido.
 
 ```css
 _reset.scss
@@ -96,7 +109,7 @@ _reset.scss
 
 ### Mixins
 
-Los Mixins te permiten crear grupos de codigo que estas pensando en reutilizar a través de la definicion de tu CSS. Un ejemplo claro son las definiciones de CSS3 para cada navegador.
+Los Mixins te permiten crear grupos de código que estas pensando en reutilizar a través de la definición de tu CSS. Un ejemplo claro son las definiciones de CSS3 para cada navegador.
 
 ```css
 @mixin border-radius($radius) {
@@ -109,9 +122,11 @@ Los Mixins te permiten crear grupos de codigo que estas pensando en reutilizar a
 .box { @include border-radius(10px); }
 ```
 
+{% include blog/subscribe.html %}
+
 ### Herencia/extend
 
-Con esta caracteristica podemos utilziar definiciones completas de un elemento en otros.
+Con esta característica podemos utilizar definiciones completas de un elemento en otros.
 
 ```css
 .message {
@@ -138,7 +153,7 @@ Con esta caracteristica podemos utilziar definiciones completas de un elemento e
 
 ### Operadores
 
-Con el uso de operadores <code>+</code>,<code>-</code>,<code>*</code>,<code>/</code> podemos realizar calculos sobre los tamaños de los elementos.
+Con el uso de operadores `+`,`-`,`*`,`/` podemos realizar calculos sobre los tamaños de los elementos.
 
 ```css
 .container { width: 100%; }
@@ -155,4 +170,4 @@ aside[role="complementary"] {
 }
 ```
 
-Bueno espero esta info sea de utilidad y ya estas listo para crear increible apariencia en Ionic.
+Bueno espero esta información sea de utilidad y ya estas listo trabajar con SASS en Ionic.

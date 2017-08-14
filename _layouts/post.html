@@ -1,6 +1,7 @@
 ---
 layout: default
 ---
+{% include general/gtm.html %}
 {% include blog/header.html %}
 {% for item in site.data.authors %}{% if item.id == page.author%}{% assign author = item %}{% endif %}{% endfor %}
 <div class="content content-title">

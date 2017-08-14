@@ -12,6 +12,8 @@ cover: "https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts
 
 <amp-img width="1920" height="1080" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2F2017-03-24-firebase-functions%2Ffunctions-15b.png?alt=media&token=d6777bd5-21ac-4ba6-97b2-cee72ad69721"></amp-img> 
 
+{% include general/net-promoter-score.html %} 
+
 Ver el post [original en ingles](https://javebratt.com/firebase-cloud-functions/).
 
 entonces, que es realmente Firebase Cloud Functions?

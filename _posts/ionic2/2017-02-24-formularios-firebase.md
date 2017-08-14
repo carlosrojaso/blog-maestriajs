@@ -19,6 +19,8 @@ versions:
 
 <amp-img width="1024" height="512" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2F2017-02-24-formsularios-firebase%2F5mTwi1e.jpg?alt=media&token=506ec3e9-8174-4f3f-8311-edddc5a3abbd" alt="Firebase"></amp-img>
 
+{% include general/net-promoter-score.html %} 
+
 Post en [**Ingles**](https://javebratt.com/validate-forms-ionic-firebase/) 
 
 Estaba revisando una app de ingresos que realice para mi esposa, ella organiza eventos, y yo estaba convencido que toda la programación estaba en su punto, al momento me di cuenta que el precio de los tiquetes

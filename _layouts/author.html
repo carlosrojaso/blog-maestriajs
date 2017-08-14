@@ -10,10 +10,11 @@ layout: default
       <div class="author">
         <div class="row wrap center">
           <div class="col col-100 col-md-20 col-lg-20">
-            <amp-img src="{{ author.avatar }}" alt="{{ author.name }}" width="800" height="800" layout="responsive"></amp-img>
+            <amp-img class="avatar-profile" src="{{ author.avatar }}" alt="{{ author.name }}" width="800" height="800" layout="responsive"></amp-img>
           </div>
           <div class="col col-100 col-md-67 col-lg-67 text">
-            <h2>{{ author.name }}</h2>
+            <h2 class="author-name">{{ author.name }}</h2>
+            <h3 class="author-country">{{ author.country }}</h3>
             <div class="info"><p>{{ author.bio }}</p></div>
             {% if author.website %}
             <p><strong>Website:</strong> <a href="{{ author.website }}" target="_blank"> {{ author.website }}</a></p>

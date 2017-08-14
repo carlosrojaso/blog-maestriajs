@@ -1,12 +1,12 @@
 ---
 layout: post
-title: "Ionic 3 incluyendo librerías externas"
+title: "Ionic incluyendo librerías externas"
 date: 2017-05-31
 categories: ionic2
 tags: [tips, ionic2]
 categories: tips
 author: javico2609
-cover: "https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2F2017-04-05-ionic-v-3%2Fionic-meta.jpg?alt=media&token=6e42cd34-65f3-4e4b-bb51-a68183b42623"
+cover: "/images/posts/tips/2017-05-30-ionic-external-lib/cover.jpg"
 versions:
   - title: 'ionic'
     number: '3.2.0'
@@ -18,7 +18,9 @@ versions:
     number: '3.0.0'
 ---
 
-<amp-img width="858" height="450" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2F2017-04-05-ionic-v-3%2Fionic-meta.jpg?alt=media&token=6e42cd34-65f3-4e4b-bb51-a68183b42623"></amp-img>
+<amp-img width="858" height="450" layout="responsive" src="/images/posts/tips/2017-05-30-ionic-external-lib/cover.jpg"></amp-img>
+
+{% include general/net-promoter-score.html %} 
 
 Con esta técnica podremos incluir librerías externas a nuestra aplicación como Font Awesome icons.
 

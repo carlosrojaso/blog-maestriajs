@@ -18,12 +18,14 @@ versions:
   - title: 'cordova-cli'
     number: '7.0.1'
   - title: 'ionic-cli'
-    number: '3.2.0'
+    number: '3.3.0'
 ---
 
 > La forma más común de capturar información de los usuarios es a partir de **Formularios** y depende de una buena UI/UX ganar o perder un usuario en nuestra aplicación. 
 
 <amp-img width="1366" height="779" layout="responsive" src="/images/posts/ionic2/2016-06-09-form-builder/cover.png" alt="Ionic Form Builder"></amp-img>
+
+{% include general/net-promoter-score.html %} 
 
 Por eso es de vital importancia hacer un buen manejo de ellos, tener las validaciones adecuadas y por esto Angular nos ofrece **FormBuilder**, una clase que nos provee una completa herramienta para controlar y validar formularios de forma muy eficiente y sencilla.
 

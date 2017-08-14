@@ -9,7 +9,9 @@ date: 2017-05-01
   <div class="row wrap baseline">
     {% assign posts = site.posts | where:"draft", "false" %}
     {% for post in posts %}{% if forloop.first %}
-    <div class="col col-100">{% include blog/article_cover.html %}</div>{% else %}
+    <div class="col col-100">{% include blog/article_cover.html %}
+    {% include general/banner-course.html %}  
+    </div>{% else %}
     <div class="col col-100 col-md-33 col-lg-33">{% include general/article.html %}</div>{% endif %}
     {% endfor %}
   </div>

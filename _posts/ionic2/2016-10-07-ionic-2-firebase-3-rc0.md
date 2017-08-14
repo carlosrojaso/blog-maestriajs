@@ -14,6 +14,8 @@ versions:
 
 <amp-img width="800" height="292" layout="responsive" src="http://i.imgur.com/5mTwi1e.jpg"></amp-img>
 
+{% include general/net-promoter-score.html %} 
+
 Post en [Ingles](https://javebratt.com/ionic2rc0-firebase-js-sdk/)
 
 ## Esta tu entorno de desarrollo actualizado?

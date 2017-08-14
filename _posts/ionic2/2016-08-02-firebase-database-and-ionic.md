@@ -18,12 +18,14 @@ versions:
   - title: 'cordova-cli'
     number: '7.0.1'
   - title: 'ionic-cli'
-    number: '3.2.0'
+    number: '3.3.0'
 ---
 
 > En artículos pasados ya hemos hablado de firebase y sus [**servicios**]({{site.urlblog}}/ionic2/firebase-3){:target="_blank"} y una breve implementación con [**Ionic**]({{site.urlblog}}/ionic2/ionic-2-firebase-3){:target="_blank"}, ahora vamos a hacer una integración con su servicio de base de datos en tiempo real, usando la libreria de [**AngularFire**](https://angularfire2.com/api/){:target="_blank"} creamos una simple aplicación de tareas.
 
 <amp-img width="1920" height="1080" layout="responsive" src="/images/posts/ionic2/2016-08-02-firebase-database-and-ionic/cover.jpg" alt="firebase-database-and-ionic-2"></amp-img>
+
+{% include general/net-promoter-score.html %} 
 
 # Actualización (14/05/2017)
 <hr/>
@@ -87,7 +89,7 @@ npm install firebase angularfire2 --save
 Debemos crear una variable que tenga las llaves otorgadas por Firebase en `app.module.ts`.
 
 ```ts
-export const firebaseConfig = {
+const firebaseConfig = {
   apiKey: "AIzaSyAvYzM1bqFjoVi-VGMHeDbN0XwFsYDtLQ0",
   authDomain: "demo104-60efc.firebaseapp.com",
   databaseURL: "https://demo104-60efc.firebaseio.com",

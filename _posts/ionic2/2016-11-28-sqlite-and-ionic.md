@@ -19,12 +19,14 @@ versions:
   - title: 'cordova-cli'
     number: '7.0.1'
   - title: 'ionic-cli'
-    number: '3.2.0'
+    number: '3.3.0'
 ---
 
 > Anteriormente hemos hablado sobre [**firebase**]({{site.urlblog}}//ionic2/firebase-database-and-ionic-2){:target="_blank"}, [**pouch**]({{site.urlblog}}/tips/pouchdb){:target="_blank"} y [**Rest API**]({{site.urlblog}}//ionic2/rest-api-with-ionic-2){:target="_blank"} para el consumo de datos, ahora en este nuevo demo haremos la integración con **SQLite** que es una base de datos nativa que proveen los dispositivos móviles.
 
 <amp-img width="1024" height="512" layout="responsive" src="/images/posts/ionic2/2016-11-28-sqlite-and-ionic-2/cover.jpg" alt="SQLite + Ionic 2 en 5 pasos"></amp-img>
+
+{% include general/net-promoter-score.html %} 
 
 # Actualización (25/04/2017)
 <hr/>

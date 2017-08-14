@@ -1,5 +1,6 @@
 .subscribe-blog{
   .ion-form-subscribe{
+    margin-top: 10px;
     .input-email{
       input[type="email"]{
         box-shadow: 0px 0px 5px 0px $success-color;
@@ -10,6 +11,7 @@
 
 .ion-form-subscribe{
   display: block;
+  margin-top: 10px;
   a.btn-success{
     width: 100%;
     display: block;

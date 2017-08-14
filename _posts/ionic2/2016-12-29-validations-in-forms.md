@@ -19,13 +19,15 @@ versions:
   - title: 'cordova-cli'
     number: '7.0.1'
   - title: 'ionic-cli'
-    number: '3.2.0'
+    number: '3.3.0'
 ---
 
 > La forma más común de capturar información de los usuarios son los **Formularios** y depende de una buena UI/UX ganar o perder un usuario en nuestra aplicación.
 <!--summary-->
 
 <amp-img width="1024" height="512" layout="responsive" src="/images/posts/ionic2/2016-12-29-validations-in-forms/cover.jpg" alt="Validaciones en Formularios"></amp-img>
+
+{% include general/net-promoter-score.html %} 
 
 # Actualización (21/05/2017)
 <hr/>

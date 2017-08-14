@@ -24,6 +24,8 @@ versions:
 
 <amp-img width="1024" height="512" layout="responsive" src="/images/posts/tips/2016-06-20-ionic-generator/cover.png"></amp-img>
 
+{% include general/net-promoter-score.html %} 
+
 # Actualización (03/05/2017)
 <hr/>
 

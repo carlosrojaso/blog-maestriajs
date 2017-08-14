@@ -22,6 +22,8 @@ versions:
 
 <amp-img width="1024" height="512" layout="responsive" src="/images/posts/ionic2/2017-05-19-ionic-redux/cover.png"></amp-img>
 
+{% include general/net-promoter-score.html %} 
+
 ## Paso 1: Iniciando el proyecto
 
 Lo primero que haremos será iniciar un nuevo proyecto con ionic:
