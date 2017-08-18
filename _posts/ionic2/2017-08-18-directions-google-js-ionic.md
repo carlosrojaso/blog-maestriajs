@@ -22,14 +22,14 @@ versions:
     number: '3.9.2'
 ---
 
-> Hemos hablado mucho sobre mapas ahora vamos a trazar rutas desde un punto A a un punto B usando **Google Maps JS & Ionic**.
+> Hemos hablado mucho sobre mapas ahora vamos a trazar rutas desde un punto A hasta un punto B usando **Google Maps JS & Ionic**.
 <!--summary-->
 
 <amp-img width="1024" height="512" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2F2017-08-18-directions-google-ionic%2Fcover.jpg?alt=media&token=876c7b4c-3f5e-4af3-a26d-be58e67f5732"></amp-img>
 
 {% include general/net-promoter-score.html %}
 
-En esta artículo vamos a mostrar una ruta usando google maps. El resultado va ser una ruta de un punto A hasta punto B que debe cruzar por puntos específicos, así:
+En esta artículo vamos a mostrar una ruta usando google maps. El resultado va ser una ruta de un punto A hasta punto B pasando por puntos intermedios, así:
 
 <div class="row">
   <div class="col col-100 col-md-33 offset-md-33 col-lg-33 offset-lg-33">
@@ -38,7 +38,7 @@ En esta artículo vamos a mostrar una ruta usando google maps. El resultado va s
 </div>
 <br/>
 
-En este caso vamos usar el SDK de Google Maps en javascript, estaremos escribiendo pronto otro artículo usando el SDK nativo, para comprender este tutorial completamente te recomendamos haber leído el artículo: [Google Maps JS + Ionic](https://www.ion-book.com/blog/ionic2/google-maps-js-and-ionic/){:target="_blank"} ya que este será nuestro punto de partida.
+En este caso vamos usar el SDK de Google Maps en javascript, ya pronto estaremos escribiendo otro artículo usando el SDK nativo., para comprender este tutorial completamente te recomendamos haber leído el artículo: [Google Maps JS + Ionic](https://www.ion-book.com/blog/ionic2/google-maps-js-and-ionic/){:target="_blank"} ya que este será nuestro punto de partida.
 
 *Nota: Vamos a trabajar este artículo en base a un contexto específico, pero igual puede aplicar para cualquier caso.*
 
@@ -138,6 +138,8 @@ page-home {
   }
 }
 ```
+
+{% include blog/subscribe.html %}
 
 ## Cuarto paso
 
