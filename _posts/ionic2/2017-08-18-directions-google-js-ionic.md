@@ -50,7 +50,7 @@ Queremos con ayuda de google maps y ionic crear una aplicación para los distrib
 
 <amp-img width="800" height="336" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2F2017-08-18-directions-google-ionic%2Fprocess.jpg?alt=media&token=bc57767c-3003-4a12-8959-2d5f592cd987"></amp-img>
 
-Este contexto es una pequeña parte de la Tesis de la Srta [Zulema Vicente](https://www.facebook.com/zulema.vicente.9){:target="_blank"} futura Lic. Industrial y Sistemas, en cual trabajo un completo sistema en base a los procesos de los procesos de venta, preventa y distribución y este tienes muchas complejidades que toca la tesis de Srta [Zulema](https://www.facebook.com/zulema.vicente.9){:target="_blank"} en su tesis, pero en este artículo vamos a tocar el tema de trazar una ruta usando google maps de acuerdo a ese contexto.
+Este contexto es una pequeña parte de la Tesis de la Srta [Zulema Vicente](https://www.facebook.com/zulema.vicente.9){:target="_blank"} futura y gran Lic. Industrial y Sistemas, en cual trabajo un completo sistema en base a los procesos de los procesos de venta, preventa y distribución y este tienes muchas complejidades que toca la tesis de Srta [Zulema](https://www.facebook.com/zulema.vicente.9){:target="_blank"} en su tesis, pero en este artículo vamos a tocar el tema de trazar una ruta usando google maps de acuerdo a ese contexto.
 
 Ahora manos a la obra, vamos a usar Ionic y Google Maps para proveer esta solución.
 
