@@ -38,7 +38,7 @@ En esta artículo vamos a mostrar una ruta usando google maps. El resultado va s
 </div>
 <br/>
 
-En este caso vamos usar el SDK de Google Maps en javascript, estaremos escribiendo pronto otro artículo usando el SDK nativo, para comprender este tutorial completamente te recomendamos a ver leído el artículo: [Google Maps JS + Ionic](https://www.ion-book.com/blog/ionic2/google-maps-js-and-ionic/){:target="_blank"}, ya que este será nuestro punto de partida.
+En este caso vamos usar el SDK de Google Maps en javascript, estaremos escribiendo pronto otro artículo usando el SDK nativo, para comprender este tutorial completamente te recomendamos haber leído el artículo: [Google Maps JS + Ionic](https://www.ion-book.com/blog/ionic2/google-maps-js-and-ionic/){:target="_blank"} ya que este será nuestro punto de partida.
 
 *Nota: Vamos a trabajar este artículo en base a un contexto específico, pero igual puede aplicar para cualquier caso.*
 
@@ -46,17 +46,17 @@ En este caso vamos usar el SDK de Google Maps en javascript, estaremos escribien
 
 Tenemos una compañía que debe entregar pedidos todos los días a unos clientes específicos, por lo cual tiene un conjunto de distribuidores que van en automóvil y entregan dichos pedidos.
 
-Queremos con ayuda de google maps y ionic crear una aplicación para los distribuidores que les indique qué ruta deben tomar para entregar estos pedidos y volver a la empresa al finalizar todos los pedidos entregados.
+Queremos con ayuda de Google Maps & Ionic crear una aplicación para los distribuidores que les indique qué ruta deben tomar para entregar estos pedidos y volver a la empresa al finalizar todos los pedidos entregados.
 
 <amp-img width="800" height="336" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2F2017-08-18-directions-google-ionic%2Fprocess.jpg?alt=media&token=bc57767c-3003-4a12-8959-2d5f592cd987"></amp-img>
 
-Este contexto es una pequeña parte de la Tesis de la Srta [Zulema Vicente](https://www.facebook.com/zulema.vicente.9){:target="_blank"} futura y gran Lic. Industrial y Sistemas, en cual trabajo un completo sistema en base a los procesos de los procesos de venta, preventa y distribución y este tiene muchas complejidades que toca la tesis de Srta [Zulema](https://www.facebook.com/zulema.vicente.9){:target="_blank"} en su tesis, pero en este artículo vamos a tocar el tema de trazar una ruta usando google maps de acuerdo a ese contexto.
+Este contexto es una pequeña parte de la Tesis de la Srta [Zulema Vicente](https://www.facebook.com/zulema.vicente.9){:target="_blank"} futura y gran Lic. Industrial y de Sistemas, ella ha  trabajo un completo sistema en base a los procesos de venta, preventa y distribución, este sistema tiene muchas complejidades que toca la tesis de la Srta [Zulema](https://www.facebook.com/zulema.vicente.9){:target="_blank"} en su tesis, pero en este artículo nos vamos a enfocar en el tema de trazar una ruta usando Google Maps & Ionic de acuerdo a ese contexto.
 
-Ahora manos a la obra, vamos a usar Ionic y Google Maps para proveer esta solución.
+Ahora manos a la obra, vamos a usar Google Maps & Ionic para proveer esta solución.
 
 ## Primer paso:
 
-Nuestro primer paso inicia desde resultado obtenido en el artículo [Google Maps JS + Ionic](https://www.ion-book.com/blog/ionic2/google-maps-js-and-ionic/){:target="_blank"}, donde mostramos un mapa con un marker asi:
+Nuestro primer paso inicia desde resultado obtenido en el artículo [Google Maps JS + Ionic](https://www.ion-book.com/blog/ionic2/google-maps-js-and-ionic/){:target="_blank"}, donde mostramos un mapa con un marker, así:
 
 <div class="row">
   <div class="col col-100 col-md-33 offset-md-33 col-lg-33 offset-lg-33">
@@ -67,10 +67,10 @@ Nuestro primer paso inicia desde resultado obtenido en el artículo [Google Maps
 
 ## Segundo paso:
 
-Para poder trazar una ruta vamos a usar las siguientes instancias de Google maps: 
+Para poder trazar una ruta vamos a usar las siguientes instancias de Google Maps: 
 
-- `DirectionsService:`Este servicio es al cual vamos a enviar unos parámetros para calcular la ruta sugerida por google desde el punto A hasta el punto B, nos retorna una serie de datos computados que se pueden manejar o simplemente mostrarlos con DirectionsRenderer.
-- `DirectionsRenderer:`Este servicio se encarga de mostrar en nuestro mapa la ruta con sus markers y un panel con las indicaciones.
+- `DirectionsService:` A este servicio le vamos a enviar unos parámetros para calcular la ruta sugerida por Google desde el punto A hasta el punto B, este servicio nos retorna una serie de datos computados que se pueden manejar o simplemente mostrarlos con `DirectionsRenderer`.
+- `DirectionsRenderer:` Este servicio se encarga de mostrar en nuestro mapa la ruta con sus markers y un panel con las indicaciones.
 - `LatLngBounds:` Este servicio permite crear un área donde en el mapa con unos límites en los cuales el mapa se optimizará.
 
 Tendiendo esto en cuenta vamos a declarar y crear las instancias de estos objetos en el constructor, de la siguiente manera:
@@ -101,7 +101,7 @@ export class HomePage {
 
 ## Tercer paso
 
-En nuestro html debemos tener dos partes importantes, la primera será donde se va a mostrar el mapa y la segunda parte donde se mostrará el conjunto de indicaciones que debe seguir el usuario para esa ruta, nuestro html debe quedar así:
+En nuestro `html` debemos tener dos partes importantes, la primera será donde se va a mostrar el mapa y la segunda parte donde se mostrará el conjunto de indicaciones que debe seguir el usuario para esa ruta, nuestro html debe quedar así:
 
 `src/pages/home/home.html`:
 
@@ -114,7 +114,7 @@ En nuestro html debemos tener dos partes importantes, la primera será donde se 
 </ion-content>
 ```
 
-También debemos hacer unas modificaciones nuestros estilos para que el mapa no se muestre en toda la pantalla, así:
+También debemos hacer unas modificaciones a nuestros estilos para que el mapa no se muestre en toda la pantalla, así:
 
 `src/pages/home/home.scss`:
 
@@ -143,7 +143,7 @@ page-home {
 
 Vamos a indicar al servicio de `directionsDisplay` cuál será el elemento html donde va a trazar la ruta en nuestro mapa y otro elemento html donde mostrará las indicaciones.
 
-Para esto vamos a modificar nuestro método `loadMap` (recuerda que tomamos como base el artículo  [Google Maps JS + Ionic](https://www.ion-book.com/blog/ionic2/google-maps-js-and-ionic/){:target="_blank"} y crearemos un método privado llamado `calculateRoute`, así debería quedar:
+Para esto vamos a modificar nuestro método `loadMap` (recordemos que tomamos como base el artículo  [Google Maps JS + Ionic](https://www.ion-book.com/blog/ionic2/google-maps-js-and-ionic/){:target="_blank"}) y crearemos un método privado llamado `calculateRoute`, así debería quedar:
 
 Antes:
 
@@ -216,9 +216,9 @@ private calculateRoute(){
 
 ## Quinto paso:
 
-Ahora vamos a declarar los waypoints, en la mayoría de casos solo es necesario conocer la ruta de un punto A un punto B, pero siguiendo con nuestro caso necesitamos que siga esta ruta y además cruze por puntos específicos es su trayecto. En nuestro caso el distribuidor debe ir a cada uno de los clientes para hacer la entrega de pedidos.
+Ahora vamos a declarar los `waypoints`, en la mayoría de casos solo es necesario conocer la ruta de un punto A un punto B, pero siguiendo con nuestro contexto necesitamos que siga esta ruta y además cruze por puntos específicos es su trayecto. En nuestro caso el distribuidor debe ir a cada uno de los clientes para hacer la entrega de pedidos.
 
-El formato de cada waypoint debe ser el siguiente:
+El formato de cada `waypoint` debe ser el siguiente:
 
 ```ts
 {
@@ -255,7 +255,7 @@ this.waypoints = [
 
 *Sin embargo pueden ser obtenidos desde alguna servicio externo que provea estos datos.*
 
-Ahora vamos a indicarle al nuestro mapa que optimice el mapa en nuestra posición `myLatlng` y también por donde van a estar todos nuestros waypoints dentro el método `calculateRoute`, así:
+Ahora vamos a indicarle a Goolge que optimice nuestro mapa en nuestra posición `myLatlng` y también por donde van a estar todos nuestros `waypoints` dentro el método `calculateRoute`, así:
 
 `src/pages/home/home.ts`:
 
@@ -276,11 +276,11 @@ private calculateRoute(){
 
 ## Sexto paso:
 
-Ahora vamos a ser la parte más importante y el proveer los datos necesarios a Google para obtener la ruta, para esto debemos tener en cuenta varios opciones que podemos enviar:
+Ahora vamos a trabajar en la parte más importante y enviar los datos necesarios a Google para obtener la ruta, para esto debemos tener en cuenta varias opciones que podemos enviar:
 
 ### Un punto de inicio y un punto de fin
 
-Esta será una coordenada donde Google sabrá su punto inicial y su punto final, si recuerdan el contexto de nuestro problema, debemos que hacer que un distribuidor salga de la empresa y entregue toda una lista de pedidos y al finalizar debe volver de nuevo a la empresa, así que para nuestro caso en punto de inicio y fin será el mismo pero obviamente se pueden tener puntos diferentes.
+Esta será una coordenada donde Google sabrá su punto inicial y su punto final, si recuerdan el contexto de nuestro problema, debemos hacer que un distribuidor salga de la compañia y entregue toda una lista de pedidos y al finalizar debe volver de nuevo a la compañia, así que para nuestro caso en punto de inicio y fin será el mismo pero obviamente se pueden tener puntos diferentes.
 
 ### waypoints
 
@@ -292,13 +292,13 @@ Sera la forma en que queremos recorrer esa ruta de acuerdo a esto puede variar y
 
 ### avoidTolls
 
-Si está en true, este punto le dice a google maps que evite las carreteras por donde haya que pagar un peaje donde sea posible.
+Si está en `true`, este punto le dice a Google Maps que evite las carreteras por donde haya que pagar un peaje donde sea posible.
 
 ### optimizeWaypoints
 
-Si está en true, google tratará de optimizar los waypoints intermedios y dar así una ruta más óptima.
+Si está en `true`, Google Maps tratará de optimizar los waypoints intermedios y dar así una ruta más óptima.
 
-Ya teniendo todos nuestras opciones listas ahora solo tenemos que enviar la solicitud a Google para obtener el cálculo de nuestra ruta así:
+Ya teniendo todos nuestras opciones listas ahora solo tenemos que enviar la solicitud a Google Maps para obtener el cálculo de nuestra ruta, así:
 
 `src/pages/home/home.ts`:
 
@@ -323,7 +323,7 @@ private calculateRoute(){
 
 *pueden ver la documentación oficial [aquí](https://developers.google.com/maps/documentation/javascript/directions?hl=es-419){:target="_blank"}.*
 
-Ahora obtendremos una respuesta y solo debemos hacer uso de directionsDisplay para mostrar el mapa y las indicaciones de la ruta sugerida, así:
+Ahora obtendremos una respuesta y solo debemos hacer uso de `directionsDisplay` para mostrar el mapa y las indicaciones de la ruta sugerida, así:
 
 `src/pages/home/home.ts`:
 
@@ -385,7 +385,7 @@ private calculateRoute(){
 
 Ahora si ejecutamos `ionic serve` ó `ionic cordova run android --prod`, podemos ver el siguiente resultado:
 
-Como vemos nos muestra un mapa con una ruta trazada en el mapa y con cada uno de sus waypoints, además Google renderiza las indicaciones en nuestro vista.
+Como vemos nos muestra un mapa con una ruta trazada y con cada uno de sus `waypoints`, además Google Maps renderiza las indicaciones en nuestro vista.
 
 <div class="row wrap">
   <div class="col col-100 col-md-33 col-lg-33">
