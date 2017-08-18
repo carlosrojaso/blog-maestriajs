@@ -50,7 +50,7 @@ Queremos con ayuda de Google Maps & Ionic, crear una aplicación para los distri
 
 <amp-img width="800" height="336" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2F2017-08-18-directions-google-ionic%2Fprocess.jpg?alt=media&token=bc57767c-3003-4a12-8959-2d5f592cd987"></amp-img>
 
-Este contexto es una pequeña parte de la Proyecto de Grado de la Srta [Zulema Vicente](https://www.facebook.com/zulema.vicente.9){:target="_blank"}, futura y gran Lic. Industrial y de Sistemas, ella ha trabajado en un sistema completo en base a procesos, que le permitan gestionar los pedidos y la distribución. Este sistema tiene muchas complejidades que son analizadas en el proyecto.
+Este contexto es una pequeña parte de la Tesis de la Srta [Zulema Vicente](https://www.facebook.com/zulema.vicente.9){:target="_blank"}, futura y gran Lic. Industrial y de Sistemas, ella ha trabajado en un sistema completo en base a procesos, que le permitan gestionar los pedidos y la distribución. Este sistema tiene muchas complejidades que son analizadas en el proyecto.
 
 *Nota: De parte de nuestra comunidad un agradecimiento a la Srta [Zulema Vicente](https://www.facebook.com/zulema.vicente.9){:target="_blank"} por compartir su caso de tesis con nosotros.*
 
@@ -288,7 +288,7 @@ Esta será una coordenada donde Google Maps sabrá su punto inicial y su punto f
 
 ### waypoints
 
-Los puntos por donde la ruta debe pasar.
+Los puntos por donde la ruta debe pasar en nuestro caso los puntos son tiendas de entrega.
 
 ### travelmode
 
@@ -407,7 +407,7 @@ Como vemos nos muestra un mapa con una ruta trazada y con cada uno de sus `waypo
 ## Consideraciones y límites:
 
 - En la tesis final se tomarón muchos más factores en cuenta.
-- Google maps tiene un límite de 10 de waypoints contando el punto de inicio y fin en la parte paga de Google Maps son hasta 23.
+- Google Maps tiene un límite de 10 de waypoints contando el punto de inicio y fin, en la parte paga de Google Maps son hasta 23.
 
 <amp-img width="874" height="318" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2F2017-08-18-directions-google-ionic%2Finfo.png?alt=media&token=65dd7e8f-5b35-48d2-83ec-b932df9ce8dc"></amp-img>
 
