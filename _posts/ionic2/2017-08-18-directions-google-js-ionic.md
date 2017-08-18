@@ -46,7 +46,7 @@ En este caso vamos usar el SDK de Google Maps en javascript, ya pronto estaremos
 
 Tenemos una compañía que debe entregar pedidos todos los días a unos clientes específicos, por lo cual tiene un conjunto de distribuidores que van en automóvil y entregan dichos pedidos. Tenemos una empresa distribuidora el cual su objetivo es entregar el pedido de dichos clientes en el momento que lo requiera, por lo cual maneja la gestión de pedidos y distribución del mismo. Para este ejemplo nos enfocaremos en la distribución.
 
-Queremos con ayuda de Google Maps & Ionic crear una aplicación para los distribuidores que les indique qué ruta deben tomar para entregar estos pedidos y volver a la empresa al finalizar todos los pedidos entregados.
+Queremos con ayuda de Google Maps & Ionic, crear una aplicación para los distribuidores que les indique qué ruta deben seguir para realizar la entrega de los pedidos y de retorno a almacén.
 
 <amp-img width="800" height="336" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2F2017-08-18-directions-google-ionic%2Fprocess.jpg?alt=media&token=bc57767c-3003-4a12-8959-2d5f592cd987"></amp-img>
 
