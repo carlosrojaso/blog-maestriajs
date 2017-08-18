@@ -409,6 +409,6 @@ Como vemos nos muestra un mapa con una ruta trazada y con cada uno de sus `waypo
 
 - [Nada es gratis en la vida](https://www.youtube.com/watch?v=IKKdAHLmdII){:target="_blank"} y google maps tiene un limite te peticiones y con google maps pro puede que nos retorne mejores resultados, los puedes ver [aquí](https://developers.google.com/maps/pricing-and-plans/){:target="_blank"}.
 - No sabemos qué algoritmo usa Google Maps para haber obtenido esa ruta, sin duda hay varios algoritmos que determinan esto pero segun la documentacion de Google es una mezcla de varios factores como distancia, tráfico, tiempo etc pero en ninguna parte dicen que tipo de algoritmo usan, es una caja negra para nosotros.
-- Se puede personalizar el panel de navegación usando componentes de ionic, esto se logra trabajando la respuesta nos retorna todas las indicaciones de la ruta como un arreglo
+- Se puede personalizar el panel de navegación usando componentes de ionic, esto se logra trabajando con la respuesta nos retorna todas las indicaciones de la ruta como un arreglo
 
 *Nota: De parte de nuestra comunidad un agradecimiento a la Srta [Zulema Vicente](https://www.facebook.com/zulema.vicente.9){:target="_blank"} por compartir su caso de tesis con nosotros.*
