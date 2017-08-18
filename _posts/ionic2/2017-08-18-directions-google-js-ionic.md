@@ -50,7 +50,7 @@ Queremos con ayuda de Google Maps & Ionic, crear una aplicación para los distri
 
 <amp-img width="800" height="336" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2F2017-08-18-directions-google-ionic%2Fprocess.jpg?alt=media&token=bc57767c-3003-4a12-8959-2d5f592cd987"></amp-img>
 
-Este contexto es una pequeña parte de la Tesis de la Srta [Zulema Vicente](https://www.facebook.com/zulema.vicente.9){:target="_blank"} futura y gran Lic. Industrial y de Sistemas, ella ha  trabajo un completo sistema en base a los procesos de venta, preventa y distribución, este sistema tiene muchas complejidades que toca la tesis de la Srta [Zulema](https://www.facebook.com/zulema.vicente.9){:target="_blank"} en su tesis, pero en este artículo nos vamos a enfocar en el tema de trazar una ruta usando Google Maps & Ionic de acuerdo a ese contexto.
+Este contexto es una pequeña parte de la Proyecto de Grado de la Srta [Zulema Vicente](https://www.facebook.com/zulema.vicente.9){:target="_blank"}, futura y gran Lic. Industrial y de Sistemas, ella ha trabajado en un sistema completo en base a procesos, que le permitan gestionar los pedidos y la distribución. Este sistema tiene muchas complejidades que son analizadas en el proyecto.
 
 *Nota: De parte de nuestra comunidad un agradecimiento a la Srta [Zulema Vicente](https://www.facebook.com/zulema.vicente.9){:target="_blank"} por compartir su caso de tesis con nosotros.*
 
@@ -259,7 +259,7 @@ this.waypoints = [
 
 *Sin embargo pueden ser obtenidos desde alguna servicio externo que provea estos datos.*
 
-Ahora vamos a indicarle a Goolge que optimice nuestro mapa en nuestra posición `myLatlng` y también por donde van a estar todos nuestros `waypoints` dentro el método `calculateRoute`, así:
+Ahora vamos a indicarle a "Goolge" que optimice nuestro mapa en nuestra posición `myLatlng` y también por donde van a estar todos nuestros `waypoints` dentro el método `calculateRoute`, así:
 
 `src/pages/home/home.ts`:
 
@@ -284,7 +284,7 @@ Ahora vamos a trabajar en la parte más importante y enviar los datos necesarios
 
 ### Un punto de inicio y un punto de fin
 
-Esta será una coordenada donde Google sabrá su punto inicial y su punto final, si recuerdan el contexto de nuestro problema, debemos hacer que un distribuidor salga de la compañia y entregue toda una lista de pedidos y al finalizar debe volver de nuevo a la compañia, así que para nuestro caso en punto de inicio y fin será el mismo pero obviamente se pueden tener puntos diferentes.
+Esta será una coordenada donde Google Maps sabrá su punto inicial y su punto final, si recuerdan el contexto de nuestro problema, debemos hacer que un distribuidor salga de la empresa, luego entregue toda una lista de pedidos y al finalizar debe volver a la empresa, así que para nuestro caso en punto de inicio y fin será el mismo pero obviamente se pueden tener puntos diferentes.
 
 ### waypoints
 
