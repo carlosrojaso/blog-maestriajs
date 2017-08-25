@@ -35,13 +35,13 @@
   website: "https://javico2609.github.io/blog"
   country: "Cuba"
   bio: "Full Stack Developer enthusiastic for his job and loving of good practices. C#, .NET developer using ASP.NET MVC, WebApi, JavaScript + TypeScript using popular frameworks like: Angular 2, Ionic 2, Redux, Vue JS, ExtJs and Highcharts."
-  facebook_url: 'https://www.linkedin.com/in/javier-gonz%C3%A0lez-843a2597/'
+  facebook_url: 'https://www.linkedin.com/in/javier-gonzalez-843a2597/'
   social_links:
     - link: "https://twitter.com/javico_glez"
       icon: "icon-social-twitter"
     - link: "https://github.com/javico2609"
       icon: "icon-social-octocat"
-    - link: "https://www.linkedin.com/in/javier-gonz%C3%A0lez-843a2597/"
+    - link: "https://www.linkedin.com/in/javier-gonzalez-843a2597/"
       icon: "icon-linkedin"
 - id: "javebratt"
   name: "Jorge Vergara"
