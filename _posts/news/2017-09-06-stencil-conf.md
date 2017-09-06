@@ -98,11 +98,11 @@ Y ya finalizando nos dicen para quienes está enfocado stencil.
 
 Puedes ver la conferencia completa aqui: [https://www.youtube.com/watch?v=UfD-k7aHkQE](https://www.youtube.com/watch?v=UfD-k7aHkQE){:target="_blank"}
 
-## ¿Ya puedo empezar a utilizarlo?
+### ¿Ya puedo empezar a utilizarlo?
 
 Si, puedes ingresar a su sitio oficial y seguir los pasos de instalacion [aquí](https://stenciljs.com/docs/getting-started).
 
-## ¿Donde puedo verlo funcionando?
+### ¿Donde puedo verlo funcionando?
 
 El sitio oficial de [stencil](https://stenciljs.com/) esta hecho con esta tecnologia. ademas, deberias de ver los [demos](https://stenciljs.com/demos) y en especial [este](https://stencil-fiber-demo.firebaseapp.com/) donde se muestra una solución a un problema que viene a resolver React Fiber pero que ya funciona muy bien con Stencil. 
 
