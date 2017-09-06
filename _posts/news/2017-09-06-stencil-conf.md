@@ -20,7 +20,7 @@ En este artículo quiero resaltar los puntos más importante tocados en la confe
 
 ## Web Components en Ionic
 
-Ionic ha iniciando como un sdk para múltiples plataformas orientando en principio a apps que van estar en un tienda de aplicaciones como google play y itunes.
+Ionic ha iniciando como SDK para múltiples plataformas orientando en principio a apps que van estar en un tienda de aplicaciones como iTunes o Google Play.
 
 <amp-img width="1276" height="675" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2F2017-09-06-stencil-conf%2Fscreen1.png?alt=media&token=1f0c82ef-d933-4e30-a21b-04bb54c6e11a"></amp-img> 
 
@@ -28,11 +28,11 @@ Recordemos que ionic tiene una visión clara sobre la cual construyen el framewo
 
 > One code base. Running everywhere.
 
-Ionic es una empresa que le apuesta enteramente a las tecnologías web, es decir no hace parte de los frameworks que tienen una solución cross-platform como react native, nativescript o xamarin que funcionan de forma distinta, ionic usa la tecnología web para cumplir esta misión. Usa todo el poder de la web y lo que esto ha traído en los últimos años como PWA, Services workers, Web Components, Javascript, Html, Css, Web Animations Api etc. Por eso con ionic puedes desarrollar una apps para Android, IOS, PWA y hasta apps con Electron.
+Ionic es una empresa que le apuesta enteramente a las tecnologías web, es decir no hace parte de los frameworks que tienen una solución cross-platform como react native, nativescript o xamarin que funcionan de forma distinta, ionic usa la tecnología web para cumplir esta misión. Usa todo el poder de la web y lo que esto ha traído en los últimos años como PWA, Services workers, Web Components, Javascript, Html, Css, Web Animations Api etc. Por eso con ionic puedes desarrollar apps para Android, IOS, PWA y hasta apps con Electron.
 
 <amp-img width="954" height="536" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2F2017-09-06-stencil-conf%2Fscreen3.png?alt=media&token=55850182-605d-4bb9-8b73-898f72f3aef1"></amp-img>
 
-Ahora si miramos un poco atrás ionic desde el principio tenía el objetivo de crear un SDK amigable para los desarrolladores y de alto rendimiento, por esta razón eligieron a Angular para poder brindar el SDK de ionic y eligieron bien Angular sigue siendo uno de los frameworks más robustos y completos. Sin embargo estos últimos años también hay otros increíbles frameworks como Vue.js, React, Ember etc.
+Ahora si miramos un poco atrás ionic desde el principio tenía el objetivo de crear un SDK amigable para los desarrolladores y de alto rendimiento, por esta razón eligieron a Angular para poder brindar el SDK de ionic, además Angular sigue siendo uno de los frameworks más robustos y completos. Sin embargo estos últimos años también hay otros increíbles frameworks como Vue.js, React, Ember etc.
 
 <amp-img width="964" height="495" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2F2017-09-06-stencil-conf%2Fscreen2.png?alt=media&token=2af8da48-9adf-400e-9b5c-bb5b16eb7b9a"></amp-img>
 
@@ -42,7 +42,7 @@ El equipo de ionic quiere poder llevar su tecnología a muchos más desarrollado
 
 <amp-img width="1272" height="674" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2F2017-09-06-stencil-conf%2Fscreen4.png?alt=media&token=a7e933b3-c02d-45c4-afb3-896585e18e3b"></amp-img>
 
-Con Web Components no solo hacen que se puedan usar el SDK de ionic en cualquier otro framework además lograr una mejora muy significativa en rendimiento.
+Con Web Components no solo hacen que se puedan usar el SDK de ionic en cualquier otro framework además logran una mejora muy significativa en rendimiento.
 
 <amp-img width="1272" height="671" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2F2017-09-06-stencil-conf%2Fscreen6.png?alt=media&token=348e6fe6-d55f-4006-9e14-a243e733c2ec"></amp-img>
 
@@ -86,7 +86,7 @@ Y luego que esté compilado por stencil podría usarse como un simple tag html e
 <my-first-component name="nicobytes"></my-first-component>
 ```
 
-Además los web components viene con lazy loading por defecto.
+Además los web components vienen con lazy loading por defecto.
 
 <amp-img width="963" height="473" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2F2017-09-06-stencil-conf%2Fscreen11.png?alt=media&token=2a98a0b4-3588-4b72-a7a7-c987ba64a020"></amp-img>
 
@@ -95,6 +95,16 @@ Y ya finalizando nos dicen para quienes está enfocado stencil.
 <amp-img width="961" height="475" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2F2017-09-06-stencil-conf%2Fscreen12.png?alt=media&token=f969280c-4809-4c0c-9ced-b27fcdd8fdc6"></amp-img>
 
 Puedes ver la conferencia completa aqui: [https://www.youtube.com/watch?v=UfD-k7aHkQE](https://www.youtube.com/watch?v=UfD-k7aHkQE){:target="_blank"}
+
+## ¿Ya puedo empezar a utilizarlo?
+
+Si, puedes ingresar a su sitio oficial y seguir los pasos de instalacion [aquí](https://stenciljs.com/docs/getting-started).
+
+## ¿Donde puedo verlo funcionando?
+
+El sitio oficial de [stencil](https://stenciljs.com/) esta hecho con esta tecnologia. ademas, deberias de ver los [demos](https://stenciljs.com/demos) y en especial [este](https://stencil-fiber-demo.firebaseapp.com/) donde se muestra una solución a un problema que viene a resolver React Fiber pero que ya funciona muy bien con Stencil. 
+
+Esta tecnologia es muy prometedora y lo mejor de todo es que la vamos a tener dentro de Ionic. Que piensas? no te olvides de dejar tu opinion.
 
 ### Conclusiones (desde mi punto de vista.)
 
