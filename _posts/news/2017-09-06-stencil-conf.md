@@ -2,7 +2,7 @@
 layout: post
 title: "Web Components en Ionic"
 keywords: "Ionic"
-date: 2017-09-04
+date: 2017-09-06
 tags: [ionic2, news]
 categories: news
 author: nicobytes
