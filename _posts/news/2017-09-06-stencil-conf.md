@@ -86,6 +86,8 @@ Y luego que esté compilado por stencil podría usarse como un simple tag html e
 <my-first-component name="nicobytes"></my-first-component>
 ```
 
+{% include blog/subscribe.html %}
+
 Además los web components vienen con lazy loading por defecto.
 
 <amp-img width="963" height="473" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2F2017-09-06-stencil-conf%2Fscreen11.png?alt=media&token=2a98a0b4-3588-4b72-a7a7-c987ba64a020"></amp-img>
