@@ -49,6 +49,8 @@ En seguida empiezo a desarrollar con VsCode y hacer las características, ahora 
 <amp-img width="800" height="598" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2F2017-09-08-interview-nicobytes%2Fplace.jpg?alt=media&token=9f9b5510-a7ec-4816-b739-a941d23d8489"></amp-img> 
 <br/>
 
+Suelo viajar frecuentemente y estar en otros paises asi que solo llevo mi mac y la buena vista de donde me encuentre.
+
 # ¿Cómo te inspiras constantemente?
 
 Sigo varias páginas muy interesantes, pero más que todo personas como sus repos en github etc.
