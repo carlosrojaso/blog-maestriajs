@@ -14,7 +14,7 @@ cover: "https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts
 
 Nicolas [(nicobytes.com](http://www.nicobytes.com/){:target="_blank"}) es consultor y desarrollador Front-end & Mobile Apps.
 
-Es desarrollador web especializado en el área de #FrontEnd & #HybripApps, enfocado en aprendizaje de #JS y al desarrollo de apps con #Angular y #Ionic. Lleva 5 años de experiencia desarrollando productos mobile para startups y agencias  y ha sido consultor y docente para empresas en Perú, Bolivia, Colombia, España y Chile. [Timeline](http://www.nicobytes.com/talks){:target="_blank"}
+Es desarrollador web especializado en el área de FrontEnd & HybripApps, enfocado en aprendizaje de #JS y al desarrollo de apps con Angular y Ionic. Lleva 5 años de experiencia desarrollando productos mobile para startups y agencias  y ha sido consultor y docente para empresas en Perú, Bolivia, Colombia, España y Chile. [Timeline](http://www.nicobytes.com/talks){:target="_blank"}
 
 ## ¿Qué te hizo decidir ser un Programador?
 
