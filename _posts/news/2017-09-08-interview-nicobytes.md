@@ -12,21 +12,21 @@ cover: "https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts
 
 <amp-img width="1024" height="512" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2F2017-09-08-interview-nicobytes%2Fprofile.jpg?alt=media&token=0939093b-31ec-4e9a-a1ce-6bd904fc9539"></amp-img> 
 
-Nicolas [nicobytes.com](http://www.nicobytes.com/){:target="_blank"} es consultor y desarrollador Front-end & Mobile Apps.
+Nicolas [(nicobytes.com](http://www.nicobytes.com/){:target="_blank"}) es consultor y desarrollador Front-end & Mobile Apps.
 
 Es desarrollador web especializado en el área de #FrontEnd & #HybripApps, enfocado en aprendizaje de #JS y al desarrollo de apps con #Angular y #Ionic. Lleva 5 años de experiencia desarrollando productos mobile para startups y agencias  y ha sido consultor y docente para empresas en Perú, Bolivia, Colombia, España y Chile. [Timeline](http://www.nicobytes.com/talks){:target="_blank"}
 
 ## ¿Qué te hizo decidir ser un Programador?
 
-De chico siempre rompía mis juguetes para saber cómo funcionan por dentro, saber como funcionan las cosas, luego mi primer opción luego de salir del colegio no era programacion era otras carreras como Electrónica y Física (era mi materia favorita), pero gané una beca en una universidad para estudiar informática, no estaba muy seguro. 
+De chico siempre rompía mis juguetes para saber cómo funcionan por dentro, luego mi primer opción luego de salir del colegio no era programación eran otras carreras como Electrónica y Física (era mi materia favorita), pero gané una beca en una universidad para estudiar informática, no estaba muy seguro. 
 
-El primer semestre me fue mal pero luego vi algoritmos y la forma que podías solucionar problemas de la vida común con código eso me gusto mucho asi me di cuenta en el camino que era mi pasión programar, podía pasar horas solucionando o creando cosas sin que me aburriera y eso hasta el dia de hoy me pasa.
+El primer semestre me fue mal pero luego vi algoritmos y vi la forma en la que podías solucionar problemas de la vida común con código, eso me gusto mucho y asi me di cuenta en el camino que mi pasión es programar, podía pasar horas solucionando o creando cosas sin que me aburriera y eso hasta el día de hoy me pasa.
 
 ## ¿Cómo es un día típico para ti?
 
 Me levanto temprano, me preparo mi desayuno y lo primero que veo es newsycombinator, luego reviso un poco el canal de slack y los tabaleros de trello para ver que hay pendiente y trato de organizar las tareas que debo cumplir para el día, para eso uso mucho pomotodo.com asi puedo dividir mis tareas y ser “productivo”. 
 
-En seguida pues empiezo a desarrollar con VsCode y hacer las caracteriscticas, ahora sigo el mantra de TDD, así que hay me tienes escribiendo primero las pruebas y luego desarrollando el código. Luego almuerzo veo un capitulo de alguna serie que me guste y luego continuo con mi trabajo, en la tarde suelo dejar las reuniones o videollamadas ya que la mañana es mucho más productiva para mi. Y ya en la noche estoy o leyendo un libro técnico por ejemplo ahora ando con el ng-book o alguna novela de terror.
+En seguida empiezo a desarrollar con VsCode y hacer las características, ahora sigo el mantra de TDD, así que hay me tienes escribiendo primero las pruebas y luego desarrollando el código. Luego almuerzo veo un capítulo de alguna serie que me guste y luego continuo con mi trabajo, en la tarde suelo dejar las reuniones o videollamadas ya que la mañana es mucho más productiva para mi. Y ya en la noche estoy o leyendo un libro técnico por ejemplo ahora ando con el ng-book2 o alguna novela de terror.
 
 
 ## ¿Cúal es tu configuración en tu lugar de trabajo (Computador, S.O, dispositivos, etc)?
@@ -49,10 +49,9 @@ En seguida pues empiezo a desarrollar con VsCode y hacer las caracteriscticas, a
 <amp-img width="800" height="598" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2F2017-09-08-interview-nicobytes%2Fplace.jpg?alt=media&token=9f9b5510-a7ec-4816-b739-a941d23d8489"></amp-img> 
 <br/>
 
-
 # ¿Cómo te inspiras constantemente?
 
-Sigo varias páginas muy interesantes pero más que todo personas como sus repos en github etc.
+Sigo varias páginas muy interesantes, pero más que todo personas como sus repos en github etc.
 
 UI/UX
 - [https://tympanus.net/codrops/](https://tympanus.net/codrops/){:target="_blank"}
@@ -108,10 +107,9 @@ Hace poco fui parte de la construcción de [Duety](http://www.duety.co/){:target
 
 Y obviamente ser parte de ion-book donde todos aprendemos en comunidad y compartimos el conocimiento.
 
-
 ## ¿Qué tipo de música escuchas mientras programas?
 
-Suelo no escuchar música conocida ya que empiezo a cantar y me distraigo así que coloco un playlist de descubrimiento de spotify.
+Suelo no escuchar música conocida ya que empiezo a cantar y me distraigo, así que coloco un playlist de descubrimiento de spotify.
 
 ## ¿Algún consejo para los desarrolladores nuevos?
 
