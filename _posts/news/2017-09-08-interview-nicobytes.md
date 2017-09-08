@@ -8,9 +8,13 @@ categories: news
 author: carlosrojas
 cover: "https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2F2017-09-08-interview-nicobytes%2Fprofile.jpg?alt=media&token=0939093b-31ec-4e9a-a1ce-6bd904fc9539"
 ---
-> Vamos a hablar más a detalle sobre stencil y sobre todo en algunos detalles dichos en la conferencia sobre stencil en la [Polymer Summit 2017](https://summit.polymer-project.org/).
+> Conozcamos mas a fondo a los AppLovers comenzando con nuestro conocido y excelente amigo @nicobytes.
 
 <amp-img width="1024" height="512" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2F2017-09-08-interview-nicobytes%2Fprofile.jpg?alt=media&token=0939093b-31ec-4e9a-a1ce-6bd904fc9539"></amp-img> 
+
+Nicolas [nicobytes.com](http://www.nicobytes.com/){:target="_blank"} es consultor y desarrollador Front-end & Mobile Apps.
+
+Es desarrollador web especializado en el área de #FrontEnd & #HybripApps, enfocado en aprendizaje de #JS y al desarrollo de apps con #Angular y #Ionic. Lleva 5 años de experiencia desarrollando productos mobile para startups y agencias  y ha sido consultor y docente para empresas en Perú, Bolivia, Colombia, España y Chile. [Timeline](http://www.nicobytes.com/talks){:target="_blank"}
 
 ## ¿Qué te hizo decidir ser un Programador?
 
