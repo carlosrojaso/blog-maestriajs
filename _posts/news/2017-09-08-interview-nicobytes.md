@@ -14,17 +14,17 @@ cover: "https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts
 
 Nicolas [(nicobytes.com](http://www.nicobytes.com/){:target="_blank"}) es consultor y desarrollador Front-end & Mobile Apps.
 
-Es desarrollador web especializado en el área de FrontEnd & HybripApps, enfocado en aprendizaje de #JS y al desarrollo de apps con Angular y Ionic. Lleva 5 años de experiencia desarrollando productos mobile para startups y agencias  y ha sido consultor y docente para empresas en Perú, Bolivia, Colombia, España y Chile. [Timeline](http://www.nicobytes.com/talks){:target="_blank"}
+Es desarrollador web especializado en el área de FrontEnd & HybripApps, enfocado al aprendizaje de JS y desarrollo de apps con Angular & Ionic. Lleva 5 años de experiencia desarrollando productos mobile para startups, agencias y empresas tambien ha sido consultor y docente para empresas en Perú, Bolivia, Colombia, España y Chile. [Timeline](http://www.nicobytes.com/talks){:target="_blank"}
 
 ## ¿Qué te hizo decidir ser un Programador?
 
-De chico siempre rompía mis juguetes para saber cómo funcionan por dentro, luego mi primer opción luego de salir del colegio no era programación eran otras carreras como Electrónica y Física (era mi materia favorita), pero gané una beca en una universidad para estudiar informática, no estaba muy seguro. 
+Cuando era niño solía romper mis juguetes para saber como funcionan por dentro. Al salir del colegio no tome como opción estudiar programación, las que había considerado eran carreras como Electromecánica y física siendo el último mi materia favorita de colegio. 
 
-El primer semestre me fue mal pero luego vi algoritmos y vi la forma en la que podías solucionar problemas de la vida común con código, eso me gusto mucho y asi me di cuenta en el camino que mi pasión es programar, podía pasar horas solucionando o creando cosas sin que me aburriera y eso hasta el día de hoy me pasa.
+Gané una beca para estudiar informática en la universidad de la cual no estaba seguro, pero decidí usarla ya en el primer semestre me fue mal pero luego vi algoritmos, vi la forma en la que podías solucionar problemas de la vida común con código, eso me gusto mucho y fue así que me di cuenta en el camino que mi pasión es programar, podía pasar horas solucionando o creando cosas sin que me aburriera y puedo decir que hasta ahora sigo con esa pasión.
 
 ## ¿Cómo es un día típico para ti?
 
-Me levanto temprano, me preparo mi desayuno y lo primero que veo es newsycombinator, luego reviso un poco el canal de slack y los tabaleros de trello para ver que hay pendiente y trato de organizar las tareas que debo cumplir para el día, para eso uso mucho pomotodo.com asi puedo dividir mis tareas y ser “productivo”. 
+Me levanto temprano, me preparo mi desayuno y lo primero que veo es newsycombinator, luego reviso un poco el canal de slack y los tableros de trello para ver que hay pendiente y trato de organizar las tareas que debo cumplir para el día, para eso uso mucho pomotodo.com asi puedo dividir mis tareas y ser “productivo”. 
 
 En seguida empiezo a desarrollar con VsCode y hacer las características, ahora sigo el mantra de TDD, así que hay me tienes escribiendo primero las pruebas y luego desarrollando el código. Luego almuerzo veo un capítulo de alguna serie que me guste y luego continuo con mi trabajo, en la tarde suelo dejar las reuniones o videollamadas ya que la mañana es mucho más productiva para mi. Y ya en la noche estoy o leyendo un libro técnico por ejemplo ahora ando con el ng-book2 o alguna novela de terror.
 
@@ -111,7 +111,7 @@ Y obviamente ser parte de ion-book donde todos aprendemos en comunidad y compart
 
 ## ¿Qué tipo de música escuchas mientras programas?
 
-Suelo no escuchar música conocida ya que empiezo a cantar y me distraigo, así que coloco un playlist de descubrimiento de spotify.
+Suelo no escuchar música conocida ya que empiezo a cantar y me distraigo, así que coloco un playlist de descubrimiento en spotify.
 
 ## ¿Algún consejo para los desarrolladores nuevos?
 
