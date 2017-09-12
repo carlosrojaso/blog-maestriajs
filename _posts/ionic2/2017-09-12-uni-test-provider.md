@@ -168,6 +168,8 @@ Si se corren las pruebas de nuevo ahora mostrará que pasaron sin problema, así
 <amp-img width="758" height="198" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2F2017-09-12-uni-test-provider%2Fscreen3.png?alt=media&token=f9bc25a7-6135-41bb-9e12-e46dfcd67992"></amp-img>
 
 
+{% include blog/subscribe.html %}
+
 ### Escribir pruebas a logWarning
 
 Debemos planear cómo esperamos que responsa este método luego de ejecutar la función, para esto vamos a tener tres condiciones para saber si este metodo cumplio con su trabajo (parecido a logError).
