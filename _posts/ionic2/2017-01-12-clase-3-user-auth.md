@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Clase 3 - Autenticación de Usuarios."
-date: 2017-06-27
+date: 2017-09-13
 tags: [class, ionic cloud]
 categories: ionic2
 author: carlosrojas
@@ -16,7 +16,7 @@ versions:
   - title: 'cordova-cli'
     number: '7.0.0'
   - title: 'ionic-cli'
-    number: '3.4.0'
+    number: '3.10.1'
 ---
 
 <amp-img width="1024" height="512" layout="responsive" src="/images/posts/ionic2/2017-01-12-clase-3-user-auth/cover.png"></amp-img> 
