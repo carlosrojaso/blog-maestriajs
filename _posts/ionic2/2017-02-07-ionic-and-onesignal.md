@@ -10,7 +10,7 @@ repo: "https://github.com/ion-book/demo120"
 cover: "https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2F2017-02-07-ionic-and-onesignal%2Fcover.jpg?alt=media&token=7dc0d801-d1a1-4d51-9313-6dffa33a8f5c"
 versions:
   - title: 'ionic'
-    number: '3.6.0'
+    number: '3.6.1'
   - title: 'ionic-native'
     number: '4.2.1'
   - title: 'ionic-app-scripts'
@@ -18,7 +18,7 @@ versions:
   - title: 'cordova-cli'
     number: '7.0.1'
   - title: 'ionic-cli'
-    number: '3.9.2'
+    number: '3.10.3'
 ---
 
 > En el mundo de las aplicaciones móviles ya sean Híbridas o Nativas es sumamente necesario implementar las notificaciones push.
@@ -299,3 +299,7 @@ Muestro lo screenShot de las notificaciones push que llegan.
 Ojo, se puede personalizar el icono, el sonido, y todo lo demás en un post más adelante lo haré.
 
 **Nota:** Este demo solo funciona desde el dispositivo o emulador.
+
+# ¿Quieres aprender mas sobre Push Notification con Ionic ? Tenemos un curso que te puede ayudar. El primer mes es gratis.
+
+<a href="http://www.ng-classroom.com/courses/curso-profesional-ionic-2-0/lectures/3300146" target="_blank" class="btn btn-round btn-success">Ir al Curso</a>

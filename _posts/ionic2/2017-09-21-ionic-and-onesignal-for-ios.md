@@ -168,6 +168,8 @@ Ahora luego de tener abierto Xcode con el proyecto generado por ionic, debemos i
 @end
 ```
 
+{% include blog/subscribe.html %}
+
 ## OneSignal + Xcode
 
 Lo primero que debemos hacer es configurar cocoapods, para poder gestionar las dependencias dentro un proyecto IOS se usa [cocoapods](https://cocoapods.org/){:target="_blank"} que es el gestor dependencias como el gradle(https://gradle.org/){:target="_blank"} en Android.
@@ -252,3 +254,23 @@ Ahora finalmente puedes conectar el dispositivo de pruebas y compilar la aplicac
     <amp-img width="629" height="487" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2F2017-09-21-ionic-and-onesignal-for-ios%2Fscreen8.png?alt=media&token=dcd88d08-0cc7-4efc-bb0e-71bc67325be5" alt="Ionic Push Notifications"></amp-img>
   </div>
 </div>
+
+
+## Resultado:
+
+<div class="row wrap">
+  <div class="col col-100 col-md-33 col-lg-33">
+    <amp-img width="640" height="1136" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2F2017-09-21-ionic-and-onesignal-for-ios%2Fphone.png?alt=media&token=b4a8cece-8d35-43f7-a53d-eed63aedbc42"></amp-img>
+  </div>
+  <div class="col col-100 col-md-33 col-lg-33">
+    <amp-img width="640" height="1136"  layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2F2017-09-21-ionic-and-onesignal-for-ios%2Fphone1.png?alt=media&token=2f6ea489-6a14-4292-9832-f55b17278d5a"></amp-img>
+  </div>
+  <div class="col col-100 col-md-33 col-lg-33">
+    <amp-img width="640" height="1136" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2F2017-09-21-ionic-and-onesignal-for-ios%2Fphone3.png?alt=media&token=6bcceb09-5bb9-42d3-b34f-4f4e2a3159a1"></amp-img>
+  </div>
+</div>
+<br>
+
+# ¿Quieres aprender mas sobre Push Notification con Ionic ? Tenemos un curso que te puede ayudar. El primer mes es gratis.
+
+<a href="http://www.ng-classroom.com/courses/curso-profesional-ionic-2-0/lectures/3300146" target="_blank" class="btn btn-round btn-success">Ir al Curso</a>
