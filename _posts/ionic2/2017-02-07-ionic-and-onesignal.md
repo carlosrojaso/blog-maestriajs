@@ -300,6 +300,4 @@ Ojo, se puede personalizar el icono, el sonido, y todo lo demás en un post más
 
 **Nota:** Este demo solo funciona desde el dispositivo o emulador.
 
-# ¿Quieres aprender mas sobre Push Notification con Ionic ? Tenemos un curso que te puede ayudar. El primer mes es gratis.
-
-<a href="http://www.ng-classroom.com/courses/curso-profesional-ionic-2-0/lectures/3300146" target="_blank" class="btn btn-round btn-success">Ir al Curso</a>
+Tambien tenemos la configuración para IOS en: [Push Notifications para IOS](https://www.ion-book.com/blog/ionic2//ionic-and-onesignal-for-ios/){:target="_blank"}

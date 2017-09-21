@@ -1,6 +1,6 @@
 ---
 layout: post
-title: " PushNotification para IOS"
+title: "Push Notifications para IOS"
 keywords: "ionic push notifications, OneSignal, push notifications, notifications, notifications en ionic 2, OneSignal y ionic"
 date: 2017-09-21
 tags: [push, native]
@@ -255,6 +255,9 @@ Ahora finalmente puedes conectar el dispositivo de pruebas y compilar la aplicac
   </div>
 </div>
 
+### ¿Quieres aprender mas sobre Push Notification con Ionic ? Tenemos un curso que te puede ayudar. El primer mes es gratis.
+
+<a href="http://www.ng-classroom.com/courses/curso-profesional-ionic-2-0/lectures/3300146" target="_blank" class="btn btn-round btn-success">Ir al Curso</a>
 
 ## Resultado:
 
@@ -270,7 +273,3 @@ Ahora finalmente puedes conectar el dispositivo de pruebas y compilar la aplicac
   </div>
 </div>
 <br>
-
-# ¿Quieres aprender mas sobre Push Notification con Ionic ? Tenemos un curso que te puede ayudar. El primer mes es gratis.
-
-<a href="http://www.ng-classroom.com/courses/curso-profesional-ionic-2-0/lectures/3300146" target="_blank" class="btn btn-round btn-success">Ir al Curso</a>
