@@ -29,8 +29,6 @@ Existen diversas alternativas para hacer que tu aplicación tenga las **Notifica
 
 {% include general/net-promoter-score.html %} 
 
-Hace poco salio un post de parte del equipo de **ion-book** donde te enseñaban a usar las [Notificaciones Push](https://www.ion-book.com/blog/ionic2/ionic-push-notifications/){:target="_blank"} de Ionic con su [**Ionic Cloud**](https://www.ion-book.com/blog/ionic2/ionic-push-notifications/){:target="_blank"}.
-
 Hoy les enseñare otra alternativa sencilla de implementar las **Notificaciones Push** sin usar tanto código gracias a una tecnología llamada **OneSignal**.
 
 *Nota: (Es totalmente Gratis, incluso puedes usarlo para notificaciones para los navegadores web).*
@@ -243,7 +241,7 @@ En nuestro caso serán:
 ```ts
 private handlerNotifications(){
   this.oneSignal.startInit('528befa4-b101-425a-a86d-677de4c27ef1', '564553849534');
-
+  this.oneSignal.inFocusDisplaying(this.oneSignal.OSInFocusDisplayOption.Notification);
   this.oneSignal.handleNotificationOpened()
   .subscribe(jsonData => {
     let alert = this.alertCtrl.create({
