@@ -254,11 +254,6 @@ Ahora finalmente puedes conectar el dispositivo de pruebas y compilar la aplicac
     <amp-img width="629" height="487" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2F2017-09-21-ionic-and-onesignal-for-ios%2Fscreen8.png?alt=media&token=dcd88d08-0cc7-4efc-bb0e-71bc67325be5" alt="Ionic Push Notifications"></amp-img>
   </div>
 </div>
-
-### ¿Quieres aprender mas sobre Push Notification con Ionic ? Tenemos un curso que te puede ayudar. El primer mes es gratis.
-
-<a href="http://www.ng-classroom.com/courses/curso-profesional-ionic-2-0/lectures/3300146" target="_blank" class="btn btn-round btn-success">Ir al Curso</a>
-
 ## Resultado:
 
 <div class="row wrap">
@@ -273,3 +268,9 @@ Ahora finalmente puedes conectar el dispositivo de pruebas y compilar la aplicac
   </div>
 </div>
 <br>
+
+### ¿Quieres aprender mas sobre Push Notification con Ionic?
+
+Tenemos un curso que te puede ayudar. El primer mes es gratis.
+
+<a href="http://www.ng-classroom.com/courses/curso-profesional-ionic-2-0/lectures/3300146" target="_blank" class="btn btn-round btn-success">Ir al Curso</a>
