@@ -51,7 +51,9 @@ Sin embargo si contamos con conocimientos de SVG, D3JS y animaciones podemos ext
 
 En ion-book hemos creado un proyecto donde irémos agregando cada uno de los tipos de gráficos con cada artículo y que funcionará como App Web, PWA y para Android y IOS, La pueden ver en:
 
-<a href="https://ionic-charts.firebaseapp.com/#/bar-horizontal" class="btn btn-primary btn-round center-block btn-icon btn-demo" target="_blank"><div class="icon icon-social-octocat"></div> Ver demo</a>
+<a href="https://ionic-charts.firebaseapp.com/#/bar-horizontal" target="_blank" class="btn btn-round btn-success">Ver demo</a>
+
+Y el código en: [https://github.com/ion-book/demo121](https://github.com/ion-book/demo121){:target="_blank"}.
 
 ## Iniciando el proyecto
 
@@ -75,7 +77,7 @@ Y ya eso es todo! ahora vamos a trabajar dentro de Ionic con Lazy Loading, recue
 
 Como vamos a trabajar con Lazy Loading, en cada `module` que queramos usar las gráficas de ngx-charts debemos importar el módulo de ngx-charts, así:
 
-```
+```ts
 import { NgModule } from '@angular/core';
 import { IonicPageModule } from 'ionic-angular';
 import { BarHorizontalPage } from './bar-horizontal';
@@ -249,22 +251,22 @@ Y los datos también van agrupados en series, así:
 Con frecuencias se usa para mostrar que el peso total de la barra está relacionada con otros valores. Ejemplos:
 
 <div class="row wrap">
-  <div class="col col-100 col-md-33 col-lg-33">
+  <div class="col col-100 col-md-50 col-lg-50">
     <amp-img width="834" height="726" layout="responsive" src="http://datavizproject.com/wp-content/uploads/2015/10/Sk%C3%A6rmbillede-2016-01-25-kl.-13.38.17.png"></amp-img>
     <small>Source: http://www.thevisualagency.com/portfolio/grafici-interattivi-comunicazione-finanziaria/</small>
   </div>
-  <div class="col col-100 col-md-33 col-lg-33">
+  <div class="col col-100 col-md-50 col-lg-50">
     <amp-img width="881" height="726" layout="responsive" src="http://datavizproject.com/wp-content/uploads/2015/10/Sk%C3%A6rmbillede-2017-08-31-kl.-17.26.13.png"></amp-img>
     <small>Source: https://www.behance.net/gallery/21631653/Merck-Infographic</small>
   </div>
-  <div class="col col-100 col-md-33 col-lg-33">
+  <div class="col col-100">
     <amp-img width="884" height="376" layout="responsive" src="http://datavizproject.com/wp-content/uploads/2015/10/Sk%C3%A6rmbillede-2016-01-29-kl.-14.38.40.png"></amp-img>
     <small>Source: https://www.flickr.com/photos/densitydesign/8089722832/in/album-72157631774207511/</small>
   </div>
 </div>
 <br>
 
-## Resultado Android:
+Ahora al compilar para Android veremos el resultado:
 
 <div class="row wrap">
   <div class="col col-100 col-md-33 col-lg-33">
