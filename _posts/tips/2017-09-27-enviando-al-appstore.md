@@ -2,7 +2,7 @@
 layout: post
 title: "Como Publicar tu App en Google Play Store."
 keywords: "Tips"
-date: 2017-09-26
+date: 2017-09-27
 tags: [tips]
 categories: tips
 author: carlosrojas
@@ -92,3 +92,5 @@ Ok, hasta este punto hemos terminado con el firmado del APK.
 - Publicar desde el administrador de Versiones.
 
 <amp-img width="542" height="351" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2F2017-09-27-enviando-al-appstore%2FCaptura%20de%20pantalla%202017-09-26%20a%20la(s)%204.04.52%20p.m..png?alt=media&token=ce72db83-a91c-43bb-9af3-702d8c27d6c9"></amp-img>
+
+Puedes ver nuestra App [Aquí](http://j.mp/2xviNfk).
