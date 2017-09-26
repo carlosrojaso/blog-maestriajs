@@ -22,14 +22,14 @@ versions:
     number: '3.10.3'
 ---
 
-> La visualización de datos es otra de las habilidades que ahora son más relevantes debido a la gran cantidad de información que se tiene en el momento, estas gráficas ayudan a ver métricas que facilitan la toma decisiones y en Angular existe [ngrx-charts](https://swimlane.github.io/ngx-charts/){:target="_blank"} una grandiosa librería que nos ayuda con esta labor.
+> La visualización de datos es una de las habilidades que ahora es relevantes debido a la gran cantidad de información que se tiene en el momento, estas gráficas ayudan a ver métricas que facilitan la toma decisiones y en Angular existe [ngrx-charts](https://swimlane.github.io/ngx-charts/){:target="_blank"} una grandiosa librería que nos ayuda con esta labor.
 <!--summary-->
 
 <amp-img width="1024" height="512" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2F2017-09-21-ngrx-charts-bars%2Fcover.jpg?alt=media&token=885b3c21-db64-4e52-8ffe-81516061bd85" alt="charts"></amp-img>
 
 {% include general/net-promoter-score.html %}
 
-En el artículo vamos a implementar la librería de ngrx-charts en Ionic/Angular, la cual es una librería para mostrar gráficas usando Angular y D3JS. Pero lo que hace diferente a esta librería, es que no es wrapper de D3JS, ngrx-charts usa SVG manipulado por Angular y D3JS para funciones matemáticas, escalas, ejes etc. Y esto hace las gráficas generadas por ngrx-charts pueda usar ventajas DE de Angular como AOT, Angular Universal, Angular Animations etc.
+En el artículo vamos a implementar la librería de ngrx-charts en Ionic/Angular, la cual es una librería para mostrar gráficas usando Angular y D3JS. Pero lo que hace diferente a esta librería, es que no es wrapper de D3JS, ngrx-charts usa SVG manipulado por Angular y D3JS para funciones matemáticas, escalas, ejes etc. Y esto hace que los gráficos generados por ngrx-charts pueda usar ventajas de Angular como AOT, Angular Universal, Angular Animations etc.
 
 Aquí pueden ver la motivación de los creadores de esta librería y el [porqué renderizar con Angular Vs crear un wrapper de D3JS](https://swimlane.gitbooks.io/ngx-charts/content/intro/motivation.html){:target="_blank"}.
 
@@ -49,7 +49,7 @@ Dentro de sus características nos ofrecen varios componentes que tienen los sig
 
 Sin embargo si contamos con conocimientos de SVG, D3JS y animaciones podemos extender la librería y crear componentes personalizados. Pueden ver mas de sus caracteristicas en [https://swimlane.gitbooks.io/ngx-charts/content/intro/features.html](https://swimlane.gitbooks.io/ngx-charts/content/intro/features.html){:target="_blank"}.
 
-En ion-book hemos creado un proyecto donde irémos agregando cada uno de los tipos de gráficos con cada artículo y que funcionará como App Web, PWA y para Android y IOS, La pueden ver en:
+En ion-book hemos creado un proyecto donde irémos agregando cada uno de los tipos de gráficos con cada artículo y  funcionará como App Web, PWA y para Android y IOS, La pueden ver en:
 
 <a href="https://ionic-charts.firebaseapp.com/#/bar-horizontal" target="_blank" class="btn btn-round btn-success">Ver demo</a>
 
@@ -63,7 +63,7 @@ Lo primero que haremos será iniciar un nuevo proyecto con ionic, vamos a nuestr
 ionic start demo121 blank
 ```
 
-Para usar ngrx-charts en Ionic/angular solo debemos instalar como dependencias a ngrx-charts y d3js, así:
+Para usar ngrx-charts en Ionic/angular solo debemos instalar como dependencias a @angular/animations, ngrx-charts y d3js, así:
 
 ```
 npm install @angular/animations@4.1.3
@@ -125,7 +125,7 @@ Con esto ya podemos empezar a trabajar, ngx-charts es declarativo, así que solo
 
 ## Bar charts
 
-En este primer artículo implementaremos gráficos de barras de nos ofrece `ngx-charts` y luego en siguientes artículos veremos los demás gráficos, hasta llegar a crear componentes personalizados.
+En este primer artículo implementaremos los gráficos de barras de nos ofrece `ngx-charts` y luego en siguientes artículos veremos los demás gráficos, hasta llegar a crear componentes personalizados.
 
 Una gráfico de barras simple se veria, así (sin hacer mayor trabajo en las opciones que tiene):
 
@@ -179,7 +179,7 @@ Donde los parámetros más importantes son `view` y `results`, `view` son las di
 ];
 ```
 
-Otra buena opción cuando contamos con una serie de datos del mismo grupo, puede mostrar gráficos de barras agrupadas, así:
+Otra buena opción cuando contamos con una serie de datos del mismo grupo, puede ser mostrar gráficos de barras en grupos, así:
 
 <amp-img width="589" height="316" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2F2017-09-21-ngrx-charts-bars%2Fscreen2.png?alt=media&token=10b63e60-89d1-4370-a699-faf0835dc737" alt="charts"></amp-img>
 
@@ -228,7 +228,7 @@ Donde esta vez los datos deben ir organizados así:
 
 {% include blog/subscribe.html %}
 
-Otro tipo de gráfica que en mi opinión en bien interesante es el tipo `Stacked Bar` donde cada barra está dividida por el peso de cada número y la peso total de la barra es la suma total de ellos:
+Otro tipo de gráfica que en mi opinión es muy interesante es el tipo `Stacked Bar` donde cada barra está dividida por el peso de cada número y la peso total de la barra es la suma total de ellos:
 
 <amp-img width="590" height="329" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2F2017-09-21-ngrx-charts-bars%2Fscreen3.png?alt=media&token=421ef491-b00d-4ba5-9ddd-c74b31923121" alt="charts"></amp-img>
 
@@ -274,7 +274,7 @@ Y los datos también van agrupados en series, así:
 ];
 ```
 
-Con frecuencias se usa para mostrar que el peso total de la barra está relacionada con otros valores. Ejemplos:
+Con frecuencia un `Stacked Bar` se usa para notar que el peso total de la barra está relacionada con otros valores. Ejemplos:
 
 <div class="row wrap">
   <div class="col col-100 col-md-50 col-lg-50">
