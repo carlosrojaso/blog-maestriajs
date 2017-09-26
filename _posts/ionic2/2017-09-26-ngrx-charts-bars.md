@@ -66,6 +66,7 @@ ionic start demo121 blank
 Para usar ngrx-charts en Ionic/angular solo debemos instalar como dependencias a ngrx-charts y d3js, así:
 
 ```
+npm install @angular/animations@4.1.3
 npm install @swimlane/ngx-charts --save
 npm install d3 --save
 ```
@@ -93,6 +94,31 @@ import { NgxChartsModule } from '@swimlane/ngx-charts';
   ],
 })
 export class BarHorizontalPageModule {}
+```
+
+Luego debemos importar `BrowserAnimationsModule` en el archivo `app.module.ts`, asi:
+
+```ts
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+...
+
+@NgModule({
+  declarations: [
+    MyApp
+  ],
+  imports: [
+    ...
+    BrowserAnimationsModule,
+    IonicModule.forRoot(MyApp),
+  ],
+  bootstrap: [IonicApp],
+  entryComponents: [
+    DuetyApp
+  ],
+  providers: [...]
+})
+export class AppModule {}
 ```
 
 Con esto ya podemos empezar a trabajar, ngx-charts es declarativo, así que solo hace falta empezar a usar sus componentes dentro de nuestro template con los datos necesarios.
