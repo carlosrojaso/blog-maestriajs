@@ -26,13 +26,6 @@ layout: default
       </a>
     </div>
     {% endif %}
-    {% if page.laucher %}
-    <div class="col col-100 col-md-100 col-lg-20">
-      <a href="{{ page.laucher }}" class="btn btn-primary btn-round center-block btn-icon btn-demo" target="_blank">
-        <div class="icon icon-social-octocat"></div> Ver demo
-      </a>
-    </div>
-    {% endif %}
   </div>
 </div>
 <div class="content">
@@ -45,6 +38,7 @@ layout: default
         <a href="{{ page.repo }}" class="btn btn-primary btn-round center-block btn-icon btn-demo" target="_blank">
           <div class="icon icon-social-octocat"></div> Ver código
         </a>
+        </br>
         {% endif %}
         {% if page.laucher %}
         <a href="{{ page.laucher }}" class="btn btn-primary btn-round center-block btn-icon btn-demo" target="_blank">
