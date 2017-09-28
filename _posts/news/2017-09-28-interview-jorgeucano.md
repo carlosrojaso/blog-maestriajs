@@ -12,7 +12,7 @@ cover: "https://i.imgur.com/jKuTJZr.png"
 
 <amp-img width="1024" height="512" layout="responsive" src="https://i.imgur.com/jKuTJZr.png"></amp-img> 
 
-Jorge es [Angular Google Developer Expert](https://developers.google.com/experts/people/jorge-cano) + [Nativescript Developer Expert (https://developer.telerik.com/community/developer-experts/) . Jorge es Desarrollador en ByteDefault usando Angular / RxJS / Firebase / Nativescript. Escritor de Entendiendo Angular. Escritor de Artículos Técnicos. Ponente Internacional en eventos de Tecnologia. Organizador de NgBaires.
+Jorge es [Angular Google Developer Expert](https://developers.google.com/experts/people/jorge-cano) + [Nativescript Developer Expert] (https://developer.telerik.com/community/developer-experts/) . Jorge es Desarrollador en ByteDefault usando Angular / RxJS / Firebase / Nativescript. Escritor de Entendiendo Angular. Escritor de Artículos Técnicos. Ponente Internacional en eventos de Tecnologia. Organizador de NgBaires.
 
 ## ¿Qué te hizo decidir ser un Programador?
 
