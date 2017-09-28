@@ -16,10 +16,9 @@ Jorge es [Angular Google Developer Expert](https://developers.google.com/experts
 
 ## ¿Qué te hizo decidir ser un Programador?
 
-Tengo la gran suerte de hacer lo que quiero y desde casa, asi que luego de asearme, me tomo un buen cafe (como todo programador deberia hacerlo) y luego arranco con anotar cada una de las tareas que tengo para el dia, si agarro un papel y anoto que deberia tener hoy, mas alla de tener github para todo, me gusta mucho enforcarme en una sola cosa y poder concertrarme y si tengo un papel ahi que me recuerda que hacer, no tengo que ir a navegar y buscar cosas, que podrian hacer que me pierda con alguna otra cosa. 
+Que gran pregunta, no se el momento exacto donde quise programar, siempre tuve intención o siempre me intereso mucho entender como era que funcionaban los programas y las peliculas (en ese momento hasta hoy en día están muy lejos de la realidad)... 
 
-Luego de unos cuantos cafes a la mañana me fijo si vengo bien con todo lo propuesto para el día, si todo esta bien, una buena siesta de 40 minutos para refrescar la mente y poder seguir trabajando.. normalmente trabajo entre 8 a 9 horas y luego, si no tengo recados, sigo en la computadora creando contenido. 
-
+Pero desde muy chico, cerca de los 9 o 10 años, me había comprado un programa para "programar juegos" que en realidad lo que hacia era cambiar skins y poder modificar algunas cosas del programa, funcionalidades del teclado y algunas mas... Pero cuando termine la escuela secundaria, luego de un paso muy breve por la facultad de abogacía, fui a inscribirme en la Universidad Nacional Tecnológica (tenia 18 años) y había un programa de extensión universitaria en el cual unido con "Sun Microsystems" (si ya lo se, estoy grande) daban una "carrera corta" de Analista Programador, me anote y aprendi las bases de los algoritmos, pseudo código y luego a programar orientado a objetos, como analizar requerimientos y algunas cosas mas.
 
 ## ¿Cómo es un día típico para ti?
 
