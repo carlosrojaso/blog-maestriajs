@@ -29,7 +29,7 @@ Si ya has tenido experiencia creando Apps y enviando a dispositivos IOS y Androi
 En tu proyecto de Ionic vas a ver una carpeta */resources* y adentro podras ver los iconos y splash que por defecto colocan los proyectos de Ionic *icon.png* y *splash.png*. Debes personalizar estos dos archivos con los tuyos en las siguientes resoluciones.
 
 
-icon.png > 192x192
+icon.png > 1024 x 1024
 
 splash.png > 2208 x 2208
 
