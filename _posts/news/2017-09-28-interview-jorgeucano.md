@@ -2,7 +2,7 @@
 layout: post
 title: "Entrevista a Jorge Cano"
 keywords: "Ionic"
-date: 2017-09-28
+date: 2017-09-29
 tags: [interview]
 categories: news
 author: carlosrojas
