@@ -12,7 +12,7 @@ cover: "https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts
 
 <amp-img width="1024" height="512" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2F2017-09-28-interview-jorgeucano%2FDear%20Papa%2C.png?alt=media&token=e02c41b5-cee4-4bcc-8c3a-f4a8d5bee57a"></amp-img> 
 
-Jorge es [Angular Google Developer Expert](https://developers.google.com/experts/people/jorge-cano) + [Nativescript Developer Expert] (https://developer.telerik.com/community/developer-experts/) . Jorge es Desarrollador en ByteDefault usando Angular / RxJS / Firebase / Nativescript. Escritor de Entendiendo Angular. Escritor de Artículos Técnicos. Ponente Internacional en eventos de Tecnologia. Organizador de NgBaires.
+Jorge es [Angular Google Developer Expert](https://developers.google.com/experts/people/jorge-cano) + [Nativescript Developer Expert](https://developer.telerik.com/community/developer-experts/) . Jorge es Desarrollador en ByteDefault usando Angular / RxJS / Firebase / Nativescript. Escritor de Entendiendo Angular. Escritor de Artículos Técnicos. Ponente Internacional en eventos de Tecnologia. Organizador de NgBaires.
 
 ## ¿Qué te hizo decidir ser un Programador?
 
@@ -29,13 +29,6 @@ Luego de unos cuantos cafes a la mañana me fijo si vengo bien con todo lo propu
 
 ## ¿Cúal es tu configuración en tu lugar de trabajo (Computador, S.O, dispositivos, etc)?
 
-<amp-img width="1056" height="158" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2F2017-09-19-interview-javico%2F2017-09-18_19-21-07.png?alt=media&token=f578854a-92df-4242-8701-22bc4bfd36b5"></amp-img>
-<br/>
-<amp-img width="450" height="800" layout="fixed" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2F2017-09-19-interview-javico%2FScreenshot_20170918-190234.png?alt=media&token=cbc1cf78-e336-48b6-83a6-e174385ceeee"></amp-img>
-<br>
-<amp-img width="1024" height="768" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2F2017-09-19-interview-javico%2F20170918_185707.jpg?alt=media&token=db880423-a381-431a-af5e-4817e5e0a671"></amp-img> 
-<br/>
-
 Dicen que cuando probas la manzana no la dejas y en mi caso es asi, tengo una MacBook Pro 2017 de 15 pulgadas, 16gb de ram y acabo de actualizar a MacOs HightSierra.. Por otro lado, tengo un monitor de 32 pulgadas, un magic trackpad y un teclado k480 logitech a eso le sumo un ipad pro 2 (que a veces uso como 2do o tercer monitor) y luego un iPhone 7 plus... con eso estoy en el día a día, mas alla de eso tengo algunos devices android para hacer pruebas en dispositivos fisicos (muchas veces uso los de amigos o familiares).
 
 # ¿Cómo te inspiras constantemente?
@@ -51,10 +44,6 @@ Tal vez en el core de angular directamente, ya estar creando nuevas funcionalida
 Ufff hice varios, la mayoría privados, pero hay algunos que subsisten por años y eso me parece increible, que el cliente entienda todo lo que quiere y no haya bugs ufff esos son magicos, hay un software web que hice para un buffet de abogados, ya tiene como 6 años y sigue funcionando genial.
 
 Por otro lado migre todo un servicio de un hospital de jsf a angular 1.4 y fue un gran logro, convencer de las tecnologías que ibamos a usar y sacar todo lo viejo que habia, que era lento y no funcionaba bien.. 
-
-<amp-img width="1915" height="967" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2F2017-09-19-interview-javico%2Fimage.png?alt=media&token=cff4388b-eef7-4906-8377-596817294bf0"></amp-img>
-
-<amp-img width="1915" height="967" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2F2017-09-19-interview-javico%2Fimage_1.png?alt=media&token=2e8b048b-cec5-4d93-af6b-407e1d10512a"></amp-img>
 
 ## ¿Qué tipo de música escuchas mientras programas?
 

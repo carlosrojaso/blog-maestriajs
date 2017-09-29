@@ -2,7 +2,7 @@
 layout: post
 title: "Como Publicar tu App en Google Play Store."
 keywords: "Tips"
-date: 2017-10-02
+date: 2017-09-27
 tags: [tips]
 categories: tips
 author: carlosrojas

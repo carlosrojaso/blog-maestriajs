@@ -31,7 +31,7 @@ En tu proyecto de Ionic vas a ver una carpeta */resources* y adentro podras ver 
 
 icon.png > 1024 x 1024
 
-splash.png > 2208 x 2208
+splash.png > 2732 x 2732
 
 
 Una vez personalizadas deben reemplazar las anteriores */resources/icon.png* y */resources/splash.png*
