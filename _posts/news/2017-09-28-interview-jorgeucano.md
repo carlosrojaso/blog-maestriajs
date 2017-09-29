@@ -6,11 +6,11 @@ date: 2017-09-29
 tags: [interview]
 categories: news
 author: carlosrojas
-cover: "https://i.imgur.com/jKuTJZr.png"
+cover: "https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2F2017-09-28-interview-jorgeucano%2FDear%20Papa%2C.png?alt=media&token=e02c41b5-cee4-4bcc-8c3a-f4a8d5bee57a"
 ---
 > Conozcamos mas a fondo a los AppLovers continuando con nuestro amigo y GDE  Jorge Cano.
 
-<amp-img width="1024" height="512" layout="responsive" src="https://i.imgur.com/jKuTJZr.png"></amp-img> 
+<amp-img width="1024" height="512" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2F2017-09-28-interview-jorgeucano%2FDear%20Papa%2C.png?alt=media&token=e02c41b5-cee4-4bcc-8c3a-f4a8d5bee57a"></amp-img> 
 
 Jorge es [Angular Google Developer Expert](https://developers.google.com/experts/people/jorge-cano) + [Nativescript Developer Expert] (https://developer.telerik.com/community/developer-experts/) . Jorge es Desarrollador en ByteDefault usando Angular / RxJS / Firebase / Nativescript. Escritor de Entendiendo Angular. Escritor de Artículos Técnicos. Ponente Internacional en eventos de Tecnologia. Organizador de NgBaires.
 
