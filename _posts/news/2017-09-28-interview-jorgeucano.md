@@ -29,7 +29,16 @@ Luego de unos cuantos cafes a la mañana me fijo si vengo bien con todo lo propu
 
 ## ¿Cúal es tu configuración en tu lugar de trabajo (Computador, S.O, dispositivos, etc)?
 
-Dicen que cuando probas la manzana no la dejas y en mi caso es asi, tengo una MacBook Pro 2017 de 15 pulgadas, 16gb de ram y acabo de actualizar a MacOs HightSierra.. Por otro lado, tengo un monitor de 32 pulgadas, un magic trackpad y un teclado k480 logitech a eso le sumo un ipad pro 2 (que a veces uso como 2do o tercer monitor) y luego un iPhone 7 plus... con eso estoy en el día a día, mas alla de eso tengo algunos devices android para hacer pruebas en dispositivos fisicos (muchas veces uso los de amigos o familiares).
+<amp-img width="1280" height="960" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2F2017-09-28-interview-jorgeucano%2FWhatsApp%20Image%202017-09-30%20at%2016.53.58.jpeg?alt=media&token=e5ca89b7-8bb7-4783-9d42-53e152758cf5"></amp-img>
+
+
+<amp-img width="1280" height="960" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2F2017-09-28-interview-jorgeucano%2FWhatsApp%20Image%202017-09-30%20at%2016.53.57.jpeg?alt=media&token=686d4093-7a59-45e1-b8df-0edefb9e56dd"></amp-img>
+
+
+<amp-img width="720" height="1280" layout="fixed" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2F2017-09-28-interview-jorgeucano%2FWhatsApp%20Image%202017-09-30%20at%2016.53.56.jpeg?alt=media&token=f778d8d8-7a2b-4439-881c-a91ff639ca28"></amp-img>
+
+Dicen que cuando probas la manzana no la dejas y en mi caso es asi, tengo una 
+MacBook Pro 2017 de 15 pulgadas, 16gb de ram y acabo de actualizar a MacOs HightSierra.. Por otro lado, tengo un monitor de 32 pulgadas, un magic trackpad y un teclado k480 logitech a eso le sumo un ipad pro 2 (que a veces uso como 2do o tercer monitor) y luego un iPhone 7 plus... con eso estoy en el día a día, mas alla de eso tengo algunos devices android para hacer pruebas en dispositivos fisicos (muchas veces uso los de amigos o familiares).
 
 # ¿Cómo te inspiras constantemente?
 
