@@ -303,7 +303,7 @@ export class HomePage {
       title: 'Agregar RSS URL',
       inputs: [
         {
-          name: 'nombre',
+          name: 'name',
           placeholder: 'El mejor sitio'
         },
         {
