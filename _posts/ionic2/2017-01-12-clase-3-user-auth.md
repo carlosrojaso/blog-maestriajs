@@ -71,8 +71,6 @@ Define los objetos:
 
 ```ts
 
-import { CloudSettings, CloudModule } from '@ionic/cloud-angular';
-
 export const firebaseConfig = {
   apiKey: "xxxxxxxxxx",
   authDomain: "your-domain-name.firebaseapp.com",
