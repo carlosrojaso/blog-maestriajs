@@ -7,13 +7,13 @@ tags: [news]
 categories: news
 author: javaruiz
 video: true
-cover: "/images/posts/news/2017-10-04-firestore/cover.jpeg"
+cover: "https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2F2017-10-04-firestore%2Fcover.jpeg?alt=media&token=63f1b115-18c0-40b7-a132-92f469f55842"
 versions:
   - title: 'AngularFire5'
     number: '^5.0.0.rc.1'
 ---
 
-<amp-img width="1024" height="512" layout="responsive" src="/images/posts/news/2017-10-04-firestore/cover.jpeg"></amp-img>
+<amp-img width="1024" height="512" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2F2017-10-04-firestore%2Fcover.jpeg?alt=media&token=63f1b115-18c0-40b7-a132-92f469f55842"></amp-img>
 
 ## Cloud Firestore
 
@@ -25,10 +25,10 @@ En el sitio oficial [Firebase Blog](https://firebase.googleblog.com/2017/10/intr
 ### Características
 
 #### Documentos y Colecciones    
-Usa Documentos y Colecciones para estructurar y consultar datos, este modelo de datos es familiar e intuitivo para muchos desarrolladores, Permite hacer consultas expresivas. Las consultas se escalan con el tamaño conjunto de resultados, no con el tamaño del conjunto de datos, por lo que se obtiene el mismo rendimientos obteniendo 1 resultado de un conjunto de datos de 100 ó 1000000000.
+Usa Documentos y Colecciones para estructurar y consultar datos, este modelo de datos es familiar e intuitivo para muchos desarrolladores, permite hacer consultas expresivas. Las consultas se escalan con el tamaño conjunto de resultados, no con el tamaño del conjunto de datos, por lo que se obtiene el mismo rendimientos obteniendo 1 resultado de un conjunto de datos de 100 ó 1000000000.
 
 #### SDK para **Android**, **Web** y **IOS**
-Los SDK sincronizan los datos de las aplicaciones casi al instante. Esto hace muy facil la creación de aplicaciones reactivas, la sincronización automática de datos entre dispositivos y la creación de funciones colaborativas.
+Los SDK sincronizan los datos de las aplicaciones casi al instante. Esto hace muy fácil la creación de aplicaciones reactivas, la sincronización automática de datos entre dispositivos y la creación de funciones colaborativas.
 
 #### Sincronización de datos en **RealTime** / **Offline**
 Esto significa que la aplicación funcionará sin problemas, incluso cuando nuestros usuarios pierdan conectividad, y se sincronisarán cuando recuperen esa conectividad. El modo sin conexión esta disponible para Web, IOS y Android.
@@ -51,15 +51,20 @@ Si estas utilizando **angularfire2**, puedes ver la guía de actualización -> [
 
 {% include general/net-promoter-score.html %} 
 
-Ahora podremos ver en nuestra consola de **Firebase**, en la opcion de ***Database*** una nueva opción:
+Ahora podremos ver en nuestra consola de **Firebase**, en la opción de ***Database*** una nueva opción:
 
-<amp-img width="1024" height="512" layout="responsive" src="/images/posts/news/2017-10-04-firestore/1.jpeg"></amp-img>
+<div class="row">
+  <div class="col col-100 col-md-50 col-lg-50">
+    <amp-img width="268" height="205" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2F2017-10-04-firestore%2F1.jpeg?alt=media&token=5d207d8e-62b9-427a-a2ea-c9c611f536f6"></amp-img>
+  </div>
+</div>
+
 Donde seleccionaremos ***Cloud Firestore***, nos abrirá un modal para agregar nuestra primera **Colección**.
-<amp-img width="1024" height="512" layout="responsive" src="/images/posts/news/2017-10-04-firestore/2.jpeg"></amp-img>
+<amp-img width="708" height="400" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2F2017-10-04-firestore%2F2.jpeg?alt=media&token=2e5bab15-2403-465a-aace-e5455a506a3c"></amp-img>
 Después nos preguntará los campos a ingresar del **Documento**, su tipo y su valor, también se queremos asignarle un ID propio ó uno generado, recordando que el conjunto de Documentos hacen una Colección.
-<amp-img width="1024" height="512" layout="responsive" src="/images/posts/news/2017-10-04-firestore/3.jpeg"></amp-img>
+<amp-img width="699" height="530" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2F2017-10-04-firestore%2F3.jpeg?alt=media&token=614e492b-4531-41c7-9711-2d591446a0dd"></amp-img>
 Podremos ver esta pantalla al terminar.
-<amp-img width="1024" height="512" layout="responsive" src="/images/posts/news/2017-10-04-firestore/4.jpeg"></amp-img>
+<amp-img width="1260" height="647" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2F2017-10-04-firestore%2F4.jpeg?alt=media&token=bac721a3-3985-42fb-b3eb-47b61b19f321"></amp-img>
 
 Como dato las reglas quedarían como a continuación:
 ```
