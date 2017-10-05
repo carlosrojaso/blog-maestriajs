@@ -2,7 +2,7 @@
 layout: post
 title: "Novedades en Cloud Firestore"
 keywords: "AngularFire5, Cloud Firestore"
-date: 2017-10-04
+date: 2017-10-05
 tags: [news]
 categories: news
 author: javaruiz
