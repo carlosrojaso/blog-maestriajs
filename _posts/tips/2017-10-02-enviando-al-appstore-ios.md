@@ -56,6 +56,8 @@ ionic cordova build ios --prod --release
 
 - Luego debes ingresar a la configuracion general de tu proyecto en Xcode. y asegurar que tu certificado este bien asociado.
 
+{% include blog/subscribe.html %}
+
 ## Acerca de los Certificados.
 
 Este punto es un poco complicado pero Xcode ya te permite obtener lo principal facilmente, según te mostre antes. En general vas a necesitar tener 3 cosas asociadas desde tu cuenta de Apple.

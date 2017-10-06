@@ -66,6 +66,8 @@ Después nos preguntará los campos a ingresar del **Documento**, su tipo y su v
 Podremos ver esta pantalla al terminar.
 <amp-img width="1260" height="647" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2F2017-10-04-firestore%2F4.jpeg?alt=media&token=bac721a3-3985-42fb-b3eb-47b61b19f321"></amp-img>
 
+{% include blog/subscribe.html %}
+
 Como dato las reglas quedarían como a continuación:
 ```
 service cloud.firestore {

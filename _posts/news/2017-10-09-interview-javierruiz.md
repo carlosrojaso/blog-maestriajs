@@ -51,6 +51,8 @@ Al finalizar el día paso a recoger a mi esposa, vamos a un lugar a cenar(por lo
 
 Tengo como equipo un MacBook Pro 2012 de 15” con 16Gb, por parte del trabajo, propio tengo tengo una MacBook Pro 2015 de 13” 2015 con 8Gb(No sabía que ya no se podía expandir esta versión, pero me funciona de maravilla, comparado con la de la oficina que si tengo varios procesos abiertos se comienza a trabar), no era fan de la “manzanita”, pero resulto ser muy buena. Tengo un monitor ASUS Designo Series de 23” que me regaló mi esposa. Un Magic Keyboard y Magic Mouse(No sabía que no podías hacer zoom - No lo recomiendo - estoy por cambiarlo por el Magic Trackpad). Un teléfono Huawei P10Lite, que me funciona bastante bien.
 
+{% include blog/subscribe.html %}
+
 # ¿Cómo te inspiras constantemente?
 
 Creo me me gusta mucho explorar las páginas, tomar las mejores partes y aplicarlas. Realizar proyectos para probar nuevos desarrollos o tecnologías, y recientemente el gusto de las comunidades, me gustó mucho el ambiente que se vive y al igual pienso que compartir tu conocimiento es la mejor forma de aprender, como dice Nicolás también, y creo que todos coincidimos en eso. Me gustaría realmente hacer buenos productos aquí en mi región, hay mucho talento, personas con ganas de aprender, eso me inspira a superarme y poder llevarles en las próximas entregas mejor material para que la comunidad aquí pueda seguir creciendo de igual o mayor manera.
