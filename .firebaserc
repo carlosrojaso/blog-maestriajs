@@ -1,5 +1,6 @@
 {
   "projects": {
-    "ion-book": "ion-book"
+    "production": "ngclassroom-8ba81",
+    "staging": "ion-book"
   }
 }
