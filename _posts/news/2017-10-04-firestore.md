@@ -2,7 +2,7 @@
 layout: post
 title: "Novedades en Cloud Firestore"
 keywords: "AngularFire5, Cloud Firestore"
-date: 2017-10-04
+date: 2017-10-05
 tags: [news]
 categories: news
 author: javaruiz
@@ -65,6 +65,8 @@ Después nos preguntará los campos a ingresar del **Documento**, su tipo y su v
 <amp-img width="699" height="530" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2F2017-10-04-firestore%2F3.jpeg?alt=media&token=614e492b-4531-41c7-9711-2d591446a0dd"></amp-img>
 Podremos ver esta pantalla al terminar.
 <amp-img width="1260" height="647" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2F2017-10-04-firestore%2F4.jpeg?alt=media&token=bac721a3-3985-42fb-b3eb-47b61b19f321"></amp-img>
+
+{% include blog/subscribe.html %}
 
 Como dato las reglas quedarían como a continuación:
 ```
