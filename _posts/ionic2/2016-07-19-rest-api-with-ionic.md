@@ -6,33 +6,38 @@ tags: [api, demos]
 categories: ionic2
 repo: "https://github.com/ion-book/demo103"
 author: nicobytes
-cover: "/images/posts/ionic2/2016-07-19-rest-api-with-ionic/cover.jpg"
+cover: "https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2F2016-07-19-rest-api-with-ionic%2Fcover.jpg?alt=media&token=dc95078c-0c95-494b-9f9b-fd5e42e2b566"
 remember: true
 versions:
   - title: 'ionic'
-    number: '3.3.0'
+    number: '3.7.1'
   - title: 'ionic-native'
-    number: '3.10.3'
+    number: '4.3.0'
   - title: 'ionic-app-scripts'
-    number: '1.3.7'
+    number: '3.0.0'
   - title: 'cordova-cli'
     number: '7.0.1'
   - title: 'ionic-cli'
-    number: '3.3.0'
+    number: '3.13.0'
 ---
 
 > Una parte fundamental de cualquier aplicación es conectarse con servicio externos, en este caso vamos a conectarnos con una **API REST**. Vamos a crear una aplicación que se contecte con [http://randomuser.me/](http://randomuser.me/){:target="_blank"} un API con información de usuarios aleatorios.
 
-<amp-img width="1848" height="1039" layout="responsive" src="/images/posts/ionic2/2016-07-19-rest-api-with-ionic/cover.jpg"></amp-img>
+<amp-img width="1848" height="1039" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2F2016-07-19-rest-api-with-ionic%2Fcover.jpg?alt=media&token=dc95078c-0c95-494b-9f9b-fd5e42e2b566"></amp-img>
 
 {% include general/net-promoter-score.html %} 
 
-# Actualización (01/05/2017)
+# Actualización (11/10/2017)
 <hr/>
 
-Hemos actualizado este demo con el último release de **Ionic 3**, si aún estas en alguna de las versiones anteriores puedes seguir estos pasos [de Ionic 2 a Ionic 3](https://www.ion-book.com/blog/tips/ionic-2-to-ionic3/){:target="_blank"}.
+Hemos actualizado este demo con el último release **Ionic 3.7** integra `HTTPClient`:
 
-Ademas en este demo usamos la función de [**lazy loading** y **@IonicPage**](https://www.ion-book.com/blog/tips/ionic-page-and-lazy-loading/){:target="_blank"}. Puedes ver el repositorio [**Demo103**](https://github.com/ion-book/demo103){:target="_blank"}
+Ionic ahora soporta la más reciente actualización de angular 4.4.2 la cual trae el nuevo `HTTPClient` lo cual dos principales nuevas características las cuales son:
+
+- Las respuestas viene en JSON por defecto sin necesidad de hacer map
+- Usar Interceptors, lo cual facilita el manejo de tokens en la aplicación con los headers.
+
+Pueden ver más acerca de `HTTPClient` aquí: [https://angular.io/guide/http](https://angular.io/guide/http){:target="_blank"}
 
 <hr/>
 
@@ -65,13 +70,13 @@ ionic cordova platform add android
 ionic cordova platform add ios
 ```
 
-## Paso 2: Importar **HttpModule**
+## Paso 2: Importar **HttpClientModule**
 
-Ahora debemos agregar `HttpModule` en nuestro archivo `app.module.ts`, este paso es muy importante si dentro de la aplicación se usa la dependencia `Http`:
+Ahora debemos agregar `HttpClientModule` en nuestro archivo `app.module.ts`, este paso es muy importante si dentro de la aplicación se usa la dependencia `Http`:
 
 ```ts
 ...
-import { HttpModule } from '@angular/http';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -79,7 +84,7 @@ import { HttpModule } from '@angular/http';
   ],
   imports: [
     BrowserModule,
-    HttpModule,
+    HttpClientModule,
     IonicModule.forRoot(MyApp),
   ],
   bootstrap: [IonicApp],
@@ -113,8 +118,8 @@ import { UserService } from '../providers/user-service';
   ],
   imports: [
     BrowserModule,
-    HttpModule,
-    IonicModule.forRoot(MyApp)
+    HttpClientModule,
+    IonicModule.forRoot(MyApp),
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -195,9 +200,7 @@ Nos retorna toda la información necesaria respecto a usuario, ahora dentro del 
 
 ```ts
 getUsers() {
-  return this.http.get('https://randomuser.me/api/?results=25')
-  .map(res => res.json())
-  .toPromise();
+  return this.http.get('https://randomuser.me/api/?results=25');
 }
 ```
 
@@ -205,21 +208,17 @@ La clase completa quedaría así:
 
 ```ts
 import { Injectable } from '@angular/core';
-import { Http } from '@angular/http';
-import 'rxjs/add/operator/map';
-import 'rxjs/add/operator/toPromise';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable()
 export class UserService {
 
   constructor(
-    private http: Http
+    private http: HttpClient
   ) {}
 
   getUsers() {
-    return this.http.get('https://randomuser.me/api/?results=25')
-    .map(res => res.json())
-    .toPromise();
+    return this.http.get('https://randomuser.me/api/?results=25');
   }
 }
 ```
@@ -251,12 +250,14 @@ export class HomePage {
 
   ionViewDidLoad(){
     this.userService.getUsers()
-    .then(data => {
-      this.users = data.results;
-    })
-    .catch(error =>{
-      console.error(error);
-    })
+    .subscribe(
+      (data) => { // Success
+        this.users = data['results'];
+      },
+      (error) =>{
+        console.error(error);
+      }
+    )
   }
 }
 ```
@@ -295,7 +296,7 @@ Ahora en el template de `home.html` lo único que nos queda es mostrar los usuar
 
 <div class="row">
   <div class="col col-100 col-md-33 offset-md-33 col-lg-33 offset-lg-33">
-    <amp-img width="1080" height="1920" layout="responsive" src="/images/posts/ionic2/2016-07-19-rest-api-with-ionic/screen1.jpg"></amp-img>
+    <amp-img width="1080" height="1920" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2F2016-07-19-rest-api-with-ionic%2Fscreen1.jpg?alt=media&token=8f3074a4-f98d-4558-a043-ebb8ee4dc576º"></amp-img>
   </div>
 </div>
 <br/>
