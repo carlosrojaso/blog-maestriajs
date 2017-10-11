@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Conectado una API REST con Ionic"
-date: 2017-05-12
+date: 2017-11-10
 tags: [api, demos]
 categories: ionic2
 repo: "https://github.com/ion-book/demo103"
@@ -30,7 +30,7 @@ versions:
 # Actualización (11/10/2017)
 <hr/>
 
-Hemos actualizado este demo con el último release **Ionic 3.7** integra `HTTPClient`:
+Hemos actualizado este demo con el último release [**Ionic 3.7**](https://www.ion-book.com/blog/news/ionic-3-7/){:target="_blank"} integra `HTTPClient`:
 
 Ionic ahora soporta la más reciente actualización de angular 4.4.2 la cual trae el nuevo `HTTPClient` lo cual dos principales nuevas características las cuales son:
 
