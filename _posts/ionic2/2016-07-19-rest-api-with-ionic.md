@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Conectado una API REST con Ionic"
-date: 2017-11-10
+date: 2017-10-11
 tags: [api, demos]
 categories: ionic2
 repo: "https://github.com/ion-book/demo103"
