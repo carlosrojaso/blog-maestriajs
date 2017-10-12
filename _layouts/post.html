@@ -12,6 +12,9 @@ layout: default
         {% for tag in page.tags %}<span class="tag">{{ tag }}</span>{% endfor %} - 
         {{ page.date | date: '%B %d, %Y' }} por 
         <a href="{{ author.url }}"><strong>{{ author.name }}</strong></a> 
+        {% if page.editname %}
+         | <a href="https://github.com/ion-book/ion-book.github.io/tree/master/_posts/{{ page.editname }}"><strong>Edita este Post.</strong></a>
+        {% endif %}
       </div>
       {% if page.versions %}
       <div class="versions">

@@ -9,6 +9,7 @@ author: Darkensses
 repo: "https://github.com/Darkensses/IonicFolderBrowser"
 launcher: "https://ionic-charts.firebaseapp.com/#/bar-horizontal"
 cover: "https://firebasestorage.googleapis.com/v0/b/articulos-darkensses.appspot.com/o/FolderBrowserAndroid_Cover.png?alt=media&token=5f0e1647-a4fc-4986-9be4-dd8bc49c55d3"
+editname: "ionic2/2017-10-12-folder-browser-para-android.md"
 versions:
   - title: 'ionic'
     number: '3.9.2'
