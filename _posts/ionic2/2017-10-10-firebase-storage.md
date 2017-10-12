@@ -62,6 +62,8 @@ export class AppModule { }
 
 Una vez esta listo, podemos ir a la siguiente parte, donde nosotros empezaremos a tomar las fotos.
 
+{% include blog/subscribe3.html %}
+
 ## Tomando fotos desde Ionic Framework.
 
 Empezaremos la parte de tomar las fotos, para esto debes crear un boton en la pagina HTML que haga un llamado a la función ```takeSelfie()```, entonces, vamos dentro de la clase respectiva y 1) importa todo lo que vas a necesitar, y 2) Crea la función.

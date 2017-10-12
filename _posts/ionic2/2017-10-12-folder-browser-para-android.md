@@ -292,6 +292,8 @@ Muy bien, ¿recuerdan que en el constructor usamos el método **getSD**? Ha lleg
 
 getSD no recibe ningún parámetro y además retorna una promesa *(promise)* lo cual nos da algunas ventajas como por ejemplo el uso de **asincronía** y **espera** (**async** y **await** respectivamente). Esto nos ayuda para asegurarnos de que this.basePath tenga la ruta correcta y no cambie de valor *‘sin que nosotros nos demos cuenta’*.
 
+{% include blog/subscribe2.html %}
+
 Ahora lo que haremos será usar el método **getExternalSdCardDetails** que nos brindará información sobre nuestra tarjeta sd. Aquí trabajaremos con ‘details’ y desde ya, debes de saber que es un arreglo, por lo que hay que validar en caso de que el arreglo este vacío, ya que si es así quiere decir que no se encontró una sd en el teléfono y entonces hay que usar el path del externalStorage, es decir de la memoria interna. 
 
 **NOTA: externalStorage es diferente del path de la sd.**
