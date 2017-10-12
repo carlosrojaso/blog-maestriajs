@@ -198,8 +198,14 @@
   website: "http://darkensses.tk/"
   avatar: "https://avatars2.githubusercontent.com/u/23271049?v=4&s=460"
   country: "Mexico"
-  bio: "Mi nombre es Jasiel Guillén, tengo 19 años y soy estudiante de Ingeniería en Sistemas en el ITL."
+  bio: "Ad Honorem. Soy estudiante del ITL, con mi equipo nos gusta asistir a concursos de ACM y Hackatons, además impartimos talleres para compartir nuestros conocimientos y así lograr una comunidad fuerte. 
+Me encanta combinar la lógica de un código con una gran UI, asi mismo desarrollo aplicaciones para móviles, web y solución de algoritmos .
+Psst... tambien me gusta mucho la música (en especial el Psychedelic Rock) "
   facebook_url: 'https://www.facebook.com/Darkensses'
   social_links:
     - link: "https://www.facebook.com/Darkensses"
       icon: "icon-social-facebook"
+    - link: "https://twitter.com/Darkensses"
+      icon: "icon-social-twitter"
+    - link: " https://github.com/Darkensses"
+      icon: "icon-social-octocat"
