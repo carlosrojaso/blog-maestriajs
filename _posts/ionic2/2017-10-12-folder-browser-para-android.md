@@ -7,7 +7,7 @@ tags: [tutorial, folderbrowser, android, file, ionic]
 categories: ionic2
 author: Darkensses
 repo: "https://github.com/Darkensses/IonicFolderBrowser"
-laucher: "https://ionic-charts.firebaseapp.com/#/bar-horizontal"
+launcher: "https://ionic-charts.firebaseapp.com/#/bar-horizontal"
 cover: "https://firebasestorage.googleapis.com/v0/b/articulos-darkensses.appspot.com/o/FolderBrowserAndroid_Cover.png?alt=media&token=5f0e1647-a4fc-4986-9be4-dd8bc49c55d3"
 versions:
   - title: 'ionic'
@@ -33,6 +33,7 @@ Desde hace un tiempo se me ocurrió la idea de hacer un player de música con Io
 Había estado investigando y buscando un tutorial por todo internet sin embargo, los que encontraba eran para Ionic v1 y prácticamente no había nada para versiones más recientes. 
 
 Mientras hurgaba en diferentes páginas, me topé con el plugin de [OurCodeBlog](https://docs.ourcodeworld.com/projects/cordova-our-code-world-file-browser){:target="_blank"} que esta genial y todo eso, pero realmente quería armar uno *‘a mano’* sin nada de plugins de terceros y así crear este mini-tutorial para que más personas que se les ocurra la misma idea pero que no saben cómo empezar puedan realizarlo.  
+
 Así que tomé la documentación de Ionic y pregunté en grupos hasta dar con el resultado :) pero mejor pasemos al código que de verdad estoy muy emocionado.
 
 
@@ -186,7 +187,7 @@ Pero basta de salirnos de contexto. Abrimos folder-modal.html y modificamos la p
 <ion-header>
   <ion-navbar color="primary">
     <ion-title text-center>
-      {{curFold[0]}}
+   
     </ion-title>
 
     <ion-buttons end>
@@ -198,7 +199,7 @@ Pero basta de salirnos de contexto. Abrimos folder-modal.html y modificamos la p
 
 En nuestro content, mostraremos las carpetas en forma de lista teniendo en cuenta que al principio de esta habrá un botón que nos permitirá regresar a la carpeta padre de donde estemos situados, siempre y cuando no estamos en la raíz (sí lo estamos entonces lo ocultamos).
 
-Esto lo logramos con *ngIf="parent.length > 0". El objeto parent es un arreglo que guarda el path de las carpetas padre y va sacando del arreglo los path según retrocedamos hasta llegar a la raíz, y con esta instrucción nos permite tener control para así mostrar u ocultar el botón.
+Esto lo logramos con ```*ngIf="parent.length > 0"```. El objeto parent es un arreglo que guarda el path de las carpetas padre y va sacando del arreglo los path según retrocedamos hasta llegar a la raíz, y con esta instrucción nos permite tener control para así mostrar u ocultar el botón.
 El botón cuenta con su evento click que llamará al método clickParent.
 
 Luego mostraremos a la carpetas como ‘items slidings’ (ion-item-sliding). Esto lo obtendremos mediante un *ngFor, dependiendo del número de sub-carpetas que existan dentro de una carpeta.
@@ -241,12 +242,17 @@ import { Diagnostic } from '@ionic-native/diagnostic';
 En nuestra clase usaremos 4 objetos:
 
 -folders (arreglo): *almacenaremos las carpetas que estén en un directorio.*
+
 -path (string): *se concatenará con la ruta según naveguemos.*
+
 -basePath (string): *guarda el path de la sd card.*
+
 -baseFileSystem (string): *se encarga de guardar la base del path (se puede tomar de this.file.\*).*
+
 -parent (arreglo string): *almacenaremos el path antes de entrar a otra carpeta para poder regresar un nivel arriba.*
 
 En el constructor vamos a asignarle a baseFileSystem la cadena *‘file:////’* ya que todo el sistema de archivos parte de aquí. 
+
 Luego mostraremos un loader tomado de la [documentación de Ionic](https://ionicframework.com/docs/api/components/loading/LoadingController/) para que se vea más genial nuestra aplicación al momento de mostrar las carpetas. Entonces aquí viene algo muy importante: hay que solicitar **permisos** para acceder a la sd sin ningún problema y, de hecho, esto nos servirá por si en un futuro queremos eliminar archivos o carpetas.  
 Para ello hay que hacer uso del plugin [Diagnostic](https://github.com/dpa99c/cordova-diagnostic-plugin), el cual nos da funcionalidades nativas sobretodo para solicitar **permisos** y obtener algunas **direcciones del sistema de archivos** de Android tales como el extenal storage, cache, entre otras.
 
@@ -255,6 +261,7 @@ Cuando ejecutemos la app y cargue el modal, aparecerá un cartel solicitando los
 <amp-img width="360" height="640" src="https://firebasestorage.googleapis.com/v0/b/articulos-darkensses.appspot.com/o/FolderBrowserAndroid_Screenshot_20171011-232039.png?alt=media&token=77268a2a-a6d8-4fc7-b110-fc54d8a82567" alt="charts"></amp-img>
 
 Dentro de este método vamos a obtener el path de la SD que tenga insertada el dispositivo. Este path varía en cada teléfono, así que lo solucionamos creando el método getSD *(que retorna una promesa y que iremos a más detalles en un poco más)*, el método nos regresa el path que asignaremos a nuestro this.basePath y entonces se lo mandamos como parámetro al método listDir para que nos muestre las carpetas. 
+
 Asignamos this.basePath a this.Path (solo para asegurarnos) y cerramos nuestro loader.
 
 ```ts
@@ -447,7 +454,8 @@ En config xml agregamos los permisos para poder usar el almacenamiento externo:
 ```
 
 Y borramos la siguiente línea:
-```xml
+
+```
 <allow-navigation href="http://ionic.local/*" />
 ```
 

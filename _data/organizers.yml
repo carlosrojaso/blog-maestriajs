@@ -192,14 +192,3 @@
       icon: "icon-social-twitter"
     - link: "https://www.youtube.com/channel/UCCFB7Sz1b2j6V4TbTUFXJUg/feed"
       icon: "icon-social-youtube"
-- id: "Darkensses"
-  name: "Jasiel Guillén"
-  url: "/blog/authors/darkensses"
-  website: "http://darkensses.tk/"
-  avatar: "https://avatars2.githubusercontent.com/u/23271049?v=4&s=460"
-  country: "Mexico"
-  bio: "Mi nombre es Jasiel Guillén, tengo 19 años y soy estudiante de Ingeniería en Sistemas en el ITL."
-  facebook_url: 'https://www.facebook.com/Darkensses'
-  social_links:
-    - link: "https://www.facebook.com/Darkensses"
-      icon: "icon-social-facebook"
