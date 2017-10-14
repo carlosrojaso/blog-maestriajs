@@ -1,9 +1,7 @@
 ---
 layout: post
 title: "Conectado una API REST con Ionic"
-date: 2017-10-11
-tags: [api, demos]
-categories: ionic2
+date: 2017-10-11ºet onic2
 repo: "https://github.com/ion-book/demo103"
 author: nicobytes
 cover: "https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2F2016-07-19-rest-api-with-ionic%2Fcover.jpg?alt=media&token=dc95078c-0c95-494b-9f9b-fd5e42e2b566"
@@ -17,7 +15,7 @@ versions:
     number: '3.0.0'
   - title: 'cordova-cli'
     number: '7.0.1'
-  - title: 'ionic-cli'
+    r- title: 'ionic-cli'
     number: '3.13.0'
 ---
 
@@ -72,7 +70,7 @@ ionic cordova platform add ios
 
 ## Paso 2: Importar **HttpClientModule**
 
-Ahora debemos agregar `HttpClientModule` en nuestro archivo `app.module.ts`, este paso es muy importante si dentro de la aplicación se usa la dependencia `Http`:
+Ahora debemos agregar `HttpClientModule` en nuestro archivo `app.module.ts`, este paso es muy importante si dentro de la aplicación se usa la dependencia `HttpClient`:
 
 ```ts
 ...

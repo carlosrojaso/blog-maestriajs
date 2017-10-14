@@ -209,7 +209,7 @@ Añadimos un botón como ion-item con su evento click que llamará al método cl
 Para terminar nuestro ‘item sliding’ agregamos un ion-item-options y dentro un botón que llamará al método selectFolder. Mostraremos un icono de check y la leyenda ‘Select’ en el botón. Así tendremos que deslizar el elemento de la lista para visualizar la opción lo cual hará que nuestra app tenga un aspecto más elegante.
 
 ```html
-{ %raw% }
+{% raw %}
 <ion-content>
   <ion-list>
     <button ion-item *ngIf="parent.length > 0" (click)="clickParent()">
@@ -229,7 +229,7 @@ Para terminar nuestro ‘item sliding’ agregamos un ion-item-options y dentro 
     </ion-item-sliding>	
   </ion-list>
 </ion-content>
-{ %endraw% }
+{% endraw %}
 ```
 
 Estamos por terminar. Nos pasamos a folder-modal.ts e importamos ViewController, ToastController, File e instalamos el plugin diagnostic *(que más adelante analizaremos)*. Recuerden agregarlos en el constructor. 
