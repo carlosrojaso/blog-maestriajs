@@ -7,6 +7,7 @@ tags: [interview]
 categories: news
 author: carlosrojas
 cover: "https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2F2017-10-16-interview-andresvillanueva%2FAPPLOVER5.png?alt=media&token=e5bf79d4-1dad-4052-bd4c-d2d7c0e8fbad"
+editname: "news/2017-10-16-interview-andresvillanueva.md"
 ---
 > Conozcamos mas a fondo a los AppLovers continuando con nuestro amigo, Andres Villanueva.
 
