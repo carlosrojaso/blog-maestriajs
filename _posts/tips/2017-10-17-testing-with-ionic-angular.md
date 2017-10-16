@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Testing en Angular/Ionic"
-date: 2017-10-17
+date: 2017-10-16
 tags: [testing, ionic2]
 categories: tips
 author: nicobytes
@@ -26,7 +26,7 @@ Y precisamente es lo que queremos a la hora de desarrollar un producto, queremos
 
 
 <div class="row">
-  <div class="col col-100 col-md-50 col-lg-50">
+  <div class="col col-100 col-md-80 col-lg-80">
     <amp-img width="600" height="447" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2Ftdd%2F1-TeKrkWmFnrz84EnYxyD7VA.png?alt=media"></amp-img>
   </div>
 </div>
@@ -51,7 +51,7 @@ TDD se basa en un círculo de iteraciones en el cual primero escribimos las prue
 **Pruebas unitarias** es probar partes aisladas de nuestro código para asegurar que el producto funcione correctamente. Pero hay muchas más pruebas a las que debemos someter el producto.
 
 <div class="row">
-  <div class="col col-100 col-md-50 col-lg-50">
+  <div class="col col-100 col-md-80 col-lg-80">
     <amp-img width="619" height="160" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2Ftdd%2F1-tresTrQ81DKVI7bZL2pugw.png?alt=media"></amp-img>
   </div>
 </div>
