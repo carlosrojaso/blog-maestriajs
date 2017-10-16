@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "Pruebas unitarias: Providers"
+title: "Pruebas unitarias: HttpClient"
 keywords: "unit test, pruebas unitartias, ionic, pruebas unitarias ionic, webpack, jasmine, karma"
-date: 2017-10-14
+date: 2017-10-17
 tags: [testing, demos]
 categories: ionic2
 repo: "https://github.com/ion-book/demo117"
@@ -11,15 +11,15 @@ cover: "https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts
 remember: true
 versions:
   - title: 'ionic'
-    number: '3.6.1'
+    number: '3.7.1'
   - title: 'ionic-native'
-    number: '3.12.1'
+    number: '4.3.1'
   - title: 'ionic-app-scripts'
-    number: '2.1.4'
+    number: '3.0.0'
   - title: 'cordova-cli'
     number: '7.0.1'
   - title: 'ionic-cli'
-    number: '3.9.2'
+    number: '3.13.0'
 ---
 
 > En el último post sobre testing hablamos sobre pruebas a providers en ese artículo para escribir pruebas a providers que usan la dependencia `HttpClient`.
@@ -177,6 +177,8 @@ describe('Service: UserProvider', () => {
 ```
 
 Como podemos ver debemos dar el contexto necesario para que poder probar a `UserProvider` y como este tiene la dependencia `HttpClient` debemos importar el módulo que provee esta dependencia, pero en esta ocasión no importamos el módulo `HttpClientModule` que normalmente usamos para desarrollar, esta vez vamos a usar un mock que nos provee Angular para `HttpClient` llamado `HttpClientTestingModule`.
+
+{% include blog/subscribe.html %}
 
 ## Paso 3: Obtener dependencias
 
