@@ -214,12 +214,6 @@ describe('Service: UserProvider', () => {
 
 Notamos con `TestBed`obtenemos la dependencia del servicio que está probar probar  con`TestBed.get(UserProvider)` y un mock de httpClient con `TestBed.get(HttpTestingController)`.
 
-Ahora vamos a planear las funcionalidades de `UserProvider`
-
-1. `getAllUsers`: será un método que permita obtener toda una lista de usuarios.
-1. `updateUser`: será un método que permita actualizar la información de un usuario.
-1. `createUser`: será un método que permita crear un usuario.
-
 ## Paso 4: Escribiendo pruebas para getAllUsers
 
 Debemos planear qué tareas esperamos que cumpla ese método, lo resumimos así:
@@ -232,38 +226,36 @@ Debemos planear qué tareas esperamos que cumpla ese método, lo resumimos así:
 Teniendo en cuenta las funcionalidad que debe cumplir este método escribiremos el caso de prueba, así:
 
 ```ts
-describe('Test for getAllUsers', () => {
-  it('should return users', () => {
-    // Arrange
-    const mockResponse = [{
-      results: [
-        {
-          "gender": "male",
-          "name": {
-            "title": "mr",
-            "first": "samuel",
-            "last": "ross"
-          },
-          "email": "samuel.ross@example.com",
-        }
-      ]
-    }];
-    let dataError, dataResponse: any[];
-    // Act
-    service.getAllUsers()
-    .subscribe((response) => {
-      dataResponse = response;
-    }, (error) => {
-      dataError = error;
-    });
-    const req = httpMock.expectOne('https://randomuser.me/api/?results=25');
-    req.flush(mockResponse);
-    // Assert
-    expect(dataResponse.length).toEqual(1);
-    expect(req.request.url).toEqual('https://randomuser.me/api/?results=25');
-    expect(req.request.method).toEqual('GET');
-    expect(dataError).toBeUndefined();
+it('should return users', () => {
+  // Arrange
+  const mockResponse = {
+    results: [
+      {
+        "gender": "male",
+        "name": {
+          "title": "mr",
+          "first": "samuel",
+          "last": "ross"
+        },
+        "email": "samuel.ross@example.com",
+      }
+    ]
+  };
+  let dataError, dataResponse;
+  // Act
+  service.getAllUsers()
+  .subscribe((response) => {
+    dataResponse = response['results'];
+  }, (error) => {
+    dataError = error;
   });
+  const req = httpMock.expectOne(`https://randomuser.me/api/?results=25`);
+  req.flush(mockResponse);
+  // Assert
+  expect(dataResponse.length).toEqual(1);
+  expect(req.request.url).toEqual(`https://randomuser.me/api/?results=25`);
+  expect(req.request.method).toEqual('GET');
+  expect(dataError).toBeUndefined();
 });
 ```
 
@@ -297,7 +289,7 @@ La parte  importe que le dice al mock de `httpMock` que cuando ejecute un endpoi
 // Act
 service.getAllUsers()
 .subscribe((response) => {
-  dataResponse = response;
+  dataResponse = response['results'];
 }, (error) => {
   dataError = error;
 });
@@ -342,3 +334,26 @@ export class UserProvider {
     <amp-img width="502" height="106" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2F2017-10-14-uni-test-http-client%2Fscreen2.png?alt=media&token=eb7d7423-7df0-4db5-985f-5f7b505d74a4"></amp-img>
   </div>
 </div>
+
+Así como probamos el caso donde tenemos un respuesta satisfactoria debemos probar que pasa cuando ocurre un error. Ahora haremos el caso de prueba donde probaremos cómo deberíamos reaccionar frente a un error del método `getAllUsers`, así sería vería el caso de prueba:
+
+```ts
+it('should return an error', () => {
+  // Arrange
+  let dataError, dataResponse: any[];
+  // Act
+  service.getAllUsers()
+  .subscribe((response) => {
+    dataResponse = response['results'];
+  }, (error) => {
+    dataError = error;
+  });
+  httpMock.expectOne('https://randomuser.me/api/?results=25')
+  .error(new ErrorEvent('error'));
+  // Assert
+  expect(dataResponse).toBeUndefined();
+  expect(dataError).toBeDefined();
+});
+```
+
+Ahora si corremos de nuevo las pruebas con `npm run test` nos muestra que todas las pruebas de cumplieron como lo esperábamos. 
