@@ -31,6 +31,7 @@ versions:
 
 Recuerda ver nuestros artículos anteriores sobre testing ya que están enlazados uno con otro:
 
+- [Testing en Angular/Ionic](https://www.ion-book.com/blog/tips/testing-with-ionic/){:target="_blank"}
 - [Configuración de entorno](https://www.ion-book.com/blog/ionic2/unit-test-config-ionic/){:target="_blank"}
 - [Introducción a Jasmine](https://www.ion-book.com/blog/ionic2/intro-jasmine/){:target="_blank"}
 - [Providers](https://www.ion-book.com/blog/ionic2/uni-test-provider/){:target="_blank"}
@@ -357,3 +358,11 @@ it('should return an error', () => {
 ```
 
 Ahora si corremos de nuevo las pruebas con `npm run test` nos muestra que todas las pruebas de cumplieron como lo esperábamos. 
+
+<div class="row">
+  <div class="col col-100 col-md-50 col-lg-50">
+    <amp-img width="549" height="179" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2F2017-10-14-uni-test-http-client%2Fscreen3.png?alt=media&token=fdcd8b0b-e4df-4a02-939f-fd6c91cfbad1"></amp-img>
+  </div>
+</div>
+
+Ya con esto sabemos correr pruebas unitarias servicios que usen `HttpClient`.
