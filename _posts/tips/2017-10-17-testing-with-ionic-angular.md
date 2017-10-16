@@ -1,17 +1,18 @@
 ---
 layout: post
 title: "Testing en Angular/Ionic"
-date: 2016-10-30
+date: 2017-10-17
 tags: [testing, ionic2]
 categories: tips
 author: nicobytes
 video: true
-cover: "https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2Ftdd%2Ftdd.jpg?alt=media"
+cover: "https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2F2017-10-17-testing-with-ionic-angular%2Fcover.jpg?alt=media&token=13d19c79-7044-48c9-b94a-d7422d8dd4a6"
 ---
 
 > Crear grandes productos que agreguen valor y mantener un producto de calidad para los clientes es un gran reto, las **pruebas unitarias** aseguran que esto sea más fácil y una de las mejores estrategias es aplicando Desarrollo guiado por pruebas, más conocido por sus siglas en inglés **TDD (Test Driven Development)**
+<!--summary-->
 
-<amp-img width="1200" height="630" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2Ftdd%2Ftdd.jpg?alt=media"></amp-img>
+<amp-img width="1024" height="512" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2F2017-10-17-testing-with-ionic-angular%2Fcover.jpg?alt=media&token=13d19c79-7044-48c9-b94a-d7422d8dd4a6"></amp-img>
 
 {% include general/net-promoter-score.html %} 
 
@@ -23,7 +24,13 @@ Todos queremos evitar que los problemas y bugs aparezcan, lo cual es **IMPOSIBLE
 
 Y precisamente es lo que queremos a la hora de desarrollar un producto, queremos evitar que los usuarios experimenten errores en nuestro producto o que al menos tengamos las herramientas necesarias para detectar a tiempo un posible problema, por eso existen varios ambientes de desarrollo como por ejemplo: *production*, *staging*, *tests* y *develop*.
 
-<amp-img width="600" height="447" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2Ftdd%2F1-TeKrkWmFnrz84EnYxyD7VA.png?alt=media"></amp-img>
+
+<div class="row">
+  <div class="col col-100 col-md-50 col-lg-50">
+    <amp-img width="600" height="447" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2Ftdd%2F1-TeKrkWmFnrz84EnYxyD7VA.png?alt=media"></amp-img>
+  </div>
+</div>
+
 
 Aquí es donde viene la puesta en marcha de TDD (Desarrollo guiado por pruebas) lo que va permitir mejorar la calidad de nuestro producto y nuestro código (y por consecuencia ser mejores profesionales).
 
@@ -33,19 +40,31 @@ Aplicando TDD vas a obtener beneficios para ti (*podrás irte un fin de semana t
 - Refactorización
 - Un gran producto ❤
 
-<amp-img width="371" height="343" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2Ftdd%2F1-SY2qSO11sdH11x9d5dweug.gif?alt=media"></amp-img>
+<div class="row">
+  <div class="col col-100 col-md-50 col-lg-50">
+    <amp-img width="371" height="343" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2Ftdd%2F1-SY2qSO11sdH11x9d5dweug.gif?alt=media"></amp-img>
+  </div>
+</div>
 
 TDD se basa en un círculo de iteraciones en el cual primero escribimos las pruebas, luego construimos el código que cumpla con todas las pruebas escritas, por último refactorizamos (eliminando la redundancia).
 
 **Pruebas unitarias** es probar partes aisladas de nuestro código para asegurar que el producto funcione correctamente. Pero hay muchas más pruebas a las que debemos someter el producto.
 
-<amp-img width="619" height="160" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2Ftdd%2F1-tresTrQ81DKVI7bZL2pugw.png?alt=media"></amp-img>
+<div class="row">
+  <div class="col col-100 col-md-50 col-lg-50">
+    <amp-img width="619" height="160" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2Ftdd%2F1-tresTrQ81DKVI7bZL2pugw.png?alt=media"></amp-img>
+  </div>
+</div>
 
 Pero algo aún más importante, todo este trabajo es tiempo y esfuerzo por lo cual se debe manejar en paralelo al desarrollo del producto y por ende a la construcción de la propuesta de valor hacia los clientes. No se puede dejar la parte de testing para lo último, tiene que ser parte del desarrollo.
 
 Para lograr gestionar todo este esfuerzo y tener un gran producto que los clientes amen, existe el método de Agile Testing que se basa en cuatro cuadrantes:
 
-<amp-img width="722" height="543" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2Ftdd%2F1-QFNCtd8fmnm2BFKs9s7o7A.png?alt=media"></amp-img>
+<div class="row">
+  <div class="col col-100 col-md-50 col-lg-50">
+    <amp-img width="722" height="543" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2Ftdd%2F1-QFNCtd8fmnm2BFKs9s7o7A.png?alt=media"></amp-img>
+  </div>
+</div>
 
 
 1. **Acceptance Testing** ¿Estamos construyendo el producto correcto?
@@ -122,4 +141,8 @@ Por último, algo que me ha sido de gran ayuda como mantra personal es lo siguie
 
 > Siempre deja el código mejor de lo que lo encontraste
 
-En la parte 2 vamos a entrar en materia y vamos a mirar frameworks como **Jasmine** o **Mocha** y la preparación del entorno con **Karma** para hacer testing con Angular2 / Ionic 2.
+Recuerda ver nuestros artículos sobre testing:
+
+- [Configuración de entorno](https://www.ion-book.com/blog/ionic2/unit-test-config-ionic/){:target="_blank"}
+- [Introducción a Jasmine](https://www.ion-book.com/blog/ionic2/intro-jasmine/){:target="_blank"}
+- [Providers](https://www.ion-book.com/blog/ionic2/uni-test-provider/){:target="_blank"}
