@@ -334,7 +334,7 @@ export class UserProvider {
 
 <div class="row">
   <div class="col col-100 col-md-50 col-lg-50">
-    <amp-img width="502" height="106" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2F2017-10-14-uni-test-http-client%2Fscreen2.png?alt=media&token=eb7d7423-7df0-4db5-985f-5f7b505d74a4"></amp-img>
+    <amp-img width="502" height="160" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2F2017-10-14-uni-test-http-client%2Fscreen2.png?alt=media&token=eb7d7423-7df0-4db5-985f-5f7b505d74a4"></amp-img>
   </div>
 </div>
 

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Testing en Angular/Ionic"
-date: 2017-10-16
+date: 2017-10-17
 tags: [testing, ionic2]
 categories: tips
 author: nicobytes
