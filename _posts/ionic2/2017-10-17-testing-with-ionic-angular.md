@@ -7,6 +7,7 @@ categories: tips
 author: nicobytes
 video: true
 cover: "https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2F2017-10-17-testing-with-ionic-angular%2Fcover.jpg?alt=media&token=13d19c79-7044-48c9-b94a-d7422d8dd4a6"
+editname: "ionic2/2017-10-17-testing-with-ionic-angular.md"
 ---
 
 > Crear grandes productos que agreguen valor y mantener un producto de calidad para los clientes es un gran reto, las **pruebas unitarias** aseguran que esto sea más fácil y una de las mejores estrategias es aplicando Desarrollo guiado por pruebas, más conocido por sus siglas en inglés **TDD (Test Driven Development)**
