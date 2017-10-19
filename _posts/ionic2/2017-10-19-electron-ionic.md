@@ -20,6 +20,8 @@ versions:
     number: '7.0.1'
   - title: 'ionic-cli'
     number: '3.9.2'
+  - title: 'electron'
+    number: '1.7.9'
 ---
 > Una de las principales de utilizar componentes como los que trae Ionic y ademas utilizar tecnologias estandar como HTML/CSS/JS es que puedes utilizar el mismo proyecto para distribuir de diferentes maneras como en este caso App de escritorio.
 
@@ -203,6 +205,8 @@ app.on('activate', () => {
 "electron dist": "electron .",
 "ebuild":"npm run build && node_modules/.bin/build",
 ````
+
+{% include blog/subscribe.html %}
 
 9) Debido a que si miras las dependencias hemos agregado ```foreman``` debemos crear su archivo de configuración. Nos ubicamos en la raiz de nuestro proyecto y creamos un nuevo archivo llamado ```Procfile``` con lo siguiente:
 
