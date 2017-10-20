@@ -7,7 +7,7 @@ tags: [electron,ionic]
 categories: ionic2
 author: carlosrojas
 cover: "https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2F2017-10-16-electron-ionic%2FCreando%20Apps%20de%20Escritorio%20con%20Ionic.png?alt=media&token=1bc1512f-dc7a-4fd2-9eea-0780250b8ea0"
-editname: "ionic2/2017-10-16-electron-ionic.md"
+editname: "ionic2/2017-10-19-electron-ionic.md"
 repo: https://github.com/ion-book/electron-ionic
 versions:
   - title: 'ionic'
