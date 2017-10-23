@@ -8,6 +8,7 @@ categories: news
 author: nicobytes
 cover: "https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2F2017-10-22-interview-carlosrojas%2FDear%20Papa%2C.png?alt=media&token=817774c3-bd57-43cf-956b-f2f8e682d78e"
 editname: "news/2017-10-22-interview-carlosrojas.md"
+
 ---
 > Conozcamos mas a fondo a los AppLovers continuando con nuestro amigo, Carlos Rojas.
 
