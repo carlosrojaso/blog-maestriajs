@@ -36,6 +36,8 @@ Por eso es de vital importancia hacer un buen manejo de ellos, tener las validac
 Hemos actualizado este demo con el último release [**Ionic 3.7**](https://www.ion-book.com/blog/news/ionic-3-7/){:target="_blank"}
 <hr/>
 
+<a href="https://ion-book.github.io/demo101/" target="_blank" class="btn btn-round btn-success">Ver demo</a>
+
 Cómo ionic usa Angular, podremos usar la clase FormBuilder en los componentes del SDK de ionic. Para lograr esto debemos inyectar a FormBuilder como dependencia a nuestro `constructor`, así:
 
 ```ts
@@ -215,7 +217,3 @@ Todo el template como resultado quedará así:
 ## Resultado: 
 
 <amp-img width="791" height="639" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2F2016-06-09-form-with-ionic%2Fscreen.png?alt=media&token=bf6ef3e2-1b05-4ac2-a365-77a0eede3e3a" alt="Ionic Form Builder"></amp-img>
-
-<a href="https://ion-book.github.io/demo101/" target="_blank" class="btn btn-round btn-success">Ver demo</a>
-
-Y el código en: [https://github.com/ion-book/demo101](https://github.com/ion-book/demo101){:target="_blank"}.
