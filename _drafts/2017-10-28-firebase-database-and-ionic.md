@@ -20,6 +20,8 @@ versions:
     number: '7.1.0'
   - title: 'ionic-cli'
     number: '3.15.1'
+  - title: 'angularfire2'
+    number: '5.0.0-rc.3'
 ---
 
 > Hemos actualizado este artículo al última versión que maneja angularfire2 con Firebase Database, sin embargo recomendamos migrar a la nueva y mejorada version de base de datos de Firebase llamada [**FireStore**](https://www.ion-book.com/blog/news/firestore/){:target="_blank"}, más adelante haremos un ejemplo usando esta nueva y optimizada base de datos.
@@ -36,6 +38,10 @@ Hemos actualizado este demo con el último release [**Ionic 3.7**](https://www.i
 Hemos actualizado este artículo al última versión que maneja angularfire2 con Firebase Database, sin embargo recomendamos migrar a la nueva y mejorada version de base de datos de Firebase llamada [**FireStore**](https://www.ion-book.com/blog/news/firestore/){:target="_blank"}, más adelante haremos un ejemplo usando esta nueva y optimizada base de datos.
 
 <hr/>
+
+<a href="https://demo104-60efc.firebaseapp.com/" target="_blank" class="btn btn-round btn-success">Ver demo</a>
+
+Y el código en: [https://github.com/ion-book/demo104](https://github.com/ion-book/demo104){:target="_blank"}.
 
 # Paso 1: Creación del proyecto en Firebase.
 
@@ -82,7 +88,7 @@ El proyecto inicia con el template **blank** y por esto tendremos una estructura
 Ahora para integrar Firebase y AngularFire debemos instalar dos dependencias en el proyecto, así:
 
 ```
-npm install angularfire2 firebase promise-polyfill --save
+npm install angularfire2 firebase --save
 ```
 
 # Paso 6: Creando variable de configuración
