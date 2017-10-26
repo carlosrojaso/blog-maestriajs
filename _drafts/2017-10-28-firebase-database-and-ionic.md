@@ -1,38 +1,39 @@
 ---
 layout: post
 title: "Firebase Database + Ionic"
-date: 2017-05-13
+date: 2017-10-28
 tags: [firebase, demos]
 categories: ionic2
 repo: "https://github.com/ion-book/demo104"
+laucher: "https://demo104-60efc.firebaseapp.com/"
 author: nicobytes
-cover: "/images/posts/ionic2/2016-08-02-firebase-database-and-ionic/cover.jpg"
+cover: "https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2F2017-10-28-firebase-database-and-ionic%2Fcover.jpg?alt=media&token=089d8b1e-202c-47c5-b784-5661420a0bb5"
 remember: true
 versions:
   - title: 'ionic'
-    number: '3.3.0'
+    number: '3.7.1'
   - title: 'ionic-native'
-    number: '3.10.3'
+    number: '4.3.2'
   - title: 'ionic-app-scripts'
-    number: '1.3.7'
+    number: '3.0.1'
   - title: 'cordova-cli'
-    number: '7.0.1'
+    number: '7.1.0'
   - title: 'ionic-cli'
-    number: '3.3.0'
+    number: '3.15.1'
 ---
 
-> En artículos pasados ya hemos hablado de firebase y sus [**servicios**]({{site.urlblog}}/ionic2/firebase-3){:target="_blank"} y una breve implementación con [**Ionic**]({{site.urlblog}}/ionic2/ionic-2-firebase-3){:target="_blank"}, ahora vamos a hacer una integración con su servicio de base de datos en tiempo real, usando la libreria de [**AngularFire**](https://angularfire2.com/api/){:target="_blank"} creamos una simple aplicación de tareas.
+> Hemos actualizado este artículo al última versión que maneja angularfire2 con Firebase Database, sin embargo recomendamos migrar a la nueva y mejorada version de base de datos de Firebase llamada [**FireStore**](https://www.ion-book.com/blog/news/firestore/){:target="_blank"}, más adelante haremos un ejemplo usando esta nueva y optimizada base de datos.
 
-<amp-img width="1920" height="1080" layout="responsive" src="/images/posts/ionic2/2016-08-02-firebase-database-and-ionic/cover.jpg" alt="firebase-database-and-ionic-2"></amp-img>
+<amp-img width="1920" height="1080" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2F2017-10-28-firebase-database-and-ionic%2Fcover.jpg?alt=media&token=089d8b1e-202c-47c5-b784-5661420a0bb5"></amp-img>
 
 {% include general/net-promoter-score.html %} 
 
-# Actualización (14/05/2017)
+# Actualización (25/10/2017)
 <hr/>
 
-Hemos actualizado este demo con el último release de **Ionic 3**, si aún estas en alguna de las versiones anteriores puedes seguir estos pasos [de Ionic 2 a Ionic 3](https://www.ion-book.com/blog/tips/ionic-2-to-ionic3/){:target="_blank"}.
+Hemos actualizado este demo con el último release [**Ionic 3.7**](https://www.ion-book.com/blog/news/ionic-3-7/){:target="_blank"}
 
-Ademas en este demo usamos la función de [**lazy loading** y **@IonicPage**](https://www.ion-book.com/blog/tips/ionic-page-and-lazy-loading/){:target="_blank"}. Puedes ver el repositorio [**Demo104**](https://github.com/ion-book/demo104){:target="_blank"}
+Hemos actualizado este artículo al última versión que maneja angularfire2 con Firebase Database, sin embargo recomendamos migrar a la nueva y mejorada version de base de datos de Firebase llamada [**FireStore**](https://www.ion-book.com/blog/news/firestore/){:target="_blank"}, más adelante haremos un ejemplo usando esta nueva y optimizada base de datos.
 
 <hr/>
 
@@ -40,19 +41,19 @@ Ademas en este demo usamos la función de [**lazy loading** y **@IonicPage**](ht
 
 Debes ir a la nueva consola de firebase [aquí](https://console.firebase.google.com){:target="_blank"} y crear un proyecto nuevo:
 
-<amp-img width="999" height="572" layout="responsive" src="/images/posts/ionic2/2016-08-02-firebase-database-and-ionic/screen.png" alt="firebase-database-and-ionic-2"></amp-img>
+<amp-img width="999" height="572" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2F2017-10-28-firebase-database-and-ionic%2Fscreen.png?alt=media&token=fee12b41-de98-448f-8100-1fa120d9d72d"></amp-img>
 
 # Paso 2: Copiar las variables de configuración.
 
 Ahora debemos ir a la sección de **Auth** y copiar las variables de configuración que nos provee firebase, oprime el botón **WEB SETUP**:
 
-<amp-img width="1015" height="573" layout="responsive" src="/images/posts/ionic2/2016-08-02-firebase-database-and-ionic/screen1.png" alt="firebase-database-and-ionic-2"></amp-img>
+<amp-img width="1015" height="573" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2F2017-10-28-firebase-database-and-ionic%2Fscreen1.png?alt=media&token=8e7cf2c1-9320-4fcd-93ac-b5b22bd3e12b"></amp-img>
 
 # Paso 3: Reglas de seguridad
 
 Por último vamos a la sección de Database y configuraremos las reglas de seguridad para que nos permita conectarnos a la base de datos sin ninguna autentificación:
 
-<amp-img width="1015" height="575" layout="responsive" src="/images/posts/ionic2/2016-08-02-firebase-database-and-ionic/screen2.png" alt="firebase-database-and-ionic-2"></amp-img>
+<amp-img width="1015" height="575" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2F2017-10-28-firebase-database-and-ionic%2Fscreen2.png?alt=media&token=6e9ed0f1-97c1-4b2c-ac68-68bc03267b4d"></amp-img>
 
 # Paso 4: Iniciando el proyecto
 
@@ -72,7 +73,7 @@ El proyecto inicia con el template **blank** y por esto tendremos una estructura
 
 <div class="row">
   <div class="col col-100 col-md-50 col-lg-50">
-    <amp-img width="376" height="183" layout="responsive" src="/images/posts/ionic2/2016-07-11-camera-and-ionic/tree1.png"></amp-img>
+    <amp-img width="376" height="183" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2F2017-10-27-camera-and-ionic%2Ftree1.png?alt=media&token=aba780c6-5554-4ee9-b912-511564e883e3"></amp-img>
   </div>
 </div>
 
@@ -81,7 +82,7 @@ El proyecto inicia con el template **blank** y por esto tendremos una estructura
 Ahora para integrar Firebase y AngularFire debemos instalar dos dependencias en el proyecto, así:
 
 ```
-npm install firebase angularfire2 --save
+npm install angularfire2 firebase promise-polyfill --save
 ```
 
 # Paso 6: Creando variable de configuración
@@ -124,7 +125,6 @@ export const firebaseConfig = {
   ],
   imports: [
     BrowserModule,
-    HttpModule,
     IonicModule.forRoot(MyApp),
     AngularFireModule.initializeApp(firebaseConfig,'demo104'),
     AngularFireDatabaseModule
@@ -142,12 +142,13 @@ export class AppModule {}
 
 Ahora haremos uso del archivo `pages/home/home.ts` para mostrar las tareas, modificándolo de esta manera:
 
-Primero debemos importar `FirebaseListObservable` y `AngularFireDatabase` y declarar la variable `tasks` que será de tipo FirebaseListObservable, la cual va a tener el control de la lista, luego inyectamos a AngularFireDatabase como dependencia y por último vamos a definir `tasks` como una colección de datos hacia `/tasks`.
+Primero debemos importar `AngularFireList` y `AngularFireDatabase` y declarar la variable `tasks` que será de tipo `Observable` y la variable `tasksRef` la cual va a tener el control de la lista, luego inyectamos a AngularFireDatabase como dependencia y por último vamos a definir `tasks` y `tasksRef` como una colección de datos hacia `/tasks`.
 
 ```ts
 import { Component } from '@angular/core';
 import { IonicPage, NavController, AlertController } from 'ionic-angular';
-import { FirebaseListObservable, AngularFireDatabase  } from 'angularfire2/database';
+import { AngularFireList, AngularFireDatabase } from 'angularfire2/database';
+import { Observable } from 'rxjs/Observable';
 
 @IonicPage()
 @Component({
@@ -156,22 +157,24 @@ import { FirebaseListObservable, AngularFireDatabase  } from 'angularfire2/datab
 })
 export class HomePage {
 
-  tasks: FirebaseListObservable<any>;
+  tasksRef: AngularFireList<any>;
+  tasks: Observable<any[]>;
 
   constructor(
     public navCtrl: NavController,
     public alertCtrl: AlertController,
-    public fireDatabase: AngularFireDatabase
+    public database: AngularFireDatabase
   ) {
-    this.tasks = this.fireDatabase.list('/tasks');
+    this.tasksRef = this.database.list('tasks');
+    this.tasks = this.tasksRef.valueChanges();
   }
 }
 ```
 
-Teniendo la lista de tareas con referencia a Firebase Database podemos crear una tarea en la base de datos, solo es necesario hacer uso del método `push` a la lista, así:
+Teniendo la referencia a la lista de tareas con referencia podemos crear una tarea en la base de datos, solo es necesario hacer uso del método `push` a la lista, así:
 
 ```ts
-this.tasks.push({
+this.tasksRef.push({
   title: "Nueva tarea",
   done: false
 });
@@ -180,7 +183,7 @@ this.tasks.push({
 Para actualizar una tarea necesitamos la llave de la tarea que crea Firebase y luego enviamos los datos que vamos a modificar al método `update`, así:
 
 ```ts
-this.tasks.update(key,{
+this.tasksRef.update(key,{
   title: 'Nuevo titulo',
   done: true
 });
@@ -189,7 +192,7 @@ this.tasks.update(key,{
 Y para eliminar una tarea tambien necesitamos la llave de la tarea y la enviamos como parametro a `remove`, así:
 
 ```ts
-this.tasks.remove( key );
+this.tasksRef.remove( key );
 ```
 
 Vamos a hacer uso de [AlertController](https://ionicframework.com/docs/api/components/alert/AlertController/){:target="_blank"} para crear una interfaz para crear tareas.
@@ -217,7 +220,7 @@ createTask(){
       {
         text: 'Save',
         handler: data => {
-          this.tasks.push({
+          this.tasksRef.push({
             title: data.title,
             done: false
           });
@@ -233,7 +236,7 @@ Con declaramos el método `updateTask` el cual actualiza una tarea con el métod
 
 ```ts
 updateTask( task ){
-  this.tasks.update( task.$key,{
+  this.tasksRef.update( task.$key,{
     title: task.title,
     done: !task.done
   });
@@ -244,16 +247,19 @@ Finalmente declaramos el método `removeTask` que elimina una tarea con el méto
 
 ```ts
 removeTask( task ){
-  this.tasks.remove( task.$key );
+  this.tasksRef.remove( task.$key );
 }
 ```
 
 La clase completa quedará así:
 
+`src/pages/home/home.ts`:
+
 ```ts
 import { Component } from '@angular/core';
 import { IonicPage, NavController, AlertController } from 'ionic-angular';
-import { FirebaseListObservable, AngularFireDatabase  } from 'angularfire2/database';
+import { AngularFireList, AngularFireDatabase } from 'angularfire2/database';
+import { Observable } from 'rxjs/Observable';
 
 @IonicPage()
 @Component({
@@ -262,14 +268,16 @@ import { FirebaseListObservable, AngularFireDatabase  } from 'angularfire2/datab
 })
 export class HomePage {
 
-  tasks: FirebaseListObservable<any>;
+  tasksRef: AngularFireList<any>;
+  tasks: Observable<any[]>;
 
   constructor(
     public navCtrl: NavController,
     public alertCtrl: AlertController,
     public database: AngularFireDatabase
   ) {
-    this.tasks = this.database.list('/tasks');
+    this.tasksRef = this.database.list('tasks');
+    this.tasks = this.tasksRef.valueChanges();
   }
 
   createTask(){
@@ -292,7 +300,7 @@ export class HomePage {
         {
           text: 'Save',
           handler: data => {
-            this.tasks.push({
+            this.tasksRef.push({
               title: data.title,
               done: false
             });
@@ -304,16 +312,17 @@ export class HomePage {
   }
 
   updateTask( task ){
-    this.tasks.update( task.$key,{
+    this.tasksRef.update( task.$key,{
       title: task.title,
       done: !task.done
     });
   }
 
   removeTask( task ){
-    this.tasks.remove( task.$key );
+    this.tasksRef.remove( task.$key );
   }
 }
+
 ```
 
 # Paso 9: El template.
@@ -396,13 +405,13 @@ El template completo es así:
 
 <div class="row wrap">
   <div class="col col-100 col-md-33 col-lg-33">
-    <amp-img width="720" height="1280" layout="responsive" src="/images/posts/ionic2/2016-08-02-firebase-database-and-ionic/result1.jpg"></amp-img>
+    <amp-img width="720" height="1280" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2F2017-10-28-firebase-database-and-ionic%2Fresult1.jpg?alt=media&token=8bd1ec07-cba7-41a0-8046-69da09352517"></amp-img>
   </div>
   <div class="col col-100 col-md-33 col-lg-33">
-    <amp-img width="720" height="1280" layout="responsive" src="/images/posts/ionic2/2016-08-02-firebase-database-and-ionic/result3.jpg"></amp-img>
+    <amp-img width="720" height="1280" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2F2017-10-28-firebase-database-and-ionic%2Fresult3.jpg?alt=media&token=b169f3fe-8919-4589-a198-a84f890685df"></amp-img>
   </div>
   <div class="col col-100 col-md-33 col-lg-33">
-    <amp-img width="720" height="1280" layout="responsive" src="/images/posts/ionic2/2016-08-02-firebase-database-and-ionic/result2.jpg"></amp-img>
+    <amp-img width="720" height="1280" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2F2017-10-28-firebase-database-and-ionic%2Fresult2.jpg?alt=media&token=c42cce13-6d9f-483e-882b-124ef49c01bb"></amp-img>
   </div>
 </div>
 <br>
