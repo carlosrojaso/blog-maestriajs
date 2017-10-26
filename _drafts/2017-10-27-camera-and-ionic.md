@@ -6,6 +6,7 @@ tags: [native, demos]
 categories: ionic2
 repo: "https://github.com/ion-book/demo102"
 author: nicobytes
+editname: "ionic2/2017-10-27-camera-and-ionic.md"
 cover: "https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2F2017-10-27-camera-and-ionic%2Fcover.jpg?alt=media&token=ced4b24b-3a0e-437f-8163-ffe9e25078b0"
 remember: true
 versions:

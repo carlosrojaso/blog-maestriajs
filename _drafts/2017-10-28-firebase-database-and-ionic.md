@@ -9,6 +9,7 @@ laucher: "https://demo104-60efc.firebaseapp.com/"
 author: nicobytes
 cover: "https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2F2017-10-28-firebase-database-and-ionic%2Fcover.jpg?alt=media&token=089d8b1e-202c-47c5-b784-5661420a0bb5"
 remember: true
+editname: "ionic2/2017-10-28-firebase-database-and-ionic.md"
 versions:
   - title: 'ionic'
     number: '3.7.1'
