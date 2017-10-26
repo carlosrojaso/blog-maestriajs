@@ -5,7 +5,7 @@ date: 2017-10-26
 tags: [forms, demos]
 categories: ionic2
 repo: "https://github.com/ion-book/demo101"
-laucher: "https://ionic-charts.firebaseapp.com/#/bar-horizontal"
+laucher: "https://ion-book.github.io/demo101/"
 author: nicobytes
 cover: "https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2F2016-06-09-form-with-ionic%2Fcover.jpg?alt=media&token=fc7a53d1-f38b-4a36-9910-b48566220694"
 remember: true
@@ -216,6 +216,6 @@ Todo el template como resultado quedará así:
 
 <amp-img width="791" height="639" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2F2016-06-09-form-with-ionic%2Fscreen.png?alt=media&token=bf6ef3e2-1b05-4ac2-a365-77a0eede3e3a" alt="Ionic Form Builder"></amp-img>
 
-<a href="https://ionic-charts.firebaseapp.com/#/bar-horizontal" target="_blank" class="btn btn-round btn-success">Ver demo</a>
+<a href="https://ion-book.github.io/demo101/" target="_blank" class="btn btn-round btn-success">Ver demo</a>
 
 Y el código en: [https://github.com/ion-book/demo101](https://github.com/ion-book/demo101){:target="_blank"}.
