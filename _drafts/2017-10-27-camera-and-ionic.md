@@ -10,15 +10,15 @@ cover: "/images/posts/ionic2/2016-07-11-camera-and-ionic/cover.jpg"
 remember: true
 versions:
   - title: 'ionic'
-    number: '3.3.0'
+    number: '3.7.1'
   - title: 'ionic-native'
-    number: '3.10.3'
+    number: '4.3.2'
   - title: 'ionic-app-scripts'
-    number: '1.3.7'
+    number: '3.0.1'
   - title: 'cordova-cli'
-    number: '7.0.1'
+    number: '7.1.0'
   - title: 'ionic-cli'
-    number: '3.3.0'
+    number: '3.15.1'
 ---
 
 > En este artículo conectar una aplicación de ionic con el recurso nativo de la cámara con ionic native y ver varias de las opciones que nos ofrece ionic para manipular la cámara.
@@ -27,14 +27,12 @@ versions:
 
 {% include general/net-promoter-score.html %} 
 
-# Actualización (01/05/2017)
+# Actualización (25/10/2017)
 <hr/>
 
-Hemos actualizado este demo con el último release de **Ionic 3**, si aún estas en alguna de las versiones anteriores puedes seguir estos pasos [de Ionic 2 a Ionic 3](https://www.ion-book.com/blog/tips/ionic-2-to-ionic3/){:target="_blank"}.
-
-Ademas en este demo usamos la función de [**lazy loading** y **@IonicPage**](https://www.ion-book.com/blog/tips/ionic-page-and-lazy-loading/){:target="_blank"}. Puedes ver el repositorio [**Demo102**](https://github.com/ion-book/demo102){:target="_blank"}
-
+Hemos actualizado este demo con el último release [**Ionic 3.7**](https://www.ion-book.com/blog/news/ionic-3-7/){:target="_blank"}
 <hr/>
+
 
 # Paso 1: Iniciando el proyecto
 
