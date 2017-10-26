@@ -6,7 +6,7 @@ tags: [native, demos]
 categories: ionic2
 repo: "https://github.com/ion-book/demo102"
 author: nicobytes
-cover: "/images/posts/ionic2/2016-07-11-camera-and-ionic/cover.jpg"
+cover: "https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2F2017-10-27-camera-and-ionic%2Fcover.jpg?alt=media&token=ced4b24b-3a0e-437f-8163-ffe9e25078b0"
 remember: true
 versions:
   - title: 'ionic'
@@ -23,7 +23,7 @@ versions:
 
 > En este artículo conectar una aplicación de ionic con el recurso nativo de la cámara con ionic native y ver varias de las opciones que nos ofrece ionic para manipular la cámara.
 
-<amp-img width="810" height="540" layout="responsive" src="{{site.path}}/images/posts/ionic2/2016-07-11-camera-and-ionic/cover.jpg"></amp-img>
+<amp-img width="810" height="540" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2F2017-10-27-camera-and-ionic%2Fcover.jpg?alt=media&token=ced4b24b-3a0e-437f-8163-ffe9e25078b0"></amp-img>
 
 {% include general/net-promoter-score.html %} 
 
@@ -52,7 +52,7 @@ El proyecto inicia con el template **blank** y por esto tendremos una estructura
 
 <div class="row">
   <div class="col col-100 col-md-50 col-lg-50">
-    <amp-img width="376" height="183" layout="responsive" src="/images/posts/ionic2/2016-07-11-camera-and-ionic/tree1.png"></amp-img>
+    <amp-img width="376" height="183" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2F2017-10-27-camera-and-ionic%2Ftree1.png?alt=media&token=aba780c6-5554-4ee9-b912-511564e883e3"></amp-img>
   </div>
 </div>
 
@@ -229,23 +229,17 @@ ionic cordova run android --prod
 ionic cordova run ios --prod
 ```
 
-En el caso que no tegamos la computadora configurada podrán usar el servicio de ionic package para generar el apk (deben crear una cuenta en ionic.io):
-
-```
-ionic package build android --prod
-```
-
 ## Resultado:
 
 <div class="row wrap">
   <div class="col col-100 col-md-33 col-lg-33">
-    <amp-img width="720" height="1280" layout="responsive" src="/images/posts/ionic2/2016-07-11-camera-and-ionic/screen1.jpg"></amp-img>
+    <amp-img width="720" height="1280" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2F2017-10-27-camera-and-ionic%2Fscreen1.jpg?alt=media&token=b2170b48-4385-4d86-9651-33abc5c7d74c"></amp-img>
   </div>
   <div class="col col-100 col-md-33 col-lg-33">
-    <amp-img width="720" height="1280" layout="responsive" src="/images/posts/ionic2/2016-07-11-camera-and-ionic/screen2.jpg"></amp-img>
+    <amp-img width="720" height="1280" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2F2017-10-27-camera-and-ionic%2Fscreen2.jpg?alt=media&token=506bc1e3-891e-45f4-8021-894b497ec12e"></amp-img>
   </div>
   <div class="col col-100 col-md-33 col-lg-33">
-    <amp-img width="720" height="1280" layout="responsive" src="/images/posts/ionic2/2016-07-11-camera-and-ionic/screen3.jpg"></amp-img>
+    <amp-img width="720" height="1280" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2F2017-10-27-camera-and-ionic%2Fscreen3.jpg?alt=media&token=b2170b48-4385-4d86-9651-33abc5c7d74c"></amp-img>
   </div>
 </div>
 <br>
