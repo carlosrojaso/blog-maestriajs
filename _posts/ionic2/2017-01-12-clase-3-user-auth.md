@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Clase 3 - Autenticación de Usuarios."
-date: 2017-06-27
+date: 2017-09-13
 tags: [class, ionic cloud]
 categories: ionic2
 author: carlosrojas
@@ -16,7 +16,7 @@ versions:
   - title: 'cordova-cli'
     number: '7.0.0'
   - title: 'ionic-cli'
-    number: '3.4.0'
+    number: '3.10.1'
 ---
 
 <amp-img width="1024" height="512" layout="responsive" src="/images/posts/ionic2/2017-01-12-clase-3-user-auth/cover.png"></amp-img> 
@@ -46,8 +46,7 @@ Ahora borra todos los directorios en `src/pages/`.
 Ahora, nosotros vamos a necesitar crear algunas páginas. Para hacer esto vamos a utilizar el comando del CLI llamado [generate](http://ionicframework.com/docs/v2/cli/generate/)
 
 ```
-ionic generate page new-detail
-ionic generate page news-listing
+ionic generate page feed-list
 ionic generate page login
 ionic generate page profile
 ionic generate page reset-password
@@ -56,54 +55,48 @@ ionic generate page signup
 
 Esto generara todas las páginas que nosotros necesitamos. Vamos a usar en esta app la función de [**lazy loading** y **@IonicPage**](https://www.ion-book.com/blog/tips/ionic-page-and-lazy-loading/){:target="_blank"}.
 
-## Conectando nuestra App con Ionic Cloud.
+## Conectando nuestra App con Firebase.
 
-### Instalar Ionic Cloud.
+### Instalar Firebase.
 
-Luego de crear la cuenta en Ionic.io, debemos implementar la librería para empezar a usar cualquier servicio de Ionic Cloud. Así que vamos a nuestra terminal y ejecutamos: 
-
-```
-npm install @ionic/cloud-angular --save
-```
-
-Luego debemos conectar nuestro usuario de ionic.io con la aplicación, así:
+Luego de crear la cuenta en [Firebase](https://firebase.google.com/), debemos implementar la librería para empezar a usar cualquier servicio de Firebase y AngularFire2 para facilitar nuestra vida usando Observables. Así que vamos a nuestra terminal y ejecutamos: 
 
 ```
-ionic login
+npm install angularfire2 firebase promise-polyfill --save
 ```
 
-Luego, debemos crear nuestra aplicación en ionic.io, lo podemos hacer con:
-
-```
-ionic link
-```
-
-Debes crear el objeto `CloudSettings` para tu app. Esto lo debemos hacer en el archivo `app.module.ts` y reemplazar el APP_ID con el ID que te generarón y lo puedes encontrar en el archivo `ionic.config.json` que se encuentra en la raiz de tu proyecto.
+Ahora Debes crear el objeto `firebaseConfig` para tu app. Esto lo debemos hacer en el archivo `app.module.ts` y reemplazar la información de la app con la que obtienes de tu proyecto en Firebase.
 
 Define los objetos:
 
 ```ts
 
-import { CloudSettings, CloudModule } from '@ionic/cloud-angular';
-
-const cloudSettings: CloudSettings = {
-  'core': {
-    'app_id': 'APP_ID'
-  }
+export const firebaseConfig = {
+  apiKey: "xxxxxxxxxx",
+  authDomain: "your-domain-name.firebaseapp.com",
+  databaseURL: "https://your-domain-name.firebaseio.com",
+  storageBucket: "your-domain-name.appspot.com",
+  messagingSenderId: '<your-messaging-sender-id>'
 };
 
 ```
 
-Y nosotros necesitamos agregar tus preferencias de cloud en `CloudModule.forRoot()` dentro de `NgModule`.
+también necesitamos agregar los modulos de AngularFire2 dentro de `NgModule`.
 
 ```ts
+
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireAuthModule } from 'angularfire2/auth';
+...
+
 
 @NgModule({
   declarations: [ ... ],
   imports: [
     ...
     IonicModule.forRoot(MyApp),
-    CloudModule.forRoot(cloudSettings)
+    AngularFireModule.initializeApp(firebaseConfig),
+    AngularFireAuthModule
     ...
   ],
   bootstrap: [IonicApp],
@@ -113,11 +106,7 @@ Y nosotros necesitamos agregar tus preferencias de cloud en `CloudModule.forRoot
 
 ```
 
-Si todo quedo bien dentro de la cuenta de ionic.io debe mostrar la aplicación creada, así:
-
-<amp-img width="1280" height="800" layout="responsive" src="/images/posts/ionic2/2017-01-12-clase-3-user-auth/screen.png"></amp-img>
-
-Ok, en este punto deberiamos tener todo conectado.
+Ok, hasta aqui deberiamos tener todo conectado.
 
 {% include blog/subscribe.html %}
 
@@ -125,7 +114,7 @@ Ok, en este punto deberiamos tener todo conectado.
 
 Si recuerdas nosotros creamos algunas paginas con el [ generate command ](http://ionicframework.com/docs/v2/cli/generate/) y deberias tener esta pagina en ` src/pages/ `
 
-<amp-img width="771" height="438" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/startupers-9cbb6.appspot.com/o/Posts%2Fdir_pages.png?alt=media&token=72d7dc02-5947-4700-ad31-97a6b00e10b0"></amp-img>
+<amp-img width="771" height="438" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2Fclase3%2FCaptura%20de%20pantalla%202017-09-13%20a%20la(s)%209.08.20%20a.m..png?alt=media&token=9568ee11-de17-4711-954e-183e78462cbf"></amp-img>
 
 Nosotros vamos a crear nuestro *login view* por lo que vamos a abrir ```` src/pages/login/login.html ```` y agregar algunos componentes.
 
@@ -141,6 +130,9 @@ Nosotros vamos a crear nuestro *login view* por lo que vamos a abrir ```` src/pa
 <ion-content>
   <form [formGroup]="myForm" (ngSubmit)="loginUser()">
     <ion-list>
+      <ion-item text-center>
+        <ion-img width="192" height="192" src="assets/logo192.png" ></ion-img>
+      </ion-item>
       <ion-item>
         <ion-icon name="person" item-left></ion-icon>
         <ion-label stacked>Email:</ion-label>
@@ -153,15 +145,15 @@ Nosotros vamos a crear nuestro *login view* por lo que vamos a abrir ```` src/pa
       </ion-item>
     </ion-list>
     <div padding>
-      <button ion-button block type="submit" [disabled]="!myForm.valid">Login</button>
+      <button ion-button block type="submit" [disabled]="!myForm.valid">Ingresar</button>
     </div>
   </form>
   <div text-center>
     <a ion-button block clear (click)="goToSignup()">
-      Create a new account
+      Nueva cuenta
     </a>
     <a ion-button block clear (click)="goToResetPassword()">
-      I forgot my password
+      Olvide password
     </a>
   </div>
 </ion-content>
@@ -184,7 +176,7 @@ Para aprender más acerca de manejo de formularios puedes ver nuestros artículo
 
 Las cosas importante para ver aqui son las funciones `loginUser()` ,  `goToSignup()` y `goToResetPassword()`
 
-Nosotros vamos a necesitar que cuando el usuario envie el *form* nuestra app envie la info a *Ionic Cloud* y registre el nuevo usuario.
+Nosotros vamos a necesitar que cuando el usuario envie el *form* nuestra app envie la info a *Firebase* y registre el nuevo usuario.
 
 ```ts
 
@@ -193,23 +185,29 @@ Nosotros vamos a necesitar que cuando el usuario envie el *form* nuestra app env
     console.log("Email:" + this.myForm.value.email);
     console.log("Password:" + this.myForm.value.password);
    
-    let details = {
-      'email': this.myForm.value.email,
-      'password': this.myForm.value.password
-    };
 
-    this.auth.login('basic', details).then(() => {
+    this.afAuth.auth.signInWithEmailAndPassword(this.myForm.value.email, this.myForm.value.password).then(() => {
       console.log("User logging");
-      this.navCtrl.push('NewsListingPage');
+      this.navCtrl.setRoot('HomePage');
     }, (err) => {
+      this.loading.dismiss().then( () => {
+        let alert = this.alertCtrl.create({
+          message: err.message,
+          buttons: [
+            {
+              text: "Ok",
+              role: 'cancel'
+            }
+          ]
+        });
+        alert.present();
+      });
+    });
 
-        console.log(err.message);
-
-        let errors = '';
-        if(err.message === 'UNPROCESSABLE ENTITY') errors += 'Email isn\'t valid.<br/>';
-        if(err.message === 'UNAUTHORIZED') errors += 'Password is required.<br/>';
-      }
-    );
+    this.loading = this.loadingCtrl.create({
+      dismissOnPageChange: true,
+    });
+    this.loading.present();
   }
 
 ```
@@ -221,10 +219,10 @@ this.myForm.value.email
 this.myForm.value.password
 ```
 
-y despues nososotros vamos a usar el metodo de login proveido por *Ionic Cloud*
+y despues nososotros vamos a usar el metodo de login proveido por *Firebase*
 
 ```ts
-this.auth.login('basic', details).then( ... );
+this.afAuth.auth.signInWithEmailAndPassword(email, password).then( ... );
 ```
 
 las otras funciones las usamos para navegación.
@@ -247,9 +245,11 @@ y toda la magia junta se ve asi.
 
 ```ts
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { Auth, User } from '@ionic/cloud-angular';
+import { IonicPage, NavController,LoadingController, Loading, AlertController} from 'ionic-angular';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { AngularFireAuth } from 'angularfire2/auth';
+import * as firebase from 'firebase/app';
+import { Observable } from 'rxjs/Observable';
 
 @IonicPage()
 @Component({
@@ -259,17 +259,21 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 export class LoginPage {
 
   myForm: FormGroup;
+  user: Observable<firebase.User>;
+  public loading:Loading;
 
   constructor(
     public navCtrl: NavController,
     public formBuilder: FormBuilder,
-    public auth: Auth, 
-    public user: User
+    public afAuth: AngularFireAuth,
+    public alertCtrl: AlertController,
+    public loadingCtrl: LoadingController
   ) {
     this.myForm = this.formBuilder.group({
       email: ['', Validators.required],
       password: ['', Validators.required]
     });
+    this.user = afAuth.authState;
   }
 
   loginUser(){
@@ -277,27 +281,33 @@ export class LoginPage {
     console.log("Email:" + this.myForm.value.email);
     console.log("Password:" + this.myForm.value.password);
    
-    let details = {
-      'email': this.myForm.value.email,
-      'password': this.myForm.value.password
-    };
 
-    this.auth.login('basic', details).then(() => {
+    this.afAuth.auth.signInWithEmailAndPassword(this.myForm.value.email, this.myForm.value.password).then(() => {
       console.log("User logging");
-      this.navCtrl.push('NewsListingPage');
+      this.navCtrl.setRoot('HomePage');
     }, (err) => {
+      this.loading.dismiss().then( () => {
+        let alert = this.alertCtrl.create({
+          message: err.message,
+          buttons: [
+            {
+              text: "Ok",
+              role: 'cancel'
+            }
+          ]
+        });
+        alert.present();
+      });
+    });
 
-        console.log(err.message);
-
-        let errors = '';
-        if(err.message === 'UNPROCESSABLE ENTITY') errors += 'Email isn\'t valid.<br/>';
-        if(err.message === 'UNAUTHORIZED') errors += 'Password is required.<br/>';
-      }  
-    );
+    this.loading = this.loadingCtrl.create({
+      dismissOnPageChange: true,
+    });
+    this.loading.present();
   }
-
   
- goToSignup(){
+
+  goToSignup(){
     this.navCtrl.push('SignupPage');
   }
 
@@ -306,13 +316,14 @@ export class LoginPage {
   }
 
 }
+
 ```
 
 {% include blog/subscribe.html %}
 
 En este punto deberíamos utizar algo como esto:
 
-<amp-img width="1280" height="800" layout="responsive" src="/images/posts/ionic2/2017-01-12-clase-3-user-auth/screen1.png"></amp-img>
+<amp-img width="1280" height="800" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2Fclase3%2FCaptura%20de%20pantalla%202017-09-13%20a%20la(s)%209.10.54%20a.m..png?alt=media&token=0314bef4-56f2-47a3-af36-0f7e43e7f32b"></amp-img>
 
 
 Ok, ahora necesitamos modificar el *SignupPage* para crear el nuevo usuario en nuestra app.
@@ -346,24 +357,31 @@ Nosotros podemos usar un formulario similar como en la pagina de login.
       <button ion-button block type="submit" [disabled]="!myForm.valid">Register</button>
     </div>
   </form>
-</ion-content>  
+</ion-content>
 ```
 
-Algo importante es ver aqui la funcion `Signup()` donde nosotros necesitamos aplicar el metodo *signup* desde Ionic Cloud.
+Algo importante es ver aqui la funcion `Signup()` donde nosotros necesitamos aplicar el metodo *createUserWithEmailAndPassword* desde Firebase.
 
 ```ts
 
-this.auth.signup(details).then(() => {
-  // `this.user` is now registered
-}, (err: IDetailedError<string[]>) => {
-  for (let e of err.details) {
-    if (e === 'conflict_email') {
-      alert('Email already exists.');
-    } else {
-      // handle other errors
-    }
-  }
-});
+this.afAuth.auth.createUserWithEmailAndPassword(this.myForm.value.email, this.myForm.value.password)
+    .then(
+      res => {
+        this.navCtrl.setRoot('HomePage');
+      }, error => {
+        this.loading.dismiss().then( () => {
+          let alert = this.alertCtrl.create({
+            message: error.message,
+            buttons: [
+              {
+                text: "Ok",
+                role: 'cancel'
+              }
+            ]
+          });
+          alert.present();
+        });
+      }); 
 
 ```
 
@@ -373,8 +391,10 @@ todo junto
 
 ```ts
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { Auth, User, UserDetails, IDetailedError } from '@ionic/cloud-angular';
+import { IonicPage, NavController,LoadingController, 
+  Loading, 
+  AlertController } from 'ionic-angular';
+import { AngularFireAuth } from 'angularfire2/auth';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @IonicPage()
@@ -385,12 +405,13 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 export class SignupPage {
 
   myForm: FormGroup;
-
+  public loading:Loading;
   constructor(
     public navCtrl: NavController,
     public formBuilder: FormBuilder,
-    public auth: Auth, 
-    public user: User
+    public afAuth: AngularFireAuth, 
+    public alertCtrl: AlertController,
+    public loadingCtrl: LoadingController
   ) {
     this.myForm = this.formBuilder.group({
       email: ['', Validators.required],
@@ -403,40 +424,35 @@ export class SignupPage {
     console.log("Email:" + this.myForm.value.email);
     console.log("Password:" + this.myForm.value.password);
    
-    let details: UserDetails = {
-      'email': this.myForm.value.email,
-      'password': this.myForm.value.password
-    };
 
-    this.auth.signup(details).then(() => {
-      // `this.user` is now registered
-      console.log('Registered');
-      this.navCtrl.push('LoginPage');
-    }, (err: IDetailedError<string[]>) => {
-      for (let e of err.details) {
-        switch (e) {
-        case 'required_email': 
-          console.log('Missing email field.');
-        case 'required_password': 
-          console.log('Missing password field');
-        break; 
-        case 'conflict_email': 
-          console.log('A user has already signed up with the supplied email');
-        break;
-        case 'conflict_username': 
-          console.log('A user has already signed up with the supplied username');
-        break;
-        case 'invalid_email': 
-          console.log('The email did not pass validation.');
-        break;
-        default:
-          console.log('Something unknow.');
-      }     
-      }
-    }); 
+    this.afAuth.auth.createUserWithEmailAndPassword(this.myForm.value.email, this.myForm.value.password)
+    .then(
+      res => {
+        this.navCtrl.setRoot('HomePage');
+      }, error => {
+        this.loading.dismiss().then( () => {
+          let alert = this.alertCtrl.create({
+            message: error.message,
+            buttons: [
+              {
+                text: "Ok",
+                role: 'cancel'
+              }
+            ]
+          });
+          alert.present();
+        });
+      });
+
+      this.loading = this.loadingCtrl.create({
+        dismissOnPageChange: true,
+      });
+      this.loading.present();
+    
   }
 
 }
+
 ```
 
 ok, ahora vamos a construir la pagina de restaurar.
@@ -461,7 +477,7 @@ ok, ahora vamos a construir la pagina de restaurar.
       </ion-item>
     </ion-list>
     <div padding>
-      <button ion-button block type="submit" [disabled]="!myForm.valid">Register</button>
+      <button ion-button block type="submit" [disabled]="!myForm.valid">Reset</button>
     </div>
   </form>
 </ion-content>
@@ -471,8 +487,8 @@ ok, ahora vamos a construir la pagina de restaurar.
 
 ```ts
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { Auth, User, IDetailedError } from '@ionic/cloud-angular';
+import { IonicPage,NavController,AlertController } from 'ionic-angular';
+import { AngularFireAuth } from 'angularfire2/auth';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @IonicPage()
@@ -485,9 +501,10 @@ export class ResetPasswordPage {
   myForm: FormGroup;
 
   constructor(
-    private navCtrl: NavController,
     private formBuilder: FormBuilder,
-    private auth: Auth
+    public afAuth: AngularFireAuth,
+    public nav: NavController,
+    public alertCtrl: AlertController
   ) {
     this.myForm = this.formBuilder.group({
       email: ['', Validators.required]
@@ -500,36 +517,38 @@ export class ResetPasswordPage {
 
   resetPassword(){
     console.log("Email:" + this.myForm.value.email);
-    this.auth.requestPasswordReset(this.myForm.value.email)
-    .then(() => {
-      // `this.user` is now registered
-      console.log('Request Sent');
-      this.navCtrl.push('LoginPage');
-    }, (err: IDetailedError<string[]>) => {
-      for (let e of err.details) {
-        switch (e) {
-        case 'required_email': 
-          console.log('Missing email field.');
-        case 'required_password': 
-          console.log('Missing password field');
-        break; 
-        case 'conflict_email': 
-          console.log('A user has already signed up with the supplied email');
-        break;
-        case 'conflict_username': 
-          console.log('A user has already signed up with the supplied username');
-        break;
-        case 'invalid_email': 
-          console.log('The email did not pass validation.');
-        break;
-        default:
-          console.log('Something unknow.');
-        }     
-      }
-    }); 
+    
+    this.afAuth.auth.sendPasswordResetEmail(this.myForm.value.email)
+    .then((user) => {
+      let alert = this.alertCtrl.create({
+        message: "Te enviamos un link a tu correo.",
+        buttons: [
+          {
+            text: "Ok",
+            role: 'cancel',
+            handler: () => {
+              this.nav.pop();
+            }
+          }
+        ]
+      });
+      alert.present();
+    }, (error) => {
+      var errorMessage: string = error.message;
+      let errorAlert = this.alertCtrl.create({
+        message: errorMessage,
+        buttons: [
+          {
+            text: "Ok",
+            role: 'cancel'
+          }
+        ]
+      });
+      errorAlert.present();
+    });
   }
 
-}   
+}
 ```
 
 Ahora ya tienes una aplicación con registro, login y recuperar contraseña, luego vamos a trabajar aun más, por ahora puedes leer estos artículos y aprender un poco sobre los formularios:

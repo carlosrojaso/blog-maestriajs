@@ -1,0 +1,51 @@
+---
+layout: default
+---
+{% include blog/header.html %}
+<div class="content">
+  <div class="row">
+    <div class="col">
+      <h1 class="title-page">Organizadores</h1>
+    </div>
+  </div>
+  <div class="row wrap top">
+    <div class="col col-100 col-md-80 col-lg-80 content-authors">
+      <p>Estos increibles tutoriales, tips y demos se logran gracias a nuestros increibles miembros de la comunidad. <br/><br/>
+      Revisa que nos motiva <a href="http://bit.ly/2o4ekwi" target="_blank">aquí.</a><br/><br/></p>
+      {% for author in site.data.authors %}
+      <div class="author">
+        <div class="row wrap center">
+          <div class="col col-100 col-md-20 col-lg-20">
+            <amp-img class="avatar-profile" src="{{ author.avatar }}" alt="{{ author.name }}" width="800" height="800" layout="responsive"></amp-img>
+          </div>
+          <div class="col col-100 col-md-80 col-lg-80 text">
+            <h2 class="author-name">{{ author.name }}</h2>
+            <h3 class="author-country">{{ author.country }}</h3>
+            <div class="info"><p>{{ author.bio | strip_html | truncate: 200  }}...</p></div>
+            {% assign posts = site.posts | where:"draft", "false" | where:"author", author.id %}
+            <div class="more">
+              <a class="btn btn-primary btn-round" href="{{ author.url }}">Ver artículos ({{ posts | size }})</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+    <div class="col col-100 col-md-100 col-lg-20">
+      <div class="row wrap baseline">
+        <div class="col col-100">
+          <section class="content-article-right">
+            <h3>Ultimos artículos:</h3>
+            <div class="row wrap baseline">
+              {% for post in site.posts limit: 8 %}
+                <div class="col col-100 col-md-33 col-lg-100">
+                  {% include blog/article_right.html %}
+                </div>
+              {% endfor %}
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

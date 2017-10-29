@@ -12,6 +12,9 @@ layout: default
         {% for tag in page.tags %}<span class="tag">{{ tag }}</span>{% endfor %} - 
         {{ page.date | date: '%B %d, %Y' }} por 
         <a href="{{ author.url }}"><strong>{{ author.name }}</strong></a> 
+        {% if page.editname %}
+         | <a href="https://github.com/ion-book/ion-book.github.io/tree/master/_posts/{{ page.editname }}"><strong>Edita este Post.</strong></a>
+        {% endif %}
       </div>
       {% if page.versions %}
       <div class="versions">
@@ -23,13 +26,6 @@ layout: default
     <div class="col col-100 col-md-100 col-lg-20">
       <a href="{{ page.repo }}" class="btn btn-primary btn-round center-block btn-icon btn-demo" target="_blank">
         <div class="icon icon-social-octocat"></div> Ver código
-      </a>
-    </div>
-    {% endif %}
-    {% if page.laucher %}
-    <div class="col col-100 col-md-100 col-lg-20">
-      <a href="{{ page.laucher }}" class="btn btn-primary btn-round center-block btn-icon btn-demo" target="_blank">
-        <div class="icon icon-social-octocat"></div> Ver demo
       </a>
     </div>
     {% endif %}
@@ -45,6 +41,7 @@ layout: default
         <a href="{{ page.repo }}" class="btn btn-primary btn-round center-block btn-icon btn-demo" target="_blank">
           <div class="icon icon-social-octocat"></div> Ver código
         </a>
+        </br>
         {% endif %}
         {% if page.laucher %}
         <a href="{{ page.laucher }}" class="btn btn-primary btn-round center-block btn-icon btn-demo" target="_blank">
@@ -54,7 +51,7 @@ layout: default
         {% if page.remember %}
         <div class="remember-demo">
           <h4><strong>Recuerda:</strong></h4>
-          <p>Si quieres ejecutar este demo un tu computadora, debes tener el <a target="_blank" href="http://ionicframework.com/docs/v2/getting-started/installation/">entorno</a> de ionic instalado y luego de descargar o clonar el proyecto debes ubicarte en tu proyecto en la terminal y luego ejecutar</p>
+          <p>Si quieres ejecutar este demo en tu computadora, debes tener el <a target="_blank" href="http://ionicframework.com/docs/v2/getting-started/installation/">entorno</a> de ionic instalado y luego de descargar o clonar el proyecto debes ubicarte en tu proyecto en la terminal y luego ejecutar</p>
           <div class="highlighter-rouge">
             <pre class="highlight"><code>npm install</code></pre>
           </div>
