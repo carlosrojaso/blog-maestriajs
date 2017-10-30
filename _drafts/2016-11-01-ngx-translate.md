@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Múltiples idiomas en una App con Ionic"
-date: 2017-05-17
+date: 2017-11-01
 tags: [libs, demos]
 categories: ionic2
 repo: "https://github.com/ion-book/demo106"

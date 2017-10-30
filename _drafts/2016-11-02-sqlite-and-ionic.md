@@ -2,8 +2,8 @@
 layout: post
 title: "SQLite + Ionic en 7 pasos"
 keywords: "cordova-sqlite-storage, sqlite, ionic sqlite, ionic db"
-date: 2017-04-25
-tags: [native, demos, ionic2]
+date: 2017-11-02
+tags: [native, demos]
 categories: ionic2
 repo: "https://github.com/ion-book/demo107"
 author: nicobytes
