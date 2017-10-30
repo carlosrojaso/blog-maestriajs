@@ -7,7 +7,7 @@ tags: [native, demos]
 categories: ionic2
 repo: "https://github.com/ion-book/demo107"
 author: nicobytes
-cover: "/images/posts/ionic2/2016-11-28-sqlite-and-ionic-2/cover.jpg"
+cover: "https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2F2017-11-02-sqlite-and-ionic%2Fcover.jpg?alt=media&token=acb5531a-957c-4dfa-bd9d-52b94790f6f2"
 remember: true
 versions:
   - title: 'ionic'
@@ -24,7 +24,7 @@ versions:
 
 > Anteriormente hemos hablado sobre [**firebase**]({{site.urlblog}}//ionic2/firebase-database-and-ionic-2){:target="_blank"}, [**pouch**]({{site.urlblog}}/tips/pouchdb){:target="_blank"} y [**Rest API**]({{site.urlblog}}//ionic2/rest-api-with-ionic-2){:target="_blank"} para el consumo de datos, ahora en este nuevo demo haremos la integración con **SQLite** que es una base de datos nativa que proveen los dispositivos móviles.
 
-<amp-img width="1024" height="512" layout="responsive" src="/images/posts/ionic2/2016-11-28-sqlite-and-ionic-2/cover.jpg" alt="SQLite + Ionic 2 en 5 pasos"></amp-img>
+<amp-img width="1024" height="512" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2F2017-11-02-sqlite-and-ionic%2Fcover.jpg?alt=media&token=acb5531a-957c-4dfa-bd9d-52b94790f6f2" alt="SQLite + Ionic 2 en 5 pasos"></amp-img>
 
 {% include general/net-promoter-score.html %} 
 
@@ -35,8 +35,6 @@ Hemos actualizado este demo con el último release **Ionic 3.8**.
 
 <a href="https://github.com/ion-book/demo107" target="_blank" class="btn btn-round btn-success">Ver demo</a>
 <hr/>
-
-{% include blog/subscribe.html %}
 
 ## Paso 1: Iniciando el proyecto
 
@@ -197,7 +195,7 @@ import { TasksService } from '../providers/tasks-service';
   ],
   imports: [
     BrowserModule,
-    HttpModule,
+    HttpClientModule,
     IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],
@@ -349,6 +347,8 @@ export class TasksService {
 
 }
 ```
+
+{% include blog/subscribe.html %}
 
 ## Paso 5: Añadir Servicio y llamar a setDatabase
 
@@ -647,13 +647,13 @@ En el template se encargará de llamar las funciones creadas en `HomePage` y mos
 
 <div class="row wrap">
   <div class="col col-100 col-md-33 col-lg-33">
-    <amp-img width="720" height="1280" layout="responsive" src="/images/posts/ionic2/2016-11-28-sqlite-and-ionic-2/screen1.png"></amp-img>
+    <amp-img width="720" height="1280" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2F2017-11-02-sqlite-and-ionic%2Fscreen1.png?alt=media&token=9fe8dfb0-73fa-49c0-a4ce-11b98f4f9148"></amp-img>
   </div>
   <div class="col col-100 col-md-33 col-lg-33">
-    <amp-img width="720" height="1280" layout="responsive" src="/images/posts/ionic2/2016-11-28-sqlite-and-ionic-2/screen2.png"></amp-img>
+    <amp-img width="720" height="1280" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2F2017-11-02-sqlite-and-ionic%2Fscreen2.png?alt=media&token=4d639f34-b1b9-4113-8bae-5fca37d4943c"></amp-img>
   </div>
   <div class="col col-100 col-md-33 col-lg-33">
-    <amp-img width="720" height="1280" layout="responsive" src="/images/posts/ionic2/2016-11-28-sqlite-and-ionic-2/screen3.png"></amp-img>
+    <amp-img width="720" height="1280" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2F2017-11-02-sqlite-and-ionic%2Fscreen3.png?alt=media&token=fe1c0d73-9eef-4f34-a1a2-1c337f628e6b"></amp-img>
   </div>
 </div>
 <br>
