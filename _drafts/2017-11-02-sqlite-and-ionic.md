@@ -11,15 +11,15 @@ cover: "/images/posts/ionic2/2016-11-28-sqlite-and-ionic-2/cover.jpg"
 remember: true
 versions:
   - title: 'ionic'
-    number: '3.3.0'
+    number: '3.8.0'
   - title: 'ionic-native'
-    number: '3.10.3'
+    number: '4.3.2'
   - title: 'ionic-app-scripts'
-    number: '1.3.7'
+    number: '3.0.1'
   - title: 'cordova-cli'
-    number: '7.0.1'
+    number: '7.1.0'
   - title: 'ionic-cli'
-    number: '3.3.0'
+    number: '3.15.2'
 ---
 
 > Anteriormente hemos hablado sobre [**firebase**]({{site.urlblog}}//ionic2/firebase-database-and-ionic-2){:target="_blank"}, [**pouch**]({{site.urlblog}}/tips/pouchdb){:target="_blank"} y [**Rest API**]({{site.urlblog}}//ionic2/rest-api-with-ionic-2){:target="_blank"} para el consumo de datos, ahora en este nuevo demo haremos la integración con **SQLite** que es una base de datos nativa que proveen los dispositivos móviles.
@@ -28,13 +28,12 @@ versions:
 
 {% include general/net-promoter-score.html %} 
 
-# Actualización (25/04/2017)
+# Actualización (30/10/2017)
 <hr/>
 
-Hemos actualizado este demo con el último release de **Ionic 3**, si aún estas en alguna de las versiones anteriores puedes seguir estos pasos [de Ionic 2 a Ionic 3](https://www.ion-book.com/blog/tips/ionic-2-to-ionic3/){:target="_blank"}.
+Hemos actualizado este demo con el último release **Ionic 3.8**.
 
-Ademas en este demo usamos la función de **lazy loading** y **@IonicPage**. Puedes ver el repositorio [**Demo107**](https://github.com/ion-book/demo107){:target="_blank"}
-
+<a href="https://github.com/ion-book/demo107" target="_blank" class="btn btn-round btn-success">Ver demo</a>
 <hr/>
 
 {% include blog/subscribe.html %}
@@ -60,8 +59,8 @@ Como iniciamos nuestro proyecto con el template **blank** tendremos una estructu
 Ahora agregamos el plugin de **cordova-sqlite-storage** y el provider de **sqlite** en el proyecto:
 
 ```
-ionic cordova plugin add cordova-sqlite-storage --save
-npm install @ionic-native/sqlite --save
+ionic cordova plugin add cordova-sqlite-storage
+npm install --save @ionic-native/sqlite
 ```
 
 La documentación en ionic native la puedes ver [**aquí**](https://ionicframework.com/docs/native/sqlite/){:target="_blank"} y la documentación del plugin de cordova [**aquí**](https://github.com/litehelpers/Cordova-sqlite-storage){:target="_blank"}.
