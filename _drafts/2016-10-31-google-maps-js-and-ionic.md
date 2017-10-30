@@ -31,7 +31,7 @@ versions:
 # Actualización (30/10/2017)
 <hr/>
 
-Hemos actualizado este demo con el último release [**Ionic 3.8**].
+Hemos actualizado este demo con el último release **Ionic 3.8**.
 
 <a href="https://ion-book.github.io/demo105/" target="_blank" class="btn btn-round btn-success">Ver demo</a>
 <hr/>
@@ -54,7 +54,7 @@ cd demo105
 ```
 
 El proyecto inicia con el template **blank** y por esto tendremos una estructura básica del proyecto, la carpeta en la que vamos a trabajar será `src`:
-¡
+
 <div class="row">
   <div class="col col-100 col-md-50 col-lg-50">
     <amp-img width="376" height="183" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2F2017-10-27-camera-and-ionic%2Ftree1.png?alt=media&token=aba780c6-5554-4ee9-b912-511564e883e3"></amp-img>
@@ -314,7 +314,7 @@ ionic serve
 
 <div class="row">
   <div class="col col-100 col-md-33 offset-md-33 col-lg-33 offset-lg-33">
-    <amp-img width="1080" height="1920" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2F2016-10-31-google-maps-js-and-ionic%2Fscreen.jpg?alt=media&token=1b9ffc86-7291-4549-909f-ff09d407b2d4"></amp-img>
+    <amp-img width="1080" height="1920" layout="responsive" src="/images/posts/ionic2/2016-08-30-google-maps-js-and-ionic/screen.jpg"></amp-img>
   </div>
 </div>
 <br/>

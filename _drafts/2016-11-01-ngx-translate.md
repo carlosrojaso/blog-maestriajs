@@ -5,20 +5,21 @@ date: 2017-11-01
 tags: [libs, demos]
 categories: ionic2
 repo: "https://github.com/ion-book/demo106"
+laucher: "https://ion-book.github.io/demo106/"
 author: nicobytes
 cover: "/images/posts/ionic2/2016-10-04-ngx-translate/cover.png"
 remember: true
 versions:
   - title: 'ionic'
-    number: '3.3.0'
+    number: '3.8.0'
   - title: 'ionic-native'
-    number: '3.10.3'
+    number: '4.3.2'
   - title: 'ionic-app-scripts'
-    number: '1.3.7'
+    number: '3.0.1'
   - title: 'cordova-cli'
-    number: '7.0.1'
+    number: '7.1.0'
   - title: 'ionic-cli'
-    number: '3.3.0'
+    number: '3.15.2'
 ---
 
 > Varias aplicaciones tienen usos en diferentes países, por lo cual las aplicaciones deben adaptar sus contenidos a varios idiomas y con [**ngx-translate**](http://www.ngx-translate.com/){:target="_blank"} podremos hacer esto con ionic.
@@ -27,13 +28,19 @@ versions:
 
 {% include general/net-promoter-score.html %} 
 
-## Actualización (17/05/2017)
+# Actualización (30/10/2017)
 <hr/>
 
-Hemos actualizado este demo con el último release de **Ionic 3**, si aún estas en alguna de las versiones anteriores puedes seguir estos pasos [de Ionic 2 a Ionic 3](https://www.ion-book.com/blog/tips/ionic-2-to-ionic3/){:target="_blank"}.
+Hemos actualizado este demo con el último release **Ionic 3.8**.
 
-Ademas en este demo usamos la función de [**lazy loading** y **@IonicPage**](https://www.ion-book.com/blog/tips/ionic-page-and-lazy-loading/){:target="_blank"}. Puedes ver el repositorio [**Demo106**](https://github.com/ion-book/demo106){:target="_blank"}
+Ionic ahora soporta la más reciente actualización de angular 4.4.4 la cual trae el nuevo `HTTPClient` que usa `ngx-translate`, lo cual dos principales nuevas características las cuales son:
 
+- Las respuestas viene en JSON por defecto sin necesidad de hacer map
+- Usar Interceptors, lo cual facilita el manejo de tokens en la aplicación con los headers.
+
+Pueden ver más acerca de `HTTPClient` aquí: [https://angular.io/guide/http](https://angular.io/guide/http){:target="_blank"}
+
+<a href="https://ion-book.github.io/demo106/" target="_blank" class="btn btn-round btn-success">Ver demo</a>
 <hr/>
 
 ## Paso 1: Iniciando el proyecto
@@ -54,7 +61,7 @@ El proyecto inicia con el template **blank** y por esto tendremos una estructura
 
 <div class="row">
   <div class="col col-100 col-md-50 col-lg-50">
-    <amp-img width="376" height="183" layout="responsive" src="/images/posts/ionic2/2016-07-11-camera-and-ionic/tree1.png"></amp-img>
+    <amp-img width="376" height="183" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2F2017-10-27-camera-and-ionic%2Ftree1.png?alt=media&token=aba780c6-5554-4ee9-b912-511564e883e3"></amp-img>
   </div>
 </div>
 
@@ -72,7 +79,7 @@ npm install @ngx-translate/http-loader --save
 Ahora en el arhivo `app.module.ts` debemos crear una función que desde  `src/assets/i18n` obtengan los archivos de las traducciones de la aplicación, así:
 
 ```ts
-export function createTranslateLoader(http: Http) {
+export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
 }
 ```
@@ -82,10 +89,10 @@ Luego importamos las dependencias necesarias para usar `ngx-translate`, así:
 ```ts
 ...
 
-import {TranslateModule, TranslateLoader} from '@ngx-translate/core';
-import {TranslateHttpLoader} from '@ngx-translate/http-loader';
+import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
-export function createTranslateLoader(http: Http) {
+export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
 }
 
@@ -95,13 +102,13 @@ export function createTranslateLoader(http: Http) {
   ],
   imports: [
     BrowserModule,
-    HttpModule,
+    HttpClientModule,
     IonicModule.forRoot(MyApp),
     TranslateModule.forRoot({
       loader: {
-          provide: TranslateLoader,
-          useFactory: (createTranslateLoader),
-          deps: [Http]
+        provide: TranslateLoader,
+        useFactory: (createTranslateLoader),
+        deps: [HttpClient]
       }
     })
   ],
