@@ -7,7 +7,7 @@ categories: ionic2
 repo: "https://github.com/ion-book/demo106"
 laucher: "https://ion-book.github.io/demo106/"
 author: nicobytes
-cover: "/images/posts/ionic2/2016-10-04-ngx-translate/cover.png"
+cover: "https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2F2016-11-01-ngx-translate%2Fcover.png?alt=media&token=0367d9f5-0ca8-4b50-baa5-b61e18fdbcca"
 remember: true
 versions:
   - title: 'ionic'
@@ -24,7 +24,7 @@ versions:
 
 > Varias aplicaciones tienen usos en diferentes países, por lo cual las aplicaciones deben adaptar sus contenidos a varios idiomas y con [**ngx-translate**](http://www.ngx-translate.com/){:target="_blank"} podremos hacer esto con ionic.
 
-<amp-img width="1024" height="512" layout="responsive" src="/images/posts/ionic2/2016-10-04-ngx-translate/cover.png"></amp-img>
+<amp-img width="1024" height="512" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2F2016-11-01-ngx-translate%2Fcover.png?alt=media&token=0367d9f5-0ca8-4b50-baa5-b61e18fdbcca"></amp-img>
 
 {% include general/net-promoter-score.html %} 
 
@@ -314,13 +314,13 @@ Y nuestro template `home.html`:
 
 <div class="row wrap">
   <div class="col col-100 col-md-33 col-lg-33">
-    <amp-img width="720" height="1280" layout="responsive" src="/images/posts/ionic2/2016-10-04-ngx-translate/screen.jpg"></amp-img>
+    <amp-img width="720" height="1280" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2F2016-11-01-ngx-translate%2Fscreen.jpg?alt=media&token=328730cb-291b-4ff7-bfee-fd499c9a842a"></amp-img>
   </div>
   <div class="col col-100 col-md-33 col-lg-33">
-    <amp-img width="720" height="1280" layout="responsive" src="/images/posts/ionic2/2016-10-04-ngx-translate/screen1.jpg"></amp-img>
+    <amp-img width="720" height="1280" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2F2016-11-01-ngx-translate%2Fscreen1.jpg?alt=media&token=1f842bcc-0f9e-476b-bcd1-7e77ea058554"></amp-img>
   </div>
   <div class="col col-100 col-md-33 col-lg-33">
-    <amp-img width="720" height="1280" layout="responsive" src="/images/posts/ionic2/2016-10-04-ngx-translate/screen2.jpg"></amp-img>
+    <amp-img width="720" height="1280" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2F2016-11-01-ngx-translate%2Fscreen2.jpg?alt=media&token=345a3c03-d039-4f94-baf4-2d3f053816d2"></amp-img>
   </div>
 </div>
 <br>
