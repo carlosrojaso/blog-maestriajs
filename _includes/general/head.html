@@ -106,14 +106,10 @@ h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')};
 {% endif%}
 
 
-{% if site.google_optimize == 0 %}
-{% if page.title != 'Home' %}
+{% if site.google_optimize == 0 and page.title != 'Home' %}
   <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
-{% endif%}
 {% else %}
 <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
 {% endif%}
-
-
 </head>
 
