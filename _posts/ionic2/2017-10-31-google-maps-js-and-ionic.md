@@ -7,6 +7,7 @@ categories: ionic2
 repo: "https://github.com/ion-book/demo105"
 author: nicobytes
 laucher: "https://ion-book.github.io/demo105/"
+editname: "ionic2/2017-10-31-google-maps-js-and-ionic.md"
 cover: "https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2F2016-10-31-google-maps-js-and-ionic%2Fcover.png?alt=media&token=21487ebb-b210-4303-b19c-3118922744e7"
 remember: true
 versions:

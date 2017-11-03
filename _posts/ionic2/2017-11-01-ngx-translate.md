@@ -7,6 +7,7 @@ categories: ionic2
 repo: "https://github.com/ion-book/demo106"
 laucher: "https://ion-book.github.io/demo106/"
 author: nicobytes
+editname: "ionic2/2017-11-01-ngx-translate.md"
 cover: "https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2F2016-11-01-ngx-translate%2Fcover.png?alt=media&token=0367d9f5-0ca8-4b50-baa5-b61e18fdbcca"
 remember: true
 versions:
