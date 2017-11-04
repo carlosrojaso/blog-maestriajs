@@ -173,7 +173,10 @@ export class HomePage {
     public database: AngularFireDatabase
   ) {
     this.tasksRef = this.database.list('tasks');
-    this.tasks = this.tasksRef.valueChanges();
+    this.tasks = this.tasksRef.snapshotChanges()
+    .map(changes => {
+      return changes.map(c => ({ key: c.payload.key, ...c.payload.val() }));
+    });
   }
 }
 ```
@@ -243,7 +246,7 @@ Con declaramos el método `updateTask` el cual actualiza una tarea con el métod
 
 ```ts
 updateTask( task ){
-  this.tasksRef.update( task.$key,{
+  this.tasksRef.update( task.key,{
     title: task.title,
     done: !task.done
   });
@@ -254,7 +257,7 @@ Finalmente declaramos el método `removeTask` que elimina una tarea con el méto
 
 ```ts
 removeTask( task ){
-  this.tasksRef.remove( task.$key );
+  this.tasksRef.remove( task.key );
 }
 ```
 
@@ -284,7 +287,10 @@ export class HomePage {
     public database: AngularFireDatabase
   ) {
     this.tasksRef = this.database.list('tasks');
-    this.tasks = this.tasksRef.valueChanges();
+    this.tasks = this.tasksRef.snapshotChanges()
+    .map(changes => {
+      return changes.map(c => ({ key: c.payload.key, ...c.payload.val() }));
+    });
   }
 
   createTask(){
@@ -319,14 +325,15 @@ export class HomePage {
   }
 
   updateTask( task ){
-    this.tasksRef.update( task.$key,{
+    this.tasksRef.update( task.key,{
       title: task.title,
       done: !task.done
     });
   }
 
   removeTask( task ){
-    this.tasksRef.remove( task.$key );
+    console.log( task );
+    this.tasksRef.remove( task.key );
   }
 }
 
