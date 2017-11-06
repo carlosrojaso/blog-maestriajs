@@ -2,7 +2,7 @@
 layout: post
 title: "Ionic Push Notifications"
 keywords: "ionic push notifications, ionic push, push notifications, notifications, notifications en ionic 2"
-date: 2017-05-25
+date: 2017-11-08
 tags: [push, demos, native]
 categories: ionic2
 repo: "https://github.com/ion-book/demo110"
@@ -28,6 +28,18 @@ versions:
 <amp-img width="1024" height="512" layout="responsive" src="/images/posts/ionic2/2017-01-31-ionic-push-notifications/cover.jpg" alt="Ionic Push Notifications"></amp-img>
 
 {% include general/net-promoter-score.html %} 
+
+# Actualización (08/11/2017)
+<hr/>
+
+Ionic Push ya no será uno de los servicios de ionic, recomendamos manejas notificaciones con Firebase o OneSignal.
+
+Aqui nuestros artículos respecto al tema:
+
+- [Ionic + OneSignal = PushNotification Awesome Easy] (https://blog.ng-classroom.com/blog/ionic2/ionic-and-onesignal/)
+- [Push Notifications para IOS] (https://blog.ng-classroom.com/blog/ionic2/ionic-and-onesignal-for-ios/)
+
+<hr/>
 
 Ionic cuenta con un conjunto de servicios que tienen una gran integración con aplicaciónes hibridas. Se llama Ionic Cloud y ofrece varias herramientas que pueden potenciar las aplicaciónes:
 

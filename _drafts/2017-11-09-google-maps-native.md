@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Google Maps Nativo con Ionic"
-date: 2017-04-19
+date: 2017-11-09
 tags: [maps, demos, ionic2]
 categories: ionic2
 author: daniel_lsanchez

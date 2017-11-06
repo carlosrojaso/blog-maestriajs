@@ -1,13 +1,13 @@
 ---
 layout: post
 title: "Animando items con Ionic, en 5 pasos"
-date: 2017-11-04
+date: 2017-11-07
 tags: [animations, demos]
 categories: ionic2
 repo: "https://github.com/ion-book/demo108"
 laucher: "https://ion-book.github.io/demo108/"
 author: nicobytes
-cover: "/images/posts/ionic2/2016-12-11-animating-items-ionic/cover.jpg"
+cover: "https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2F2017-11-07-animating-items-ionic%2Fcover.jpg?alt=media&token=baa54056-8b6e-44df-9e6c-adeabfdae150"
 remember: true
 versions:
   - title: 'ionic'
@@ -24,7 +24,7 @@ versions:
 
 > Angular integra [Web Animations API](https://web-animations.github.io/web-animations-demos/#waves/){:target="_blank"} para ejecutar animaciones en css que aprovechan la GPU del dispositivo y se puedan controlar con JS, sin duda esto provee un mayor control en las animaciones que podemos hacer.
 
-<amp-img width="1024" height="512" layout="responsive" src="/images/posts/ionic2/2016-12-11-animating-items-ionic/cover.jpg" alt="Animando items con Ionic"></amp-img>
+<amp-img width="1024" height="512" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2F2017-11-07-animating-items-ionic%2Fcover.jpg?alt=media&token=baa54056-8b6e-44df-9e6c-adeabfdae150" alt="Animando items con Ionic"></amp-img>
 
 {% include general/net-promoter-score.html %} 
 
@@ -33,7 +33,7 @@ versions:
 
 Hemos actualizado este demo con el último release **Ionic 3.8**.
 
-<a href="https://github.com/ion-book/demo108" target="_blank" class="btn btn-round btn-success">Ver demo</a>
+<a href="https://ion-book.github.io/demo108/" target="_blank" class="btn btn-round btn-success">Ver demo</a>
 <hr/>
 
 
