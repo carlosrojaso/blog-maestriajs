@@ -1,4 +1,4 @@
-importScripts('workbox-sw.prod.v2.1.0.js');
+/* importScripts('workbox-sw.prod.v2.1.0.js'); */
 
 /**
  * DO NOT EDIT THE FILE MANIFEST ENTRY
@@ -17,6 +17,7 @@ importScripts('workbox-sw.prod.v2.1.0.js');
  * manifest which accounts for changes to local files and update the revision
  * accordingly.
  */
+/*
 const fileManifest = [
   {
     "url": "background-worker.js",
@@ -1259,6 +1260,7 @@ const networkFirstStrategy = workboxSW.strategies.networkFirst();
 
 workboxSW.router.registerRoute('/blog/*', networkFirstStrategy);
 
+*/
 
 /*****pushcrew stuff */
 var version = 6;
