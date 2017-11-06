@@ -204,16 +204,16 @@ Vamos a crear un `trigger` llamado **itemState** que tendrá el estado **in**, e
 ```ts
 animations: [
   trigger('itemState', [
-    state('in', style({opacity: 1, transform: 'translateX(0)'})),
+    state('in', style({transform: 'translateX(0)'})),
+    //Enter
     transition('void => *', [
       style({
-        opacity: 0,
         transform: 'translateX(-100%)'
       }),
-      animate('300ms ease-in')
+      animate('300ms linear')
     ]),
+    //Leave
     transition('* => void', animate('300ms ease-out', style({
-      opacity: 0,
       transform: 'translateX(100%)'
     }))),
   ])
@@ -224,7 +224,7 @@ Con lo cual lograremos el siguiente efecto:
 
 <div class="row">
   <div class="col col-100 col-md-50 col-lg-50">
-    <amp-img width="376" height="183" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2F2017-10-27-camera-and-ionic%2Ftree1.png?alt=media&token=aba780c6-5554-4ee9-b912-511564e883e3"></amp-img>
+    <amp-img width="389" height="248" layout="responsive" src="https://angular.io/generated/images/guide/animations/animation_enter_leave.gif" alt="transitions"></amp-img>
   </div>
 </div>
 
@@ -242,18 +242,16 @@ import { IonicPage, NavController } from 'ionic-angular';
   templateUrl: 'home.html',
   animations: [
     trigger('itemState', [
-      state('in', style({opacity: 1, transform: 'translateX(0)'})),
+      state('in', style({transform: 'translateX(0)'})),
       //Enter
       transition('void => *', [
         style({
-          opacity: 0,
           transform: 'translateX(-100%)'
         }),
-        animate('300ms ease-in')
+        animate('300ms linear')
       ]),
       //Leave
       transition('* => void', animate('300ms ease-out', style({
-        opacity: 0,
         transform: 'translateX(100%)'
       }))),
     ])
