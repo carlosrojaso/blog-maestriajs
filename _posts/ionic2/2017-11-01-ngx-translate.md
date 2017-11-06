@@ -20,7 +20,7 @@ versions:
   - title: 'cordova-cli'
     number: '7.1.0'
   - title: 'ionic-cli'
-    number: '3.15.2'
+    number: '3.16.0'
 ---
 
 > Varias aplicaciones tienen usos en diferentes países, por lo cual las aplicaciones deben adaptar sus contenidos a varios idiomas y con [**ngx-translate**](http://www.ngx-translate.com/){:target="_blank"} podremos hacer esto con ionic.

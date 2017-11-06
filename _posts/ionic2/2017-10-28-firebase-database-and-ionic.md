@@ -12,7 +12,7 @@ remember: true
 editname: "ionic2/2017-10-28-firebase-database-and-ionic.md"
 versions:
   - title: 'ionic'
-    number: '3.7.1'
+    number: '3.8.0'
   - title: 'ionic-native'
     number: '4.3.2'
   - title: 'ionic-app-scripts'
@@ -20,7 +20,7 @@ versions:
   - title: 'cordova-cli'
     number: '7.1.0'
   - title: 'ionic-cli'
-    number: '3.15.1'
+    number: '3.16.0'
   - title: 'angularfire2'
     number: '5.0.0-rc.3'
 ---
