@@ -24,6 +24,8 @@ menu_footer:
     target: '_self'
   - title: Meetups
     url: '/meetups/'
+  - title: Organizadores
+    url: '/organizers/'
     target: '_self'
   - title: Podcast
     url: 'https://itunes.apple.com/us/podcast/ng-podcast/id1235127090?l=es&mt=2'
