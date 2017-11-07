@@ -37,13 +37,14 @@ Hemos actualizado este demo con el último release **Ionic 3.8**.
 También funciona con la más reciente versión de cordova-plugin-googlemaps (v2.1.0) que tiene un increíble rendimiento y una excelente integración con ionic native 4.
 
 <a href="https://github.com/ion-book/demo111" target="_blank" class="btn btn-round btn-success">Ver demo</a>
-<hr/>
 
 <div class="row">
   <div class="col col-100 col-md-50 col-lg-50">
-    <amp-img width="376" height="183" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2Fgoogle-maps-native%2Fscreen8.jpg?alt=media&token=54ac1265-8d4a-437c-997d-8e33d34783a0"></amp-img>
+    <amp-img width="720" height="1280" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2Fgoogle-maps-native%2Fscreen8.jpg?alt=media&token=54ac1265-8d4a-437c-997d-8e33d34783a0"></amp-img>
   </div>
 </div>
+
+<hr/>
 
 Para integrar Google Maps en tu aplicación es necesario que te registres en la cuenta de Google para desarrolladores y generes el API KEY de la aplicación ya sea para android o ios, esta te permitirá trabajar con Google Maps. Aquí dejo el link para ingresar a generar la key [**Link**](https://developers.google.com/maps/?hl=es-419.){:target="_blank"}
 
