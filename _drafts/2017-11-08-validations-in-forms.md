@@ -2,40 +2,40 @@
 layout: post
 title: "Validaciones en Formularios"
 keywords: "validaciones con ionic, formularios con angular 2, validar email con angular 2, formbuilder, formularios con ionic 2"
-date: 2017-05-24
+date: 2017-11-08
 tags: [forms, demos]
 categories: ionic2
 repo: "https://github.com/ion-book/demo109"
+laucher: "https://ion-book.github.io/demo109/"
 author: nicobytes
 cover: "https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2Fvalidations-in-forms%2FValidaciones%20en%20Formularios.jpg?alt=media"
 remember: true
 versions:
   - title: 'ionic'
-    number: '3.3.0'
+    number: '3.8.0'
   - title: 'ionic-native'
-    number: '3.10.3'
+    number: '4.3.2'
   - title: 'ionic-app-scripts'
-    number: '1.3.7'
+    number: '3.0.1'
   - title: 'cordova-cli'
-    number: '7.0.1'
+    number: '7.1.0'
   - title: 'ionic-cli'
-    number: '3.3.0'
+    number: '3.16.0'
 ---
 
 > La forma más común de capturar información de los usuarios son los **Formularios** y depende de una buena UI/UX ganar o perder un usuario en nuestra aplicación.
 <!--summary-->
 
-<amp-img width="1024" height="512" layout="responsive" src="/images/posts/ionic2/2016-12-29-validations-in-forms/cover.jpg" alt="Validaciones en Formularios"></amp-img>
+<amp-img width="1024" height="512" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2Fvalidations-in-forms%2FValidaciones%20en%20Formularios.jpg?alt=media" alt="Validaciones en Formularios"></amp-img>
 
 {% include general/net-promoter-score.html %} 
 
-# Actualización (21/05/2017)
+# Actualización (08/11/2017)
 <hr/>
 
-Hemos actualizado este demo con el último release de **Ionic 3**, si aún estas en alguna de las versiones anteriores puedes seguir estos pasos [de Ionic 2 a Ionic 3](https://www.ion-book.com/blog/tips/ionic-2-to-ionic3/){:target="_blank"}.
+Hemos actualizado este demo con el último release **Ionic 3.8**.
 
-Ademas en este demo usamos la función de **lazy loading** y **@IonicPage**. Puedes ver el repositorio [**Demo109**](https://github.com/ion-book/demo109){:target="_blank"}
-
+<a href="https://ion-book.github.io/demo109/" target="_blank" class="btn btn-round btn-success">Ver demo</a>
 <hr/>
 
 Por eso es de vital importancia hacer un buen manejo de ellos, tener las validaciones adecuadas y por esto Angular nos ofrece **FormBuilder**, una clase que nos provee una completa herramienta para controlar y validar formularios de forma muy eficiente y sencilla.
@@ -184,7 +184,7 @@ El proyecto inicia con el template **blank** y por esto tendremos una estructura
 
 <div class="row">
   <div class="col col-100 col-md-50 col-lg-50">
-    <amp-img width="376" height="183" layout="responsive" src="/images/posts/ionic2/2016-07-11-camera-and-ionic/tree1.png"></amp-img>
+    <amp-img width="376" height="183" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2F2017-10-27-camera-and-ionic%2Ftree1.png?alt=media&token=aba780c6-5554-4ee9-b912-511564e883e3"></amp-img>
   </div>
 </div>
 
@@ -326,4 +326,4 @@ Ahora en el template vamos a controlar cómo mostrar los errores al usuario a pa
 </form>
 ```
 
-En el template agregamos cada uno de los mensajes correspondientes a cada error, finalmente si todo el formulario es válido se habilita el botón `Guardar` y podremos obtener la información con el método `saveData` que está en `home.ts` 
+En el template agregamos cada uno de los mensajes correspondientes a cada error, finalmente si todo el formulario es válido se habilita el botón `Guardar` y podremos obtener la información con el método `saveData` que está en `home.ts`.

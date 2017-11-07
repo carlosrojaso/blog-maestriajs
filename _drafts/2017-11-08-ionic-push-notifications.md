@@ -2,12 +2,12 @@
 layout: post
 title: "Ionic Push Notifications"
 keywords: "ionic push notifications, ionic push, push notifications, notifications, notifications en ionic 2"
-date: 2017-05-25
+date: 2017-11-08
 tags: [push, demos, native]
 categories: ionic2
 repo: "https://github.com/ion-book/demo110"
 author: nicobytes
-cover: "/images/posts/ionic2/2017-01-31-ionic-push-notifications/cover.jpg"
+cover: "https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2Fionic-push-notifications%2Fcover.jpg?alt=media&token=8b799ab0-3cd7-400c-abe2-3af45b46d2ef"
 remember: true
 versions:
   - title: 'ionic'
@@ -25,21 +25,36 @@ versions:
 > Implementar el sistema de **notificaciones push** en una aplicación es una de las tareas más comunes y Ionic tiene un servicio que nos ahorra este trabajo.
 <!--summary-->
 
-<amp-img width="1024" height="512" layout="responsive" src="/images/posts/ionic2/2017-01-31-ionic-push-notifications/cover.jpg" alt="Ionic Push Notifications"></amp-img>
+<amp-img width="1024" height="512" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2Fionic-push-notifications%2Fcover.jpg?alt=media&token=8b799ab0-3cd7-400c-abe2-3af45b46d2ef" alt="Ionic Push Notifications"></amp-img>
 
 {% include general/net-promoter-score.html %} 
+
+# Actualización (08/11/2017)
+<hr/>
+
+Ionic Push ya no será uno de los servicios de ionic, recomendamos manejas notificaciones con Firebase o OneSignal.
+
+<amp-img width="826" height="156" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2Fionic-push-notifications%2Falert.png?alt=media&token=1fd9d2b2-d141-4681-bf26-0a978acc3a1e" alt="Validaciones en Formularios"></amp-img>
+
+Aqui nuestros artículos respecto al tema:
+
+[Ionic + OneSignal = PushNotification Awesome Easy](https://blog.ng-classroom.com/blog/ionic2/ionic-and-onesignal/){:target="_blank"}.
+
+[Push Notifications para IOS](https://blog.ng-classroom.com/blog/ionic2/ionic-and-onesignal-for-ios/){:target="_blank"}.
+
+<hr/>
 
 Ionic cuenta con un conjunto de servicios que tienen una gran integración con aplicaciónes hibridas. Se llama Ionic Cloud y ofrece varias herramientas que pueden potenciar las aplicaciónes:
 
 <div class="row">
   <div class="col col-100 col-md-50 offset-md-25 col-lg-50 offset-lg-25">
-    <amp-img width="624" height="519" layout="responsive" src="/images/posts/ionic2/2017-01-31-ionic-push-notifications/screen.png" alt="Validaciones en Formularios"></amp-img>
+    <amp-img width="624" height="519" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2Fionic-push-notifications%2Fscreen.png?alt=media&token=95505aa0-fdc7-4e6a-b55a-cfe2dd7f0a24" alt="Validaciones en Formularios"></amp-img>
   </div>
 </div>
 
 En este artículo implementaremos el sistema **Ionic Push + Ionic**, pero primero revisaremos cómo funciona el sistema de notificaciones, con la siguiente gráfica:
 
-<amp-img width="1600" height="595" layout="responsive" src="/images/posts/ionic2/2017-01-31-ionic-push-notifications/screen1.png" alt="Validaciones en Formularios"></amp-img>
+<amp-img width="1600" height="595" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2Fionic-push-notifications%2Fscreen1.png?alt=media&token=2a13608f-182c-4511-ab5e-e1f4762f0bd9" alt="Validaciones en Formularios"></amp-img>
 
 *Nota: GCM ahora es FCM*
 
@@ -71,7 +86,7 @@ ionic platform add android
 
 Ahora debemos crear una cuenta en [ionic.io](https://apps.ionic.io/login){:target="_blank"}, para poder usar Ionic Push.
 
-<amp-img width="1366" height="678" layout="responsive" src="/images/posts/ionic2/2017-01-31-ionic-push-notifications/screen2.png"></amp-img>
+<amp-img width="1366" height="678" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2Fionic-push-notifications%2Fscreen2.png?alt=media&token=0f8cfcd2-9641-4918-a0f0-cc8ec64eb248"></amp-img>
 
 ## Paso 3: Instalar Ionic Cloud.
 
@@ -118,7 +133,7 @@ export class AppModule {}
 
 Si todo quedo bien dentro de la cuenta de ionic.io debe mostrar la aplicación creada, así:
 
-<amp-img width="1366" height="678" layout="responsive" src="/images/posts/ionic2/2017-01-31-ionic-push-notifications/screen3.png"></amp-img>
+<amp-img width="1366" height="678" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2Fionic-push-notifications%2Fscreen3.png?alt=media&token=45396c31-9950-43aa-98f3-df89c9f03d16"></amp-img>
 
 {% include blog/subscribe.html %}
 
@@ -131,19 +146,19 @@ Ahora para enviar mensajería para Android debemos generar las siguientes llaves
 
 Estas llaves se generan desde firebase.google.com, donde debemos crear un proyecto y luego ir a la página de **Setting > Cloud Messaging**, así:
 
-<amp-img width="1366" height="678" layout="responsive" src="/images/posts/ionic2/2017-01-31-ionic-push-notifications/screen4.png"></amp-img>
+<amp-img width="1366" height="678" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2Fionic-push-notifications%2Fscreen4.png?alt=media&token=34da8dce-12c2-419d-b2f4-1adf5d508e20"></amp-img>
 
 Ahora estas credenciales debemos adjuntarlas en la plataforma de ionic.io, seleccionar la aplicación y luego ir a **Setting > Certificates**, así:
 
-<amp-img width="1366" height="678" layout="responsive" src="/images/posts/ionic2/2017-01-31-ionic-push-notifications/screen5.png"></amp-img>
+<amp-img width="1366" height="678" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2Fionic-push-notifications%2Fscreen5.png?alt=media&token=8ea132f4-6de6-4ac4-9bf0-3e0559b84417"></amp-img>
 
 Luego debemos crear un perfil de seguridad:
 
-<amp-img width="1366" height="678" layout="responsive" src="/images/posts/ionic2/2017-01-31-ionic-push-notifications/screen6.png"></amp-img>
+<amp-img width="1366" height="678" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2Fionic-push-notifications%2Fscreen6.png?alt=media&token=d00017c1-a358-4df6-8ef0-732bebc0828c"></amp-img>
 
 Y por último editamos el perfil de seguridad creado y en la sección de **Android** agregamos nuestra **FCM Server Key**:
 
-<amp-img width="1366" height="678" layout="responsive" src="/images/posts/ionic2/2017-01-31-ionic-push-notifications/screen7.png"></amp-img>
+<amp-img width="1366" height="678" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2Fionic-push-notifications%2Fscreen7.png?alt=media&token=6fd474c0-f09b-40f5-b03c-ebcfd06aa8c5"></amp-img>
 
 ## Paso 5: Instalar Plugin Push
 
@@ -250,33 +265,33 @@ Ahora para enviar notificaciones podemos usar la plataforma de ionic.io y probar
 
 Primero vamos a la sección de Push:
 
-<amp-img width="1366" height="678" layout="responsive" src="/images/posts/ionic2/2017-01-31-ionic-push-notifications/screen8.png"></amp-img>
+<amp-img width="1366" height="678" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2Fionic-push-notifications%2Fscreen8.png?alt=media&token=5404dce4-e556-47ed-9357-79fcd5151695"></amp-img>
 
 Luego creamos los detalles de nuestro aplicacion, como mensaje, título, sonido etc.
 
-<amp-img width="1366" height="678" layout="responsive" src="/images/posts/ionic2/2017-01-31-ionic-push-notifications/screen9.png"></amp-img>
+<amp-img width="1366" height="678" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2Fionic-push-notifications%2Fscreen9.png?alt=media&token=0d2a0216-04e6-4eec-831b-31c1d996c916"></amp-img>
 
 Luego seleccionamos los usuarios a los que queremos que llegue la notificación.
 
-<amp-img width="1366" height="678" layout="responsive" src="/images/posts/ionic2/2017-01-31-ionic-push-notifications/screen10.png"></amp-img>
+<amp-img width="1366" height="678" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2Fionic-push-notifications%2Fscreen10.png?alt=media&token=ac90230c-2b6f-4a58-b7d9-796f97b66c16"></amp-img>
 
 *Nota: Puedes usar el servicio de Ionic Auth + Ionic Push para así registrar a los usuarios y así poder organizarlos en grupos y poder enviar notificaciones segmentadas.*
 
 Luego seleccionamos el perfil de seguridad y enviamos.
 
-<amp-img width="1366" height="678" layout="responsive" src="/images/posts/ionic2/2017-01-31-ionic-push-notifications/screen11.png"></amp-img>
+<amp-img width="1366" height="678" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2Fionic-push-notifications%2Fscreen11.png?alt=media&token=569dbb97-0a06-4965-a415-1f5636a169e1"></amp-img>
 
 ## Resultado:
 
 <div class="row wrap">
   <div class="col col-100 col-md-33 col-lg-33">
-    <amp-img width="720" height="1280" layout="responsive" src="/images/posts/ionic2/2017-01-31-ionic-push-notifications/screen12.png"></amp-img>
+    <amp-img width="720" height="1280" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2Fionic-push-notifications%2Fscreen12.png?alt=media&token=3483dda6-d599-4ead-bdcd-50eb6f6a5dd1"></amp-img>
   </div>
   <div class="col col-100 col-md-33 col-lg-33">
-    <amp-img width="720" height="1280" layout="responsive" src="/images/posts/ionic2/2017-01-31-ionic-push-notifications/screen13.png"></amp-img>
+    <amp-img width="720" height="1280" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2Fionic-push-notifications%2Fscreen13.png?alt=media&token=35f91c47-af7d-490a-9ed8-1f53c93bc9a0"></amp-img>
   </div>
   <div class="col col-100 col-md-33 col-lg-33">
-    <amp-img width="720" height="1280" layout="responsive" src="/images/posts/ionic2/2017-01-31-ionic-push-notifications/screen14.png"></amp-img>
+    <amp-img width="720" height="1280" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2Fionic-push-notifications%2Fscreen14.png?alt=media&token=f87d8c9a-9353-44ef-8c54-0b8d6e1bcd63"></amp-img>
   </div>
 </div>
 <br>
