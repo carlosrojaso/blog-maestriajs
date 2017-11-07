@@ -36,12 +36,11 @@ Ionic Push ya no será uno de los servicios de ionic, recomendamos manejas notif
 
 <amp-img width="826" height="156" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2Fionic-push-notifications%2Falert.png?alt=media&token=1fd9d2b2-d141-4681-bf26-0a978acc3a1e" alt="Validaciones en Formularios"></amp-img>
 
-
 Aqui nuestros artículos respecto al tema:
 
-[Ionic + OneSignal = PushNotification Awesome Easy](https://blog.ng-classroom.com/blog/ionic2/ionic-and-onesignal/)
+[Ionic + OneSignal = PushNotification Awesome Easy](https://blog.ng-classroom.com/blog/ionic2/ionic-and-onesignal/){:target="_blank"}.
 
-[Push Notifications para IOS](https://blog.ng-classroom.com/blog/ionic2/ionic-and-onesignal-for-ios/)
+[Push Notifications para IOS](https://blog.ng-classroom.com/blog/ionic2/ionic-and-onesignal-for-ios/){:target="_blank"}.
 
 <hr/>
 
