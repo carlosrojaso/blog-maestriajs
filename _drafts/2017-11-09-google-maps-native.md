@@ -39,7 +39,7 @@ También funciona con la más reciente versión de cordova-plugin-googlemaps (v2
 <a href="https://github.com/ion-book/demo111" target="_blank" class="btn btn-round btn-success">Ver demo</a>
 
 <div class="row">
-  <div class="col col-100 col-md-50 col-lg-50">
+  <div class="col col-100 col-md-33 col-lg-33">
     <amp-img width="720" height="1280" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2Fgoogle-maps-native%2Fscreen8.jpg?alt=media&token=54ac1265-8d4a-437c-997d-8e33d34783a0"></amp-img>
   </div>
 </div>
