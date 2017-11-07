@@ -1,4 +1,4 @@
-/* importScripts('workbox-sw.prod.v2.1.0.js'); */
+importScripts('workbox-sw.prod.v2.1.0.js');
 
 /**
  * DO NOT EDIT THE FILE MANIFEST ENTRY
@@ -17,8 +17,11 @@
  * manifest which accounts for changes to local files and update the revision
  * accordingly.
  */
-/*
 const fileManifest = [
+  {
+    "url": "404.html",
+    "revision": "c980ee9e0748fe272a6d05259082ee21"
+  },
   {
     "url": "background-worker.js",
     "revision": "f755ac021ac2de2363060af6b7dc8683"
@@ -1255,13 +1258,3 @@ const fileManifest = [
 
 const workboxSW = new self.WorkboxSW();
 workboxSW.precache(fileManifest);
-
-const networkFirstStrategy = workboxSW.strategies.networkFirst();
-
-workboxSW.router.registerRoute('/blog/*', networkFirstStrategy);
-
-*/
-
-/*****pushcrew stuff */
-var version = 6;
-importScripts('https://cdn.pushcrew.com/sw/cd961b7fc40d92661a578254340c720d.js');
