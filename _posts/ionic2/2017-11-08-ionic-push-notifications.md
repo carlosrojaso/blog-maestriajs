@@ -9,6 +9,7 @@ repo: "https://github.com/ion-book/demo110"
 author: nicobytes
 cover: "https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2Fionic-push-notifications%2Fcover.jpg?alt=media&token=8b799ab0-3cd7-400c-abe2-3af45b46d2ef"
 remember: true
+editname: "ionic2/2017-11-08-ionic-push-notifications.md"
 versions:
   - title: 'ionic'
     number: '3.3.0'
