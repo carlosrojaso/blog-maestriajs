@@ -2,7 +2,7 @@
 layout: post
 title: "Validaciones en Formularios"
 keywords: "validaciones con ionic, formularios con angular 2, validar email con angular 2, formbuilder, formularios con ionic 2"
-date: 2017-11-08
+date: 2017-11-10
 tags: [forms, demos]
 categories: ionic2
 repo: "https://github.com/ion-book/demo109"
