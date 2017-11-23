@@ -5,10 +5,12 @@ keywords: "ion-book,html5,javascript,mobile,ionic,hybrid,phonegap,cordova,native
 baseurl: ""
 urlblog: '/blog'
 cover: "/images/cover.jpg"
-path: 'https://www.ion-book.com/'
+path: 'https://blog.ng-classroom.com/'
 
 pwa_enabled: 0
 ads_enabled: 0
+push_notifications: 1
+google_optimize: 0
 
 timezone: "America/Bogota"
 

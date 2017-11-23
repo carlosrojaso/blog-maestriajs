@@ -20,579 +20,583 @@ importScripts('workbox-sw.prod.v2.1.0.js');
 const fileManifest = [
   {
     "url": "404.html",
-    "revision": "7a2e832c41cde9323430ef4f98664e94"
+    "revision": "c980ee9e0748fe272a6d05259082ee21"
   },
   {
     "url": "background-worker.js",
-    "revision": "da10f31a22e28cd3054b43da218b6116"
+    "revision": "f755ac021ac2de2363060af6b7dc8683"
   },
   {
     "url": "blog/authors/carlosrojas/index.html",
-    "revision": "a23f73aaeeacedf3638f41a5c61e70b5"
+    "revision": "a3349ba34e3eb5dd3d46ea7b02e09272"
   },
   {
     "url": "blog/authors/daniel_lsanchez/index.html",
-    "revision": "6ee25ebadc2e12a82f7ea236abd85f23"
+    "revision": "41d3f89d8eaa9a6f3f8eeef8440823a0"
   },
   {
     "url": "blog/authors/darkensses/index.html",
-    "revision": "58571cedbc590965151ed8a6542a62b3"
+    "revision": "c8f7a12353756ec2e9c19250db688092"
   },
   {
     "url": "blog/authors/EduardoIbarra/index.html",
-    "revision": "e2ee1d12e72aa4b395299f49e97d63e0"
+    "revision": "4dc1c10fa5d5a40aadfef14756e725f1"
   },
   {
     "url": "blog/authors/edyavendano/index.html",
-    "revision": "4a64542524ad03d50f708bc45487f8bd"
+    "revision": "943febb342acc27a524c1a9f1f6f633e"
   },
   {
     "url": "blog/authors/hllauradofalco/index.html",
-    "revision": "a2a7bfb4861d0f0e71825da3315eb77d"
+    "revision": "77555c80affba7de4f4213185a763a98"
   },
   {
     "url": "blog/authors/index.html",
-    "revision": "096930daaff8b46ec08e79c319ce0b80"
+    "revision": "ddbfc895e85bbbccb2cff5f711d45936"
   },
   {
     "url": "blog/authors/javaruiz/index.html",
-    "revision": "7c202cf0e296547ba9d2e54acbf7ab08"
+    "revision": "e047d25a4daee4307a028d12d37bfb99"
   },
   {
     "url": "blog/authors/javebratt/index.html",
-    "revision": "acad829e573735753ef39e6f9a7ff045"
+    "revision": "913b6642f8153243f42a04f8740dfcb3"
   },
   {
     "url": "blog/authors/javico2609/index.html",
-    "revision": "d49637386dabb24c417acf66e45167f8"
+    "revision": "4ad004d835af18c54ff32e1a03777a2d"
   },
   {
     "url": "blog/authors/jorgecano/index.html",
-    "revision": "a67efc27463f1f403862fdde0537aedc"
+    "revision": "b044c8176744aa0cc4d2c5c2e31c14d2"
   },
   {
     "url": "blog/authors/levanocarlos/index.html",
-    "revision": "e879502a36ce32f7b4527f91444e21da"
+    "revision": "adf3d244954d3650522c1b48fe234f29"
   },
   {
     "url": "blog/authors/mayrititis/index.html",
-    "revision": "14799bf456b0c2cbd35e2a586415750c"
+    "revision": "584abd5c2652af0bcea1f71574d37551"
   },
   {
     "url": "blog/authors/nicobytes/index.html",
-    "revision": "b70adfc15211bd97cb1ae3b03639c1ac"
+    "revision": "cef8f35cc1d3815d0a09d57a7072e9fb"
   },
   {
     "url": "blog/authors/thecouk/index.html",
-    "revision": "d148bddc074998d3b2fcedd9f91ffb57"
+    "revision": "64db4ff3fe2f00701615ce0c8bbd2919"
   },
   {
     "url": "blog/authors/unjavascripter/index.html",
-    "revision": "af81008f67cac618f4a736d4e45f8191"
+    "revision": "4ae28f0dd82e776107ab849b8efc7cf3"
   },
   {
     "url": "blog/hechoen/Honi/index.html",
-    "revision": "6be97511e5e8496b9cc86b0da582a8ca"
+    "revision": "8733920da4cd2dc6459ee2c6630be629"
   },
   {
     "url": "blog/hechoen/index.html",
-    "revision": "c17cdf89bccbaa8f4238fcab0db4694d"
+    "revision": "10170d219470838513ce4153e685b426"
   },
   {
     "url": "blog/hechoen/Joule/index.html",
-    "revision": "5051a5f95d51e26daa74750047853552"
+    "revision": "efe71f15b5e51fd90b2ac40d45824453"
   },
   {
     "url": "blog/hechoen/JustWatch/index.html",
-    "revision": "92ce4417e5352c849128e06b172ff8bb"
+    "revision": "4b7fe68ede89df3e86e80f6f9bb37119"
   },
   {
     "url": "blog/hechoen/MarketWatch/index.html",
-    "revision": "add69a6208d5cde2cb6ff4ab3f556515"
+    "revision": "7109f8545b10e0f0fb1a9d37c0557976"
   },
   {
     "url": "blog/hechoen/Microsoft-Flow/index.html",
-    "revision": "fe996637899e79eee28ac03738a764c3"
+    "revision": "94a984eb6cf18598587fc448a19ab3db"
   },
   {
     "url": "blog/hechoen/Pacifica/index.html",
-    "revision": "ebd48271df7fdcc996c28556d1f78ac8"
+    "revision": "e7648b20385eb96d3fc7157e184ea87c"
   },
   {
     "url": "blog/hechoen/PhoneFlare/index.html",
-    "revision": "af0e58a1bd6761943b8ca8570e4027b1"
+    "revision": "f7787d7ac7e62a9976c583b522d92205"
   },
   {
     "url": "blog/hechoen/shopit/index.html",
-    "revision": "15b2a1a22790175ccbc0115519fcdc97"
+    "revision": "c86fee3218c94b392fb6f42cfca9e2a6"
   },
   {
     "url": "blog/hechoen/Sworkit/index.html",
-    "revision": "ada6f2a84ade019e541ab2cebfd615cb"
+    "revision": "cfb7e665ca32735f1939a73df431c29a"
   },
   {
     "url": "blog/hechoen/Untappd/index.html",
-    "revision": "3c6f4e160da8f966b308e7f3b2d6483e"
+    "revision": "2aaaa51c6b838a84ddb7f085e852c150"
   },
   {
     "url": "blog/index.html",
-    "revision": "5ccb4cadd19d27401468a60cb5f690b5"
+    "revision": "405bfac669d3effa7e3a71cdd27804a2"
   },
   {
     "url": "blog/ionic2/angular2/index.html",
-    "revision": "0add103a8d52fb3c8beb725f630b4dbe"
+    "revision": "79edf183aced7f63ec60cfde2ff7422d"
   },
   {
     "url": "blog/ionic2/animating-items-ionic/index.html",
-    "revision": "7d23f2dad5522a32a2a409d0c24e5c04"
+    "revision": "07136b23630ac45764d3065be9827607"
   },
   {
     "url": "blog/ionic2/auth0-ionic/index.html",
-    "revision": "16775ce5734d7434c58430e41e3373e5"
+    "revision": "e1ba435d9e5f18d5bbdc650c50420eda"
   },
   {
     "url": "blog/ionic2/camera-and-ionic/index.html",
-    "revision": "b286bafc4d9afafc11fbb31e30dcafa0"
+    "revision": "d1e7c32b4bce4f26ddb1735f6ecbc35e"
   },
   {
     "url": "blog/ionic2/clase-1-feed/index.html",
-    "revision": "baa671f760ba0c8e2d1a69fc3e576c1f"
+    "revision": "f0c9c32f3ecc4015495c9974b5d31246"
   },
   {
     "url": "blog/ionic2/clase-2-feed/index.html",
-    "revision": "53beeba3908d7355ddc516b5bb6e853c"
+    "revision": "3596f803026b208a303d2b442bbdcbac"
   },
   {
     "url": "blog/ionic2/clase-3-user-auth/index.html",
-    "revision": "4813c6e43cd96d08ea244edd0c522f74"
+    "revision": "8b00583547fa9f108f0788b8872eaec6"
   },
   {
     "url": "blog/ionic2/clase-4-objects/index.html",
-    "revision": "f0c8e59965c1b7f2a5114a35509e606f"
+    "revision": "8a4d9e686bed73c7c19b435a45ba3c25"
   },
   {
     "url": "blog/ionic2/custom-colors/index.html",
-    "revision": "4f9d3ec8dd19e7ffbc9f4b2b43586f05"
+    "revision": "0af32e0a9d5bf5ae54ab7d13525461a8"
   },
   {
     "url": "blog/ionic2/directions-google-js-ionic/index.html",
-    "revision": "22135fc5266983c283421403193c49c7"
+    "revision": "8535a15ef6aaa95cf511053036119386"
   },
   {
     "url": "blog/ionic2/directivas/index.html",
-    "revision": "0c3d068c52ba2be9f6bdc476a8ccd867"
+    "revision": "77fa26dc2b57eb12e1ce7c8fb07a59d9"
   },
   {
     "url": "blog/ionic2/electron-ionic/index.html",
-    "revision": "258817f722bedee5eaf46ad46d0799a0"
+    "revision": "10a159456b4309202ee2f9ccbb6bff70"
   },
   {
     "url": "blog/ionic2/facebook-and-ionic/index.html",
-    "revision": "b8b68dbb01b6cb3e0acccfc5606b7054"
+    "revision": "efbdbf397eacb291f7555650d771b552"
   },
   {
     "url": "blog/ionic2/firebase-angularfire-ionic/index.html",
-    "revision": "a06d9d3bd42abacfc52b619340657ee5"
+    "revision": "d4041fe907eb2b8638d171b06b827e94"
   },
   {
     "url": "blog/ionic2/firebase-database-and-ionic/index.html",
-    "revision": "69db887e1e04923584385b18b688de47"
+    "revision": "2404a56f153fc40fb1eef7db6d89ce94"
   },
   {
     "url": "blog/ionic2/firebase-functions/index.html",
-    "revision": "283640e3c5242448d6672d842cbdab79"
+    "revision": "912262fa323e21cbdeefc478c2e89a06"
   },
   {
     "url": "blog/ionic2/firebase-storage/index.html",
-    "revision": "d9483131f505922bfde281546b12b7ca"
+    "revision": "83ba0f191fbde6ee35ac0b7b00b42559"
   },
   {
     "url": "blog/ionic2/folder-browser-para-android/index.html",
-    "revision": "1fb853441066019021452614873c4e2c"
+    "revision": "dec95f7e2f56c5c3e776cdbb1555cfa7"
   },
   {
     "url": "blog/ionic2/forms-with-ionic/index.html",
-    "revision": "cb1e8fba34bba01bc0757cb3efe00ed1"
+    "revision": "52e56ebf8ec0e7c2aaf599a2222dadcd"
   },
   {
     "url": "blog/ionic2/formularios-firebase/index.html",
-    "revision": "23e200c868b30f8457759afd73fdcb82"
+    "revision": "1a88c60321b765a400429157e3c1a0d7"
   },
   {
     "url": "blog/ionic2/fundamentos-SASS/index.html",
-    "revision": "6b1344f229d7c711dfc5ead361778d31"
+    "revision": "57b9600dec3629627617d2e96cffd8f9"
   },
   {
     "url": "blog/ionic2/google-maps-and-geocoder/index.html",
-    "revision": "b19019ee5981fb2589c3a86bd4faefad"
+    "revision": "917a18a6152ba19817012022e2ab170d"
   },
   {
     "url": "blog/ionic2/google-maps-js-and-ionic/index.html",
-    "revision": "3790b1427b52cdf5592a66f76c85d087"
+    "revision": "5f60d0af63bb0ee85a3b49cb03186a36"
   },
   {
     "url": "blog/ionic2/google-maps-markers/index.html",
-    "revision": "bef82e654390d82e00465432326717d7"
+    "revision": "c9ed81ac46c9d63836047226d9db28a5"
   },
   {
     "url": "blog/ionic2/google-maps-native/index.html",
-    "revision": "4d606b3fecc24423591dddeeb65eff66"
+    "revision": "7a476f4d57bb22383cc8b833fb6bc08e"
   },
   {
     "url": "blog/ionic2/index.html",
-    "revision": "8756f00b195ff25ded024f487deb7b8f"
+    "revision": "c8be8474908995505ed91ddf83c19d2e"
   },
   {
     "url": "blog/ionic2/intro-jasmine/index.html",
-    "revision": "6a020679f0a2139f2c9accee8e5ef1db"
+    "revision": "7a9de9433486b7634ad5bc1d771b85b0"
   },
   {
     "url": "blog/ionic2/intro-typescript/index.html",
-    "revision": "c71a42e53d8348cd36bc1e39cc62c7d1"
+    "revision": "d1ae375ca79d2392fe8ea90bedaffbb1"
   },
   {
     "url": "blog/ionic2/ionic-2-firebase-3-rc0/index.html",
-    "revision": "c7657edc52b388aebd51e82d7044dca7"
+    "revision": "4c2bf92f4378ff685cc34f307b1a40f3"
   },
   {
     "url": "blog/ionic2/ionic-and-onesignal-for-ios/index.html",
-    "revision": "09b54d66f19ebb125380209088044273"
+    "revision": "0e70a75487389e428ef1f62636c54608"
   },
   {
     "url": "blog/ionic2/ionic-and-onesignal/index.html",
-    "revision": "98c5d69d04c54a33cd90854445291187"
+    "revision": "de7757eefd7de89f62bcb6a2e7238dc5"
   },
   {
     "url": "blog/ionic2/ionic-firebase/index.html",
-    "revision": "9726bbd487d9016286e0805f34523827"
+    "revision": "0ee2b1c656b50a9c56eaf4f345a0d403"
   },
   {
     "url": "blog/ionic2/ionic-native/index.html",
-    "revision": "277202282482982d2f7e11e8255b0fd2"
+    "revision": "3b156e56d1156db4d6dd48e134e1d6f3"
   },
   {
     "url": "blog/ionic2/ionic-plugin-inappbrowser/index.html",
-    "revision": "e5e36d9516f872ce54e7ee3add3cd428"
+    "revision": "2c3bd49091d1aa3344e033bed6314942"
   },
   {
     "url": "blog/ionic2/ionic-push-notifications/index.html",
-    "revision": "db96d8cb39ed625da1d85c68c2872544"
+    "revision": "71d8dec61e467246a248d5f90adf3276"
   },
   {
     "url": "blog/ionic2/ionic-redux/index.html",
-    "revision": "ac6010db67b3369c79f35be7dd851906"
+    "revision": "520a6e7354fbc342d8c2fd29ca06fd89"
   },
   {
     "url": "blog/ionic2/ionic2/index.html",
-    "revision": "ac69b96ace3521a0c77153e4e040598f"
+    "revision": "9c7bb166b235a9faee026ba35db988cd"
   },
   {
     "url": "blog/ionic2/ngrx-charts-bars/index.html",
-    "revision": "51188033991cccf659c7df9658463295"
+    "revision": "bf0ad5fc74a09363195fccc48a3fee0b"
   },
   {
     "url": "blog/ionic2/ngx-translate/index.html",
-    "revision": "c7470c8f626b7cd898dd7857f8dacd8e"
+    "revision": "7afa4104017e380e11a23417bf666084"
   },
   {
     "url": "blog/ionic2/observables-angular/index.html",
-    "revision": "ea9e49ff72dd43c2318fc872757047ec"
+    "revision": "abf4b98b295fe27ecd272615679c4e0e"
   },
   {
     "url": "blog/ionic2/observables/index.html",
-    "revision": "f2fb985d6afffe35e6b3365d585eda45"
+    "revision": "9c4bf63dba08b1095dad79f549e6cdf0"
   },
   {
     "url": "blog/ionic2/pwa-ionic/index.html",
-    "revision": "17e94f9630a2a13f339f40206ddf9d6b"
+    "revision": "e6ff5fbf3db17cbf6cc4eaa5bdcd3f04"
   },
   {
     "url": "blog/ionic2/rest-api-with-ionic/index.html",
-    "revision": "b8dec21721a3d1213c1475c83d344552"
+    "revision": "ede4e4902a39bd4bddac97ec94840dec"
   },
   {
     "url": "blog/ionic2/sms-ionic/index.html",
-    "revision": "98a9f69cf06c8255073f07beff5077d5"
+    "revision": "b13c5f645225a4ac5b080c63051fafa3"
   },
   {
     "url": "blog/ionic2/sqlite-and-ionic/index.html",
-    "revision": "c00267e7d74ec7f7385124905b067168"
+    "revision": "4c5d01b63a21b70677be804af78b8887"
   },
   {
     "url": "blog/ionic2/sync-offline/index.html",
-    "revision": "c73a0dca012ee6add604e1d2569e12b0"
+    "revision": "c952e09eee2226a43d34b98f28f0d084"
   },
   {
     "url": "blog/ionic2/typescript/index.html",
-    "revision": "530cd52fc07ba7a3bba2a30e2a57c3b2"
+    "revision": "0b5e56e6bb7fa7fa63ec5d1c0a7b26fc"
   },
   {
     "url": "blog/ionic2/uni-test-provider/index.html",
-    "revision": "bf49778e217150970f8c39978645f1e5"
+    "revision": "009ed55080e1a05aab55ed2706d74a24"
   },
   {
     "url": "blog/ionic2/unit-test-config-ionic/index.html",
-    "revision": "6f87d25f4d67e8693875c715b695026e"
+    "revision": "8dd2fa6f0424a1c50ad21cf8533440d1"
   },
   {
     "url": "blog/ionic2/unit-test-http-client/index.html",
-    "revision": "be9be0ed9fc90e7a839560fbaef34747"
+    "revision": "a62e7db761ccb61211e7e3b1a9554c26"
   },
   {
     "url": "blog/ionic2/validations-in-forms/index.html",
-    "revision": "e0f662f2807375e07492b622e7b1a35a"
+    "revision": "752b59140b5866f29f1aef3deb1394ff"
   },
   {
     "url": "blog/ionic3/curso-ionic-3-firebase/index.html",
-    "revision": "5b5426e2b55aa95e04f77be983d352bc"
+    "revision": "c672a444bcfac9ba307398b60ef8eda4"
+  },
+  {
+    "url": "blog/nativescript/nativescript/index.html",
+    "revision": "7c0d968b18b41b75a07f20f812ab621f"
   },
   {
     "url": "blog/news/angular2-ready/index.html",
-    "revision": "daddc2b5339d69bc415024a06e5b59b5"
+    "revision": "9b95a55cc9c8983123d7a58f4b9093e4"
   },
   {
     "url": "blog/news/announcing-ionic-2-0-0-final/index.html",
-    "revision": "22575c4ae8a094367c81288bda07c197"
+    "revision": "f3f1119d661729cf4618760c7a7d1779"
   },
   {
     "url": "blog/news/beta8/index.html",
-    "revision": "25a30312c2417b8d8afbc1a711658cec"
+    "revision": "daf2551dd5cbde88571f902e8f1cd063"
   },
   {
     "url": "blog/news/beta9/index.html",
-    "revision": "03b7a8b632f964bcb06bae13409d3762"
+    "revision": "89c9a37122dbee06cf95aa3a21549a3c"
   },
   {
     "url": "blog/news/cambios/index.html",
-    "revision": "7f1adc2c390bd39891dcaea4ee62cc9c"
+    "revision": "8e00ed20d2d1052685775c98460c3900"
   },
   {
     "url": "blog/news/firebase-3/index.html",
-    "revision": "07afa3411ff77a5c41ea2b002aae3147"
+    "revision": "74aca5e4c4f9078d137d8d061b36875c"
   },
   {
     "url": "blog/news/firestore/index.html",
-    "revision": "7e13ccfe0b9b398b1606a6b74d07eeb6"
+    "revision": "c3e3231f3cd0b46b59ef3498ade9e78c"
   },
   {
     "url": "blog/news/help-testing-ionic-cli/index.html",
-    "revision": "bca4c1e1be95c3e48bbb97d85c8d2fe4"
+    "revision": "2a49f5ab35e9c8cc7cdcd377ff869a0c"
   },
   {
     "url": "blog/news/help-testing-WKWebview/index.html",
-    "revision": "6b2d34577f66e77d1257176603c21af0"
+    "revision": "5291276cd7f8807c6838e065b8904c60"
   },
   {
     "url": "blog/news/Help-Testing/index.html",
-    "revision": "0da97da5a411f319f2100c2bd22849fb"
+    "revision": "1654ad6b4a09bbd473f509c723478151"
   },
   {
     "url": "blog/news/index.html",
-    "revision": "a27e6e726b050e05221175d34dbc827b"
+    "revision": "1d64b9354e9dfa1cbc070a0e582fe33d"
   },
   {
     "url": "blog/news/interview-andresvillanueva/index.html",
-    "revision": "568eddd62dc017dda0bb37fbe9fbe30e"
+    "revision": "02baada1732c897a768c8d707ba7fb67"
   },
   {
     "url": "blog/news/interview-carlosrojas/index.html",
-    "revision": "9f7e45a28604a6658ecb41fe1e9720a4"
+    "revision": "a2463dd86774d0afb4b59d7e8954293e"
   },
   {
     "url": "blog/news/interview-javico/index.html",
-    "revision": "69173ada6447193b96ed0855ad56a1b5"
+    "revision": "d3a33ab795a231ba464bceb26507b89a"
   },
   {
     "url": "blog/news/interview-javierruiz/index.html",
-    "revision": "8f83cbb0fec80d67a89ce19acac6c4e9"
+    "revision": "1de421de680c19dd8c58b72045fbe3d7"
   },
   {
     "url": "blog/news/interview-jorgeucano/index.html",
-    "revision": "fdb5eb8b5cc988c1769104ca4f677e73"
+    "revision": "1eb919c9ade0c77d51c0117438832285"
   },
   {
     "url": "blog/news/interview-nicobytes/index.html",
-    "revision": "a6d177c17823b82732267f5aecaee0a9"
+    "revision": "4807acdb786905d5e76006fbcda795c4"
   },
   {
     "url": "blog/news/ionic-2-2-0-out/index.html",
-    "revision": "ab148ff74b86a3e9c2e9e132003e6aeb"
+    "revision": "8f384cecc4cbf99223f4977d3a4ea8bf"
   },
   {
     "url": "blog/news/ionic-2-beta-10/index.html",
-    "revision": "651ac6d9a60d2add151ca62e9351ed77"
+    "revision": "6e35700300f75edf22cee1b99dc2e243"
   },
   {
     "url": "blog/news/ionic-2-beta-11/index.html",
-    "revision": "24d1c43ba840d2cf9881d593298400b4"
+    "revision": "21443c893d0b47d6105bef38ae0315c0"
   },
   {
     "url": "blog/news/ionic-2-rc-2/index.html",
-    "revision": "31d8a26ae3a6bd799c3bbd4af30ce37f"
+    "revision": "739ae9da06cc0110a4fa3d7b07eaf6d4"
   },
   {
     "url": "blog/news/ionic-2-release-candidate/index.html",
-    "revision": "c92ae5641b2bfcac98fd376853b62358"
+    "revision": "d4ab058ad798147cee33410c1553ed01"
   },
   {
     "url": "blog/news/ionic-3-7/index.html",
-    "revision": "059316e40d7701fe2ffcf048f8a1e268"
+    "revision": "a134cde21ae3a4df4ff1f0ff7b52ef53"
   },
   {
     "url": "blog/news/ionic-cli-v3-5-2/index.html",
-    "revision": "6698b459a987e80d6410c5d4aaa8e56e"
+    "revision": "5a6da9bcdba70efbe8cce4c131ee0e9a"
   },
   {
     "url": "blog/news/ionic-cli-v3/index.html",
-    "revision": "e44af1a5ccd6b51531397509ecb93685"
+    "revision": "85f3e7aec49ae3a5055a7cd2650f26a4"
   },
   {
     "url": "blog/news/ionic-native-3x/index.html",
-    "revision": "0740e2386e1b826227b72274c467d8a6"
+    "revision": "79772dcaaa626c9dc831e9da8f6f6402"
   },
   {
     "url": "blog/news/ionic-native-news/index.html",
-    "revision": "da192013e2ab0e1308c2a482dd0d4e5b"
+    "revision": "8534b4219748c3458df664b4f6166b8c"
   },
   {
     "url": "blog/news/ionic-survey/index.html",
-    "revision": "98394ee06268125c5e0f5f3f5afa9684"
+    "revision": "d115540639b22288a834ce6bc2b91f36"
   },
   {
     "url": "blog/news/ionic-v-3/index.html",
-    "revision": "cbf5caeee25657d8b24349570c1d3d46"
+    "revision": "8f37f8e43e00baa634e5623409532d5b"
   },
   {
     "url": "blog/news/ionicdb-shutdown/index.html",
-    "revision": "1e38bf377249fb4e066318530b5d4fd9"
+    "revision": "17ba4e7606319456ca3721a91d9777b1"
   },
   {
     "url": "blog/news/IonicDB/index.html",
-    "revision": "49fbabac6f32c2e581a15095964de74f"
+    "revision": "a89a7d0cf6fa6995a9b49f1172d241b0"
   },
   {
     "url": "blog/news/ionicmarket/index.html",
-    "revision": "f01862c2197672682ab0f916e30139a1"
+    "revision": "f672be4cd2b7fbe10c81c61972f84290"
   },
   {
     "url": "blog/news/ionicplatform/index.html",
-    "revision": "7655cd3601566e6bcee0b40c4ccadf4e"
+    "revision": "55058864bec51a8094314398e12ebe93"
   },
   {
     "url": "blog/news/new-responsive-grid/index.html",
-    "revision": "33af2de8bd2be4634ac05c5af28d6d72"
+    "revision": "859ffb3ece9b35ab60bc1510aa0aff8e"
   },
   {
     "url": "blog/news/stencil-conf/index.html",
-    "revision": "56050aa877097375de697f39cf1ffb24"
+    "revision": "c7dfe852ff396c219d12e3677730b788"
   },
   {
     "url": "blog/news/stencil/index.html",
-    "revision": "5458d7c6916b0d460b258cfe63795c11"
+    "revision": "a6ea03e6df2943882e1761e9f279546c"
   },
   {
     "url": "blog/news/time-to-upgrade/index.html",
-    "revision": "2eea5f0848718545cf1b413e5a92350e"
+    "revision": "8c44ed0aa0229038bcc7f4954a8bdca0"
   },
   {
     "url": "blog/tips/aot-ahead-of-time/index.html",
-    "revision": "0c44477ed00c2e7dcfad9be8adac539e"
+    "revision": "4ee4f5a9ce3f728167892fd0e5af7b0b"
   },
   {
     "url": "blog/tips/componentes-reactivos/index.html",
-    "revision": "f1c864bbd2559136f6097220b1548ef4"
+    "revision": "e0a925de0df339bc79808d7c3ba45791"
   },
   {
     "url": "blog/tips/creando-modulos-npm/index.html",
-    "revision": "75909f9eefddaad282bd24f1e685897f"
+    "revision": "097d056f28d24d2ffeb9e983f1ca7271"
   },
   {
     "url": "blog/tips/creando-pugin/index.html",
-    "revision": "5642e0279c74e2e471cc78b3a3406ee1"
+    "revision": "8fd76ca81004b43b2676860ca6b91d13"
   },
   {
     "url": "blog/tips/crosswalk/index.html",
-    "revision": "7e76e2117b8a9cfb976354317c22a64b"
+    "revision": "2834769ac00986e6234e6c00d1c62a87"
   },
   {
     "url": "blog/tips/data-sharing-in-multi-view/index.html",
-    "revision": "a687ce66b0eb506b498f59759ebef260"
+    "revision": "ecd88c2ea73503fe830ae5b775f25dc1"
   },
   {
     "url": "blog/tips/enviando-al-appstore-ios/index.html",
-    "revision": "06b78246801ea5ab6be1785c6f3878c7"
+    "revision": "6c0ad20a49468c55d0095a9cd8b1a4bf"
   },
   {
     "url": "blog/tips/enviando-al-appstore/index.html",
-    "revision": "034ad8656c35c696a76409863d7824df"
+    "revision": "c345ccd9bee991b05b61990e24575ca8"
   },
   {
     "url": "blog/tips/es6-ionic-2/index.html",
-    "revision": "b7471eabcb6af4ef8147ddb0fbace45f"
+    "revision": "7d8dd9e93576573fa38755fff8a7ac80"
   },
   {
     "url": "blog/tips/estado-de-las-apps-hibridas/index.html",
-    "revision": "845faa1433adcb1e4da733d363117b35"
+    "revision": "2b56d64e13bcade3ae15831035567f4f"
   },
   {
     "url": "blog/tips/fork-join/index.html",
-    "revision": "ebacdce48abe65af55c639ca821f2c86"
+    "revision": "dfeadafa8353c06662a2e5d8d6ef2235"
   },
   {
     "url": "blog/tips/index.html",
-    "revision": "7b59850f291b52a9e49dd6477adb5c83"
+    "revision": "a5a3b33238916a12e15787ae9355d3ba"
   },
   {
     "url": "blog/tips/ionic-2-to-ionic3/index.html",
-    "revision": "e14e0d82186d82fd7a71691d123dd1d4"
+    "revision": "d3e38d1c38cca392a8fc3dda18f19257"
   },
   {
     "url": "blog/tips/ionic-cloud-services/index.html",
-    "revision": "80c2a6e0645d7d13d9f6b2734a35e87d"
+    "revision": "a89c9e14c3da81610684578d68ef6747"
   },
   {
     "url": "blog/tips/ionic-external-lib/index.html",
-    "revision": "e199e4c13075826f931e33faeb039284"
+    "revision": "74b88c29b46e13e00cc1595d3a5cfcf4"
   },
   {
     "url": "blog/tips/ionic-generator/index.html",
-    "revision": "32980786291996f2b38dc66e72479d5c"
+    "revision": "62ef9387b998009bcb02ab99e22b5d05"
   },
   {
     "url": "blog/tips/ionic-native-contacts/index.html",
-    "revision": "e56d6973a8fe18daa7a5914caf523fb5"
+    "revision": "943cfc988996c0dd25398a04b47dfae4"
   },
   {
     "url": "blog/tips/ionic-page-and-lazy-loading/index.html",
-    "revision": "869be777bf0532460468cb9553f215db"
+    "revision": "5a6186f0b726f9ed888d5aebe88808f7"
   },
   {
     "url": "blog/tips/ionic-vs-nativescript/index.html",
-    "revision": "d426c8ef527f26bb4a6e4487f8c4f2f6"
+    "revision": "763ecce0bc626a8028067bdbfe84fd62"
   },
   {
     "url": "blog/tips/lifecycle-ionic/index.html",
-    "revision": "2578531a994e38ce1c59b61243764caa"
+    "revision": "46bf6c858365c4a41b5dd82c51627e37"
   },
   {
     "url": "blog/tips/pouchdb/index.html",
-    "revision": "603a6de25adc6050d8b809a57a6264a1"
+    "revision": "abf263b380dbbbfe9ce1d26e2e0e1961"
   },
   {
     "url": "blog/tips/preparando-iconos-splashscreen/index.html",
-    "revision": "598df2b9b3348c0f2d17ce53f769589d"
+    "revision": "cbfa2354424198abaa5baf8a2c8e49bf"
   },
   {
     "url": "blog/tips/testing-with-ionic-angular/index.html",
-    "revision": "20575bc339e06ced1e257c94600bd1ca"
+    "revision": "e86a47b8fe6a61e11eea423fd6abcfd8"
   },
   {
     "url": "blog/tips/typescript-fundamentos/index.html",
-    "revision": "9af3e3a729e1b056256db9ea266786b0"
+    "revision": "ddf490214fa8f2b8ad67a426a5fca751"
   },
   {
     "url": "communities-dev-day/index.html",
-    "revision": "4547a8b2f15569581086b2d0c94ae183"
+    "revision": "70f113545b5d77539132b60f1a4c8589"
   },
   {
     "url": "css/main.css",
@@ -604,7 +608,7 @@ const fileManifest = [
   },
   {
     "url": "feed.xml",
-    "revision": "20e9ca023d57e2902fa98b59ff19243d"
+    "revision": "b7a508051f91b845ffd3475e6fb0d4a2"
   },
   {
     "url": "ffsw-pushcrew.js",
@@ -1180,7 +1184,7 @@ const fileManifest = [
   },
   {
     "url": "index.html",
-    "revision": "e401a99b04d19900c50c55f927dcdb8d"
+    "revision": "b720e5b7727c5fa26f1732f424997c19"
   },
   {
     "url": "launcher/chat-firebase/index.html",
@@ -1224,11 +1228,11 @@ const fileManifest = [
   },
   {
     "url": "meetups/index.html",
-    "revision": "748fecd4c0d920540050c58f5cd7f521"
+    "revision": "5c707844a7d0e96f633a673e55d6d6f7"
   },
   {
     "url": "onboarding/index.html",
-    "revision": "fdf9c17e7db99fe2458f80581516309d"
+    "revision": "430e31862621755d446d199cf2f1deb7"
   },
   {
     "url": "robots.txt",
@@ -1236,15 +1240,19 @@ const fileManifest = [
   },
   {
     "url": "sitemap.xml",
-    "revision": "ba3ecd0cb8e66893d5f16261f4fd5e30"
+    "revision": "a07ac7fa449326fdedcd7a0820f7d981"
   },
   {
     "url": "sw.html",
-    "revision": "077c0e4f1b862fe7fff831076e64c81d"
+    "revision": "b4bd734d8386799802f088f059da0a24"
   },
   {
-    "url": "sw.js",
-    "revision": "29026396e9fe82ce80355f173a68ca50"
+    "url": "workbox-sw.prod.v2.1.0.js",
+    "revision": "e5f207838d7fd9c81835d5705a73cfa2"
+  },
+  {
+    "url": "workbox-sw.prod.v2.1.0.js.map",
+    "revision": "6fc68cbf40e4e2f38d2889fdaf5bc58a"
   }
 ];
 

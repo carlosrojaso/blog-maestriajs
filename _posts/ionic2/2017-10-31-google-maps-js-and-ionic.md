@@ -1,40 +1,42 @@
 ---
 layout: post
 title: "Google Maps JS + Ionic en 5 pasos"
-date: 2017-05-16
+date: 2017-10-31
 tags: [maps, demos]
 categories: ionic2
 repo: "https://github.com/ion-book/demo105"
 author: nicobytes
-cover: "/images/posts/ionic2/2016-08-30-google-maps-js-and-ionic/cover.png"
+laucher: "https://ion-book.github.io/demo105/"
+editname: "ionic2/2017-10-31-google-maps-js-and-ionic.md"
+cover: "https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2F2016-10-31-google-maps-js-and-ionic%2Fcover.png?alt=media&token=21487ebb-b210-4303-b19c-3118922744e7"
 remember: true
 versions:
   - title: 'ionic'
-    number: '3.6.0'
+    number: '3.8.0'
   - title: 'ionic-native'
-    number: '4.1.0'
+    number: '4.3.2'
   - title: 'ionic-app-scripts'
-    number: '2.1.3'
+    number: '3.0.1'
   - title: 'cordova-cli'
-    number: '7.0.1'
+    number: '7.1.0'
   - title: 'ionic-cli'
-    number: '3.9.2'
+    number: '3.15.2'
 ---
 
 > La interacción con mapas en aplicaciones móviles es muy común y en este artículo explicaremos cómo integrar **Google Maps** usando el SDk de JS con **Ionic**.
 
-<amp-img width="1200" height="630" layout="responsive" src="/images/posts/ionic2/2016-08-30-google-maps-js-and-ionic/cover.png"></amp-img>
+<amp-img width="1200" height="630" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2F2016-10-31-google-maps-js-and-ionic%2Fcover.png?alt=media&token=21487ebb-b210-4303-b19c-3118922744e7"></amp-img>
 
 {% include general/net-promoter-score.html %} 
 
-## Actualización (14/05/2017)
+# Actualización (30/10/2017)
 <hr/>
 
-Hemos actualizado este demo con el último release de **Ionic 3**, si aún estas en alguna de las versiones anteriores puedes seguir estos pasos [de Ionic 2 a Ionic 3](https://www.ion-book.com/blog/tips/ionic-2-to-ionic3/){:target="_blank"}.
+Hemos actualizado este demo con el último release **Ionic 3.8**.
 
-Ademas en este demo usamos la función de [**lazy loading** y **@IonicPage**](https://www.ion-book.com/blog/tips/ionic-page-and-lazy-loading/){:target="_blank"}. Puedes ver el repositorio [**Demo105**](https://github.com/ion-book/demo105){:target="_blank"}
-
+<a href="https://ion-book.github.io/demo105/" target="_blank" class="btn btn-round btn-success">Ver demo</a>
 <hr/>
+
 
 Hay dos maneras de implementar google maps en nuestras aplicaciones, una es manejando el **SDK de JS** y la otra manera es integrar el **SDK nativo** al proyecto, en este artículo veremos cómo hacerlo con el SDK de JS.
 
@@ -56,7 +58,7 @@ El proyecto inicia con el template **blank** y por esto tendremos una estructura
 
 <div class="row">
   <div class="col col-100 col-md-50 col-lg-50">
-    <amp-img width="376" height="183" layout="responsive" src="/images/posts/ionic2/2016-07-11-camera-and-ionic/tree1.png"></amp-img>
+    <amp-img width="376" height="183" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2F2017-10-27-camera-and-ionic%2Ftree1.png?alt=media&token=aba780c6-5554-4ee9-b912-511564e883e3"></amp-img>
   </div>
 </div>
 
@@ -82,7 +84,6 @@ import { Geolocation } from '@ionic-native/geolocation';
   ],
   imports: [
     BrowserModule,
-    HttpModule,
     IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],
@@ -108,12 +109,16 @@ Ahora iremos al archivo `index.html` que se encuentra la carpeta `src` y luego d
 
   <!-- Ionic's root component and where the app will load -->
   <ion-app></ion-app>
-
+  
   <!-- The polyfills js is generated during the build process -->
   <script src="build/polyfills.js"></script>
 
-  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY"></script>
-  <!-- The bundle js is generated during the build process -->
+  <!-- The vendor js is generated during the build process
+        It contains all of the dependencies in node_modules -->
+  <script src="build/vendor.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY"></script>
+
+  <!-- The main bundle js is generated during the build process -->
   <script src="build/main.js"></script>
 
 </body>
@@ -140,8 +145,8 @@ declare var google;
 export class HomePage {
 
   constructor(
-    public navCtrl: NavController,
-    public geolocation: Geolocation
+    private navCtrl: NavController,
+    private geolocation: Geolocation
   ) {
 
 ...
@@ -253,8 +258,8 @@ export class HomePage {
   map: any;
 
   constructor(
-    public navCtrl: NavController,
-    public geolocation: Geolocation
+    private navCtrl: NavController,
+    private geolocation: Geolocation
   ) {}
 
   ionViewDidLoad(){

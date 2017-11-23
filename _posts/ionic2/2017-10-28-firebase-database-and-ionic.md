@@ -12,7 +12,7 @@ remember: true
 editname: "ionic2/2017-10-28-firebase-database-and-ionic.md"
 versions:
   - title: 'ionic'
-    number: '3.7.1'
+    number: '3.8.0'
   - title: 'ionic-native'
     number: '4.3.2'
   - title: 'ionic-app-scripts'
@@ -20,7 +20,7 @@ versions:
   - title: 'cordova-cli'
     number: '7.1.0'
   - title: 'ionic-cli'
-    number: '3.15.1'
+    number: '3.16.0'
   - title: 'angularfire2'
     number: '5.0.0-rc.3'
 ---
@@ -173,7 +173,10 @@ export class HomePage {
     public database: AngularFireDatabase
   ) {
     this.tasksRef = this.database.list('tasks');
-    this.tasks = this.tasksRef.valueChanges();
+    this.tasks = this.tasksRef.snapshotChanges()
+    .map(changes => {
+      return changes.map(c => ({ key: c.payload.key, ...c.payload.val() }));
+    });
   }
 }
 ```
@@ -243,7 +246,7 @@ Con declaramos el método `updateTask` el cual actualiza una tarea con el métod
 
 ```ts
 updateTask( task ){
-  this.tasksRef.update( task.$key,{
+  this.tasksRef.update( task.key,{
     title: task.title,
     done: !task.done
   });
@@ -254,7 +257,7 @@ Finalmente declaramos el método `removeTask` que elimina una tarea con el méto
 
 ```ts
 removeTask( task ){
-  this.tasksRef.remove( task.$key );
+  this.tasksRef.remove( task.key );
 }
 ```
 
@@ -284,7 +287,10 @@ export class HomePage {
     public database: AngularFireDatabase
   ) {
     this.tasksRef = this.database.list('tasks');
-    this.tasks = this.tasksRef.valueChanges();
+    this.tasks = this.tasksRef.snapshotChanges()
+    .map(changes => {
+      return changes.map(c => ({ key: c.payload.key, ...c.payload.val() }));
+    });
   }
 
   createTask(){
@@ -319,14 +325,15 @@ export class HomePage {
   }
 
   updateTask( task ){
-    this.tasksRef.update( task.$key,{
+    this.tasksRef.update( task.key,{
       title: task.title,
       done: !task.done
     });
   }
 
   removeTask( task ){
-    this.tasksRef.remove( task.$key );
+    console.log( task );
+    this.tasksRef.remove( task.key );
   }
 }
 

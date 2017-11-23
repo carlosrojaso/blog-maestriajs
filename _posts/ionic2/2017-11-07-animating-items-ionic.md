@@ -1,40 +1,41 @@
 ---
 layout: post
 title: "Animando items con Ionic, en 5 pasos"
-date: 2017-05-23
+date: 2017-11-07
 tags: [animations, demos]
 categories: ionic2
 repo: "https://github.com/ion-book/demo108"
+laucher: "https://ion-book.github.io/demo108/"
 author: nicobytes
-cover: "/images/posts/ionic2/2016-12-11-animating-items-ionic/cover.jpg"
+cover: "https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2F2017-11-07-animating-items-ionic%2Fcover.jpg?alt=media&token=baa54056-8b6e-44df-9e6c-adeabfdae150"
 remember: true
 versions:
   - title: 'ionic'
-    number: '3.3.0'
+    number: '3.8.0'
   - title: 'ionic-native'
-    number: '3.10.3'
+    number: '4.3.2'
   - title: 'ionic-app-scripts'
-    number: '1.3.7'
+    number: '3.0.1'
   - title: 'cordova-cli'
-    number: '7.0.1'
+    number: '7.1.0'
   - title: 'ionic-cli'
-    number: '3.3.0'
+    number: '3.16.0'
 ---
 
 > Angular integra [Web Animations API](https://web-animations.github.io/web-animations-demos/#waves/){:target="_blank"} para ejecutar animaciones en css que aprovechan la GPU del dispositivo y se puedan controlar con JS, sin duda esto provee un mayor control en las animaciones que podemos hacer.
 
-<amp-img width="1024" height="512" layout="responsive" src="/images/posts/ionic2/2016-12-11-animating-items-ionic/cover.jpg" alt="Animando items con Ionic"></amp-img>
+<amp-img width="1024" height="512" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2F2017-11-07-animating-items-ionic%2Fcover.jpg?alt=media&token=baa54056-8b6e-44df-9e6c-adeabfdae150" alt="Animando items con Ionic"></amp-img>
 
 {% include general/net-promoter-score.html %} 
 
-# Actualización (21/05/2017)
+# Actualización (30/10/2017)
 <hr/>
 
-Hemos actualizado este demo con el último release de **Ionic 3**, si aún estas en alguna de las versiones anteriores puedes seguir estos pasos [de Ionic 2 a Ionic 3](https://www.ion-book.com/blog/tips/ionic-2-to-ionic3/){:target="_blank"}.
+Hemos actualizado este demo con el último release **Ionic 3.8**.
 
-Ademas en este demo usamos la función de **lazy loading** y **@IonicPage**. Puedes ver el repositorio [**Demo108**](https://github.com/ion-book/demo108){:target="_blank"}
-
+<a href="https://ion-book.github.io/demo108/" target="_blank" class="btn btn-round btn-success">Ver demo</a>
 <hr/>
+
 
 Para hacer animaciones en Angular/Ionic tenemos varias funciones que son de gran utilidad para controlar y crear las animaciones:
 
@@ -74,20 +75,25 @@ transition('inactive => active', animate('100ms ease-in')),
 transition('active => inactive', animate('100ms ease-out'))
 ```
 
-<amp-img width="1448" height="524" layout="responsive" src="https://angular.io/resources/images/devguide/animations/ng_animate_transitions_inactive_active.png" alt="transitions"></amp-img>
+<amp-img width="1448" height="524" layout="responsive" src="https://angular.io/generated/images/guide/animations/ng_animate_transitions_inactive_active.png" alt="transitions"></amp-img>
+
 
 En las **transitions** también podemos agregar estilos que solo se aplican durante la animación y que no harán parte de **state**.
 
 En Angular tenemos **dos** estados muy útiles, uno es el comodín (The wildcard state) *, este se refiere a cualquier estado y es muy útil cuando no hay un estado definido.
 
-<amp-img width="1448" height="992" layout="responsive" src="https://angular.io/resources/images/devguide/animations/ng_animate_transitions_inactive_active_wildcards.png" alt="transitions"></amp-img>
+<amp-img width="1448" height="992" layout="responsive" src="https://angular.io/generated/images/guide/animations/ng_animate_transitions_inactive_active_wildcards.png" alt="transitions"></amp-img>
 
 Y el segundo estado es **void** que es llamado automáticamente cuando es ejecutada cualquier animación y será muy util para ejecutar las animaciones cuando un item es agregado o un ítem es eliminado.
  
 - Enter: `void => *`
 - Leave: `* => void `
 
-<amp-img width="389" height="248" layout="responsive" src="https://angular.io/resources/images/devguide/animations/animation_enter_leave.gif" alt="transitions"></amp-img>
+<div class="row">
+  <div class="col col-100 col-md-50 col-lg-50">
+    <amp-img width="389" height="248" layout="responsive" src="https://angular.io/generated/images/guide/animations/animation_enter_leave.gif" alt="transitions"></amp-img>
+  </div>
+</div>
 
 ## Trigger:
 
@@ -138,7 +144,7 @@ El proyecto inicia con el template **blank** y por esto tendremos una estructura
 
 <div class="row">
   <div class="col col-100 col-md-50 col-lg-50">
-    <amp-img width="376" height="183" layout="responsive" src="/images/posts/ionic2/2016-07-11-camera-and-ionic/tree1.png"></amp-img>
+    <amp-img width="376" height="183" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2F2017-10-27-camera-and-ionic%2Ftree1.png?alt=media&token=aba780c6-5554-4ee9-b912-511564e883e3"></amp-img>
   </div>
 </div>
 
@@ -165,8 +171,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
   ],
   imports: [
     BrowserModule,
-    HttpModule,
     BrowserAnimationsModule,
+    HttpClientModule,
     IonicModule.forRoot(MyApp),
   ],
   bootstrap: [IonicApp],
@@ -185,7 +191,7 @@ IOS no soporta aún **Web Animations API**, por esto debemos agregaremos un poly
 ```html
 <body>
   ...
-  <script src="build/polyfills.js"></script>
+  <script src="build/vendor.js"></script>
   <script src="assets/js/web-animations.min.js"></script>
   ...
 </body>
@@ -198,16 +204,16 @@ Vamos a crear un `trigger` llamado **itemState** que tendrá el estado **in**, e
 ```ts
 animations: [
   trigger('itemState', [
-    state('in', style({opacity: 1, transform: 'translateX(0)'})),
+    state('in', style({transform: 'translateX(0)'})),
+    //Enter
     transition('void => *', [
       style({
-        opacity: 0,
         transform: 'translateX(-100%)'
       }),
-      animate('300ms ease-in')
+      animate('300ms linear')
     ]),
+    //Leave
     transition('* => void', animate('300ms ease-out', style({
-      opacity: 0,
       transform: 'translateX(100%)'
     }))),
   ])
@@ -216,7 +222,11 @@ animations: [
 
 Con lo cual lograremos el siguiente efecto:
 
-<amp-img  width="389" height="248" src="https://angular.io/resources/images/devguide/animations/animation_enter_leave.gif" alt="transitions"></amp-img>
+<div class="row">
+  <div class="col col-100 col-md-50 col-lg-50">
+    <amp-img width="389" height="248" layout="responsive" src="https://angular.io/generated/images/guide/animations/animation_enter_leave.gif" alt="transitions"></amp-img>
+  </div>
+</div>
 
 `HomePage` finalmente quedará asi:
 
@@ -232,18 +242,16 @@ import { IonicPage, NavController } from 'ionic-angular';
   templateUrl: 'home.html',
   animations: [
     trigger('itemState', [
-      state('in', style({opacity: 1, transform: 'translateX(0)'})),
+      state('in', style({transform: 'translateX(0)'})),
       //Enter
       transition('void => *', [
         style({
-          opacity: 0,
           transform: 'translateX(-100%)'
         }),
-        animate('300ms ease-in')
+        animate('300ms linear')
       ]),
       //Leave
       transition('* => void', animate('300ms ease-out', style({
-        opacity: 0,
         transform: 'translateX(100%)'
       }))),
     ])
