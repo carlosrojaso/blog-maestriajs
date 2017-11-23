@@ -2,11 +2,12 @@
 layout: post
 title: "Calendario con FullCalendar.io"
 keywords: "calendar"
-date: 2017-09-26
+date: 2017-11-23
 tags: [calendar, demos]
 categories: ionic2
 author: javico2609
-cover: "/images/posts/ionic2/2017-11-22-fullcalendar/cover.png"
+cover: "https://firebasestorage.googleapis.com/v0/b/ngclassroom-8ba81.appspot.com/o/posts%2F2017-11-22-fullcalendar%2FThe%20Art%20of%20Building%20Apps%20with%20Javascript..png?alt=media&token=8d32623c-5b5f-4c95-afa4-3dcb2e87468d"
+editname: "ionic2/2017-11-22-fullcalendar.md"
 versions:
   - title: 'ionic'
     number: '3.9.2'
@@ -23,7 +24,7 @@ versions:
 > Como podemos integrar de forma simple una de las librerìas para el manejo de eventos de calendario màs utilizada a nuestra app ionic, [fullcalendar](https://fullcalendar.io){:target="_blank"}.
 <!--summary-->
 
-<amp-img width="1024" height="512" layout="responsive" src="/images/posts/ionic2/2017-11-22-fullcalendar/cover.png" alt="calendar"></amp-img>
+<amp-img width="1024" height="512" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ngclassroom-8ba81.appspot.com/o/posts%2F2017-11-22-fullcalendar%2FThe%20Art%20of%20Building%20Apps%20with%20Javascript..png?alt=media&token=8d32623c-5b5f-4c95-afa4-3dcb2e87468d" alt="calendar"></amp-img>
 
 {% include general/net-promoter-score.html %}
 
@@ -294,6 +295,17 @@ export class HomePage {
   }
 }
 ```
+<div class="row wrap">
+  <div class="col col-100 col-md-33 col-lg-33">
+    <amp-img width="416" height="739" layout="responsive" src="/images/posts/ionic2/2017-11-22-fullcalendar/demo.png" alt="demo"></amp-img>
+  </div>
+  <div class="col col-100 col-md-33 col-lg-33">
+    
+  </div>
+  <div class="col col-100 col-md-33 col-lg-33">
+    
+  </div>
+</div>
 
 **Nota:  en la propiedad `myCalendar.fullCalendar` se pueden mandar a ejecutar todas las funciones de la librerìa fullcalendar tal cual esta en su documentaciòn oficial.**
 
@@ -304,5 +316,4 @@ this.myCalendar.fullCalendar('addEventSource', data);
 // https://fullcalendar.io/docs/event_data/removeEvents/
 this.myCalendar.fullCalendar('removeEvents');
 ```
-
 <amp-img width="416" height="739" layout="responsive" src="/images/posts/ionic2/2017-11-22-fullcalendar/demo.png" alt="demo"></amp-img>
