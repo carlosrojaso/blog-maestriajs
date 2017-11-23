@@ -157,22 +157,28 @@ Pueden remitirse al post  [Incluir librerìas externas en ionic](https://blog.ng
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Calendar
+      Ionic Blank
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
   <ng-fullcalendar [options]="calendarOptions" (initialized)="onCalendarInit($event)"></ng-fullcalendar>
+
+  <ion-fab right bottom>
+    <button ion-fab mini><ion-icon name="add" (click)="addRandomEvents()"></ion-icon></button>
+  </ion-fab>
+
 </ion-content>
+
 ```
 
 `home.ts`
 
 ```ts
 import { NgFullCalendarComponent } from './../../app/components/ng.fullcalendar.component';
-import { ViewChild, QueryList } from '@angular/core';
-import { Component, ViewChildren } from '@angular/core';
+import { ViewChild } from '@angular/core';
+import { Component } from '@angular/core';
 import { NavController, Content } from 'ionic-angular';
 
 @Component({
@@ -181,10 +187,11 @@ import { NavController, Content } from 'ionic-angular';
 })
 export class HomePage {
 
-  @ViewChildren(NgFullCalendarComponent) calendars: QueryList<NgFullCalendarComponent>;
+  @ViewChild(NgFullCalendarComponent) myCalendar: NgFullCalendarComponent;
   @ViewChild(Content) content: Content;
 
   public calendarOptions: Object = {};
+  public colors: string[] = ["#AAC440", "#628B93", "#E76C71", "#805459", "#28D0C3", "#3483D9", "#D1A8D5", "#628B93", "#EE5BB0", "#B5A303", "#1C93CB", "#9EA7FF", "#790549", "#23AE96", "#268292"];
 
   constructor(public navCtrl: NavController) {
 
@@ -192,7 +199,6 @@ export class HomePage {
 
   ionViewDidLoad() {
     const self = this;
-    // Object con la configuraciòn del fullcalendar, se puede usar todos los elementos de configuraciòn explicados en la documentaciòn oficial.
     this.calendarOptions = {
       fixedWeekCount: false,
       height: () => self.content.contentHeight - 60,
@@ -266,9 +272,37 @@ export class HomePage {
   }
 
   onCalendarInit(event) {
-    console.log(this.calendars);
+
+  }
+
+  addRandomEvents() {
+    this.myCalendar.fullCalendar('removeEvents');
+
+    var now = new Date();
+        now.setDate(1);
+
+    const data = new Array(45).fill(0).map( (val, index) => {
+        return {
+          start: now.setDate(now.getDate() + index),
+          end: now.setDate(now.getDate() + index + 1),
+          id: index,
+          color: this.colors[Math.floor(Math.random() * this.colors.length)]
+        }
+    })
+
+    this.myCalendar.fullCalendar('addEventSource', data);
   }
 }
+```
+
+**Nota:  en la propiedad `myCalendar.fullCalendar` se pueden mandar a ejecutar todas las funciones de la librerìa fullcalendar tal cual esta en su documentaciòn oficial.**
+
+```ts
+// https://fullcalendar.io/docs/event_data/addEventSource/
+this.myCalendar.fullCalendar('addEventSource', data);
+
+// https://fullcalendar.io/docs/event_data/removeEvents/
+this.myCalendar.fullCalendar('removeEvents');
 ```
 
 <amp-img width="416" height="739" layout="responsive" src="/images/posts/ionic2/2017-11-22-fullcalendar/demo.png" alt="demo"></amp-img>
