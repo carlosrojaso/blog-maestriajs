@@ -295,6 +295,18 @@ export class HomePage {
   }
 }
 ```
+
+
+**Nota:  en la propiedad `myCalendar.fullCalendar` se pueden mandar a ejecutar todas las funciones de la librerìa fullcalendar tal cual esta en su documentaciòn oficial.**
+
+```ts
+// https://fullcalendar.io/docs/event_data/addEventSource/
+this.myCalendar.fullCalendar('addEventSource', data);
+
+// https://fullcalendar.io/docs/event_data/removeEvents/
+this.myCalendar.fullCalendar('removeEvents');
+```
+
 <div class="row wrap">
   <div class="col col-100 col-md-33 col-lg-33">
     <amp-img width="416" height="739" layout="responsive" src="/images/posts/ionic2/2017-11-22-fullcalendar/demo.png" alt="demo"></amp-img>
@@ -306,14 +318,3 @@ export class HomePage {
     
   </div>
 </div>
-
-**Nota:  en la propiedad `myCalendar.fullCalendar` se pueden mandar a ejecutar todas las funciones de la librerìa fullcalendar tal cual esta en su documentaciòn oficial.**
-
-```ts
-// https://fullcalendar.io/docs/event_data/addEventSource/
-this.myCalendar.fullCalendar('addEventSource', data);
-
-// https://fullcalendar.io/docs/event_data/removeEvents/
-this.myCalendar.fullCalendar('removeEvents');
-```
-<amp-img width="416" height="739" layout="responsive" src="/images/posts/ionic2/2017-11-22-fullcalendar/demo.png" alt="demo"></amp-img>
