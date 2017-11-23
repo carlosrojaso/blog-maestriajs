@@ -7,6 +7,7 @@ tags: [calendar, demos]
 categories: ionic2
 author: javico2609
 cover: "https://firebasestorage.googleapis.com/v0/b/ngclassroom-8ba81.appspot.com/o/posts%2F2017-11-22-fullcalendar%2FThe%20Art%20of%20Building%20Apps%20with%20Javascript..png?alt=media&token=8d32623c-5b5f-4c95-afa4-3dcb2e87468d"
+editname: "ionic2/2017-11-22-fullcalendar.md"
 versions:
   - title: 'ionic'
     number: '3.9.2'
