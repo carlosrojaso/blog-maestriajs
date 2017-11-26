@@ -3,15 +3,17 @@ layout: post
 title: "Aumenta el performance de tu aplicación con AOT"
 keywords: "aot, Ahead-of-Time, performance en ionic, como mejorar el rendimiento en ionic, performance"
 date: 2017-01-16
-tags: [tips, ionic2, news]
+tags: [tips, news]
 categories: tips
 author: nicobytes
-cover: "https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2FAumenta%20el%20performance%20de%20tu%20app%20con%20AOT.jpg?alt=media"
+cover: "/images/posts/tips/2017-01-16-aot-ahead-of-time/cover.jpg"
 ---
 
 > Con esta técnica podremos reducir el tamaño de las aplicaciones de un 30% a un 60% y aún más importante reducir el tiempo de carga de la aplicación casi en un 50%.
 
-<amp-img width="1024" height="512" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2FAumenta%20el%20performance%20de%20tu%20app%20con%20AOT.jpg?alt=media" alt="Aumenta el performance de tu aplicación con AOT"></amp-img>
+<amp-img width="1024" height="512" layout="responsive" src="/images/posts/tips/2017-01-16-aot-ahead-of-time/cover.jpg" alt="Aumenta el performance de tu aplicación con AOT"></amp-img>
+
+{% include general/net-promoter-score.html %} 
 
 Primero debemos hacernos la pregunta: **¿Qué es una aplicación rápida?** y para que no sea algo ambiguo vamos a definirlo en tres aspectos claves que los usuarios califican a la hora de definir una aplicación rápida:
 
@@ -27,13 +29,13 @@ Por defecto las aplicaciones en Angular, son compiladas en tiempo de ejecución 
 
 Pero esta estrategia tiene un gran problema, la aplicación podría tardar mucho más en cargarse debido a que primero debe compilarse en el navegador. Y puede pesar más, ya que incluye el compilador de Angular como parte de la aplicación.
 
-Otro problema con JIT son los errores de vinculaciones en las plantillas con el controlador, estos errores se descubren dentro del navegador y en tiempo de ejecución, es decir, sí en una plantilla llamanos a una función que no existe, este error se ve en el navegador y no antes, y esto podría afectar a nuestro usuarios.
+Otro problema con JIT son los errores de vinculaciones en las plantillas con el controlador, estos errores se descubren dentro del navegador y en tiempo de ejecución, es decir, sí en una plantilla llamanos a una función que no existe, este error se ve en el navegador y no antes, y esto podría afectar a nuestros usuarios.
 
 Por ejemplo, hagamos de cuenta que la función `doSomething` la usamos en algún template, pero no fue declarada en ningun lado.
 
-{% highlight html%}
+```html
 <button ion-button (click)="doSomething()"></button>
-{% endhighlight %}
+```
 
 Cuando se ejecute la función click nos damos cuenta que la función `doSomething` nunca fue declarada y este error solo lo vemos una vez la aplicación ya está corriendo en el navegador, no antes.
 
@@ -76,57 +78,22 @@ AOT ya tiene las plantillas y componentes compilados, así que no hay llamadas a
 
 {% include blog/subscribe.html %}
 
-## Ok Ok, entonces ¿Cómo lo uso?
+## Ok Ok, entonces ¿Cómo lo uso? en Ionic
 
-Bueno si tienes una aplicación con Angular debes darle el contexto necesario con **NgModule** y instalar estas herramientas para hacerlo (**con ionic 2 NO es necesario**):
-
-
-{% highlight ts%}
-// The browser platform with a compiler
-import { 
-   platformBrowser 
-} from '@angular/platform-browser';
-
-// The generated app factory (AOT)
-import { 
-   AppModuleNgFactory
-} from './app.module.ngfactory';
-
-// Launch with the app module factory.
-platformBrowser().bootstrapModuleFactory(
-   AppModuleNgFactory
-);
-{% endhighlight %}
-
-Y luego:
+Ionic 2 nos facilita todo el esfuerzo de configuración porque ya está habilitado y solo tienes que agregar la bandera `--prod` al proceso de construcción, por ejemplo:
 
 ```
-npm install \
-        @angular/compiler-cli \
-        @angular/platform-server \
-        @angular/compiler \
-        typescript@next --save
-./node_modules/.bin/ngc -p tsconfig.aot.json
-
-ng build --aot
-```
-
-## Ionic 2 + AOT
-
-Bueno en el caso de Ionic 2, facilita todo el esfuerzo de configuración porque ya está habilitado y desde la versión RC4 hacia arriba solo tienes que agregar la bandera `--prod` al proceso de construcción, por ejemplo:
-
-```
-ionic build android --prod
-ionic build ios --prod
-ionic run android --prod
-ionic run ios --prod
+ionic cordova build android --prod
+ionic cordova build ios --prod
+ionic cordova run android --prod
+ionic cordova run ios --prod
 ```
 
 Ó para release:
 
 ```
-ionic build android --release --prod
-ionic build ios --release --prod
+ionic cordova build android --release --prod
+ionic cordova build ios --release --prod
 ```
 
 El equipo de Ionic hizo un ejemplo de una app con **JIT** y otra con **AOT**

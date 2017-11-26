@@ -1,124 +1,123 @@
-#mlb2-3764889 a:hover {
-  cursor: pointer;
-}
-#mlb2-3764889 .subscribe-form{
-  box-sizing: border-box;
-  width: 100%;
-}
-#mlb2-3764889 .subscribe-form .form-section p,
-#mlb2-3764889 .subscribe-form .form-section li {
-  text-align: center;
-  color: white;
-}
-#mlb2-3764889.ml-subscribe-form button[disabled] {
-  cursor: not-allowed;
-}
-#mlb2-3764889.ml-subscribe-form .form-group.ml-error .form-control {
-  border-color: red;
-}
-#mlb2-3764889.ml-subscribe-form .btn-register{
-  width: 100%;
-  margin: 0 auto;
-  display: block;
-}
-#mlb2-3764889.ml-subscribe-form input{
-  border: 0px;
-  width: 100%;
-  margin: 0 auto;
-  display: block;
-  padding: 10px $padding;
-  box-sizing: border-box;
-  margin-bottom: 10px;
-}
-.menu-blog{
-  #mlb2-3764889.ml-subscribe-form .btn-register{
-    background-color: $primary-color;
+.subscribe-blog{
+  .ion-form-subscribe{
+    margin-top: 10px;
+    .input-email{
+      input[type="email"]{
+        box-shadow: 0px 0px 5px 0px $success-color;
+      }
+    }
   }
 }
-.subscribe-blog{
-  #mlb2-3764889.ml-subscribe-form input{
-    box-shadow: 0px 0px 1px $primary-color;
+
+.ion-form-subscribe{
+  display: block;
+  margin-top: 10px;
+  a.btn-success{
+    width: 100%;
+    display: block;
+    box-sizing: border-box;
+  }
+  form{
+    &.user-invalid{
+      .button-submit{
+        button[type="submit"]{
+          opacity: .3;
+        }
+      } 
+    }
+    .input-email{
+      margin-bottom: 8px;
+      input[type="email"]{
+        padding: 16px;
+        margin: 0px;
+        width: 100%;
+        border-radius: 5px;
+        border: 0px;
+        box-sizing: border-box;
+        &.user-invalid{
+          border-right: 6px solid red;
+        }
+      }
+    }
+    .button-submit{
+      .hidden{
+        position: absolute;
+        left: -5000px;
+      }
+      button[type="submit"]{
+        width: 100%;
+      }
+    }
+    &.amp-form-submit-success{
+      .input-email{
+        display: none;
+      }
+    }
+    .submit-success,
+    .submit-error{
+      p{
+        color: white;
+        text-align: center;
+      }
+    }
   }
 }
 @media screen and (min-width: $min-width-medium) and (max-width: $max-width-medium) {
-  .header-home{
-    #mlb2-3764889 .subscribe-form{
-      width: 80%;
-      display: flex;
+  .ion-form-subscribe{
+    a.btn-success{
+      width: 30%;
+      display: block;
     }
-  }
-  .menu-blog{
-    #mlb2-3764889 .subscribe-form{
+    form{
       display: flex;
+      .input-email{
+        margin-bottom: 0px;
+        input[type="email"]{
+          border-radius: 5px 0px 0px 5px;
+        }
+      }
+      .button-submit{
+        button[type="submit"]{
+          border-radius: 0px 5px 5px 0px;
+        }
+      }
     }
   }
   .subscribe-blog{
-    #mlb2-3764889 .subscribe-form{
-      display: flex;
+    form{
+      .input-email{
+        width: 40%;
+      }
     }
-    #mlb2-3764889 .subscribe-form .form-section p,
-    #mlb2-3764889 .subscribe-form .form-section li{
-      color: black;
-    }
-  }
-  #mlb2-3764889 .subscribe-form .form-section-mail{
-    flex: 0 0 60%;
-    max-width: 60%;
-    input{
-      padding: $padding;
-      margin-bottom: 0px;
-      border-radius:  $border-radius-btn 0px 0px $border-radius-btn;
-    }
-  }
-  #mlb2-3764889.ml-subscribe-form .btn-register{
-    border-radius: 0px $border-radius-btn $border-radius-btn 0px;
-  }
-  #mlb2-3764889.ml-subscribe-form .btn-register.loading{
-    padding: 13px;
-  }
-  #mlb2-3764889 .subscribe-form .form-section p,
-  #mlb2-3764889 .subscribe-form .form-section li {
-    text-align: left;
   }
 }
 @media screen and (min-width: $min-width-large) {
-  .header-home{
-    #mlb2-3764889 .subscribe-form{
-      width: 80%;
-      display: flex;
+  .ion-form-subscribe{
+    a.btn-success{
+      width: 30%;
+      display: block;
     }
-  }
-  .menu-blog{
-    #mlb2-3764889 .subscribe-form{
+    form{
       display: flex;
+      .input-email{
+        width: 40%;
+        margin-bottom: 0px;
+        input[type="email"]{
+          border-radius: 5px 0px 0px 5px;
+        }
+      }
+      .button-submit{
+        button[type="submit"]{
+          border-radius: 0px 5px 5px 0px;
+        }
+      }
     }
   }
   .subscribe-blog{
-    #mlb2-3764889 .subscribe-form{
-      display: flex;
+    form{
+      .input-email{
+        width: 40%;
+      }
     }
-    #mlb2-3764889 .subscribe-form .form-section p,
-    #mlb2-3764889 .subscribe-form .form-section li{
-      color: black;
-    }
-  }
-  #mlb2-3764889 .subscribe-form .form-section-mail{
-    flex: 0 0 60%;
-    max-width: 60%;
-    input{
-      padding: $padding;
-      margin-bottom: 0px;
-      border-radius:  $border-radius-btn 0px 0px $border-radius-btn;
-    }
-  }
-  #mlb2-3764889.ml-subscribe-form .btn-register{
-    border-radius: 0px $border-radius-btn $border-radius-btn 0px;
-  }
-  #mlb2-3764889.ml-subscribe-form .btn-register.loading{
-    padding: 13px;
-  }
-  #mlb2-3764889 .subscribe-form .form-section p,
-  #mlb2-3764889 .subscribe-form .form-section li {
-    text-align: left;
   }
 }

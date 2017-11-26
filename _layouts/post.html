@@ -1,8 +1,9 @@
 ---
 layout: default
 ---
+{% include general/gtm.html %}
 {% include blog/header.html %}
-{% for item in site.authors %}{% if item.id == page.author%}{% assign author = item %}{% endif %}{% endfor %}
+{% for item in site.data.authors %}{% if item.id == page.author%}{% assign author = item %}{% endif %}{% endfor %}
 <div class="content content-title">
   <div class="row wrap center">
     <div class="col col-100 col-md-100 col-lg-80">
@@ -11,19 +12,20 @@ layout: default
         {% for tag in page.tags %}<span class="tag">{{ tag }}</span>{% endfor %} - 
         {{ page.date | date: '%B %d, %Y' }} por 
         <a href="{{ author.url }}"><strong>{{ author.name }}</strong></a> 
+        {% if page.editname %}
+         | <a href="https://github.com/ion-book/ion-book.github.io/tree/master/_posts/{{ page.editname }}"><strong>Edita este Post.</strong></a>
+        {% endif %}
       </div>
+      {% if page.versions %}
+      <div class="versions">
+        {% for version in page.versions %}<span class="version"><span>{{ version.title }}</span><span>{{ version.number }}</span></span>{% endfor %}
+      </div>
+      {% endif %}
     </div>
     {% if page.repo %}
     <div class="col col-100 col-md-100 col-lg-20">
       <a href="{{ page.repo }}" class="btn btn-primary btn-round center-block btn-icon btn-demo" target="_blank">
-        <div class="icon icon-social-octocat"></div> Ver demo
-      </a>
-    </div>
-    {% endif %}
-    {% if page.laucher %}
-    <div class="col col-100 col-md-100 col-lg-20">
-      <a href="{{ page.laucher }}" class="btn btn-primary btn-round center-block btn-icon btn-demo" target="_blank">
-        <div class="icon icon-social-octocat"></div> Ver demo
+        <div class="icon icon-social-octocat"></div> Ver código
       </a>
     </div>
     {% endif %}
@@ -37,8 +39,9 @@ layout: default
         <div class="text">{{ content }}</div>
         {% if page.repo %}
         <a href="{{ page.repo }}" class="btn btn-primary btn-round center-block btn-icon btn-demo" target="_blank">
-          <div class="icon icon-social-octocat"></div> Ver demo
+          <div class="icon icon-social-octocat"></div> Ver código
         </a>
+        </br>
         {% endif %}
         {% if page.laucher %}
         <a href="{{ page.laucher }}" class="btn btn-primary btn-round center-block btn-icon btn-demo" target="_blank">
@@ -48,13 +51,13 @@ layout: default
         {% if page.remember %}
         <div class="remember-demo">
           <h4><strong>Recuerda:</strong></h4>
-          <p>Si quieres ejecutar este demo un tu computadora, debes tener el <a target="_blank" href="http://ionicframework.com/docs/v2/getting-started/installation/">entorno</a> de ionic instalado y luego de descargar o clonar el proyecto debes ubicarte en tu proyecto en la terminal y luego ejecutar</p>
+          <p>Si quieres ejecutar este demo en tu computadora, debes tener el <a target="_blank" href="http://ionicframework.com/docs/v2/getting-started/installation/">entorno</a> de ionic instalado y luego de descargar o clonar el proyecto debes ubicarte en tu proyecto en la terminal y luego ejecutar</p>
           <div class="highlighter-rouge">
             <pre class="highlight"><code>npm install</code></pre>
           </div>
           <p>Y luego</p>
           <div class="highlighter-rouge">
-            <pre class="highlight"><code>ionic state restore</code></pre>
+            <pre class="highlight"><code>ionic cordova prepare</code></pre>
           </div>
           <p>esto es para descargar todas las dependencias del proyecto.</p>
         </div>
@@ -62,7 +65,7 @@ layout: default
       </article>
       <article>
         <hr/>
-        <p>¿Quieres saber más? Suscríbete a nuestro Newsletter o únete a nuestro canal en <a href="http://goo.gl/forms/ZCEc0cr3jydgK2wv1">Slack</a> y mantente atento.
+        <p>Te ha gustado el Post? No te olvides dejarnos una <a href="https://www.facebook.com/pg/ionbook/reviews/">Calificación</a> en Facebook y darle Like al <a href="https://www.facebook.com/pg/ionbook">Facebook Page</a>.
         Espero sea de utilidad y sigan programando :)</p>
         <p>Por: <a href="{{ author.url }}"><strong>{{ author.name }}</strong></a></p>
       </article>

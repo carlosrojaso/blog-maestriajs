@@ -1,4 +1,87 @@
-.highlight pre { background-color: #272822; border: 0px; color: white;}
+div.highlighter-rouge{
+  margin-top: 15px;
+  &.language-js{
+    pre{
+      &:before{
+        content: "\79";
+      }
+    }
+  }
+  &.language-ts{
+    pre{
+      &:before{
+        content: "\65";
+      }
+    }
+  }
+  &.language-html{
+    pre{
+      &:before{
+        content: "\78";
+      }
+    }
+  }
+  &.language-sass,
+  &.language-scss,
+  &.language-css{
+    pre{
+      &:before{
+        content: "\6c";
+      }
+    }
+  }
+  pre{
+    &:before{
+      font-family: "ionbook";
+      font-style: normal;
+      font-weight: normal;
+      font-variant: normal;
+      text-transform: none;
+      speak: none;
+      line-height: 14px;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      content: "\64";
+      background-color: #4E8EF7;
+      color: white;
+      left: -11px;
+      top: -15px;
+      position: absolute;
+      font-size: 15px;
+      padding: 5px;
+      border-radius: 50%;
+    }
+    display: block;
+    padding: 10px 10px 10px 15px;
+    
+    margin: 0 0 10px 0px;
+    font-size: 12px;
+    line-height: 1.42857143;
+    color: white;
+    word-break: break-all;
+    word-wrap: break-word;
+    background-color: #272822;
+    border: 0px;
+    border-left: 5px solid $primary-color;
+    position: relative;
+    code{
+      padding: 0;
+      font-size: inherit;
+      color: inherit;
+      white-space: pre-wrap;
+      background-color: transparent;
+      border-radius: 0;
+    }
+  }
+}
+code.highlighter-rouge{
+  padding: 2px 4px;
+  font-size: 90%;
+  color: #c7254e;
+  background-color: #f9f2f4;
+  border-radius: 4px;
+}
+
 .highlight .hll { background-color: #272822; }
 .highlight .c { color: #75715e } /* Comment */
 /*

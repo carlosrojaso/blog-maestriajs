@@ -18,21 +18,21 @@ El navegador por defecto en IOS es Safari. y simplificando Safari utiliza un Web
 
 {% include blog/subscribe.html %}
 
-<amp-img width="852" height="516" layout="" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2F2017-03-14-help-testing-WKWebview%2FCaptura%20de%20pantalla%202017-03-14%20a%20las%209.30.43%20a.m..png?alt=media&token=59240375-c107-4ffc-ac2a-720b0d4af2ec"></amp-img> 
+<amp-img width="852" height="516" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2F2017-03-14-help-testing-WKWebview%2FCaptura%20de%20pantalla%202017-03-14%20a%20las%209.30.43%20a.m..png?alt=media&token=59240375-c107-4ffc-ac2a-720b0d4af2ec"></amp-img> 
 
 ## Como actualizar ?
 
 1. Si ya lo tienes instalado, remuevelo.
 
-````
+```
 ionic plugin rm cordova-plugin-wkwebview-engine --save
-````
+```
 
 2. Entonces, instalar desde el master en git.
 
-````
+```
 ionic plugin install https://github.com/driftyco/cordova-plugin-wkwebview-engine --save
-````
+```
 
 Si encuentras algún problema solo debes crear un [Issue](https://github.com/driftyco/cordova-plugin-wkwebview-engine/issues)
 

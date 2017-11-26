@@ -1,10 +1,4 @@
-<script async type="text/javascript" src="//static.mailerlite.com/js/w/webforms.min.js?v2c6abe7161f3a691b07793c16c5e5a63"></script>
-<script>
-  function ml_webform_success_3764889() {
-    jQuery('.ml-subscribe-form-3764889 .ml-block-success').show();
-    jQuery('.ml-subscribe-form-3764889 .ml-block-form').hide();
-  };
-</script>
+{% if page.title != 'Home' %}
 <amp-analytics type="googleanalytics" id="analytics-ga">
 <script type="application/json">
 {
@@ -20,3 +14,4 @@
 }
 </script>
 </amp-analytics>
+{% endif%}

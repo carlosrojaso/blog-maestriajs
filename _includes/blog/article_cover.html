@@ -1,5 +1,5 @@
 {% if post.cover %}
-{% for item in site.authors %}{% if item.id == post.author%}{% assign author = item %}{% endif %}{% endfor %}
+{% for item in site.data.authors %}{% if item.id == post.author%}{% assign author = item %}{% endif %}{% endfor %}
 <article class="article-cover">
   <div class="row wrap">
     <div class="col col-100 col-md-66 col-lg-66">

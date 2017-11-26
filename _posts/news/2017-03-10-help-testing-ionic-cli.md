@@ -22,29 +22,29 @@ Los comandos ahora son mas responsivos, mostrando mejor ayuda en la documentaci�
 
 La ayuda de los comandos ahora es mas clara y provee un interesante resumén de la interfaz de comandos.
 
-<amp-img width="670" height="283" layout="" src="http://blog.ionic.io/wp-content/uploads/2017/03/Screen-Shot-2017-03-08-at-1.43.15-PM.png"></amp-img> 
+<amp-img width="670" height="283" layout="responsive" src="http://blog.ionic.io/wp-content/uploads/2017/03/Screen-Shot-2017-03-08-at-1.43.15-PM.png"></amp-img> 
 
 ## Como comenzar?
 
 Ejecuta:
 
-````
+```
 npm install -g ionic@beta
-````
+```
 
 Si tienes proyectos existentes debes ejecutar esto en el directorio del proyecto.
 
 Para Ionic 1.
 
-````
+```
 npm install --save-dev @ionic/cli-build-ionic1@beta @ionic/cli-plugin-cordova@beta
-````
+```
 
 Para Ionic 2.
 
-````
+```
 npm install --save-dev @ionic/cli-build-ionic-angular@beta @ionic/cli-plugin-cordova@beta
-````
+```
 
 Información adicional puede ser encontrada en el [README](npm install --save-dev @ionic/cli-build-ionic-angular@beta @ionic/cli-plugin-cordova@beta).
 

@@ -11,6 +11,8 @@ cover: "https://cdn-images-1.medium.com/max/800/1*0VVxvtVPgHFR8Cm_tQKaOA.png"
 
 <amp-img width="750" height="422" layout="responsive" src="https://cdn-images-1.medium.com/max/800/1*0VVxvtVPgHFR8Cm_tQKaOA.png"></amp-img>
 
+{% include general/net-promoter-score.html %} 
+
 Y para no perder la costumbre los ejemplos van a ser con Angular 2 y Firebase
 
 <amp-img width="400" height="400" src="https://cdn-images-1.medium.com/max/800/1*m13nL_ZByB4L131aNhOysA.png"></amp-img>
@@ -46,10 +48,22 @@ Si todo muy bonito, pero que significa esto?? cual es la gracia, si yo ya tenia 
 El primer ejemplo antes de meterme un poco mas en todo esto es el siguiente
 
 ### NO REACTIVO
-<script src="https://gist.github.com/jorgeucano/1259ed1e95e32a167558e3fe23cdf488.js"></script>
+```js
+var a = 5;
+var b = 10;
+var c = a + b;
+a = 10;
+if (c == 20 ) // false
+```
 
 ### REACTIVO
-<script src="https://gist.github.com/jorgeucano/22a49ec08a902a156167736317b454d6.js"></script>
+```js
+var a = 5;
+var b = 10;
+var c = a + b;
+var a = 10;
+if (c == 20)  // true
+```
 
 Claro, el código es el mismo, ahora uno es false (que parece mas lógico) y el otro es true…
 
@@ -97,17 +111,65 @@ Ahora, cuando podríamos usar esto es la pregunta…
 
 Hace poco tiempo con ng-baires ( la mejor meetup de universo(?) ) hicimos un bootcamp de Angular 2 y Firebase… Firebase tiene una librería especifica para Angular2 la cual esta armada con observables.
 
-<script src="https://gist.github.com/jorgeucano/4a9494a72d239cae021b5343486cf5de.js"></script>
+```ts
+import { Component, OnInit } from '@angular/core';
+
+import { AngularFire, FirebaseListObservable } from 'angularfire2';
+import { Observable } from 'rxjs/Observable';
+
+import { RouteParams } from '@ngrx/router';
+import 'rxjs/add/operator/pluck';
+
+@Component({
+  moduleId: module.id,
+  selector: 'app-post-page',
+  templateUrl: 'post-page.component.html',
+  styleUrls: ['post-page.component.css']
+})
+export class PostPageComponent implements OnInit {
+
+  afi : any;
+  id$: Observable<string>;
+  posts: FirebaseListObservable<any[]>;
+  post$: any;
+
+  constructor(af: AngularFire, routeParams$: RouteParams) {
+    this.afi = af;
+    this.id$ = routeParams$.pluck<string>('id');
+      this.post$ = routeParams$.pluck<string>('id')
+        // only update if `id` changes
+        .distinctUntilChanged()
+        // Request the post from the server when the ID updates
+        .mergeMap(id => {
+          // Mark that we are loading a new post:
+          this.posts = this.afi.database.list('/POSTS', {
+            query: {
+              orderByChild: 'id',
+              equalTo: parseInt(id)
+            }
+          });
+          return "";
+
+      });
+  }
+
+
+
+  ngOnInit() {
+  }
+
+}
+```
 
 Analizando un poco todo , importamos muchas cosas con RX no ?
 
 Arranquemos con los imports
 
-<blockquote>import { Observable } from ‘rxjs/Observable’;
-
+```ts
+import { Observable } from ‘rxjs/Observable’;
 import { RouteParams } from ‘@ngrx/router’;
-
-import ‘rxjs/add/operator/pluck’;</blockquote>
+import ‘rxjs/add/operator/pluck’
+```
 
 Las tres son de la librería Rx, unas directo de RxJS (de la que venimos hablando) y el router es de ngrx que es la implementación de RxJS para Angular2.
 

@@ -6,17 +6,38 @@ date: 2017-04-15
 tags: [tips, news]
 categories: tips
 author: nicobytes
-cover: "/images/posts/news/2017-04-15-ionic-2-to-ionic3/cover.jpg"
+cover: "/images/posts/tips/2017-04-15-ionic-2-to-ionic3/cover.jpg"
+versions:
+  - title: 'ionic'
+    number: '3.5.3'
+  - title: 'ionic-native'
+    number: '4.1.0'
+  - title: 'ionic-app-scripts'
+    number: '2.0.2'
+  - title: 'cordova-cli'
+    number: '7.0.0'
+  - title: 'ionic-cli'
+    number: '3.5.0'
 ---
 
 > Hace poco Ionic lanzó su más reciente versión [**(Ionic v3)**]({{site.urlblog}}/news/ionic-v-3){:target="_blank"} y mencionamos acerca de sus principales novedades, ahora en este artículo vamos a ver cómo actulizar un proyecto desde la versión 2 a la versión 3 y como resolver los problemas más comunes.
 <!--summary-->
 
-<amp-img width="1024" height="512" layout="responsive" src="/images/posts/news/2017-04-15-ionic-2-to-ionic3/cover.jpg"></amp-img>
+<amp-img width="1024" height="512" layout="responsive" src="/images/posts/tips/2017-04-15-ionic-2-to-ionic3/cover.jpg"></amp-img>
 
-## Paso 1: Borrar node_modules
+{% include general/net-promoter-score.html %} 
 
-Debemos borrar la carpeta `node_modules`, para luego instalar las nuevas dependencias del proyecto. Se puede borrar desde la terminal de la siguiente manera:
+## Paso 1: Actualizar Ionic CLI y Cordova
+
+Debemos aseguranos que tenemos la ultima versión de ionic CLI y cordova con:
+
+```
+npm install -g ionic@latest cordova@latest
+```
+
+## Paso 2: Borrar node_modules
+
+Debemos borrar la carpeta `node_modules` de nuestro proyecti, para luego instalar las nuevas dependencias. Se puede borrar desde la terminal de la siguiente manera:
 
 Mac / Linux
 ```
@@ -28,47 +49,49 @@ Windows
 rd /s node_modules 
 ```
 
-# Paso 2: Actualizar package.json
+# Paso 3: Actualizar package.json
 
 Ahora debemos actualizar las versiones de las dependencias de nuestro proyecto y las que de ionic 3 necesita para trabajar correctamente, las versiones deben quedar de la siguiente manera:
 
-{% highlight json %}
+```json
 "dependencies": {
-  "@angular/common": "4.0.0",
-  "@angular/compiler": "4.0.0",
-  "@angular/compiler-cli": "4.0.0",
-  "@angular/core": "4.0.0",
-  "@angular/forms": "4.0.0",
-  "@angular/http": "4.0.0",
-  "@angular/platform-browser": "4.0.0",
-  "@angular/platform-browser-dynamic": "4.0.0",
-  "@ionic-native/core": "3.4.2",
-  "@ionic-native/splash-screen": "3.4.2",
-  "@ionic-native/status-bar": "3.4.2",
+  "@angular/common": "4.1.3",
+  "@angular/compiler": "4.1.3",
+  "@angular/compiler-cli": "4.1.3",
+  "@angular/core": "4.1.3",
+  "@angular/forms": "4.1.3",
+  "@angular/http": "4.1.3",
+  "@angular/platform-browser": "4.1.3",
+  "@angular/platform-browser-dynamic": "4.1.3",
+  "@ionic-native/core": "4.1.0",
+  "@ionic-native/splash-screen": "4.1.0",
+  "@ionic-native/status-bar": "4.1.0",
   "@ionic/storage": "2.0.1",
-  "ionic-angular": "3.0.1",
+  "ionic-angular": "3.5.3",
   "ionicons": "3.0.0",
-  "rxjs": "5.1.1",
-  "sw-toolbox": "3.4.0",
-  "zone.js": "^0.8.4"
+  "rxjs": "5.4.0",
+  "sw-toolbox": "3.6.0",
+  "zone.js": "0.8.12"
 },
 "devDependencies": {
-  "@ionic/app-scripts": "1.3.0",
-  "typescript": "~2.2.1"
+  "@ionic/app-scripts": "2.0.2",
+  "@ionic/cli-plugin-cordova": "1.4.1",
+  "@ionic/cli-plugin-ionic-angular": "1.3.2",
+  "typescript": "2.3.4"
 }
-{% endhighlight %}
+```
 
 Si existen otras dependencias aparte de las que maneja Ionic, se debe revisar la documentación de estas dependencias y si es necesario actualizarlas, lo más importante es que sean compatibles con la versión de angular 4.
 
-## Paso 3: Instalar nuevas dependencias 
+## Paso 4: Instalar nuevas dependencias 
 
 Ahora solo debemos instalar las nuevas dependencias en el proyecto y para esto ejecutamos el comando `npm install` desde la terminal.
 
-## Paso 4: Importar **BrowserModule**
+## Paso 5: Importar **BrowserModule**
 
 Ahora debemos agregar `BrowserModule` en nuestro archivo `app.module.ts`, así:
 
-{% highlight ts %}
+```ts
 import { BrowserModule } from '@angular/platform-browser';
 
 ...
@@ -91,13 +114,13 @@ import { BrowserModule } from '@angular/platform-browser';
   ]
 })
 export class AppModule {}
-{% endhighlight %}
+```
 
-## Paso 4: Importar **HttpModule**
+## Paso 6: Importar **HttpModule**
 
 Ahora debemos agregar `HttpModule` en nuestro archivo `app.module.ts`, este paso es muy importante si dentro de la aplicación se usa la dependencia `Http`:
 
-{% highlight ts %}
+```ts
 import { HttpModule } from '@angular/http';
 
 ...
@@ -114,7 +137,7 @@ import { HttpModule } from '@angular/http';
   ],
   bootstrap: [IonicApp],
   entryComponents: [
-    DuetyApp,
+    MyApp,
     HomePage
   ],
   providers: [
@@ -123,7 +146,28 @@ import { HttpModule } from '@angular/http';
   ]
 })
 export class AppModule {}
-{% endhighlight %}
+```
+
+## Paso 7: Agregar vendors a Index.html
+
+Por último vamos a agregar en nuestro `src/index.html`, la ruta `build/vendor.js`, así debe quedar:
+
+```html
+...
+<!-- Ionic's root component and where the app will load -->
+<ion-app></ion-app>
+
+<!-- The polyfills js is generated during the build process -->
+<script src="build/polyfills.js"></script>
+
+<!-- The vendor js is generated during the build process
+      It contains all of the dependencies in node_modules -->
+<script src="build/vendor.js"></script>
+
+<!-- The main bundle js is generated during the build process -->
+<script src="build/main.js"></script>
+...
+```
 
 **!Y ya eso es todo!** Se ve algo fácil, pero ahora explicaré algunos de los problemas más comunes y como solucionarlos:
 
@@ -140,7 +184,7 @@ npm install @ionic-native/camera --save
 
 Luego de instalar el plugin y el provider debemos agregar este provider en el array de `providers` en el archivo `app.module.ts` , asi:
 
-{% highlight ts %}
+```ts
 import { Camera } from '@ionic-native/camera';
 
 ...
@@ -167,11 +211,11 @@ import { Camera } from '@ionic-native/camera';
   ]
 })
 export class AppModule {}
-{% endhighlight %}
+```
 
 Y por último, se debe inyectar el provider como dependencia en la clase que se quiera hacer uso de este plugin, así:
 
-{% highlight ts %}
+```ts
 import { Camera } from '@ionic-native/camera';
 import { Component } from '@angular/core';
 
@@ -187,7 +231,7 @@ export class HomePage{
 
   ...
 }
-{% endhighlight %}
+```
 
 ## Tip 2: Grid
 
@@ -195,25 +239,25 @@ Con la versión 3 de Ionic el sistema de grillas de ionic v2 ya no es soportado,
 
 ### Antes (v2)
 
-{% highlight html %}
+```html
 <ion-grid>
   <ion-row center>
     <ion-col width-20>...</ion-col>
     <ion-col width-80>...</ion-col>
   </ion-row>
 </ion-grid>
-{% endhighlight %}
+```
 
 ### Ahora (v3)
 
-{% highlight html %}
+```html
 <ion-grid>
   <ion-row align-items-center>
     <ion-col col-4>...</ion-col>
     <ion-col col-8>...</ion-col>
   </ion-row>
 </ion-grid>
-{% endhighlight %}
+```
 
 Pueden ver la documentación completa en [**Ionic Grids Docs**](https://ionicframework.com/docs/theming/responsive-grid/){:target="_blank"}.
 
@@ -223,19 +267,19 @@ También han removido selectores de color en textos, esto quiere decir que si us
 
 ### Antes (v2)
 
-{% highlight html %}
+```html
 <p color="danger">...</p>
 <strong color="secondary">...</strong>
 <span color="dark">...</span>
-{% endhighlight %}
+```
 
 ### Ahora (v3)
 
-{% highlight html %}
+```html
 <p ion-text color="danger">...</p>
 <strong ion-text color="secondary">...</strong>
 <span ion-text color="dark">...</span>
-{% endhighlight %}
+```
 
 # Tip 4: Animations
 
@@ -247,7 +291,7 @@ npm install @angular/animations --save
 
 Luego debemos importar `BrowserAnimationsModule` en el archivo `app.module.ts`, asi:
 
-{% highlight ts %}
+```ts
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 ...
@@ -274,13 +318,13 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
   ]
 })
 export class AppModule {}
-{% endhighlight %}
+```
 
 Y ahora en las páginas que estemos usando el API de animaciones, ya no importamos las utilidades desde `@angular/core` sino desde `angular/animations`, así:
 
 ### Antes (v2)
 
-{% highlight ts %}
+```ts
 import { Component, trigger, state, style, transition, animate } from '@angular/core';
 
 @Component({
@@ -292,11 +336,11 @@ import { Component, trigger, state, style, transition, animate } from '@angular/
 })
 export class HomePage {
   ...
-{% endhighlight %}
+```
 
 ### Ahora (v3)
 
-{% highlight ts %}
+```ts
 import { Component } from '@angular/core';
 import { trigger, state, style, transition, animate } from '@angular/animations';
 
@@ -309,7 +353,7 @@ import { trigger, state, style, transition, animate } from '@angular/animations'
 })
 export class HomePage {
   ...
-{% endhighlight %}
+```
 
 ## Tip 5: Ionic generator
 
@@ -323,7 +367,7 @@ Nos crea un archivo más `login.module.ts`:
 
 <div class="row">
   <div class="col col-100 col-md-50 offset-md-25 col-lg-50 offset-lg-25">
-    <amp-img width="484" height="183" layout="responsive" src="/images/posts/news/2017-04-15-ionic-2-to-ionic3/tree.png"></amp-img>
+    <amp-img width="484" height="183" layout="responsive" src="/images/posts/tips/2017-04-15-ionic-2-to-ionic3/tree.png"></amp-img>
   </div>
 </div>
 

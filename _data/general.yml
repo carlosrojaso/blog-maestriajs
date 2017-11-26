@@ -1,0 +1,51 @@
+# ==============================================================
+# Social
+
+social_links: 
+  - url: "https://twitter.com/ion_book"
+    title: "Twiiter"
+    icon: "icon-social-twitter"
+  - url: "https://www.facebook.com/ionbook/"
+    title: "Facebook"
+    icon: "icon-social-facebook"
+  - url: "http://goo.gl/forms/ZCEc0cr3jydgK2wv1"
+    title: "Slack"
+    icon: "icon-slack"
+  - url: "https://www.youtube.com/channel/UCxs-DaSRmp8k23n79WjXndw"
+    title: "Youtube"
+    icon: "icon-social-youtube"
+  - url: "https://www.instagram.com/ion_book"
+    title: "Instagram"
+    icon: "icon-social-instagram-outline"
+
+# ==============================================================
+# Banner Course
+banner_course:
+  text: 'Suscribete a nuestra lista de correos y nunca te pierdas un Tutorial.'
+  btn_text: 'Suscribirme'
+  url: 'http://eepurl.com/b5l-Ff'
+# ==============================================================
+# Banner Slack
+banner_slack:
+  title: 'Únete a nuestra comunidad'
+  text: 'Únete a nuestro canal de slack y podras interactuar con toda la comunidad hispana en ionic.'
+  url: 'http://goo.gl/forms/ZCEc0cr3jydgK2wv1'
+  btn_text: 'Unete'
+
+# Banner Hnagouts
+banner_hangouts:
+  title: 'No te pierdas nuestro proximo ion-hangout'
+  text: 'Cada dos semanas invitamos a un amigo de la comunidad para hablar desde sus experiencia en estos tiempos emocionantes.'
+  url: 'https://www.youtube.com/channel/UCxs-DaSRmp8k23n79WjXndw?sub_confirmation=1'
+  btn_text: 'Ir'
+
+# ==============================================================
+# Blog
+blog:
+  count_related_posts: 3
+
+# ==============================================================
+# Subscribe
+subscribe:
+  btn_text: 'Subscríbete'
+  success_text: 'Gracias! Ahora estas suscrito a ion-book.'

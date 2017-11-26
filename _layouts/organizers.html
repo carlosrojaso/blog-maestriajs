@@ -1,0 +1,53 @@
+---
+layout: default
+---
+{% include blog/header.html %}
+<div class="content">
+  <div class="row">
+    <div class="col">
+      <h1 class="title-page">Organizadores</h1>
+    </div>
+  </div>
+  <div class="row wrap top">
+    <div class="col col-100 col-md-80 col-lg-80 content-authors">
+      <p>Esto son los organizadores de los Cross Apps Groups (C.A.G) un espacio para compartir conocimiento quienes estan interesados en Crear Apps Móviles utilizando Javascript; Todo desde Ionic, NativeScript, Phonegap y Electron, hasta integraciones de APIS, Firebase y otros BaaS.<br/><br/>
+      Contacta a tu organizador mas cercano :)
+      </p>
+      {% for organizer in site.data.organizers %}
+      <div class="author">
+        <div class="row wrap center">
+          <div class="col col-100 col-md-20 col-lg-20">
+            <amp-img class="avatar-profile" src="{{ organizer.avatar }}" alt="{{ organizer.name }}" width="800" height="800" layout="responsive"></amp-img>
+          </div>
+          <div class="col col-100 col-md-80 col-lg-80 text">
+            <h2 class="author-name">{{ organizer.name }}</h2>
+            <h3 class="author-country">{{ organizer.country }}</h3>
+            <div class="info"><p>{{ organizer.bio | strip_html | truncate: 200  }}...</p></div>
+            {% for meetup in organizer.meetups %}  
+            <div class="more">
+              <a class="btn btn-primary btn-round" href="{{ meetup.link }}">{{ meetup.name }}</a>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+    <div class="col col-100 col-md-100 col-lg-20">
+      <div class="row wrap baseline">
+        <div class="col col-100">
+          <section class="content-article-right">
+            <h3>Ultimos artículos:</h3>
+            <div class="row wrap baseline">
+              {% for post in site.posts limit: 8 %}
+                <div class="col col-100 col-md-33 col-lg-100">
+                  {% include blog/article_right.html %}
+                </div>
+              {% endfor %}
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

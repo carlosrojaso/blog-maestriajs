@@ -7,12 +7,19 @@ tags: [firebase, ionic2]
 categories: ionic2
 author: javebratt
 cover: "https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2F2017-02-24-formsularios-firebase%2F5mTwi1e.jpg?alt=media&token=506ec3e9-8174-4f3f-8311-edddc5a3abbd"
+versions:
+  - title: 'ionic'
+    number: '2.0.0'
+  - title: 'ionic-native'
+    number: '2.4.1'
 ---
 
 > Estas seguro del tipo de dato que estas enviando desde tu App en Ionic es la misma que se esta almacenando en la base de datos de Firebase? Resulta que para mi no lo era.
 <!--summary-->
 
 <amp-img width="1024" height="512" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2F2017-02-24-formsularios-firebase%2F5mTwi1e.jpg?alt=media&token=506ec3e9-8174-4f3f-8311-edddc5a3abbd" alt="Firebase"></amp-img>
+
+{% include general/net-promoter-score.html %} 
 
 Post en [**Ingles**](https://javebratt.com/validate-forms-ionic-firebase/) 
 
@@ -37,24 +44,24 @@ Despues que tu App este lista, quiero que crees un proveedor para manejar los da
 
 Abre tu terminal y crea algo como esto.
 
-````
-$ ionic generate provider FirebaseData
-````
+```
+ionic generate provider FirebaseData
+```
 
 Ahora ve dentro de ````app.module.ts```` e importalo.
 
-````
+```ts
 import { FirebaseData } from '../providers/firebase-data';
-````
+```
 
 entonces, Inicializa esto en el ````NgModule````:
 
-````
+```ts
 providers: [
   {provide: ErrorHandler, useClass: IonicErrorHandler},
   FirebaseData
 ]
-````
+```
 
 Ahora todo esta listo, asi que vamos con la Validación del Formulario.
 
@@ -63,30 +70,30 @@ Ahora todo esta listo, asi que vamos con la Validación del Formulario.
 Vamos a hacer algo simple aqui, estamos creando un formulario que tomara 3 entradas, el nombre de una canción, el nombre de un artista, 
 y la edad de usuario para asegurarnos que el usuario esta sobre los 18.
 
-Ir a ````home.ts```` e importar los formularios de Angular.
+Ir a `home.ts` e importar los formularios de Angular.
 
-````
+```ts
 import { FormBuilder, Validators } from '@angular/forms';
-````
+```
 
-Nosotros usaremos ````FormBuilder```` para crear el formulario, asi que vamos e inyecta esto en el controlador.
+Nosotros usaremos `FormBuilder` para crear el formulario, asi que vamos e inyecta esto en el controlador.
 
-````
+```ts
 constructor(public navCtrl: NavController, 
   public formBuilder: FormBuilder) {...}
-````
+```
 
 Ahora vamos a crear un nuevo formulario y declarar este antes del constructor.
 
-{% highlight ts %}
+```ts
 public addSongForm: any;
 constructor(public navCtrl: NavController, 
   public formBuilder: FormBuilder) {...}
-{% endhighlight %}
+```
 
 Ahora vamos a inicializar el formulario y declarar las entradas esto va a ser.
 
-{% highlight ts %}
+```ts
 this.addSongForm = formBuilder.group({
   songName: ['', Validators.compose([Validators.required, 
     Validators.maxLength(45)])],
@@ -94,14 +101,14 @@ this.addSongForm = formBuilder.group({
     Validators.minLength(2)])],
   userAge: ['', Validators.compose([Validators.required])]
 });
-{% endhighlight %}
+```
 
 vamos con un poco de teoria sobre lo que acabamos de ver.
 
 Los formularios en Angular vienen con varias cosas bonitas que podemos utilizar, una de estas es el modulo de validación, ese modulo viene con 
-validadores pre configurados como ````required````, ````minLength```` y ````maxLength````
+validadores pre configurados como `required`, `minLength` y `maxLength`
 
-Sin hacer nada extra de trabajo, el modulo de validación va a corroborar que la entrada de ````songName```` no vaya a tener mas de 45 caracteres, o que el nombre del artista necesita al menos dos caracteres, o que todo los campos son requeridos.
+Sin hacer nada extra de trabajo, el modulo de validación va a corroborar que la entrada de `songName` no vaya a tener mas de 45 caracteres, o que el nombre del artista necesita al menos dos caracteres, o que todo los campos son requeridos.
 
 La cosa realmente cool es que lo podemos llevar a otro nivel y **hacer nuestros propios validadores**
 
@@ -111,115 +118,115 @@ Yo se que existén probablemente 10 mejores formas para hacer esto, pero recuerd
 
 Vamos a crear validadores que tomen la edad y se aseguren que el numero sea mayor o igual de 18.
 
-Para eso yo quiero crear un folder llamado ````validators```` dentro de tu folder ````src````, y crea un archivo llamado ````age.ts````
+Para eso yo quiero crear un folder llamado `validators` dentro de tu folder `src`, y crea un archivo llamado `age.ts`
 
-Abre ````age.ts```` y vamos a crear nuestro validador.
+Abre `age.ts` y vamos a crear nuestro validador.
 
 La primera cosa que tu haras es ese archivo es importar el modulo que nosotros necesitaremos:
 
-````
+```ts
 import { FormControl } from '@angular/forms';
-````
+```
 
-Entonces crearemos y exportaremos la clase, que voy a llamar ````AgeValidator````:
+Entonces crearemos y exportaremos la clase, que voy a llamar `AgeValidator`:
 
-````
+```ts
 export class AgeValidator {...}
-````
+```
 
-y dentro de la clase, crearemos un metodo llamado ````isValid````
+y dentro de la clase, crearemos un metodo llamado `isValid`
 
-````
+```ts
 static isValid(control: FormControl): any {...}
-````
+```
 
 Ahora dentro de ese metodo nosotros verificaremos la edad:
 
-````
+```ts
 if (control.value >= 18){ return null; }
 return {"notOldEnough": true};
-````
+```
 
-Si el valor esta evaluado es superior que o igual que 18 este va a retornar  ````null````, pero si no, este retornara ese objeto.
+Si el valor esta evaluado es superior que o igual que 18 este va a retornar  `null`, pero si no, este retornara ese objeto.
 
-Ahora que el validador esta listo, vamos adelante e importaremos este en ````home.ts````:
+Ahora que el validador esta listo, vamos adelante e importaremos este en `home.ts`:
 
-````
+```ts
 import { AgeValidator } from '../../validators/age';
-````
+```
 
-y agrega este a la inicialización del campo ````userAge```` en el constructor:
+y agrega este a la inicialización del campo `userAge` en el constructor:
 
-````
+```ts
 this.addSongForm = formBuilder.group({
   userAge: ['', Validators.compose([Validators.required, AgeValidator.isValid])]
 });
-````
+```
 
 ## El formulario vista.
 
-Ahora es tiempo de ir a ````home.html```` y empezar a crear el formulario, primero borra todo lo que esta dentro de las etiquetas ````<ion-content></ion-content>````.
+Ahora es tiempo de ir a `home.html` y empezar a crear el formulario, primero borra todo lo que esta dentro de las etiquetas `<ion-content></ion-content>`.
 
 y crea un formulario aquí.
 
-````
+```ts
 <form [formGroup]="addSongForm" (submit)="addSong()" novalidate></form>
-````
+```
 
 El formulario va a tener algunas cosas:
 
-* ````[formGroup]="addSongForm"```` es el nombre (e inicialización en el archivo ts) que le estamos dando al formulario.
-* ````(submit)="addSong()"```` le esta diciendo a Ionic que cuando este formulario es ingresado este necesita correr la función ````addSong()````
-* ````novalidate```` le dice al navegador que apague la notificación por defecto, de esa manera nosotros manejaremos la validación con los modulos del formulario.
+* `[formGroup]="addSongForm"` es el nombre (e inicialización en el archivo ts) que le estamos dando al formulario.
+* `(submit)="addSong()"` le esta diciendo a Ionic que cuando este formulario es ingresado este necesita correr la función `addSong()`
+* `novalidate` le dice al navegador que apague la notificación por defecto, de esa manera nosotros manejaremos la validación con los modulos del formulario.
 
 Despues de que el formulario es creado es tiempo para agregar nuestro primera entrada, primero crearemos la entrada:
 
-{% highlight html %}
+```html
 <ion-item>
   <ion-label stacked>Song Name</ion-label>
   <ion-input formControlName="songName" type="text" 
     placeholder="What's the song's name?">
   </ion-input>
 </ion-item>
-{% endhighlight %}
+```
 
 entonces,  nosotros mostraremos un mensaje de error si el formulario no es valido, asi que es correcto despues que la entrada agrega un parrafo con el mensaje de error.
 
-{% highlight html %}
+```html
 <ion-item class="error-message" *ngIf="!addSongForm.controls.songName.valid 
   && addSongForm.controls.songName.dirty">
   <p>
     The song's name is required to be under 45 characters.
   </p>
 </ion-item>
-{% endhighlight %}
+```
 
 Hemos configurado un mensaje de error para que permanezca escondido, y se muestre solo si:
 
 * El campo del formulario no es valido y
-* El campo del formulario es ````dirty```` (Esto significa que el usuario ya agrego valores a este)
+* El campo del formulario es `dirty` (Esto significa que el usuario ya agrego valores a este)
 
 Vamos también a agregar una clase CSS para mostrar una pequeña linea roja si el campo no es valido (ya sabes, nada dice que un formulario tiene un error como una lineas rojas) 
 
-{% highlight html %}
+```html
   <ion-input [class.invalid]="!addSongForm.controls.songName.valid 
     &&  addSongForm.controls.songName.dirty">
   </ion-input>
-{% endhighlight %}
+```
 
 Eso justo ahi agrega una clase CSS llamada ```ìnvalid```` si el formulario no es valido y tiene un valor adentro.
 
 por cierto, esta es la linea de CSS.
 
-`````
+```css
 .invalid{
   border-bottom: 1px solid #FF6153;
 }
-`````
+```
 
 Al final la entrada entera deberia verse asi.
 
-{% highlight html %}
+```html
 <ion-item>
   <ion-label stacked>Song Name</ion-label>
   <ion-input formControlName="songName" type="text" 
@@ -233,11 +240,11 @@ Al final la entrada entera deberia verse asi.
     The song's name is required to be under 45 characters.
   </p>
 </ion-item>
-{% endhighlight %}
+```
 
 Ahora repite el proceso dos veces para el nombre del artista.
 
-{% highlight html %}
+```html
 <ion-item>
   <ion-label stacked>Artist Name</ion-label>
   <ion-input formControlName="artistName" type="text" 
@@ -251,11 +258,11 @@ Ahora repite el proceso dos veces para el nombre del artista.
     The artist's name has to be at least 2 characters long.
   </p>
 </ion-item>
-{% endhighlight %}
+```
 
 y para la edad del usuario.
 
-{% highlight html %}
+```html
 <ion-item>
   <ion-label stacked>How old are you?</ion-label>
   <ion-input formControlName="userAge" type="number" 
@@ -269,23 +276,23 @@ y para la edad del usuario.
     You must be 18 or older to use this app.
   </p>
 </ion-item>
-{% endhighlight %}
+```
 
 y finalmente agregaras un boton de enviar.
 
-{% highlight html %}
+```html
 <button ion-button block type="submit">
   Add Song
 </button>
-{% endhighlight %}
+```
 
 Vamos a adelantarnos y desactivar el botón hasta que el formulario sea valido.
 
-{% highlight html %}
+```html
 <button ion-button block type="submit" [disabled]="!addSongForm.valid">
   Add Song
 </button>
-{% endhighlight %}
+```
 
 <amp-img width="350" height="538" layout="fixed" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2F2017-02-24-formsularios-firebase%2Finvalid-squashed.png?alt=media&token=07bc18d5-ec67-4496-a8bb-d92bde21f92a" alt="Pic2"></amp-img>
 
@@ -299,51 +306,51 @@ Asi que agregaremos 2 capas extras de seguridad.
 
 ## Paso 2. Agregar Declaración de Tipos de Datos en TypeScript.
 
-Para la declaración de datos, tu comenzaras trabajando en tu proveedor ````FirebaseData````, para mandar los datos a Firebase.
+Para la declaración de datos, tu comenzaras trabajando en tu proveedor `FirebaseData`, para mandar los datos a Firebase.
 
-Avancemos y en el archivo ````firebase-data.ts```` importaremos Firebase.
+Avancemos y en el archivo `firebase-data.ts` importaremos Firebase.
 
-````
+```ts
 import firebase from 'firebase';
-````
+```
 
 y entonces solo crearemos la función para empujar una nueva canción a la base de datos:
 
-{% highlight ts %}
+```ts
 saveSong(songName, artistName, userAge) {
   return firebase.database().ref('songs')
     .push({ songName, artistName, userAge });
 }
-{% endhighlight %}
+```
 
-eso es una función normal  ````push()```` para agregar objetos a una lista en Firebase, una cosa buena que aprendi de [ES6 for Everyone](https://javebratt.com/es6) es que si las propiedades del objeto y los valores
+eso es una función normal  `push()` para agregar objetos a una lista en Firebase, una cosa buena que aprendi de [ES6 for Everyone](https://javebratt.com/es6) es que si las propiedades del objeto y los valores
 tienen el mismo nombre tu puedes solo tipear estos muchas veces, asi:
 
-{% highlight ts %}
+```ts
 .push({
   songName: songName,
   artistName: artistName,
   userAge: userAge
 });
-{% endhighlight %}
+```
 
 Se convierte en:
 
-````
+```ts
 .push({ songName, artistName, userAge });
-````
+```
 
 y ahora, agregamos la declaración de tipos, tan facil como:
 
-````
+```ts
 saveSong(songName: string, artistName: string, userAge: number) {...}
-````
+```
 
-Eso le dice a TypeScript que las canciones nombradas tienen que ser ````String````, El nombre del Artista tiene que ser ````String````, y la edad de los usuarios debe ser un numero.
+Eso le dice a TypeScript que las canciones nombradas tienen que ser `String`, El nombre del Artista tiene que ser `String`, y la edad de los usuarios debe ser un numero.
 
-Ahora en tu archivo ````home.ts```` solo debes crear la función ````addSong()```` para enviar datos al proveedor, esto deberia ser algo como:
+Ahora en tu archivo `home.ts` solo debes crear la función `addSong()` para enviar datos al proveedor, esto deberia ser algo como:
 
-{% highlight ts %}
+```ts
 addSong(){
   if (!this.addSongForm.valid){
     console.log("Nice try!");
@@ -355,7 +362,7 @@ addSong(){
   }
 
 }
-{% endhighlight %}
+```
 
 Si el formulario no es valido, no hagas nada, y si lo es, entonces, enviaremos los datos a el proveedor, estoy reseteando todos los valores despues de guardados.
 
@@ -382,75 +389,75 @@ Para editar esto, ve a reglas de seguridad desde tu consola de Firebase.
 
 Entonces, nosotros agregaremos las reglas, para las simples reglas de leer/escribir que tienes ahi, agregaras una regla de validación al nodo cancion:
 
-{% highlight json %}
+```json
 "songs": {
   "$songId": {
     ".validate": ""
   }
 }
-{% endhighlight %}
+```
 
-Dentro de la propiedad ````validate```` agregaremos nuestras reglas.
+Dentro de la propiedad `validate` agregaremos nuestras reglas.
 
-Firebase tiene unas pocas reglas listas para usar, como ````data````, ````newData````. y ````now````.
+Firebase tiene unas pocas reglas listas para usar, como `data`, `newData`. y `now`.
 
-Estaremos usando ````newData```` desde que esta es la regla que se refiere  a nuevos datos siendo guardado en nuestra base de datos.
+Estaremos usando `newData` desde que esta es la regla que se refiere  a nuevos datos siendo guardado en nuestra base de datos.
 
 Si quieres una lista de todas las variables y sus explicaciones puedes chequear [acá](https://firebase.google.com/docs/database/security/securing-data).
 
 La primera cosa que nosotros necesitaremos para estar seguros es que cada cada nueva cancion realmente tiene las 3 propiedades, el nombre de la canción, el artista, y la edad del usuario.
 
-Para eso usaremos la propiedad ````.hasChildren()````
+Para eso usaremos la propiedad `.hasChildren()`
 
-{% highlight json %}
+```json
 "songs": {
   "$songId": {
     ".validate": "newData.hasChildren(['songName', 'artistName', 'userAge'])"
   }
 }
-{% endhighlight %}
+```
 
-En esa linea, nosotros le estamos diciendo a Firebase que cada nueva canción que nosotros guardaremos necesita tener 3 hijos, un hijo llamado ````songName````, otro llamado ````artistName```` y el tercero
-llamado ````userAge````.
+En esa linea, nosotros le estamos diciendo a Firebase que cada nueva canción que nosotros guardaremos necesita tener 3 hijos, un hijo llamado `songName`, otro llamado `artistName` y el tercero
+llamado `userAge`.
 
 Vamos a empezar validando el nombre de la canción primero, recuerda que nosotros configuramos dos reglas 1) este debe ser un String 2) este debe ser menor de 45 caracteres.
 
 Asi que miraremos la primera, asegurandonos que sea un String, para eso agregaremos otra regla para validar la propiedad:
 
 
-````
+```ts
 newData.child('songName').isString()
-````
+```
 
-Esto asegurara que cuando una nueva cancion es agregada, su propiedad ````songName```` necesitara ser un String.
+Esto asegurara que cuando una nueva cancion es agregada, su propiedad `songName` necesitara ser un String.
 
 Puede tambien agregar las otras reglas y decirle que chequee su longitud y este seguro que esta por debajo de 45 caracteres.
 
-````
+```ts
 newData.child('songName').val().length <= 45
-````
+```
 
-Ahora haremos lo mismo con el ````artistName````
+Ahora haremos lo mismo con el `artistName`
 
-````
+```ts
 newData.child('artistName').isString()
-````
+```
 
 y
 
-````
+```ts
 newData.child('songName').val().length > 1
-````
+```
 
-y por ultimo para validar el ````userAge````
+y por ultimo para validar el `userAge`
 
-````
+```ts
 newData.child('userAge').isNumber() && newData.child('userAge').val() > 17
-````
+```
 
 Al final las reglas se veran asi:
 
-{% highlight json %}
+```json
 {
   "rules": {
     ".read": true,
@@ -463,9 +470,9 @@ Al final las reglas se veran asi:
     }
   }
 }
-{% endhighlight %}
+```
 
-De esta manera te aseguraras que siempre guarde la información correcta si por cualquier cosa tu envias tu información como un String en lugar de un numero en la edad del usuario, entonces el metodo ````.push()````
+De esta manera te aseguraras que siempre guarde la información correcta si por cualquier cosa tu envias tu información como un String en lugar de un numero en la edad del usuario, entonces el metodo `.push()`
 te enviara un error **Permission Denied**
 
 Hay lo tienes un flujo completo de validación, iniciando validando tus entradas en tu app y moviendote hasta la validación en Firebase.
