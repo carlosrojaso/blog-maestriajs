@@ -2,7 +2,7 @@
 layout: post
 title: "Entrevista a Juan Herrera"
 keywords: "applover"
-date: 2017-11-26
+date: 2017-11-27
 tags: [interview]
 categories: news
 author: carlosrojas
