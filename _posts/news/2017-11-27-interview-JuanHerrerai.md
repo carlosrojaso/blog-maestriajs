@@ -42,6 +42,9 @@ En términos generales:
 ## ¿Cuál es tu configuración en tu lugar de trabajo (Computador, S.O, dispositivos, etc)?
 
 Utilizo Windows 10. Yuxi Global, la empresa para la que trabajo, me proporciona un equipo Lenovo E460 con características suficientes para mi trabajo. 
+
+<amp-img width="1024" height="708" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ngclassroom-8ba81.appspot.com/o/posts%2F2017-11-27-interview-JuanHerrerai%2FIMG_20171127_064029%20(1).jpg?alt=media&token=8335d6e2-d597-4824-9f31-1a63be549be6"></amp-img>
+
 En el software utilizo [VSCode](https://code.visualstudio.com/), [GitKraken](https://www.gitkraken.com/), [ConEmu](https://conemu.github.io/), [Fiddler](https://conemu.github.io/) y [Chrome](https://www.google.com/chrome/browser/desktop/index.html). Mi celular es un [One Plus 5](https://oneplus.net/5) con Android 7.1.1
 
 *Dispositivo Movil*
