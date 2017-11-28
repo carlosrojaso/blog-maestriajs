@@ -2,34 +2,40 @@
 layout: post
 title: "Reduce el tiempo de carga de tu app"
 keywords: "migrar de ionic 2 a ionic 3, de ionic 2 a ionic 3, ionic 2 a ionic 3, ionic 3, ionic page, lazy loading"
-date: 2017-04-25
-tags: [tips, news]
-categories: tips
+date: 2017-11-28
+categories: ionic2
 author: nicobytes
-cover: "/images/posts/tips/2017-04-24-ionic-page-and-lazy-loading/cover.jpg"
+launcher: 'https://ion-book.github.io/demo112/'
+cover: "https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2F2017-11-27-ionic-page-and-lazy-loading%2Fcover.jpg?alt=media&token=14f79867-8503-423b-9922-1b3551ac4186"
 repo: https://github.com/ion-book/demo112
 versions:
   - title: 'ionic'
-    number: '3.3.0'
+    number: '3.9.2'
   - title: 'ionic-native'
-    number: '3.10.2'
+    number: '4.4.2'
   - title: 'ionic-app-scripts'
-    number: '1.3.7'
+    number: '3.1.2'
   - title: 'cordova-cli'
     number: '7.0.1'
   - title: 'ionic-cli'
-    number: '3.3.0'
+    number: '3.19.0'
 ---
 
-> Hace poco publicamos un artículo donde explicamos cómo actualizar una aplicación de la versión de [**ionic 2 a ionic 3**]({{site.urlblog}}/news/ionic-v-3){:target="_blank"}, pero sin usar el decorador @IonicPage ni lazy loading que son dos de las principales características en ionic 3.
+> Una de las principales características de ionic 3 está en el manejo de las urls, esto para poder dar un mejor soporte a deeplinks, aplicaciones con electron y [**progressive web apps (PWA)**].
 
 <!--summary-->
 
-<amp-img width="1024" height="512" layout="responsive" src="/images/posts/tips/2017-04-24-ionic-page-and-lazy-loading/cover.jpg"></amp-img>
+<amp-img width="1024" height="512" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2F2017-11-27-ionic-page-and-lazy-loading%2Fcover.jpg?alt=media&token=14f79867-8503-423b-9922-1b3551ac4186"></amp-img>
 
 {% include general/net-promoter-score.html %} 
 
-**Nota:** En este artículo explicaremos cómo aprovechar estas nuevas características de ionic 3, pero si estas usando ionic 2, primero lee [**cómo migrar de ionic 2 a ionic 3**]({{site.urlblog}}/news/ionic-v-3){:target="_blank"} para seguir este artículo.
+# Actualización (37/11/2017)
+<hr/>
+
+Hemos actualizado este demo con el último release **Ionic 3.9**.
+
+<a href="https://ion-book.github.io/demo112/" target="_blank" class="btn btn-round btn-success">Ver demo</a>
+<hr/>
 
 Una de las principales características de ionic 3 está en el manejo de las urls, esto para poder dar un mejor soporte a deeplinks, aplicaciones con electron y [**progressive web apps (PWA)**](http://blog.ionic.io/announcing-pwa-support-in-ionic-2/){:target="_blank"}.
 
@@ -84,62 +90,17 @@ Ahora vamos a ir convirtiendo [pasito a pasito](https://www.youtube.com/watch?v=
 
 ## Paso 1: Crear una página
 
-Vamos a usar ionic generate para crear una página `ionic g page users`, esto ahora nos trae un archivo más que se llama users.module.ts, asi:
+Vamos a usar ionic generate para crear una página `ionic g page users`, esto ahora nos trae un archivo más que se llama `users.module.ts`, así:
 
 <div class="row">
-  <div class="col col-100 col-md-50 offset-md-25 col-lg-50 offset-lg-25">
-    <amp-img width="395" height="130" layout="responsive" src="/images/posts/tips/2017-04-24-ionic-page-and-lazy-loading/tree1.png"></amp-img>
+  <div class="col col-100 col-md-50 col-lg-50">
+    <amp-img width="376" height="183" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2F2017-11-27-ionic-page-and-lazy-loading%2Ftree1.png?alt=media&token=50c552f3-0b77-4ea2-9dd2-c1ceb8c6381e"></amp-img>
   </div>
 </div>
 
-Puedes que tengas un error en users.module.ts (bug en el generador de ionic), pero debemos importar `IonicPageModule` y usarlo de esta manera:
-
-```ts
-import { NgModule } from '@angular/core';
-import { IonicPageModule } from 'ionic-angular';
-import { UsersPage } from './users';
-
-@NgModule({
-  declarations: [
-    UsersPage,
-  ],
-  imports: [
-    IonicPageModule.forChild(UsersPage)
-  ],
-  exports: [
-    UsersPage
-  ]
-})
-export class UsersModule {}
-```
-
 {% include blog/subscribe.html %}
 
-## Paso 2: Remover página de declarations y entryCompomntes
-
-Ahora como las páginas se van a cargar solo cuando sea necesario ya no deben ir en el array de declarations y entryCompomntes de `src/app/app.module.ts`, el archivo deberá lucir así:
-
-```ts
-...
-@NgModule({
-  declarations: [
-    MyApp,
-  ],
-  imports: [
-    BrowserModule,
-    HttpModule,
-    IonicModule.forRoot(MyApp)
-  ],
-  bootstrap: [IonicApp],
-  entryComponents: [
-    MyApp,
-  ],
-  providers: [...]
-})
-export class AppModule {}
-```
-
-## Paso 3: Cambios en navegación
+## Paso 2: Cambios en navegación
 
 Tampoco es necesario importar la página desde la página donde se quiere hacer `push` o `setRoot`, solo con el nombre de la clase como string, se puede hacer uso de push o seeRoot, asi:
 
@@ -171,13 +132,13 @@ Ionic crear una carpeta de componentes y pipes pero nosotros lo organizaremos nu
 
 <div class="row">
   <div class="col col-100 col-md-50 offset-md-25 col-lg-50 offset-lg-25">
-    <amp-img width="574" height="307" layout="responsive" src="/images/posts/tips/2017-04-24-ionic-page-and-lazy-loading/tree2.png"></amp-img>
+    <amp-img width="574" height="307" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2F2017-11-27-ionic-page-and-lazy-loading%2Ftree2.png?alt=media&token=c6c37c58-1bcf-4345-9691-bde12e62008d"></amp-img>
   </div>
 </div>
 
 Nota: en el módulo compartido solo van components, pipes y directives NO providers estos si deben ser incluidos solo una vez en la aplicación, y siguen estando declarados en app.module.ts en el array de providers.
 
-Nuestro archivo shared.module.ts, quedará de esta manera:
+Nuestro archivo `shared.module.ts`, quedará de esta manera:
 
 ```ts
 import { NgModule } from '@angular/core';
@@ -258,19 +219,19 @@ Como parte final hemos hecho un repositorio de ejemplo con esta arquitectura y c
 
 <div class="row wrap">
   <div class="col col-100 col-md-33 col-lg-33">
-    <amp-img width="346" height="173" layout="responsive" src="/images/posts/tips/2017-04-24-ionic-page-and-lazy-loading/tree3.png"></amp-img>
+    <amp-img width="346" height="173" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2F2017-11-27-ionic-page-and-lazy-loading%2Ftree3.png?alt=media&token=615febfc-8d79-4f76-bb4a-8d157742add2"></amp-img>
   </div>
   <div class="col col-100 col-md-33 col-lg-33">
-   <amp-img width="270" height="72" layout="responsive" src="/images/posts/tips/2017-04-24-ionic-page-and-lazy-loading/tree5.png"></amp-img>
+   <amp-img width="270" height="72" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2F2017-11-27-ionic-page-and-lazy-loading%2Ftree4.png?alt=media&token=3fdcbee6-5bd4-4796-b2f6-2248e982630f"></amp-img>
   </div>
   <div class="col col-100 col-md-33 col-lg-33">
-   <amp-img width="370" height="300" layout="responsive" src="/images/posts/tips/2017-04-24-ionic-page-and-lazy-loading/tree6.png"></amp-img>
+   <amp-img width="370" height="300" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2F2017-11-27-ionic-page-and-lazy-loading%2Ftree5.png?alt=media&token=ff0209ed-bc37-490c-af95-a00c4c91901c"></amp-img>
   </div>
 </div>  
 
 <div class="row">
   <div class="col col-100 col-md-50 offset-md-25 col-lg-50 offset-lg-25">
-    <amp-img width="460" height="626" layout="responsive" src="/images/posts/tips/2017-04-24-ionic-page-and-lazy-loading/tree4.png"></amp-img>
+    <amp-img width="460" height="626" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2F2017-11-27-ionic-page-and-lazy-loading%2Ftree6.png?alt=media&token=e7fd0dd1-faf7-48a0-8e24-c27e4d723589"></amp-img>
   </div>
 </div>
 
