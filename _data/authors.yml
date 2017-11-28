@@ -1,4 +1,4 @@
-- id: 'carlosrojas'
+- id: "carlosrojas"
   name: Carlos Rojas
   url: "/blog/authors/carlosrojas"
   avatar: "http://i.imgur.com/ecNB0is.png"
@@ -11,7 +11,7 @@
       icon: "icon-social-twitter"
     - link: "https://youtube.com/carlosrojas84"
       icon: "icon-social-youtube"
-- id: 'nicobytes'
+- id: "nicobytes"
   name: Nicolas Molina
   url: "/blog/authors/nicobytes"
   avatar: "https://firebasestorage.googleapis.com/v0/b/nicobytes-7bea8.appspot.com/o/DSC00733.JPG?alt=media&token=2348371c-71c6-46ac-bd42-bf56e5522293"
@@ -28,7 +28,7 @@
       icon: "icon-linkedin"
     - link: "https://www.facebook.com/nicolas.molina.127"
       icon: "icon-social-facebook"
-- id: 'javico2609'
+- id: "javico2609"
   name: Javier González Rodríguez
   url: "/blog/authors/javico2609"
   avatar: "https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAApBAAAAJGUwOTY3N2UyLTYwZjAtNDQ0Yi1iZGNkLTAxMTRkOTc5YjRkNw.jpg"
@@ -179,7 +179,7 @@
       icon: "icon-social-twitter"
     - link: "https://github.com/javarv87"
       icon: "icon-social-octocat"
-- id: 'EduardoIbarra'
+- id: "EduardoIbarra"
   name: Eduardo Ibarra
   url: "/blog/authors/EduardoIbarra"
   avatar: "http://eduardoibarra.com/dl/img/eduardo.jpg"
@@ -198,9 +198,7 @@
   website: "http://darkensses.tk/"
   avatar: "https://avatars2.githubusercontent.com/u/23271049?v=4&s=460"
   country: "Mexico"
-  bio: "Ad Honorem. Soy estudiante del ITL, con mi equipo nos gusta asistir a concursos de ACM y Hackatons, además impartimos talleres para compartir nuestros conocimientos y así lograr una comunidad fuerte. 
-Me encanta combinar la lógica de un código con una gran UI, asi mismo desarrollo aplicaciones para móviles, web y solución de algoritmos .
-Psst... tambien me gusta mucho la música (en especial el Psychedelic Rock) "
+  bio: "Ad Honorem. Soy estudiante del ITL, con mi equipo nos gusta asistir a concursos de ACM y Hackatons, además impartimos talleres para compartir nuestros conocimientos y así lograr una comunidad fuerte. Me encanta combinar la lógica de un código con una gran UI, asi mismo desarrollo aplicaciones para móviles, web y solución de algoritmos . Psst... tambien me gusta mucho la música (en especial el Psychedelic Rock) "
   facebook_url: 'https://www.facebook.com/Darkensses'
   social_links:
     - link: "https://www.facebook.com/Darkensses"
@@ -208,4 +206,30 @@ Psst... tambien me gusta mucho la música (en especial el Psychedelic Rock) "
     - link: "https://twitter.com/Darkensses"
       icon: "icon-social-twitter"
     - link: " https://github.com/Darkensses"
+      icon: "icon-social-octocat"
+- id: "williambastidas"
+  name: William Bastidas
+  url: "/blog/authors/williambastidas"
+  avatar: "https://cdn-images-1.medium.com/fit/c/400/400/0*5mQzejrDASFzj2JJ.jpg"
+  website: "https://medium.com/@wibastidas77"
+  bio: "Eterno aprendiz, desarrollador de software, enfocado en el aprendizaje de tecnologías web y móvil. Aficionado del UX y UI. #Ionic #Angular #PWA"
+  country: "Venezuela"
+  facebook_url: '#'
+  social_links:
+    - link: "https://twitter.com/wibastidas77"
+      icon: "icon-social-twitter"
+- id: "GiovanniCamana"
+  name: Giovanni Camana
+  url: "/blog/authors/GiovanniCamana"
+  avatar: "https://avatars0.githubusercontent.com/u/4483428?s=460&v=4"
+  website: "https://github.com/gcamana"
+  bio: "Giovanni Camana es Frontend developer, HybripApps developers, UX enthusiastic. Día a día siempre esta metido aprendiendo y desarrollando proyectos con  Angular, Ionic o TypeScript ."
+  country: "Peru"
+  facebook_url: 'https://www.facebook.com/giovanni.camana'
+  social_links:
+    - link: "https://www.facebook.com/giovanni.camana"
+      icon: "icon-social-facebook"
+    - link: "https://twitter.com/giogioJs"
+      icon: "icon-social-twitter"
+    - link: " https://github.com/gcamana"
       icon: "icon-social-octocat"

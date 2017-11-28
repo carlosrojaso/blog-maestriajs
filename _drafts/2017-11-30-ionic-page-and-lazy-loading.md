@@ -2,7 +2,7 @@
 layout: post
 title: "Reduce el tiempo de carga de tu app"
 keywords: "migrar de ionic 2 a ionic 3, de ionic 2 a ionic 3, ionic 2 a ionic 3, ionic 3, ionic page, lazy loading"
-date: 2017-11-28
+date: 2017-11-30
 categories: ionic2
 author: nicobytes
 laucher: 'https://ion-book.github.io/demo112/'
