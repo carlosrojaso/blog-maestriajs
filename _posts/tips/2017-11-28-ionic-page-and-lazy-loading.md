@@ -5,7 +5,7 @@ keywords: "migrar de ionic 2 a ionic 3, de ionic 2 a ionic 3, ionic 2 a ionic 3,
 date: 2017-11-28
 categories: ionic2
 author: nicobytes
-launcher: 'https://ion-book.github.io/demo112/'
+laucher: 'https://ion-book.github.io/demo112/'
 cover: "https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2F2017-11-27-ionic-page-and-lazy-loading%2Fcover.jpg?alt=media&token=14f79867-8503-423b-9922-1b3551ac4186"
 repo: https://github.com/ion-book/demo112
 versions:
