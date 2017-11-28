@@ -21,7 +21,7 @@ versions:
     number: '3.19.0'
 ---
 
-> Una de las principales características de ionic 3 está en el manejo de las urls, esto para poder dar un mejor soporte a deeplinks, aplicaciones con electron y [**progressive web apps (PWA)**].
+> Una de las principales características de ionic 3 está en el manejo de las urls, esto para poder dar un mejor soporte a deeplinks, aplicaciones con electron y **progressive web apps (PWA)**.
 
 <!--summary-->
 
