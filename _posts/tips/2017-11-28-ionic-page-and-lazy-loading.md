@@ -29,10 +29,10 @@ versions:
 
 {% include general/net-promoter-score.html %} 
 
-# Actualización (37/11/2017)
+# Actualización (27/11/2017)
 <hr/>
 
-Hemos actualizado este demo con el último release **Ionic 3.9**.
+Hemos actualizado este demo con el último release **Ionic 3.9** y **Angular 5**.
 
 <a href="https://ion-book.github.io/demo112/" target="_blank" class="btn btn-round btn-success">Ver demo</a>
 <hr/>
@@ -94,7 +94,7 @@ Vamos a usar ionic generate para crear una página `ionic g page users`, esto ah
 
 <div class="row">
   <div class="col col-100 col-md-50 col-lg-50">
-    <amp-img width="376" height="183" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2F2017-11-27-ionic-page-and-lazy-loading%2Ftree1.png?alt=media&token=50c552f3-0b77-4ea2-9dd2-c1ceb8c6381e"></amp-img>
+    <amp-img width="359" height="130" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2F2017-11-27-ionic-page-and-lazy-loading%2Ftree1.png?alt=media&token=50c552f3-0b77-4ea2-9dd2-c1ceb8c6381e"></amp-img>
   </div>
 </div>
 
@@ -126,7 +126,7 @@ Y ya! Eso es todo ahora ya estás trabajando con esta increíble característica
 
 Ahora como cada página es un módulo deberás importar tus components, pipes y directives en cada una de las páginas, de lo contrario no funcionarán, para este paso seguiremos la guía de estilo de Angular. 
 
-**Angular** tiene toda una sección de buenas prácticas para desarrollar una aplicación escalable y mantenible, puedes ver toda la guía [aqui](https://angular.io/docs/ts/latest/guide/style-guide.html){:target="_blank"}. Vamos seguir la regla [STYLE 04-10](https://angular.io/docs/ts/latest/guide/style-guide.html#!#04-10){:target="_blank"}, que nos dice como crear un módulo compartido que será implementando en otros módulos. Ha este módulo lo nombraremos **SharedModule**.
+**Angular** tiene toda una sección de buenas prácticas para desarrollar una aplicación escalable y mantenible, puedes ver toda la guía [aqui](https://angular.io/docs/ts/latest/guide/style-guide.html){:target="_blank"}. Vamos seguir la regla [Shared](https://angular.io/guide/styleguide#shared-feature-module){:target="_blank"}, que nos dice como crear un módulo compartido que será implementando en otros módulos. Ha este módulo lo nombraremos **SharedModule**.
 
 Ionic crear una carpeta de componentes y pipes pero nosotros lo organizaremos nuestros components, directives y pipes en base a la buena práctica de Angular de esta manera:
 
@@ -222,16 +222,16 @@ Como parte final hemos hecho un repositorio de ejemplo con esta arquitectura y c
     <amp-img width="346" height="173" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2F2017-11-27-ionic-page-and-lazy-loading%2Ftree3.png?alt=media&token=615febfc-8d79-4f76-bb4a-8d157742add2"></amp-img>
   </div>
   <div class="col col-100 col-md-33 col-lg-33">
-   <amp-img width="270" height="72" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2F2017-11-27-ionic-page-and-lazy-loading%2Ftree4.png?alt=media&token=3fdcbee6-5bd4-4796-b2f6-2248e982630f"></amp-img>
+   <amp-img width="270" height="72" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2F2017-11-27-ionic-page-and-lazy-loading%2Ftree5.png?alt=media&token=ff0209ed-bc37-490c-af95-a00c4c91901c"></amp-img>
   </div>
   <div class="col col-100 col-md-33 col-lg-33">
-   <amp-img width="370" height="300" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2F2017-11-27-ionic-page-and-lazy-loading%2Ftree5.png?alt=media&token=ff0209ed-bc37-490c-af95-a00c4c91901c"></amp-img>
+   <amp-img width="370" height="300" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2F2017-11-27-ionic-page-and-lazy-loading%2Ftree6.png?alt=media&token=e7fd0dd1-faf7-48a0-8e24-c27e4d723589"></amp-img>
   </div>
 </div>  
 
 <div class="row">
   <div class="col col-100 col-md-50 offset-md-25 col-lg-50 offset-lg-25">
-    <amp-img width="460" height="626" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2F2017-11-27-ionic-page-and-lazy-loading%2Ftree6.png?alt=media&token=e7fd0dd1-faf7-48a0-8e24-c27e4d723589"></amp-img>
+    <amp-img width="460" height="626" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2F2017-11-27-ionic-page-and-lazy-loading%2Ftree4.png?alt=media&token=3fdcbee6-5bd4-4796-b2f6-2248e982630f"></amp-img>
   </div>
 </div>
 
