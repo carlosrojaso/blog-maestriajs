@@ -1,12 +1,12 @@
 ---
 layout: post
-title: "Ghost Loadgin con Angular 5 y Ionic 3+"
+title: "Ghost Loading con Angular 5 y Ionic 3+"
 keywords: "Ghost Loading, Skeleton, Skeleton Card Component, Indicador de carga"
 date: 2017-11-29
 tags: [angular 5, demos]
 categories: ionic2
 author: GiovanniCamana
-cover: "https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2Fvalidations-in-forms%2FValidaciones%20en%20Formularios.jpg?alt=media"
+cover: "https://firebasestorage.googleapis.com/v0/b/ngclassroom-8ba81.appspot.com/o/posts%2F2017-11-29-ghost-loading%2FThe%20Art%20of%20Building%20Apps%20with%20Javascript..png?alt=media&token=581d9cb1-7e5b-4e08-a5ce-8ee3f5d1c39e"
 editname: "ionic2/2017-11-29-ghost-loading.md"
 versions:
   - title: 'angular'
@@ -26,7 +26,7 @@ versions:
 > Crear un apps que brinde a los usuarios una gran experiencia requiere un trabajo adicional. Evitar cargar pantallas, flashes de pantalla y saltos de página son solo algunas de las cosas que puede hacer para ayudar a mejorar su experiencia..
 <!--summary-->
 
-<!-- <amp-img width="1024" height="512" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2Fvalidations-in-forms%2FValidaciones%20en%20Formularios.jpg?alt=media" alt="Validaciones en Formularios"></amp-img> -->
+<amp-img width="1024" height="512" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ngclassroom-8ba81.appspot.com/o/posts%2F2017-11-29-ghost-loading%2FThe%20Art%20of%20Building%20Apps%20with%20Javascript..png?alt=media&token=581d9cb1-7e5b-4e08-a5ce-8ee3f5d1c39e" alt="Validaciones en Formularios"></amp-img>
 
 {% include general/net-promoter-score.html %} 
 <hr/>
@@ -385,7 +385,6 @@ Ahora en `home.html` agregaremos lo siguiente:
 
 ```
 
-### Recuerda:
 Como último paso deberiamos de ejecutar el poyecto ionic
 ```
 $ ionic serve
