@@ -74,7 +74,7 @@ El siguiente paso es dar click sobre **+ Agregar productos** que se encuentra en
 
 Ahora en esta parte seleccionaremos la plataforma con la que trabajaremos para el login de Facebook, en este caso es la plataforma de android.
 
-<amp-img width="1280" height="800" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2Ffacebook-and-ionic%2Fscreen4.png?alt=media&token=cc7708a2-f55c-4b15-8342-4d26dc35f13b"></amp-img>
+<amp-img width="1280" height="800" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2Ffacebook-and-ionic%2Fscreen5.png?alt=media&token=6b1bd487-f705-45c6-81de-d26fa8b02dda"></amp-img>
 
 Se nos abrirá una ventana donde nos mostrará un pequeño tutorial para realizar los ajustes en la plataforma  y para configurar la clave hash de nuestra aplicación.
 

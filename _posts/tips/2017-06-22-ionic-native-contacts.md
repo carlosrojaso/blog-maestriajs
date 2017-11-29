@@ -38,7 +38,7 @@ En esta oportunidad vamos a listar los contactos de nuestro dispositivo y a pres
 Creamos un proyecto nuevo de ionic, en mi caso lo llame “ionic-contactos“.
 
 ````
-$ ionic start ionic-contactos blank --v2
+$ ionic start ionic-contactos blank --cordova
 ````
 
 ## 2. INGRESAMOS A LA CARPETA CREADA DEL PROYECTO IONIC
