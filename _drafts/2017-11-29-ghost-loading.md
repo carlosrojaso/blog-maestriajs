@@ -36,7 +36,7 @@ versions:
 Lo primero que tenemos que hacer es iniciar un proyecto ionic, vamos a  nuestro terminal y ejecutamos.
 
 ```
-ionic start ghost-loading blank
+ionic start ghost-loading blank --cordova
 ```
 
 Una vez terminado, nos ubicamos en la carpeta del proyecto con nuestro editor favorito.

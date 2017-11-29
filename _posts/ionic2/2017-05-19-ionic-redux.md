@@ -29,7 +29,7 @@ versions:
 Lo primero que haremos será iniciar un nuevo proyecto con ionic:
 
 ```
-ionic start ionic-redux blank
+ionic start ionic-redux blank --cordova
 ```
 
 Ionic crea una carpeta con el nombre del proyecto, nuestro siguiente paso será ubicarnos dentro a la carpeta del proyecto:

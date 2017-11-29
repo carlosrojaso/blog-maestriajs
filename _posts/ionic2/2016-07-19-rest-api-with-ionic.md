@@ -45,7 +45,7 @@ Pueden ver más acerca de `HTTPClient` aquí: [https://angular.io/guide/http](ht
 Lo primero que haremos será iniciar un nuevo proyecto con ionic, vamos a nuestra terminal y ejecutamos:
 
 ```
-ionic start demo103 blank
+ionic start demo103 blank --cordova
 ```
 
 Ionic crea una carpeta con el nombre del proyecto, nuestro siguiente paso será ubicarnos dentro a la carpeta del proyecto desde nuestra terminal con:

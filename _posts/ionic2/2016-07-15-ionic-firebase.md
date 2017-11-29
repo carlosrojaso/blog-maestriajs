@@ -26,7 +26,7 @@ Pero esto ha ocasionado que mucha información este desactualizada y por lo tant
 ## 2. Crear tu proyecto en Ionic.
 
 ```
-ionic start myapp blank
+ionic start myapp blank --cordova
 ```
 
 ## 3. Instalar dependencia de Firebase en tu proyecto.

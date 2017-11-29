@@ -41,7 +41,7 @@ Hemos actualizado este demo con el último release **Ionic 3.8**.
 Lo primero que haremos será iniciar un nuevo proyecto con ionic. Vamos a nuestra terminal y ejecutamos:
 
 ```
-ionic start demo107 blank
+ionic start demo107 blank --cordova
 ```
 
 Ahora entramos a la carpeta del proyecto desde nuestra terminal con:

@@ -60,7 +60,7 @@ Y el código en: [https://github.com/ion-book/demo121](https://github.com/ion-bo
 Lo primero que haremos será iniciar un nuevo proyecto con ionic, vamos a nuestra terminal y ejecutamos:
 
 ```
-ionic start demo121 blank
+ionic start demo121 blank --cordova
 ```
 
 Para usar ngrx-charts en Ionic/angular solo debemos instalar como dependencias a @angular/animations, ngrx-charts y d3js, así:

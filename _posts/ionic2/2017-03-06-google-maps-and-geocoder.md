@@ -48,7 +48,7 @@ Entonces ya teniendo el concepto claro y de haber leído los artículos anterior
 1.- Abrimos nuestra terminal y ejecutamos esto (para crear un nuevo proyecto)
 
 ```
-ionic start geocoder blank
+ionic start geocoder blank --cordova
 ```
 
 2.- Una vez que ya nos creó el proyecto, ingresamos haciendo esto:

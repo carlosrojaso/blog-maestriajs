@@ -40,7 +40,7 @@ Hemos actualizado este demo con el último release [**Ionic 3.7**](https://www.i
 Lo primero que haremos será iniciar un nuevo proyecto con ionic, vamos a nuestra terminal y ejecutamos:
 
 ```
-ionic start demo102 blank
+ionic start demo102 blank --cordova
 ```
 
 Ionic crea una carpeta con el nombre del proyecto, nuestro siguiente paso será ubicarnos dentro a la carpeta del proyecto desde nuestra terminal con:

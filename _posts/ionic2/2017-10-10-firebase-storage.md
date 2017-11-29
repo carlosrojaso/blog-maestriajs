@@ -30,7 +30,7 @@ versions:
 Para este ejemplo, vamos a dejar los usuarios subir y ver una selfie de sus telefonos, asi que adelante y crea tu app.
 
 ````
-$ ionic start myApp blank
+$ ionic start myApp blank --cordova
 $ cd myApp
 ````
 

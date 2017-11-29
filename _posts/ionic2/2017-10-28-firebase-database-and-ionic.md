@@ -67,7 +67,7 @@ Por último vamos a la sección de Database y configuraremos las reglas de segur
 Lo primero que haremos será iniciar un nuevo proyecto con ionic, vamos a nuestra terminal y ejecutamos:
 
 ```
-ionic start demo104 blank
+ionic start demo104 blank --cordova
 ```
 
 Ionic crea una carpeta con el nombre del proyecto, nuestro siguiente paso será ubicarnos dentro a la carpeta del proyecto desde nuestra terminal con:

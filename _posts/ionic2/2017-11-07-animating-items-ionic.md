@@ -131,7 +131,7 @@ Con estas bases y conceptos ahora podremos hacer un demo sencillo donde haremos 
 Lo primero que haremos será iniciar un nuevo proyecto con ionic, vamos a nuestra terminal y ejecutamos:
 
 ```
-ionic start demo108 blank
+ionic start demo108 blank --cordova
 ```
 
 Ionic crea una carpeta con el nombre del proyecto, nuestro siguiente paso será ubicarnos dentro a la carpeta del proyecto desde nuestra terminal con:

@@ -83,7 +83,7 @@ Copia esta clave API ya que con esta realizaremos la integración con Google Map
 El siguiente paso es crear nuestra aplicación Ionic, en este caso usare la plantilla blank que trae ionic.
 
 ```
-ionic start demo111 blank
+ionic start demo111 blank --cordova
 ```
 
 Una vez se crea el proyecto, nos dirigimos a la carpeta que ionic crea con su estructura para comenzar a integrar Google Maps en nuestra aplicación.

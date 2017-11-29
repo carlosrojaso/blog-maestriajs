@@ -33,7 +33,7 @@ versions:
 Lo primero que haremos será iniciar un nuevo proyecto con ionic, vamos a nuestra terminal y ejecutamos:
 
 ```
-ionic start demo_fullcalendar blank
+ionic start demo_fullcalendar blank --cordova
 ```
 
 Para usar fullcalendar en Ionic/angular solo debemos instalar como dependencias:

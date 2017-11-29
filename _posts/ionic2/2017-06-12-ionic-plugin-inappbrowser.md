@@ -39,7 +39,7 @@ de [**Instalación**]( https://ionicframework.com/docs/intro/installation/){:tar
 Iniciaremos nuestro proyecto utilizando el siguiente comando
 
 ```
-ionic start ionic-inappbrowser blank
+ionic start ionic-inappbrowser blank --cordova
 ```
 
 # Paso 2: Añadiendo el plugin **InAppBrowser**

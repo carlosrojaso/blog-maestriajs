@@ -50,7 +50,7 @@ cd Documents/desarrollo/proyectos/ionic/...
 Crear un proyecto de Ionic: 
 
 ````
-ionic start nombreProyecto blank 
+ionic start nombreProyecto blank --cordova
 ````
 
 Seleccionar proyecto:

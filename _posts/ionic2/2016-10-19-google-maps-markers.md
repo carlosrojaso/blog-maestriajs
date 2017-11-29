@@ -32,7 +32,7 @@ Los **Markers** nos permiten identificar un lugar en el mapa siempre y cuando te
 ## 1. Creación del proyecto
 
 ```
-ionic start gm-markers blank
+ionic start gm-markers blank --cordova
 ```
 
 ## 2. Instalación de los Plugins de Cordova y de las Api keys de Android y iOS 

@@ -45,7 +45,7 @@ Hay dos maneras de implementar google maps en nuestras aplicaciones, una es mane
 Lo primero que haremos será iniciar un nuevo proyecto con ionic, vamos a nuestra terminal y ejecutamos:
 
 ```
-ionic start demo105 blank
+ionic start demo105 blank --cordova
 ```
 
 Ionic crea una carpeta con el nombre del proyecto, nuestro siguiente paso será ubicarnos dentro a la carpeta del proyecto desde nuestra terminal con:

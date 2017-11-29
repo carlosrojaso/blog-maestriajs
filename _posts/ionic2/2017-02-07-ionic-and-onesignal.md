@@ -131,7 +131,7 @@ Crearemos un proyecto en Ionic, si señores ya es momento de tocar IONIC.
 1- Abrimos nuestra terminal y colocamos esto.
 
 ```
-ionic start demo120 blank
+ionic start demo120 blank --cordova
 ```
 
 ### Segundo

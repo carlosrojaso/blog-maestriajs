@@ -38,7 +38,7 @@ Primero, debemos eliminar las páginas existentes en nuestro proyecto. Cuanto cr
 Si tu quieres un proyecto en blanco tu puedes agregar el parametro *blank* en el final de
 
 ```
-ionic start myFirstApp blank
+ionic start myFirstApp blank --cordova
 ```
 
 Ahora borra todos los directorios en `src/pages/`.

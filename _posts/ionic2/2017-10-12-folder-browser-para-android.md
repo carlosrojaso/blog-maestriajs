@@ -43,7 +43,7 @@ Así que tomé la documentación de Ionic y pregunté en grupos hasta dar con el
 Empezamos nuestro proyecto, añadimos la plataforma de Android y entramos en él:
 
 ```
-ionic start FolderBrowser blank
+ionic start FolderBrowser blank --cordova
 ionic cordova platform add
 cd FolderBrowser
 ```
