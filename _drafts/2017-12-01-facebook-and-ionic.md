@@ -1,37 +1,45 @@
 ---
 layout: post
 title: "Registro con Facebook + Ionic"
-date: 2017-06-01
+date: 2017-12-01
 tags: [native, demos]
 categories: ionic2
 author: daniel_lsanchez
-cover: "/images/posts/ionic2/2016-08-25-facebook-and-ionic/cover.png"
+cover: "https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2Ffacebook-and-ionic%2Fcover.png?alt=media&token=729f232b-f43f-4ff1-8895-d5af5f1fb599"
 repo: https://github.com/ion-book/demo113
 versions:
   - title: 'ionic'
-    number: '3.3.0'
+    number: '3.9.2'
   - title: 'ionic-native'
-    number: '3.10.2'
+    number: '4.4.2'
   - title: 'ionic-app-scripts'
-    number: '1.3.7'
+    number: '3.1.2'
   - title: 'cordova-cli'
     number: '7.0.1'
   - title: 'ionic-cli'
-    number: '3.3.0'
+    number: '3.19.0'
 ---
 
 > **Facebook** es uno de las métodos más comunes y usados para registrar y capturar nuevos usuarios, así que en este artículo veremos como hacer el proceso de registrar nuestros usuarios usando **facebook + ionic**.
 
-<amp-img width="800" height="450" layout="responsive" src="/images/posts/ionic2/2016-08-25-facebook-and-ionic/cover.png"></amp-img>
+<amp-img width="800" height="450" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2Ffacebook-and-ionic%2Fcover.png?alt=media&token=729f232b-f43f-4ff1-8895-d5af5f1fb599"></amp-img>
 
 {% include general/net-promoter-score.html %} 
+
+# Actualización (01/12/2017)
+<hr/>
+
+Hemos actualizado este demo con el último release **Ionic 3.9** y **Angular 5**.
+
+<a href="https://github.com/ion-book/demo113" target="_blank" class="btn btn-round btn-success">Ver demo</a>
+<hr/>
 
 Para comenzar debemos de tener instalado todo el entorno de desarrollo de ionic [(inicio en ionic)](http://ionicframework.com/docs/intro/installation/){:target="_blank"}. Una vez lista nuestra máquina podemos comenzar.
 
 Primero que todo crearemos un proyecto en blanco y lo llamaremos **demo113** en Ionic. Nos ubicamos en la ruta donde queremos almacenar nuestro proyecto y digitamos el siguiente comando en nuestra consola.
 
 ```
-ionic start demo113 blank
+ionic start demo113 blank --cordova
 ```
 
 El sistema comenzará a crear el proyecto ionic, al terminar de crear la aplicación nos situaremos en el proyecto, digitando el comando en la consola:
@@ -48,49 +56,49 @@ ionic cordova platform add android
 
 El siguiente paso es ingresar a la plataforma de [Facebook para desarrolladores](https://developers.facebook.com/){:target="_blank"}, para ello debes de tener una cuenta de Facebook. Al ingresar a la plataforma nos dirigiremos en el costado superior derecho y hacemos click en el botón **Mis aplicaciones**.
 
-<amp-img width="1280" height="800" layout="responsive" src="/images/posts/ionic2/2016-08-25-facebook-and-ionic/screen1.png"></amp-img>
+<amp-img width="1280" height="800" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2Ffacebook-and-ionic%2Fscreen1.png?alt=media&token=b726ec2d-54c4-4c32-9e06-e2d244a0ad59"></amp-img>
 
 el siguiente paso es crear un identificador de la aplicación en la plataforma de Facebook, para ello damos click en **+ Agregar una nueva aplicación** y digitamos los datos que nos piden en el modal que se abre y terminamos haciendo click en **Crear identificador de la aplicación**.
 
-<amp-img width="1280" height="800" layout="responsive" src="/images/posts/ionic2/2016-08-25-facebook-and-ionic/screen2.png"></amp-img>
+<amp-img width="1280" height="800" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2Ffacebook-and-ionic%2Fscreen2.png?alt=media&token=b57faa16-dc5a-4997-b929-f91ebc3d505a"></amp-img>
 
 *Nota: Recuerda que que Facebook restringe cualquier nombre para la aplicación que contenga las palabras FB, face, book, isnt. Entre otras.*
 
 Perfecto ahora ya tenemos un identificador para la aplicación.
 
-<amp-img width="1280" height="800" layout="responsive" src="/images/posts/ionic2/2016-08-25-facebook-and-ionic/screen3.png"></amp-img>
+<amp-img width="1280" height="800" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2Ffacebook-and-ionic%2Fscreen3.png?alt=media&token=d30dda52-5bb9-48a3-94e8-7131baa49a2a"></amp-img>
 
 El siguiente paso es dar click sobre **+ Agregar productos** que se encuentra en el menú del costado izquierdo, al hacer click el sistema muestra una ventana con todos los productos que nos provee Facebook para trabajar. En el caso de nosotros daremos click sobre el botón **Empezar** del producto **Inicio de sesión con facebook**.
 
-<amp-img width="1280" height="800" layout="responsive" src="/images/posts/ionic2/2016-08-25-facebook-and-ionic/screen4.png"></amp-img>
+<amp-img width="1280" height="800" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2Ffacebook-and-ionic%2Fscreen4.png?alt=media&token=cc7708a2-f55c-4b15-8342-4d26dc35f13b"></amp-img>
 
 Ahora en esta parte seleccionaremos la plataforma con la que trabajaremos para el login de Facebook, en este caso es la plataforma de android.
 
-<amp-img width="1280" height="800" layout="responsive" src="/images/posts/ionic2/2016-08-25-facebook-and-ionic/screen5.png"></amp-img>
+<amp-img width="1280" height="800" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2Ffacebook-and-ionic%2Fscreen4.png?alt=media&token=cc7708a2-f55c-4b15-8342-4d26dc35f13b"></amp-img>
 
 Se nos abrirá una ventana donde nos mostrará un pequeño tutorial para realizar los ajustes en la plataforma  y para configurar la clave hash de nuestra aplicación.
 
-<amp-img width="1280" height="800" layout="responsive" src="/images/posts/ionic2/2016-08-25-facebook-and-ionic/screen6.png"></amp-img>
+<amp-img width="1280" height="800" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2Ffacebook-and-ionic%2Fscreen6.png?alt=media&token=6ef57a36-d3e8-4687-b0e7-2b298590950a"></amp-img>
 
 Vamos ir seguir los pasos, que nos dan a continuación, pero abrán varios pasos que simplemente vamos a saltar ya que se configuran de manera diferente con el plugin de facebook, a continuación veremos los pasos que si debemos tener en cuenta. Ahora vamos a poner el **Package Name** de la aplicación. Este lo puedes ver en archivo `config.xml` de tu aplicación.
 
-<amp-img width="1280" height="800" layout="responsive" src="/images/posts/ionic2/2016-08-25-facebook-and-ionic/screen7.png"></amp-img>
+<amp-img width="1280" height="800" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2Ffacebook-and-ionic%2Fscreen7.png?alt=media&token=83270cc2-7667-49d5-aa8b-924687e99aca"></amp-img>
 
 al dar click en el botón **Next** nos mostrará un modal pidiéndonos que verifiquemos el nombre de paquete de google play, en este caso daremos clic en **usar este nombre de paquete (use this package name)**.
 
-<amp-img width="1280" height="800" layout="responsive" src="/images/posts/ionic2/2016-08-25-facebook-and-ionic/screen8.png"></amp-img>
+<amp-img width="1280" height="800" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2Ffacebook-and-ionic%2Fscreen8.png?alt=media&token=a87ab1cc-2b3e-4f69-8734-36875b2b0d18"></amp-img>
 
 Ahora crearemos la clave hash de nuestra aplicación, podemos dar clic en los link para visualizar un ejemplo del comando a ejecutar en nuestra consola para obtener dicha clave.
 
-<amp-img width="1280" height="800" layout="responsive" src="/images/posts/ionic2/2016-08-25-facebook-and-ionic/screen9.png"></amp-img>
+<amp-img width="1280" height="800" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2Ffacebook-and-ionic%2Fscreen9.png?alt=media&token=14870bcf-1c12-4ea6-97e5-2c6c6df8a2be"></amp-img>
 
 ahora digitamos el comando indicado para nuestra máquina, en este caso usare el comando para mac, lo copiare y pegare en consola.
 
-<amp-img width="690" height="460" layout="responsive" src="/images/posts/ionic2/2016-08-25-facebook-and-ionic/screen10.png"></amp-img>
+<amp-img width="690" height="460" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2Ffacebook-and-ionic%2Fscreen10.png?alt=media&token=cf248402-cd6b-4306-94f7-52002131d34f"></amp-img>
 
 La clave hash que nos genera la copiamos en el campo requerido y finalizamos con el proceso en Facebook.
 
-<amp-img width="1280" height="800" layout="responsive" src="/images/posts/ionic2/2016-08-25-facebook-and-ionic/screen11.png"></amp-img>
+<amp-img width="1280" height="800" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2Ffacebook-and-ionic%2Fscreen11.png?alt=media&token=f1956662-cb17-4688-811a-ab74b1766208"></amp-img>
 
 Ahora los pasos restantes solo vamos a oprimir el botón **Next**, luego volvemos a nuestra consola e instalaremos el plugin de [Facebook](https://ionicframework.com/docs/native/facebook/){:target="_blank"}, digitamos en la consola el siguiente comando.
 
@@ -103,7 +111,7 @@ npm install --save @ionic-native/facebook
 
 **APP_NAME**: Nombre de la aplicación de Facebook.
 
-<amp-img width="803" height="307" layout="responsive" src="/images/posts/ionic2/2016-08-25-facebook-and-ionic/screen12.png"></amp-img>
+<amp-img width="803" height="307" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2Ffacebook-and-ionic%2Fscreen12.png?alt=media&token=6f2aa92e-f399-4760-b5c0-12ff98ecdd23"></amp-img>
 
 Ahora debemos agregar `Facebook` como provider en `app.module.ts`.
 
@@ -229,13 +237,13 @@ Esto nos generará el apk y este lo podremos instalar en nuestro dispositivo o e
 
 <div class="row wrap">
   <div class="col col-100 col-md-33 col-lg-33">
-    <amp-img width="720" height="1280" layout="responsive" src="/images/posts/ionic2/2016-08-25-facebook-and-ionic/screen14.png"></amp-img>
+    <amp-img width="720" height="1280" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2Ffacebook-and-ionic%2Fscreen14.png?alt=media&token=7591bc79-825b-4c6d-abff-f1288228374d"></amp-img>
   </div>
   <div class="col col-100 col-md-33 col-lg-33">
-   <amp-img width="720" height="1280" layout="responsive" src="/images/posts/ionic2/2016-08-25-facebook-and-ionic/screen15.png"></amp-img>
+   <amp-img width="720" height="1280" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2Ffacebook-and-ionic%2Fscreen15.png?alt=media&token=eee869d9-6136-4a42-ac39-6e5cf9f1bfb8"></amp-img>
   </div>
   <div class="col col-100 col-md-33 col-lg-33">
-   <amp-img width="720" height="1280" layout="responsive" src="/images/posts/ionic2/2016-08-25-facebook-and-ionic/screen16.png"></amp-img>
+   <amp-img width="720" height="1280" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2Ffacebook-and-ionic%2Fscreen16.png?alt=media&token=dc7912e6-a16b-473c-82e6-76746bb5e115"></amp-img>
   </div>
 </div>
-<amp-img width="1280" height="800" layout="responsive" src="/images/posts/ionic2/2016-08-25-facebook-and-ionic/screen13.png"></amp-img>
+<amp-img width="1280" height="800" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2Ffacebook-and-ionic%2Fscreen13.png?alt=media&token=f2ab57ea-d20c-40e6-ae87-0ace5d163793"></amp-img>
