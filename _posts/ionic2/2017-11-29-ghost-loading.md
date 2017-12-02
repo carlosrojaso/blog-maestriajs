@@ -78,6 +78,8 @@ Cuando un observador se suscribe a un BehaviorSubject, comienza emitiendo el ele
 
 Puede leer más de  [BehaviorSubject](http://reactivex.io/documentation/subject.html){:target="_blank"}
 
+{% include blog/subscribe.html %}
+
 Ahora tenemos que verificar si en `app.module.ts` dentro de los providers esta declarado `GhotsProvider`, Ionic CLI se encarga automaticamente de declararlo, pero no esta demas verificar para luego no tener problemas.
 
 

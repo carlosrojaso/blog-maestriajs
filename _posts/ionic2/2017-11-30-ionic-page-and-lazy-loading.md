@@ -8,6 +8,7 @@ author: nicobytes
 laucher: 'https://ion-book.github.io/demo112/'
 cover: "https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2F2017-11-27-ionic-page-and-lazy-loading%2Fcover.jpg?alt=media&token=14f79867-8503-423b-9922-1b3551ac4186"
 repo: https://github.com/ion-book/demo112
+editname: "ionic2/2017-11-30-ionic-page-and-lazy-loading.md"
 versions:
   - title: 'ionic'
     number: '3.9.2'
