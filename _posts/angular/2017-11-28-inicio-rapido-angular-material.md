@@ -115,6 +115,8 @@ body{
 
 Lo que hemos hecho es importar el tema Material indigo-pink.css que no es más que una combinación de colores de material design predefinidos. Puedes exploras otros temas en la misma ruta.
 
+{% include blog/subscribe.html %}
+
 Le quitamos el margen y el padding al html y al body, al body le agregamos un background-color gris, finalmente la fuente.
 
 ### 5. EJecutar la aplicación

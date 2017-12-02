@@ -7,6 +7,7 @@ categories: ionic2
 author: daniel_lsanchez
 cover: "https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2Ffacebook-and-ionic%2Fcover.png?alt=media&token=729f232b-f43f-4ff1-8895-d5af5f1fb599"
 repo: https://github.com/ion-book/demo113
+editname: "ionic2/2017-12-01-facebook-and-ionic.md"
 versions:
   - title: 'ionic'
     number: '3.9.2'
