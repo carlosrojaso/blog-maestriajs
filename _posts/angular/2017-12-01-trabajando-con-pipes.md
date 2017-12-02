@@ -20,7 +20,7 @@ versions:
 <amp-img width="1024" height="512" layout="responsive" src="https://cdn-images-1.medium.com/max/800/1*6nCOLC77AhvGvgjfvElZsg.png"></amp-img>
 
 
-En este post continuaremos con el proyecto del artículo anterior [Angular 5: Inicio rápido con angular-cli y angular material](https://blog.ng-classroom.com/blog/angular/inicio-rapido-angular-material/). Antes de comenzar con pipes vamos a modificar nuestro home.componente.html para utilizar el componente MatListModule de angular material en lugar de las etiquetas `<ul>` y `<li>` de html.
+En este post continuaremos con el proyecto del artículo anterior [Angular 5: Inicio rápido con angular-cli y angular material](https://blog.ng-classroom.com/blog/angular/inicio-rapido-angular-material/). Antes de comenzar con pipes vamos a modificar nuestro home.componente.html para utilizar el componente [MatListModule](https://material.angular.io/components/list/api) de angular material en lugar de las etiquetas `<ul>` y `<li>` de html.
 
 {% include general/net-promoter-score.html %} 
 
