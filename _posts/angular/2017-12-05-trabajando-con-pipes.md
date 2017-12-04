@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Trabajando con Pipes en angular 5"
-date: 2017-12-01
+date: 2017-12-05
 tags: [angular]
 categories: angular
 author: williambastidas
