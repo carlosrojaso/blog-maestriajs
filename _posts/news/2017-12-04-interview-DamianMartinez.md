@@ -79,6 +79,6 @@ La mejor forma de aprender realmente a programar es llevarlo a la practica. Hace
 
 ## ¿ Algo que quieras promover o compartir ?
 
-Recientemente inicié junto a un par de compañeros una factoría de software y consultoría con la que estamos creando excelentes productos (http://theappsgarden.com/). Así que si tienen una idea y necesitan un equipo experimentado para llevarla a cabo no duden en ponerse en contacto con nosotros.
+Recientemente inicié junto a un par de compañeros una factoría de software y consultoría con la que estamos creando excelentes productos [Theappsgarden](http://theappsgarden.com/). Así que si tienen una idea y necesitan un equipo experimentado para llevarla a cabo no duden en ponerse en contacto con nosotros.
 
 ¡Saludos!
