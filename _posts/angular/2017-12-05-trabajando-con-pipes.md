@@ -58,6 +58,7 @@ Recordemos que debemos importar el componente [MatListModule](https://material.a
 
 
 `app.module.ts`
+
 ```ts
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -92,11 +93,24 @@ La clase `matLine` hace que el texto se muestre en una sola línea y si este es 
 
 Para esto necesitamos crear un nuevo directorio dentro de app con el nombre de pipe y y un archivo con el nombre de `truncate.pipe.ts`
 
-<amp-img width="1024" height="512" layout="responsive" src="https://cdn-images-1.medium.com/max/640/1*sH5rbktWws3IR2sAS0JMPg.png"></amp-img>
+
+
+<div class="row wrap">
+  <div class="col col-100 col-md-33 col-lg-33">
+    <amp-img width="392" height="480" layout="responsive" src="https://cdn-images-1.medium.com/max/640/1*sH5rbktWws3IR2sAS0JMPg.png"></amp-img>
+  </div>
+  <div class="col col-100 col-md-33 col-lg-33">
+    
+  </div>
+  <div class="col col-100 col-md-33 col-lg-33">
+    
+  </div>
+</div>
 
 Agregamos al pipe creado el siguiente código:
 
 `truncate.pipe.ts`
+
 ```ts
 import { Pipe, PipeTransform } from '@angular/core';
 @Pipe({
@@ -113,9 +127,11 @@ export class TruncatePipe implements PipeTransform{
 Importamos la clase `Pipe` y la intefaz `PipeTransform` desde `@angular/core`. Llamamos al decorador `@pipe` y le colocamos el nombre que usaremos en nuestra vista `‘trucate’`. Declaramos la clase `TruncatePipe` que implementa de la clase `PipeTransform` (todos los pipe deben implementar de la clase `PipeTransform`). Utilizamos el método `transform()` que recibe como parametro el valor original, en este caso la descripción del logro y después el límite de caracteres que deseamos mostrar. Finalmente retornamos un string con el valor procesado.
 
 ### 3. Importar TruncatePipe
+
 Para poder utilizar nuestro `TruncatePipe` debemos importarlo y agregarlo a la lista de declarations en el `app.module.ts`:
 
 `app.module.ts`
+
 ```ts
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -147,10 +163,12 @@ import { TruncatePipe } from './pipes/truncate.pipe'
 
 Finalmente añadimos `| truncate: 30` en la impresión de la descripción del logro para filtrar y mostrar un máximo de 30 caracteres.
 
+{% include blog/subscribe.html %}
 
 ### 4. Utilizar nuestro pipe
 
 `home.componente.html`
+
 ```html
 <mat-list>
   <mat-list-item *ngFor="let logro of logros">
@@ -171,7 +189,19 @@ Usando la opción `-- open` (o simplemente `-o`) nos abrirá automáticament
 
 Si todo salió bien deberíamos ver algo como esto:
 
-<amp-img width="1024" height="512" layout="responsive" src="https://cdn-images-1.medium.com/max/640/1*ygtxxGwqdqGrqmtvQ1VM5w.png"></amp-img>
+
+
+<div class="row wrap">
+  <div class="col col-100 col-md-33 col-lg-33">
+    <amp-img width="304" height="552" layout="responsive" src="https://cdn-images-1.medium.com/max/640/1*ygtxxGwqdqGrqmtvQ1VM5w.png"></amp-img>
+  </div>
+  <div class="col col-100 col-md-33 col-lg-33">
+    
+  </div>
+  <div class="col col-100 col-md-33 col-lg-33">
+    
+  </div>
+</div>
 
 Para descargar o clonar el código fuente de este proyecto:
 * [VER CÓDIGO](https://github.com/wibastidas/my-proyecto-angular)
