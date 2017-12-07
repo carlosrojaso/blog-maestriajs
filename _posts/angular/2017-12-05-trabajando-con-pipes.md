@@ -46,12 +46,14 @@ para verlo en tu navegador.
 Lo primero que haremos es modificar el archivo `home.componente.html` para agregar lo siguiente:
 
 ```html
+{% raw %}
 <mat-list>
   <mat-list-item *ngFor="let logro of logros">
     <h3 matLine>{{logro.title}}</h3>
     <p matLine>{{logro.description}}</p>
   </mat-list-item>
 </mat-list>
+{% endraw %}
 ```
 
 Recordemos que debemos importar el componente [MatListModule](https://material.angular.io/components/list/api) al modulo principal y agregarlo a la lista de imports de la siguiente manera:
@@ -170,12 +172,14 @@ Finalmente añadimos `| truncate: 30` en la impresión de la descripción del lo
 `home.componente.html`
 
 ```html
+{% raw %}
 <mat-list>
   <mat-list-item *ngFor="let logro of logros">
     <h3 matLine>{{logro.title}}</h3>
     <p matLine>{{logro.description | truncate: 30}}</p>
   </mat-list-item>
 </mat-list>
+{% endraw %}
 ```
 
 Para ver la aplicaicon en el navegador ejecutamos:
