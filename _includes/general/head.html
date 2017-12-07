@@ -16,9 +16,12 @@
  {% endif %}
 
  {% include general/seo.html %}
+
+ {% if site.pwa_enabled > 0 %}
+ <!-- PWA Stuff -->
+ <link rel="manifest" href="{{ "manifest.json"| prepend: site.path }}">
+ {% endif%}
  
-  <!-- PWA Stuff -->
-  <link rel="manifest" href="{{ "manifest.json"| prepend: site.path }}">
   <!-- Chrome, Firefox OS and Opera -->
   <meta name="theme-color" content="#4E8EF7"> 
   <!-- Windows Phone -->
@@ -113,3 +116,6 @@ h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')};
 {% endif%}
 </head>
 
+{% if site.google_tagmanager > 0 %}
+{% include general/gtm.html %}
+{% endif%}

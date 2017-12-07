@@ -5,7 +5,11 @@
   <div class="content">
     <div class="row wrap center">
       <div class="col col-100 col-md-40 col-lg-40 hidden-sm">
-        <a class="btn btn-round btn-success btn-request" target="_blank" href="https://github.com/ion-book/ion-book.github.io/issues/new">Solícita un tutorial</a>
+
+        {% if site.google_cse > 0 %}
+        {% include general/gcse.html %}
+        {% endif%}
+              
       </div>
       <div class="col col-100 col-md-60 col-lg-60 hidden-sm nav-bar">
         <ul>
