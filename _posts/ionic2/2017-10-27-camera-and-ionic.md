@@ -118,7 +118,7 @@ export class AppModule {}
 
 # Paso 3: Implementando la cámara
 
-Para hacer uso de la cámara debemos inyectar al constructor de `HomePage` el provider de la `Camera`, y la declraremos la variable `image` de tipo string que guardara la imagen, así:
+Para hacer uso de la cámara debemos inyectar al constructor de `HomePage` el provider de la `Camera`, y la declararemos la variable `image` de tipo string que guardara la imagen, así:
 
 ```ts
 ...
