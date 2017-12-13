@@ -158,15 +158,15 @@ Vamos a explicar las opciones más importantes que usamos en el código de arrib
 - **distanceFilter:** Es un valor en la distancia (horizontales) en metros donde el plugin se activará o enviara una respuesta.
 - **debug:** Esta opción permite tener más información acerca de la respuesta y agrega un sonido cada vez que detecta un nuevo registro.
 - **stopOnTerminate:** Si está en true la tarea de `background-geolocation` se detendrá si la aplicación es cerrada o sacada de segundo plano. Recordemos que el plugin funciona en modo `background` y `foreground`.
-- **locationProvider:**  Es la técnica usada para detectar los cambios de posición la técnica que usaremos será `ACTIVITY_PROVIDER = 1`, puedes ver qué provider escoger aquí:
+- **locationProvider:**  Es la técnica usada para detectar los cambios de posición la técnica que usaremos será `ACTIVITY_PROVIDER = 1`, puedes ver qué provider escoger aquí: [PROVIDERS](https://github.com/mauron85/cordova-plugin-background-geolocation/blob/master/PROVIDERS.md{:target="_blank"})
 
-https://github.com/mauron85/cordova-plugin-background-geolocation/blob/master/PROVIDERS.md
+
 
 - **startForeground:** Habilita la detección de cambio de posición cuando la app está en segundo plano.
-- **interval:** Será el mínimo de tiempo que el plugin estará solicitando la posición al dispositivo. Debemos tener en cuanta que los valores de tiempo van condicionados con los de distancia. Es decir si el dispositivo no detecta el movimiento x metros en x tiempo no solicitá la posición.
+- **interval:** Será el mínimo de tiempo que el plugin estará solicitando la posición al dispositivo. Debemos tener en cuenta que los valores de tiempo van condicionados con los de distancia. Es decir si el dispositivo no detecta el movimiento x metros en x tiempo no solicitá la posición.
 
-Todas las opciones y documentación las puedes encontrar aquí:
-https://github.com/mauron85/cordova-plugin-background-geolocation#api
+Todas las opciones y documentación las puedes encontrar aquí: [API]
+(https://github.com/mauron85/cordova-plugin-background-geolocation#api)
 
 Ahora vamos a crear un evento que evalúe si la detección posición está habilitada en el dispositivo y si  lo está no abre automaticamente la opcion nativa para habilitarla:
 
@@ -263,7 +263,39 @@ export class HomePage {
 }
 ```
 
-# Paso 4: Compilando
+# Paso 4: Template
+
+Ahora solo tendremos que trabajar en el template que tendrá una opción para iniciar la tarea y otro para detenerla, además que mostrar los registros haya capturado el plugin.
+
+`src/home/home.html:`
+
+```html
+{% raw %}
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>home</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="startBackgroundGeolocation()">
+        <ion-icon name="play"></ion-icon>
+      </button>
+      <button ion-button icon-only (click)="stopBackgroundGeolocation()">
+        <ion-icon name="pause"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+    <ion-item *ngFor="let log of logs">
+      {{ log }}
+    </ion-item>
+  </ion-list>
+</ion-content>
+{% endraw %}
+```
+
+# Paso 5: Compilando
 
 Ahora para compilar el código solo tendremos que ejecutar en nuestra terminal (Si tienen el entorno configurado):
 
