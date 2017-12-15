@@ -23,7 +23,7 @@ versions:
 
 > En este post veremos como hacer una validación dinámica de acuerdo escuchar un cambio en específico.
 
-<amp-img width="1024" height="820" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2F2017-07-27-directivas%2Fcover.jpg?alt=media&token=7e9dd6b7-79ed-43b6-97e5-b51061d62091"></amp-img> 
+<amp-img width="1024" height="512" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2F2017-07-27-directivas%2Fcover.jpg?alt=media&token=7e9dd6b7-79ed-43b6-97e5-b51061d62091"></amp-img> 
 
 {% include general/net-promoter-score.html %} 
 
