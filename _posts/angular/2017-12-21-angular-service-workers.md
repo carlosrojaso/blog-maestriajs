@@ -51,8 +51,6 @@ $ng set apps.0.serviceWorker=true
 Importar y registrar el Service Worker
 
 ```ts
-import { ServiceWorkerModule } from '@angular/service-worker';
-import { environment } from '../environments/environment';
 import { ServiceWorkerModule } from '@angular/service-worker'
 import { environment } from '../environments/environment';
  
