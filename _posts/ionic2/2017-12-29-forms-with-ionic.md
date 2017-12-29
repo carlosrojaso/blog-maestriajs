@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Formularios en Ionic"
-date: 2017-10-26
+date: 2017-12-29
 tags: [forms, demos]
 categories: ionic2
 repo: "https://github.com/ion-book/demo101"
@@ -12,15 +12,15 @@ remember: true
 editname: "ionic2/2017-10-26-forms-with-ionic.md"
 versions:
   - title: 'ionic'
-    number: '3.7.1'
+    number: '3.9.2'
   - title: 'ionic-native'
-    number: '4.3.2'
+    number: '4.5.2'
   - title: 'ionic-app-scripts'
-    number: '3.0.1'
+    number: '3.1.7'
   - title: 'cordova-cli'
     number: '7.1.0'
   - title: 'ionic-cli'
-    number: '3.15.1'
+    number: '3.19.0'
 ---
 
 > La forma más común de capturar información de los usuarios es a partir de **Formularios** y depende de una buena UI/UX ganar o perder un usuario en nuestra aplicación. 
@@ -31,10 +31,10 @@ versions:
 
 Por eso es de vital importancia hacer un buen manejo de ellos, tener las validaciones adecuadas y por esto Angular nos ofrece **FormBuilder**, una clase que nos provee una completa herramienta para controlar, construir y validar formularios de forma muy eficiente y sencilla.
 
-# Actualización (25/10/2017)
+# Actualización (29/12/2017)
 <hr/>
 
-Hemos actualizado este demo con el último release [**Ionic 3.7**](https://www.ion-book.com/blog/news/ionic-3-7/){:target="_blank"}
+Hemos actualizado este demo con el último release [**Ionic 3.9**]
 <hr/>
 
 <a href="https://ion-book.github.io/demo101/" target="_blank" class="btn btn-round btn-success">Ver demo</a>

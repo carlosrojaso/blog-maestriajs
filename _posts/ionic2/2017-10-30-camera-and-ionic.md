@@ -11,27 +11,27 @@ cover: "https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts
 remember: true
 versions:
   - title: 'ionic'
-    number: '3.7.1'
+    number: '3.9.2'
   - title: 'ionic-native'
-    number: '4.3.2'
+    number: '4.5.2'
   - title: 'ionic-app-scripts'
-    number: '3.0.1'
+    number: '3.1.7'
   - title: 'cordova-cli'
-    number: '7.1.0'
+    number: '8.0.0'
   - title: 'ionic-cli'
-    number: '3.15.1'
+    number: '3.19.0'
 ---
 
 > En este artículo conectar una aplicación de ionic con el recurso nativo de la cámara con ionic native y ver varias de las opciones que nos ofrece ionic para manipular la cámara.
 
 <amp-img width="810" height="540" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2F2017-10-27-camera-and-ionic%2Fcover.jpg?alt=media&token=ced4b24b-3a0e-437f-8163-ffe9e25078b0"></amp-img>
 
-{% include general/net-promoter-score.html %} 
-
-# Actualización (25/10/2017)
+{% include general/net-promoter-score.html %}
+ 
+# Actualización (29/12/2017)
 <hr/>
 
-Hemos actualizado este demo con el último release [**Ionic 3.7**](https://www.ion-book.com/blog/news/ionic-3-7/){:target="_blank"}
+Hemos actualizado este demo con el último release [**Ionic 3.9**]
 <hr/>
 
 
