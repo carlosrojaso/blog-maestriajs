@@ -127,7 +127,7 @@ Y ya! Eso es todo ahora ya estás trabajando con esta increíble característica
 
 Ahora como cada página es un módulo deberás importar tus components, pipes y directives en cada una de las páginas, de lo contrario no funcionarán, para este paso seguiremos la guía de estilo de Angular. 
 
-**Angular** tiene toda una sección de buenas prácticas para desarrollar una aplicación escalable y mantenible, puedes ver toda la guía [aqui](https://angular.io/docs/ts/latest/guide/style-guide.html){:target="_blank"}. Vamos seguir la regla [Shared](https://angular.io/guide/styleguide#shared-feature-module){:target="_blank"}, que nos dice como crear un módulo compartido que será implementando en otros módulos. Ha este módulo lo nombraremos **SharedModule**.
+**Angular** tiene toda una sección de buenas prácticas para desarrollar una aplicación escalable y mantenible, puedes ver toda la guía [aqui](https://angular.io/docs/ts/latest/guide/style-guide.html){:target="_blank"}. Vamos seguir la regla [Shared](https://angular.io/guide/styleguide#shared-feature-module){:target="_blank"}, que nos dice como crear un módulo compartido que será implementando en otros módulos. A este módulo lo nombraremos **SharedModule**.
 
 Ionic crear una carpeta de componentes y pipes pero nosotros lo organizaremos nuestros components, directives y pipes en base a la buena práctica de Angular de esta manera:
 
