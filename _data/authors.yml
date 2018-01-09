@@ -210,14 +210,18 @@
 - id: "williambastidas"
   name: William Bastidas
   url: "/blog/authors/williambastidas"
-  avatar: "https://cdn-images-1.medium.com/fit/c/400/400/0*5mQzejrDASFzj2JJ.jpg"
-  website: "https://medium.com/@wibastidas77"
+  avatar: "https://pbs.twimg.com/profile_images/950445166393024512/kBp_X2Xd_400x400.jpg"
+  website: "https://williambastidas.com/"
   bio: "Eterno aprendiz, desarrollador de software, enfocado en el aprendizaje de tecnologías web y móvil. Aficionado del UX y UI. #Ionic #Angular #PWA"
   country: "Venezuela"
-  facebook_url: '#'
+  facebook_url: 'https://m.facebook.com/williambastidasblog'
   social_links:
+    - link: "https://m.facebook.com/williambastidasblog"
+      icon: "icon-social-facebook"
     - link: "https://twitter.com/wibastidas77"
       icon: "icon-social-twitter"
+    - link: "https://github.com/wibastidas"
+      icon: "icon-social-octocat"
 - id: "GiovanniCamana"
   name: Giovanni Camana
   url: "/blog/authors/GiovanniCamana"
