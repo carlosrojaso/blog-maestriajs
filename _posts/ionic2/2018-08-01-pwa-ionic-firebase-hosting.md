@@ -52,7 +52,7 @@ Si ya estamos registrados, nos dirigirmos directamente a
 
 Desde aquí, crearemos un proyecto o usaremos un proyecto existente:
 
-<amp-img width="1024" height="512" layout="responsive" src="https://cdn-images-1.medium.com/max/800/1*6nCOLC77AhvGvgjfvElZsg.png"></amp-img>
+<amp-img width="1024" height="512" layout="responsive" src="https://cdn-images-1.medium.com/max/800/1*nJhfOiDHExKKxX0nnEF8Fg.png"></amp-img>
 
 Una vez hecho esto, entramos al panel de control de Firebase, donde podremos acceder a todo lo relacionado con el proyecto (Analytics, Authentication, Database, Storage, Hostin, etc).
 
