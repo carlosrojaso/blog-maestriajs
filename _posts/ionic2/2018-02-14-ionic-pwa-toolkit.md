@@ -1,21 +1,22 @@
 ---
 layout: post
 title: "Ionic PWA Toolkit"
-date: 2018-01-08
+date: 2018-02-15
 tags: [pwa, ionic, toolkit]
 categories: ionic2
 author: williambastidas
 cover: "https://cdn-images-1.medium.com/max/800/1*L60K2inHjNJ1SiEIp-gJFg.png"
 remember: true
 editname: "ionic2/2018-02-14-ionic-pwa-toolkit.md"
+---
 
-> Ionic PWA Toolkit una combinación de herramientas para crear **aplicaciones web progresivas** con IONIC.
-
-> En este artículo a demás de generar nuestra primera pwa con el nuevo kit de herramientas de ionic, intentaremos hechar un vistazo a la estructura del proyecto y algunos conceptos claves.
+>Ionic PWA Toolkit una combinación de herramientas para crear **aplicaciones web progresivas** con IONIC.
 
 <amp-img width="1024" height="512" layout="responsive" src="https://cdn-images-1.medium.com/max/800/1*L60K2inHjNJ1SiEIp-gJFg.png" alt="Ionic PWA Toolkit"></amp-img>
 
 {% include general/net-promoter-score.html %} 
+
+En este artículo a demás de generar nuestra primera pwa con el nuevo kit de herramientas de ionic, intentaremos hechar un vistazo a la estructura del proyecto y algunos conceptos claves.
 
 ### Que incluye el proyecto?
 
@@ -59,13 +60,13 @@ Para quienes estamos familiarizados de alguna forma con la construcción de apli
 
 ### Desarrollando la aplicacación
 
-### 1.Para configurar [Ionic PWA Toolkit ](https://github.com/ionic-team/ionic-pwa-toolkit) para un nuevo proyecto, solo necesitamos clonar el repositorio de GitHub:
+Para configurar [Ionic PWA Toolkit ](https://github.com/ionic-team/ionic-pwa-toolkit) para un nuevo proyecto, solo necesitamos clonar el repositorio de GitHub:
 
 ```
 git clone https://github.com/ionic-team/ionic-pwa-toolkit.git PROJECT-NAME
 ```
 
-### 2. Una vez que ha finalizado la clonación, debemos entrar al proyecto e instalar las dependencias:
+Una vez que ha finalizado la clonación, debemos entrar al proyecto e instalar las dependencias:
 
 ```
 cd PROJECT-NAME
@@ -75,24 +76,35 @@ cd PROJECT-NAME
 npm install
 ```
 
-### 3. Una vez que las dependencias hayan terminado de instalarse, podemos ejecutar la aplicación con:
+Una vez que las dependencias hayan terminado de instalarse, podemos ejecutar la aplicación con:
+
 ```
 npm start
 ```
 
 El proyecto debería iniciarse en el navegador en `localhost:3333` y deberíamos ver algo como esto:
 
-<amp-img width="1024" height="512" layout="responsive" src="https://cdn-images-1.medium.com/max/800/1*oSn8vhr2rRgrRnwFPfCccw.png" alt="Ionic PWA Toolkit"></amp-img>
+<div class="row wrap">
+  <div class="col col-md-25 col-lg-25">
+  </div>
+  <div class="col col-md-50 col-lg-50">
+    <amp-img width="313" height="606" layout="responsive" src="https://cdn-images-1.medium.com/max/800/1*oSn8vhr2rRgrRnwFPfCccw.png" alt="Ionic PWA Toolkit"></amp-img>
+  </div>
+  <div class="col col-md-25 col-lg-25">
+  </div>
+</div>
 
 
 Se ve bastante similar a una aplicación Ionic normal. Aunque los componentes web Ionic que se introducen en Ionic 4 se pueden usar fácilmente en cualquier proyecto Stencil, de manera predeterminada no se incluyen en el motor de arranque (está en el kit de herramientas Ionic PWA). Lo que vemos es en realidad elementos básicos de HTML diseñados con algunos SCSS personalizados.
 
-### 4. Cuando estemos en desarrollo, podemos usar el siguiente comando para habilitar la recarga del navegador cuando realicemos un cambio:
+Cuando estemos en desarrollo, podemos usar el siguiente comando para habilitar la recarga del navegador cuando realicemos un cambio:
+
 ```
 npm run dev
 ```
 
-###  5. También podemos compilar el proyecto para generar una aplicación de producción ejecutando:
+También podemos compilar el proyecto para generar una aplicación de producción ejecutando:
+
 ```
 npm run build
 ```
@@ -105,7 +117,15 @@ En este punto, la compilación final ya no es realmente un “proyecto stencil�
 ### Archivos y carpetas
 La estructura de carpetas en el proyecto que acabamos de configurar, es bastante similar a una aplicación Ionic-Angular normal:
 
-<amp-img width="1024" height="512" layout="responsive" src="https://cdn-images-1.medium.com/max/800/1*yRVVFJD68CnBI8mHNuYC1g.png" alt="Ionic PWA Toolkit"></amp-img>
+<div class="row wrap">
+  <div class="col col-md-25 col-lg-25">
+  </div>
+  <div class="col col-md-50 col-lg-50">
+    <amp-img width="1024" height="512" layout="responsive" src="https://cdn-images-1.medium.com/max/800/1*yRVVFJD68CnBI8mHNuYC1g.png" alt="Ionic PWA Toolkit"></amp-img>
+  </div>
+  <div class="col col-md-25 col-lg-25">
+  </div>
+</div>
 
 Tenemos una carpeta **src** donde se lleva a cabo la mayor parte de la codificación y también contiene una carpeta de **assets** para activos estáticos. Tenemos el archivo **index.html** que contiene la estructura básica del sitio web junto con `<my-app>` componente raíz de la aplicación. También tenemos una carpeta www que contiene el código creado para el proyecto.
 
