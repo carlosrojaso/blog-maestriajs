@@ -1,12 +1,11 @@
 ---
 layout: post
-title: "Compodoc - Documentación en Angular Apps."
+title: "Compodoc - Documentación en Ionic."
 date: 2018-02-16
-tags: [angular]
-categories: angular
+tags: [ionic]
+categories: ionic
 author: carlosrojas
-repo: https://github.com/ion-book/firstAngular
-cover: "https://firebasestorage.googleapis.com/v0/b/ngclassroom-8ba81.appspot.com/o/posts%2F2018-02-10-compodoc-documentacion_angular_apps%2FCompodoc.png?alt=media&token=ac39b0c9-6d5e-49e0-a6c8-1ff818975032"
+cover: "https://firebasestorage.googleapis.com/v0/b/ngclassroom-8ba81.appspot.com/o/posts%2F2018-02-15-compodoc-documentacion_ionic_apps%2FLos%2010%20mas%20leidos.png?alt=media&token=ccc9c0ab-bb70-4c8d-9251-8bb9bb4a6da4"
 editname: "ionic2/2018-02-15-compodoc-documentacion_ionic_apps.md"
 versions:
   - title: 'ionic'
@@ -22,7 +21,7 @@ versions:
 ---
 > Cuando los proyectos en Ionic crecen un poco más de 50 componentes y tenemos varios desarrolladores en el proyecto, es buena idea tener Documentación de codigo para las generaciónes futuras.
 
-<amp-img width="1024" height="512" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ngclassroom-8ba81.appspot.com/o/posts%2F2018-02-10-compodoc-documentacion_angular_apps%2FCompodoc.png?alt=media&token=ac39b0c9-6d5e-49e0-a6c8-1ff818975032"></amp-img> 
+<amp-img width="1024" height="512" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ngclassroom-8ba81.appspot.com/o/posts%2F2018-02-15-compodoc-documentacion_ionic_apps%2FLos%2010%20mas%20leidos.png?alt=media&token=ccc9c0ab-bb70-4c8d-9251-8bb9bb4a6da4"></amp-img> 
 
 {% include general/net-promoter-score.html %} 
 
