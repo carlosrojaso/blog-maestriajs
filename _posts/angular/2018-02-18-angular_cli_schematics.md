@@ -143,7 +143,7 @@ $ yarn hello-world
 y listo ya todo deberia estar listo. Ahora podre generar mi schematic con el comando ```ng generate```
 
 ````
-$ ng generate hello-world:hello-world myprimerSchematic
+$ ng generate hello-world:hello-world myprimerSchematic```
 ````
 
 Bueno espero que sea de ayuda y no te olvides comentar y compartir :)
