@@ -125,7 +125,7 @@ export class MyFormPage {
 }
 ```
 
-{% include blog/subscribe.html %}
+{% include blog/adIonic.html %}
 
 Ahora para agregar el controlador de nuestro formulario debemos asignar dentro del atributo `formGroup` la instancia de `myForm`, además debemos asignar un método para recibir la información, así:
 

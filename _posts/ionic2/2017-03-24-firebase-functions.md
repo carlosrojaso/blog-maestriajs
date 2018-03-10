@@ -71,7 +71,7 @@ $ firebase login
 
 Desde que nuestra cuenta esta conectada a nuestra cuenta de Gmail, ese comando abrira un navegador por nosotros para que ingresemos en nuestra cuenta de Google/Gmail y autoricemos Firebase. Una vez hagas esto, el CLI va a loguear y seras capaz de acceder a todo su potencial.
 
-{% include blog/subscribe.html %}
+{% include blog/adFirebase.html %}
 
 Ahora, voy a asumir que estas en la carpeta de tu App en la terminal, porque tu sabes que estas trabajando en una app para Fitness, primero, sal de la carpeta de tu app,  y crea un nuevo folder para tu CF:
 

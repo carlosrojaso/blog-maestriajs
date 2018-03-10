@@ -13,6 +13,7 @@ push_notifications: 1
 google_optimize: 1
 google_cse: 1
 google_tagmanager: 1
+hello_bar_enabled: 1
 
 timezone: "America/Bogota"
 
