@@ -7,6 +7,7 @@ categories: angular
 author: carlosrojas
 repo: https://github.com/ion-book/demo126
 cover: "https://firebasestorage.googleapis.com/v0/b/ngclassroom-8ba81.appspot.com/o/posts%2F2018-03-12-angular_firebase_storage%2FTitulos.png?alt=media&token=de194e12-488e-40f9-9bf6-a655ec33062e"
+editname: "angular/2018-03-12-angular_firebase_storage.md"
 versions:
   - title: 'Angular CLI'
     number: '1.7.0'
@@ -179,4 +180,6 @@ y modificamos nuestra plantilla para que utilice lo que acabamos de agregar en n
 <a [href]="downloadURL | async">{{ downloadURL | async }}</a>
 {% endraw %}
 ```
+Puedes ver el resultado final en [Stackblitz](https://stackblitz.com/github/ion-book/demo126)
+
 Bueno espero que sea de ayuda y no te olvides comentar y compartir :)
