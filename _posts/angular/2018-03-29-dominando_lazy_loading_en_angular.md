@@ -1,11 +1,11 @@
 ---
 layout: post
 title: "Dominando Lazy Loading en Angular"
-date: 2018-03-29
+date: 2018-03-30
 tags: [angular]
 categories: angular
 author: andysantana
-cover: "https://preview.ibb.co/bRGzvS/Angular2.jpg"
+cover: "https://firebasestorage.googleapis.com/v0/b/ngclassroom-8ba81.appspot.com/o/posts%2F2018-03-29-dominando_lazy_loading_en_angular%2FAngular2.jpg?alt=media&token=345a3726-2f92-4ac3-807b-62d904bfad5d"
 repo: https://github.com/andyfrontend/angular-lazyloading
 editname: "angular/2018-03-29-dominando_lazy_loading_en_angular.md"
 versions:
@@ -16,7 +16,7 @@ versions:
 ---
 > A la hora de crear una aplicación es muy importante tomar en cuenta el rendimiento y velocidad de esta. Por eso en este artículo te enseño a manejar Lazy Loading en Angular que nos ayudará a mejorar el rendimiento de nuestra aplicación y el usuario final estará más feliz.
 
-<amp-img width="1024" height="512" layout="responsive" src="https://preview.ibb.co/bRGzvS/Angular2.jpg"></amp-img>
+<amp-img width="1024" height="512" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ngclassroom-8ba81.appspot.com/o/posts%2F2018-03-29-dominando_lazy_loading_en_angular%2FAngular2.jpg?alt=media&token=345a3726-2f92-4ac3-807b-62d904bfad5d"></amp-img>
 {% include general/net-promoter-score.html %}
 
 ## ¿Qué pasa cuando una aplicación de Angular inicia?

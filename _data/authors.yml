@@ -31,8 +31,8 @@
 - id: "javico2609"
   name: Javier González Rodríguez
   url: "/blog/authors/javico2609"
-  avatar: "https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAApBAAAAJGUwOTY3N2UyLTYwZjAtNDQ0Yi1iZGNkLTAxMTRkOTc5YjRkNw.jpg"
-  website: "https://javico2609.github.io/blog"
+  avatar: "https://firebasestorage.googleapis.com/v0/b/ngclassroom-8ba81.appspot.com/o/assets%2FCaptura%20de%20pantalla%202018-03-29%20a%20la(s)%204.59.17%20p.%20m..png?alt=media&token=1cb49f25-fcdd-45c2-9aa5-5766e4a0f657"
+  website: "https://github.com/javico2609"
   country: "Cuba"
   bio: "Full Stack Developer enthusiastic for his job and loving of good practices. C#, .NET developer using ASP.NET MVC, WebApi, JavaScript + TypeScript using popular frameworks like: Angular 2, Ionic 2, Redux, Vue JS, ExtJs and Highcharts."
   facebook_url: 'https://www.linkedin.com/in/javier-gonzalez-843a2597/'
@@ -182,7 +182,7 @@
 - id: "EduardoIbarra"
   name: Eduardo Ibarra
   url: "/blog/authors/EduardoIbarra"
-  avatar: "http://eduardoibarra.com/dl/img/eduardo.jpg"
+  avatar: "https://firebasestorage.googleapis.com/v0/b/ngclassroom-8ba81.appspot.com/o/assets%2FEduardoIbarra_2c785f45-d84a-409f-bb5b-a28eb10196f4.jpg?alt=media&token=994166f0-861a-469f-8951-11e8ed5fd594"
   website: "http://eduardoibarra.com/"
   bio: "Eduardo es un arquitecto de sistemas y socio fundador de la compañía de sistemas Gobae Consulting. Ha dado charlas tanto online como en eventos internacionales como Campus Party (MX-2013). Además, ha producido video tutoriales en Youtube desde el 2009."
   country: "México"
@@ -236,4 +236,19 @@
     - link: "https://twitter.com/giogioJs"
       icon: "icon-social-twitter"
     - link: " https://github.com/gcamana"
+      icon: "icon-social-octocat"
+- id: "andysantana"
+  name: Andy Santana
+  url: "/blog/authors/andysantana"
+  avatar: "https://firebasestorage.googleapis.com/v0/b/ngclassroom-8ba81.appspot.com/o/assets%2F29664100_10209380317185525_996675509_n.jpg?alt=media&token=c94e21d8-4ea7-41e3-b462-af415cdc8052"
+  website: "https://github.com/andyfrontend/"
+  bio: "Giovanni Camana es Frontend developer, HybripApps developers, UX enthusiastic. Día a día siempre esta metido aprendiendo y desarrollando proyectos con  Angular, Ionic o TypeScript ."
+  country: "Republica Dominicana"
+  facebook_url: 'https://www.facebook.com/djandy.santana'
+  social_links:
+    - link: "https://www.facebook.com/djandy.santana"
+      icon: "icon-social-facebook"
+    - link: "https://twitter.com/andydev01"
+      icon: "icon-social-twitter"
+    - link: " https://github.com/andyfrontend/"
       icon: "icon-social-octocat"
