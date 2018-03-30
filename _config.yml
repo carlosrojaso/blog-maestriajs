@@ -8,7 +8,7 @@ cover: "/images/cover.jpg"
 path: 'https://blog.ng-classroom.com/'
 
 pwa_enabled: 0
-ads_enabled: 0
+ads_enabled: 1
 push_notifications: 1
 google_optimize: 1
 google_cse: 1
