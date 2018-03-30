@@ -152,6 +152,8 @@ import { AppComponent } from './app.component';
 export class AppModule {}
 ```
 
+{% include blog/adAngular.html %}
+
 Ahora vamos a probar nuestro código para eso vamos a `app.component.html` y creamos un enlace para ir a la tienda.
 
 `app.component.html`
