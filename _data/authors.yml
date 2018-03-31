@@ -242,9 +242,9 @@
   url: "/blog/authors/andysantana"
   avatar: "https://firebasestorage.googleapis.com/v0/b/ngclassroom-8ba81.appspot.com/o/assets%2F29664100_10209380317185525_996675509_n.jpg?alt=media&token=c94e21d8-4ea7-41e3-b462-af415cdc8052"
   website: "https://github.com/andyfrontend/"
-  bio: "Giovanni Camana es Frontend developer, HybripApps developers, UX enthusiastic. Día a día siempre esta metido aprendiendo y desarrollando proyectos con  Angular, Ionic o TypeScript ."
+  bio: "Soy desarrollador web apasionado en el front-end, Angular y technologías modernas. Me gusta compartir conocimientos y enseñar lo que se hacer. Como dice una frase 'La mejor forma de aprender es enseñando'. Mis pasatiempos son leer en medium, navegar por el internet informandome de tecnologías web y algunas veces netflix."
   country: "Republica Dominicana"
-  facebook_url: 'https://www.facebook.com/djandy.santana'
+  facebook_url: "https://www.facebook.com/djandy.santana"
   social_links:
     - link: "https://www.facebook.com/djandy.santana"
       icon: "icon-social-facebook"
