@@ -13,6 +13,9 @@ menu_header:
 # - title: Talleres
 #   url: 'https://startupers.ng-classroom.com/'
 #   target: '_blank'
+  - title: Market
+    url: 'https://market.ng-classroom.com'
+    target: '_blank'
 # ==============================================================
 # Menu Footer
 menu_footer:
