@@ -1,19 +1,19 @@
 ---
 layout: post
-title: "Angular CLI & Angular 6"
-date: 2018-04-09
+title: "Novedades Angular CLI"
+date: 2018-05-05
 tags: [angular]
 categories: angular
 author: carlosrojas
 cover: "https://firebasestorage.googleapis.com/v0/b/ngclassroom-8ba81.appspot.com/o/posts%2F2018-04-09-Angular-cli-angular-6%2Fangular-cli.png?alt=media&token=37d30d21-535d-4d92-a77f-9cc710e14e94"
-editname: "angular/2018-04-09-Angular-cli-angular-6.md"
+editname: "angular/2018-05-05-Angular-CLI.md"
 ---
 > El Angular CLI hace más facil crear una aplicaciónes que simplemente funcionen. Utilizando Angular y sus mejores practicas.
 
 <amp-img width="1024" height="512" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ngclassroom-8ba81.appspot.com/o/posts%2F2018-04-09-Angular-cli-angular-6%2Fangular-cli.png?alt=media&token=37d30d21-535d-4d92-a77f-9cc710e14e94"></amp-img>
 {% include general/net-promoter-score.html %}
 
-Estamos proximos a una nueva actualización de la plataforma Angular. Entre sus herramientas contamos con el Angular CLI, el cual nos ayuda principalmente con el `boilerplate`de nuestra App teniendo en cuenta las mejores practicas.
+Hace poco la plataforma Angular libero su versión 6. Entre sus herramientas contamos con el Angular CLI, el cual nos ayuda principalmente con el `boilerplate`de nuestra App teniendo en cuenta las mejores practicas.
 
 ## ¿ Que caracteristicas nuevas nos trae el Angular CLI ?
 
@@ -31,18 +31,14 @@ Angular carga todos los componentes que están importados en nuestro módulo pri
 
 - `ng config` para obtener y configurar valores. Ahora puedes cambiar facilmente los valores de CLI y tu proyecto con el `ng config`.
 
+- `ng add` instalar paquetes utilizando tu Package Manager. 
+
 ## Como instalarlo ?
 
 Simplemente debes hacer una instalación por npm con:
 
 ````
 $ npm install -g @angular/cli
-````
-
-y si quieres tener todo lo último antes de que salga la versión estable.
-
-````
-$ npm install -g @angular/cli@next
 ````
 
 Bueno esperamos que esta información te ayude en tus proyectos con Angular.
