@@ -252,3 +252,18 @@
       icon: "icon-social-twitter"
     - link: " https://github.com/andyfrontend/"
       icon: "icon-social-octocat"
+- id: "vanessamarely"
+  name: Vanessa Aristizabal
+  url: "/blog/authors/vanessamarely"
+  avatar: "https://angularweek.org/assets/img/vanessadrive.jpg"
+  website: "https://medium.com/@vanessamarely"
+  bio: "Soy ingeniera de Sistemas, trabajo como Web UI en Globant. Tengo 6 años de experiencia como Web Developer. Apasionada por la tecnología, los libros y el Anime."
+  country: "Colombia"
+  facebook_url: "https://www.facebook.com/vane.m.angel"
+  social_links:
+    - link: "https://www.facebook.com/vane.m.angel"
+      icon: "icon-social-facebook"
+    - link: "https://twitter.com/vanessamarely"
+      icon: "icon-social-twitter"
+    - link: " https://github.com/vanessamarely"
+      icon: "icon-social-octocat"
