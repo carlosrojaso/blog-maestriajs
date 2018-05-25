@@ -267,3 +267,18 @@
       icon: "icon-social-twitter"
     - link: " https://github.com/vanessamarely"
       icon: "icon-social-octocat"
+- id: "matiasalvarez"
+  name: Matías Álvarez Sabaté
+  url: "/blog/authors/matiasalvarez"
+  avatar: "https://firebasestorage.googleapis.com/v0/b/ngclassroom-8ba81.appspot.com/o/assets%2Fmatiasalvarez.jpg?alt=media&token=be72710c-b37f-4f2d-8d70-86dd734ef359"
+  website: "https://www.linkedin.com/in/matias-alvarez-sabate-b20717130"
+  bio: "Ingeniero Civil en Informática y Telecomunicaciones. Desarrollador web, frontend y backend (django)."
+  country: "Colombia"
+  facebook_url: ""
+  social_links:
+    - link: ""
+      icon: "icon-social-facebook"
+    - link: ""
+      icon: "icon-social-twitter"
+    - link: ""
+      icon: "icon-social-octocat"
