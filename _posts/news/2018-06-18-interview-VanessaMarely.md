@@ -39,7 +39,7 @@ Generalmente:
 
 ## ¿ Cual es tu configuración en tu lugar de trabajo (Computador, S.O, dispositivos, etc) ?
 
-<amp-img width="1024" height="576" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ngclassroom-8ba81.appspot.com/o/posts%2F2018-06-18-interview-VanessaMariely%2Fworkstation.JPG?alt=media&token=a8d4562a-7d8e-4d43-9054-176650445d57"></amp-img>
+<amp-img width="1024" height="576" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ngclassroom-8ba81.appspot.com/o/posts%2F2018-06-18-interview-VanessaMariely%2Fworkstation.jpg?alt=media&token=b9ced751-8d75-4473-81f8-c284762c11f6"></amp-img>
 
 En mi lugar de trabajo tengo un computador con SO Windows 10, con las siguientes especificaciones:
 
