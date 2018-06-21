@@ -9,7 +9,7 @@ cover: "https://firebasestorage.googleapis.com/v0/b/ngclassroom-8ba81.appspot.co
 editname: "angular/2018-06-13-Angular-universal_Express.md"
 versions:
   - title: 'Angular CLI'
-    number: '1.6.x'
+    number: '1.5.x'
   - title: 'Angular'
     number: '5.x'
 ---

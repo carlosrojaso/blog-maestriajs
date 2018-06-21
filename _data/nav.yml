@@ -8,14 +8,14 @@ menu_header:
     url: 'https://www.ng-classroom.com/'
     target: '_blank'
   - title: Foro
-    url: 'https://disqus.com/home/forum/ionbook/'
+    url: 'https://www.facebook.com/groups/770845623122042/about/'
     target: '_blank'
 # - title: Talleres
 #   url: 'https://startupers.ng-classroom.com/'
 #   target: '_blank'
-  - title: Market
-    url: 'https://market.ng-classroom.com'
-    target: '_blank'
+#  - title: Market
+#   url: 'https://market.ng-classroom.com'
+#   target: '_blank'
 # ==============================================================
 # Menu Footer
 menu_footer:
@@ -28,20 +28,20 @@ menu_footer:
   - title: Autores
     url: '/blog/authors'
     target: '_self'
-  - title: Meetups
-    url: '/meetups/'
-  - title: Organizadores
-    url: '/organizers/'
-    target: '_self'
+# - title: Meetups
+#  url: '/meetups/'
+# - title: Organizadores
+#   url: '/organizers/'
+#   target: '_self'
   - title: Podcast
     url: 'https://itunes.apple.com/us/podcast/ng-podcast/id1235127090?l=es&mt=2'
     target: '_blank'
   - title: Foro
-    url: 'https://disqus.com/home/forum/ionbook/'
+    url: 'https://www.facebook.com/groups/770845623122042/about/'
     target: '_blank'
-  - title: Jobs
-    url: 'https://angularjobs.com/'
-    target: '_blank'
+# - title: Jobs
+#   url: 'https://angularjobs.com/'
+#   target: '_blank'
   - title: Codigo de Conducta
     url: 'https://github.com/ion-book/codigo-de-conducta'
     target: '_blank'
