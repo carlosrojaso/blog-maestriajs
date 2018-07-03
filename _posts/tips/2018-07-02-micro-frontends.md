@@ -3,7 +3,7 @@ layout: post
 title: "Micro Frontends."
 keywords: "Tips"
 date: 2018-07-03
-tags: [tips]
+tags: [tips, architecture]
 categories: tips
 author: carlosrojas
 cover: "https://firebasestorage.googleapis.com/v0/b/ngclassroom-8ba81.appspot.com/o/posts%2F2018-07-02-micro-frontends%2Fmicrofrontends.png?alt=media&token=98e2937a-a65c-4ee4-87ed-9d43a8bb0cab"
@@ -27,7 +27,7 @@ Fuente:[http://j.mp/2Njfnla](http://j.mp/2Njfnla)
 
 Esto causa que en un proyecto obtengasmos algo asi como las figuras que vamos viendo arriba, al inicio todos empezamos desarrollando como "Fullstack" pero luego vamos logrando arquitecturas mas adecuadas como es la de "Microservicios", en esta el Backend divide los servicios por responsabilidad y se logra una gran modularidad y hace que el avance del desarrollo funcione con tiempos independientes. 
 
-Este mismo concepto se ha visto como una gran opción para el Frontend, donde cuando la App crece bastante tenemos el problema de no poder manejar tiempos de desarrollo y despliegues independientes, lo que ocasiona que se el equipo de Frontend encuentre varios "Cuellos de botella" en su dia a dia. Es por esto que se habla de "Micro Frontends" donde se utiliza el mismo principio de separar el Frontend por responsabilidades como los Microservicios y podriamos tener proyectos separados en el Frontend. Siendo algo parecido a la imagén de abajo.
+Este mismo concepto se ha visto como una gran opción para el Frontend, donde cuando la App crece bastante tenemos el problema de no poder manejar tiempos de desarrollo y despliegues independientes, lo que ocasiona que el equipo de Frontend encuentre varios "Cuellos de botella" en su dia a dia. Es por esto que se habla de "Micro Frontends" donde se utiliza el mismo principio de separar el Frontend por responsabilidades como los Microservicios y podriamos tener proyectos separados en el Frontend. Siendo algo parecido a la imagén de abajo.
 
 <amp-img width="960" height="540" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ngclassroom-8ba81.appspot.com/o/posts%2F2018-07-02-micro-frontends%2Farchitecture.png?alt=media&token=d666c59a-e5d1-4466-aefd-8827d0f379ba"></amp-img>
 
@@ -63,7 +63,7 @@ Ahora pensemos que pasaria si `MyApp.com/settings` fuera una App en `AngularJs`,
 
 ## ¿ Quienes lo usan ?
 
-Aunque pense que esta arquitectura era relativamente nueva, muchas Apps grandes ya la usan hace un buen tiempo. Entre las empresas que encontra estan `Spotify`, `Upwork` y `Hellofresh`.
+Aunque pense que esta arquitectura era relativamente nueva, muchas Apps grandes ya la usan hace un buen tiempo. Entre las empresas que se encuentran estan `Spotify`, `Upwork` y `Hellofresh`.
 
 ## Tecnicas.
 
