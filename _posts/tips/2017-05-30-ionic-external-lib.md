@@ -119,7 +119,7 @@ Como podemos ver no solo se puede utilizar para agregar librerías externas sino
 
   <link rel="icon" type="image/x-icon" href="assets/icon/favicon.ico">
   <link rel="manifest" href="manifest.json">
-  <meta name="theme-color" content="#4e8ef7">
+  <meta name="theme-color" content="#005AA9">
     
   <!-- cordova.js required for cordova apps -->
   <script src="cordova.js"></script>

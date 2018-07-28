@@ -224,7 +224,7 @@ getPosition(): void{
 }
 ```
 
-{% include blog/subscribe.html %}
+{% include blog/adIonic.html %}
 
 Finalmente toda la clase `HomePage` queda así:
 

@@ -1,8 +1,8 @@
 ---
 layout: post
 title: "Compilar y subir una PWA hecha con Ionic a Firebase hosting"
-date: 2018-01-08
-tags: [pwa, firebese, ionic, hosting]
+date: 2018-01-17
+tags: [pwa, firebase, ionic, hosting]
 categories: ionic2
 author: williambastidas
 cover: "https://cdn-images-1.medium.com/max/800/1*V6jcSQfm3ZYgeV5Ys8qRmA.png"

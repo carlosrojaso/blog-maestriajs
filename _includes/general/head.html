@@ -23,11 +23,11 @@
  {% endif%}
  
   <!-- Chrome, Firefox OS and Opera -->
-  <meta name="theme-color" content="#4E8EF7"> 
+  <meta name="theme-color" content="#005AA9"> 
   <!-- Windows Phone -->
-  <meta name="msapplication-navbutton-color" content="#4E8EF7">
+  <meta name="msapplication-navbutton-color" content="#005AA9">
   <!-- iOS Safari -->
-  <meta name="apple-mobile-web-app-status-bar-style" content="#4E8EF7">
+  <meta name="apple-mobile-web-app-status-bar-style" content="#005AA9">
  
   <!-- facebook -->
   <meta property="fb:app_id" content="877264572411311" /> 
@@ -59,6 +59,7 @@
   <script async src="https://cdn.ampproject.org/v0.js"></script>
   <script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
   <script async custom-element="amp-social-share" src="https://cdn.ampproject.org/v0/amp-social-share-0.1.js"></script>
+  <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
   <!-- End JS -->
 
 {% if page.layout == 'post' %}
@@ -108,14 +109,11 @@ h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')};
 {% endif%}
 {% endif%}
 
-
-{% if site.google_optimize == 0 and page.title != 'Home' %}
-  <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
-{% else %}
-<script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
-{% endif%}
-</head>
-
 {% if site.google_tagmanager > 0 %}
 {% include general/gtm.html %}
 {% endif%}
+
+{% if site.hello_bar_enabled > 0 %}
+<script src="https://my.hellobar.com/eb9a782c5cd1f0579222dd2dc202aac2a57a54af.js" type="text/javascript" charset="utf-8" async="async"></script>
+{% endif%}
+</head>

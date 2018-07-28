@@ -449,7 +449,7 @@ y por ultimo vamos a agregar los estilos de la pagina a traves de SaSS en el ```
 {% raw %}
 page-feed-list {
   .feed-list {
-    background: #4E8EF7;
+    background: #005AA9;
     .feed-article {
       height: 80px;
       background: #ffffff;

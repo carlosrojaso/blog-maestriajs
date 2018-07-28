@@ -36,6 +36,7 @@ Ahora que pasa se existe un cambio en la base de datos con la información que t
 
 Pero porque fireBase si lo hace? Bueno es que es una combinación entre observables y los WebSockets (Esto lo dejo para otro día pero al menos ya les di la idea). 
 
+{% include blog/adIonic.html %}
 
 ### Requisitos
 
