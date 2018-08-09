@@ -1,19 +1,18 @@
 ---
 layout: post
-title: "Angular: Entendiendo la detección de cambios."
-date: 2018-08-08
-tags: [angular, detect changes]
+title: "Angular: Como crear un Servicio."
+date: 2018-07-31
+tags: [angular, servicio]
 categories: angular
 author: carlosrojas
-cover: "https://firebasestorage.googleapis.com/v0/b/ngclassroom-8ba81.appspot.com/o/posts%2F2018-07-30-Angular-Crear-Servicio%2FCrearUnServicio.png?alt=media&token=19e8ad21-593b-4966-b6c5-df7c18803ac9"
-editname: "angular/2018-07-30-Angular-Crear-Servicio.md"
-repo: "https://github.com/ion-book/demo127"
+cover: "https://firebasestorage.googleapis.com/v0/b/ngclassroom-8ba81.appspot.com/o/posts%2F2018-08-08-Angular-Detect-Changes%2FTitulos.png?alt=media&token=edc21349-6520-4d5e-bb59-ac0dd4cc851c"
+editname: "angular/2018-08-08-Angular-Detect-Changes.md"
 versions:
   - title: 'Angular CLI'
     number: '6.1.1'
 ---
 
-<amp-img width="1024" height="512" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ngclassroom-8ba81.appspot.com/o/posts%2F2018-07-30-Angular-Crear-Servicio%2FCrearUnServicio.png?alt=media&token=19e8ad21-593b-4966-b6c5-df7c18803ac9"></amp-img>
+<amp-img width="1024" height="512" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ngclassroom-8ba81.appspot.com/o/posts%2F2018-08-08-Angular-Detect-Changes%2FTitulos.png?alt=media&token=edc21349-6520-4d5e-bb59-ac0dd4cc851c"></amp-img>
 
 {% include general/net-promoter-score.html %} 
 
