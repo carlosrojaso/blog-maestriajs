@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Angular: Entendiendo la detección de cambios."
-date: 2018-08-11
+date: 2018-08-13
 tags: [angular, servicio]
 categories: angular
 author: carlosrojas
@@ -128,6 +128,7 @@ Bueno esto es todo por el dia de hoy, espero haya sido de utilidad :)
 # Referencias.
 
 [ANGULAR CHANGE DETECTION EXPLAINED](https://blog.thoughtram.io/angular/2016/02/22/angular-2-change-detection-explained.html#whats-change-detection-anyways)
+
 [Change Detection in Angular](https://vsavkin.com/change-detection-in-angular-2-4f216b855d4c)
 
 
