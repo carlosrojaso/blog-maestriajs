@@ -1,6 +1,6 @@
 #!/bin/sh
 
-echo 'Comenzar Build'
+echo 'Comenzar Build '
 jekyll build --config _config.yml
 echo 'Agregando Manigest'
 cp manifest.json _site/manifest.json
