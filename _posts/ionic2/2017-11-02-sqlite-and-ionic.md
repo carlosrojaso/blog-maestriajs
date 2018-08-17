@@ -5,7 +5,7 @@ keywords: "cordova-sqlite-storage, sqlite, ionic sqlite, ionic db"
 date: 2017-11-02
 tags: [native, demos]
 categories: ionic2
-repo: "https://github.com/ion-book/demo107"
+repo: "https://stackblitz.com/github/ng-classroom/demo107"
 author: nicobytes
 cover: "https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2F2017-11-02-sqlite-and-ionic%2Fcover.jpg?alt=media&token=acb5531a-957c-4dfa-bd9d-52b94790f6f2"
 remember: true

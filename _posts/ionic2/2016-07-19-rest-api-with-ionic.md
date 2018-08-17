@@ -2,7 +2,7 @@
 layout: post
 title: "Conectado una API REST con Ionic"
 date: 2017-10-11
-repo: "https://github.com/ion-book/demo103"
+repo: "https://stackblitz.com/github/ng-classroom/demo103"
 categories: ionic2
 author: nicobytes
 cover: "https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2F2016-07-19-rest-api-with-ionic%2Fcover.jpg?alt=media&token=dc95078c-0c95-494b-9f9b-fd5e42e2b566"

@@ -7,7 +7,7 @@ categories: angular
 author: carlosrojas
 cover: "https://firebasestorage.googleapis.com/v0/b/ngclassroom-8ba81.appspot.com/o/posts%2F2018-07-30-Angular-Crear-Servicio%2FCrearUnServicio.png?alt=media&token=19e8ad21-593b-4966-b6c5-df7c18803ac9"
 editname: "angular/2018-07-30-Angular-Crear-Servicio.md"
-repo: "https://github.com/ion-book/demo127"
+repo: "https://stackblitz.com/github/ng-classroom/demo127"
 versions:
   - title: 'Angular CLI'
     number: '6.1.1'

@@ -5,7 +5,7 @@ keywords: "validaciones con ionic, formularios con angular 2, validar email con 
 date: 2017-11-10
 tags: [forms, demos]
 categories: ionic2
-repo: "https://github.com/ion-book/demo109"
+repo: "https://stackblitz.com/github/ng-classroom/demo109"
 laucher: "https://ion-book.github.io/demo109/"
 author: nicobytes
 cover: "https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2Fvalidations-in-forms%2FValidaciones%20en%20Formularios.jpg?alt=media"
