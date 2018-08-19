@@ -27,7 +27,7 @@ Un Servicio en Angular es el mecanismo para compartir funcionalidad entre compon
 
 Pero antes de entrar en el contexto de Angular, miremos un poco el patrón de diseño que siguen los servicios y es el `Singleton`, en Javascript, Un Singleton sirve como un recurso compartido el cual aisla la implementación de un contexto global, es decir, puedo referenciarlo en varios lugares y llamar sus funciones. Una implementación sencilla seria:
 
-```ts
+```js
 var mySingleton = (function () {
  
   // Instance stores a reference to the Singleton

@@ -75,6 +75,8 @@ Para decirle a Angular que el componente no cambia le hemos agregado la estrateg
 
 <amp-img width="829" height="588" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ngclassroom-8ba81.appspot.com/o/posts%2F2018-08-08-Angular-Detect-Changes%2FCaptura%20de%20pantalla%202018-08-09%20a%20la(s)%206.57.36%20a.%20m..png?alt=media&token=bfb2391e-c82a-48e3-adcb-0f0925ffab65"></amp-img>
 
+{% include blog/subscribe3.html %}
+
 ## Observables.
 
 Los observables son una manera moderna de interactuar con APIs y eventos y nos permite observar los cambios sobre un flujo de datos. Supongamos el siguiente componente.
