@@ -7,7 +7,7 @@ categories: ionic2
 author: daniel_lsanchez
 cover: "https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2Fgoogle-maps-native%2Fcover.jpg?alt=media&token=8134c475-9cd1-4819-8f3c-a2b0afb851fc"
 remember: true
-repo: "https://github.com/ion-book/demo111"
+repo: "https://stackblitz.com/github/ng-classroom/demo111"
 editname: "ionic2/2017-11-09-google-maps-native.md"
 versions:
   - title: 'ionic'

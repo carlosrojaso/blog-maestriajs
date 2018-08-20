@@ -5,7 +5,7 @@ date: 2017-06-14
 categories: ionic2
 tags: [firebase]
 author: nicobytes
-repo: "https://github.com/ion-book/demo104"
+repo: "https://stackblitz.com/github/ng-classroom/demo104"
 remember: true
 cover: "/images/posts/ionic2/2016-11-06-firebase-angularfire-ionic/cover.jpg"
 versions:

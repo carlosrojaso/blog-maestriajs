@@ -5,7 +5,7 @@ keywords: "directions, google maps, ionic"
 date: 2017-08-18
 tags: [maps, demos]
 categories: ionic2
-repo: "https://github.com/ion-book/demo118"
+repo: "https://stackblitz.com/github/ng-classroom/demo118"
 author: nicobytes
 cover: "https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2F2017-08-18-directions-google-ionic%2Fcover.jpg?alt=media&token=876c7b4c-3f5e-4af3-a26d-be58e67f5732"
 remember: true

@@ -4,7 +4,7 @@ title: "Animando items con Ionic, en 5 pasos"
 date: 2017-11-07
 tags: [animations, demos]
 categories: ionic2
-repo: "https://github.com/ion-book/demo108"
+repo: "https://stackblitz.com/github/ng-classroom/demo108"
 laucher: "https://ion-book.github.io/demo108/"
 author: nicobytes
 cover: "https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2F2017-11-07-animating-items-ionic%2Fcover.jpg?alt=media&token=baa54056-8b6e-44df-9e6c-adeabfdae150"

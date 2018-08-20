@@ -4,7 +4,7 @@ title: "Firebase Database + Ionic"
 date: 2017-10-28
 tags: [firebase, demos]
 categories: ionic2
-repo: "https://github.com/ion-book/demo104"
+repo: "https://stackblitz.com/github/ng-classroom/demo104"
 laucher: "https://demo104-60efc.firebaseapp.com/"
 author: nicobytes
 cover: "https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2F2017-10-28-firebase-database-and-ionic%2Fcover.jpg?alt=media&token=089d8b1e-202c-47c5-b784-5661420a0bb5"

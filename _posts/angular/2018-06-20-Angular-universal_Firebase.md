@@ -7,7 +7,7 @@ categories: tips
 author: carlosrojas
 cover: "https://firebasestorage.googleapis.com/v0/b/ngclassroom-8ba81.appspot.com/o/posts%2F2018-06-13-Angular-universal_Firebase%2FAngularFirebase.png?alt=media&token=f49c5c91-caa0-4ba2-9c3c-15ef7bd4ff9d"
 editname: "angular/2018-06-20-Angular-universal_Firebase.md"
-repo: "https://github.com/ion-book/universalApp"
+repo: "https://stackblitz.com/github/ng-classroom/universalApp"
 versions:
   - title: 'Angular CLI'
     number: '6.0.x'

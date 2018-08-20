@@ -4,7 +4,7 @@ title: "Google Maps JS + Ionic en 5 pasos"
 date: 2017-10-31
 tags: [maps, demos]
 categories: ionic2
-repo: "https://github.com/ion-book/demo105"
+repo: "https://stackblitz.com/github/ng-classroom/demo105"
 author: nicobytes
 laucher: "https://ion-book.github.io/demo105/"
 editname: "ionic2/2017-10-31-google-maps-js-and-ionic.md"

@@ -4,7 +4,7 @@ title: "Formularios en Ionic"
 date: 2017-12-29
 tags: [forms, demos]
 categories: ionic2
-repo: "https://github.com/ion-book/demo101"
+repo: "https://stackblitz.com/github/ng-classroom/demo101"
 laucher: "https://ion-book.github.io/demo101/"
 author: nicobytes
 cover: "https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2F2016-06-09-form-with-ionic%2Fcover.jpg?alt=media&token=fc7a53d1-f38b-4a36-9910-b48566220694"
