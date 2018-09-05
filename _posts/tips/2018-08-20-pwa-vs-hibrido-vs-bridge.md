@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "PWA vs Híbrido vs Bridge"
+title: "PWA vs Ionic vs NativeScript"
 date: 2018-08-29
-tags: [angular, news, ionic]
+tags: [angular, news, ionic, pwa, nativescript]
 categories: tips
 author: nicobytes
 video: true
