@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Pruebas unitarias: HttpClient"
+title: "Pruebas unitarias en Ionic: HttpClient"
 keywords: "unit test, pruebas unitartias, ionic, pruebas unitarias ionic, webpack, jasmine, karma"
 date: 2017-10-18
 tags: [testing, demos]

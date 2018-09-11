@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Pruebas unitarias: Providers"
+title: "Pruebas unitarias en Ionic: Providers"
 keywords: "unit test, pruebas unitartias, ionic, pruebas unitarias ionic, webpack, jasmine, karma"
 date: 2017-09-12
 tags: [testing, demos]
