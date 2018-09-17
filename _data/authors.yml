@@ -282,3 +282,16 @@
       icon: "icon-social-twitter"
     - link: ""
       icon: "icon-social-octocat"
+- id: "alvaroizquierdo"
+  name: Álvaro Izquierdo
+  url: "/blog/authors/alvaroizquierdo"
+  avatar: "https://firebasestorage.googleapis.com/v0/b/ngclassroom-8ba81.appspot.com/o/assets%2Falvaroizquierdo.jpg?alt=media&token=c9e436c5-e212-4935-9324-b4d3ec692bc5"
+  website: "https://github.com/alvaroziqar"
+  bio: "Desarrollador Frontend, apasionado de Angular/Ionic. Explorador de React. Padawand de Frontend y JS en general. Y a veces desarrollador Backend con Ruby o Rails."
+  country: "España"
+  facebook_url: ""
+  social_links:
+    - link: "https://twitter.com/alvaroziqar"
+      icon: "icon-social-twitter"
+    - link: "https://github.com/alvaroziqar"
+      icon: "icon-social-octocat"
