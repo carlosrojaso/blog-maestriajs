@@ -4,7 +4,7 @@ title: "Angular Testing Framework + Como probar un modelo"
 keywords: "unit test, pruebas unitartias, angular, pruebas unitarias, webpack, jasmine, karma"
 date: 2018-09-18
 tags: [testing, demos]
-categories: ionic2
+categories: angular
 repo: "https://github.com/ng-classroom/demo129"
 author: carlosrojas
 cover: "https://firebasestorage.googleapis.com/v0/b/ngclassroom-8ba81.appspot.com/o/posts%2F2018-09-15-%20Angular-Pruebas-Unitarias%2FPruebas%20unitarias.png?alt=media&token=b5fd0776-2a2f-4e17-b098-59584ab6573d"
