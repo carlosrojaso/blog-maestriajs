@@ -46,7 +46,7 @@
 - id: "javebratt"
   name: "Jorge Vergara"
   url: "/blog/authors/javebratt"
-  avatar: "https://s9.postimg.org/fhmw4iggf/Iu_N5_UI0o.jpg"
+  avatar: "https://firebasestorage.googleapis.com/v0/b/ngclassroom-8ba81.appspot.com/o/assets%2Fjavebratt.jpg?alt=media&token=94103421-6040-4e27-8cfa-b75a84915669"
   country: "Colombia"
   bio: "Ayudo a emprendedores que están atacando proyectos de impacto social a planear y construir la primera versión de su aplicación móvil para que puedan salir al mercado rápido. Ayudo a desarrolladores de Ionic2 a usar esos conocimientos para construir aplicaciones basadas en Firebase."
   facebook_url: 'https://facebook.com/javebrattDev'
@@ -210,7 +210,7 @@
 - id: "williambastidas"
   name: William Bastidas
   url: "/blog/authors/williambastidas"
-  avatar: "https://pbs.twimg.com/profile_images/950445166393024512/kBp_X2Xd_400x400.jpg"
+  avatar: "https://firebasestorage.googleapis.com/v0/b/ngclassroom-8ba81.appspot.com/o/assets%2FwillianBastidas.jpg?alt=media&token=91ec85ac-070c-4a13-acaf-8619e5b42c5d"
   website: "https://williambastidas.com/"
   bio: "Eterno aprendiz, desarrollador de software, enfocado en el aprendizaje de tecnologías web y móvil. Aficionado del UX y UI. #Ionic #Angular #PWA"
   country: "Venezuela"
@@ -295,3 +295,18 @@
       icon: "icon-social-twitter"
     - link: "https://github.com/alvaroziqar"
       icon: "icon-social-octocat"
+- id: "jheisonAlzate"
+  name: Jheison Alzate
+  url: "/blog/authors/jheisonAlzate"
+  avatar: "https://firebasestorage.googleapis.com/v0/b/ngclassroom-8ba81.appspot.com/o/assets%2FjheisonAlzate.jpg?alt=media&token=d3f18f7a-2785-463f-b7a5-47caf25376d4"
+  website: "https://jheison.com/"
+  bio: "FrontEnd developer apasionado con el mundo del software y sus infinitas posibilidades."
+  country: "Colombia"
+  facebook_url: ""
+  social_links:
+    - link: "https://twitter.com/@Json_alzate"
+      icon: "icon-social-twitter"
+    - link: "https://github.com/developerjaag"
+      icon: "icon-social-octocat"
+    - link: "https://www.linkedin.com/in/json-alzate-05a700151/"
+      icon: "icon-linkedin"
