@@ -4,7 +4,7 @@ title: "Personalizar fuente en app Ionic"
 keywords: "ionic push notifications, OneSignal, push notifications, notifications, notifications en ionic 2, OneSignal y ionic"
 date: 2018-09-24
 tags: [font, google]
-categories: ionic3
+categories: ionic2
 author: jheisonAlzate
 repo: "https://github.com/developerjaag/Ionic-Fonts/"
 cover: "https://firebasestorage.googleapis.com/v0/b/ngclassroom-8ba81.appspot.com/o/posts%2F2018-09-13-ionic-fonts%2FCambiarFuentes.png?alt=media&token=588d8fd9-4213-40b7-9ea8-481140536846"
