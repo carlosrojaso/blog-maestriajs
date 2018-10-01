@@ -7,7 +7,6 @@ tags: [architecture]
 categories: angular
 author: tatianaMolina
 cover: "https://firebasestorage.googleapis.com/v0/b/ngclassroom-8ba81.appspot.com/o/posts%2F2018-09-28-Angular-Buenas-Practicas%2Fcover.png?alt=media&token=ddce5bf1-b0ff-4064-baa8-9a05fc158fbd"
-remember: true
 versions:
   - title: 'Angular CLI'
     number: '6.1.1'
