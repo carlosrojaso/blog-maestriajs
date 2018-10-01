@@ -2,7 +2,7 @@
 layout: post
 title: "Angular Testing Framework + Como probar un Servicio"
 keywords: "unit test, pruebas unitartias, angular, pruebas unitarias, webpack, jasmine, karma"
-date: 2018-10-01
+date: 2018-10-02
 tags: [testing, demos]
 categories: angular
 repo: "https://github.com/ng-classroom/demo129"

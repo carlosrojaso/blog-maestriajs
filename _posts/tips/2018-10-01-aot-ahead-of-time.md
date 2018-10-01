@@ -6,6 +6,7 @@ date: 2018-10-01
 tags: [tips, news, angular]
 categories: tips
 author: nicobytes
+video: true
 cover: "https://firebasestorage.googleapis.com/v0/b/ngclassroom-8ba81.appspot.com/o/posts%2F2018-10-01-aot-ahead-of-time%2F6-aot%202.jpg?alt=media&token=9a090868-576d-4ee7-b972-febcc3e05186"
 ---
 
