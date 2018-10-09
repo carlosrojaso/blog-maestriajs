@@ -2,7 +2,7 @@
 layout: post
 title: "Angular Testing Framework + Como probar un Servicio"
 keywords: "unit test, pruebas unitartias, angular, pruebas unitarias, webpack, jasmine, karma"
-date: 2018-10-02
+date: 2018-10-11
 tags: [testing, demos]
 categories: angular
 repo: "https://github.com/ng-classroom/demo130"
@@ -242,6 +242,23 @@ describe('MyServiceService', () => {
     })
   ));
 });
+```
+
+Cada vez que escribimos pruebas con dependencias debemos preguntar al Injector de Angular que nos provea con las instancias de estas clases.
+
+```ts
+inject([Class1, /* ..., */ ClassN], (instance1, /* ..., */ instanceN) => {
+  // ... testing code ...
+})
+```
+
+Adicionalemente, con el `fakeAsync` podemos hacer que una Promesa o un Observable actue como si fuera asincrono. De esta manera las promesas seran solucionadas y los Observables sera notificados inmediatamente cuando llamemos `tick()`.
+
+```ts
+inject([SpotifyService, MockBackend],
+       fakeAsync((spotifyService, mockBackend) => {
+  // ... testing code ...
+}));
 ```
 
 Aca puedes observar varias cosas. Lo primero es que hemos importado las dependencias necesarias para realizar el `MockBackend` y realizar la simulación de nuestra llamada HTTP. Lo segundo que hemos creado un `Mock` en el cual hemos simulado la respuesta de nuestro servicio y por ultimo nos hemos asegurado de que el metodo de nuestro Servicio responda exitosamente al mock que le hemos enviado. 
