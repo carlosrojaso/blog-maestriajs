@@ -150,28 +150,16 @@ y lo vamos a mostrar en la plantilla `app.component.html`.
 
 ## Testeando nuestro Servicio.
 
-Cuando creamos un Servicio utilizando el Angular CLI, Se crea un archivo `my-service.service.ts` y un `my-service.service.spec.ts` en el ultimo archivo Angular te crea una prueba de creacion automaticamente y sobre esta es que vamos a trabajar para crear pruebas adicionales.
-
-## MockBackend
-
-Como vimos en las consideraciones al hacer pruebas en peticiones `HTTP` interactuar con el API cada vez que tenemos que hacer una prueba no es tan buena idea. Angular nos provee la clase `MockBackend` como un mecanismo para proveer respuestas a nuestras peticiones `HTTP` sin realmente realizar estas peticiones.
+Cuando creamos un Servicio utilizando el Angular CLI, Se crea un archivo `my-service.service.ts` y un `my-service.service.spec.ts` en el ultimo archivo es que vamos a trabajar para crear pruebas adicionales.
 
 ```ts
-import { TestBed, inject, fakeAsync, tick } from '@angular/core/testing';
-import {
-  HttpModule,
-  XHRBackend,
-  ResponseOptions,
-  Response,
-  RequestMethod
-} from '@angular/http';
-import {MockBackend, MockConnection} from '@angular/http/testing';
+import { TestBed, inject, async } from '@angular/core/testing';
+import {MockBackend} from '@angular/http/testing';
+import {HttpClientTestingModule, HttpTestingController} from '@angular/common/http/testing';
 
 import { MyServiceService } from './my-service.service';
 
 describe('MyServiceService', () => {
-  let myService: MyServiceService;
-  let backend: MockBackend;
 
   const mockResponse = {
     'name': 'Biggs Darklighter',
@@ -200,47 +188,27 @@ describe('MyServiceService', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      imports: [HttpModule],
-      providers: [
-        {provide: XHRBackend, useClass: MockBackend},
-        MyServiceService]
+      imports: [HttpClientTestingModule],
+      providers: [MyServiceService]
     });
-
-    // Get the MockBackend
-    backend = TestBed.get(MockBackend);
-
-    // Returns a service with the MockBackend so we can test with dummy responses
-    myService = TestBed.get(MyServiceService);
   });
 
-  it('should be created', inject([MyServiceService], (service: MyServiceService) => {
-    expect(service).toBeTruthy();
-  }));
-
-  it('should get results', fakeAsync(
-    inject([
-      XHRBackend,
-      MyServiceService
-    ], (mockBackend: any, myServiceTested: MyServiceService) => {
-      const characterNumber = 9;
-      const generatedURL = 'https://swapi.co/api/people/' + characterNumber + '/';
-
-      mockBackend.connections.subscribe(
-        (connection: MockConnection) => {
-          expect(connection.request.method).toBe(RequestMethod.Get);
-          expect(connection.request.url).toBe(generatedURL);
-
-          connection.mockRespond(new Response(
-            new ResponseOptions({ body: mockResponse })
-          ));
-        });
-
-        myServiceTested.getCharacter()
-        .subscribe(res => {
+  describe('get data', () => {
+    it('should get results',
+    inject([HttpTestingController, MyServiceService], (httpMock: HttpTestingController, myServiceTested: MyServiceService) => {
+      const swapiUrl = 'https://swapi.co/api/people/9/';
+      myServiceTested.getCharacter()
+      .subscribe(
+        (res) => {
           expect(res).toEqual(mockResponse);
-        });
+        }
+      );
+      const req = httpMock.expectOne(swapiUrl);
+      expect(req.request.method).toBe('GET');
+      req.flush(mockResponse);
     })
-  ));
+  );
+  });
 });
 ```
 
@@ -252,15 +220,6 @@ inject([Class1, /* ..., */ ClassN], (instance1, /* ..., */ instanceN) => {
 })
 ```
 
-Adicionalemente, con el `fakeAsync` podemos hacer que una Promesa o un Observable actue como si fuera asincrono. De esta manera las promesas seran solucionadas y los Observables sera notificados inmediatamente cuando llamemos `tick()`.
-
-```ts
-inject([SpotifyService, MockBackend],
-       fakeAsync((spotifyService, mockBackend) => {
-  // ... testing code ...
-}));
-```
-
-Aca puedes observar varias cosas. Lo primero es que hemos importado las dependencias necesarias para realizar el `MockBackend` y realizar la simulación de nuestra llamada HTTP. Lo segundo que hemos creado un `Mock` en el cual hemos simulado la respuesta de nuestro servicio y por ultimo nos hemos asegurado de que el metodo de nuestro Servicio responda exitosamente al mock que le hemos enviado. 
+Aca puedes observar varias cosas. Lo primero es que hemos importado las dependencias necesarias para realizar el `httpMock` y realizar la simulación de nuestra llamada HTTP. Lo segundo que hemos creado un `mockResponse` en el cual hemos simulado la respuesta de nuestro servicio y por ultimo nos hemos asegurado de que el metodo de nuestro Servicio responda exitosamente. 
 
 Esto es todo, hasta un proximo post :)
