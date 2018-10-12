@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "Reconocimiento facial en app Ionic"
+title: "Construyendo una App de reconocimiento facial en Ionic"
 keywords: "ionic reconocimiento facial, camara, facial"
-date: 2018-09-28
+date: 2018-10-12
 tags: [ionic, azure, facial]
 categories: ionic2
 author: jheisonAlzate
 repo: "https://github.com/developerjaag/facial-recognition.git"
-cover: "https://firebasestorage.googleapis.com/v0/b/ngclassroom-8ba81.appspot.com/o/posts%2F2018-09-13-ionic-fonts%2FCambiarFuentes.png?alt=media&token=588d8fd9-4213-40b7-9ea8-481140536846"
+cover: "/images/posts/ionic2/2018-09-28-reconocimiento-facial/cover.png"
 versions:
   - title: 'ionic'
     number: '3.9.2'
@@ -20,11 +20,16 @@ versions:
 ---
 
 > La biometria poco a poco va ganando terreno en el mundo de las palicaciones moviles, Y es que bien sea para una mayor seguridad o acceso más rápido. Se pueden utilizar métodos de autenticación o registro con estas opciones.
-Hoy realizaremos un registro y posterior auntenticación con reconocimiento facial.
-Gracias a los abanderados en el mundo de la tecnologia podemos hacer cosas sorprendentes de una sencilla; En este caso utilizaremos el servicio de Microsoft azure.
+
 <!--summary-->
 
+<amp-img width="718" height="227" layout="responsive" src="/images/posts/ionic2/2018-09-28-reconocimiento-facial/cover.png"></amp-img>
+
 {% include general/net-promoter-score.html %}
+
+Hoy realizaremos un registro y posterior auntenticación con reconocimiento facial.
+
+Gracias a los abanderados en el mundo de la tecnologia podemos hacer cosas sorprendentes de una sencilla; En este caso utilizaremos el servicio de Microsoft azure.
 
 # Paso 1: Crear y configurar la cuente de Microsoft azure
 Nos dirigimos a https://azure.microsoft.com/es-es/free/ y presionamos “Iniicio gratuito”. El proceso es tan simple como crear una cuenta de correo eléctronico, por ende no entraremos en detalles.
@@ -32,19 +37,19 @@ Nos dirigimos a https://azure.microsoft.com/es-es/free/ y presionamos “Iniicio
 # Paso 2: Crear el recurso.
 Una vez situados en el dashboard Elegimos la opción: Crear un recurso -> AI + Machine Learning -> Face Api
 
-<amp-img width="470" height="368" layout="responsive" src="../../images/posts/ionic2/2018-09-28-reconocimiento-facial/1.png"></amp-img>
+<amp-img width="470" height="368" layout="responsive" src="/images/posts/ionic2/2018-09-28-reconocimiento-facial/1.png"></amp-img>
 
 Luego diligenciamos  los datos del nuevo recurso. Es muy importante que tengamos presente la ubicación que elegimos, dado que esto hace que cambie la url a la que apuntaremos luego
 
-<amp-img width="470" height="368" layout="responsive" src="../../images/posts/ionic2/2018-09-28-reconocimiento-facial/2.png"></amp-img>
+<amp-img width="470" height="368" layout="responsive" src="/images/posts/ionic2/2018-09-28-reconocimiento-facial/2.png"></amp-img>
 
 Pasado unos instantes, nuestro recurso ya estará listo para trabajar con el:
 
-<amp-img width="470" height="368" layout="responsive" src="../../images/posts/ionic2/2018-09-28-reconocimiento-facial/3.png"></amp-img>
+<amp-img width="470" height="368" layout="responsive" src="/images/posts/ionic2/2018-09-28-reconocimiento-facial/3.png"></amp-img>
 
 Al presionar el recurso podemos acceder a ver las llaves que necesitamos para acceder al recurso:
 
-<amp-img width="470" height="368" layout="responsive" src="../../images/posts/ionic2/2018-09-28-reconocimiento-facial/4.png"></amp-img>
+<amp-img width="470" height="368" layout="responsive" src="/images/posts/ionic2/2018-09-28-reconocimiento-facial/4.png"></amp-img>
 
 Bien ese es todo el trabajo que haremos en azure
 
@@ -55,15 +60,15 @@ Para facilidad del proceso, configuraremos un servidor en cloud9.io (Es un servi
 
  Creamos una cuenta en cloud9.io (nuevamente esto es muy sencillo y no entraremos en detalles).
  Una vez en la cuenta de cloud9, creamos un nuevo workspace:
- <amp-img width="470" height="368" layout="responsive" src="../../images/posts/ionic2/2018-09-28-reconocimiento-facial/5.png"></amp-img>
+ <amp-img width="470" height="368" layout="responsive" src="/images/posts/ionic2/2018-09-28-reconocimiento-facial/5.png"></amp-img>
 
  Le damos un nombre a el espacio de trabajo, y elegimos una plantilla; En mi caso es php
 
- <amp-img width="470" height="368" layout="responsive" src="../../images/posts/ionic2/2018-09-28-reconocimiento-facial/6.png"></amp-img>
+ <amp-img width="470" height="368" layout="responsive" src="/images/posts/ionic2/2018-09-28-reconocimiento-facial/6.png"></amp-img>
 
  Tomara unos instantes mientras todo queda configurado y listo para trabajar. Se nos abrira un ide y procedemos a crear la siguiente estructura de trabajo:
 
-  <amp-img width="470" height="368" layout="responsive" src="../../images/posts/ionic2/2018-09-28-reconocimiento-facial/7.png"></amp-img>
+  <amp-img width="470" height="368" layout="responsive" src="/images/posts/ionic2/2018-09-28-reconocimiento-facial/7.png"></amp-img>
 
 Tenemos un directorio para almacenar las fotos llamado "fotos", y dentro de el creamos otro llamado "tmp_login".
 
@@ -194,7 +199,7 @@ npm install --save @ionic-native/camera
 Luego abrimos el proyecto en un editor de código.
 Debemos importarlo en el archivo src/app/app.module.ts:
 
-```
+```ts
 ...
 
 import { Camera } from '@ionic-native/camera';
@@ -219,7 +224,7 @@ export class AppModule { }
 
 Modificamos el archivo src/app/app.component.ts para que tome com root la página del login. Debe quedar asi:
 
-```
+```ts
 import { Component } from '@angular/core';
 import { Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
@@ -244,7 +249,7 @@ export class MyApp {
 
 Este es el código para la página singup.html
 
-```
+```html
 <ion-header>
 
   <ion-navbar>
@@ -283,7 +288,7 @@ Este es el código para la página singup.html
 
 Lo mas importante del anterior código es el boton que lanza la cámara y detona la acción de registro del rostro; Para esto incluimos el siguiente código en el singup.ts
 
-```
+```ts
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
@@ -500,16 +505,22 @@ Antes de explicar a rasgos generales los metodos , es importante entender como f
 Azure agrupa las personas en grupos, asi que podriamos tener por ejemplo un grupo para clientes, otro para usuarios administrativos, etc. esos grupos contienen a las personas, las cuales pueden tener asociada mas de un rostro
 
 -Los metodos mas relevantes son:
-nuevoRegistro(): Aqui se valida si ya tenemos un grupo, de lo contrario pasamos a crearlo.
-crearPersonGroup(): Se crea un grupo para adicionar personas
-adicionarPersona(): Se registra una persona en el grupo y le pasamos un par de datos relevantes para esa persona (en este caso uno de esos datos es el número telefonico)
-adicionaraFacePersona(): Este metodo se encarga primero de subir la foto de la persona al servidor de cloud 9 que configuramos previamente para que devuelva la url publica de dicha fotografia, luego con Azure se valida si en la fotografia esta presente un rostro, para despues vincular la imagen a la persona que se acabo de almacenar.
-entrenarGrupo(): finalmete como todo aprendizaje de maquina se debe entrenar la red para que asocie las caracteristicas de la imagen con la persona.
+
+`nuevoRegistro()`: Aqui se valida si ya tenemos un grupo, de lo contrario pasamos a crearlo.
+
+`crearPersonGroup()`: Se crea un grupo para adicionar personas
+
+`adicionarPersona()`: Se registra una persona en el grupo y le pasamos un par de datos relevantes para esa persona (en este caso uno de esos datos es el número telefonico)
+
+`adicionaraFacePersona()`: Este metodo se encarga primero de subir la foto de la persona al servidor de cloud 9 que configuramos previamente para que devuelva la url publica de dicha fotografia, luego con Azure se valida si en la fotografia esta presente un rostro, para despues vincular la imagen a la persona que se acabo de almacenar.
+
+`entrenarGrupo()`: finalmete como todo aprendizaje de maquina se debe entrenar la red para que asocie las caracteristicas de la imagen con la persona.
 
 Bien, ahora que ya tenemos el registro, pasemos al login.
+
 El archivo login.html queda asi:
 
-```
+```html
 <ion-header>
 
   <ion-navbar>
@@ -544,7 +555,7 @@ Lo importante es el boton para tomar la foto, que el que dispara toda la acción
 
 Ahora el archivo login.ts contiene el siguiente código
 
-```
+```ts
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
 
@@ -704,13 +715,20 @@ export class LoginPage {
 
 ```
 Pasemos a explicar un poco lo que hace el anterios código:
+
 Se tienen 4 parametros: foto (muestra la foto que se capturo al usuario), fotoEnviar (contiene el base 64 que se envia al servidor de cloud 9), nombreFotoGuardada (almacenará la url publica que retorna cloud 9) y keyAzure (aqui debe estar la llave que retorno Azure).
+
 Como metodos tenemos los siguientes:
-tomarFoto(): Captura la foto con la cámara del dispositivo
-subirFoto(): Envia la foto al servidor en cloud 9, que previamente se configuró y retorna la url de la imagen.
-detectarFotoTempAzure(): Valida la presencia de un rostro en la imagen y devuelve un id para el rostro que detecto
-validarLogin(idRetornado): Con el id del rostro que se retorno, se hac euna comparación para saber si el rostro existe en un grupo en especifico; Tambien se le puede indicar a Azure el máximo de coincidencias que nos retorne (para este ejemplo es 1)
-consultarNombrePersona(idPersona): Con el id que se retono al verificar las coincidencias, se consulta la información con la que se registro el usuario.
+
+`tomarFoto()`: Captura la foto con la cámara del dispositivo
+
+`subirFoto()`: Envia la foto al servidor en cloud 9, que previamente se configuró y retorna la url de la imagen.
+
+`detectarFotoTempAzure()`: Valida la presencia de un rostro en la imagen y devuelve un id para el rostro que detecto
+
+`validarLogin(idRetornado)`: Con el id del rostro que se retorno, se hac euna comparación para saber si el rostro existe en un grupo en especifico; Tambien se le puede indicar a Azure el máximo de coincidencias que nos retorne (para este ejemplo es 1)
+
+`consultarNombrePersona(idPersona)`: Con el id que se retono al verificar las coincidencias, se consulta la información con la que se registro el usuario.
 
 Con esto tendriamos implementado todo un sistema de reconocimiento facial. Ahora para compilar nuestro proyecto y realizar la prueba, digitamos el comando en la consola:
 
@@ -718,7 +736,7 @@ Con esto tendriamos implementado todo un sistema de reconocimiento facial. Ahora
 ionic cordova build android --prod
 ```
 
-Te invito a que juegues con este proyecto, como por ejemplo mostrando loaders, alertas, utilizando httpclient...
+Te invito a que juegues con este proyecto, como por ejemplo mostrando loaders, alertas, utilizando httpclient... Hasta la proxima :)
 
 
 
