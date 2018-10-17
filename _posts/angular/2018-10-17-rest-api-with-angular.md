@@ -1,23 +1,15 @@
 ---
 layout: post
-title: "Conectando una API REST con Ionic"
-date: 2017-10-11
-repo: "https://stackblitz.com/github/ng-classroom/demo103"
+title: "Conectando una API REST con Angular"
+date: 2018-10-17
+repo: "https://stackblitz.com/github/ng-classroom/demo131"
 categories: ionic2
-author: nicobytes
+author: carlosrojas
 cover: "https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2F2016-07-19-rest-api-with-ionic%2Fcover.jpg?alt=media&token=dc95078c-0c95-494b-9f9b-fd5e42e2b566"
 remember: true
 versions:
-  - title: 'ionic'
-    number: '3.7.1'
-  - title: 'ionic-native'
-    number: '4.3.0'
-  - title: 'ionic-app-scripts'
-    number: '3.0.0'
-  - title: 'cordova-cli'
-    number: '7.0.1'
-    r- title: 'ionic-cli'
-    number: '3.13.0'
+  - title: 'Angular CLI'
+    number: '6.1.1'
 ---
 
 > Una parte fundamental de cualquier aplicación es conectarse con servicio externos, en este caso vamos a conectarnos con una **API REST**. Vamos a crear una aplicación que se contecte con [http://randomuser.me/](http://randomuser.me/){:target="_blank"} un API con información de usuarios aleatorios.
