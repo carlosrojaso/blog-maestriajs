@@ -1,64 +1,35 @@
 ---
 layout: post
 title: "Conectando una API REST con Angular"
-date: 2018-10-17
+date: 2018-10-18
 repo: "https://stackblitz.com/github/ng-classroom/demo131"
-categories: ionic2
+categories: angular
 author: carlosrojas
-cover: "https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2F2016-07-19-rest-api-with-ionic%2Fcover.jpg?alt=media&token=dc95078c-0c95-494b-9f9b-fd5e42e2b566"
+cover: "https://firebasestorage.googleapis.com/v0/b/ngclassroom-8ba81.appspot.com/o/posts%2F2018-10-17-rest-api-with-angular%2Fcover.png?alt=media&token=dda5c986-aace-418d-8061-d553c1eb9d95"
 remember: true
 versions:
   - title: 'Angular CLI'
     number: '6.1.1'
 ---
 
-> Una parte fundamental de cualquier aplicación es conectarse con servicio externos, en este caso vamos a conectarnos con una **API REST**. Vamos a crear una aplicación que se contecte con [http://randomuser.me/](http://randomuser.me/){:target="_blank"} un API con información de usuarios aleatorios.
+> Una parte fundamental de cualquier aplicación es conectarse con servicios Api Rest, en este caso vamos a conectarnos con una **API REST**. Vamos a crear una aplicación que se contecte con [http://randomuser.me/](http://randomuser.me/){:target="_blank"} un API con información de usuarios aleatorios.
 
-<amp-img width="1848" height="1039" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2F2016-07-19-rest-api-with-ionic%2Fcover.jpg?alt=media&token=dc95078c-0c95-494b-9f9b-fd5e42e2b566"></amp-img>
+<amp-img width="1848" height="1039" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ngclassroom-8ba81.appspot.com/o/posts%2F2018-10-17-rest-api-with-angular%2Fcover.png?alt=media&token=dda5c986-aace-418d-8061-d553c1eb9d95"></amp-img>
 
 {% include general/net-promoter-score.html %} 
 
-# Actualización (11/10/2017)
-<hr/>
-
-Hemos actualizado este demo con el último release [**Ionic 3.7**](https://www.ion-book.com/blog/news/ionic-3-7/){:target="_blank"} integra `HTTPClient`:
-
-Ionic ahora soporta la más reciente actualización de angular 4.4.2 la cual trae el nuevo `HTTPClient` lo cual dos principales nuevas características las cuales son:
-
-- Las respuestas viene en JSON por defecto sin necesidad de hacer map
-- Usar Interceptors, lo cual facilita el manejo de tokens en la aplicación con los headers.
-
-Pueden ver más acerca de `HTTPClient` aquí: [https://angular.io/guide/http](https://angular.io/guide/http){:target="_blank"}
-
-<hr/>
-
 # Paso 1: Iniciando el proyecto
 
-Lo primero que haremos será iniciar un nuevo proyecto con ionic, vamos a nuestra terminal y ejecutamos:
+Lo primero que haremos será iniciar un nuevo proyecto con Angular, vamos a nuestra terminal y ejecutamos:
 
 ```
-ionic start demo103 blank --cordova
+$ng new demo131
 ```
 
-Ionic crea una carpeta con el nombre del proyecto, nuestro siguiente paso será ubicarnos dentro a la carpeta del proyecto desde nuestra terminal con:
+Angular CLI crea una carpeta con el nombre del proyecto, nuestro siguiente paso será ubicarnos dentro a la carpeta del proyecto desde nuestra terminal con:
 
 ```
-cd demo103
-```
-
-El proyecto inicia con el template **blank** y por esto tendremos una estructura básica del proyecto, la carpeta en la que vamos a trabajar será `src`:
-
-<div class="row">
-  <div class="col col-100 col-md-50 col-lg-50">
-    <amp-img width="376" height="183" layout="responsive" src="/images/posts/ionic2/2016-07-11-camera-and-ionic/tree1.png"></amp-img>
-  </div>
-</div>
-
-Agregamos la plataforma para la que vamos a desarrollar:
-
-```
-ionic cordova platform add android
-ionic cordova platform add ios
+cd demo131
 ```
 
 ## Paso 2: Importar **HttpClientModule**
@@ -66,63 +37,58 @@ ionic cordova platform add ios
 Ahora debemos agregar `HttpClientModule` en nuestro archivo `app.module.ts`, este paso es muy importante si dentro de la aplicación se usa la dependencia `HttpClient`:
 
 ```ts
-...
-import { HttpClientModule } from '@angular/common/http';
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+import { HttpClientModule} from '@angular/common/http';
+
+import { AppComponent } from './app.component';
 
 @NgModule({
   declarations: [
-    MyApp
+    AppComponent
   ],
   imports: [
     BrowserModule,
-    HttpClientModule,
-    IonicModule.forRoot(MyApp),
+    HttpClientModule
   ],
-  bootstrap: [IonicApp],
-  entryComponents: [
-    MyApp
-  ],
-  providers: [...]
+  providers: [],
+  bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule { }
 ```
 
-# Paso 3: Crear provider
+# Paso 3: Crear un Servicio
 
-Vamos a usar [ionic generator]({{site.urlblog}}/tips/ionic-generator/){:target="_blank"} para crear nuestro nuevo proveedor de datos
+Vamos a usar el Angular CLI para crear nuestro nuevo servicio.
 
 ```
-ionic g provider user-service
+$ng generate service user
 ```
 
-ionic creará un archivo para nuestro servicio que estará en `src/providers/user-service.ts`:
+Angular creará un archivo para nuestro servicio que estará en `src/app/user.service.ts`:
 
-Recuerda que debes agregar este provider dentro del array `providers` en `app/app.module.ts`, así:
+Recuerda que debes agregar este servicio dentro del array `providers` en `app/app.module.ts`, así:
 
 ```ts
-...
-import { UserService } from '../providers/user-service';
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+import { HttpClientModule} from '@angular/common/http';
+import { UserService } from './user.service';
+
+import { AppComponent } from './app.component';
 
 @NgModule({
   declarations: [
-    MyApp
+    AppComponent
   ],
   imports: [
     BrowserModule,
-    HttpClientModule,
-    IonicModule.forRoot(MyApp),
+    HttpClientModule
   ],
-  bootstrap: [IonicApp],
-  entryComponents: [
-    MyApp
-  ],
-  providers: [
-    ...
-    UserService,
-    ...
-  ]
+  providers: [UserService],
+  bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule { }
 ```
 
 # Paso 4: Conectarse a Random User API
@@ -201,12 +167,12 @@ La clase completa quedaría así:
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
-@Injectable()
+@Injectable({
+  providedIn: 'root'
+})
 export class UserService {
 
-  constructor(
-    private http: HttpClient
-  ) {}
+  constructor(protected http: HttpClient) { }
 
   getUsers() {
     return this.http.get('https://randomuser.me/api/?results=25');
@@ -218,76 +184,72 @@ export class UserService {
 
 # Paso 5: Inyectar el servicio.
 
-Desde el archivo `home.ts` vamos a inyectar a `UserService`, de esta manera:
+Desde el archivo `app.component.ts` vamos a inyectar a `UserService`, de esta manera:
 
 ```ts
-import { Component } from '@angular/core';
-import { IonicPage, NavController } from 'ionic-angular';
-import { UserService } from '../../providers/user-service';
+import { Component, OnInit } from '@angular/core';
+import { UserService } from './user.service';
 
-@IonicPage()
 @Component({
-  selector: 'page-home',
-  templateUrl: 'home.html',
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
 })
-export class HomePage {
-
+export class AppComponent implements OnInit {
+  title = 'demo131';
   users: any[] = [];
 
   constructor(
-    public navCtrl: NavController,
-    public userService: UserService
-  ) {}
+    protected userService: UserService
+  ) {
+  }
 
-  ionViewDidLoad(){
+  ngOnInit() {
     this.userService.getUsers()
     .subscribe(
       (data) => { // Success
         this.users = data['results'];
       },
-      (error) =>{
+      (error) => {
         console.error(error);
       }
-    )
+    );
   }
 }
 ```
 
-Importamos el servicio `UserService` desde su ubicación, luego definiremos `users` como un array vacío, luego en el constructor inyectamos como una dependencia a `UsersService` y finalmente dentro del método `ionViewDidLoad` llamamos al método `getUsers` que hará la solicitud y finalmente la respuesta la asigna a `this.users`.
+Importamos el servicio `UserService` desde su ubicación, luego definiremos `users` como un array vacío, luego en el constructor inyectamos como una dependencia a `UsersService` y finalmente dentro del hook `ngOnInit` llamamos al método `getUsers` que hará la solicitud y finalmente la respuesta la asigna a `this.users`.
 
 # Paso 6: El template
 
-Ahora en el template de `home.html` lo único que nos queda es mostrar los usuarios, básicamente iteramos array de users y luego solo mostramos las atributos de cada usuario.:
+Ahora en el template de `app.component.html` lo único que nos queda es mostrar los usuarios, básicamente iteramos array de users y luego solo mostramos las atributos de cada usuario.:
 
 ```html
 {% raw %}
-<ion-header>
-  <ion-navbar color="primary">
-    <ion-title>
-      Demo 103
-    </ion-title>
-  </ion-navbar>
-</ion-header>
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    Welcome to {{ title }}!
+  </h1>
+  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
+</div>
+<div *ngFor='let user of users'>
+    <img [src]="user.picture.medium">
+    <h2>{{ user.name.first | uppercase }}</h2>
+    <p>{{ user.email }}</p>
+</div>
 
-<ion-content>
-  <ion-list>
-    <ion-item *ngFor="let user of users">
-      <ion-avatar item-start>
-        <img [src]="user.picture.medium">
-      </ion-avatar>
-      <h2>{{ user.name.first | uppercase }}</h2>
-      <p>{{ user.email }}</p>
-    </ion-item>
-  </ion-list>
-</ion-content>
+
 {% endraw %}
 ```
 
 ## Resultado:
 
 <div class="row">
-  <div class="col col-100 col-md-33 offset-md-33 col-lg-33 offset-lg-33">
-    <amp-img width="1080" height="1920" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2F2016-07-19-rest-api-with-ionic%2Fscreen1.jpg?alt=media&token=8f3074a4-f98d-4558-a043-ebb8ee4dc576º"></amp-img>
+  <div class="col col-100">
+    <amp-img width="1280" height="800" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ngclassroom-8ba81.appspot.com/o/posts%2F2018-10-17-rest-api-with-angular%2FCaptura%20de%20pantalla%202018-10-18%20a%20la(s)%208.00.23%20a.%20m..png?alt=media&token=30cb8a06-9879-4df6-a896-21b5d9eb5874"></amp-img>
   </div>
 </div>
 <br/>
+
+Bueno espero sea de ayuda y hasta un proximo post :)
