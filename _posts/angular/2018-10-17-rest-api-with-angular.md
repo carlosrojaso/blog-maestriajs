@@ -5,6 +5,7 @@ date: 2018-10-18
 repo: "https://stackblitz.com/github/ng-classroom/demo131"
 categories: angular
 author: carlosrojas
+tags: [angular, architecture]
 cover: "https://firebasestorage.googleapis.com/v0/b/ngclassroom-8ba81.appspot.com/o/posts%2F2018-10-17-rest-api-with-angular%2Fcover.png?alt=media&token=dda5c986-aace-418d-8061-d553c1eb9d95"
 remember: true
 versions:
