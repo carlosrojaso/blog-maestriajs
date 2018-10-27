@@ -5,7 +5,7 @@ keywords: "unit test, pruebas unitartias, ionic, pruebas unitarias ionic, webpac
 date: 2017-08-02
 tags: [testing, demos]
 categories: ionic2
-repo: "https://stackblitz.com/github/ng-classroom/demo117"
+repo: "https://github.com/ng-classroom/demo117"
 author: nicobytes
 cover: "https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2F2017-07-31-unit-test-config-ionic%2Fpruebas%20unitarias%20en%20ionic..jpg?alt=media&token=a069bdd7-160b-49fd-a0c6-91a72ffa45d9"
 remember: true

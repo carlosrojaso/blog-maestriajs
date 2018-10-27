@@ -6,7 +6,7 @@ date: 2017-09-21
 tags: [push, native]
 categories: ionic2
 author: nicobytes
-repo: "https://stackblitz.com/github/ng-classroom/demo120"
+repo: "https://github.com/ng-classroom/demo120"
 cover: "https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2F2017-09-21-ionic-and-onesignal-for-ios%2Fcover.jpg?alt=media&token=8bf070cb-51e0-445e-981f-85d9fcac6ded"
 versions:
   - title: 'ionic'

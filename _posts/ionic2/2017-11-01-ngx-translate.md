@@ -4,7 +4,7 @@ title: "Múltiples idiomas en una App con Ionic"
 date: 2017-11-01
 tags: [libs, demos]
 categories: ionic2
-repo: "https://stackblitz.com/github/ng-classroom/demo106"
+repo: "https://github.com/ng-classroom/demo106"
 laucher: "https://ion-book.github.io/demo106/"
 author: nicobytes
 editname: "ionic2/2017-11-01-ngx-translate.md"

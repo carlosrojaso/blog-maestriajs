@@ -7,7 +7,7 @@ categories: ionic2
 author: carlosrojas
 cover: "https://firebasestorage.googleapis.com/v0/b/ngclassroom-8ba81.appspot.com/o/posts%2F2019-07-28-ionic-4-beta%2Fionic-4-beta.png?alt=media&token=9974bfa5-93b6-4ad8-a5ed-ec7eedd606ef"
 editname: "ionic2/2018-08-27-ionic-4-gettingStarted.md"
-repo: "https://stackblitz.com/github/ng-classroom/demo128"
+repo: "https://github.com/ng-classroom/demo128"
 versions:
   - title: 'ionic'
     number: '4.0.0-beta.0'

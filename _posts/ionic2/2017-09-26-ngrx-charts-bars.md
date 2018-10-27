@@ -6,7 +6,7 @@ date: 2017-09-26
 tags: [charts, demos]
 categories: ionic2
 author: nicobytes
-repo: "https://stackblitz.com/github/ng-classroom/demo121"
+repo: "https://github.com/ng-classroom/demo121"
 laucher: "https://ionic-charts.firebaseapp.com/#/bar-horizontal"
 cover: "https://firebasestorage.googleapis.com/v0/b/ion-book.appspot.com/o/posts%2F2017-09-21-ngrx-charts-bars%2Fcover.jpg?alt=media&token=885b3c21-db64-4e52-8ffe-81516061bd85"
 versions:
