@@ -82,6 +82,8 @@ const routes: Routes = [
 
 con esto le estoy diciendo al `router` que cuando la url tenga `/dashboard/` va a cargar el componente `DashboardComponent` y cuando la url tenga `/view/2` va a cargar el componente `View1Component` y va a enviar un parametro `id`.
 
+{% include blog/subscribe.html %}
+
 Ahora vamos a modificar nuestro archivo `app.component.html` Para soportar estos nuevos cambios, lo primero es que debes observar que en este archivo ahora aparece el `routerOutlet` esta es una directiva la cual le marca a Angular donde debe dibujar los otros componentes.
 
 ```html
