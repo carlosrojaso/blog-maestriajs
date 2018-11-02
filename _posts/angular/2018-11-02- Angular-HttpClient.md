@@ -2,7 +2,7 @@
 layout: post
 title: "El HttpClient y el in-memory-web-api"
 keywords: "angular, routing"
-date: 2018-10-29
+date: 2018-11-02
 tags: [testing, demos]
 categories: angular
 repo: "https://github.com/ng-classroom/demo134"
