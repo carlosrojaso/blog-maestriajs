@@ -140,4 +140,38 @@ export class AppModule {}
 
 ```
 
-ahora por ultimo vamos a probarlo dentro de un servicio.
+Ahora por ultimo vamos a probarlo dentro de un servicio. Creamos nuestro servicio `myServicio.service.ts`
+
+```ts
+import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+
+import 'rxjs/add/operator/toPromise';
+
+@Injectable()
+export class MyServicioService {
+
+  private heroesUrl = 'api/heroes';  // URL to web api
+
+  constructor(private http: HttpClient) {
+  }
+
+  getHeroes(): Promise<Hero[]> {
+    return this.http.get(this.heroesUrl)
+        .toPromise()
+        .then(response => response.json().data)
+        .catch(this.handleError);
+  }
+
+  private handleError(error: any): Promise<any> {
+    console.error('An error occurred', error); // for demo purposes only
+    return Promise.reject(error.message || error);
+  }
+}
+```
+
+Utilizar esta estrategia puede ayudarnos a avanzar con mas velocidad en escenarios donde tengamos una dependencia de `api` que debemos esperar o si no tenemos conectividad en nuestos entorno local (Ejemplo durante un vuelo).
+
+Si quieres aprender mas sobre el `httpClient` puedes ir [aca](https://alligator.io/angular/httpclient-intro/) y del `in-memory-web-api` [aca](https://github.com/angular/in-memory-web-api).
+
+Hasta un proximo Post :) No se olviden compartir.
