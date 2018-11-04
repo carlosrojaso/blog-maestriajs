@@ -5,10 +5,8 @@ keywords: "angular, routing"
 date: 2018-11-02
 tags: [testing, demos]
 categories: angular
-repo: "https://github.com/ng-classroom/demo134"
 author: carlosrojas
 cover: "https://firebasestorage.googleapis.com/v0/b/ngclassroom-8ba81.appspot.com/o/posts%2F2018-11-02-%20Angular-HttpClient%2Fcover.png?alt=media&token=84f5e937-13ea-415f-8c57-9fa1d62f47e9"
-remember: true
 versions:
   - title: 'Angular CLI'
     number: '7.0.3'
