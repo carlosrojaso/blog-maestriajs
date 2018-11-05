@@ -2,7 +2,7 @@
 layout: post
 title: "Angular Testing Framework + Como probar las rutas"
 keywords: "unit test, pruebas unitartias, angular, pruebas unitarias, webpack, jasmine, karma"
-date: 2018-11-04
+date: 2018-11-05
 tags: [testing, demos]
 categories: angular
 repo: "https://github.com/ng-classroom/demo133"
@@ -95,6 +95,8 @@ beforeEach(() => {
   });
 ```
 
+{% include blog/subscribe.html %}
+
 y creamos nuestras pruebas.
 
 ```ts
@@ -170,4 +172,6 @@ y podemos probarlo en con el Angular CLI. Usando el comando.
 $ng test
 ```
 
-Esto es todo, hasta un proximo post :)
+<amp-img width="1199" height="728" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ngclassroom-8ba81.appspot.com/o/posts%2F2018-10-30-%20Angular-Pruebas-Unitarias-Routing%2FCaptura%20de%20pantalla%202018-11-05%20a%20la(s)%2012.19.58%20p.%20m..png?alt=media&token=d420fb52-a62f-485b-954a-9aebdfcd90d9"></amp-img>
+
+Esto es todo por ahora espero que sea de utilidad para tus proximas pruebas y hasta un proximo post :)
