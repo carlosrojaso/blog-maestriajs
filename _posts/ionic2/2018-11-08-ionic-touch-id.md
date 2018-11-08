@@ -18,14 +18,13 @@ versions:
 ---
 
 > Uno de los de los requerimientos más comunes en las aplicaciones móvil en los tiempos que corren es que permita hacer auto-login o que de alguna manera le ahorre al cliente el tener que escribir todo el tiempo el user + password.
-
-> Algunos de los mecanismos más usado es la autenticacion mediante JWT donde el servidor de alguna forma aumentaba el tiempo de espiración del token para que el cliente sufriera lo menos posible a la hora de hacer login, pero esta solución conlleva riesgos de seguridad y un manejo mas profundo del lado del servidor. Otra solución es guardar el user y password en el storage lo cual simplemente no es recomendable bajo ningún concepto.
-
-> Lo que vamos a hacer es un pequeño demo de como podemos beneficiarnos de los métodos de autenticación que ya nos brinda el smartphone, donde le vamos a pedir que nos encrypt y guarde el password en un lugar seguro por nosotros para después pedírselo y hacer el proceso de auto-login.
-
 <amp-img width="1024" height="512" layout="responsive" src="/images/posts/ionic2/2018-11-08-ionic-touch-id/cover.jpg"></amp-img>
 
 {% include general/net-promoter-score.html %} 
+
+Algunos de los mecanismos más usado es la autenticacion mediante JWT donde el servidor de alguna forma aumentaba el tiempo de espiración del token para que el cliente sufriera lo menos posible a la hora de hacer login, pero esta solución conlleva riesgos de seguridad y un manejo mas profundo del lado del servidor. Otra solución es guardar el user y password en el storage lo cual simplemente no es recomendable bajo ningún concepto.
+
+Lo que vamos a hacer es un pequeño demo de como podemos beneficiarnos de los métodos de autenticación que ya nos brinda el smartphone, donde le vamos a pedir que nos encrypt y guarde el password en un lugar seguro por nosotros para después pedírselo y hacer el proceso de auto-login.
 
 ## Paso 1: Iniciando el proyecto
 
@@ -285,12 +284,14 @@ export class TouchIdHelper {
 ```
 
 
-> Como resultado tenemos que una vez que el usuario configura en nuestra app la autenticación mediante huella digital en el login siempre se va a intentar primero hacer login de esta forma.
+Como resultado tenemos que una vez que el usuario configura en nuestra app la autenticación mediante huella digital en el login siempre se va a intentar primero hacer login de esta forma.
 
-> En resumen lo que se hace es guardar el password usando touch-id para después en el login pedírselo si puso bien la huella y ejecutar el login de toda la vida con el {username, password} así evitamos que el usuario entre siempre los datos y el servidor no tenga que extender el tiempo de espiración del JWT
+En resumen lo que se hace es guardar el password usando touch-id para después en el login pedírselo si puso bien la huella y ejecutar el login de toda la vida con el {username, password} así evitamos que el usuario entre siempre los datos y el servidor no tenga que extender el tiempo de espiración del JWT
 
 `el demo fue probado solo en android.`
 
-<amp-img width="410" height="716" layout="responsive" src="/images/posts/ionic2/2018-11-08-ionic-touch-id/touch.png"></amp-img>
-
-<br />
+<div class="row">
+  <div class="col col-33 col-md-33 col-lg-33">
+    <amp-img width="410" height="716" layout="responsive" src="/images/posts/ionic2/2018-11-08-ionic-touch-id/touch.png"></amp-img>
+  </div>
+</div>
