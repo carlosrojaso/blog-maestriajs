@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "Reconocimiento facial en app Ionic"
-keywords: "ionic reconocimiento facial, camara, facial"
+title: "Agente virtual con DialogFlow y Ionic"
+keywords: "ionic, dialogflow , chatbot, agente"
 date: 2018--28
 tags: [ionic, google, dialogflow, chatbot]
 categories: ionic2
