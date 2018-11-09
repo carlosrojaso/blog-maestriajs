@@ -2,12 +2,12 @@
 layout: post
 title: "Agente virtual con DialogFlow y Ionic"
 keywords: "ionic, dialogflow , chatbot, agente"
-date: 2018--28
+date: 2018-11-09
 tags: [ionic, google, dialogflow, chatbot]
 categories: ionic2
 author: jheisonAlzate
 repo: "https://github.com/developerjaag/ngClassroomDialogFlow"
-cover: "https://firebasestorage.googleapis.com/v0/b/ngclassroom-8ba81.appspot.com/o/posts%2F2018-09-13-ionic-fonts%2FCambiarFuentes.png?alt=media&token=588d8fd9-4213-40b7-9ea8-481140536846"
+cover: "/images/posts/ionic2/2018-11-08-dialogflow/cover.png"
 versions:
   - title: 'ionic'
     number: '3.9.2'
@@ -21,27 +21,29 @@ versions:
 
 > Los agentes de inteligencia artificial van tomando cada vez más fuerza al momento de generar una interacción con los clientes de nuestro producto o servicio.
 Gracias a la carrera de nubes entre empresas como Google, Microsoft, Ibm y Amazon; Podemos tener herramientas muy poderosas y de una fácil y rápida implementación. Hoy haremos una implementación de DialogFlow de Google, con la que crearemos un agente virtual o chatbot. y para darle más portabilidad, lo consumiremos desde Ionic.
+<!--summary-->
+
+<amp-img width="1024" height="512" layout="responsive" src="/images/posts/ionic2/2018-11-08-dialogflow/cover.png"></amp-img>
+
+{% include general/net-promoter-score.html %}
 
 Anteriormente se realizo un hangouts con nuestro compañero Rodrigo Torrico, lo pueden ver siguiendo este enlace: https://www.youtube.com/watch?v=5dU2Mk2S6gg
 
 Bien comencemos...
-<!--summary-->
-
-{% include general/net-promoter-score.html %}
 
 # Paso 1: Crear el agente en DialogFlow
 Para esto se requiere tener una cuenta en Google, este proceso es tan simple que no pasaremos a explicarlo.
 Luego nos dirigimos a la consola de DialogFlow, entrando en la siguiente dirección: https://console.dialogflow.com
 
-<amp-img width="470" height="368" layout="responsive" src="../../images/posts/ionic2/2018-11-08-dialogflow/D1.png"></amp-img>
+<amp-img width="470" height="368" layout="responsive" src="/images/posts/ionic2/2018-11-08-dialogflow/D1.png"></amp-img>
 
 Aquí ingresamos con nuestra cuenta de Google y observamos un ambiente como el siguiente, y presionamos el botón para crear "CREATE AGENT":
 
-<amp-img width="470" height="368" layout="responsive" src="../../images/posts/ionic2/2018-11-08-dialogflow/D2.png"></amp-img>
+<amp-img width="470" height="368" layout="responsive" src="/images/posts/ionic2/2018-11-08-dialogflow/D2.png"></amp-img>
 
 Posteriormente identificamos el agente con un nombre, elegimos la zona (de preferencia la más cercana a nuestra ubicación) y elegimos el idioma por defecto; Más adelante explicaré algo con el idioma para comunicarnos con nuestro agente en los idiomas configurados desde la app.
 
-<amp-img width="470" height="368" layout="responsive" src="../../images/posts/ionic2/2018-11-08-dialogflow/D3.png"></amp-img>
+<amp-img width="470" height="368" layout="responsive" src="/images/posts/ionic2/2018-11-08-dialogflow/D3.png"></amp-img>
 
 En este tutorial, solo me centraré en el manejo de los intents de DialogFlow que son las respuestas a un escrito dado por el usuario, para las demás opciones te invito a explorar la plataforma y jugar con ella, como con las Entities (que le dan una guía al agente del tema de conversación, ejm: Si se habla de sistemas operativos, identificar un linux de un windows...)
 
@@ -49,27 +51,27 @@ En este tutorial, solo me centraré en el manejo de los intents de DialogFlow qu
 Bien, ahora que ya tenemos nuestro agente listo, es hora de enseñarle que responder ante un texto que envié un usuario.
 Por defecto tenemos dos Intents creados, (uno para saludar, y otro para responder en caso de que el agente no comprenda lo que el usuario escribió).
 
-<amp-img width="470" height="368" layout="responsive" src="../../images/posts/ionic2/2018-11-08-dialogflow/D4.png"></amp-img>
+<amp-img width="470" height="368" layout="responsive" src="/images/posts/ionic2/2018-11-08-dialogflow/D4.png"></amp-img>
 
 Para crear nuestro nuevo intent, presionamos el botón resaltado en el resaltado rojo (CREATE INTENT).
 
-<amp-img width="470" height="368" layout="responsive" src="../../images/posts/ionic2/2018-11-08-dialogflow/D4.png"></amp-img>
+<amp-img width="470" height="368" layout="responsive" src="/images/posts/ionic2/2018-11-08-dialogflow/D4.png"></amp-img>
 
 Le damos un nombre identificativo a nuestro nuevo intent (primer resaltado rojo), y procedemos a ingresar las freses que puede digitar el usuario que disparan las respuestas de este intent (segundo resaltado rojo). Notemos además que solo tenemos el idioma ingles adicionado (resaltado azul).
 
 A este intent le he dado como nombre "Capital", por que la idea es que podamos saber la capital del país de un agente con el que nos comuniquemos. Así que si estamos en el idioma Español el agente indique que la capital del país es Bógota y si el idioma es ingles, nos comunique que la capital es washington. Con esto podemos ilustrar el manejo de idiomas.
 
-<amp-img width="470" height="368" layout="responsive" src="../../images/posts/ionic2/2018-11-08-dialogflow/D6.png"></amp-img>
+<amp-img width="470" height="368" layout="responsive" src="/images/posts/ionic2/2018-11-08-dialogflow/D6.png"></amp-img>
 
 He adicionado algunas de las posibles frases que podría enviar un usuario a nuestro agente. Cabe mencionar que no necesariamente el usuario debe enviar la frase tal cual para que nuestro agente la entienda, solo basta con la intensión de la frase; De allí el nombre de "Intents".
 
 Ahora debemos ingresar lo que queremos que el agente responda ante tal intent:
 
-<amp-img width="470" height="368" layout="responsive" src="../../images/posts/ionic2/2018-11-08-dialogflow/D7.png"></amp-img>
+<amp-img width="470" height="368" layout="responsive" src="/images/posts/ionic2/2018-11-08-dialogflow/D7.png"></amp-img>
 
 Yo he definido las siguientes respuestas, las cuales se mostraran de manera aleatoria ante este intent:
 
-<amp-img width="470" height="368" layout="responsive" src="../../images/posts/ionic2/2018-11-08-dialogflow/D8.png"></amp-img>
+<amp-img width="470" height="368" layout="responsive" src="/images/posts/ionic2/2018-11-08-dialogflow/D8.png"></amp-img>
 
 De nuevo, te invito a que explores las diferentes opciones o herramientas que tenemos en los intents; Como por ejemplo los parametros, donde podemos brindar al usuario una experiencia más personalizada...quizás llamandolo por su nombre...
 
@@ -77,7 +79,7 @@ De nuevo, te invito a que explores las diferentes opciones o herramientas que te
 Ahora podemos probar nuestro intent, con el panel que se encuentra a la derecha:
 
 
-<amp-img width="470" height="368" layout="responsive" src="../../images/posts/ionic2/2018-11-08-dialogflow/D9.png"></amp-img>
+<amp-img width="470" height="368" layout="responsive" src="/images/posts/ionic2/2018-11-08-dialogflow/D9.png"></amp-img>
 
 Nótese que la frase que se le envió al agente no esta exactamente estructurada como previamente la definimos, sin embargo el agente reacciona correctamente ante la intensión, sorprendente ¿no?.
 
@@ -85,27 +87,27 @@ Nótese que la frase que se le envió al agente no esta exactamente estructurada
 
 Ahora pasaremos a que nuestro agente comprenda cuando nos comuniquemos en otro idioma, para este caso español
 
-<amp-img width="470" height="368" layout="responsive" src="../../images/posts/ionic2/2018-11-08-dialogflow/D10.png"></amp-img>
+<amp-img width="470" height="368" layout="responsive" src="/images/posts/ionic2/2018-11-08-dialogflow/D10.png"></amp-img>
 
 Cuando se adiciona el nuevo idioma, podemos cambiarnos a el , presionando su abreviatura en la parte izquierda (el que se encuentra en color azul indica en cual estamos trabajando).
 
-<amp-img width="470" height="368" layout="responsive" src="../../images/posts/ionic2/2018-11-08-dialogflow/D11.png"></amp-img>
+<amp-img width="470" height="368" layout="responsive" src="/images/posts/ionic2/2018-11-08-dialogflow/D11.png"></amp-img>
 
 Ahora si nos dirigimos a los intents, y seleccionamos el que previamente creamos (Capital), podemos observar que nuevamente esta sin posibles ingresos de usuario y sin respuestas por parte del agente.
 
-<amp-img width="470" height="368" layout="responsive" src="../../images/posts/ionic2/2018-11-08-dialogflow/D12.png"></amp-img>
+<amp-img width="470" height="368" layout="responsive" src="/images/posts/ionic2/2018-11-08-dialogflow/D12.png"></amp-img>
 
 Así que repetiremos el mismo proceso que realizamos con el otro previamente en el intent, pero ahora para el idioma configurado. en este caso Español; y esta vez le diremos al agente que responda ante este intent, que la capital es Bógota.
 
-<amp-img width="470" height="368" layout="responsive" src="../../images/posts/ionic2/2018-11-08-dialogflow/D13.png"></amp-img>
+<amp-img width="470" height="368" layout="responsive" src="/images/posts/ionic2/2018-11-08-dialogflow/D13.png"></amp-img>
 
 Y por supuesto, probamos que todo este como lo queremos
 
-<amp-img width="470" height="368" layout="responsive" src="../../images/posts/ionic2/2018-11-08-dialogflow/D14.png"></amp-img>
+<amp-img width="470" height="368" layout="responsive" src="/images/posts/ionic2/2018-11-08-dialogflow/D14.png"></amp-img>
 
 Antes de pasar a la app de Ionic, debemos obtener la llave que permite la comunicación con nuestros agentes:
 
-<amp-img width="470" height="368" layout="responsive" src="../../images/posts/ionic2/2018-11-08-dialogflow/D15.png"></amp-img>
+<amp-img width="470" height="368" layout="responsive" src="/images/posts/ionic2/2018-11-08-dialogflow/D15.png"></amp-img>
 
 
 # Paso 4: El app de Ionic
@@ -343,11 +345,11 @@ Así se ve nuestro proyecto en acción:
 
 Español:
 
-<amp-img width="470" height="368" layout="responsive" src="../../images/posts/ionic2/2018-11-08-dialogflow/D16.png"></amp-img>
+<amp-img width="470" height="368" layout="responsive" src="/images/posts/ionic2/2018-11-08-dialogflow/D16.png"></amp-img>
 
 Inglés
 
-<amp-img width="470" height="368" layout="responsive" src="../../images/posts/ionic2/2018-11-08-dialogflow/D17.png"></amp-img>
+<amp-img width="470" height="368" layout="responsive" src="/images/posts/ionic2/2018-11-08-dialogflow/D17.png"></amp-img>
 
 
 
