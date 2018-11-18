@@ -28,22 +28,48 @@ versions:
 
 # Como probar la clase de un componente.
 
+Para empezar con nuestras pruebas de componente vamos a crear un proyecto nuevo.
+
+````
+$ng new demo134
+````
+
 Vamos a crear un componente simple con un boton de la siguiente manera.
 
+````
+$ng generate component test
+````
+
+y vamos a modificar algunas cosas.
+
+```html
+<p>
+  <button (click)="clicked()">Click me!</button>
+  <span>{{message}}</span>
+</p>
+```
+
+y la logica.
+
 ```ts
+import { Component, OnInit } from '@angular/core';
+
 @Component({
-  selector: 'test-comp',
-  template: `
-    <button (click)="clicked()">Click me!</button>
-    <span>{{message}}</span>`
+  selector: 'test',
+  templateUrl: './test.component.html',
+  styleUrls: ['./test.component.css']
 })
 export class TestComponent {
-  isOn = false;
 
-  get message() { return `El test es ${this.isOn ? 'On' : 'Off'}`; }
+  protected isOn = false;
 
-  protected clicked() { this.isOn = !this.isOn; }
+  get message() {
+    return `El test es ${this.isOn ? 'On' : 'Off'}`; 
+  }
 
+  protected clicked() {
+    this.isOn = !this.isOn;
+  }
 }
 ```
 
@@ -54,18 +80,18 @@ Como puedes ver es un componente sencillo que tiene un `getter` y una `funcion` 
 describe('TestComponent', () => {
   it('#clicked() should toggle #isOn', () => {
     const comp = new TestComponent();
-    expect(comp.isOn).toBe(false, 'off at first');
+    expect(comp.isOn).toBe(false, 'off al inicio');
     comp.clicked();
-    expect(comp.isOn).toBe(true, 'on after click');
+    expect(comp.isOn).toBe(true, 'on despues de Click');
     comp.clicked();
-    expect(comp.isOn).toBe(false, 'off after second click');
+    expect(comp.isOn).toBe(false, 'off despues de segundo Click');
   });
 
   it('#clicked() should set #message to "is on"', () => {
-    const comp = new LightswitchComponent();
-    expect(comp.message).toMatch(/is off/i, 'off at first');
+    const comp = new TestComponent();
+    expect(comp.message).toMatch(/es off/i, 'off al inicio');
     comp.clicked();
-    expect(comp.message).toMatch(/is on/i, 'on after clicked');
+    expect(comp.message).toMatch(/es on/i, 'on after clicked');
   });
 });
 ```
