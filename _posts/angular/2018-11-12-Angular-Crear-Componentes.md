@@ -50,6 +50,8 @@ Podemos pensar por ejemplo en los atomos `label`, `input` y `button` los cuales 
 
 Ir construyendo de `moleculas` a `organismos` fomenta la creación de componentes standalone, portables, y reusables.
 
+{% include blog/subscribe.html %}
+
 **Plantillas.** Las plantillas son grupos de organismos unidos para formar paginas.
 
 <amp-img width="1024" height="113" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ngclassroom-8ba81.appspot.com/o/posts%2F2018-11-12-Angular-Crear-Componentes%2Ftemplate1.jpg?alt=media&token=47d6638d-8acc-46b5-9c8d-2dea104696a7"></amp-img>
