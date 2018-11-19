@@ -5,7 +5,7 @@ keywords: "unit test, pruebas unitartias, angular, pruebas unitarias, webpack, j
 date: 2018-11-19
 tags: [testing, demos]
 categories: angular
-repo: "https://github.com/ng-classroom/demo133"
+repo: "https://github.com/ng-classroom/demo134"
 author: carlosrojas
 cover: "https://firebasestorage.googleapis.com/v0/b/ngclassroom-8ba81.appspot.com/o/posts%2F2018-11-13-%20Angular-Pruebas-Unitarias-Componentes%2Fcover.png?alt=media&token=b8401322-47bf-41d9-a470-85cddfa409f1"
 remember: true
