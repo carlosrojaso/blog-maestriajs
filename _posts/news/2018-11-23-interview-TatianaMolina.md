@@ -14,7 +14,7 @@ editname: "news/2018-11-23-interview-TatianaMolina.md"
 <amp-img width="1024" height="512" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ngclassroom-8ba81.appspot.com/o/posts%2F2018-11-23-interview-TatianaMolina%2Fcover.png?alt=media&token=b8e116df-c4bf-4e03-b380-83d158edc37d"></amp-img> 
 {% include general/net-promoter-score.html %} 
 
-[Tatiana Molina](https://twitter.com/tatymolys) es desarrolladora de Software, amante del Frontend.
+Tatiana Molina [@tatymolys](https://twitter.com/tatymolys) es desarrolladora de Software, amante del Frontend.
 
 ## ¿ Que te hizo decidir ser un Programador ?
 
