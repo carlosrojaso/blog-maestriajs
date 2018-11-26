@@ -2,7 +2,7 @@
 layout: post
 title: "Nativo en la Web y en Movíl con Angular."
 keywords: "nativescript, architecture"
-date: 2018-11-25
+date: 2018-11-26
 tags: [nativescript, architecture]
 categories: nativescript
 author: carlosrojas
