@@ -2,22 +2,22 @@
 layout: post
 title: "App para escritotio con Angular y Electron"
 keywords: "angular, electron"
-date: 2018-11-30
+date: 2018-12-03
 tags: [angular, electron]
-categories: ionic2
+categories: angular
 author: jheisonAlzate
-repo: ""
-cover: ""
+cover: "https://firebasestorage.googleapis.com/v0/b/ngclassroom-8ba81.appspot.com/o/posts%2F2018-11-30-AngularElectron%2Fcover.png?alt=media&token=79d1473a-73d9-468f-97c6-51712c6f471a"
 ---
 
 > Al día de hoy es muy sencillo generar aplicaciones que con un mismo código se ejecuten en múltiples plataformas, esto se logra gracias al poder de javascript y de herramientas como Ionic y la que veremos el día de hoy que es Electron.
+<!--summary-->
+
+<amp-img width="1024" height="512" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ngclassroom-8ba81.appspot.com/o/posts%2F2018-11-30-AngularElectron%2Fcover.png?alt=media&token=79d1473a-73d9-468f-97c6-51712c6f471a"></amp-img>
+
+{% include general/net-promoter-score.html %}
 
 Lo que haremos sera generar ejecutables para Windows o Mac de aplicación desarrollada con Angular.
 ok, comencemos...
-
-<!--summary-->
-
-{% include general/net-promoter-score.html %}
 
 # Paso 1: Aplicación en Angular
 
@@ -46,7 +46,7 @@ npm install electron --save-dev
 
 Luego en la raíz de nuestro proyecto en Angular, crearemos un archivo llamado main.js, y debe contener el siguiente código:
 
-```
+```js
 const {app, BrowserWindow} = require('electron') //importamos lo necesario para trabajar ocn electron
 const path = require('path')
 const url = require('url')
@@ -92,7 +92,7 @@ app.on('activate', () => {
 
 Debemos modificar el package.json de nuestra aplicación en Angular, para que reconozca el archivo main.js que acabamos de crear; Y adicionalmente para que identifique en la consola el comando que empaqueta nuestra aplicación de Angular en Electron. Adicionamos lo siguiente:
 
-```
+```js
 {
   ...
 
@@ -116,7 +116,7 @@ Básicamente utilizaremos el comando de "electron-aot", si deseas ver en detalla
 
 Por defecto en Angular tenemos en nuestro index.html la ruta base definida como:
 
-```
+```html
 ...
 <base href="/">
 ...
@@ -124,7 +124,7 @@ Por defecto en Angular tenemos en nuestro index.html la ruta base definida como:
 
 Debemos modificarla para que quede de la siguiente manera:
 
-```
+```html
 ...
 <base href="./">
 ...
@@ -140,7 +140,7 @@ npm run electron-aot
 
 Esto lanzará la aplicación en una ventana nativa de nuestro sistema operativo. Sin embargo, la aplicación estará en "modo debug"
 
-<amp-img width="470" height="368" layout="responsive" src="../../images/posts/ionic2/2018-11-30-AngularElectron/electron1.jpeg"></amp-img>
+<amp-img width="470" height="368" layout="responsive" src="/images/posts/ionic2/2018-11-30-AngularElectron/electron1.jpeg"></amp-img>
 
 
 # Paso 5: Generar ejecutables
@@ -171,6 +171,6 @@ electron-packager ./ electron-classroom --platform=darwin --icon src/favicon.icn
 
 Resultado:
 
-<amp-img width="470" height="368" layout="responsive" src="../../images/posts/ionic2/2018-11-30-AngularElectron/electron2.jpeg"></amp-img>
+<amp-img width="470" height="368" layout="responsive" src="/images/posts/ionic2/2018-11-30-AngularElectron/electron2.jpeg"></amp-img>
 
 Eso ha sido todo, espero que te sea de utilidad
