@@ -31,7 +31,7 @@ Solución basada en el patrón CQRS el cual es utilizado en librerias como Redux
 
 <h2>Akita</h2>
 
-Solución basada en el patrón CQRS el cual es utilizado en librerias como Redux pero reduce el `boilerplate` utilizando `TypeScript` y sus caracteristicas de Clases y Decoradores. [Sitio Web](https://ngxs.gitbook.io/ngxs/)
+Akita es un patrón de manejo de estados, construido sobre `RxJs`, el cual toma la idea de multiples data stores de `Flux` y las actualizaciones inmutables de `Redux` asi como los principios de `Observables` para crear flujos de datos. [Sitio Web](https://netbasal.gitbook.io/akita/)
 
 # Herramientas.
 

@@ -2,7 +2,7 @@
 layout: post
 title: "Angular CLI"
 keywords: "Angular, cli"
-date: 2018-12-10
+date: 2018-12-12
 tags: [tools, angular]
 categories: angular
 author: carlosrojas
@@ -39,11 +39,72 @@ Los comandos que siempre vamos a utilizar en nuestros proyectos con Angular son 
 $ng new App
 ````
 
-Con este comando crearemos una App en Angular con todo lo necesario.
+Con este comando crearemos una App en Angular con todo lo necesario. Puedes usar 
+
+````
+$ng new App --skip-install
+````
+
+Con esta opción podras crear una App en Angular pero sin instalar las dependencias de `npm`. Más adelante podras instalarla con:
+
+````
+$npm install
+````
+
+Cuando estas en la construcción de tu App puedes usar:
 
 ````
 $ng generate component myComponent
 ````
 
-Con este comando crearemos diferentes elementos de los bloques de Angular entre los que podemos crear estan `directive`, `pipe`, `service` |class|module
+Con este comando crearemos diferentes elementos de los bloques de Angular entre los que podemos crear `component`, `directive`, `pipe`, `service`, `class`, `module`.
 
+# Comandos utiles.
+
+Si no quieres que el `CLI` te genere las pruebas basicas de tus componentes nuevos, puedes usar:
+
+````
+$ng new App --skip-tests
+````
+
+Si no estas seguro de que va a hacer un comando, puedes usar la opción `--dry-run`.
+
+````
+ng new App --dry-run
+````
+
+Con esta opción el `CLI` no va a hacer cambios y en lugar de eso va a imprimir en consola que cambios reales haria ese comando.
+
+Si tienes conocimientos en `Webpack` y quieres personalizar tu configuración puedes usar algo como:
+
+````
+$ng eject 
+````
+
+Con este comando veras el archivo de configuración de `Webpack` en tu proyecto y podras personalizarlo.
+
+# Comandos utiles.
+
+Usando
+
+````
+$ng serve
+````
+
+Puedes ir viendo tus cambios en tu navegador con un servidor local.
+
+con
+
+````
+$ng build
+````
+
+Puedes construir una versión de desarrollo la cual podras enviar a un server de desarrollo o obligar a compilar tus cambios.
+
+````
+$ng build --prod
+````
+
+Podras construir una versión de producción la cual esta optimizada para tu servidor de producción.
+
+Bueno esto es todo. Espero sea de utilidad :)
