@@ -5,7 +5,7 @@ menu_header:
     url: '/blog'
     target: '_self'
   - title: Cursos
-    url: 'https://www.ng-classroom.com/'
+    url: 'https://www.maestriajs.com/'
     target: '_blank'
 # - title: Talleres
 #   url: 'https://startupers.ng-classroom.com/'
@@ -20,7 +20,7 @@ menu_footer:
     url: '/'
     target: '_self'
   - title: Cursos
-    url: 'https://www.ng-classroom.com/'
+    url: 'https://www.maestriajs.com/'
     target: '_blank'
   - title: Autores
     url: '/blog/authors'
