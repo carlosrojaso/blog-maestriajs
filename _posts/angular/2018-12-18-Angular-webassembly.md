@@ -2,7 +2,7 @@
 layout: post
 title: "WebAssembly + Angular"
 keywords: "angular, web assembly"
-date: 2019-01-30
+date: 2019-01-02
 tags: [tools, angular]
 categories: angular
 author: carlosrojas
@@ -26,6 +26,8 @@ WebAssembly es un nuevo tipo de codigo que puede correr en los Web Browsers mode
 # ¿ Como usamos WebAssembly con Angular ?
 
 Lo primero que tenemos que hacer es crear un proyecto nuevo usando el `Angular CLI`
+
+**Nota:** debes utilizar Angular 5.
 
 ````
 $ng new demo136 
@@ -101,13 +103,78 @@ y debemos cargar los archivos generados de una manera no muy elegante.
 
 ```ts
 ...
-import * as Module from './../../wasm/factorial.js';
-import '!!file-loader?name=wasm/factorial.wasm!../../wasm/factorial.wasm';
+import * as Module from './wasm/factorial.js';
+import '!!file-loader?name=wasm/factorial.wasm!./wasm/factorial.wasm';
 
 import { Injectable } from '@angular/core';
 ...
 ```
 
+y tendriamos un Servicio algo asi:
 
+```ts
+import { Injectable } from '@angular/core';
+import { BehaviorSubject, Observable } from 'rxjs';
+import { fromPromise } from 'rxjs/observable/fromPromise';
+import { filter, take, mergeMap } from 'rxjs/operators';
+
+import * as Module from './wasm/factorial.js';
+import '!!file-loader?name=wasm/factorial.wasm!./wasm/factorial.wasm';
+
+declare var WebAssembly;
+
+@Injectable({
+  providedIn: 'root'
+})
+export class WasmService {
+
+  module: any;
+
+  wasmReady = new BehaviorSubject<boolean>(false);
+
+  constructor() {
+    this.instantiateWasm('wasm/factorial.wasm');
+  }
+
+  private async instantiateWasm(url: string) {
+    // fetch the wasm file
+    const wasmFile = await fetch(url);
+
+    // convert it into a binary array
+    const buffer = await wasmFile.arrayBuffer();
+    const binary = new Uint8Array(buffer);
+
+    // create module arguments
+    // including the wasm-file
+    const moduleArgs = {
+      wasmBinary: binary,
+      onRuntimeInitialized: () => {
+        this.wasmReady.next(true);
+      }
+    };
+
+    // instantiate the module
+    this.module = Module(moduleArgs);
+  }
+
+  public factorial(input: number): Observable<any> {
+    return this.wasmReady.pipe(filter(value => value === true)).pipe(
+      mergeMap(() => {
+        return fromPromise(
+          new Promise<number>((resolve, reject) => {
+            setTimeout(() => {
+              const result = this.module._factorial(input);
+              resolve(result);
+            });
+          })
+        );
+      }),
+      take(1)
+    );
+  }
+}
+```
+
+y listo ya con esto debes tener la funcion factorial lista para usar :)
 
 Bueno esto es todo. Espero sea de utilidad :)
