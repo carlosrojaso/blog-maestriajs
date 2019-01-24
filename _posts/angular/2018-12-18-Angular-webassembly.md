@@ -2,7 +2,7 @@
 layout: post
 title: "WebAssembly + Angular"
 keywords: "angular, web assembly"
-date: 2019-01-30
+date: 2019-01-02
 tags: [tools, angular]
 categories: angular
 author: carlosrojas
