@@ -20,24 +20,23 @@ versions:
 
 {% include general/net-promoter-score.html %} 
 
-Lo primero que tenemos que hacer es 
+Lo primero que tenemos que hacer es actualizar nuestro `CLI` si no lo has hecho aun tendras que ejecutar:
 
 ```
 $npm install -g ionic
-$ionic start awesome-app
 ```
 
 ## Crear un nuevo proyecto con Ionic 4
 
-Posiblemente ya has vivido la constante ansiedad por las decenas de frameworks de `Javascript` que se liberán semanalmente y no digo que esto esta mal ya que es parte del dinamismo que me hizo elegir el `Frontend` como mi especialidad y es parte de la innovación que se vive en este campo.  Si recuerdas Ionic fue construido sobre `AngularJS` y posteriormente portado a `Angular` lo cual fue una mejora muy grande para el desarrollo hibrido con `tooling` moderno, pero esto aún hacia que los desarrolladores que utilizaban `React` o `VueJS` no se pudieran ver beneficiados de los excelentes componente que Ionic nos ofrece a los desarrolladores Web.
+Ahora que tienes  la última versión del `CLI` debes crear una App nueva con el template `blank`.
 
-Esto cambio con la estandarización de los [Web Components](https://www.webcomponents.org/introduction) una colección de APIs que te permiten crear tus propias etiquetas de manera nativa en el navegador, lo cual hizo que fuese posible utilizar los Componentes de Ionic (Aka Componentes de Angular) en Componentes que se pueden utilizar con cualquier framework.
+````
+$ionic start myApp tabs
+````
 
 ## src/providers - src/app/services.
 
-<amp-img width="1560" height="512" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ngclassroom-8ba81.appspot.com/o/posts%2F2019-01-24-ionic-4-finalmente%2Fionic4-performance-comparison.png?alt=media&token=fc6750ea-f43d-47dc-b505-576f74f5f842"></amp-img>
-
-Gracias a la filosofia del equipo de Ionic de crear componentes altamente optimizados y su distribucion como `Web Componentes` la  [Primera renderización significativa](https://developers.google.com/web/tools/lighthouse/audits/first-meaningful-paint) ha mostrado un descenso significativa en  `Ionic Angular`.
+Ahora que tenemos nuestra App con la estructura general nueva de Ionic vamos a empezar a mover nuestro 
 
 ## styleUrls
 
