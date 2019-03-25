@@ -1,12 +1,14 @@
 ---
 layout: post
-title: "Migrando tu App hacia Ionic 4"
+title: "Creando un Feed Reader en Ionic 4"
 date: 2019-03-25
 tags: [ionic]
 categories: ionic2
 author: carlosrojas
 cover: "https://firebasestorage.googleapis.com/v0/b/ngclassroom-8ba81.appspot.com/o/posts%2F2019-03-25-ionic-4-feed-reader%2FionicCover.png?alt=media&token=7e8f3d08-1b0d-40a5-972d-c61cf0753958"
 editname: "ionic2/2019-03-25-ionic-4-feed-reader.md"
+repo: "https://github.com/ng-classroom/feedApp"
+remember: true
 video: true
 versions:
   - title: 'ionic'
