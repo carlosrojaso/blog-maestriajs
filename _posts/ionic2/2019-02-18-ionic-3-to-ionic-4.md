@@ -31,20 +31,91 @@ $npm install -g ionic
 Ahora que tienes  la última versión del `CLI` debes crear una App nueva con el template `blank`.
 
 ````
-$ionic start myApp tabs
+$ionic start myApp blank
 ````
 
 ## src/providers - src/app/services.
 
-Ahora que tenemos nuestra App con la estructura general nueva de Ionic vamos a empezar a mover nuestro 
+Ahora que tenemos nuestra App con la estructura general nueva de Ionic vamos a empezar a mover nuestro providers hacia la nueva estructura de `services`
 
-## styleUrls
+<h3>Ionic 3</h3>
 
-Ahora Ionic esta utilizando `CSS Variables` lo cual permite que los componentes sean expuestos a través de un API el cual se podra manipular de una manera mas estandar sin tener que recurrir a la antigua manera de hacer Ionic con un preprocesador SASS o directamente sobre el `CSS` de los componentes.
+<div class="row">
+  <div class="col col-25 col-md-25 col-lg-25"></div>
+  <div class="col col-50 col-md-50 col-lg-50">
+    <amp-img  width="257" height="270" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ngclassroom-8ba81.appspot.com/o/posts%2F2019-02-18-ionic-3-to-ionic-4%2FCaptura%20de%20pantalla%202019-02-28%20a%20la(s)%206.17.35%20p.%20m..png?alt=media&token=e5b249f4-fc32-4cc4-8189-60de1bca4e85"></amp-img>
+  </div>
+  <div class="col col-25 col-md-25 col-lg-25"></div>
+</div>
+
+<h3>Ionic 4</h3>
+
+<div class="row">
+  <div class="col col-25 col-md-25 col-lg-25"></div>
+  <div class="col col-50 col-md-50 col-lg-50">
+    <amp-img  width="257" height="270" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ngclassroom-8ba81.appspot.com/o/posts%2F2019-02-18-ionic-3-to-ionic-4%2FCaptura%20de%20pantalla%202019-02-28%20a%20la(s)%206.17.35%20p.%20m..png?alt=media&token=e5b249f4-fc32-4cc4-8189-60de1bca4e85"></amp-img>
+  </div>
+  <div class="col col-25 col-md-25 col-lg-25"></div>
+</div>
+
+Debemos mover nuestro `providers` de `src/providers` hacia `src/app/services`
+
+<div class="row">
+  <div class="col col-25 col-md-25 col-lg-25"></div>
+  <div class="col col-50 col-md-50 col-lg-50">
+    <amp-img  width="304" height="173" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ngclassroom-8ba81.appspot.com/o/posts%2F2019-02-18-ionic-3-to-ionic-4%2FCaptura%20de%20pantalla%202019-02-28%20a%20la(s)%206.39.51%20p.%20m..png?alt=media&token=97f91af4-3988-4eaf-8057-883ea73afd97"></amp-img>
+  </div>
+  <div class="col col-25 col-md-25 col-lg-25"></div>
+</div>
+
+y debe quedar algo asi.
+
+<div class="row">
+  <div class="col col-25 col-md-25 col-lg-25"></div>
+  <div class="col col-50 col-md-50 col-lg-50">
+    <amp-img  width="326" height="226" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ngclassroom-8ba81.appspot.com/o/posts%2F2019-02-18-ionic-3-to-ionic-4%2FCaptura%20de%20pantalla%202019-02-28%20a%20la(s)%206.41.15%20p.%20m..png?alt=media&token=bcec6684-22ce-4c1e-a1d0-c40cdbb24aad"></amp-img>
+  </div>
+  <div class="col col-25 col-md-25 col-lg-25"></div>
+</div>
+
+adicionalmente no te olvides de agregar. en cada servicio.
+
+```ts
+@Injectable({ providedIn: 'root' })
+```
+
+
+## Copiar pages y otros componentes src/app/
+
+Debido al cambio de estructura de Ionic ahora toca mover todas las paginas y demas componentes desde `pages` y otras carpetas hacias `src/app/`.
+
+<h3>Ionic 3</h3>
+
+<div class="row">
+  <div class="col col-25 col-md-25 col-lg-25"></div>
+  <div class="col col-50 col-md-50 col-lg-50">
+    <amp-img  width="247" height="313" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ngclassroom-8ba81.appspot.com/o/posts%2F2019-02-18-ionic-3-to-ionic-4%2FCaptura%20de%20pantalla%202019-02-28%20a%20la(s)%207.16.38%20p.%20m..png?alt=media&token=8db99d7e-3452-4063-8579-ba956e072ea2"></amp-img>
+  </div>
+  <div class="col col-25 col-md-25 col-lg-25"></div>
+</div>
+
+<h3>Ionic 4</h3>
+
+<div class="row">
+  <div class="col col-25 col-md-25 col-lg-25"></div>
+  <div class="col col-50 col-md-50 col-lg-50">
+    <amp-img  width="327" height="340" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ngclassroom-8ba81.appspot.com/o/posts%2F2019-02-18-ionic-3-to-ionic-4%2FCaptura%20de%20pantalla%202019-02-28%20a%20la(s)%207.16.53%20p.%20m..png?alt=media&token=dc06da78-c71a-406d-b561-a7cd3080215e"></amp-img>
+  </div>
+  <div class="col col-25 col-md-25 col-lg-25"></div>
+</div>
+
+Una vez realices este cambio debes utilizar el `router` de Angular y actualizar toda la navegacion de tu App.
 
 {% include blog/subscribe.html %}
 
 # rxJS
+
+Si usaste `rxJS` en tu App te recomiendo usar el `tslinter` oficial.
 
 ````
 npm i -g rxjs-tslint
@@ -52,7 +123,9 @@ rxjs-5-to-6-migrate -p [path/to/tsconfig.json]
 ````
 
 
-# Uso de CLI de cada Framework
+# Markup
+
+Despues que tengas todos tus controladores y servicios funcionando, ahora debes actualizar todo el `Markup` de tu App, para esto te recomiento tambien usar el `tslinter` del equipo de Ionic.
 
 ````
 npm i -D @ionic/v4-migration-tslint
@@ -107,16 +180,6 @@ vi ionic-migration.json
 npx tslint -c ionic-migration.json -p tsconfig.json
 ````
 
+Bueno como vez la migración de un app en `ionic 3` no es un proceso facíl y por lo tanto te recomiendo que hagas pequeños simulacros con Apps basicas antes de meterte con algo robusto, a mi personalmente me tomo bastante.
 
-# ¿Como comenzar?
-
-Bueno el procedimiento sigue siendo parecido a los anteriormente vistos.
-
-```
-$npm install -g ionic
-$ionic start awesome-app
-```
-
-Adicionalmente si quieres migrar tu App, debes seguir la [Guia de migración](https://ionicframework.com/docs/building/migration/).
-
-Bueno esperamos que estes tan emocionado como nosotros y sigán programando :)
+Bueno espero que esta info te ilumine un poco sobre este proceso y sigán programando :)
