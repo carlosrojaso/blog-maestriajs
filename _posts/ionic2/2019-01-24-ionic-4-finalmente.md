@@ -35,6 +35,8 @@ Esto cambio con la estandarización de los [Web Components](https://www.webcompo
 
 Gracias a la filosofia del equipo de Ionic de crear componentes altamente optimizados y su distribucion como `Web Componentes` la  [Primera renderización significativa](https://developers.google.com/web/tools/lighthouse/audits/first-meaningful-paint) ha mostrado un descenso significativa en  `Ionic Angular`.
 
+{% include blog/subscribe.html %}
+
 ## Estandarización para la personalización 🎨
 
 Ahora Ionic esta utilizando `CSS Variables` lo cual permite que los componentes sean expuestos a través de un API el cual se podra manipular de una manera mas estandar sin tener que recurrir a la antigua manera de hacer Ionic con un preprocesador SASS o directamente sobre el `CSS` de los componentes.

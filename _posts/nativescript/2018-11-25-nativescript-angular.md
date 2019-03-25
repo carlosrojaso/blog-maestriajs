@@ -44,6 +44,8 @@ Principalmente:
 
 <amp-img width="1024" height="512" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ngclassroom-8ba81.appspot.com/o/posts%2F2018-11-25-nativescript-angular%2F2.png?alt=media&token=4aa04519-5f02-4076-a383-abb32f2061bd" alt=""></amp-img>
 
+{% include blog/subscribe.html %}
+
 ## Como comenzamos? 
 
 Lo primero es instalar `Nativescript` y asegurarnos que este funcionando correctamente.

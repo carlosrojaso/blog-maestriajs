@@ -59,6 +59,8 @@ $ng generate component myComponent
 
 Con este comando crearemos diferentes elementos de los bloques de Angular entre los que podemos crear `component`, `directive`, `pipe`, `service`, `class`, `module`.
 
+{% include blog/subscribe.html %}
+
 # Comandos utiles.
 
 Si no quieres que el `CLI` te genere las pruebas basicas de tus componentes nuevos, puedes usar:

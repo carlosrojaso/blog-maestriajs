@@ -88,6 +88,8 @@ app.on('activate', () => {
 })
 ```
 
+{% include blog/subscribe.html %}
+
 # Paso 3: Configuración en el package.json
 
 Debemos modificar el package.json de nuestra aplicación en Angular, para que reconozca el archivo main.js que acabamos de crear; Y adicionalmente para que identifique en la consola el comando que empaqueta nuestra aplicación de Angular en Electron. Adicionamos lo siguiente:

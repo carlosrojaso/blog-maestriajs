@@ -47,6 +47,8 @@ Ngrx provee `@ngrx/store-devtools ` para Devtools. Esta trabaja bién. Su implem
 StoreDevToolsModule.instrument()
 ```
 
+{% include blog/subscribe.html %}
+
 <h2>NGXS</h2>
 
 NGXS provee `@ngxs/devtools-plugin` para Devtools. Esta sin embargo no soporta todas las funcionalidades, como por ejemplo saltar acciones o despachar nuevas acciones usando el Devtools. Su implemetación es facil agregando una linea al `AppModule`.

@@ -41,6 +41,8 @@ trackByFn(index, item) {
 {% endraw %}
 ```
 
+{% include blog/subscribe.html %}
+
 ## Suscribirse en el Template
 
 Utilizando el pipe `asyc` realiza las tareas de suscripción/desuscripción por ti evitando caer en fugas de memoria al olvidarte de desuscribirte manualmente de un Observable cuando no se este utilizando.

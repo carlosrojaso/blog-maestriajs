@@ -51,6 +51,8 @@ Virtual DOM crea un arbol completo desde el comienzo cada vez que tu renderizas 
 
 <amp-img width="704" height="230" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ngclassroom-8ba81.appspot.com/o/posts%2F2019-02-04-Angular-ivy%2F3.png?alt=media&token=b268b826-8798-4c2b-a45e-3f9ce7420bdd"></amp-img>
 
+{% include blog/subscribe.html %}
+
 Incremental DOM por otro lado, no necesita mas memoria para renderizar de nuevo la vista si este no cambia el DOM. Solo tenemos que asignar la memoria cuando los nodos del DOM son agregados o removidos. Y el tamaño de la asignacion es proporcional al tamaño del cambio en el DOM.
 
 <amp-img width="710" height="196" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ngclassroom-8ba81.appspot.com/o/posts%2F2019-02-04-Angular-ivy%2F5.png?alt=media&token=f0b3d2a9-8990-4521-bd4f-648c3185c32e"></amp-img>

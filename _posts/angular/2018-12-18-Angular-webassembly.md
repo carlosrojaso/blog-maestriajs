@@ -99,6 +99,8 @@ Vamos a generar un nuevo servicio.
 ng generate service wasm
 ````
 
+{% include blog/subscribe.html %}
+
 y debemos cargar los archivos generados de una manera no muy elegante.
 
 ```ts

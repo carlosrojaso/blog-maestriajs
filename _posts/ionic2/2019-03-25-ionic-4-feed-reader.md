@@ -5,18 +5,18 @@ date: 2019-02-28
 tags: [ionic]
 categories: ionic2
 author: carlosrojas
-cover: "https://firebasestorage.googleapis.com/v0/b/ngclassroom-8ba81.appspot.com/o/posts%2F2019-01-24-ionic-4-finalmente%2Fionic-4-final.png?alt=media&token=6db207a5-016c-4a7c-b5ca-e7bf7f586ca4"
-editname: "ionic2/2019-02-18-ionic-3-to-ionic-4.md"
+cover: "https://firebasestorage.googleapis.com/v0/b/ngclassroom-8ba81.appspot.com/o/posts%2F2019-03-25-ionic-4-feed-reader%2FionicCover.png?alt=media&token=7e8f3d08-1b0d-40a5-972d-c61cf0753958"
+editname: "ionic2/2019-03-25-ionic-4-feed-reader.md"
 versions:
   - title: 'ionic'
     number: '4.0.0'
   - title: 'ionic-cli'
-    number: '4.1.0'
+    number: '4.10.3'
 ---
 
 > Como anteriormente anunciamos `ionic` ya esta listo para producción, pero si tienes Apps en `ionic 3` debes realizar una serie de pasos para poder disfrutar de la potencia de los `Web Components`.
 
-<amp-img width="1440" height="800" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ngclassroom-8ba81.appspot.com/o/posts%2F2019-01-24-ionic-4-finalmente%2Fionic-4-final.png?alt=media&token=6db207a5-016c-4a7c-b5ca-e7bf7f586ca4"></amp-img>
+<amp-img width="1440" height="800" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ngclassroom-8ba81.appspot.com/o/posts%2F2019-03-25-ionic-4-feed-reader%2FionicCover.png?alt=media&token=7e8f3d08-1b0d-40a5-972d-c61cf0753958"></amp-img>
 
 {% include general/net-promoter-score.html %} 
 
@@ -41,8 +41,6 @@ Ahora que tenemos nuestra App con la estructura general nueva de Ionic vamos a e
 ## styleUrls
 
 Ahora Ionic esta utilizando `CSS Variables` lo cual permite que los componentes sean expuestos a través de un API el cual se podra manipular de una manera mas estandar sin tener que recurrir a la antigua manera de hacer Ionic con un preprocesador SASS o directamente sobre el `CSS` de los componentes.
-
-{% include blog/subscribe.html %}
 
 # rxJS
 
