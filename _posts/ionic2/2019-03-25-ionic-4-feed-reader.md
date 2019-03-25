@@ -1,12 +1,13 @@
 ---
 layout: post
 title: "Migrando tu App hacia Ionic 4"
-date: 2019-02-28
+date: 2019-03-25
 tags: [ionic]
 categories: ionic2
 author: carlosrojas
 cover: "https://firebasestorage.googleapis.com/v0/b/ngclassroom-8ba81.appspot.com/o/posts%2F2019-03-25-ionic-4-feed-reader%2FionicCover.png?alt=media&token=7e8f3d08-1b0d-40a5-972d-c61cf0753958"
 editname: "ionic2/2019-03-25-ionic-4-feed-reader.md"
+video: true
 versions:
   - title: 'ionic'
     number: '4.0.0'
@@ -14,7 +15,7 @@ versions:
     number: '4.10.3'
 ---
 
-> Como anteriormente anunciamos `ionic` ya esta listo para producción, pero si tienes Apps en `ionic 3` debes realizar una serie de pasos para poder disfrutar de la potencia de los `Web Components`.
+> En esta ocasión vamos a aprender a hacer un pequeño `feedReader` y aprender un poco sobre como se hacen las cosas en `ionic 4`.
 
 <amp-img width="1440" height="800" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ngclassroom-8ba81.appspot.com/o/posts%2F2019-03-25-ionic-4-feed-reader%2FionicCover.png?alt=media&token=7e8f3d08-1b0d-40a5-972d-c61cf0753958"></amp-img>
 
@@ -26,95 +27,115 @@ Lo primero que tenemos que hacer es actualizar nuestro `CLI` si no lo has hecho 
 $npm install -g ionic
 ```
 
-## Crear un nuevo proyecto con Ionic 4
+## Crear un nuevo proyecto con Ionic 4.
 
 Ahora que tienes  la última versión del `CLI` debes crear una App nueva con el template `blank`.
 
 ````
-$ionic start myApp tabs
+$ionic start myApp blank
 ````
 
-## src/providers - src/app/services.
+## Creando un Servicio.
 
-Ahora que tenemos nuestra App con la estructura general nueva de Ionic vamos a empezar a mover nuestro 
-
-## styleUrls
-
-Ahora Ionic esta utilizando `CSS Variables` lo cual permite que los componentes sean expuestos a través de un API el cual se podra manipular de una manera mas estandar sin tener que recurrir a la antigua manera de hacer Ionic con un preprocesador SASS o directamente sobre el `CSS` de los componentes.
-
-# rxJS
+Ya que tenemos nuestra App funcionando debemos crear un `servicio` para compartir los datos que tenemos en nuestra Feed con todas nuestras vistas.
 
 ````
-npm i -g rxjs-tslint
-rxjs-5-to-6-migrate -p [path/to/tsconfig.json]
+$ionic generate service feed
 ````
 
+y vamos a usar el servicio `rss2json` para obtener la data como un `json`.
 
-# Uso de CLI de cada Framework
+```ts
+import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
+import { Feed } from './model/feed';
+import { HttpClient } from '@angular/common/http';
 
-````
-npm i -D @ionic/v4-migration-tslint
-vi ionic-migration.json
-````
+@Injectable({
+  providedIn: 'root'
+})
+export class FeedService {
+  private rssToJsonServiceBaseUrl: String = 'https://rss2json.com/api.json?rss_url=';
 
-````
-{
-  "rulesDirectory": ["@ionic/v4-migration-tslint/rules"],
-  "rules": {
-    "ion-action-sheet-method-create-parameters-renamed": true,
-    "ion-alert-method-create-parameters-renamed": true,
-    "ion-back-button-not-added-by-default": { "options": [true], "severity": "warning" },
-    "ion-button-attributes-renamed": true,
-    "ion-button-is-now-an-element": true,
-    "ion-buttons-attributes-renamed": true,
-    "ion-col-attributes-renamed": true,
-    "ion-datetime-capitalization-changed": true,
-    "ion-fab-attributes-renamed": true,
-    "ion-fab-button-is-now-an-element": true,
-    "ion-fab-fixed-content": true,
-    "ion-icon-attribute-is-active-removed": true,
-    "ion-item-attributes-renamed": true,
-    "ion-item-divider-ion-label-required": true,
-    "ion-item-ion-label-required": true,
-    "ion-item-is-now-an-element": true,
-    "ion-item-option-is-now-an-element": true,
-    "ion-item-option-method-get-sliding-percent-renamed": true,
-    "ion-item-options-attribute-values-renamed": true,
-    "ion-label-attributes-renamed": true,
-    "ion-list-header-ion-label-required": true,
-    "ion-loading-method-create-parameters-renamed": true,
-    "ion-menu-events-renamed": true,
-    "ion-menu-toggle-is-now-an-element": true,
-    "ion-navbar-is-now-ion-toolbar": true,
-    "ion-option-is-now-ion-select-option": true,
-    "ion-overlay-method-create-should-use-await": true,
-    "ion-overlay-method-present-should-use-await": true,
-    "ion-radio-attributes-renamed": true,
-    "ion-radio-group-is-now-an-element": true,
-    "ion-radio-slot-required": true,
-    "ion-range-attributes-renamed": true,
-    "ion-segment-button-ion-label-required": true,
-    "ion-spinner-attribute-values-renamed": true,
-    "ion-tabs-refactored": { "options": [true], "severity": "warning" },
-    "ion-text-is-now-an-element": true
+  constructor(
+    private http: HttpClient
+  ) { }
+
+  getFeedContent(): Observable<any> {
+    const fixedRSS = 'https://rss2json.com/api.json?rss_url=https://feeds.feedburner.com/Ion-book';
+    return this.http.get(fixedRSS, { responseType: 'json' });
   }
 }
-````
-
-````
-npx tslint -c ionic-migration.json -p tsconfig.json
-````
-
-
-# ¿Como comenzar?
-
-Bueno el procedimiento sigue siendo parecido a los anteriormente vistos.
-
-```
-$npm install -g ionic
-$ionic start awesome-app
 ```
 
-Adicionalmente si quieres migrar tu App, debes seguir la [Guia de migración](https://ionicframework.com/docs/building/migration/).
+{% include blog/subscribe.html %}
 
-Bueno esperamos que estes tan emocionado como nosotros y sigán programando :)
+
+ya que tenemos la data a través de nuestro metodo `getFeedContent()` vamos a dibujarla en nuestro componente por defecto.
+
+## Adaptando el home
+
+en el `home.page.html`.
+
+```html
+{% raw %}
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Feed App
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-card *ngFor="let item of (results)">
+    <ion-card-header>
+      <ion-card-title>{{item.title}}</ion-card-title>
+      <a href="{{item.link}}">Ver más...</a>
+    </ion-card-header>
+  
+    <ion-card-content>
+      <div [innerHTML]='item.description | slice:0:250'></div>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>
+{% endraw %}
+```
+
+y en el `home.page.ts`
+
+```ts
+import { Component } from '@angular/core';
+import { FeedService } from '../feed.service';
+
+
+@Component({
+  selector: 'app-home',
+  templateUrl: 'home.page.html',
+  styleUrls: ['home.page.scss'],
+})
+export class HomePage {
+  private results: any;
+  constructor(
+    private feedService: FeedService
+  ) {
+    this.feedService.getFeedContent().subscribe(
+      (response) => {
+        this.results = response.items;
+        console.log('data>>>', response.items);
+      }
+    );
+  }
+}
+```
+
+Si quieres ver el `streaming` de este ejercicio puedes verlo.
+
+<amp-youtube width="560" 
+            height="315"
+            layout="responsive"
+            data-videoid="1FWR9YAruqg"></amp-youtube>
+
+Bueno espero que sea de utilidad y sigán programando :)
