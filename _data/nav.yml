@@ -31,7 +31,7 @@ menu_footer:
 #   url: '/organizers/'
 #   target: '_self'
   - title: Podcast
-    url: 'https://itunes.apple.com/us/podcast/ng-podcast/id1235127090?l=es&mt=2'
+    url: 'https://podcast.maestriajs.com/'
     target: '_blank'
 # - title: Jobs
 #   url: 'https://angularjobs.com/'
