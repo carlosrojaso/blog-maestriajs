@@ -27,14 +27,14 @@ banner_course:
 # ==============================================================
 # Banner Slack
 banner_slack:
-  title: 'Únete a nuestra comunidad'
-  text: 'Únete a nuestro canal de slack y podras interactuar con toda la comunidad hispana en ionic.'
-  url: 'http://goo.gl/forms/ZCEc0cr3jydgK2wv1'
-  btn_text: 'Unete'
+  title: 'Escucha nuestro Podcast'
+  text: 'No te pierdas nuestros emocionantes episodios hablando de Javascript.'
+  url: 'https://podcast.maestriajs.com/'
+  btn_text: 'Escuchar'
 
 # Banner Hnagouts
 banner_hangouts:
-  title: 'No te pierdas nuestro proximo Ng-hangout'
+  title: 'No te pierdas nuestro proximo Hangout'
   text: 'Cada dos semanas invitamos a un amigo de la comunidad para hablar desde sus experiencia en estos tiempos emocionantes.'
   url: 'https://www.youtube.com/channel/UCxs-DaSRmp8k23n79WjXndw?sub_confirmation=1'
   btn_text: 'Ir'
