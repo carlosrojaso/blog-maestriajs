@@ -11,7 +11,7 @@ menu_header:
     url: 'https://podcast.maestriajs.com'
     target: '_blank'
   - title: Cursos
-    url: 'https://www.maestriajs.com/'
+    url: 'https://bootcampwithus.usefedora.com'
     target: '_blank'
 # ==============================================================
 # Menu Footer
@@ -26,7 +26,7 @@ menu_footer:
     url: 'https://podcast.maestriajs.com/'
     target: '_blank'
   - title: Cursos
-    url: 'https://www.maestriajs.com/'
+    url: 'https://bootcampwithus.usefedora.com'
     target: '_blank'
   - title: Autores
     url: '/blog/authors'
