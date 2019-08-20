@@ -4,14 +4,14 @@ menu_header:
   - title: Blog
     url: '/blog'
     target: '_self'
-  - title: Youtube
-    url: 'https://www.youtube.com/channel/UCxs-DaSRmp8k23n79WjXndw?sub_confirmation=1'
+  - title: React
+    url: 'https://react-classroom.com/'
     target: '_blank'
-  - title: Podcast
-    url: 'https://podcast.maestriajs.com'
+  - title: VueJS
+    url: 'https://vue-classroom.com/'
     target: '_blank'
-  - title: Cursos
-    url: 'https://bootcampwithus.usefedora.com'
+  - title: 'Podcast'
+    url: 'https://podcast.maestriajs.com/'
     target: '_blank'
 # ==============================================================
 # Menu Footer
