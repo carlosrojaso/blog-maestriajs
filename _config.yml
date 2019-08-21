@@ -11,9 +11,9 @@ pwa_enabled: 0
 ads_enabled: 0
 push_notifications: 1
 google_optimize: 0
-google_cse: 1
-google_tagmanager: 1
-hello_bar_enabled: 1
+google_cse: 0
+google_tagmanager: 0
+hello_bar_enabled: 0
 
 timezone: "America/Bogota"
 
