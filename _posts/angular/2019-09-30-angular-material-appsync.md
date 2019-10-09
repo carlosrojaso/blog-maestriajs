@@ -2,7 +2,7 @@
 layout: post
 title: "Angular Material + Appsync."
 keywords: "AWS Appsync, Angular, Material"
-date: 2019-10-01
+date: 2019-10-09
 tags: [angular]
 categories: angular
 author: carlosrojas
@@ -44,78 +44,27 @@ Para instalarlo, Nos vamos a ubicar en la raiz de nuestro proyecto y ejecutar en
 $ npm install -g @aws-amplify/cli
 ````
 
-{% include blog/subscribe.html %}
+A partir de acá deberas seguir los pasos para saber como implementar un servicio que tome los datos desde [AppSync](https://blog.ng-classroom.com/blog/angular/angular-aws-appsync-graphql/).
 
-## Implementando AWS Appsync en Angular
-
-Primero, vamos a crear nuestro nuevo proyecto en Angular con el CLI. 
+Debemos utilizar el siguiente Schema:
 
 ````
-$npm install -g @angular/cli
-$ng new awsappsync
-````
-
-Luego, vamos a empezar a conectar appsync.
-
-````
-$ amplify init
-````
-
-La herramienta te detecta la mayoria de las cosas, entonces, muchas cosas por defecto estan bien.
-
-<amp-img width="1160" height="442" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ngclassroom-8ba81.appspot.com/o/posts%2F2019-08-240-conectar-angular-aws-appsync-graphql%2FScreen%20Shot%202019-08-19%20at%204.25.15%20PM.png?alt=media&token=e4f15ab9-6a3e-45dc-8b07-47d064e8c3a4"></amp-img>
-
-Luego, tenemos que entrar en AWS y crear un `API` en la consola de `AWS Appsync`.
-
-<amp-img width="1024" height="554" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ngclassroom-8ba81.appspot.com/o/posts%2F2019-08-240-conectar-angular-aws-appsync-graphql%2FScreen%20Shot%202019-08-21%20at%206.07.17%20AM.png?alt=media&token=1bc9c18e-0bb3-4e98-981a-c07f351c9a5d"></amp-img>
-
-y tengo un esquema asi:
-
-```js
-input CreateMyTestModelInput {
-	title: String
+input CreateTodoInput {
+	id: ID
+	name: String!
+	description: String
 }
 
-input DeleteMyTestModelInput {
-	id: ID!
+input DeleteTodoInput {
+	id: ID
 }
 
-type Mutation {
-	createMyTestModel(input: CreateMyTestModelInput!): MyTestModel
-	updateMyTestModel(input: UpdateMyTestModelInput!): MyTestModel
-	deleteMyTestModel(input: DeleteMyTestModelInput!): MyTestModel
-}
-
-type MyTestModel {
-	id: ID!
-	title: String
-}
-
-type MyTestModelConnection {
-	items: [MyTestModel]
-	nextToken: String
-}
-
-type Query {
-	getMyTestModel(id: ID!): MyTestModel
-	listMyTestModels(filter: TableMyTestModelFilterInput, limit: Int, nextToken: String): MyTestModelConnection
-}
-
-type Subscription {
-	onCreateMyTestModel(id: ID, title: String): MyTestModel
-		@aws_subscribe(mutations: ["createMyTestModel"])
-	onUpdateMyTestModel(id: ID, title: String): MyTestModel
-		@aws_subscribe(mutations: ["updateMyTestModel"])
-	onDeleteMyTestModel(id: ID, title: String): MyTestModel
-		@aws_subscribe(mutations: ["deleteMyTestModel"])
-}
-
-input TableBooleanFilterInput {
+input ModelBooleanFilterInput {
 	ne: Boolean
 	eq: Boolean
 }
 
-input TableFloatFilterInput {
+input ModelFloatFilterInput {
 	ne: Float
 	eq: Float
 	le: Float
@@ -127,7 +76,7 @@ input TableFloatFilterInput {
 	between: [Float]
 }
 
-input TableIDFilterInput {
+input ModelIDFilterInput {
 	ne: ID
 	eq: ID
 	le: ID
@@ -140,7 +89,7 @@ input TableIDFilterInput {
 	beginsWith: ID
 }
 
-input TableIntFilterInput {
+input ModelIntFilterInput {
 	ne: Int
 	eq: Int
 	le: Int
@@ -152,12 +101,12 @@ input TableIntFilterInput {
 	between: [Int]
 }
 
-input TableMyTestModelFilterInput {
-	id: TableIDFilterInput
-	title: TableStringFilterInput
+enum ModelSortDirection {
+	ASC
+	DESC
 }
 
-input TableStringFilterInput {
+input ModelStringFilterInput {
 	ne: String
 	eq: String
 	le: String
@@ -170,79 +119,235 @@ input TableStringFilterInput {
 	beginsWith: String
 }
 
-input UpdateMyTestModelInput {
+type ModelTodoConnection {
+	items: [Todo]
+	nextToken: String
+}
+
+input ModelTodoFilterInput {
+	id: ModelIDFilterInput
+	name: ModelStringFilterInput
+	description: ModelStringFilterInput
+	and: [ModelTodoFilterInput]
+	or: [ModelTodoFilterInput]
+	not: ModelTodoFilterInput
+}
+
+type Mutation {
+	createTodo(input: CreateTodoInput!): Todo
+	updateTodo(input: UpdateTodoInput!): Todo
+	deleteTodo(input: DeleteTodoInput!): Todo
+}
+
+type Query {
+	getTodo(id: ID!): Todo
+	listTodos(filter: ModelTodoFilterInput, limit: Int, nextToken: String): ModelTodoConnection
+}
+
+type Subscription {
+	onCreateTodo: Todo
+		@aws_subscribe(mutations: ["createTodo"])
+	onUpdateTodo: Todo
+		@aws_subscribe(mutations: ["updateTodo"])
+	onDeleteTodo: Todo
+		@aws_subscribe(mutations: ["deleteTodo"])
+}
+
+type Todo {
 	id: ID!
-	title: String
+	name: String!
+	description: String
 }
-```
 
-Ok, Ahora vuelvo a mi proyecto en Angular y agrego en el `main.ts`.
-
-```ts
-...
-import Amplify from 'aws-amplify';
-import amplify from './aws-exports';
-Amplify.configure(amplify);
-...
-```
-
-Luego, debo ir al `src/tsconfig.app.json` y al `tsconfig.json`y agregar:
-
-```js
-{
-...
-  "compilerOptions": {
-    "types": ["node"]
-  }
-...
+input UpdateTodoInput {
+	id: ID!
+	name: String
+	description: String
 }
-```
-
-Esto debido a los tipos que deben usar las dependencias. Adicionalmente, tenemos que agregar algo a los `src/polyfills` para que el navegador entienda algunas cosas de las dependencias.
-
-```ts
-import * as process from 'process';
-window['process'] = process;
-declare global {
-  interface Window { global: any; }
-}
-window.global = window;
-```
-
-Ahora, instalemos las otras dependencias:
-
-````
-$ npm install --save aws-amplify aws-amplify-angular process @types/node @aws-amplify/api
 ````
 
-y pasamos a ejecutar la conexión del SDK con nuestro proyecto.
+Posiblemente despues de actualizar el Schema en `AWS Appsync` vas a tener que ejecutar
 
-```
-amplify add codegen --apiId zk4sm6xxxxxxxx
-```
+````
+$amplify codegen
+````
 
-donde `zk4sm6xxxxxxxx` es el identificador del API que creaste en appsync.
+en tu proyecto de Angular para que se actualicen los documentos de GraphQL en tu App.
 
-<amp-img width="1158" height="340" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ngclassroom-8ba81.appspot.com/o/posts%2F2019-08-240-conectar-angular-aws-appsync-graphql%2FScreen%20Shot%202019-08-21%20at%206.07.17%20AM.png?alt=media&token=1bc9c18e-0bb3-4e98-981a-c07f351c9a5d"></amp-img>
+{% include blog/subscribe.html %}
 
+## Implementando Material en Angular
 
-Con esto el `CLI` nos ha creado todo lo necesario en nuestro proyecto de Angular y nos ha generado un Servicio. Vamos a utilizar ese servicio para eso lo agrego al `src/app/app.module.ts` 
+Lo primero es desde un proyecto en Angular, ejecutar:
+
+````
+$ ng add @angular/material
+````
+
+Con esto el Angular CLI agregara todo lo necesario. Ahora tenemos que agregar
 
 ```ts
+
 ...
+
 import { APIService } from './API.service';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatButtonModule } from '@angular/material/button';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatListModule } from '@angular/material/list';
+import { MatCardModule } from '@angular/material/card';
+import { MatDialogModule } from '@angular/material/dialog';
+import { TodoDialogComponent } from './todo-dialog/todo-dialog.component';
+import { MatFormFieldModule, MatInputModule } from '@angular/material';
 
+@NgModule({
 ...
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    FormsModule,
+    MatButtonModule,
+    MatToolbarModule,
+    MatListModule,
+    MatCardModule,
+    MatDialogModule,
+    MatFormFieldModule,
+    MatDialogModule,
+    MatInputModule,
+    ReactiveFormsModule
+  ],
+  providers: [APIService],
+  bootstrap: [AppComponent],
 ...
-providers: [APIService],
-...
+})
+export class AppModule { }
 ```
 
-y lo voy a utilizar en el `src/app.component.ts`
+Con esto ya tenemos algunos componentes de Material que vamos a utilizar ademas de estar usando el `APIService` que `Amplify CLI` crea por nosotros.
+
+Luego, vamos a crear un nuevo componente `TodoDialog` el cual vamos a utilizar para agregar nuevos items.
+
+````
+$ ng generate component TodoDialog 
+````
+
+y vamos a agregar lo siguiente en su template
+
+```html
+{%raw%}
+<h2 mat-dialog-title>{{description}}</h2>
+
+
+<mat-dialog-content [formGroup]="form">
+    <mat-form-field>
+        <input matInput
+                placeholder="Task Name"
+               formControlName="name">
+    </mat-form-field>
+
+    <mat-form-field>
+        <textarea matInput placeholder="Description"
+            formControlName="description">
+        </textarea>
+    </mat-form-field>
+</mat-dialog-content>
+
+<mat-dialog-actions>
+
+    <button class="mat-raised-button"
+            (click)="close()">
+        Close
+    </button>
+
+    <button class="mat-raised-button mat-primary"
+            (click)="save()">
+        Save
+    </button>
+
+</mat-dialog-actions>
+{%endraw%}
+```
+
+y en el controlador
 
 ```ts
-import { Component } from '@angular/core';
-import { APIService, CreateMyTestModelInput } from './API.service';
+import { Component, OnInit, Inject } from '@angular/core';
+import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material';
+import { FormBuilder, Validators, FormGroup } from '@angular/forms';
+
+@Component({
+  selector: 'app-todo-dialog',
+  templateUrl: './todo-dialog.component.html',
+  styleUrls: ['./todo-dialog.component.scss']
+})
+export class TodoDialogComponent {
+
+  form: FormGroup;
+  description: string;
+
+  constructor(
+    private fb: FormBuilder,
+    private dialogRef: MatDialogRef<TodoDialogComponent>,
+    @Inject(MAT_DIALOG_DATA) {id, name, description}: any) {
+    this.description = description;
+
+    this.form = fb.group({
+      id: [id],
+      name: [name, Validators.required],
+      description: [description, Validators.required]
+    });
+  }
+
+  save() {
+    this.dialogRef.close(this.form.value);
+  }
+
+  close() {
+    this.dialogRef.close();
+  }
+
+}
+```
+
+Con esto tendremos un `dialog` que nos permitira agregar tareas.
+
+Ahora, modificaremos nuestro `app.component.html`
+
+```html
+{%raw%}
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <span>ngNotesApp</span>
+  </mat-toolbar-row>
+</mat-toolbar>
+<mat-card *ngFor="let item of notes" class="example-card">
+  <mat-card-header>
+    <mat-card-title>{{ item.name }}</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <p>
+      {{ item.description }}
+    </p>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-button (click)="deleteNote(item.id)">DELETE</button>
+    <button mat-button (click)="openDialog(item)">EDIT</button>
+  </mat-card-actions>
+</mat-card>
+<button mat-fab (click)="openDialog()" class="md-fab-bottom-right">+</button>
+<router-outlet></router-outlet>
+{%endraw%}
+```
+
+y el controlador
+
+```ts
+import { Component, ChangeDetectorRef } from '@angular/core';
+import { APIService, CreateTodoInput, DeleteTodoInput, UpdateTodoInput } from './API.service';
+
+import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
+import { TodoDialogComponent } from './todo-dialog/todo-dialog.component';
 
 @Component({
   selector: 'app-root',
@@ -250,20 +355,112 @@ import { APIService, CreateMyTestModelInput } from './API.service';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'awsappsync';
+  title = 'graphqlappsync';
+  notes: Array<CreateTodoInput> = [];
 
-  constructor(apiService: APIService) {
-    const allData = apiService.CreateMyTestModel(<CreateMyTestModelInput>{'title': 'Hello, world!'}).then(
-      (response) => {
-        console.log('response >>>', response);
+  constructor( private apiService: APIService, private cd: ChangeDetectorRef, private dialog: MatDialog) {
+    this.updateNotesList();
+  }
+
+  save(newItem: CreateTodoInput) {
+    this.apiService.CreateTodo(newItem).then(
+      (resolve) => {
+        this.updateNotesList();
       }
+    ).catch(
+      (error) => {
+        console.log('error >>>', error);
+      }
+    );
+  }
+
+  deleteNote(itemId: string) {
+    const itemToDelete: DeleteTodoInput = {
+      id: itemId
+    };
+
+    this.apiService.DeleteTodo(itemToDelete).then(
+      (resolve) => {
+        this.updateNotesList();
+      }
+    ).catch(
+      (error) => {
+        console.log('error >>>', error);
+      }
+    );
+  }
+
+  updateNote(itemToUpdate: any) {
+    this.apiService.UpdateTodo(itemToUpdate).then(
+      (resolve) => {
+        this.updateNotesList();
+      }
+    ).catch(
+      (error) => {
+        console.log('error >>>', error);
+      }
+    );
+  }
+
+  updateNotesList() {
+    this.notes = [];
+    this.apiService.ListTodos().then(
+      (resolve) => {
+        resolve.items.forEach(
+          (item) => {
+            this.notes.push(item);
+          }
+        );
+        this.cd.detectChanges();
+      }
+    ).catch(
+      (error) => {
+        console.log('error >>>', error);
+      }
+    );
+  }
+
+  openDialog(item?: UpdateTodoInput) {
+    const dialogConfig = new MatDialogConfig();
+
+    dialogConfig.data = {
+        id: '',
+        name: '',
+        description: ''
+    };
+
+    if (item) {
+      dialogConfig.data = {
+        id: item.id,
+        name: item.name,
+        description: item.description
+      };
+    }
+
+    const dialogRef = this.dialog.open(TodoDialogComponent, dialogConfig);
+
+    dialogRef.afterClosed().subscribe(
+        (data) => {
+          if (data) {
+            const newItem: CreateTodoInput = {
+              name: data.name,
+              description: data.description
+            };
+
+            if (item) {
+              this.updateNote(data);
+            } else {
+              this.save(newItem);
+            }
+          }
+        }
     );
   }
 }
 ```
 
-y debes observar algo como.
+Y con esto ya deberiamos poder ingresar data nueva a nuestro proyecto en `AWS Appsync`.
 
-<amp-img width="1024" height="397" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ngclassroom-8ba81.appspot.com/o/posts%2F2019-08-240-conectar-angular-aws-appsync-graphql%2FScreen%20Shot%202019-08-21%20at%206.58.17%20AM.png?alt=media&token=b73e080e-92e5-4c44-9258-fe5bdb927e8b"></amp-img>
+<amp-img width="1050" height="611" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ngclassroom-8ba81.appspot.com/o/posts%2F2019-09-30-angular-material-appsync%2FScreen%20Shot%202019-10-09%20at%207.22.32%20AM.png?alt=media&token=75b6ef26-b925-467c-a178-41cb9109b740"></amp-img>
 
 Bueno eso es todo por ahora. Espero sea de utilidad :)
