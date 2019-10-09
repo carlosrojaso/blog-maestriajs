@@ -463,4 +463,6 @@ Y con esto ya deberiamos poder ingresar data nueva a nuestro proyecto en `AWS Ap
 
 <amp-img width="1050" height="611" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ngclassroom-8ba81.appspot.com/o/posts%2F2019-09-30-angular-material-appsync%2FScreen%20Shot%202019-10-09%20at%207.22.32%20AM.png?alt=media&token=75b6ef26-b925-467c-a178-41cb9109b740"></amp-img>
 
+Si este contenido te parece útil y me quieres ayudar a hacer mas considera apoyarme en [Patreon](https://www.patreon.com/carlosrojas_o).
+
 Bueno eso es todo por ahora. Espero sea de utilidad :)
