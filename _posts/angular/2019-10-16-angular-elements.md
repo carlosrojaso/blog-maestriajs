@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "Angular Elements."
+title: "Crea componentes nativos con Angular."
 keywords: "Web Components, Angular, Elements"
-date: 2019-10-16
+date: 2019-10-21
 tags: [angular]
 categories: angular
 author: carlosrojas
@@ -56,13 +56,163 @@ Como dijimos anteriormente Angular provee la función `createCustomElement()` pa
 
 ## Implementando Angular Elements
 
-Lo primero es desde un proyecto en Angular, ejecutar:
+Lo primero es crear un proyecto en Angular.
 
 ````
-$ ng add @angular/material
+$ ng new angular-elements-demo
+$ cd angular-elements-demo
 ````
 
+y crearemos un componente nuevo, llamado `HelloWorld` para ser originales.
 
+````
+$ng g c HelloWorld
+````
+
+y vamos a agregar el paquete de `Angular Elements` y 
+
+````
+$ ng add @angular/elements
+````
+
+y el paquete de polyfills `webcomponentsjs` para ampliar el soporte del componente a más navegadores.
+
+````
+$ npm install @webcomponents/webcomponentsjs
+````
+
+Con esto ya tenemos una buena base para continuar.
+
+Ahora vamos a nuestro componente `HelloWorld` y vamos a agregar un poco de logica.
+
+**hello-world.component.html**
+
+```html
+<div>
+    <button (click)="showInfo()">Mostrar con Evento</button>
+</div>
+```
+
+**hello-world.component.ts**
+
+```ts
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+
+@Component({
+  // selector: 'app-hello-world',
+  templateUrl: './hello-world.component.html',
+  styleUrls: ['./hello-world.component.scss']
+})
+export class HelloWorldComponent implements OnInit {
+  @Input() rname;
+  @Input() occupation;
+  @Input() location;
+
+  @Output() display = new EventEmitter();
+  constructor() { }
+  showInfo() {
+    this.display.emit(`Nombre: ${this.rname}
+    Ocupacion: ${this.occupation}
+    Localizado en: ${this.location}`);
+  }
+  ngOnInit() {
+  }
+}
+```
+
+Acá mira que hemos comentado la linea del `selector` ya que como vamos a utilizar este componente como un `Custom Element` lo hacemos para no confundir a `Angular`.
+
+Luego, Vamos a eliminar cosas que no vamos a utilizar que hacen parte de un proyecto en Angular como es el `AppComponent` y solo dejaremos el `app.module.ts` y lo modificaremos de la siguiente manera.
+
+```ts
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule, Injector } from '@angular/core';
+import { createCustomElement } from '@angular/elements';
+
+import { HelloWorldComponent } from './hello-world/hello-world.component';
+
+@NgModule({
+  declarations: [
+    HelloWorldComponent
+  ],
+  imports: [
+    BrowserModule
+  ],
+  entryComponents: [HelloWorldComponent],
+  providers: []
+})
+export class AppModule {
+  constructor(injector: Injector) {
+    const custom = createCustomElement(HelloWorldComponent, {injector});
+    customElements.define('app-hello-world', custom);
+  }
+  ngDoBootstrap() {}
+}
+```
+
+Acá puedes ver que estamos usando la función `createCustomElement()` para volver nuestro componente `HelloWorld` un componente nativo estandar y le pasamos el `injector` que es una forma de resolver dependencias en `Angular`.
+
+Tambien vemos `customElements.define()` que es como registramos nuestro componente y usamos `ngDoBootstrap()` que es una manera manual de inicializar nuestra App. Con esto ya tendriamos todo lo necesario para usar nuestro componente como un `CustomElement` pero queremos que sea reutilizable en cualquier App (Esa es la idea).
+
+Entonces, para esto vamos a tomar todos los archivos genera el `$ng build` y concatenarlos en un archivo que se llame `angularapp.js` y sea facilmente importado en otra app.
+
+Para esto desde tu terminal ejecutas el siguiente comando:
+
+````
+$ ng build angular-elements-demo --prod --output-hashing=none && cat dist/angular-elements-demo/runtime-es5.js dist/angular-elements-demo/polyfills-es5.js dist/angular-elements-demo/scripts.js dist/angular-elements-demo/main-es5.js > preview/angularapp.js
+````
+
+o para evitar hacer esto cada vez que realizas un cambio volverlo un script como el `custombuild.sh` que encontraras en el repo del demo.
+
+Listo, crearemos una carpeta `preview` al mismo nivel de la raiz de nuestro proyecto y ejecutamos el comando. Deberias tener el archivo `preview/angularapp.js`.
+
+Por último, agregaremos un `preview/index.html` donde usaremos este nuevo componente.
+
+**preview/index.html**
+
+```html
+{% raw %}
+<html>
+
+
+<body>
+    <app-hello-world rname="Carlos Rojas" occupation="Dev" location="Colombia"></app-hello-world>
+
+    <script src="./angularapp.js"></script>
+</body>
+<script>
+    const component = document.querySelector('app-hello-world');
+    component.addEventListener('display', (event) => {
+        console.log("in event!");
+        alert(event.detail);
+    });
+</script>
+
+</html>
+{% endraw %}
+```
+
+y usamos `vanila js` para poder interactuar con nuestro componente `app-hello-world`.
+
+Para probarlo voy a instalar un servidor local.
+
+````
+$ npm install -g serve
+````
+
+y ejecutamos
+
+````
+$ serve -S preview
+````
+
+<amp-img width="977" height="548" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ngclassroom-8ba81.appspot.com/o/posts%2F2019-10-16-angular-elements%2FScreen%20Shot%202019-10-20%20at%2010.56.09%20AM.png?alt=media&token=45b9f9b7-8078-49f2-8f39-671c30d50c9c"></amp-img>
+
+Puedes encontrar mas info acá.
+
+[https://angular.io/guide/elements](https://angular.io/guide/elements)
+
+[https://blog.bitsrc.io/using-angular-elements-why-and-how-part-1-35f7fd4f0457](https://blog.bitsrc.io/using-angular-elements-why-and-how-part-1-35f7fd4f0457)
 
 Si este contenido te parece útil y me quieres ayudar a hacer mas considera apoyarme en [Patreon](https://www.patreon.com/carlosrojas_o).
 
