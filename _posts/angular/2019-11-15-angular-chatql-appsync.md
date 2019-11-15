@@ -2,7 +2,7 @@
 layout: post
 title: "ChatQL con Appsync."
 keywords: "AWS Appsync, Angular, Material"
-date: 2019-11-12
+date: 2019-11-15
 tags: [angular]
 categories: angular
 author: carlosrojas
@@ -27,450 +27,183 @@ versions:
 
 ## ¿ Que es ChatQL ?
 
-`ChatQL` es una App de Angular.
+`ChatQL` es una App de ejemplo en Angular realizada por el equipo de `AWS Appsync` la cual es el `starter` para un chat en tiempo real que podemos utilizar como adaptarla a nuestras necesidades utilizando la infraestructura de `Amazon`.
 
 <amp-youtube width="560" 
             height="315"
             layout="responsive"
             data-videoid="F2Oc_8R73Ao"></amp-youtube>
 
-## ¿ Que es AWS Appsync ?
+Algunas de sus caracteristicas son:
 
-`AWS Appsync` es una solución de Amazon que te permite crear APIs facilmente los cuales vienen listos para soportar `GraphQL`.
+- Service Worker (PWA).
+- GraphQL.
+- Offline.
+- Auth.
 
-Este servicio te permite crear una cuenta gratis [acá](https://aws.amazon.com/appsync/).
+## Arquitectura.
 
-## ¿ Que es Amplify CLI ?
+La arquitectura global de la app es como podemos en la grafica.
 
-Es la herramienta de comandos que podemos instalar en nuestros computadores para poder integrar facilmente nuestras Apps Web y Moviles con los AWS Services.
+<amp-img width="1024" height="634" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ngclassroom-8ba81.appspot.com/o/posts%2F2019-11-15-angular-chatql-appsync%2F1.png?alt=media&token=ac57604d-192d-4d5b-ab81-aedadde16906"></amp-img>
 
-Para instalarlo, Nos vamos a ubicar en la raiz de nuestro proyecto y ejecutar en una terminal:
+Vemos que esta utilizando `cognito` un sistema de autenticación de `AWS` el cual envia un token y nos permite empezar poder realizar operaciones a través de `GraphQL` con `AWS Appsync` y los almacena en su sistema `DynamoDB`.
 
-````
-$ npm install -g @aws-amplify/cli
-````
+## Instalando el demo.
 
-A partir de acá deberas seguir los pasos para saber como implementar un servicio que tome los datos desde [AppSync](https://blog.ng-classroom.com/blog/angular/angular-aws-appsync-graphql/).
+El proceso de instalación esta bien descrito [acá](https://github.com/aws-samples/aws-mobile-appsync-chat-starter-angular#getting-started) por lo tanto me saltare este paso.
 
-Debemos utilizar el siguiente Schema:
+También te puedes ayudar con este [post](/blog/angular/angular-material-appsync/) y [este](/blog/angular/angular-aws-appsync-graphql/).
 
-````
-input CreateTodoInput {
-	id: ID
-	name: String!
-	description: String
-}
+## Entendiendo la App.
 
-input DeleteTodoInput {
-	id: ID
-}
+Inicialmente puedes ver la App dividida en 4 grandes bloques `home`, `nav`, `footer` y el modulo `chat-app`.
 
-input ModelBooleanFilterInput {
-	ne: Boolean
-	eq: Boolean
-}
+<amp-img width="713" height="390" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ngclassroom-8ba81.appspot.com/o/posts%2F2019-11-15-angular-chatql-appsync%2F4.png?alt=media&token=08a43be5-e042-4b44-8d19-a6e40c200440"></amp-img>
 
-input ModelFloatFilterInput {
-	ne: Float
-	eq: Float
-	le: Float
-	lt: Float
-	ge: Float
-	gt: Float
-	contains: Float
-	notContains: Float
-	between: [Float]
-}
-
-input ModelIDFilterInput {
-	ne: ID
-	eq: ID
-	le: ID
-	lt: ID
-	ge: ID
-	gt: ID
-	contains: ID
-	notContains: ID
-	between: [ID]
-	beginsWith: ID
-}
-
-input ModelIntFilterInput {
-	ne: Int
-	eq: Int
-	le: Int
-	lt: Int
-	ge: Int
-	gt: Int
-	contains: Int
-	notContains: Int
-	between: [Int]
-}
-
-enum ModelSortDirection {
-	ASC
-	DESC
-}
-
-input ModelStringFilterInput {
-	ne: String
-	eq: String
-	le: String
-	lt: String
-	ge: String
-	gt: String
-	contains: String
-	notContains: String
-	between: [String]
-	beginsWith: String
-}
-
-type ModelTodoConnection {
-	items: [Todo]
-	nextToken: String
-}
-
-input ModelTodoFilterInput {
-	id: ModelIDFilterInput
-	name: ModelStringFilterInput
-	description: ModelStringFilterInput
-	and: [ModelTodoFilterInput]
-	or: [ModelTodoFilterInput]
-	not: ModelTodoFilterInput
-}
-
-type Mutation {
-	createTodo(input: CreateTodoInput!): Todo
-	updateTodo(input: UpdateTodoInput!): Todo
-	deleteTodo(input: DeleteTodoInput!): Todo
-}
-
-type Query {
-	getTodo(id: ID!): Todo
-	listTodos(filter: ModelTodoFilterInput, limit: Int, nextToken: String): ModelTodoConnection
-}
-
-type Subscription {
-	onCreateTodo: Todo
-		@aws_subscribe(mutations: ["createTodo"])
-	onUpdateTodo: Todo
-		@aws_subscribe(mutations: ["updateTodo"])
-	onDeleteTodo: Todo
-		@aws_subscribe(mutations: ["deleteTodo"])
-}
-
-type Todo {
-	id: ID!
-	name: String!
-	description: String
-}
-
-input UpdateTodoInput {
-	id: ID!
-	name: String
-	description: String
-}
-````
-
-Posiblemente despues de actualizar el Schema en `AWS Appsync` vas a tener que ejecutar
-
-````
-$amplify codegen
-````
-
-en tu proyecto de Angular para que se actualicen los documentos de GraphQL en tu App.
-
-{% include blog/subscribe.html %}
-
-## Implementando Material en Angular
-
-Lo primero es desde un proyecto en Angular, ejecutar:
-
-````
-$ ng add @angular/material
-````
-
-Con esto el Angular CLI agregara todo lo necesario. Ahora tenemos que agregar
-
-```ts
-
-...
-
-import { APIService } from './API.service';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatButtonModule } from '@angular/material/button';
-import { MatToolbarModule } from '@angular/material/toolbar';
-import { MatListModule } from '@angular/material/list';
-import { MatCardModule } from '@angular/material/card';
-import { MatDialogModule } from '@angular/material/dialog';
-import { TodoDialogComponent } from './todo-dialog/todo-dialog.component';
-import { MatFormFieldModule, MatInputModule } from '@angular/material';
-
-@NgModule({
-...
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule,
-    FormsModule,
-    MatButtonModule,
-    MatToolbarModule,
-    MatListModule,
-    MatCardModule,
-    MatDialogModule,
-    MatFormFieldModule,
-    MatDialogModule,
-    MatInputModule,
-    ReactiveFormsModule
-  ],
-  providers: [APIService],
-  bootstrap: [AppComponent],
-...
-})
-export class AppModule { }
-```
-
-Con esto ya tenemos algunos componentes de Material que vamos a utilizar ademas de estar usando el `APIService` que `Amplify CLI` crea por nosotros.
-
-Luego, vamos a crear un nuevo componente `TodoDialog` el cual vamos a utilizar para agregar nuevos items.
-
-````
-$ ng generate component TodoDialog 
-````
-
-y vamos a agregar lo siguiente en su template
+Inicialmente se carga el componente `home` el cual permite realizar la autenticación con el componente
 
 ```html
-{%raw%}
-<h2 mat-dialog-title>{{description}}</h2>
-
-
-<mat-dialog-content [formGroup]="form">
-    <mat-form-field>
-        <input matInput
-                placeholder="Task Name"
-               formControlName="name">
-    </mat-form-field>
-
-    <mat-form-field>
-        <textarea matInput placeholder="Description"
-            formControlName="description">
-        </textarea>
-    </mat-form-field>
-</mat-dialog-content>
-
-<mat-dialog-actions>
-
-    <button class="mat-raised-button"
-            (click)="close()">
-        Close
-    </button>
-
-    <button class="mat-raised-button mat-primary"
-            (click)="save()">
-        Save
-    </button>
-
-</mat-dialog-actions>
-{%endraw%}
+<amplify-authenticator></amplify-authenticator>
 ```
 
-y en el controlador
+El cual lo hace parte de `Amplify`, y permite crear, autenticar y resetear usuarios.
 
-```ts
-import { Component, OnInit, Inject } from '@angular/core';
-import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material';
-import { FormBuilder, Validators, FormGroup } from '@angular/forms';
-
-@Component({
-  selector: 'app-todo-dialog',
-  templateUrl: './todo-dialog.component.html',
-  styleUrls: ['./todo-dialog.component.scss']
-})
-export class TodoDialogComponent {
-
-  form: FormGroup;
-  description: string;
-
-  constructor(
-    private fb: FormBuilder,
-    private dialogRef: MatDialogRef<TodoDialogComponent>,
-    @Inject(MAT_DIALOG_DATA) {id, name, description}: any) {
-    this.description = description;
-
-    this.form = fb.group({
-      id: [id],
-      name: [name, Validators.required],
-      description: [description, Validators.required]
-    });
-  }
-
-  save() {
-    this.dialogRef.close(this.form.value);
-  }
-
-  close() {
-    this.dialogRef.close();
-  }
-
-}
-```
-
-Con esto tendremos un `dialog` que nos permitira agregar tareas.
-
-Ahora, modificaremos nuestro `app.component.html`
+El componente `nav` basicamente es un pequeño componente de navegacion que nos permite loguearnos o desloguearnos.
 
 ```html
-{%raw%}
-<mat-toolbar color="primary">
-  <mat-toolbar-row>
-    <span>ngNotesApp</span>
-  </mat-toolbar-row>
-</mat-toolbar>
-<mat-card *ngFor="let item of notes" class="example-card">
-  <mat-card-header>
-    <mat-card-title>{{ item.name }}</mat-card-title>
-  </mat-card-header>
-  <mat-card-content>
-    <p>
-      {{ item.description }}
-    </p>
-  </mat-card-content>
-  <mat-card-actions>
-    <button mat-button (click)="deleteNote(item.id)">DELETE</button>
-    <button mat-button (click)="openDialog(item)">EDIT</button>
-  </mat-card-actions>
-</mat-card>
-<button mat-fab (click)="openDialog()" class="md-fab-bottom-right">+</button>
-<router-outlet></router-outlet>
-{%endraw%}
+{% raw %}
+  <ul class="nav navbar-nav">
+    <li *ngIf="isLoggedIn" class="nav-item">
+        <button class="btn btn-primary" (click)="signOut()">Sign Out <i class="ion-log-in" data-pack="default" data-tags="sign in"></i></button>
+    </li>
+  </ul>
+{% endraw %}
 ```
 
-y el controlador
+El componente `footer` es simplemente un componente que muestra la información de píe de pagina.
+
+```html
+{% raw %}
+  <nav class="navbar fixed-bottom navbar-light bg-light">
+    <div class="container">
+      <span class="text-muted mx-auto">
+          Powered by <img class="awslogo mx-1" width='35px' src="../assets/img/AWS_logo_RGB.png">AppSync
+      </span>
+    </div>
+  </nav>
+{% endraw %}
+```
+
+y por último tenemos el bloque de `chat-app` que es un modulo con distintos bloques en su interior.
+
+<amp-img width="1024" height="392" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ngclassroom-8ba81.appspot.com/o/posts%2F2019-11-15-angular-chatql-appsync%2F3.png?alt=media&token=ace2387b-60a1-4905-9762-9f3f35158df3"></amp-img>
+
+Con `./src/app/chat-app/chat-user-list` se genera una lista de usuarios que los demas pueden ver para comenzar una nueva conversación. Con `./src/app/chat-app/chat-convo-list` puede retornar a una conversacion existente. Con `./src/app/chat-app/chat-message-view/` tienes una suscripción de los mensajes de una conversación.
+
+Lo importante en fijarse en la implementación es como hacen las mutaciones y como realizan los queries para que funcionen `offline`.
+
+Por ejemplo en `./src/app/chat-app/chat-message-view/` traén la informacion de los mensajes de esta manera.
 
 ```ts
-import { Component, ChangeDetectorRef } from '@angular/core';
-import { APIService, CreateTodoInput, DeleteTodoInput, UpdateTodoInput } from './API.service';
-
-import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
-import { TodoDialogComponent } from './todo-dialog/todo-dialog.component';
-
-@Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
-})
-export class AppComponent {
-  title = 'graphqlappsync';
-  notes: Array<CreateTodoInput> = [];
-
-  constructor( private apiService: APIService, private cd: ChangeDetectorRef, private dialog: MatDialog) {
-    this.updateNotesList();
-  }
-
-  save(newItem: CreateTodoInput) {
-    this.apiService.CreateTodo(newItem).then(
-      (resolve) => {
-        this.updateNotesList();
-      }
-    ).catch(
-      (error) => {
-        console.log('error >>>', error);
-      }
-    );
-  }
-
-  deleteNote(itemId: string) {
-    const itemToDelete: DeleteTodoInput = {
-      id: itemId
-    };
-
-    this.apiService.DeleteTodo(itemToDelete).then(
-      (resolve) => {
-        this.updateNotesList();
-      }
-    ).catch(
-      (error) => {
-        console.log('error >>>', error);
-      }
-    );
-  }
-
-  updateNote(itemToUpdate: any) {
-    this.apiService.UpdateTodo(itemToUpdate).then(
-      (resolve) => {
-        this.updateNotesList();
-      }
-    ).catch(
-      (error) => {
-        console.log('error >>>', error);
-      }
-    );
-  }
-
-  updateNotesList() {
-    this.notes = [];
-    this.apiService.ListTodos().then(
-      (resolve) => {
-        resolve.items.forEach(
-          (item) => {
-            this.notes.push(item);
-          }
-        );
-        this.cd.detectChanges();
-      }
-    ).catch(
-      (error) => {
-        console.log('error >>>', error);
-      }
-    );
-  }
-
-  openDialog(item?: UpdateTodoInput) {
-    const dialogConfig = new MatDialogConfig();
-
-    dialogConfig.data = {
-        id: '',
-        name: '',
-        description: ''
-    };
-
-    if (item) {
-      dialogConfig.data = {
-        id: item.id,
-        name: item.name,
-        description: item.description
-      };
-    }
-
-    const dialogRef = this.dialog.open(TodoDialogComponent, dialogConfig);
-
-    dialogRef.afterClosed().subscribe(
-        (data) => {
-          if (data) {
-            const newItem: CreateTodoInput = {
-              name: data.name,
-              description: data.description
-            };
-
-            if (item) {
-              this.updateNote(data);
-            } else {
-              this.save(newItem);
-            }
-          }
+loadMessages(event = null, fetchPolicy = 'cache-and-network') {
+    if (event) { event.stopPropagation(); }
+    const innerObserable = this.appsync.hc().then(client => {
+      console.log('chat-message-view: loadMessages', this._conversation.id, fetchPolicy);
+      const options = {
+        query: getConversationMessages,
+        fetchPolicy: fetchPolicy,
+        variables: {
+          conversationId: this._conversation.id,
+          first: constants.messageFirst
         }
-    );
+      };
+
+      const observable: ObservableQuery<MessagesQuery> = client.watchQuery(options);
+
+      observable.subscribe(({data}) => {
+        console.log('chat-message-view: subscribe', data);
+        if (!data) { return console.log('getConversationMessages - no data'); }
+        const newMessages = data.allMessageConnection.messages;
+        this.messages = [...newMessages].reverse();
+        this.nextToken = data.allMessageConnection.nextToken;
+        console.log('chat-message-view: nextToken is now', this.nextToken ? 'set' : 'null');
+      });
+
+      this.subscription = observable.subscribeToMore({
+        document: subscribeToNewMessages,
+        variables: { 'conversationId': this._conversation.id },
+        updateQuery: (prev: MessagesQuery, {subscriptionData: {data: {subscribeToNewMessage: message }}}) => {
+          console.log('subscribeToMore - updateQuery:', message);
+          return unshiftMessage(prev, message);
+        }
+      });
+      this.observedQuery = observable;
+      return observable;
+    });
+    return from(innerObserable);
   }
-}
 ```
 
-Y con esto ya deberiamos poder ingresar data nueva a nuestro proyecto en `AWS Appsync`.
+basicamente hidratan el `client` con `this.appsync.hc().then()` y luego realizan el query que obtiene un `ObservableQuery` que luego podemos utilizar en nuestra UI.
 
-<amp-img width="1050" height="611" layout="responsive" src="https://firebasestorage.googleapis.com/v0/b/ngclassroom-8ba81.appspot.com/o/posts%2F2019-09-30-angular-material-appsync%2FScreen%20Shot%202019-10-09%20at%207.22.32%20AM.png?alt=media&token=75b6ef26-b925-467c-a178-41cb9109b740"></amp-img>
+También en `./src/app/chat-app/chat-input/chat-input.component.ts` realizan la creación de un mensajes que soporta el `offline`.
 
+```ts
+createNewMessage() {
+    if (!this.message || this.message.trim().length === 0) {
+      this.message = '';
+      return;
+    }
+    const id = `${new Date().toISOString()}_${uuid()}`;
+    const message: Message = {
+      conversationId: this.conversation.id,
+      content: this.message,
+      createdAt: id,
+      sender: this.senderId,
+      isSent: false,
+      id : id
+    };
+    console.log('new message', message);
+    this.message = '';
+    this.appsync.hc().then(client => {
+      client.mutate({
+        mutation: createMessage,
+        variables: message,
+
+        optimisticResponse: () => ({
+          createMessage: {
+            ...message,
+            __typename: 'Message'
+          }
+        }),
+
+        update: (proxy, {data: { createMessage: _message }}) => {
+
+          const options = {
+            query: getConversationMessages,
+            variables: { conversationId: this.conversation.id, first: constants.messageFirst }
+          };
+
+          const data = proxy.readQuery(options);
+          const _tmp = unshiftMessage(data, _message);
+          proxy.writeQuery({...options, data: _tmp});
+        }
+      }).then(({data}) => {
+        console.log('mutation complete', data);
+      }).catch(err => console.log('Error creating message', err));
+    });
+    Analytics.record('Chat MSG Sent');
+  }
+```
+
+Acá podemos observar que igual hidratan el `client` y luego realizan la mutación realizando una respuesta `optimista` y realizando las actualizaciones que deberia hacer esa mutación en nuestro local.
+
+Creo que con este entendimiento basico puedes comenzar a explorar este ejemplo que creo es de los pocos que pude encontrar para Angular con gran complejidad.
 
 ## Referencias
+[https://aws-amplify.github.io/docs/js/api#offline-mutations](https://aws-amplify.github.io/docs/js/api#offline-mutations)
+
 [https://aws.amazon.com/es/blogs/mobile/building-a-serverless-real-time-chat-application-with-aws-appsync/](https://aws.amazon.com/es/blogs/mobile/building-a-serverless-real-time-chat-application-with-aws-appsync/)
 
 [https://github.com/aws-samples/aws-mobile-appsync-chat-starter-angular](https://github.com/aws-samples/aws-mobile-appsync-chat-starter-angular)
