@@ -101,6 +101,8 @@ y por último tenemos el bloque de `chat-app` que es un modulo con distintos blo
 
 Con `./src/app/chat-app/chat-user-list` se genera una lista de usuarios que los demas pueden ver para comenzar una nueva conversación. Con `./src/app/chat-app/chat-convo-list` puede retornar a una conversacion existente. Con `./src/app/chat-app/chat-message-view/` tienes una suscripción de los mensajes de una conversación.
 
+{% include blog/subscribe.html %}
+
 Lo importante en fijarse en la implementación es como hacen las mutaciones y como realizan los queries para que funcionen `offline`.
 
 Por ejemplo en `./src/app/chat-app/chat-message-view/` traén la informacion de los mensajes de esta manera.
