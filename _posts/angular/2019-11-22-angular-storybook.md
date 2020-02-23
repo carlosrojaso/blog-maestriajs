@@ -2,7 +2,7 @@
 layout: post
 title: "StoryBook en Angular."
 keywords: "Storybook, Angular"
-date: 2019-12-20
+date: 2021-12-20
 tags: [angular]
 categories: angular
 author: carlosrojas
