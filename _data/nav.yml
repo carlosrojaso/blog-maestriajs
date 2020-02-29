@@ -7,7 +7,7 @@ menu_header:
   - title: React
     url: 'https://react-classroom.com/'
     target: '_blank'
-  - title: VueJS
+  - title: Vue
     url: 'https://vue-classroom.com/'
     target: '_blank'
   - title: 'Podcast'
