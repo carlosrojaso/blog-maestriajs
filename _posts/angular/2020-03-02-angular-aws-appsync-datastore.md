@@ -45,6 +45,8 @@ $git checkout amplify
 $npm install
 ````
 
+En la rama `amplify` esta el ejemplo terminado para referencia.
+
 Luego, vamos a empezar a conectar nuestra App con Amazon.
 
 ````
@@ -53,7 +55,7 @@ $ amplify init
 
 {% include blog/subscribe.html %}
 
-En este paso no entrare en detalle porque tenemos este [Post] donde te puedes guiar, lo unico es que debes crear un esquema nuevo para tu implementación y desde el `CLI` seleccionar el esquema de ejemplo de `Todos` el cual te permitira agregar listas de tareas. Deberias ver en tu consola algo como esto en el `schema`.
+En este paso no entrare en detalle porque tenemos este [Post](https://blog.ng-classroom.com/blog/angular/angular-aws-appsync-graphql/) donde te puedes guiar, lo unico es que debes crear un esquema nuevo para tu implementación y desde el `CLI` seleccionar el esquema de ejemplo de `Todos` el cual te permitira agregar listas de tareas. Deberias ver en tu consola algo como esto en el `schema`.
 
 ````
 input CreateTodoInput {

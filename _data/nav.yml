@@ -13,6 +13,9 @@ menu_header:
   - title: 'Podcast'
     url: 'https://podcast.maestriajs.com/'
     target: '_blank'
+  - title: 'Cursos'
+    url: 'https://bootcampwithus.usefedora.com'
+    target: '_blank'
 # ==============================================================
 # Menu Footer
 menu_footer:
