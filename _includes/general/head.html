@@ -69,6 +69,10 @@
 <script async custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
 {% endif%}
 
+{% if site.ads_enabled > 0 %}
+<script async custom-element="amp-ad" src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"></script>
+{% endif %}
+
 {% if site.pwa_enabled > 0 %}
 <script async custom-element="amp-install-serviceworker" src="https://cdn.ampproject.org/v0/amp-install-serviceworker-0.1.js"></script>
 {% endif%}
