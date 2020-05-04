@@ -4,12 +4,6 @@ menu_header:
   - title: Blog
     url: '/blog'
     target: '_self'
-  - title: React
-    url: 'https://react-classroom.com/'
-    target: '_blank'
-  - title: Vue
-    url: 'https://vue-classroom.com/'
-    target: '_blank'
   - title: 'Podcast'
     url: 'https://podcast.maestriajs.com/'
     target: '_blank'

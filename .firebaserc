@@ -1,6 +1,5 @@
 {
   "projects": {
-    "production": "ngclassroom-8ba81",
-    "staging": "ion-book"
+    "default": "ngclassroom-8ba81"
   }
 }
