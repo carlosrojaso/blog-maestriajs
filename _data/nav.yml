@@ -5,7 +5,7 @@ menu_header:
     url: '/blog'
     target: '_self'
   - title: 'Podcast'
-    url: 'https://podcast.maestriajs.com/'
+    url: 'https://anchor.fm/maestriajs'
     target: '_blank'
   - title: 'Cursos'
     url: 'https://bootcampwithus.usefedora.com'
@@ -20,7 +20,7 @@ menu_footer:
     url: 'https://www.youtube.com/channel/UCxs-DaSRmp8k23n79WjXndw?sub_confirmation=1'
     target: '_blank'
   - title: Podcast
-    url: 'https://podcast.maestriajs.com/'
+    url: 'https://anchor.fm/maestriajs'
     target: '_blank'
   - title: Cursos
     url: 'https://bootcampwithus.usefedora.com'
@@ -28,9 +28,3 @@ menu_footer:
   - title: Autores
     url: '/blog/authors'
     target: '_self'
-  - title: Jobs
-    url: 'https://angularjobs.com/'
-    target: '_blank'
-  - title: Codigo de Conducta
-    url: 'https://github.com/ng-classroom/codigo-de-conducta'
-    target: '_blank'

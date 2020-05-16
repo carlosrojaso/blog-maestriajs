@@ -29,7 +29,7 @@ banner_course:
 banner_slack:
   title: 'Escucha nuestro Podcast'
   text: 'No te pierdas nuestros emocionantes episodios hablando de Javascript.'
-  url: 'https://podcast.maestriajs.com/'
+  url: 'https://anchor.fm/maestriajs'
   btn_text: 'Escuchar'
 
 # Banner Hnagouts
