@@ -3,8 +3,8 @@ layout: post
 title: "TypeScript fundamentos y ejemplos básicos"
 keywords: "typescript"
 date: 2017-06-23
-tags: [tips]
-categories: tips
+tags: [typescript]
+categories: typescript
 author: javaruiz
 cover: "/images/posts/tips/2017-06-23-typescript-fundamentos/cover.jpeg"
 versions:

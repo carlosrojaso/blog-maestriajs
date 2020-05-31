@@ -3,7 +3,7 @@ layout: post
 title: "¿Qué es Typescript?"
 tags: [typescript, ionic2]  
 date: 2016-06-22
-categories: ionic2
+categories: typescript
 author: carlosrojas
 cover: "https://i.imgur.com/yFY9ETL.png"
 ---

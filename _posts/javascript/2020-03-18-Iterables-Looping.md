@@ -2,7 +2,7 @@
 layout: post
 title: "Iterables en ES6"
 date: 2020-03-18
-categories: ecmascript
+categories: javascript
 author: carlosrojas
 tags: [ecmascript]
 cover: "https://firebasestorage.googleapis.com/v0/b/vueclassroom.appspot.com/o/2018-12-27-intro-es6%2Fecmascript.png?alt=media&token=335db467-ce9e-4e06-9a2d-fc86a785df0b"
