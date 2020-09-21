@@ -68,6 +68,8 @@ El `<head></head>` es un elemento que nos permite brindar información sobre la 
 </head>
 ```
 
+{% include blog/subscribe.html %}
+
 En el `<body>` definimos los elementos que van a ser visibles en nuestro documento tales como headings, paragraphs, images, hyperlinks, tables, lists, etc. Los elementos que se encuentrén aqui son los elementos visibles en el navegador.
 
 ```html

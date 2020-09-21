@@ -228,6 +228,6 @@ while (i < 10) {
 En estos ejemplos estamos haciendo exactamente lo mismo usando tanto `for` como `while`, pero si ves usando un `while` debemos tener cuidado de escribir cosas adicionales que en un `for` vienen en su declaración.
 
 
-Bueno esperamos que esta sea una buena base para comenzar con tu aprendizaje de JavaScript, no te olvides escribir en los comentarios si tienes preguntas.
+Bueno esperamos que esta sea una buena base para comenzar con tu aprendizaje de JavaScript, no te olvides escribir en los comentarios si tienes preguntas. Si este contenido te parece útil y me quieres ayudar a hacer mas, considera apoyarme en [Patreon](https://www.patreon.com/carlosrojas_o).
 
-Hasta un proximo post :)
+Bueno eso es todo por ahora. Espero sea de utilidad :)
