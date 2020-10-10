@@ -1,1 +1,0 @@
-Si tienes una idea o propuesta de un nuevo artículo, tutorial o tip, escribe la descripción y pronto lo publicaremos en ion-book.
