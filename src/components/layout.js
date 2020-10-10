@@ -25,7 +25,7 @@ const Layout = ({ location, title, children }) => {
       <header className="global-header">{header}</header>
       <main>{children}</main>
       <footer>
-        Hecho con amor ♥️ por 
+        Hecho con amor por 
         {` `}
         <a href="https://www.maestriajs.com">MaestriaJS</a>
       </footer>

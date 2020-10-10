@@ -3,11 +3,20 @@ import { Link, graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import { DiscussionEmbed } from "disqus-react"
 
 const BlogPostTemplate = ({ data, pageContext, location }) => {
   const post = data.markdownRemark
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const { previous, next } = pageContext
+  let disqusConfig = {
+    shortname: 'ionbook',
+    config: {
+      url: `${location.href+location.pathname}`,
+      identifier: post.id,
+      title: post.frontmatter.title
+    }
+  }
 
   return (
     <Layout location={location} title={siteTitle}>
@@ -57,6 +66,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
             )}
           </li>
         </ul>
+        <DiscussionEmbed {...disqusConfig} />
       </nav>
     </Layout>
   )

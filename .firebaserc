@@ -1,5 +1,14 @@
 {
-  "projects": {
-    "default": "ngclassroom-8ba81"
+  "targets": {
+    "ngclassroom-8ba81": {
+      "hosting": {
+        "staging": [
+          "ngclassroom-8ba81"
+        ],
+        "prod": [
+          "maestria-js"
+        ]
+      }
+    }
   }
 }
