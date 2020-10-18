@@ -3,7 +3,6 @@ on:
   push:
     branches:
       - master
-
 jobs:
   build:
     name: Build
@@ -35,6 +34,6 @@ jobs:
       - name: Deploy to Firebase
         uses: w9jds/firebase-action@master
         with:
-          args: deploy --only hosting:prod
+          args: deploy --only hosting:prod --project prod
         env:
           FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
