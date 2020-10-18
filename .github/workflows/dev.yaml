@@ -2,20 +2,20 @@ name: Build and Deploy
 on:
   push:
     branches:
-      - master
+      - develop
 jobs:
   build:
     name: Build
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repo
-        uses: actions/checkout@master
+        uses: actions/checkout@develop
       - name: Install Dependencies
         run: npm install
       - name: Build
         run: npm run build
       - name: Archive Production Artifact
-        uses: actions/upload-artifact@master
+        uses: actions/upload-artifact@develop
         with:
           name: public
           path: public
@@ -25,15 +25,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repo
-        uses: actions/checkout@master
+        uses: actions/checkout@develop
       - name: Download Artifact
-        uses: actions/download-artifact@master
+        uses: actions/download-artifact@develop
         with:
           name: public
           path: public
       - name: Deploy to Firebase
         uses: w9jds/firebase-action@master
         with:
-          args: deploy --only hosting:prod --project maestria-js
+          args: deploy --only hosting:prod --project ngclassroom-8ba81
         env:
           FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
