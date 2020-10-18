@@ -9,13 +9,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repo
-        uses: actions/checkout@develop
+        uses: actions/checkout@master
       - name: Install Dependencies
         run: npm install
       - name: Build
         run: npm run build
       - name: Archive Production Artifact
-        uses: actions/upload-artifact@develop
+        uses: actions/upload-artifact@master
         with:
           name: public
           path: public
@@ -27,7 +27,7 @@ jobs:
       - name: Checkout Repo
         uses: actions/checkout@develop
       - name: Download Artifact
-        uses: actions/download-artifact@develop
+        uses: actions/download-artifact@master
         with:
           name: public
           path: public
