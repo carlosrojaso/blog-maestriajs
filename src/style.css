@@ -54,7 +54,8 @@
   --fontSize-5: 2.074rem;
   --fontSize-6: 2.488rem;
   --fontSize-7: 2.986rem;
-  --color-primary: #005b99;
+  --color-primary: #007bff;
+  --color-secondary: #868e96;
   --color-text: #2e353f;
   --color-text-light: #4f5969;
   --color-heading: #1a202c;
@@ -175,6 +176,7 @@ ol {
   margin-bottom: var(--spacing-8);
   list-style-position: outside;
   list-style-image: none;
+  column-count: 2;
 }
 
 ul li,
@@ -236,6 +238,15 @@ a {
 a:hover,
 a:focus {
   text-decoration: none;
+}
+
+nav{
+  background-color: var(--color-secondary);
+  margin: var(--spacing-0) auto;
+  max-width: var(--maxWidth-wrapper);
+  padding: var(--spacing-5) var(--spacing-5);
+  border-radius: 5px;
+  color: white;
 }
 
 /* Custom classes */
@@ -318,5 +329,6 @@ a:focus {
   ul,
   ol {
     list-style-position: inside;
+    column-count: 1;
   }
 }
