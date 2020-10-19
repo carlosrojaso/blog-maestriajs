@@ -240,14 +240,14 @@ a:focus {
   text-decoration: none;
 }
 
-nav{
+/* nav{
   background-color: var(--color-secondary);
   margin: var(--spacing-0) auto;
   max-width: var(--maxWidth-wrapper);
   padding: var(--spacing-5) var(--spacing-5);
   border-radius: 5px;
   color: white;
-}
+} */
 
 /* Custom classes */
 
