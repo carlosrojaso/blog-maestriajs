@@ -34,6 +34,6 @@ jobs:
       - name: Deploy to Firebase
         uses: w9jds/firebase-action@master
         with:
-          args: deploy --only hosting:staging --project maestria-js
+          args: deploy --only hosting:prod --project ngclassroom-8ba81
         env:
           FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
